@@ -21,7 +21,7 @@ menu:
     url: /feed.xml
 email: shadowcontext@gmail.com
 # See: https://disqus.com/
-disqus_username: disqus_username
+#disqus_username: disqus_username
 # Contact Form Setting
 # See: https://formspree.io/
 formspree_form_id: mwplzzbr
@@ -30,11 +30,11 @@ formspree_form_id: mwplzzbr
 # Social Media Settings
 # Remove the item if you don't need it
 github_username: shadowcontext
-facebook_username: shadowcontext
+#facebook_username: shadowcontext
 twitter_username: shadowcontext
 instagram_username: shadowcontext
-linkedin_username: shadowcontext
-medium_username: shadowcontext
+#linkedin_username: shadowcontext
+#medium_username: shadowcontext
 
 
 # Posts Settings
