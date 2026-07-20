@@ -5,17 +5,24 @@
   {% if page.title %}{% assign full_title = page_title | append: " — " | append: site.name %}{% else %}{% assign full_title = site.title %}{% endif %}
   {% assign page_description = page.description | default: site.description | strip_html | strip_newlines | truncate: 160 %}
   {% assign page_image = page.image | default: "/assets/img/editorial/home-hero.png" %}
-  <title>{{ full_title }}</title>
-  <meta name="description" content="{{ page_description }}">
+  {% assign page_image_alt = page.image_alt | default: "ShadowContext security intelligence" %}
+  <title>{{ full_title | escape }}</title>
+  <meta name="description" content="{{ page_description | escape }}">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="theme-color" content="#f7fbff">
   <meta name="color-scheme" content="light">
   <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
-  <meta property="og:title" content="{{ full_title }}">
-  <meta property="og:description" content="{{ page_description }}">
+  <meta property="og:title" content="{{ full_title | escape }}">
+  <meta property="og:description" content="{{ page_description | escape }}">
   <meta property="og:image" content="{{ page_image | absolute_url }}">
+  <meta property="og:image:alt" content="{{ page_image_alt | escape }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:site_name" content="{{ site.name }}">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ full_title | escape }}">
+  <meta name="twitter:description" content="{{ page_description | escape }}">
+  <meta name="twitter:image" content="{{ page_image | absolute_url }}">
+  <meta name="twitter:image:alt" content="{{ page_image_alt | escape }}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | absolute_url }}">
   <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
