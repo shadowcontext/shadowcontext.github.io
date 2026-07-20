@@ -3,8 +3,9 @@ title: "Welcome to ShadowContext"
 date: 2025-04-15
 layout: post
 image: /assets/img/logo_red.png
-description: "Cybersecurity. Threat Intel. Breaches. Dark Web. No noise — just signal."
-categories: [intel, blog]
+description: "Why ShadowContext exists: practical cyber intelligence, source-first analysis, and a commitment to signal over noise."
+category: threat-intelligence
+read_time: 2 min
 tags: [cybersecurity, threat intelligence, darkweb, vulnerabilities, breach]
 ---
 
@@ -26,4 +27,3 @@ Expect fast takes, deep dives, and curated intelligence — all fed by real feed
 > 💬 **Follow. Share. Threat-hunt better.**  
 >  
 > — ShadowContext Team
-

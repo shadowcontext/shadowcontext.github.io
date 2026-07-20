@@ -1,27 +1,28 @@
-<header class="bar-header">
-    <a id="menu" role="button">
-        <svg id="open" class="icon-menu"><use xlink:href="#icon-menu"></use></svg>
+<header class="site-header">
+  <div class="shell nav-shell">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="ShadowContext home">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span>Shadow<span>Context</span></span>
     </a>
-    <h1 class="logo">
-        <a href="{{ site.baseurl }}/">
-            {% if site.use_logo %}
-                {% include logo.html %}
-            {% else %}
-                {{ site.name }} <span class="version">{{ site.version }}</span>
-            {% endif %}
-        </a>
-    </h1>
-    <a id="search" class="dosearch" role="button">
-        <svg class="icon-search"><use xlink:href="#icon-search"></use></svg>
-    </a>
-    {% if site.show_get_theme_btn %}
-        <a href="https://github.com/thiagorossener/jekflix-template" class="get-theme" role="button">
-            Get this theme!
-        </a>
-    {% endif %}
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="{{ '/' | relative_url }}">Briefing</a>
+      <a href="{{ '/category/ai-security/' | relative_url }}">AI security</a>
+      <a href="{{ '/category/threat-intelligence/' | relative_url }}">Threat intel</a>
+      <a href="{{ '/category/defense/' | relative_url }}">Defense</a>
+      <a href="{{ '/about/' | relative_url }}">About</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="signal-link" href="{{ '/feed.xml' | relative_url }}"><span></span> Live feed</a>
+      <details class="mobile-menu">
+        <summary aria-label="Open navigation"><span></span><span></span><span></span></summary>
+        <nav>
+          <a href="{{ '/' | relative_url }}">Briefing</a>
+          <a href="{{ '/category/ai-security/' | relative_url }}">AI security</a>
+          <a href="{{ '/category/threat-intelligence/' | relative_url }}">Threat intel</a>
+          <a href="{{ '/category/defense/' | relative_url }}">Defense</a>
+          <a href="{{ '/about/' | relative_url }}">About</a>
+        </nav>
+      </details>
+    </div>
+  </div>
 </header>
-
-<div id="mask" class="overlay"></div>
-
-{% include menu.html %}
-{% include search.html %}

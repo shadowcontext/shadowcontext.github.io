@@ -1,17 +1,10 @@
----
-layout: compress
----
-
-<!DOCTYPE html>
-<html lang="{{ site.language }}" class="no-js">
-    {% include head.html %}
-    <body class="has-push-menu">
-        {% include svg-icons.html %}
-        {% include header.html %}
-            <section class="content">
-                {{ content }}
-            </section>
-        {% include footer.html %}
-    </body>
+<!doctype html>
+<html lang="{{ site.language | default: 'en' }}">
+  {% include head.html %}
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    {% include header.html %}
+    <main id="main-content">{{ content }}</main>
+    {% include footer.html %}
+  </body>
 </html>
-
