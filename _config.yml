@@ -100,7 +100,6 @@ exclude: [
   'jekflix.gemspec',
   'package.json',
   'package-lock.json',
-  'requirements-content.txt',
   'automation/',
   'src',
   'node_modules',

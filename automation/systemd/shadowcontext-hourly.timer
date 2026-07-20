@@ -1,0 +1,12 @@
+[Unit]
+Description=Run ShadowContext Codex editorial automation hourly
+
+[Timer]
+OnCalendar=*-*-* *:07:00 Asia/Dubai
+Persistent=true
+RandomizedDelaySec=45
+AccuracySec=1min
+Unit=shadowcontext-hourly.service
+
+[Install]
+WantedBy=timers.target
