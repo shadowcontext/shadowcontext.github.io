@@ -4,6 +4,7 @@ layout: default
 <article class="article-page">
   <header class="article-header shell narrow">
     <a class="article-kicker" href="{{ '/category/' | append: page.category | append: '/' | relative_url }}">{{ page.category | replace: '-', ' ' }}</a>
+    {% if page.automated %}<span class="automation-badge">Automated signal brief</span>{% endif %}
     <h1>{{ page.title }}</h1>
     <p class="article-deck">{{ page.subtitle | default: page.description }}</p>
     <div class="article-byline">

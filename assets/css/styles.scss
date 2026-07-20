@@ -137,6 +137,7 @@ p { line-height: 1.7; }
 .article-page { padding-top: 90px; }
 .article-header { text-align: center; }
 .article-kicker { color: var(--cyan-dark); font: 500 .7rem var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+.automation-badge { display: table; margin: 14px auto 0; padding: 6px 9px; border: 1px solid var(--line-strong); border-radius: 99px; color: var(--muted); font: 500 .58rem var(--mono); letter-spacing: .07em; text-transform: uppercase; }
 .article-header h1 { max-width: 920px; margin: 22px auto 20px; font-size: clamp(2.8rem, 6vw, 5.4rem); line-height: 1.01; letter-spacing: -.07em; }
 .article-deck { max-width: 720px; margin: 0 auto; color: var(--muted); font-size: 1.1rem; }
 .article-byline { display: flex; justify-content: center; align-items: center; gap: 12px; margin-top: 32px; text-align: left; }
