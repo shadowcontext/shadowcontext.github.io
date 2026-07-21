@@ -6,8 +6,18 @@
   {% assign page_description = page.description | default: site.description | strip_html | strip_newlines | truncate: 160 %}
   {% assign page_image = page.image | default: "/assets/img/editorial/home-hero.png" %}
   {% assign page_image_alt = page.image_alt | default: "ShadowContext security intelligence" %}
+  {% assign robots_content = page.robots | default: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" %}
+  {% if page.layout == '404' or page.layout == 'message-sent' %}{% assign robots_content = "noindex, follow" %}{% endif %}
+  {% if page.layout == 'category' %}
+    {% assign category_posts = site.posts | where: "category", page.slug %}
+    {% if category_posts.size == 0 %}{% assign robots_content = "noindex, follow" %}{% endif %}
+  {% endif %}
+  {% assign canonical_url = page.url | absolute_url %}
+  {% assign site_url = '/' | absolute_url %}
+  {% assign image_url = page_image | absolute_url %}
   <title>{{ full_title | escape }}</title>
   <meta name="description" content="{{ page_description | escape }}">
+  <meta name="robots" content="{{ robots_content }}">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="theme-color" content="#f7fbff">
   <meta name="color-scheme" content="light">
@@ -23,7 +33,7 @@
   <meta name="twitter:description" content="{{ page_description | escape }}">
   <meta name="twitter:image" content="{{ page_image | absolute_url }}">
   <meta name="twitter:image:alt" content="{{ page_image_alt | escape }}">
-  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="canonical" href="{{ canonical_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | absolute_url }}">
   <link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml" sizes="any">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,14 +43,52 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "{% if page.layout == 'post' %}Article{% else %}WebSite{% endif %}",
-    "name": {{ page_title | jsonify }},
-    "headline": {{ page_title | jsonify }},
-    "description": {{ page_description | jsonify }},
-    "url": {{ page.url | absolute_url | jsonify }},
-    "image": {{ page_image | absolute_url | jsonify }},
-    {% if page.layout == 'post' %}"datePublished": "{{ page.date | date_to_xmlschema }}", "author": {"@type": "Organization", "name": "ShadowContext"}, {% endif %}
-    "publisher": {"@type": "Organization", "name": "ShadowContext", "url": "{{ '/' | absolute_url }}"}
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": {{ site_url | append: "#organization" | jsonify }},
+        "name": {{ site.name | jsonify }},
+        "url": {{ site_url | jsonify }},
+        "logo": {"@type": "ImageObject", "url": {{ '/favicon.svg' | absolute_url | jsonify }}}
+      },
+      {
+        "@type": "WebSite",
+        "@id": {{ site_url | append: "#website" | jsonify }},
+        "name": {{ site.name | jsonify }},
+        "url": {{ site_url | jsonify }},
+        "description": {{ site.description | jsonify }},
+        "publisher": {"@id": {{ site_url | append: "#organization" | jsonify }}},
+        "inLanguage": {{ site.language | default: "en" | jsonify }}
+      },
+      {% if page.layout == 'post' %}
+      {
+        "@type": "Article",
+        "@id": {{ canonical_url | append: "#article" | jsonify }},
+        "headline": {{ page.title | jsonify }},
+        "description": {{ page_description | jsonify }},
+        "url": {{ canonical_url | jsonify }},
+        "mainEntityOfPage": {"@id": {{ canonical_url | append: "#webpage" | jsonify }}},
+        "datePublished": "{{ page.date | date_to_xmlschema }}",
+        "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+        "author": {"@id": {{ site_url | append: "#organization" | jsonify }}},
+        "publisher": {"@id": {{ site_url | append: "#organization" | jsonify }}},
+        "image": {"@type": "ImageObject", "url": {{ image_url | jsonify }}, "caption": {{ page_image_alt | jsonify }}},
+        "articleSection": {{ page.category | jsonify }},
+        "keywords": {{ page.tags | jsonify }},
+        "inLanguage": {{ site.language | default: "en" | jsonify }}
+      },
+      {% endif %}
+      {
+        "@type": "{% if page.url == '/' %}CollectionPage{% elsif page.layout == 'category' or page.layout == 'tags' %}CollectionPage{% elsif page.layout == 'contact' %}ContactPage{% elsif page.url == '/about/' %}AboutPage{% else %}WebPage{% endif %}",
+        "@id": {{ canonical_url | append: "#webpage" | jsonify }},
+        "name": {{ page_title | jsonify }},
+        "description": {{ page_description | jsonify }},
+        "url": {{ canonical_url | jsonify }},
+        "isPartOf": {"@id": {{ site_url | append: "#website" | jsonify }}},
+        "primaryImageOfPage": {"@type": "ImageObject", "url": {{ image_url | jsonify }}},
+        "inLanguage": {{ site.language | default: "en" | jsonify }}
+      }
+    ]
   }
   </script>
 </head>

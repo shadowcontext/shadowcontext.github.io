@@ -3,32 +3,15 @@ layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    {% for page in site.pages %}
-        <url>
-            <loc>{{ page.url | prepend: site.baseurl | prepend: site.url }}</loc>
-            {% if page.layout == 'main' %}
-                <changefreq>weekly</changefreq>
-                <priority>1</priority>
-                <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
-            {% else %}
-                <changefreq>monthly</changefreq>
-                <priority>0.5</priority>
-            {% endif %}
-        </url>
-    {% endfor %}
-    {% for post in site.posts %}
-        <url>
-            <loc>{{ post.url | prepend: site.baseurl | prepend: site.url }}</loc>
-            <changefreq>weekly</changefreq>
-            <priority>0.8</priority>
-            <lastmod>{{ post.date | date: "%Y-%m-%d" }}</lastmod>
-        </url>
-    {% endfor %}
-    {% for author in site.authors %}
-        <url>
-            <loc>{{ author.url | prepend: site.baseurl | prepend: site.url }}</loc>
-            <changefreq>monthly</changefreq>
-            <priority>0.5</priority>
-        </url>
-    {% endfor %}
+  {% assign core_urls = "/|/about/|/contact/|/privacypolicy/|/tags/|/category/ai-security/|/category/threat-intelligence/|/category/defense/" | split: "|" %}
+  {% for path in core_urls %}
+  <url><loc>{{ path | absolute_url | xml_escape }}</loc></url>
+  {% endfor %}
+  {% assign seo_posts = site.posts | where_exp: "post", "post.is_generated != true" %}
+  {% for post in seo_posts %}
+  <url>
+    <loc>{{ post.url | absolute_url | xml_escape }}</loc>
+    <lastmod>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</lastmod>
+  </url>
+  {% endfor %}
 </urlset>

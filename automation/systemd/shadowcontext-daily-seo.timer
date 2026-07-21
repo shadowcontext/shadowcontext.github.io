@@ -1,0 +1,12 @@
+[Unit]
+Description=Run ShadowContext technical SEO audit daily
+
+[Timer]
+OnCalendar=*-*-* 04:37:00 Asia/Dubai
+Persistent=true
+RandomizedDelaySec=10min
+AccuracySec=1min
+Unit=shadowcontext-daily-seo.service
+
+[Install]
+WantedBy=timers.target

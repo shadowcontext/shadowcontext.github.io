@@ -10,6 +10,11 @@ The user-level `shadowcontext-hourly.timer` runs at minute 7 of every hour in
 the `Asia/Dubai` timezone. Missed runs are caught up after the computer becomes
 available again.
 
+The user-level `shadowcontext-daily-seo.timer` runs once daily at 04:37 in the
+`Asia/Dubai` timezone, with up to ten minutes of randomized delay. It audits
+the rendered and live site, applies at most one safe technical SEO improvement
+when evidence supports it, validates the result, and pushes automatically.
+
 Each run:
 
 1. Fetches the current `origin/main` and creates an isolated temporary Git
@@ -41,24 +46,35 @@ clear no-publication outcome when evidence is too thin.
 - `validate_post.rb` enforces the publication schema and editorial bounds.
 - `systemd/shadowcontext-hourly.service` defines the one-shot job.
 - `systemd/shadowcontext-hourly.timer` defines the hourly schedule.
+- `run_daily_seo.sh` is the guarded daily SEO runner.
+- `daily-seo-prompt.md` limits the SEO agent to evidence-based technical work.
+- `validate_seo.rb` audits indexable URLs, metadata, structured data, links,
+  crawler files, feeds, and post images.
+- `systemd/shadowcontext-daily-seo.service` defines the daily SEO job.
+- `systemd/shadowcontext-daily-seo.timer` defines the daily SEO schedule.
 
 ## Checks and operations
 
 ```sh
 automation/run_hourly_codex.sh --check
+automation/run_daily_seo.sh --check
 systemctl --user status shadowcontext-hourly.timer
-systemctl --user list-timers shadowcontext-hourly.timer
+systemctl --user status shadowcontext-daily-seo.timer
+systemctl --user list-timers shadowcontext-hourly.timer shadowcontext-daily-seo.timer
 journalctl --user -u shadowcontext-hourly.service
+journalctl --user -u shadowcontext-daily-seo.service
 ```
 
 Run one cycle immediately:
 
 ```sh
 systemctl --user start shadowcontext-hourly.service
+systemctl --user start shadowcontext-daily-seo.service
 ```
 
 Disable the local automation without changing the repository:
 
 ```sh
 systemctl --user disable --now shadowcontext-hourly.timer
+systemctl --user disable --now shadowcontext-daily-seo.timer
 ```
