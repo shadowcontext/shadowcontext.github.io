@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Restoring the enterprise update stream</title>
+  <desc id="desc">Abstract blue update stream passing through a cleared amber catalog bottleneck toward protected endpoint nodes.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071426"/>
+      <stop offset="0.52" stop-color="#0b2741"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="48%" r="58%">
+      <stop offset="0" stop-color="#32c7e8" stop-opacity="0.22"/>
+      <stop offset="0.58" stop-color="#1679ad" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#071426" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="stream" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#237db4" stop-opacity="0.2"/>
+      <stop offset="0.43" stop-color="#55d7ee"/>
+      <stop offset="0.62" stop-color="#c3f4f8"/>
+      <stop offset="1" stop-color="#4aa8df" stop-opacity="0.34"/>
+    </linearGradient>
+    <linearGradient id="catalog" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd07a"/>
+      <stop offset="1" stop-color="#d57832"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8aebf5" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#2583bd" stop-opacity="0.5"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#halo)"/>
+  <circle cx="800" cy="440" r="280" fill="#25b7d1" opacity="0.07" filter="url(#soft)"/>
+
+  <g fill="none" stroke="#68bed8" stroke-opacity="0.12" stroke-width="2">
+    <path d="M90 210 C330 80 540 160 690 300"/>
+    <path d="M1510 190 C1290 90 1060 160 910 305"/>
+    <path d="M70 720 C350 840 550 730 700 610"/>
+    <path d="M1530 720 C1260 840 1040 730 900 610"/>
+  </g>
+
+  <g opacity="0.7">
+    <circle cx="165" cy="238" r="7" fill="#52cfe4"/>
+    <circle cx="270" cy="184" r="4" fill="#52cfe4"/>
+    <circle cx="1436" cy="231" r="7" fill="#52cfe4"/>
+    <circle cx="1335" cy="184" r="4" fill="#52cfe4"/>
+    <circle cx="156" cy="694" r="6" fill="#52cfe4"/>
+    <circle cx="1441" cy="694" r="6" fill="#52cfe4"/>
+  </g>
+
+  <path d="M80 444 C305 444 400 365 585 404 C672 422 718 446 800 446 C900 446 946 414 1030 399 C1190 370 1306 444 1520 444"
+        fill="none" stroke="#123e5e" stroke-width="94" stroke-linecap="round" opacity="0.75"/>
+  <path d="M80 444 C305 444 400 365 585 404 C672 422 718 446 800 446 C900 446 946 414 1030 399 C1190 370 1306 444 1520 444"
+        fill="none" stroke="url(#stream)" stroke-width="28" stroke-linecap="round" filter="url(#glow)"/>
+
+  <g transform="translate(610 247) rotate(-8 120 92)">
+    <rect x="20" y="28" width="218" height="128" rx="22" fill="#101f31" stroke="#e69a48" stroke-opacity="0.35" stroke-width="3"/>
+    <rect x="8" y="14" width="218" height="128" rx="22" fill="#14283c" stroke="#f1ad58" stroke-opacity="0.62" stroke-width="3"/>
+    <rect width="218" height="128" rx="22" fill="url(#catalog)" opacity="0.96"/>
+    <g fill="#6b371d" opacity="0.55">
+      <circle cx="42" cy="38" r="9"/><rect x="66" y="30" width="112" height="16" rx="8"/>
+      <circle cx="42" cy="70" r="9"/><rect x="66" y="62" width="86" height="16" rx="8"/>
+      <circle cx="42" cy="102" r="9"/><rect x="66" y="94" width="126" height="16" rx="8"/>
+    </g>
+  </g>
+
+  <g transform="translate(760 326)">
+    <path d="M40 8 L146 42 V119 C146 188 101 226 40 252 C-21 226 -66 188 -66 119 V42 Z"
+          fill="#071725" stroke="url(#shield)" stroke-width="10"/>
+    <path d="M-22 118 L17 157 L95 77" fill="none" stroke="#b8f3f4" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  </g>
+
+  <g fill="#091a2a" stroke="#60cee5" stroke-width="4">
+    <g transform="translate(1135 287)"><rect width="150" height="96" rx="18"/><circle cx="35" cy="48" r="14" fill="#58d1e7" stroke="none"/><path d="M67 36 H120 M67 60 H108"/></g>
+    <g transform="translate(1288 418)"><rect width="150" height="96" rx="18"/><circle cx="35" cy="48" r="14" fill="#58d1e7" stroke="none"/><path d="M67 36 H120 M67 60 H108"/></g>
+    <g transform="translate(1115 552)"><rect width="150" height="96" rx="18"/><circle cx="35" cy="48" r="14" fill="#58d1e7" stroke="none"/><path d="M67 36 H120 M67 60 H108"/></g>
+  </g>
+
+  <g fill="none" stroke="#55cce2" stroke-width="5" stroke-linecap="round" opacity="0.72">
+    <path d="M1010 442 C1080 420 1098 350 1135 337"/>
+    <path d="M1034 446 C1145 446 1190 466 1288 466"/>
+    <path d="M1013 454 C1080 482 1094 574 1115 600"/>
+  </g>
+
+  <g fill="#82e4ed" filter="url(#glow)">
+    <circle cx="1054" cy="419" r="8"/><circle cx="1104" cy="379" r="6"/>
+    <circle cx="1091" cy="447" r="8"/><circle cx="1187" cy="458" r="6"/>
+    <circle cx="1055" cy="478" r="8"/><circle cx="1095" cy="546" r="6"/>
+  </g>
+
+  <g opacity="0.28" fill="#77d7e8">
+    <rect x="190" y="385" width="62" height="16" rx="8"/><rect x="278" y="420" width="88" height="16" rx="8"/>
+    <rect x="382" y="356" width="54" height="16" rx="8"/><rect x="455" y="407" width="92" height="16" rx="8"/>
+  </g>
+</svg>
