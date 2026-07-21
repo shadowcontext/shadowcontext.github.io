@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Browser update closing a memory-safety gap</title>
+  <desc id="desc">Abstract layered browser windows surround fragmented memory shapes while a cyan update pulse closes a protective ring.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071426"/>
+      <stop offset="0.52" stop-color="#102641"/>
+      <stop offset="1" stop-color="#07101d"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="48%" r="52%">
+      <stop offset="0" stop-color="#30d9e8" stop-opacity="0.28"/>
+      <stop offset="0.55" stop-color="#167dac" stop-opacity="0.11"/>
+      <stop offset="1" stop-color="#071426" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="frame" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b7f7ff" stop-opacity="0.33"/>
+      <stop offset="1" stop-color="#3c7eae" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="pulse" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#19b9d0"/>
+      <stop offset="0.55" stop-color="#8cf7e2"/>
+      <stop offset="1" stop-color="#ffd36a"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <ellipse cx="810" cy="448" rx="610" ry="390" fill="url(#halo)"/>
+  <path d="M120 705 C350 590 472 690 650 615 S1030 430 1480 545" fill="none" stroke="#35d4db" stroke-opacity="0.08" stroke-width="2"/>
+  <path d="M95 244 C330 365 475 250 690 310 S1120 470 1510 328" fill="none" stroke="#86bfff" stroke-opacity="0.08" stroke-width="2"/>
+
+  <g transform="translate(308 168) rotate(-5 500 285)" opacity="0.34">
+    <rect x="0" y="0" width="984" height="570" rx="34" fill="url(#frame)" stroke="#75b8e8" stroke-width="2"/>
+    <path d="M0 86 H984" stroke="#75b8e8" stroke-opacity="0.6" stroke-width="2"/>
+    <circle cx="58" cy="43" r="10" fill="#8ee7f0" opacity="0.5"/>
+    <circle cx="92" cy="43" r="10" fill="#5a98c5" opacity="0.45"/>
+    <circle cx="126" cy="43" r="10" fill="#ffd36a" opacity="0.42"/>
+  </g>
+
+  <g transform="translate(352 188)">
+    <rect x="0" y="0" width="900" height="530" rx="30" fill="#0c1d33" fill-opacity="0.88" stroke="#7edce7" stroke-opacity="0.68" stroke-width="3"/>
+    <path d="M0 82 H900" stroke="#7edce7" stroke-opacity="0.42" stroke-width="2"/>
+    <circle cx="55" cy="41" r="9" fill="#4e9bbc"/>
+    <circle cx="86" cy="41" r="9" fill="#4e9bbc" opacity="0.68"/>
+    <circle cx="117" cy="41" r="9" fill="#ffd36a" opacity="0.86"/>
+    <rect x="160" y="25" width="555" height="31" rx="15.5" fill="#d6faff" fill-opacity="0.07" stroke="#9debf2" stroke-opacity="0.16"/>
+
+    <g transform="translate(450 305)">
+      <circle r="179" fill="none" stroke="#173d5a" stroke-width="22"/>
+      <path d="M-123 130 A179 179 0 1 1 147 102" fill="none" stroke="url(#pulse)" stroke-width="22" stroke-linecap="round" filter="url(#glow)"/>
+      <path d="M146 101 l-44 -4 l22 38 z" fill="#ffd36a" filter="url(#glow)"/>
+      <circle r="118" fill="#132b44" stroke="#7be8eb" stroke-opacity="0.34" stroke-width="2"/>
+    </g>
+
+    <g transform="translate(450 305)" stroke="#86eef0" stroke-opacity="0.48" stroke-width="2">
+      <path d="M-72 -54 L-25 -82 L9 -49 L-7 -9 L-60 -7 Z" fill="#2b83a5" fill-opacity="0.65"/>
+      <path d="M21 -80 L74 -57 L63 -12 L18 -23 Z" fill="#4278ad" fill-opacity="0.6"/>
+      <path d="M-86 17 L-39 6 L-17 47 L-48 79 L-91 61 Z" fill="#286682" fill-opacity="0.74"/>
+      <path d="M1 10 L52 -3 L87 31 L67 73 L16 63 Z" fill="#39a6a2" fill-opacity="0.64"/>
+      <path d="M-12 -3 L13 -35 L37 -6 L22 23 Z" fill="#ffd36a" fill-opacity="0.82" stroke="#ffe2a1"/>
+    </g>
+
+    <circle cx="450" cy="305" r="250" fill="none" stroke="#41d5df" stroke-opacity="0.08" stroke-width="34" filter="url(#soft)"/>
+  </g>
+
+  <g opacity="0.55" fill="#70dce6">
+    <circle cx="234" cy="274" r="4"/><circle cx="1358" cy="618" r="4"/>
+    <circle cx="1308" cy="226" r="3"/><circle cx="280" cy="681" r="3"/>
+  </g>
+  <path d="M225 274 H315 M1285 618 H1375" stroke="#70dce6" stroke-opacity="0.2" stroke-width="2"/>
+</svg>
