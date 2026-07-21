@@ -1,0 +1,78 @@
+---
+layout: default
+---
+{% assign intel = site.data.threat_dashboard %}
+<section class="intel-hero">
+  <div class="shell">
+    <div class="intel-hero-top">
+      <div>
+        <p class="eyebrow">ShadowContext / Operational intelligence</p>
+        <h1>Threat Intel<br><span>Dashboard</span></h1>
+        <p class="intel-deck">Government-sourced signals for vulnerability prioritization, threat hunting, and defensive action. No breach reporting. No attack-news feed.</p>
+      </div>
+      <div class="intel-freshness"><span class="live-dot"></span><div><strong>Daily snapshot</strong><time datetime="{{ intel.generated_at }}">Updated {{ intel.generated_display }}</time></div></div>
+    </div>
+    <div class="intel-metrics" aria-label="Threat intelligence summary">
+      <div><span>KEV catalog</span><strong>{{ intel.metrics.kev_total }}</strong><small>Known exploited CVEs</small></div>
+      <div><span>30-day velocity</span><strong>+{{ intel.metrics.kev_added_30d }}</strong><small>New KEV additions</small></div>
+      <div><span>Action window</span><strong>{{ intel.metrics.due_next_7d }}</strong><small>Deadlines in 7 days</small></div>
+      <div><span>IOC set</span><strong>{{ intel.metrics.ioc_total }}</strong><small>Government-published indicators</small></div>
+    </div>
+  </div>
+</section>
+
+<main class="shell intel-dashboard">
+  <section class="intel-panel intel-vulns">
+    <div class="intel-section-head"><div><p class="eyebrow">01 / Exploitation queue</p><h2>Top exploited vulnerabilities</h2></div><p>Newest entries in CISA’s Known Exploited Vulnerabilities catalog, ordered by date added—not speculative severity.</p></div>
+    <div class="intel-table-wrap">
+      <table class="intel-table">
+        <thead><tr><th>Vulnerability</th><th>Product</th><th>Added</th><th>Due</th><th>Signal</th></tr></thead>
+        <tbody>{% for vuln in intel.vulnerabilities %}<tr>
+          <td><a href="{{ vuln.url }}" rel="noopener noreferrer"><strong>{{ vuln.cve }}</strong><span>{{ vuln.name }}</span></a></td>
+          <td><span>{{ vuln.vendor }}</span><small>{{ vuln.product }}</small></td>
+          <td><time datetime="{{ vuln.date_added }}">{{ vuln.date_added }}</time></td>
+          <td><time datetime="{{ vuln.due_date }}">{{ vuln.due_date }}</time></td>
+          <td>{% if vuln.ransomware == 'Known' %}<b class="risk-tag hot">Ransomware use</b>{% else %}<b class="risk-tag">Exploited</b>{% endif %}</td>
+        </tr>{% endfor %}</tbody>
+      </table>
+    </div>
+    <p class="intel-source-note">Source: <a href="{{ intel.sources.kev.url }}" rel="noopener noreferrer">CISA Known Exploited Vulnerabilities Catalog ↗</a></p>
+  </section>
+
+  <div class="intel-two-col">
+    <section class="intel-panel">
+      <div class="intel-section-head compact"><div><p class="eyebrow">02 / Exposure concentration</p><h2>Top targeted platforms</h2></div></div>
+      <p class="intel-method">Ranked by vendor frequency among KEV entries added during the trailing 365 days.</p>
+      <div class="platform-list">{% for platform in intel.platforms %}<div>
+        <span class="platform-rank">0{{ forloop.index }}</span><div><strong>{{ platform.vendor }}</strong><small>{{ platform.product }}</small></div><div class="platform-bar"><i style="width: {{ platform.percent }}%"></i></div><b>{{ platform.count }}</b>
+      </div>{% endfor %}</div>
+    </section>
+
+    <section class="intel-panel actor-panel">
+      <div class="intel-section-head compact"><div><p class="eyebrow">03 / Government priority</p><h2>Top threat actors</h2></div></div>
+      <p class="intel-method">Ranked by recency of actor-focused joint government advisories, not unverified incident volume.</p>
+      <div class="actor-list">{% for actor in intel.actors %}<a href="{{ actor.url }}" rel="noopener noreferrer">
+        <span class="actor-index">0{{ forloop.index }}</span><div><strong>{{ actor.name }}</strong><small>{{ actor.aliases }}</small><p>{{ actor.focus }}</p></div><time datetime="{{ actor.date }}">{{ actor.date }}</time>
+      </a>{% endfor %}</div>
+    </section>
+  </div>
+
+  <section class="intel-panel advisory-panel">
+    <div class="intel-section-head"><div><p class="eyebrow">04 / Authority feed</p><h2>Top defensive advisories</h2></div><p>Vulnerability alerts, technical guidance, and mitigations from national cyber authorities. Breach and attack-news articles are excluded.</p></div>
+    <div class="advisory-grid">{% for advisory in intel.advisories %}<a href="{{ advisory.url }}" rel="noopener noreferrer">
+      <div><span class="authority-tag">{{ advisory.authority }}</span>{% if advisory.severity %}<b class="severity {{ advisory.severity | downcase }}">{{ advisory.severity }}</b>{% endif %}</div>
+      <h3>{{ advisory.title }}</h3><p>{{ advisory.summary }}</p><footer><time datetime="{{ advisory.date }}">{{ advisory.date }}</time><span>Open advisory ↗</span></footer>
+    </a>{% endfor %}</div>
+  </section>
+
+  <section class="ioc-panel">
+    <div class="ioc-copy"><p class="eyebrow">05 / Detection engineering</p><h2>Daily IOC download</h2><p>A normalized CSV of IP addresses, domains, URLs, and file hashes published in TLP:CLEAR government STIX advisories. Validate indicators against your environment before blocking.</p><div class="ioc-counts">{% for kind in intel.ioc_counts %}<span><b>{{ kind[1] }}</b> {{ kind[0] }}</span>{% endfor %}</div></div>
+    <div class="ioc-download"><span>CSV / TLP:CLEAR</span><strong>{{ intel.metrics.ioc_total }} indicators</strong><small>SHA-256 {{ intel.ioc_sha256 | slice: 0, 16 }}…</small><a href="{{ '/assets/data/daily-iocs.csv' | relative_url }}" download>Download daily IOC set <b>↓</b></a><time datetime="{{ intel.generated_at }}">Generated {{ intel.generated_display }}</time></div>
+  </section>
+
+  <section class="intel-panel source-panel">
+    <div class="intel-section-head"><div><p class="eyebrow">06 / Provenance</p><h2>Source health & methodology</h2></div><p>Every signal retains a direct link to the publishing authority. The automated job fails closed on the core CISA exploitation feed.</p></div>
+    <div class="source-grid">{% for source in intel.source_health %}<a href="{{ source.url }}" rel="noopener noreferrer"><span class="source-status {{ source.status }}"></span><div><strong>{{ source.name }}</strong><small>{{ source.coverage }}</small></div><b>{{ source.status }}</b></a>{% endfor %}</div>
+    <p class="methodology-note">“Top” means newest or most frequent within the stated official dataset and time window. It does not claim a complete view of global activity. IOC data can age quickly; enrich, score, and expire indicators locally.</p>
+  </section>
+</main>

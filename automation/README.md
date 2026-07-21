@@ -15,6 +15,11 @@ The user-level `shadowcontext-daily-seo.timer` runs once daily at 04:37 in the
 the rendered and live site, applies at most one safe technical SEO improvement
 when evidence supports it, validates the result, and pushes automatically.
 
+The user-level `shadowcontext-threat-dashboard.timer` runs once daily at 05:17
+in the `Asia/Dubai` timezone. It refreshes the Threat Intel Dashboard from
+allowlisted government feeds, rebuilds the normalized TLP:CLEAR IOC download,
+validates the site, and pushes the generated data automatically.
+
 Each run:
 
 1. Fetches the current `origin/main` and creates an isolated temporary Git
@@ -48,6 +53,10 @@ clear no-publication outcome when evidence is too thin.
 - `systemd/shadowcontext-hourly.timer` defines the hourly schedule.
 - `run_daily_seo.sh` is the guarded daily SEO runner.
 - `daily-seo-prompt.md` limits the SEO agent to evidence-based technical work.
+- `update_threat_dashboard.py` gathers and normalizes allowlisted CISA, UK
+  NCSC, and Saudi NCA/Saudi CERT sources.
+- `run_daily_threat_dashboard.sh` performs the isolated, validated dashboard
+  refresh and publishes only the generated JSON and IOC CSV.
 - `validate_seo.rb` audits indexable URLs, metadata, structured data, links,
   crawler files, feeds, and post images.
 - `systemd/shadowcontext-daily-seo.service` defines the daily SEO job.
@@ -58,9 +67,11 @@ clear no-publication outcome when evidence is too thin.
 ```sh
 automation/run_hourly_codex.sh --check
 automation/run_daily_seo.sh --check
+automation/run_daily_threat_dashboard.sh --check
 systemctl --user status shadowcontext-hourly.timer
 systemctl --user status shadowcontext-daily-seo.timer
-systemctl --user list-timers shadowcontext-hourly.timer shadowcontext-daily-seo.timer
+systemctl --user status shadowcontext-threat-dashboard.timer
+systemctl --user list-timers shadowcontext-hourly.timer shadowcontext-daily-seo.timer shadowcontext-threat-dashboard.timer
 journalctl --user -u shadowcontext-hourly.service
 journalctl --user -u shadowcontext-daily-seo.service
 ```
@@ -70,6 +81,7 @@ Run one cycle immediately:
 ```sh
 systemctl --user start shadowcontext-hourly.service
 systemctl --user start shadowcontext-daily-seo.service
+systemctl --user start shadowcontext-threat-dashboard.service
 ```
 
 Disable the local automation without changing the repository:
@@ -77,4 +89,5 @@ Disable the local automation without changing the repository:
 ```sh
 systemctl --user disable --now shadowcontext-hourly.timer
 systemctl --user disable --now shadowcontext-daily-seo.timer
+systemctl --user disable --now shadowcontext-threat-dashboard.timer
 ```

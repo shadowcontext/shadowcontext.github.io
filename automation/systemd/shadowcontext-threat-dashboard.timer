@@ -1,0 +1,12 @@
+[Unit]
+Description=Refresh ShadowContext threat intelligence dashboard daily
+
+[Timer]
+OnCalendar=*-*-* 05:17:00 Asia/Dubai
+Persistent=true
+RandomizedDelaySec=8min
+AccuracySec=1min
+Unit=shadowcontext-threat-dashboard.service
+
+[Install]
+WantedBy=timers.target

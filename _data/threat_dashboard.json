@@ -1,0 +1,273 @@
+{
+  "generated_at": "2026-07-21T13:17:04Z",
+  "generated_display": "21 Jul 2026 · 13:17 UTC",
+  "metrics": {
+    "kev_total": 1647,
+    "kev_added_30d": 24,
+    "due_next_7d": 1,
+    "ioc_total": 143
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-58644",
+      "name": "Microsoft SharePoint Deserialization of Untrusted Data Vulnerability",
+      "vendor": "Microsoft",
+      "product": "SharePoint",
+      "date_added": "2026-07-16",
+      "due_date": "2026-07-19",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-58644"
+    },
+    {
+      "cve": "CVE-2026-39808",
+      "name": "Fortinet FortiSandbox OS Command Injection Vulnerability",
+      "vendor": "Fortinet",
+      "product": "FortiSandbox",
+      "date_added": "2026-07-16",
+      "due_date": "2026-07-19",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-39808"
+    },
+    {
+      "cve": "CVE-2026-25089",
+      "name": "Fortinet FortiSandbox OS Command Injection Vulnerability",
+      "vendor": "Fortinet",
+      "product": "FortiSandbox",
+      "date_added": "2026-07-16",
+      "due_date": "2026-07-19",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-25089"
+    },
+    {
+      "cve": "CVE-2026-46817",
+      "name": "Oracle E-Business Suite Improper Privilege Management Vulnerability",
+      "vendor": "Oracle",
+      "product": "E-Business Suite",
+      "date_added": "2026-07-15",
+      "due_date": "2026-07-18",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-46817"
+    },
+    {
+      "cve": "CVE-2023-4346",
+      "name": "KNX Association KNX Protocol Connection Authorization Option 1 Overly Restrictive Account Lockout Mechanism Vulnerability",
+      "vendor": "KNX Association",
+      "product": "KNX Protocol Connection Authorization Option 1",
+      "date_added": "2026-07-15",
+      "due_date": "2026-07-29",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2023-4346"
+    },
+    {
+      "cve": "CVE-2026-56164",
+      "name": "Microsoft SharePoint Server Missing Authentication for Critical Function Vulnerability",
+      "vendor": "Microsoft",
+      "product": "SharePoint Server",
+      "date_added": "2026-07-14",
+      "due_date": "2026-07-17",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-56164"
+    },
+    {
+      "cve": "CVE-2026-56155",
+      "name": "Microsoft Active Directory Federation Services Insufficient Granularity of Access Control Vulnerability ",
+      "vendor": "Microsoft",
+      "product": "Active Directory Federation Services",
+      "date_added": "2026-07-14",
+      "due_date": "2026-07-28",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-56155"
+    },
+    {
+      "cve": "CVE-2026-15410",
+      "name": "SonicWall SMA1000 Appliances Code Injection Vulnerability",
+      "vendor": "SonicWall",
+      "product": "SMA1000 Appliances",
+      "date_added": "2026-07-14",
+      "due_date": "2026-07-17",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-15410"
+    }
+  ],
+  "platforms": [
+    {
+      "vendor": "Microsoft",
+      "product": "Windows",
+      "count": 45,
+      "percent": 100
+    },
+    {
+      "vendor": "Cisco",
+      "product": "Catalyst SD-WAN Manager",
+      "count": 18,
+      "percent": 40
+    },
+    {
+      "vendor": "Apple",
+      "product": "Multiple Products",
+      "count": 10,
+      "percent": 22
+    },
+    {
+      "vendor": "Google",
+      "product": "Chromium V8",
+      "count": 9,
+      "percent": 20
+    },
+    {
+      "vendor": "Fortinet",
+      "product": "FortiSandbox",
+      "count": 8,
+      "percent": 18
+    },
+    {
+      "vendor": "Oracle",
+      "product": "E-Business Suite",
+      "count": 6,
+      "percent": 13
+    }
+  ],
+  "actors": [
+    {
+      "name": "Russian FSB Center 16",
+      "aliases": "Berserk Bear · Energetic Bear · Static Tundra",
+      "focus": "Edge routers, SNMP exposure, and critical infrastructure networks.",
+      "date": "2026-07-13",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-194a"
+    },
+    {
+      "name": "PRC state-sponsored actors",
+      "aliases": "Volt Typhoon · Flax Typhoon",
+      "focus": "Covert networks of compromised routers and persistent access to critical infrastructure.",
+      "date": "2026-04-23",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-113a"
+    },
+    {
+      "name": "IRGC-affiliated actors",
+      "aliases": "CyberAv3ngers · Storm-0784 · Hydro Kitten",
+      "focus": "Internet-exposed operational technology and programmable logic controllers.",
+      "date": "2026-04-07",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-097a"
+    },
+    {
+      "name": "PRC global espionage cluster",
+      "aliases": "Salt Typhoon-associated activity",
+      "focus": "Provider networks, routing infrastructure, and long-term access for intelligence collection.",
+      "date": "2025-08-27",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-239a"
+    }
+  ],
+  "advisories": [
+    {
+      "authority": "Saudi NCA / CERT",
+      "title": "Samsung alert",
+      "url": "https://nca.gov.sa/en/cert/7783/",
+      "date": "2026-07-21",
+      "severity": "Critical",
+      "summary": "Security alert 2026-7660. Review the official notice for affected products and remediation guidance."
+    },
+    {
+      "authority": "Saudi NCA / CERT",
+      "title": "HPE Alert",
+      "url": "https://nca.gov.sa/en/cert/7782/",
+      "date": "2026-07-20",
+      "severity": "High",
+      "summary": "Security alert 2026-7659. Review the official notice for affected products and remediation guidance."
+    },
+    {
+      "authority": "Saudi NCA / CERT",
+      "title": "Weekly Vulnerabilities Summary 5 July - 11 July",
+      "url": "https://nca.gov.sa/en/cert/7781/",
+      "date": "2026-07-20",
+      "severity": "Critical",
+      "summary": "Security alert 2026-7658. Review the official notice for affected products and remediation guidance."
+    },
+    {
+      "title": "Rockwell Automation CompactLogix, ControlLogix, Compact GuardLogix and GuardLogix",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-197-06",
+      "date": "2026-07-16",
+      "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to cause a denial-of-service condition. The following versions of Rockwell Automation…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "title": "Siemens SICAM 8",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-197-05",
+      "date": "2026-07-16",
+      "summary": "View CSAF Summary Multiple SICAM 8 products are affected by multiple vulnerabilities that could lead to denial of service, namely: - SICAM A8000 Device firmware - CPCI85 for…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "title": "SALTO ProAccess Space",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-197-07",
+      "date": "2026-07-16",
+      "summary": "View CSAF Summary Successful exploitation of this vulnerability allows an authenticated attacker to escalate privileges and access spaces outside their assigned partition, within…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "title": "Rockwell Automation FactoryTalk DataMosaix",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-197-09",
+      "date": "2026-07-16",
+      "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an authenticated attacker to inject malicious scripts on the server. The following versions of…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "title": "How to secure your online meetings",
+      "url": "https://www.ncsc.gov.uk/guidance/how-to-secure-your-online-meetings",
+      "date": "2026-03-19",
+      "summary": "Advice for small and medium-sized organisations on choosing, setting up and using online meeting services safely.",
+      "authority": "UK NCSC",
+      "severity": ""
+    }
+  ],
+  "ioc_counts": {
+    "domain": 1,
+    "ipv4": 90,
+    "ipv6": 2,
+    "md5": 9,
+    "sha1": 8,
+    "sha256": 32,
+    "url": 1
+  },
+  "ioc_sha256": "0a270875e68c0626da8c436780c5613c1a1d51cc6806383ccf9dd9d9853afe3f",
+  "sources": {
+    "kev": {
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    }
+  },
+  "source_health": [
+    {
+      "name": "CISA KEV",
+      "coverage": "Confirmed exploited vulnerabilities",
+      "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+      "status": "online"
+    },
+    {
+      "name": "CISA Advisories",
+      "coverage": "Technical and industrial-control advisories",
+      "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml",
+      "status": "online"
+    },
+    {
+      "name": "UK NCSC",
+      "coverage": "Guidance and technical reports",
+      "url": "https://www.ncsc.gov.uk/api/1/services/v1/guidance-rss-feed.xml",
+      "status": "online"
+    },
+    {
+      "name": "Saudi NCA / CERT",
+      "coverage": "Saudi national security alerts",
+      "url": "https://nca.gov.sa/en/cert/",
+      "status": "online"
+    },
+    {
+      "name": "CISA STIX",
+      "coverage": "TLP:CLEAR indicators of compromise",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-239a",
+      "status": "online"
+    }
+  ]
+}
