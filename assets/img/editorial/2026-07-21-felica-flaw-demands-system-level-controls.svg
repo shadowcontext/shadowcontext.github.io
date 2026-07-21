@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Layered protection around a legacy contactless credential</title>
+  <desc id="desc">An abstract contactless card crosses layered teal radio fields while an amber cryptographic ring is reinforced by a protective outer arc.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07121f"/>
+      <stop offset="0.52" stop-color="#102b3b"/>
+      <stop offset="1" stop-color="#08101b"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="52%" cy="49%" r="54%">
+      <stop offset="0" stop-color="#34d8c2" stop-opacity="0.2"/>
+      <stop offset="0.58" stop-color="#247796" stop-opacity="0.09"/>
+      <stop offset="1" stop-color="#07121f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b9fff0" stop-opacity="0.9"/>
+      <stop offset="0.48" stop-color="#37c8c2" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#176d8d" stop-opacity="0.88"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffe1a0"/>
+      <stop offset="0.52" stop-color="#f5a94f"/>
+      <stop offset="1" stop-color="#d36b42"/>
+    </linearGradient>
+    <linearGradient id="aqua" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#b5fff0"/>
+      <stop offset="1" stop-color="#36b9d2"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#02070d" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <ellipse cx="820" cy="450" rx="680" ry="390" fill="url(#halo)"/>
+
+  <g fill="none" stroke="#72d9dc" stroke-opacity="0.09" stroke-width="2">
+    <path d="M45 176 C330 72 520 202 800 126 S1285 78 1554 186"/>
+    <path d="M20 733 C326 621 515 756 802 682 S1288 628 1580 744"/>
+    <path d="M182 58 V842 M1418 58 V842"/>
+  </g>
+
+  <g transform="translate(820 450)" fill="none" stroke-linecap="round">
+    <path d="M-545 -7 C-407 -210 -207 -318 20 -318 C247 -318 449 -207 570 0" stroke="#2da3b8" stroke-opacity="0.16" stroke-width="34"/>
+    <path d="M-493 -2 C-369 -170 -187 -255 18 -255 C223 -255 399 -166 512 0" stroke="#49c6cd" stroke-opacity="0.24" stroke-width="26"/>
+    <path d="M-430 1 C-319 -126 -162 -192 17 -192 C194 -192 349 -122 443 0" stroke="url(#aqua)" stroke-opacity="0.62" stroke-width="17" filter="url(#glow)"/>
+  </g>
+
+  <g transform="translate(805 484) rotate(-8)" filter="url(#shadow)">
+    <rect x="-358" y="-214" width="716" height="428" rx="54" fill="url(#card)" stroke="#c6fff3" stroke-opacity="0.7" stroke-width="5"/>
+    <path d="M-312 -159 H312 M-312 159 H312" stroke="#e0fff8" stroke-opacity="0.13" stroke-width="3"/>
+    <path d="M-267 -106 C-210 -156 -131 -155 -80 -104 C-28 -52 -28 31 -80 83 C-132 135 -213 134 -267 82" fill="none" stroke="#d5fff6" stroke-opacity="0.28" stroke-width="20"/>
+    <g transform="translate(98 2)">
+      <circle r="112" fill="#092234" fill-opacity="0.48" stroke="#c8fff3" stroke-opacity="0.44" stroke-width="4"/>
+      <circle r="72" fill="none" stroke="url(#amber)" stroke-width="19" stroke-dasharray="282 172" stroke-dashoffset="28" filter="url(#glow)"/>
+      <circle r="31" fill="#ffd58a" fill-opacity="0.82"/>
+      <path d="M45 -55 L79 -96" stroke="#091b2a" stroke-width="15"/>
+      <path d="M48 -57 L82 -98" stroke="#ffd88b" stroke-width="6"/>
+    </g>
+  </g>
+
+  <g transform="translate(905 482)" fill="none" stroke-linecap="round" filter="url(#glow)">
+    <path d="M-210 178 C-122 297 53 343 207 275 C337 218 416 91 409 -48" stroke="#173b50" stroke-width="58" stroke-opacity="0.88"/>
+    <path d="M-210 178 C-122 297 53 343 207 275 C337 218 416 91 409 -48" stroke="url(#aqua)" stroke-width="17" stroke-opacity="0.9"/>
+    <path d="M379 -26 L410 -76 L438 -23" stroke="#9cf5e6" stroke-width="17" stroke-linejoin="round"/>
+  </g>
+
+  <g fill="#79e3d9" opacity="0.6">
+    <circle cx="233" cy="251" r="4"/><circle cx="1369" cy="241" r="3"/><circle cx="270" cy="682" r="3"/><circle cx="1334" cy="700" r="4"/>
+  </g>
+  <g fill="#f4b25d" opacity="0.7">
+    <circle cx="1050" cy="260" r="5"/><circle cx="1180" cy="326" r="3"/><circle cx="1135" cy="687" r="4"/>
+  </g>
+</svg>
