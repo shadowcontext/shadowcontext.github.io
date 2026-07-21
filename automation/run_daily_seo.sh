@@ -10,6 +10,7 @@ RUN_DIR=""
 BUILD_LOG=""
 
 export GIT_SSH_COMMAND="${GIT_SSH_COMMAND:-ssh -F /dev/null}"
+export BUNDLE_PATH="$SHARED_BUNDLE_PATH"
 
 log() {
   printf '[shadowcontext-seo] %s\n' "$*"

@@ -7,7 +7,7 @@
   {% assign page_image = page.image | default: "/assets/img/editorial/home-hero.png" %}
   {% assign page_image_alt = page.image_alt | default: "ShadowContext security intelligence" %}
   {% assign robots_content = page.robots | default: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" %}
-  {% if page.layout == '404' or page.layout == 'message-sent' %}{% assign robots_content = "noindex, follow" %}{% endif %}
+  {% if page.url == '/404.html' or page.layout == 'message-sent' %}{% assign robots_content = "noindex, follow" %}{% endif %}
   {% if page.layout == 'category' %}
     {% assign category_posts = site.posts | where: "category", page.slug %}
     {% if category_posts.size == 0 %}{% assign robots_content = "noindex, follow" %}{% endif %}

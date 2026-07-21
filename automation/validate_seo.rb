@@ -179,6 +179,22 @@ if File.file?(admin_path)
   errors << "admin page must be noindex" unless admin.match?(%r{<meta\s+name=["']robots["']\s+content=["'][^"']*noindex}i)
 end
 
+noindex_paths = %w[404.html staff/index.html contact/message-sent/index.html]
+legacy_categories = Dir[File.join(repository, "category", "*.md")].filter_map do |path|
+  data = front_matter(path)
+  slug = data["slug"]
+  next if %w[ai-security threat-intelligence defense].include?(slug)
+
+  File.join("category", slug.to_s, "index.html")
+end
+(noindex_paths + legacy_categories).each do |relative|
+  path = File.join(build_directory, relative)
+  next unless File.file?(path)
+
+  html = File.read(path, encoding: "UTF-8")
+  errors << "utility or thin page must be noindex: /#{relative}" unless html.match?(%r{<meta\s+name=["']robots["']\s+content=["'][^"']*noindex}i)
+end
+
 unless errors.empty?
   warn errors.map { |error| "SEO validation: #{error}" }.join("\n")
   abort "SEO validation failed with #{errors.length} issue#{errors.length == 1 ? '' : 's'}"

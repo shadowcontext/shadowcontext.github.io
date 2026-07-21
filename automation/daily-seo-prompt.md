@@ -14,9 +14,12 @@ when an improvement cannot be verified. Search rankings are not guaranteed.
 Build the site and run:
 
 ```sh
-BUNDLE_PATH=vendor/bundle bundle exec jekyll build
+bundle exec jekyll build
 ruby automation/validate_seo.rb . _site
 ```
+
+The runner exports the shared `BUNDLE_PATH`; do not install gems or change
+dependencies during the audit.
 
 Review the live homepage, `robots.txt`, and `sitemap.xml` when reachable. Check
 for regressions in titles, descriptions, canonicals, robots directives,
