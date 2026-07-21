@@ -9,8 +9,8 @@ tags: [SonicWall, zero-day, edge security, incident response]
 author: ShadowContext Research
 read_time: 5 min
 importance: urgent
-image: /assets/img/editorial/ddos-machine-speed.png
-image_alt: "Abstract digital infrastructure under fast-moving red and blue network pressure"
+image: /assets/img/editorial/2026-07-20-sonicwall-zero-days-demand-post-patch-hunt.png
+image_alt: "A patched edge appliance protected by a shield while faint historical network traces are reviewed"
 key_points:
   - "Two SonicWall SMA 1000 flaws were exploited before their public disclosure and hotfixes."
   - "Volexity found root-level persistence and credential collection on compromised appliances."

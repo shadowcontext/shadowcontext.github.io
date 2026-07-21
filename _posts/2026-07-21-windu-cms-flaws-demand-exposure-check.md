@@ -9,8 +9,8 @@ tags: [Windu CMS, vulnerability management, web security, incident response]
 author: ShadowContext Research
 read_time: 5 min
 importance: notable
-image: /assets/img/editorial/ai-vulnerability-race.png
-image_alt: "Abstract red and blue signals racing across a digital vulnerability landscape"
+image: /assets/img/editorial/2026-07-21-windu-cms-flaws-demand-exposure-check.png
+image_alt: "Three database, credential, and upload paths entering a shielded content-management core for exposure review"
 key_points:
   - "CERT Polska disclosed three vulnerabilities confirmed in Windu CMS 4.1."
   - "The flaws affect database access, password storage and authenticated file uploads."

@@ -9,8 +9,8 @@ tags: [vulnerability-management, patching, security-tools, injection]
 author: ShadowContext Research
 read_time: 5 min
 importance: notable
-image: /assets/img/editorial/2026-07-21-tenable-security-center-patch-closes-injection-paths.svg
-image_alt: "Abstract security console encircled by layered blue shields as orange injection paths are sealed at the boundary"
+image: /assets/img/editorial/2026-07-21-tenable-security-center-patch-closes-injection-paths.png
+image_alt: "A layered security perimeter sealing four violet injection streams before they reach a protected console"
 key_points:
   - "Five Security Center flaws include three critical injection vulnerabilities."
   - "The patch covers supported 6.6.0, 6.7.x, and 6.8.0 Linux installations."

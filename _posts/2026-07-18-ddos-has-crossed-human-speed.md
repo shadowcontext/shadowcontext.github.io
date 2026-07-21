@@ -8,8 +8,8 @@ category: defense
 tags: [DDoS, resilience, network security, incident response]
 author: ShadowContext Research
 read_time: 6 min
-image: /assets/img/editorial/ddos-machine-speed.png
-image_alt: "A wave of blue and violet signals meeting a resilient distributed network mesh"
+image: /assets/img/editorial/2026-07-18-ddos-has-crossed-human-speed.png
+image_alt: "A vast wave of network packets meeting an automated multi-layer defense around critical services"
 key_points:
   - Volumetric attacks can peak before a manual response begins.
   - Capacity matters, but architecture and origin protection matter too.

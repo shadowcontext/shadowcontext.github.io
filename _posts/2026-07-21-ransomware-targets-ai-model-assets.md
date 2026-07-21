@@ -9,8 +9,8 @@ tags: [ransomware, AI security, Langflow, containers]
 author: ShadowContext Research
 read_time: 5 min
 importance: notable
-image: /assets/img/editorial/ai-vulnerability-race.png
-image_alt: "Blue and purple data streams converge on a cube-built digital core"
+image: /assets/img/editorial/2026-07-21-ransomware-targets-ai-model-assets.png
+image_alt: "AI model blocks, vector data, and backups segmented away from an isolated encryption wave"
 key_points:
   - "Sysdig observed a ransomware payload designed to encrypt model files, vector indexes and training datasets."
   - "The reported intrusion reused a known Langflow flaw and abused exposed Docker control to reach the host."

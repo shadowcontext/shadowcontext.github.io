@@ -9,8 +9,8 @@ tags: [ai-agents, developer-security, sandboxing, endpoint-security]
 author: ShadowContext Research
 read_time: 5 min
 importance: notable
-image: /assets/img/editorial/ai-vulnerability-race.png
-image_alt: "Abstract blue and purple data streams entering a geometric digital structure"
+image: /assets/img/editorial/2026-07-21-ai-coding-agent-sandboxes-have-a-trust-gap.png
+image_alt: "An AI coding agent inside a glass sandbox as host controls block an unsafe trust path at the boundary"
 key_points:
   - "Agent-written files can influence trusted host tools beyond the sandbox boundary."
   - "Several disclosed flaws are fixed, but patch status differs by product and finding."

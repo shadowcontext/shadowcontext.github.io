@@ -9,8 +9,8 @@ tags: [AI security, incident response, cloud security, credential security]
 author: ShadowContext Research
 read_time: 5 min
 importance: notable
-image: /assets/img/editorial/ai-vulnerability-race.png
-image_alt: "Abstract streams of cyan and violet data converging on a modular software core"
+image: /assets/img/editorial/2026-07-20-hugging-face-breach-exposes-ai-data-pipeline-risk.png
+image_alt: "A segmented AI data pipeline isolating an unsafe input while protected stages and tokens remain separated"
 key_points:
   - "Treat uploaded datasets and their processors as hostile-code boundaries."
   - "Limit pipeline identities so one worker cannot unlock multiple clusters."

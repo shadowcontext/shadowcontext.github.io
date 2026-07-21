@@ -9,8 +9,8 @@ tags: [data-breach, identity-security, enterprise-applications, incident-respons
 author: ShadowContext Research
 read_time: 5 min
 importance: notable
-image: /assets/img/editorial/identity-session-theft.png
-image_alt: "Blue identity panels intersected by a purple data path in a digital network"
+image: /assets/img/editorial/2026-07-21-estee-lauder-breach-shows-hr-data-risk.png
+image_alt: "Protected employee records connected to long-lived identity relationships under downstream monitoring"
 key_points:
   - "Estée Lauder says an Oracle E-Business Suite vulnerability exposed sensitive personal and employment data."
   - "The public notice does not identify a CVE, attacker, or total number of affected people."

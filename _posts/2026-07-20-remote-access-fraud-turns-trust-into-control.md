@@ -9,8 +9,8 @@ tags: [UAE, cyber fraud, social engineering, remote access, banking security]
 author: ShadowContext Research
 read_time: 6 min
 importance: notable
-image: /assets/img/editorial/identity-session-theft.png
-image_alt: "Abstract identity tokens passing through verification gates"
+image: /assets/img/editorial/2026-07-20-remote-access-fraud-turns-trust-into-control.png
+image_alt: "A verification shield interrupting an impersonator's remote-control path between a user and a bank vault"
 key_points:
   - Legitimate remote-support tools become dangerous when trust is established by an impersonator.
   - Verification should use an independently sourced official channel, never contact details supplied by the caller.

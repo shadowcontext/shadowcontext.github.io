@@ -8,8 +8,8 @@ category: threat-intelligence
 tags: [identity, phishing, session security, threat intelligence]
 author: ShadowContext Research
 read_time: 7 min
-image: /assets/img/editorial/identity-session-theft.png
-image_alt: "Abstract identity tokens moving through verification gates as one token diverts into a violet path"
+image: /assets/img/editorial/2026-07-19-attackers-dont-need-to-break-in.png
+image_alt: "An authenticated session passing one gate before a second contextual control detects a violet anomaly"
 key_points:
   - MFA success is a checkpoint, not proof of continuing trust.
   - Session cookies and legitimate cloud services reduce attacker friction.
@@ -77,4 +77,3 @@ Help desks and hiring pipelines are identity systems too. Require strong verific
 Security teams often forward identity logs to a SIEM but still treat them as supporting evidence. That model is outdated. Identity providers, SaaS audit trails, endpoint state, and token events should be correlated at the center of detection and response.
 
 The strategic shift is simple: successful authentication begins a trust decision; it does not finish one. Organizations that can continuously evaluate that decision make stolen credentials and sessions far less useful—even when the attacker technically logs in.
-

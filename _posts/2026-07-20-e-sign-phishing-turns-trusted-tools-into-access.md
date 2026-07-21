@@ -9,8 +9,8 @@ tags: [phishing, remote access, social engineering, endpoint security]
 author: ShadowContext Research
 read_time: 5 min
 importance: notable
-image: /assets/img/editorial/identity-session-theft.png
-image_alt: "Blue identity panels intersected by a purple pathway in a digital security illustration"
+image: /assets/img/editorial/2026-07-20-e-sign-phishing-turns-trusted-tools-into-access.png
+image_alt: "A digital-signature envelope feeding a remote access path that behavioral controls divert and contain"
 key_points:
   - "A reusable e-signature lure delivers legitimate remote-management software."
   - "The observed campaign supports Windows and macOS delivery paths."
