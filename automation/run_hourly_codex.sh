@@ -86,19 +86,34 @@ if [[ ${#STATUS_LINES[@]} -eq 0 ]]; then
 fi
 
 NEW_POST=""
+NEW_IMAGE=""
 for status_line in "${STATUS_LINES[@]}"; do
-  if [[ ! "$status_line" =~ ^\?\?[[:space:]](_posts/[0-9]{4}-[0-9]{2}-[0-9]{2}-[a-z0-9-]+\.md)$ ]]; then
+  if [[ "$status_line" =~ ^\?\?[[:space:]](_posts/[0-9]{4}-[0-9]{2}-[0-9]{2}-[a-z0-9-]+\.md)$ ]]; then
+    if [[ -n "$NEW_POST" ]]; then
+      log "rejected run that created more than one post"
+      exit 1
+    fi
+    NEW_POST="${BASH_REMATCH[1]}"
+  elif [[ "$status_line" =~ ^\?\?[[:space:]](assets/img/editorial/[0-9]{4}-[0-9]{2}-[0-9]{2}-[a-z0-9-]+\.svg)$ ]]; then
+    if [[ -n "$NEW_IMAGE" ]]; then
+      log "rejected run that created more than one image"
+      exit 1
+    fi
+    NEW_IMAGE="${BASH_REMATCH[1]}"
+  else
     log "rejected out-of-scope change: $status_line"
     exit 1
   fi
-  if [[ -n "$NEW_POST" ]]; then
-    log "rejected run that created more than one post"
-    exit 1
-  fi
-  NEW_POST="${BASH_REMATCH[1]}"
 done
 
 [[ -n "$NEW_POST" ]] || { log "no valid post was created"; exit 1; }
+[[ -n "$NEW_IMAGE" ]] || { log "no generated image was created"; exit 1; }
+post_stem="${NEW_POST#_posts/}"
+image_stem="${NEW_IMAGE#assets/img/editorial/}"
+if [[ "${post_stem%.md}" != "${image_stem%.svg}" ]]; then
+  log "post and image names do not match"
+  exit 1
+fi
 ruby "$VALIDATOR_PATH" "$RUN_DIR" "$NEW_POST"
 
 mapfile -t SOURCE_URLS < <(sed -nE 's/^[[:space:]]+url: "(https:\/\/[^"[:space:]]+)"$/\1/p' "$RUN_DIR/$NEW_POST")
@@ -113,8 +128,8 @@ for source_url in "${SOURCE_URLS[@]}"; do
     exit 1
   fi
 done
-git -C "$RUN_DIR" add --intent-to-add -- "$NEW_POST"
-git -C "$RUN_DIR" diff --check -- "$NEW_POST"
+git -C "$RUN_DIR" add --intent-to-add -- "$NEW_POST" "$NEW_IMAGE"
+git -C "$RUN_DIR" diff --check -- "$NEW_POST" "$NEW_IMAGE"
 
 BUILD_LOG="$(mktemp /tmp/shadowcontext-jekyll.XXXXXX)"
 (
@@ -132,7 +147,7 @@ if [[ "$(git -C "$REPO_ROOT" rev-parse origin/main)" != "$BASE_COMMIT" ]]; then
   exit 0
 fi
 
-git -C "$RUN_DIR" add -- "$NEW_POST"
+git -C "$RUN_DIR" add -- "$NEW_POST" "$NEW_IMAGE"
 git -C "$RUN_DIR" \
   -c user.name=shadowcontext-codex-bot \
   -c user.email=shadowcontext-codex-bot@users.noreply.github.com \

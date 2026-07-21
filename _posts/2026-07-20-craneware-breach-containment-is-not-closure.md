@@ -9,8 +9,8 @@ tags: [data breach, incident response, healthcare technology, data exfiltration]
 author: ShadowContext Research
 read_time: 5 min
 importance: notable
-image: /assets/img/editorial/identity-session-theft.png
-image_alt: "Abstract identity records passing through verification gates while one path diverts away"
+image: /assets/img/editorial/craneware-containment-data-movement.png
+image_alt: "A stable translucent security boundary around a data core with copied fragments visible beyond it"
 key_points:
   - "Containment can stop an intrusion without reversing data exfiltration."
   - "Record-level scoping should drive notifications and protective advice."

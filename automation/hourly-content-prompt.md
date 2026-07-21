@@ -8,7 +8,7 @@ result.
 ## Coverage priorities
 
 Run a dedicated UAE search before global research. Search for cybersecurity,
-cyber attacks, vulnerabilities, breaches, ransomware, phishing, fraud,
+vulnerabilities, ransomware, phishing, fraud,
 identity abuse, AI security, critical-infrastructure security, advisories, and
 defensive policy alongside:
 
@@ -22,19 +22,43 @@ credible security research. Use secondary reporting to discover stories, but
 prefer direct primary sources for the article. Inspect existing `_posts/` and
 their source URLs before deciding that a story is uncovered.
 
-A substantive UAE-related incident, warning, vulnerability impact, fraud
-campaign, policy change, or defensive development should receive priority. For
+A substantive UAE-related warning, vulnerability, fraud campaign, policy
+change, or defensive development should receive priority. For
 global stories, publish only when the development is timely and yields a
 concrete defensive lesson. Ignore duplicate syndication, thin marketing,
 conference promotion, unsupported claims, and stories without a meaningful
 security consequence.
 
+## Prohibited breach coverage
+
+Never publish a story about a breach or suspected breach of any organization,
+anywhere in the world. This prohibition includes alleged, confirmed, ongoing,
+or historical compromises; data exposure or theft; unauthorized access;
+ransomware intrusions; leak claims; victim notifications; breach containment;
+and post-breach investigations, attribution, impact, or recovery. Do not name
+an affected organization in order to turn its breach into a general lesson.
+
+Apply an absolute no-exceptions rule to breaches involving organizations in
+the Middle East, including governments, public bodies, companies, charities,
+schools, healthcare providers, and other entities. Skip the candidate as soon
+as research indicates that it concerns an organizational breach. A source's
+use of softer wording such as "cyber incident," "security event," "disruption,"
+or "data issue" does not make it eligible when the underlying subject is a
+known or suspected compromise.
+
+Eligible coverage can still include vulnerability advisories, defensive
+research, security policy, resilience guidance, and scam or fraud warnings,
+provided the article is not based on or substantially connected to the breach
+of an organization.
+
 ## Publication decision
 
-Create at most one new file named `_posts/YYYY-MM-DD-descriptive-slug.md`.
-Create no file when nothing meets the editorial threshold. Never edit an
-existing post or any file outside `_posts/`. Do not run Git commands; the local
-runner owns validation, commits, and publishing.
+Create at most one new post named `_posts/YYYY-MM-DD-descriptive-slug.md` and
+exactly one accompanying image named
+`assets/img/editorial/YYYY-MM-DD-descriptive-slug.svg`, using the same date and
+slug. Create neither file when nothing meets the editorial threshold. Never
+edit an existing file or create any other file. Do not run Git commands; the
+local runner owns validation, commits, and publishing.
 
 The article must be original, factual, safe for work, and useful to defenders.
 Use 550–850 words with a short opening and three or four `##` sections. Do not
@@ -58,8 +82,8 @@ tags: [three, to, five, tags]
 author: ShadowContext Research
 read_time: 5 min
 importance: routine | notable | urgent
-image: /assets/img/editorial/ai-vulnerability-race.png
-image_alt: "Accurate description of the selected existing image"
+image: /assets/img/editorial/YYYY-MM-DD-descriptive-slug.svg
+image_alt: "Accurate, specific description of the generated image"
 key_points:
   - "Exactly three concise points"
   - "Second point"
@@ -71,12 +95,18 @@ sources:
 ---
 ```
 
-Choose the closest existing editorial image:
-
-- AI and vulnerability research: `/assets/img/editorial/ai-vulnerability-race.png`
-- identity, fraud, and threat activity: `/assets/img/editorial/identity-session-theft.png`
-- resilience, availability, and defensive operations: `/assets/img/editorial/ddos-machine-speed.png`
+Generate a new, original editorial image specifically for the selected story;
+never reuse an existing image or a generic illustration. The visual concept
+must reflect the article's actual subject and central defensive lesson. Create
+it as a valid 1600 by 900 SVG with a `viewBox="0 0 1600 900"`, no external
+assets, no embedded raster data, and no scripts. Use polished abstract or
+editorial imagery rather than a diagram. Do not include organization logos,
+product trademarks, identifiable people, sensational breach imagery, or text
+that could become inaccurate. Include an SVG `<title>` and `<desc>`, and make
+the front matter's `image_alt` accurately describe the finished visual.
 
 Use one to four direct HTTPS sources. Confirm that each URL is public, relevant,
-and not already the basis of an existing ShadowContext article. Finish by
-checking the new file's front matter, claims, links, spelling, and word count.
+not already the basis of an existing ShadowContext article, and does not make
+the piece prohibited breach coverage. Finish by checking the new post's front
+matter, claims, links, spelling, word count, image path, and image relevance,
+and confirm that the SVG is valid and unique to the article.

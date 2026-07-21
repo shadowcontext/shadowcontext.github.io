@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">ShadowContext</title>
+  <desc id="desc">A luminous network protected by a shield</desc>
+  <defs>
+    <linearGradient id="bg" x1="8" y1="6" x2="56" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#102b52"/>
+      <stop offset="1" stop-color="#061326"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="18" y1="14" x2="48" y2="51" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6de8ff"/>
+      <stop offset=".7" stop-color="#238af3"/>
+      <stop offset="1" stop-color="#8d78ff"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="15" fill="url(#bg)"/>
+  <path d="M32 10.5 49 17v13c0 11.2-6.8 19.2-17 23.5C21.8 49.2 15 41.2 15 30V17l17-6.5Z" fill="#0d2546" stroke="url(#shield)" stroke-width="3" stroke-linejoin="round"/>
+  <path d="m23 35 9-9 9 9M23 35h18M32 26v14" fill="none" stroke="#dffaff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="23" cy="35" r="3" fill="#63e7ff"/>
+  <circle cx="32" cy="26" r="3" fill="#8bdfff"/>
+  <circle cx="41" cy="35" r="3" fill="#8c78ff"/>
+  <circle cx="32" cy="40" r="3" fill="#2aa8ff"/>
+</svg>

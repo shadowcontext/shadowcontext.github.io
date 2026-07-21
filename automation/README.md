@@ -17,13 +17,16 @@ Each run:
 2. Runs `codex --search … exec --ephemeral` with the saved local ChatGPT login.
 3. Searches current cybersecurity reporting, with an explicit UAE-first pass
    covering all seven emirates.
-4. Creates at most one new, source-grounded post when a story meets the
-   publication threshold.
-5. Rejects changes outside `_posts/`, edits to existing posts, or more than one
-   new article.
-6. Validates front matter, article length, source freshness and source URLs,
-   then builds Jekyll and checks the diff.
-7. Commits as `shadowcontext-codex-bot` and pushes to `main` through the
+4. Rejects any story concerning an organizational breach, with an explicit
+   no-exceptions rule for organizations in the Middle East.
+5. Creates at most one new, source-grounded post and one original,
+   story-specific SVG image when an eligible story meets the publication
+   threshold.
+6. Rejects edits to existing files, any other new files, mismatched post and
+   image names, or more than one new article and image pair.
+7. Validates front matter, article length, generated image structure, source
+   freshness and source URLs, then builds Jekyll and checks the diff.
+8. Commits as `shadowcontext-codex-bot` and pushes to `main` through the
    machine's existing GitHub SSH credentials.
 
 No search provider can guarantee literal coverage of every page on the public

@@ -66,6 +66,16 @@ abort "filename and publication dates differ" unless published_at.strftime("%Y-%
 
 image_path = File.join(repository, data["image"].sub(%r{\A/}, ""))
 abort "selected image does not exist" unless File.file?(image_path)
+expected_image = "/assets/img/editorial/#{File.basename(post_path, ".md")}.svg"
+abort "image must be newly generated for this post" unless data["image"] == expected_image
+
+image = File.read(image_path, encoding: "UTF-8")
+abort "generated image must be an SVG" unless image.match?(%r{<svg\b}i)
+abort "generated image must use a 1600 by 900 viewBox" unless image.match?(/viewBox=["']0 0 1600 900["']/i)
+abort "generated image must include a title" unless image.match?(%r{<title(?:\s[^>]*)?>.+?</title>}mi)
+abort "generated image must include a description" unless image.match?(%r{<desc(?:\s[^>]*)?>.+?</desc>}mi)
+abort "generated image must not contain scripts" if image.match?(%r{<script\b}i)
+abort "generated image must not reference external content" if image.match?(/(?:href|src)\s*=\s*["'](?:https?:)?\/\//i)
 
 body = match[2]
 heading_count = body.scan(/^## [^#].+$/).length
