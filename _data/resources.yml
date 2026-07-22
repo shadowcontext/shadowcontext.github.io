@@ -1,0 +1,408 @@
+categories:
+  - key: grc
+    label: GRC
+    index: "01"
+    description: Risk, control, assessment, and compliance-as-code resources for building defensible governance programs.
+  - key: benchmarking
+    label: Benchmarking
+    index: "02"
+    description: Public baselines and open tooling for measuring system configuration against security expectations.
+  - key: standards
+    label: Standards
+    index: "03"
+    description: Freely accessible standards and verification models for incident response, architecture, and secure delivery.
+  - key: dfir
+    label: Digital forensics
+    index: "04"
+    description: Open-source acquisition, memory, disk, event, and timeline analysis tools for DFIR workflows.
+  - key: osint
+    label: OSINT
+    index: "05"
+    description: Open-source discovery and enrichment utilities for lawful research using publicly available information.
+  - key: tools
+    label: Security tools
+    index: "06"
+    description: Open-source detection, network analysis, threat sharing, reverse engineering, and security testing utilities.
+
+resources:
+  - name: NIST Cybersecurity Framework 2.0
+    category: grc
+    type: Framework
+    access: Public guidance
+    url: https://www.nist.gov/cyberframework
+    description: Outcome-based guidance for governing, identifying, protecting, detecting, responding to, and recovering from cyber risk.
+    audience: GRC · Security leaders
+    tags: nist csf governance risk maturity profiles controls
+  - name: NIST Risk Management Framework
+    category: grc
+    type: Framework
+    access: Public guidance
+    url: https://csrc.nist.gov/projects/risk-management/about-rmf
+    description: A seven-step lifecycle for categorizing systems, selecting controls, assessing implementation, and monitoring risk.
+    audience: GRC · System owners
+    tags: nist rmf authorization assessment monitoring controls
+  - name: NIST OSCAL
+    category: grc
+    type: Data model
+    access: Open source
+    url: https://pages.nist.gov/OSCAL/
+    description: Machine-readable XML, JSON, and YAML models for control catalogs, profiles, implementations, and assessments.
+    audience: GRC · Security engineers
+    tags: oscal compliance automation json yaml xml controls
+  - name: CISA Cybersecurity Performance Goals
+    category: grc
+    type: Baseline
+    access: Public guidance
+    url: https://www.cisa.gov/cybersecurity-performance-goals
+    description: A prioritized, voluntary baseline of high-impact practices for reducing risk across critical infrastructure.
+    audience: Security leaders · GRC
+    tags: cisa cpg critical infrastructure baseline maturity
+  - name: OWASP SAMM
+    category: grc
+    type: Maturity model
+    access: CC BY-SA 4.0
+    url: https://owaspsamm.org/
+    description: An open model for assessing and improving software security practices across governance, design, build, and operations.
+    audience: AppSec · GRC
+    tags: owasp samm software assurance maturity assessment
+  - name: Compliance Trestle
+    category: grc
+    type: Tool
+    access: Apache-2.0
+    url: https://github.com/oscal-compass/compliance-trestle
+    description: Compliance-as-code tooling for authoring, validating, transforming, and governing OSCAL artifacts in Git workflows.
+    audience: GRC · DevSecOps
+    tags: oscal compliance as code automation documentation
+  - name: CISA CSET
+    category: grc
+    type: Tool
+    access: Open source
+    url: https://github.com/cisagov/cset
+    description: CISA's Cyber Security Evaluation Tool for structured assessments, diagrams, maturity models, and recommendations.
+    audience: GRC · Assessors
+    tags: cisa cset assessment maturity architecture
+
+  - name: DISA STIG Document Library
+    category: benchmarking
+    type: Benchmark
+    access: Public resource
+    url: https://public.cyber.mil/stigs/downloads/
+    description: Security Technical Implementation Guides and supporting artifacts for hardening systems used by the US Department of Defense.
+    audience: Assessors · System owners
+    tags: disa stig hardening configuration benchmark
+  - name: NIST National Checklist Repository
+    category: benchmarking
+    type: Repository
+    access: Public resource
+    url: https://ncp.nist.gov/repository
+    description: A searchable collection of security configuration checklists for operating systems, applications, and infrastructure.
+    audience: Security engineers · Auditors
+    tags: nist ncp checklist hardening scap configuration
+  - name: OpenSCAP
+    category: benchmarking
+    type: Tool
+    access: LGPL-2.1+
+    url: https://www.open-scap.org/
+    description: An open implementation of SCAP standards for automated configuration and vulnerability assessment.
+    audience: Security engineers · Assessors
+    tags: openscap scap xccdf oval compliance scanning
+  - name: ComplianceAsCode Content
+    category: benchmarking
+    type: Content
+    access: BSD-3-Clause
+    url: https://github.com/ComplianceAsCode/content
+    description: Community-maintained SCAP content, profiles, and remediations for Linux platforms and security policies.
+    audience: Linux security · DevSecOps
+    tags: compliance as code scap linux xccdf remediation
+  - name: Lynis
+    category: benchmarking
+    type: Tool
+    access: GPL-3.0
+    url: https://github.com/CISOfy/lynis
+    description: Host-based auditing and hardening analysis for Linux, macOS, and other Unix-like systems.
+    audience: System owners · Auditors
+    tags: lynis linux unix audit hardening benchmark
+  - name: CISA ScubaGear
+    category: benchmarking
+    type: Tool
+    access: Public domain
+    url: https://github.com/cisagov/ScubaGear
+    description: Automation that assesses Microsoft 365 tenants against CISA Secure Cloud Business Applications baselines.
+    audience: Cloud security · Assessors
+    tags: cisa scuba m365 cloud baseline powershell
+  - name: macOS Security Compliance Project
+    category: benchmarking
+    type: Tool
+    access: Public domain
+    url: https://github.com/usnistgov/macos_security
+    description: NIST-led tooling that generates macOS security guidance, profiles, scripts, and compliance documentation.
+    audience: Endpoint security · Assessors
+    tags: nist macos compliance hardening benchmark profiles
+
+  - name: NIST SP 800-53 Rev. 5
+    category: standards
+    type: Control catalog
+    access: Public guidance
+    url: https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final
+    description: A comprehensive catalog of security and privacy controls with mappings and machine-readable supporting material.
+    audience: GRC · Architects
+    tags: nist 800-53 controls privacy security catalog
+  - name: NIST SP 800-61 Rev. 3
+    category: standards
+    type: IR guidance
+    access: Public guidance
+    url: https://csrc.nist.gov/pubs/sp/800/61/r3/final
+    description: Current NIST incident response recommendations organized as a Cybersecurity Framework 2.0 Community Profile.
+    audience: DFIR · Security leaders
+    tags: nist 800-61 incident response csirt recovery
+  - name: NIST SP 800-207
+    category: standards
+    type: Architecture
+    access: Public guidance
+    url: https://csrc.nist.gov/pubs/sp/800/207/final
+    description: Definitions, deployment models, and use cases for planning and implementing zero trust architecture.
+    audience: Architects · Security leaders
+    tags: nist 800-207 zero trust identity architecture
+  - name: NIST SP 800-218 SSDF
+    category: standards
+    type: Framework
+    access: Public guidance
+    url: https://csrc.nist.gov/pubs/sp/800/218/final
+    description: A common set of secure software development practices for producers, purchasers, and engineering teams.
+    audience: AppSec · Engineering leaders
+    tags: nist ssdf secure development sdlc supply chain
+  - name: OWASP ASVS
+    category: standards
+    type: Verification standard
+    access: CC BY-SA 4.0
+    url: https://owasp.org/www-project-application-security-verification-standard/
+    description: Requirements for testing web application technical controls and defining secure development expectations.
+    audience: AppSec · Testers
+    tags: owasp asvs application security verification requirements
+  - name: OWASP MASVS
+    category: standards
+    type: Verification standard
+    access: CC BY-SA 4.0
+    url: https://mas.owasp.org/MASVS/
+    description: A mobile application security verification standard supported by testing and weakness reference guides.
+    audience: Mobile security · AppSec
+    tags: owasp masvs mobile application testing verification
+  - name: MITRE ATT&CK
+    category: standards
+    type: Knowledge base
+    access: CC BY 4.0
+    url: https://attack.mitre.org/
+    description: A globally accessible knowledge base of adversary tactics and techniques grounded in real-world observations.
+    audience: SOC · Threat researchers
+    tags: mitre attack tactics techniques detection threat modeling
+
+  - name: Autopsy
+    category: dfir
+    type: Tool
+    access: Apache-2.0
+    url: https://github.com/sleuthkit/autopsy
+    description: A graphical digital forensics platform built on The Sleuth Kit for disk, file-system, and artifact analysis.
+    audience: DFIR · Examiners
+    tags: autopsy disk filesystem artifact case forensics
+  - name: The Sleuth Kit
+    category: dfir
+    type: Tool
+    access: Open source
+    url: https://www.sleuthkit.org/sleuthkit/
+    description: Command-line libraries and utilities for analyzing disk images and recovering file-system evidence.
+    audience: DFIR · Researchers
+    tags: sleuth kit disk image filesystem forensic
+  - name: Volatility 3
+    category: dfir
+    type: Tool
+    access: VSL 1.0
+    url: https://github.com/volatilityfoundation/volatility3
+    description: A modern framework for extracting processes, network artifacts, malware evidence, and other state from memory images.
+    audience: DFIR · Malware analysts
+    tags: volatility memory ram malware forensic acquisition
+  - name: Velociraptor
+    category: dfir
+    type: Tool
+    access: AGPL-3.0
+    url: https://docs.velociraptor.app/
+    description: Endpoint visibility, collection, and hunting at scale using reusable forensic artifacts and a query language.
+    audience: DFIR · Threat hunters
+    tags: velociraptor endpoint collection vql hunting triage
+  - name: Timesketch
+    category: dfir
+    type: Tool
+    access: Apache-2.0
+    url: https://github.com/google/timesketch
+    description: Collaborative forensic timeline analysis with search, annotations, analyzers, and shared investigative views.
+    audience: DFIR · Incident responders
+    tags: timesketch timeline collaborative forensic analysis
+  - name: Plaso / log2timeline
+    category: dfir
+    type: Tool
+    access: Apache-2.0
+    url: https://github.com/log2timeline/plaso
+    description: A Python engine for collecting timestamped events from many sources into targeted or super timelines.
+    audience: DFIR · Examiners
+    tags: plaso log2timeline timeline parser events forensic
+  - name: Hayabusa
+    category: dfir
+    type: Tool
+    access: AGPL-3.0
+    url: https://github.com/Yamato-Security/hayabusa
+    description: Fast Windows event log threat hunting and timeline generation using curated Sigma detection rules.
+    audience: DFIR · Threat hunters
+    tags: hayabusa windows event logs sigma timeline hunting
+  - name: Chainsaw
+    category: dfir
+    type: Tool
+    access: GPL-3.0
+    url: https://github.com/WithSecureLabs/chainsaw
+    description: Rapid Windows forensic artifact search and Sigma-based event log threat hunting from the command line.
+    audience: DFIR · Threat hunters
+    tags: chainsaw windows evtx sigma forensic hunting
+
+  - name: OWASP Amass
+    category: osint
+    type: Tool
+    access: Apache-2.0
+    url: https://github.com/owasp-amass/amass
+    description: Attack-surface mapping and external asset discovery using open-source information gathering and active reconnaissance.
+    audience: Researchers · Attack surface teams
+    tags: amass osint dns assets reconnaissance attack surface
+  - name: SpiderFoot
+    category: osint
+    type: Tool
+    access: MIT
+    url: https://github.com/smicallef/spiderfoot
+    description: Automated OSINT collection and correlation across hundreds of modules with CLI and web interfaces.
+    audience: Researchers · Threat intelligence
+    tags: spiderfoot osint automation enrichment correlation
+  - name: theHarvester
+    category: osint
+    type: Tool
+    access: GPL-2.0
+    url: https://github.com/laramies/theHarvester
+    description: Domain-focused collection of names, emails, IPs, subdomains, and URLs from public data sources.
+    audience: Researchers · Defenders
+    tags: theharvester osint email domain subdomain discovery
+  - name: Recon-ng
+    category: osint
+    type: Tool
+    access: GPL-3.0
+    url: https://github.com/lanmaster53/recon-ng
+    description: A modular web-reconnaissance framework with workspaces, database-backed results, and reporting modules.
+    audience: Researchers · Testers
+    tags: recon-ng osint reconnaissance modules reporting
+  - name: Sherlock
+    category: osint
+    type: Tool
+    access: MIT
+    url: https://github.com/sherlock-project/sherlock
+    description: A username discovery utility that checks account presence across a broad set of social platforms.
+    audience: Researchers · Investigators
+    tags: sherlock username accounts social media osint
+  - name: Maigret
+    category: osint
+    type: Tool
+    access: MIT
+    url: https://github.com/soxoj/maigret
+    description: Username reconnaissance with profile parsing, reports, and support for a large catalog of sites.
+    audience: Researchers · Investigators
+    tags: maigret username profile social osint reports
+  - name: IntelOwl
+    category: osint
+    type: Platform
+    access: AGPL-3.0
+    url: https://github.com/intelowlproject/IntelOwl
+    description: A scalable platform for enriching observables through analyzers, connectors, pivots, and visualizations.
+    audience: Threat intelligence · SOC
+    tags: intelowl enrichment observables osint threat intelligence
+
+  - name: Wireshark
+    category: tools
+    type: Tool
+    access: GPL-2.0+
+    url: https://www.wireshark.org/
+    description: Deep packet inspection, capture, filtering, and protocol analysis for network troubleshooting and investigations.
+    audience: Network security · DFIR
+    tags: wireshark packet pcap protocol network analysis
+  - name: Zeek
+    category: tools
+    type: Platform
+    access: BSD-3-Clause
+    url: https://zeek.org/
+    description: A network security monitor that turns traffic into rich, structured logs for hunting and behavioral analysis.
+    audience: SOC · Network security
+    tags: zeek network monitoring logs hunting nsm
+  - name: Suricata
+    category: tools
+    type: Engine
+    access: GPL-2.0
+    url: https://suricata.io/
+    description: A high-performance IDS, IPS, and network security monitoring engine with protocol-aware detection.
+    audience: SOC · Detection engineers
+    tags: suricata ids ips network detection rules
+  - name: YARA
+    category: tools
+    type: Tool
+    access: BSD-3-Clause
+    url: https://github.com/VirusTotal/yara
+    description: Pattern-matching rules for identifying and classifying malware, files, and memory artifacts.
+    audience: Malware analysts · DFIR
+    tags: yara malware rules signatures pattern matching
+  - name: Sigma
+    category: tools
+    type: Detection format
+    access: DRL 1.1
+    url: https://github.com/SigmaHQ/sigma
+    description: A generic, shareable detection-rule format with an open repository of behavioral detections for log data.
+    audience: Detection engineers · SOC
+    tags: sigma detection rules siem logs analytics
+  - name: MISP
+    category: tools
+    type: Platform
+    access: AGPL-3.0
+    url: https://www.misp-project.org/
+    description: Threat intelligence sharing, correlation, taxonomy, and structured indicator management for communities and teams.
+    audience: Threat intelligence · SOC
+    tags: misp threat intelligence sharing ioc stix correlation
+  - name: OpenCTI
+    category: tools
+    type: Platform
+    access: Apache-2.0
+    url: https://github.com/OpenCTI-Platform/opencti
+    description: A knowledge-graph platform for structuring, connecting, visualizing, and sharing cyber threat intelligence.
+    audience: Threat intelligence · Researchers
+    tags: opencti threat intelligence stix graph knowledge
+  - name: Trivy
+    category: tools
+    type: Scanner
+    access: Apache-2.0
+    url: https://trivy.dev/
+    description: Vulnerability, misconfiguration, secret, and license scanning for repositories, images, clusters, and cloud estates.
+    audience: DevSecOps · Cloud security
+    tags: trivy vulnerability container kubernetes sbom misconfiguration
+  - name: OWASP ZAP
+    category: tools
+    type: Tool
+    access: Apache-2.0
+    url: https://www.zaproxy.org/
+    description: A web application security testing proxy with automation, scanning, add-ons, and API support.
+    audience: AppSec · Testers
+    tags: owasp zap web proxy dast scanner application
+  - name: Ghidra
+    category: tools
+    type: Tool
+    access: Apache-2.0
+    url: https://github.com/NationalSecurityAgency/ghidra
+    description: A software reverse-engineering suite for disassembly, decompilation, scripting, and collaborative analysis.
+    audience: Malware analysts · Researchers
+    tags: ghidra reverse engineering decompiler disassembler malware
+  - name: CyberChef
+    category: tools
+    type: Tool
+    access: Apache-2.0
+    url: https://github.com/gchq/CyberChef
+    description: A browser-based collection of decoding, transformation, extraction, hashing, and data-analysis operations.
+    audience: DFIR · Security analysts
+    tags: cyberchef decode transform hash extract analysis

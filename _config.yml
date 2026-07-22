@@ -17,6 +17,8 @@ menu:
     url: /category/ai-security/
   - title: Threat Intel Dashboard
     url: /category/threat-intelligence/
+  - title: Resources
+    url: /resources/
   - title: Defense
     url: /category/defense/
 email: shadowcontext@gmail.com

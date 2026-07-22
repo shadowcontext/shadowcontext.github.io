@@ -1,0 +1,112 @@
+---
+layout: default
+---
+{% assign repository = site.data.resources %}
+{% assign resource_total = repository.resources | size %}
+<section class="resources-hero">
+  <div class="shell">
+    <div class="resources-hero-grid">
+      <div>
+        <p class="eyebrow">ShadowContext / Analyst library</p>
+        <h1>Resources<br><span>Repository</span></h1>
+        <p class="resources-deck">A field-ready index of public guidance and open tools for governance, assurance, investigation, research, and defense.</p>
+      </div>
+      <div class="repository-status" aria-label="Repository status">
+        <span class="live-dot"></span>
+        <div><strong>Curated index online</strong><small>Official sources · direct links</small></div>
+      </div>
+    </div>
+    <div class="resources-metrics">
+      <div><span>Resources indexed</span><strong>{{ resource_total }}</strong></div>
+      <div><span>Operational lanes</span><strong>{{ repository.categories | size }}</strong></div>
+      <div><span>Access policy</span><strong>Free / Open</strong></div>
+    </div>
+  </div>
+</section>
+
+<main class="shell resources-main">
+  <section class="resource-console" aria-label="Search resources">
+    <div class="resource-search-wrap">
+      <label for="resource-search"><span>Query repository</span><small>Search names, use cases, audiences, and tags</small></label>
+      <div class="resource-search-field"><span aria-hidden="true">⌕</span><input id="resource-search" type="search" autocomplete="off" placeholder="Try “memory forensics”, “NIST”, or “network detection”"><button id="resource-clear" type="button" hidden>Clear</button></div>
+    </div>
+    <div class="resource-filter-bar" aria-label="Filter by category">
+      <button type="button" class="is-active" data-resource-filter="all" aria-pressed="true">All <span>{{ resource_total }}</span></button>
+      {% for category in repository.categories %}{% assign category_items = repository.resources | where: "category", category.key %}<button type="button" data-resource-filter="{{ category.key }}" aria-pressed="false">{{ category.label }} <span>{{ category_items | size }}</span></button>{% endfor %}
+    </div>
+    <p class="resource-result-status" role="status" aria-live="polite"><strong>{{ resource_total }}</strong> resources visible</p>
+  </section>
+
+  <div class="resource-sections">
+    {% for category in repository.categories %}
+    {% assign category_items = repository.resources | where: "category", category.key %}
+    <section class="resource-section" data-resource-section="{{ category.key }}">
+      <header class="resource-section-head">
+        <div><span>{{ category.index }} / {{ category_items | size | prepend: '0' | slice: -2, 2 }}</span><h2>{{ category.label }}</h2></div>
+        <p>{{ category.description }}</p>
+      </header>
+      <div class="resource-grid">
+        {% for item in category_items %}
+        <article class="resource-card" data-resource-card data-category="{{ item.category }}" data-search="{{ item.name | downcase | escape }} {{ item.description | downcase | escape }} {{ item.audience | downcase | escape }} {{ item.type | downcase | escape }} {{ item.tags | downcase | escape }}">
+          <div class="resource-card-top"><span>{{ item.type }}</span><b>{{ item.access }}</b></div>
+          <h3><a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a></h3>
+          <p>{{ item.description }}</p>
+          <footer><div><small>Useful for</small><strong>{{ item.audience }}</strong></div><a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" aria-label="Open {{ item.name }} official resource">Open resource <span aria-hidden="true">↗</span></a></footer>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+    {% endfor %}
+  </div>
+
+  <section class="resource-usage-note">
+    <div><p class="eyebrow">Usage / verification</p><h2>Use the source. Respect the license.</h2></div>
+    <p>ShadowContext hosts original summaries and links directly to official publishers or project repositories. “Public guidance” and “public resource” mean free to access, not automatically free of copyright. Software and openly licensed material remain subject to the terms published by their maintainers. Verify the current license, release integrity, scope authorization, and organizational policy before use.</p>
+  </section>
+  <div class="resource-empty" hidden><span>NO_MATCH</span><h2>No resources found</h2><p>Try a broader term or clear the active category filter.</p><button type="button">Reset repository search</button></div>
+</main>
+
+<script>
+  (() => {
+    const input = document.querySelector('#resource-search');
+    const clear = document.querySelector('#resource-clear');
+    const cards = [...document.querySelectorAll('[data-resource-card]')];
+    const sections = [...document.querySelectorAll('[data-resource-section]')];
+    const filters = [...document.querySelectorAll('[data-resource-filter]')];
+    const status = document.querySelector('.resource-result-status');
+    const empty = document.querySelector('.resource-empty');
+    const usage = document.querySelector('.resource-usage-note');
+    let category = 'all';
+
+    const normalize = (value) => value.toLowerCase().trim().replace(/\s+/g, ' ');
+    const update = () => {
+      const terms = normalize(input.value).split(' ').filter(Boolean);
+      let visible = 0;
+      cards.forEach((card) => {
+        const categoryMatch = category === 'all' || card.dataset.category === category;
+        const queryMatch = terms.every((term) => card.dataset.search.includes(term));
+        const show = categoryMatch && queryMatch;
+        card.hidden = !show;
+        if (show) visible += 1;
+      });
+      sections.forEach((section) => { section.hidden = !section.querySelector('[data-resource-card]:not([hidden])'); });
+      clear.hidden = !input.value;
+      status.innerHTML = `<strong>${visible}</strong> ${visible === 1 ? 'resource' : 'resources'} visible`;
+      empty.hidden = visible !== 0;
+      usage.hidden = visible === 0;
+    };
+
+    input.addEventListener('input', update);
+    clear.addEventListener('click', () => { input.value = ''; input.focus(); update(); });
+    filters.forEach((button) => button.addEventListener('click', () => {
+      category = button.dataset.resourceFilter;
+      filters.forEach((item) => { const active = item === button; item.classList.toggle('is-active', active); item.setAttribute('aria-pressed', active); });
+      update();
+    }));
+    empty.querySelector('button').addEventListener('click', () => {
+      input.value = ''; category = 'all';
+      filters.forEach((item) => { const active = item.dataset.resourceFilter === 'all'; item.classList.toggle('is-active', active); item.setAttribute('aria-pressed', active); });
+      update(); input.focus();
+    });
+  })();
+</script>

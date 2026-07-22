@@ -119,7 +119,7 @@ ALLOWED_PATHS=(
   _layouts/default.html _layouts/home.html _layouts/page.html
   _layouts/post.html _layouts/category.html _layouts/tags.html
   _config.yml robots.txt sitemap.xml feed.xml
-  tags.html staff.html admin/index.html contact.html
+  tags.html resources.md staff.html admin/index.html contact.html
   pages/about.md privacypolicy.md disclaimer.md
   category/ai-security.md category/threat-intelligence.md category/defense.md
 )
