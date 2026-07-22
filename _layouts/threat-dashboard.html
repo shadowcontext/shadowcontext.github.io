@@ -22,8 +22,17 @@ layout: default
 </section>
 
 <main class="shell intel-dashboard">
+  <section class="ioc-panel ioc-panel-top">
+    <div class="ioc-copy"><p class="eyebrow">01 / Detection engineering</p><h2>Daily IOC feeds</h2><p>Government-published, TLP:CLEAR indicators normalized into daily machine-consumable feeds. Validate and enrich indicators before using them in blocking controls.</p><div class="ioc-counts">{% for kind in intel.ioc_counts %}<span><b>{{ kind[1] }}</b> {{ kind[0] }}</span>{% endfor %}</div></div>
+    <div class="ioc-feed-list" aria-label="Daily IOC threat feed URLs">{% for feed in intel.ioc_feeds %}<div class="ioc-feed-row">
+      <a href="{{ feed.path | relative_url }}" target="_blank" rel="noopener"><span>{{ feed.label }}</span><small>{{ feed.count }} indicators · TXT</small></a>
+      <button type="button" class="copy-feed-url" data-copy-url="{{ feed.path | absolute_url }}" aria-label="Copy {{ feed.label }} URL"><span>Copy URL</span><b aria-hidden="true">⧉</b></button>
+    </div>{% endfor %}<p class="feed-copy-status" role="status" aria-live="polite"></p></div>
+    <div class="ioc-download"><span>CSV / TLP:CLEAR</span><strong>{{ intel.metrics.ioc_total }} indicators</strong><small>SHA-256 {{ intel.ioc_sha256 | slice: 0, 16 }}…</small><a href="{{ '/assets/data/daily-iocs.csv' | relative_url }}" download>Download full IOC set <b>↓</b></a><time datetime="{{ intel.generated_at }}">Generated {{ intel.generated_display }}</time></div>
+  </section>
+
   <section class="intel-panel intel-vulns">
-    <div class="intel-section-head"><div><p class="eyebrow">01 / Exploitation queue</p><h2>Top exploited vulnerabilities</h2></div><p>Newest entries in CISA’s Known Exploited Vulnerabilities catalog, ordered by date added—not speculative severity.</p></div>
+    <div class="intel-section-head"><div><p class="eyebrow">02 / Exploitation queue</p><h2>Top exploited vulnerabilities</h2></div><p>Newest entries in CISA’s Known Exploited Vulnerabilities catalog, ordered by date added—not speculative severity.</p></div>
     <div class="intel-table-wrap">
       <table class="intel-table">
         <thead><tr><th>Vulnerability</th><th>Product</th><th>Added</th><th>Due</th><th>Signal</th></tr></thead>
@@ -41,7 +50,7 @@ layout: default
 
   <div class="intel-two-col">
     <section class="intel-panel">
-      <div class="intel-section-head compact"><div><p class="eyebrow">02 / Exposure concentration</p><h2>Top targeted platforms</h2></div></div>
+      <div class="intel-section-head compact"><div><p class="eyebrow">03 / Exposure concentration</p><h2>Top targeted platforms</h2></div></div>
       <p class="intel-method">Ranked by vendor frequency among KEV entries added during the trailing 365 days.</p>
       <div class="platform-list">{% for platform in intel.platforms %}<div>
         <span class="platform-rank">0{{ forloop.index }}</span><div><strong>{{ platform.vendor }}</strong><small>{{ platform.product }}</small></div><div class="platform-bar"><i style="width: {{ platform.percent }}%"></i></div><b>{{ platform.count }}</b>
@@ -49,7 +58,7 @@ layout: default
     </section>
 
     <section class="intel-panel actor-panel">
-      <div class="intel-section-head compact"><div><p class="eyebrow">03 / Government priority</p><h2>Top threat actors</h2></div></div>
+      <div class="intel-section-head compact"><div><p class="eyebrow">04 / Government priority</p><h2>Top threat actors</h2></div></div>
       <p class="intel-method">Ranked by recency of actor-focused joint government advisories, not unverified incident volume.</p>
       <div class="actor-list">{% for actor in intel.actors %}<a href="{{ actor.url }}" rel="noopener noreferrer">
         <span class="actor-index">0{{ forloop.index }}</span><div><strong>{{ actor.name }}</strong><small>{{ actor.aliases }}</small><p>{{ actor.focus }}</p></div><time datetime="{{ actor.date }}">{{ actor.date }}</time>
@@ -58,16 +67,11 @@ layout: default
   </div>
 
   <section class="intel-panel advisory-panel">
-    <div class="intel-section-head"><div><p class="eyebrow">04 / Authority feed</p><h2>Top defensive advisories</h2></div><p>Vulnerability alerts, technical guidance, and mitigations from national cyber authorities. Breach and attack-news articles are excluded.</p></div>
+    <div class="intel-section-head"><div><p class="eyebrow">05 / Authority feed</p><h2>Top defensive advisories</h2></div><p>Vulnerability alerts, technical guidance, and mitigations from national cyber authorities. Breach and attack-news articles are excluded.</p></div>
     <div class="advisory-grid">{% for advisory in intel.advisories %}<a href="{{ advisory.url }}" rel="noopener noreferrer">
       <div><span class="authority-tag">{{ advisory.authority }}</span>{% if advisory.severity %}<b class="severity {{ advisory.severity | downcase }}">{{ advisory.severity }}</b>{% endif %}</div>
       <h3>{{ advisory.title }}</h3><p>{{ advisory.summary }}</p><footer><time datetime="{{ advisory.date }}">{{ advisory.date }}</time><span>Open advisory ↗</span></footer>
     </a>{% endfor %}</div>
-  </section>
-
-  <section class="ioc-panel">
-    <div class="ioc-copy"><p class="eyebrow">05 / Detection engineering</p><h2>Daily IOC download</h2><p>A normalized CSV of IP addresses, domains, URLs, and file hashes published in TLP:CLEAR government STIX advisories. Validate indicators against your environment before blocking.</p><div class="ioc-counts">{% for kind in intel.ioc_counts %}<span><b>{{ kind[1] }}</b> {{ kind[0] }}</span>{% endfor %}</div></div>
-    <div class="ioc-download"><span>CSV / TLP:CLEAR</span><strong>{{ intel.metrics.ioc_total }} indicators</strong><small>SHA-256 {{ intel.ioc_sha256 | slice: 0, 16 }}…</small><a href="{{ '/assets/data/daily-iocs.csv' | relative_url }}" download>Download daily IOC set <b>↓</b></a><time datetime="{{ intel.generated_at }}">Generated {{ intel.generated_display }}</time></div>
   </section>
 
   <section class="intel-panel source-panel">
@@ -76,3 +80,32 @@ layout: default
     <p class="methodology-note">“Top” means newest or most frequent within the stated official dataset and time window. It does not claim a complete view of global activity. IOC data can age quickly; enrich, score, and expire indicators locally.</p>
   </section>
 </main>
+<script>
+  (() => {
+    const status = document.querySelector('.feed-copy-status');
+    const copyText = async (value) => {
+      if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(value);
+      const field = document.createElement('textarea');
+      field.value = value;
+      field.setAttribute('readonly', '');
+      field.style.position = 'fixed';
+      field.style.opacity = '0';
+      document.body.appendChild(field);
+      field.select();
+      document.execCommand('copy');
+      field.remove();
+    };
+    document.querySelectorAll('.copy-feed-url').forEach((button) => {
+      button.addEventListener('click', async () => {
+        try {
+          await copyText(button.dataset.copyUrl);
+          document.querySelectorAll('.copy-feed-url span').forEach((label) => { label.textContent = 'Copy URL'; });
+          button.querySelector('span').textContent = 'Copied';
+          status.textContent = `${button.getAttribute('aria-label').replace('Copy ', '').replace(' URL', '')} URL copied to clipboard.`;
+        } catch (_error) {
+          status.textContent = 'Copy failed. Open the feed and copy its address from the browser.';
+        }
+      });
+    });
+  })();
+</script>

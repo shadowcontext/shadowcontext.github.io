@@ -66,14 +66,14 @@ if [[ ${#CHANGED[@]} -eq 0 ]]; then
   log "dashboard already current"
   exit 0
 fi
-if [[ ${#CHANGED[@]} -gt 2 ]]; then
-  log "rejected update touching more than the two generated data files"
+if [[ ${#CHANGED[@]} -gt 6 ]]; then
+  log "rejected update touching more than the six generated data files"
   exit 1
 fi
 for line in "${CHANGED[@]}"; do
   path="${line:3}"
   case "$path" in
-    _data/threat_dashboard.json|assets/data/daily-iocs.csv) ;;
+    _data/threat_dashboard.json|assets/data/daily-iocs.csv|assets/data/daily-file-hashes.txt|assets/data/daily-ip-addresses.txt|assets/data/daily-domains.txt|assets/data/daily-urls.txt) ;;
     *) log "rejected out-of-scope change: $line"; exit 1 ;;
   esac
 done
@@ -85,7 +85,7 @@ if [[ "$(git -C "$REPO_ROOT" rev-parse origin/main)" != "$BASE_COMMIT" ]]; then
   exit 0
 fi
 
-git -C "$RUN_DIR" add _data/threat_dashboard.json assets/data/daily-iocs.csv
+git -C "$RUN_DIR" add _data/threat_dashboard.json assets/data/daily-iocs.csv assets/data/daily-file-hashes.txt assets/data/daily-ip-addresses.txt assets/data/daily-domains.txt assets/data/daily-urls.txt
 git -C "$RUN_DIR" -c user.name=shadowcontext-intel-bot -c user.email=shadowcontext-intel-bot@users.noreply.github.com commit --quiet -m "Refresh daily threat intelligence dashboard"
 git -C "$RUN_DIR" push --quiet origin HEAD:main
 log "published daily threat dashboard refresh"

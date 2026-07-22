@@ -20,6 +20,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "_data" / "threat_dashboard.json"
 IOC_PATH = ROOT / "assets" / "data" / "daily-iocs.csv"
+IOC_FEED_PATHS = {
+    "file_hashes": ROOT / "assets" / "data" / "daily-file-hashes.txt",
+    "ip_addresses": ROOT / "assets" / "data" / "daily-ip-addresses.txt",
+    "domains": ROOT / "assets" / "data" / "daily-domains.txt",
+    "urls": ROOT / "assets" / "data" / "daily-urls.txt",
+}
 USER_AGENT = "ShadowContext-Threat-Dashboard/1.0 (+https://shadowcontext.com)"
 
 KEV_URL = "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
@@ -180,19 +186,43 @@ def extract_iocs(bundle: dict, collected_at: str) -> list[dict]:
     return matches
 
 
-def write_iocs(rows: list[dict]) -> tuple[str, dict]:
+def write_iocs(rows: list[dict]) -> tuple[str, dict, list[dict]]:
     unique = {}
     for row in rows:
         unique[(row["type"], row["value"].lower())] = row
     ordered = sorted(unique.values(), key=lambda row: (row["type"], row["value"].lower()))
     output = io.StringIO(newline="")
-    writer = csv.DictWriter(output, fieldnames=("type", "value", "source_advisory", "source_url", "collected_at", "tlp"))
+    writer = csv.DictWriter(output, fieldnames=("type", "value", "source_advisory", "source_url", "collected_at", "tlp"), lineterminator="\n")
     writer.writeheader()
     writer.writerows(ordered)
     content = output.getvalue()
     IOC_PATH.parent.mkdir(parents=True, exist_ok=True)
     IOC_PATH.write_text(content, encoding="utf-8")
-    return hashlib.sha256(content.encode()).hexdigest(), dict(sorted(Counter(row["type"] for row in ordered).items()))
+    feed_types = {
+        "file_hashes": {"md5", "sha1", "sha256"},
+        "ip_addresses": {"ipv4", "ipv6"},
+        "domains": {"domain"},
+        "urls": {"url"},
+    }
+    feed_labels = {
+        "file_hashes": "File hash feed",
+        "ip_addresses": "IP address feed",
+        "domains": "Domain feed",
+        "urls": "URL feed",
+    }
+    feeds = []
+    for key, path in IOC_FEED_PATHS.items():
+        values = sorted({row["value"] for row in ordered if row["type"] in feed_types[key]}, key=str.lower)
+        path.write_text("\n".join(values) + ("\n" if values else ""), encoding="utf-8")
+        feeds.append(
+            {
+                "key": key,
+                "label": feed_labels[key],
+                "count": len(values),
+                "path": "/" + str(path.relative_to(ROOT)),
+            }
+        )
+    return hashlib.sha256(content.encode()).hexdigest(), dict(sorted(Counter(row["type"] for row in ordered).items())), feeds
 
 
 def main() -> int:
@@ -238,7 +268,7 @@ def main() -> int:
             print(f"warning: IOC bundle unavailable ({bundle['advisory']}): {error}", file=sys.stderr)
     if not successful_bundles:
         raise RuntimeError("all allowlisted government IOC bundles failed")
-    ioc_sha, ioc_counts = write_iocs(iocs)
+    ioc_sha, ioc_counts, ioc_feeds = write_iocs(iocs)
     ioc_total = sum(ioc_counts.values())
     health.append({"name": "CISA STIX", "coverage": "TLP:CLEAR indicators of compromise", "url": IOC_BUNDLES[0]["source"], "status": "online" if successful_bundles == len(IOC_BUNDLES) else "degraded"})
 
@@ -309,13 +339,14 @@ def main() -> int:
         "actors": list(ACTOR_SOURCES),
         "advisories": advisory_items,
         "ioc_counts": ioc_counts,
+        "ioc_feeds": ioc_feeds,
         "ioc_sha256": ioc_sha,
         "sources": {"kev": {"url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"}},
         "source_health": health,
     }
     DATA_PATH.parent.mkdir(parents=True, exist_ok=True)
     DATA_PATH.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(f"wrote {DATA_PATH.relative_to(ROOT)} and {IOC_PATH.relative_to(ROOT)} ({ioc_total} indicators)")
+    print(f"wrote dashboard data, consolidated CSV, and {len(ioc_feeds)} IOC feeds ({ioc_total} indicators)")
     return 0
 
 

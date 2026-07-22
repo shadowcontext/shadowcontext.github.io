@@ -17,8 +17,9 @@ when evidence supports it, validates the result, and pushes automatically.
 
 The user-level `shadowcontext-threat-dashboard.timer` runs once daily at 05:17
 in the `Asia/Dubai` timezone. It refreshes the Threat Intel Dashboard from
-allowlisted government feeds, rebuilds the normalized TLP:CLEAR IOC download,
-validates the site, and pushes the generated data automatically.
+allowlisted government feeds, rebuilds the normalized TLP:CLEAR IOC download
+and type-specific threat feeds, validates the site, and pushes the generated
+data automatically.
 
 Each run:
 
@@ -56,7 +57,7 @@ clear no-publication outcome when evidence is too thin.
 - `update_threat_dashboard.py` gathers and normalizes allowlisted CISA, UK
   NCSC, and Saudi NCA/Saudi CERT sources.
 - `run_daily_threat_dashboard.sh` performs the isolated, validated dashboard
-  refresh and publishes only the generated JSON and IOC CSV.
+  refresh and publishes only the generated JSON, IOC CSV, and four typed feeds.
 - `validate_seo.rb` audits indexable URLs, metadata, structured data, links,
   crawler files, feeds, and post images.
 - `systemd/shadowcontext-daily-seo.service` defines the daily SEO job.
