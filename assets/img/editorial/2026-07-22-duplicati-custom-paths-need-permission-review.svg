@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Protected backup path and permission boundary</title>
+  <desc id="desc">An abstract blue backup vault sits inside layered access-control rings while an amber path is redirected toward a guarded boundary.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071525"/>
+      <stop offset="0.55" stop-color="#0b2740"/>
+      <stop offset="1" stop-color="#12324b"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="48%" r="52%">
+      <stop offset="0" stop-color="#41c7d8" stop-opacity="0.28"/>
+      <stop offset="0.65" stop-color="#217a99" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#071525" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="vault" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#72e1e8"/>
+      <stop offset="0.46" stop-color="#2aa3bd"/>
+      <stop offset="1" stop-color="#17617d"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffb33b" stop-opacity="0.22"/>
+      <stop offset="0.65" stop-color="#ffc75a"/>
+      <stop offset="1" stop-color="#ffe1a1"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#020a12" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#halo)"/>
+  <g opacity="0.12" fill="none" stroke="#8de8ee" stroke-width="2">
+    <path d="M80 180C310 60 500 80 681 180S1060 322 1520 115"/>
+    <path d="M15 725C305 570 490 645 665 747S1110 855 1595 665"/>
+    <circle cx="800" cy="450" r="350"/>
+  </g>
+  <ellipse cx="805" cy="475" rx="395" ry="322" fill="none" stroke="#49c3d3" stroke-width="34" opacity="0.12"/>
+  <ellipse cx="805" cy="475" rx="325" ry="265" fill="none" stroke="#66d8df" stroke-width="4" stroke-dasharray="22 24" opacity="0.44"/>
+  <ellipse cx="805" cy="475" rx="265" ry="214" fill="none" stroke="#9debf0" stroke-width="2" opacity="0.3"/>
+  <path d="M79 611C258 611 333 567 429 520C518 477 578 475 659 475" fill="none" stroke="#f6a92e" stroke-width="54" stroke-linecap="round" opacity="0.12" filter="url(#glow)"/>
+  <path d="M79 611C258 611 333 567 429 520C518 477 578 475 659 475" fill="none" stroke="url(#amber)" stroke-width="15" stroke-linecap="round"/>
+  <circle cx="101" cy="611" r="20" fill="#ffc252"/>
+  <circle cx="101" cy="611" r="42" fill="none" stroke="#ffc252" stroke-width="3" opacity="0.35"/>
+  <g transform="translate(545 219)" filter="url(#shadow)">
+    <path d="M260 0L455 78V254C455 395 376 497 260 548C144 497 65 395 65 254V78L260 0Z" fill="#0b2134" stroke="#8ce5eb" stroke-width="5"/>
+    <path d="M260 42L413 103V252C413 360 356 438 260 486C164 438 107 360 107 252V103L260 42Z" fill="url(#vault)" opacity="0.92"/>
+    <rect x="175" y="173" width="170" height="210" rx="27" fill="#092033" stroke="#b6f1f2" stroke-width="5"/>
+    <circle cx="260" cy="255" r="47" fill="#15475c" stroke="#76dce4" stroke-width="9"/>
+    <circle cx="260" cy="255" r="15" fill="#c5f7f4"/>
+    <path d="M260 270V315" stroke="#c5f7f4" stroke-width="15" stroke-linecap="round"/>
+    <path d="M209 145C209 83 311 83 311 145V176H209V145Z" fill="none" stroke="#d2faf7" stroke-width="20"/>
+    <path d="M146 417C211 452 306 455 374 416" fill="none" stroke="#bdf4f1" stroke-width="6" stroke-linecap="round" opacity="0.68"/>
+  </g>
+  <g transform="translate(1135 346)">
+    <path d="M0 0L104 42V136C104 211 62 266 0 293C-62 266-104 211-104 136V42L0 0Z" fill="#102d43" stroke="#ffc75a" stroke-width="5"/>
+    <path d="M-34 137L-7 164L48 104" fill="none" stroke="#ffe2a3" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="0" cy="143" r="126" fill="none" stroke="#ffc75a" stroke-width="3" stroke-dasharray="9 16" opacity="0.42"/>
+  </g>
+  <path d="M1052 490C1090 490 1115 490 1150 490" stroke="#ffc75a" stroke-width="7" stroke-linecap="round" stroke-dasharray="5 20" opacity="0.75"/>
+  <g fill="#8ee5e9" opacity="0.48">
+    <circle cx="397" cy="279" r="7"/><circle cx="1241" cy="239" r="9"/><circle cx="1315" cy="700" r="6"/><circle cx="304" cy="716" r="10"/>
+  </g>
+</svg>
