@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Runtime streams entering a protected release window</title>
+  <desc id="desc">Three luminous runtime streams converge through an amber timing ring into a protected blue deployment shield.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#061221"/>
+      <stop offset="0.52" stop-color="#0a2940"/>
+      <stop offset="1" stop-color="#07101d"/>
+    </linearGradient>
+    <radialGradient id="atmosphere" cx="55%" cy="48%" r="62%">
+      <stop offset="0" stop-color="#1dc7d7" stop-opacity="0.18"/>
+      <stop offset="0.54" stop-color="#1683a8" stop-opacity="0.07"/>
+      <stop offset="1" stop-color="#07101d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cyanFlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1e7096" stop-opacity="0.25"/>
+      <stop offset="0.52" stop-color="#58ddeb"/>
+      <stop offset="1" stop-color="#b9f8f3"/>
+    </linearGradient>
+    <linearGradient id="blueFlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#24518c" stop-opacity="0.25"/>
+      <stop offset="0.52" stop-color="#62a9f0"/>
+      <stop offset="1" stop-color="#b9e4ff"/>
+    </linearGradient>
+    <linearGradient id="mintFlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#277d77" stop-opacity="0.22"/>
+      <stop offset="0.52" stop-color="#71e4c5"/>
+      <stop offset="1" stop-color="#d2fff0"/>
+    </linearGradient>
+    <linearGradient id="amberRing" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffe08c"/>
+      <stop offset="0.5" stop-color="#efaa45"/>
+      <stop offset="1" stop-color="#bd642d"/>
+    </linearGradient>
+    <linearGradient id="shieldFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8cecf3" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#2469a0" stop-opacity="0.7"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="13" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="34"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#atmosphere)"/>
+  <ellipse cx="920" cy="450" rx="420" ry="310" fill="#2bc7d1" opacity="0.055" filter="url(#soft)"/>
+
+  <g fill="none" stroke="#6bc6dc" stroke-width="2" stroke-opacity="0.11">
+    <path d="M85 170 C340 45 570 102 760 268"/>
+    <path d="M70 738 C360 864 590 776 760 632"/>
+    <path d="M1510 164 C1320 78 1170 114 1050 236"/>
+    <path d="M1530 742 C1310 830 1150 766 1060 656"/>
+  </g>
+
+  <g opacity="0.6" fill="#65d8e6">
+    <circle cx="130" cy="212" r="6"/><circle cx="264" cy="145" r="4"/><circle cx="1450" cy="205" r="6"/>
+    <circle cx="145" cy="690" r="5"/><circle cx="316" cy="765" r="4"/><circle cx="1442" cy="693" r="5"/>
+  </g>
+
+  <g fill="#0b1d2d" stroke-width="4">
+    <g transform="translate(115 220)">
+      <rect width="230" height="112" rx="30" stroke="#59dbea"/>
+      <circle cx="58" cy="56" r="22" fill="#59dbea" stroke="none"/>
+      <path d="M102 43 H190 M102 69 H166" stroke="#78d7e3" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(115 394)">
+      <rect width="230" height="112" rx="30" stroke="#68aef2"/>
+      <circle cx="58" cy="56" r="22" fill="#68aef2" stroke="none"/>
+      <path d="M102 43 H190 M102 69 H166" stroke="#89bde8" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(115 568)">
+      <rect width="230" height="112" rx="30" stroke="#70e0c3"/>
+      <circle cx="58" cy="56" r="22" fill="#70e0c3" stroke="none"/>
+      <path d="M102 43 H190 M102 69 H166" stroke="#89d9c6" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <path d="M346 276 C535 276 620 326 742 406 C792 438 826 449 884 450" fill="none" stroke="#143c52" stroke-width="48" stroke-linecap="round"/>
+  <path d="M346 450 H884" fill="none" stroke="#152d4b" stroke-width="48" stroke-linecap="round"/>
+  <path d="M346 624 C535 624 620 574 742 494 C792 462 826 451 884 450" fill="none" stroke="#163d3b" stroke-width="48" stroke-linecap="round"/>
+  <path d="M346 276 C535 276 620 326 742 406 C792 438 826 449 884 450" fill="none" stroke="url(#cyanFlow)" stroke-width="13" stroke-linecap="round" filter="url(#glow)"/>
+  <path d="M346 450 H884" fill="none" stroke="url(#blueFlow)" stroke-width="13" stroke-linecap="round" filter="url(#glow)"/>
+  <path d="M346 624 C535 624 620 574 742 494 C792 462 826 451 884 450" fill="none" stroke="url(#mintFlow)" stroke-width="13" stroke-linecap="round" filter="url(#glow)"/>
+
+  <g transform="translate(888 450)">
+    <circle r="150" fill="#081724" stroke="#6b3e25" stroke-width="42" opacity="0.88"/>
+    <circle r="150" fill="none" stroke="url(#amberRing)" stroke-width="18" filter="url(#glow)"/>
+    <g stroke="#ffd98a" stroke-width="7" stroke-linecap="round" opacity="0.75">
+      <path d="M0 -132 V-106"/><path d="M93 -93 L75 -75"/><path d="M132 0 H106"/>
+      <path d="M93 93 L75 75"/><path d="M0 132 V106"/><path d="M-93 93 L-75 75"/>
+      <path d="M-132 0 H-106"/><path d="M-93 -93 L-75 -75"/>
+    </g>
+    <path d="M0 0 L52 -52" stroke="#ffe7ab" stroke-width="12" stroke-linecap="round" filter="url(#glow)"/>
+    <circle r="14" fill="#ffe7ab"/>
+  </g>
+
+  <path d="M1045 450 C1120 450 1165 450 1232 450" fill="none" stroke="#1a4b6d" stroke-width="62" stroke-linecap="round"/>
+  <path d="M1045 450 C1120 450 1165 450 1232 450" fill="none" stroke="#9cf1f3" stroke-width="17" stroke-linecap="round" filter="url(#glow)"/>
+
+  <g transform="translate(1320 450)">
+    <path d="M0 -180 L128 -136 V-38 C128 64 73 127 0 172 C-73 127 -128 64 -128 -38 V-136 Z" fill="url(#shieldFill)" stroke="#88eaf1" stroke-width="10"/>
+    <path d="M-58 -8 L-16 35 L64 -52" fill="none" stroke="#d7ffff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  </g>
+
+  <g fill="#bbf5f5" opacity="0.68" filter="url(#glow)">
+    <circle cx="464" cy="293" r="6"/><circle cx="594" cy="340" r="7"/><circle cx="700" cy="398" r="5"/>
+    <circle cx="486" cy="450" r="6"/><circle cx="650" cy="450" r="7"/><circle cx="784" cy="450" r="5"/>
+    <circle cx="460" cy="607" r="6"/><circle cx="590" cy="562" r="7"/><circle cx="704" cy="500" r="5"/>
+  </g>
+</svg>
