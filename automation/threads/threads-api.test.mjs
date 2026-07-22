@@ -47,3 +47,36 @@ test('requires credentials only when a real API call is attempted', async () => 
     if (originalAccessToken !== undefined) process.env.THREADS_ACCESS_TOKEN = originalAccessToken;
   }
 });
+
+test('explains an unsupported profile ID without exposing credentials', async () => {
+  const originalUserId = process.env.THREADS_USER_ID;
+  const originalAccessToken = process.env.THREADS_ACCESS_TOKEN;
+  process.env.THREADS_USER_ID = 'incorrect-user-id';
+  process.env.THREADS_ACCESS_TOKEN = 'secret-user-token';
+  const fetchMock = async () => ({
+    ok: false,
+    status: 400,
+    text: async () => JSON.stringify({
+      error: {
+        message: "Unsupported post request. Object with ID 'incorrect-user-id' does not exist",
+      },
+    }),
+  });
+
+  try {
+    await assert.rejects(
+      () => publishThreadsText('test', fetchMock),
+      (error) => {
+        assert.match(error.message, /Threads profile user_id returned by OAuth/);
+        assert.doesNotMatch(error.message, /incorrect-user-id/);
+        assert.doesNotMatch(error.message, /secret-user-token/);
+        return true;
+      },
+    );
+  } finally {
+    if (originalUserId === undefined) delete process.env.THREADS_USER_ID;
+    else process.env.THREADS_USER_ID = originalUserId;
+    if (originalAccessToken === undefined) delete process.env.THREADS_ACCESS_TOKEN;
+    else process.env.THREADS_ACCESS_TOKEN = originalAccessToken;
+  }
+});

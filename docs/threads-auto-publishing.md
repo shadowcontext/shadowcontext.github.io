@@ -28,8 +28,15 @@ another AI provider.
 Add these repository Actions secrets under **Settings → Secrets and variables
 → Actions**:
 
-- `THREADS_USER_ID`: the Threads user ID that will own published posts.
-- `THREADS_ACCESS_TOKEN`: a Threads user access token for that user.
+- `THREADS_USER_ID`: the numeric Threads profile `user_id` returned by the
+  Threads OAuth authorization-code exchange. This is not the Meta App ID,
+  Threads App ID, Instagram account ID, or Threads username.
+- `THREADS_ACCESS_TOKEN`: the Threads OAuth user access token returned for that
+  profile. This is not the Meta App Secret or Threads App Secret.
+
+The App ID and App Secret identify the application during OAuth, but the
+publishing workflow does not use them. The profile ID and user access token must
+come from the same successful OAuth authorization.
 
 The script reads both credentials only from environment variables. It never
 prints either credential or an authorization header.

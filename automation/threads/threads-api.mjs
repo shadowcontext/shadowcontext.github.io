@@ -31,7 +31,11 @@ async function apiRequest(endpoint, parameters, accessToken, credentials, fetchI
   });
   const payload = await response.text();
   if (!response.ok) {
-    throw new Error(`Threads API request failed (${response.status}): ${safeErrorPayload(payload, credentials)}`);
+    const safePayload = safeErrorPayload(payload, credentials);
+    const configurationHint = safePayload.includes('Unsupported post request')
+      ? ' Verify that THREADS_USER_ID is the Threads profile user_id returned by OAuth (not an App ID, Instagram ID, or username) and that THREADS_ACCESS_TOKEN is the OAuth user token for that same profile.'
+      : '';
+    throw new Error(`Threads API request failed (${response.status}): ${safePayload}.${configurationHint}`);
   }
   const parsed = JSON.parse(payload);
   if (!parsed.id) throw new Error('Threads API response did not include an ID');
