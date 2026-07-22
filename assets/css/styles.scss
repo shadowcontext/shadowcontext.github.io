@@ -283,26 +283,22 @@ p { line-height: 1.7; }
 .ioc-panel::after { content: ""; position: absolute; inset: 0; pointer-events: none; background-image: linear-gradient(rgba(53,230,209,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(53,230,209,.04) 1px, transparent 1px); background-size: 32px 32px; mask-image: linear-gradient(90deg, transparent 45%, black); }
 .ioc-copy, .ioc-feed-list, .ioc-download { position: relative; z-index: 1; }
 .ioc-copy h2 { margin: 0; font-size: clamp(2rem, 4vw, 3.5rem); letter-spacing: -.06em; }
-.ioc-copy > p:not(.eyebrow) { max-width: 690px; color: #9cb0ad; font-size: .86rem; }
-.ioc-counts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 25px; }
-.ioc-counts span { max-width: 100%; padding: 7px 9px; overflow: hidden; color: var(--muted); border: 1px solid #24403d; font: 400 .58rem var(--mono); font-variant-numeric: tabular-nums; text-overflow: ellipsis; text-transform: uppercase; white-space: nowrap; }
-.ioc-counts b { color: var(--cyan); }
+.ioc-copy > p:not(.eyebrow) { max-width: 740px; margin-bottom: 0; color: #9cb0ad; font-size: .86rem; }
 .ioc-feed-list { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
-.ioc-feed-card { min-width: 0; min-height: 205px; display: flex; flex-direction: column; padding: 19px; background: rgba(5,13,14,.74); border: 1px solid rgba(53,230,209,.18); }
+.ioc-feed-card { min-width: 0; min-height: 190px; display: flex; flex-direction: column; padding: 19px; background: rgba(5,13,14,.74); border: 1px solid rgba(53,230,209,.18); }
 .ioc-feed-card-head { display: flex; align-items: center; justify-content: space-between; padding-bottom: 13px; border-bottom: 1px solid rgba(53,230,209,.13); color: var(--muted); font: 500 .52rem var(--mono); text-transform: uppercase; letter-spacing: .08em; }
 .ioc-feed-card-head b { color: var(--cyan); font-weight: 500; }
 .ioc-feed-name { display: block; margin-top: 18px; }
 .ioc-feed-name strong, .ioc-feed-name small { display: block; }
 .ioc-feed-name strong { font-size: .84rem; }
 .ioc-feed-name small { display: block; max-width: 100%; margin-top: 6px; overflow: hidden; color: var(--cyan); font: 400 .54rem var(--mono); font-variant-numeric: tabular-nums; text-overflow: ellipsis; text-transform: uppercase; white-space: nowrap; }
-.ioc-feed-name small span { font-weight: 500; }
 .ioc-feed-card code { display: block; margin: 15px 0; overflow: hidden; color: var(--muted); font: 400 .52rem var(--mono); text-overflow: ellipsis; white-space: nowrap; }
 .copy-feed-url { width: 100%; min-height: 40px; display: inline-flex; align-items: center; justify-content: space-between; gap: 11px; margin-top: auto; padding: 10px 12px; color: #04100f; background: var(--cyan); border: 1px solid var(--cyan); font: 600 .57rem var(--mono); text-transform: uppercase; cursor: pointer; transition: background .18s, border-color .18s, box-shadow .18s; }
 .copy-feed-url:hover, .copy-feed-url:focus-visible { background: rgba(53,230,209,.11); border-color: var(--cyan); outline: 0; }
 .copy-feed-url:hover, .copy-feed-url:focus-visible { color: var(--cyan); box-shadow: 0 0 18px rgba(53,230,209,.1); }
 .copy-feed-url b { font-size: .8rem; }
 .feed-copy-status { grid-column: 1 / -1; min-height: 16px; margin: 0; color: var(--cyan); font: 400 .52rem/1.4 var(--mono); }
-.ioc-download { display: flex; flex-direction: column; align-items: start; justify-content: center; padding-left: 35px; border-left: 1px solid rgba(53,230,209,.18); }
+.ioc-download { min-height: 190px; display: flex; flex-direction: column; align-items: start; justify-content: center; padding: 24px; background: rgba(5,13,14,.62); border: 1px solid rgba(53,230,209,.18); }
 .ioc-download > span { color: var(--cyan); font: 500 .61rem var(--mono); letter-spacing: .08em; }
 .ioc-download > strong { margin-top: 9px; font-size: 1.35rem; }
 .ioc-download > small { margin-top: 5px; color: var(--muted); font: 400 .55rem var(--mono); }
@@ -341,7 +337,7 @@ p { line-height: 1.7; }
   .advisory-grid { grid-template-columns: repeat(2, 1fr); }
   .ioc-panel { grid-template-columns: 1fr; gap: 35px; }
   .ioc-feed-list { width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .ioc-download { padding: 30px 0 0; border-left: 0; border-top: 1px solid rgba(53,230,209,.18); }
+  .ioc-download { width: 100%; padding: 24px; }
   .source-grid { grid-template-columns: repeat(2, 1fr); }
   .intel-vulns .intel-table-wrap { overflow: visible; }
   .intel-table, .intel-table tbody { display: block; min-width: 0; width: 100%; }
