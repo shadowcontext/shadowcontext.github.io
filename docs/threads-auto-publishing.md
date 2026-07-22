@@ -48,10 +48,11 @@ with Meta's Access Token Debugger before enabling real publishing.
 
 ## Manual dry run
 
-Open **Actions → Publish New Posts to Threads → Run workflow** and provide a
-title, optional description, and canonical URL. Leave **dry_run** enabled. The
-workflow prints the exact final Threads text and makes no Threads API request.
-Dry runs do not require the two repository secrets.
+Open **Actions → Publish New Posts to Threads → Run workflow**, leave the mode
+set to `rss_preview`, and choose how many recent feed items to preview. RSS
+preview mode is always a dry run: it prints the exact final Threads text and
+makes no Threads API request. Dry runs do not require the two repository
+secrets.
 
 The same check can be run locally without credentials:
 
@@ -65,23 +66,36 @@ node automation/threads/publish-to-threads.mjs --dry-run \
 ## Real manual test
 
 After configuring both secrets and verifying the Meta permissions, run the
-manual workflow with **dry_run** disabled. This creates a real Threads post.
-Use a clearly labeled test title and URL, and review the dry-run output first.
+manual workflow in `custom` mode with **dry_run** disabled. Provide a clearly
+labeled test title, description, and URL. This creates a real Threads post, so
+review the same custom input with **dry_run** enabled first.
 
 ## Automatic publishing
 
-The workflow runs on pushes to `main` that touch `_posts/**`. It compares the
-push's before and after commits and processes only newly added Markdown files.
-For each added post it:
+The workflow polls `https://shadowcontext.com/feed.xml` every 15 minutes and
+also checks after pushes to `main` that touch `_posts/**`. The scheduled check
+handles the short delay between a source push and GitHub Pages updating the
+public feed.
 
-1. Parses the title and the first available `description`, `summary`, or
-   `excerpt` field.
-2. Applies the site's Jekyll URL and permalink settings.
-3. Skips drafts, unpublished posts, future-dated posts,
-   `social_publish: false` posts, and breach-related content.
-4. Truncates text to Threads' 500-character limit while retaining the complete
-   canonical article URL.
-5. Creates a text container and publishes it through the official Threads API.
+The workflow restores the most recently processed RSS GUID from a private
+GitHub Actions cache, finds every newer item in the live feed, and processes
+them oldest-first. For each item it:
+
+1. Reads the title, description, publication date, canonical URL, GUID, and
+   categories from RSS.
+2. Skips future-dated and breach-related items. Jekyll already excludes drafts
+   and unpublished or future content from the built feed, and `feed.xml`
+   explicitly excludes `social_publish: false` posts.
+3. Truncates text to Threads' 500-character limit while retaining the complete
+   RSS article URL.
+4. Creates a text container and publishes it through the official Threads API.
+5. Records the GUID only after successful publication or an intentional safety
+   skip.
+
+The committed state starts at the newest article that existed when RSS
+publishing was enabled, so deploying the workflow does not backfill the whole
+feed. If saved state falls outside the feed's 30-item window, the workflow
+fails safely instead of publishing an uncertain backlog.
 
 Pull requests do not run the workflow. Concurrency protection queues overlapping
 publishing runs instead of allowing them to post simultaneously.
@@ -103,7 +117,9 @@ that would require storing the Meta app secret as an additional credential.
 
 ## Duplicate-post risk
 
-GitHub's **Re-run jobs** feature replays the original push event. A successful
-automatic publishing job that is rerun can therefore publish the same articles
-again. Do not rerun a successful real publishing job. Use a manual dry run for
+The cached GUID normally prevents successful items from being published again.
+A duplicate is still possible if Threads accepts a post but the API response,
+workflow, or cache save fails before the new GUID is recorded. Deleting the
+Actions cache can also make state ambiguous. Do not repeatedly rerun a job after
+an uncertain API failure; inspect Threads first. Use RSS preview mode for
 diagnostics, and delete an accidental duplicate directly in Threads if needed.

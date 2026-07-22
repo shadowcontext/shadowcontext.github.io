@@ -23,7 +23,7 @@
   },
   "scripts": {
     "test:threads": "node --test automation/threads/*.test.mjs",
-    "lint:threads": "node --check automation/threads/threads-lib.mjs && node --check automation/threads/publish-to-threads.mjs"
+    "lint:threads": "node --check automation/threads/threads-api.mjs && node --check automation/threads/threads-lib.mjs && node --check automation/threads/rss-feed.mjs && node --check automation/threads/publish-to-threads.mjs && node --check automation/threads/publish-rss-feed.mjs"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",

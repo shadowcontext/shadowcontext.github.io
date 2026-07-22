@@ -129,7 +129,7 @@ export function postEligibility({ filePath, data, now = new Date() }) {
     data.category,
     ...(Array.isArray(data.tags) ? data.tags : []),
   ].filter(Boolean).join(' ');
-  if (/\bbreach(?:ed|es|ing)?\b|\bdata\s+leak/i.test(safetyText)) {
+  if (isBreachRelated(safetyText)) {
     return { eligible: false, reason: 'breach-related content is excluded from automatic publishing' };
   }
 
@@ -138,6 +138,10 @@ export function postEligibility({ filePath, data, now = new Date() }) {
   if (!publishDate) return { eligible: false, reason: 'missing or invalid publish date' };
   if (publishDate.getTime() > now.getTime()) return { eligible: false, reason: 'future-dated post' };
   return { eligible: true, reason: 'published post' };
+}
+
+export function isBreachRelated(value) {
+  return /\bbreach(?:ed|es|ing)?\b|\bdata\s+leak/i.test(String(value || ''));
 }
 
 export function slugify(value) {

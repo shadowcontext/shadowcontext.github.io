@@ -63,6 +63,8 @@ clear no-publication outcome when evidence is too thin.
 - `threads/publish-to-threads.mjs` formats eligible Jekyll posts and publishes
   them through Meta's official Threads API. Setup and operating guidance lives
   in `docs/threads-auto-publishing.md`.
+- `threads/publish-rss-feed.mjs` polls the public RSS feed, processes unseen
+  GUIDs oldest-first, and maintains the automatic publishing checkpoint.
 - `systemd/shadowcontext-daily-seo.service` defines the daily SEO job.
 - `systemd/shadowcontext-daily-seo.timer` defines the daily SEO schedule.
 
