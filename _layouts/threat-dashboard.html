@@ -28,11 +28,11 @@ layout: default
       <table class="intel-table">
         <thead><tr><th>Vulnerability</th><th>Product</th><th>Added</th><th>Due</th><th>Signal</th></tr></thead>
         <tbody>{% for vuln in intel.vulnerabilities %}<tr>
-          <td><a href="{{ vuln.url }}" rel="noopener noreferrer"><strong>{{ vuln.cve }}</strong><span>{{ vuln.name }}</span></a></td>
-          <td><span>{{ vuln.vendor }}</span><small>{{ vuln.product }}</small></td>
-          <td><time datetime="{{ vuln.date_added }}">{{ vuln.date_added }}</time></td>
-          <td><time datetime="{{ vuln.due_date }}">{{ vuln.due_date }}</time></td>
-          <td>{% if vuln.ransomware == 'Known' %}<b class="risk-tag hot">Ransomware use</b>{% else %}<b class="risk-tag">Exploited</b>{% endif %}</td>
+          <td data-label="Vulnerability"><a href="{{ vuln.url }}" rel="noopener noreferrer"><strong>{{ vuln.cve }}</strong><span>{{ vuln.name }}</span></a></td>
+          <td data-label="Product"><span>{{ vuln.vendor }}</span><small>{{ vuln.product }}</small></td>
+          <td data-label="Added"><time datetime="{{ vuln.date_added }}">{{ vuln.date_added }}</time></td>
+          <td data-label="Action due"><time datetime="{{ vuln.due_date }}">{{ vuln.due_date }}</time></td>
+          <td data-label="Signal">{% if vuln.ransomware == 'Known' %}<b class="risk-tag hot">Ransomware use</b>{% else %}<b class="risk-tag">Exploited</b>{% endif %}</td>
         </tr>{% endfor %}</tbody>
       </table>
     </div>
