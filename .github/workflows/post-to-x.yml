@@ -1,0 +1,23 @@
+name: Post New Feed Items to X
+
+on:
+  schedule:
+    # Runs automatically every hour to check for new posts
+    - cron: '0 * * * *'
+  workflow_dispatch: # Allows manual trigger from the GitHub UI
+
+jobs:
+  post-to-x:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Fetch RSS and Post to X
+        uses: captradeoff/x-post-action@v1
+        with:
+          rss-url: 'https://yourusername.github.io/feed.xml' # <--- Replace with your actual RSS feed URL!
+          consumer-key: ${{ secrets.X_CONSUMER_KEY }}
+          consumer-secret: ${{ secrets.X_CONSUMER_SECRET }}
+          access-token: ${{ secrets.X_ACCESS_TOKEN }}
+          access-secret: ${{ secrets.X_ACCESS_SECRET }}
