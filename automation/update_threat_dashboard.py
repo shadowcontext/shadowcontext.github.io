@@ -102,6 +102,19 @@ def short(value: str, limit: int = 180) -> str:
     return value[: limit - 1].rsplit(" ", 1)[0] + "…"
 
 
+def compact_count(value: int) -> str:
+    """Return a stable, layout-safe count while preserving exact values elsewhere."""
+    for threshold, suffix in ((1_000_000_000_000, "T"), (1_000_000_000, "B"), (1_000_000, "M"), (1_000, "K")):
+        if value >= threshold:
+            scaled = value / threshold
+            precision = 0 if scaled >= 100 else 1
+            rendered = f"{scaled:.{precision}f}"
+            if "." in rendered:
+                rendered = rendered.rstrip("0").rstrip(".")
+            return rendered + suffix
+    return str(value)
+
+
 def rss_items(payload: bytes) -> list[dict]:
     root = ET.fromstring(payload)
     results = []
@@ -224,7 +237,11 @@ def write_iocs(rows: list[dict]) -> tuple[str, dict, list[dict]]:
                 "key": key,
                 "label": feed_labels[key],
                 "count": len(values),
+                "count_display": compact_count(len(values)),
+                "count_exact": f"{len(values):,}",
                 "added_today": len(added_today),
+                "added_today_display": compact_count(len(added_today)),
+                "added_today_exact": f"{len(added_today):,}",
                 "path": "/" + str(path.relative_to(ROOT)),
             }
         )
@@ -339,12 +356,18 @@ def main() -> int:
             "kev_added_30d": sum(today - timedelta(days=30) <= item["_added"] <= today for item in parsed),
             "due_next_7d": due_soon,
             "ioc_total": ioc_total,
+            "ioc_total_display": compact_count(ioc_total),
+            "ioc_total_exact": f"{ioc_total:,}",
         },
         "vulnerabilities": latest,
         "platforms": platforms,
         "actors": list(ACTOR_SOURCES),
         "advisories": advisory_items,
         "ioc_counts": ioc_counts,
+        "ioc_count_summary": [
+            {"type": kind, "count": count, "display": compact_count(count), "exact": f"{count:,}"}
+            for kind, count in sorted(ioc_counts.items())
+        ],
         "ioc_feeds": ioc_feeds,
         "ioc_sha256": ioc_sha,
         "sources": {"kev": {"url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"}},

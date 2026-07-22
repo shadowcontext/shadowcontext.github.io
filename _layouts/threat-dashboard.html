@@ -16,18 +16,18 @@ layout: default
       <div><span>KEV catalog</span><strong>{{ intel.metrics.kev_total }}</strong><small>Known exploited CVEs</small></div>
       <div><span>30-day velocity</span><strong>+{{ intel.metrics.kev_added_30d }}</strong><small>New KEV additions</small></div>
       <div><span>Action window</span><strong>{{ intel.metrics.due_next_7d }}</strong><small>Deadlines in 7 days</small></div>
-      <div><span>IOC set</span><strong>{{ intel.metrics.ioc_total }}</strong><small>Government-published indicators</small></div>
+      <div><span>IOC set</span><strong class="compact-count" title="{{ intel.metrics.ioc_total_exact }} indicators" aria-label="{{ intel.metrics.ioc_total_exact }} indicators">{{ intel.metrics.ioc_total_display }}</strong><small>Government-published indicators</small></div>
     </div>
   </div>
 </section>
 
 <main class="shell intel-dashboard">
   <section class="ioc-panel ioc-panel-top">
-    <div class="ioc-copy"><p class="eyebrow">01 / Detection engineering</p><h2>IOC threat feeds</h2><p>Append-only, de-duplicated feeds updated with each day’s government-published TLP:CLEAR indicators. Validate, enrich, and expire indicators according to your environment.</p><div class="ioc-counts">{% for kind in intel.ioc_counts %}<span><b>{{ kind[1] }}</b> {{ kind[0] }} today</span>{% endfor %}</div></div>
-    <div class="ioc-download"><span>Today’s snapshot / CSV</span><strong>{{ intel.metrics.ioc_total }} indicators</strong><small>SHA-256 {{ intel.ioc_sha256 | slice: 0, 16 }}…</small><a href="{{ '/assets/data/daily-iocs.csv' | relative_url }}" download>Download daily IOC set <b>↓</b></a><time datetime="{{ intel.generated_at }}">Generated {{ intel.generated_display }}</time></div>
+    <div class="ioc-copy"><p class="eyebrow">01 / Detection engineering</p><h2>IOC threat feeds</h2><p>Append-only, de-duplicated feeds updated with each day’s government-published TLP:CLEAR indicators. Validate, enrich, and expire indicators according to your environment.</p><div class="ioc-counts">{% for kind in intel.ioc_count_summary %}<span title="{{ kind.exact }} {{ kind.type }} indicators today"><b>{{ kind.display }}</b> {{ kind.type }} today</span>{% endfor %}</div></div>
+    <div class="ioc-download"><span>Today’s snapshot / CSV</span><strong class="compact-count" title="{{ intel.metrics.ioc_total_exact }} indicators">{{ intel.metrics.ioc_total_display }} indicators</strong><small>SHA-256 {{ intel.ioc_sha256 | slice: 0, 16 }}…</small><a href="{{ '/assets/data/daily-iocs.csv' | relative_url }}" download>Download daily IOC set <b>↓</b></a><time datetime="{{ intel.generated_at }}">Generated {{ intel.generated_display }}</time></div>
     <div class="ioc-feed-list" aria-label="Append-only IOC threat feed URLs">{% for feed in intel.ioc_feeds %}<article class="ioc-feed-card">
       <div class="ioc-feed-card-head"><span>Feed / 0{{ forloop.index }}</span><b>TXT</b></div>
-      <a class="ioc-feed-name" href="{{ feed.path | relative_url }}" target="_blank" rel="noopener"><strong>{{ feed.label }}</strong><small>{{ feed.count }} total · +{{ feed.added_today }} today</small></a>
+      <a class="ioc-feed-name" href="{{ feed.path | relative_url }}" target="_blank" rel="noopener"><strong>{{ feed.label }}</strong><small title="{{ feed.count_exact }} total indicators; {{ feed.added_today_exact }} added today"><span>{{ feed.count_display }}</span> total · <span>+{{ feed.added_today_display }}</span> today</small></a>
       <code>{{ feed.path }}</code>
       <button type="button" class="copy-feed-url" data-copy-url="{{ feed.path | absolute_url }}" aria-label="Copy {{ feed.label }} URL"><span>Copy feed URL</span><b aria-hidden="true">⧉</b></button>
     </article>{% endfor %}<p class="feed-copy-status" role="status" aria-live="polite"></p></div>

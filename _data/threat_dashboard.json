@@ -1,11 +1,13 @@
 {
-  "generated_at": "2026-07-22T09:37:08Z",
-  "generated_display": "22 Jul 2026 · 09:37 UTC",
+  "generated_at": "2026-07-22T09:39:49Z",
+  "generated_display": "22 Jul 2026 · 09:39 UTC",
   "metrics": {
     "kev_total": 1651,
     "kev_added_30d": 28,
     "due_next_7d": 5,
-    "ioc_total": 143
+    "ioc_total": 143,
+    "ioc_total_display": "143",
+    "ioc_total_exact": "143"
   },
   "vulnerabilities": [
     {
@@ -232,33 +234,93 @@
     "sha256": 32,
     "url": 1
   },
+  "ioc_count_summary": [
+    {
+      "type": "domain",
+      "count": 1,
+      "display": "1",
+      "exact": "1"
+    },
+    {
+      "type": "ipv4",
+      "count": 90,
+      "display": "90",
+      "exact": "90"
+    },
+    {
+      "type": "ipv6",
+      "count": 2,
+      "display": "2",
+      "exact": "2"
+    },
+    {
+      "type": "md5",
+      "count": 9,
+      "display": "9",
+      "exact": "9"
+    },
+    {
+      "type": "sha1",
+      "count": 8,
+      "display": "8",
+      "exact": "8"
+    },
+    {
+      "type": "sha256",
+      "count": 32,
+      "display": "32",
+      "exact": "32"
+    },
+    {
+      "type": "url",
+      "count": 1,
+      "display": "1",
+      "exact": "1"
+    }
+  ],
   "ioc_feeds": [
     {
       "key": "file_hashes",
       "label": "File hash feed",
       "count": 49,
+      "count_display": "49",
+      "count_exact": "49",
       "added_today": 0,
+      "added_today_display": "0",
+      "added_today_exact": "0",
       "path": "/assets/data/daily-file-hashes.txt"
     },
     {
       "key": "ip_addresses",
       "label": "IP address feed",
       "count": 92,
+      "count_display": "92",
+      "count_exact": "92",
       "added_today": 0,
+      "added_today_display": "0",
+      "added_today_exact": "0",
       "path": "/assets/data/daily-ip-addresses.txt"
     },
     {
       "key": "domains",
       "label": "Domain feed",
       "count": 1,
+      "count_display": "1",
+      "count_exact": "1",
       "added_today": 0,
+      "added_today_display": "0",
+      "added_today_exact": "0",
       "path": "/assets/data/daily-domains.txt"
     },
     {
       "key": "urls",
       "label": "URL feed",
       "count": 1,
+      "count_display": "1",
+      "count_exact": "1",
       "added_today": 0,
+      "added_today_display": "0",
+      "added_today_exact": "0",
       "path": "/assets/data/daily-urls.txt"
     }
   ],
