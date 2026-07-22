@@ -21,6 +21,10 @@
   "bugs": {
     "url": "https://github.com/thiagorossener/jekflix-template/issues"
   },
+  "scripts": {
+    "test:threads": "node --test automation/threads/*.test.mjs",
+    "lint:threads": "node --check automation/threads/threads-lib.mjs && node --check automation/threads/publish-to-threads.mjs"
+  },
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "child_process": "^1.0.2",

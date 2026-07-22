@@ -1,0 +1,77 @@
+name: Publish New Posts to Threads
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Print the final Threads text without publishing
+        required: true
+        type: boolean
+        default: true
+      title:
+        description: Test post title
+        required: true
+        type: string
+      description:
+        description: Optional test post description
+        required: false
+        type: string
+      url:
+        description: Canonical public URL for the test post
+        required: true
+        type: string
+  push:
+    branches:
+      - main
+    paths:
+      - '_posts/**'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: threads-publishing-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Publish manual test
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          DRY_RUN: ${{ inputs.dry_run }}
+          TEST_TITLE: ${{ inputs.title }}
+          TEST_DESCRIPTION: ${{ inputs.description }}
+          TEST_URL: ${{ inputs.url }}
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+        run: |
+          arguments=(--title "$TEST_TITLE" --description "$TEST_DESCRIPTION" --url "$TEST_URL")
+          if [[ "$DRY_RUN" == "true" ]]; then
+            arguments+=(--dry-run)
+          fi
+          node automation/threads/publish-to-threads.mjs "${arguments[@]}"
+
+      - name: Publish newly added posts
+        if: github.event_name == 'push'
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+          CURRENT_SHA: ${{ github.sha }}
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+        run: |
+          git diff --diff-filter=A --name-only -z "$BEFORE_SHA" "$CURRENT_SHA" -- '_posts/*.md' |
+            while IFS= read -r -d '' post_file; do
+              node automation/threads/publish-to-threads.mjs --post-file "$post_file"
+            done
