@@ -47,16 +47,9 @@ export async function publishThreadsText(text, fetchImplementation = fetch) {
   const accessToken = requireCredential('THREADS_ACCESS_TOKEN');
   const credentials = [userId, accessToken];
   const encodedUserId = encodeURIComponent(userId);
-  const containerId = await apiRequest(
-    `/${encodedUserId}/threads`,
-    { media_type: 'TEXT', text },
-    accessToken,
-    credentials,
-    fetchImplementation,
-  );
   return apiRequest(
-    `/${encodedUserId}/threads_publish`,
-    { creation_id: containerId },
+    `/${encodedUserId}/threads`,
+    { media_type: 'TEXT', text, auto_publish_text: 'true' },
     accessToken,
     credentials,
     fetchImplementation,
