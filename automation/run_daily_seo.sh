@@ -120,7 +120,7 @@ ALLOWED_PATHS=(
   _layouts/post.html _layouts/category.html _layouts/tags.html
   _config.yml robots.txt sitemap.xml feed.xml
   tags.html staff.html admin/index.html contact.html
-  pages/about.md privacypolicy.md
+  pages/about.md privacypolicy.md disclaimer.md
   category/ai-security.md category/threat-intelligence.md category/defense.md
 )
 CHANGED_FILES=()

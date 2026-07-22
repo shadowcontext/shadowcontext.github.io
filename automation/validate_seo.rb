@@ -78,7 +78,7 @@ rescue URI::InvalidURIError
 end
 
 core_paths = %w[
-  / /about/ /contact/ /privacypolicy/ /tags/
+  / /about/ /contact/ /privacypolicy/ /disclaimer/ /tags/
   /category/ai-security/ /category/threat-intelligence/ /category/defense/
 ]
 post_files = Dir[File.join(repository, "_posts", "*.md")].sort
