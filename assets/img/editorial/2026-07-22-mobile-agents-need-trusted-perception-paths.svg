@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Trusted perception boundary for a mobile AI agent</title>
+  <desc id="desc">An abstract smartphone contains a faint hidden magenta visual layer. A luminous shield blocks it from a cyan control path leading toward a host system.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071527"/>
+      <stop offset="0.55" stop-color="#102b43"/>
+      <stop offset="1" stop-color="#08131f"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="54%" cy="48%" r="54%">
+      <stop offset="0" stop-color="#34d3e8" stop-opacity="0.22"/>
+      <stop offset="0.55" stop-color="#25729a" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#071527" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="phone" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#183e58"/>
+      <stop offset="1" stop-color="#071a2d"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#123a57"/>
+      <stop offset="0.56" stop-color="#175875"/>
+      <stop offset="1" stop-color="#0b293f"/>
+    </linearGradient>
+    <linearGradient id="barrier" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b8fbff"/>
+      <stop offset="0.5" stop-color="#45dce8"/>
+      <stop offset="1" stop-color="#1786ae"/>
+    </linearGradient>
+    <linearGradient id="hidden" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff62b7"/>
+      <stop offset="1" stop-color="#9b4dff"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+    <clipPath id="screenClip">
+      <rect x="282" y="160" width="440" height="580" rx="54"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#halo)"/>
+  <ellipse cx="825" cy="454" rx="520" ry="340" fill="#31cce1" opacity="0.07" filter="url(#soft)"/>
+
+  <g opacity="0.18" fill="none" stroke="#73d8e9" stroke-width="2">
+    <path d="M75 196 C210 98 353 101 472 63"/>
+    <path d="M1180 781 C1330 712 1450 724 1550 629"/>
+    <circle cx="1378" cy="180" r="68"/>
+    <circle cx="1378" cy="180" r="92"/>
+    <circle cx="156" cy="713" r="44"/>
+  </g>
+
+  <g>
+    <rect x="240" y="112" width="524" height="676" rx="88" fill="#06101d" stroke="#4c97b2" stroke-width="5"/>
+    <rect x="266" y="138" width="472" height="624" rx="68" fill="url(#phone)" stroke="#78d8e7" stroke-opacity="0.42" stroke-width="3"/>
+    <rect x="282" y="160" width="440" height="580" rx="54" fill="url(#screen)"/>
+    <path d="M423 160 H581 C577 191 558 205 528 205 H476 C446 205 427 191 423 160Z" fill="#06111e"/>
+
+    <g clip-path="url(#screenClip)">
+      <circle cx="410" cy="360" r="196" fill="#36d4e4" opacity="0.08"/>
+      <path d="M252 625 C364 526 474 547 594 459 C651 417 699 346 764 308" fill="none" stroke="#75e8f1" stroke-opacity="0.24" stroke-width="28"/>
+      <g fill="url(#hidden)" opacity="0.16">
+        <path d="M294 263 C372 220 466 230 527 284 C462 314 372 319 294 287Z"/>
+        <path d="M351 456 C442 402 570 411 650 480 C557 511 449 514 351 483Z"/>
+        <path d="M302 631 C397 577 514 583 599 642 C511 687 400 687 302 656Z"/>
+      </g>
+      <g fill="none" stroke="url(#hidden)" stroke-linecap="round" opacity="0.3">
+        <path d="M302 277 C397 252 479 258 557 290" stroke-width="5"/>
+        <path d="M360 468 C458 438 552 445 641 482" stroke-width="5"/>
+        <path d="M313 644 C405 612 500 618 586 650" stroke-width="5"/>
+      </g>
+      <g fill="#9cf4f7" opacity="0.5">
+        <circle cx="368" cy="363" r="9"/>
+        <circle cx="489" cy="363" r="9"/>
+        <circle cx="610" cy="363" r="9"/>
+      </g>
+    </g>
+    <rect x="445" y="718" width="114" height="7" rx="3.5" fill="#8ae9ef" opacity="0.55"/>
+  </g>
+
+  <g filter="url(#glow)">
+    <path d="M823 190 C920 216 979 261 997 340 V466 C997 585 925 666 823 713 C721 666 649 585 649 466 V340 C667 261 726 216 823 190Z" fill="#0b3850" fill-opacity="0.74" stroke="url(#barrier)" stroke-width="11"/>
+    <path d="M823 245 C885 264 924 292 937 347 V452 C937 535 891 592 823 629 C755 592 709 535 709 452 V347 C722 292 761 264 823 245Z" fill="none" stroke="#8df5f6" stroke-opacity="0.56" stroke-width="5"/>
+    <circle cx="823" cy="436" r="62" fill="#09253a" stroke="#aafaff" stroke-width="7"/>
+    <path d="M795 437 L817 459 L857 408" fill="none" stroke="#aafaff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M650 356 C599 329 563 319 518 319" stroke="url(#hidden)" stroke-width="13" opacity="0.65"/>
+    <path d="M650 456 C590 456 551 463 500 486" stroke="url(#hidden)" stroke-width="10" opacity="0.5"/>
+    <path d="M996 387 C1068 350 1120 350 1191 390" stroke="#50dce9" stroke-width="13" opacity="0.8"/>
+    <path d="M996 500 C1073 532 1129 531 1192 494" stroke="#2e9ec5" stroke-width="10" opacity="0.68"/>
+  </g>
+
+  <g>
+    <rect x="1180" y="285" width="286" height="328" rx="30" fill="#081b2b" stroke="#4bbcd3" stroke-width="5"/>
+    <rect x="1207" y="315" width="232" height="207" rx="15" fill="#103d56"/>
+    <path d="M1240 472 C1285 427 1317 455 1354 402 C1374 374 1395 360 1439 348 V522 H1207 V497Z" fill="#2fc7d8" opacity="0.16"/>
+    <g fill="#7be9ef" opacity="0.62">
+      <circle cx="1250" cy="361" r="8"/>
+      <circle cx="1292" cy="361" r="8"/>
+      <circle cx="1334" cy="361" r="8"/>
+    </g>
+    <path d="M1260 612 H1386 L1429 690 H1217Z" fill="#0a2639" stroke="#3e9db8" stroke-width="4"/>
+    <path d="M1169 690 H1477" stroke="#73deea" stroke-width="7" stroke-linecap="round" opacity="0.7"/>
+  </g>
+
+  <g fill="#aafaff">
+    <circle cx="1076" cy="360" r="8"/>
+    <circle cx="1124" cy="362" r="6" opacity="0.75"/>
+    <circle cx="1083" cy="532" r="7" opacity="0.7"/>
+  </g>
+</svg>
