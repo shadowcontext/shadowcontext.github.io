@@ -7,14 +7,16 @@ layout: default
   <div class="shell">
     <div class="resources-hero-grid">
       <div class="resources-hero-copy">
+        <div class="resource-hero-status"><span></span>Knowledge grid / online</div>
         <p class="eyebrow">ShadowContext / Analyst library</p>
-        <h1>Useful security<br><span>resources, indexed.</span></h1>
-        <p class="resources-deck">A field-ready index of public guidance and open tools for governance, assurance, investigation, research, and defense.</p>
+        <h1>Security<br><span>Knowledge Grid</span></h1>
+        <p class="resources-deck">Open frameworks, standards, investigative utilities, and defensive tooling—curated into one searchable field system.</p>
+        <div class="resource-hero-tags" aria-label="Repository coverage"><span>GRC</span><span>DFIR</span><span>OSINT</span><span>Detection</span><span>AppSec</span></div>
       </div>
       <aside class="resource-map" aria-label="Browse resource categories">
         <div class="resource-map-head">
-          <span>Library map</span>
-          <div class="repository-status"><span class="live-dot"></span><strong>Curated index online</strong></div>
+          <span>Sector map // 06 lanes</span>
+          <div class="repository-status"><span class="live-dot"></span><strong>Sources verified</strong></div>
         </div>
         <nav>
           {% for category in repository.categories %}
@@ -34,12 +36,14 @@ layout: default
 
 <main class="shell resources-main">
   <section class="resource-console" aria-label="Search resources">
-    <div class="resource-console-head"><span>Repository controls</span><p>Filter the entire library by keyword or operational lane.</p></div>
+    <div class="resource-console-head"><span>Grid search</span><p><kbd>/</kbd> to search · filter by keyword, tag, or operational lane</p></div>
     <div class="resource-search-wrap">
-      <label for="resource-search"><span>Search the index</span><small>Names, use cases, audiences, and tags</small></label>
-      <div class="resource-search-field"><span aria-hidden="true">⌕</span><input id="resource-search" type="search" autocomplete="off" placeholder="Try “memory forensics”, “NIST”, or “network detection”"><button id="resource-clear" type="button" hidden>Clear</button></div>
+      <label for="resource-search"><span>Search all resources</span><small>Names · descriptions · audiences · tags</small></label>
+      <div class="resource-search-field"><span aria-hidden="true">⌕</span><input id="resource-search" type="search" autocomplete="off" aria-keyshortcuts="/" placeholder="Search the knowledge grid…"><button id="resource-clear" type="button" hidden>Clear</button></div>
     </div>
+    <div class="resource-quick-tags" aria-label="Quick search tags"><span>Trending tags</span><button type="button" data-resource-query="nist">#NIST</button><button type="button" data-resource-query="forensic">#Forensics</button><button type="button" data-resource-query="detection">#Detection</button><button type="button" data-resource-query="cloud">#Cloud</button><button type="button" data-resource-query="incident response">#IncidentResponse</button></div>
     <div class="resource-filter-bar" aria-label="Filter by category">
+      <span class="resource-filter-label">Sectors</span>
       <button type="button" class="is-active" data-resource-filter="all" aria-pressed="true">All <span>{{ resource_total }}</span></button>
       {% for category in repository.categories %}{% assign category_items = repository.resources | where: "category", category.key %}<button type="button" data-resource-filter="{{ category.key }}" aria-pressed="false">{{ category.label }} <span>{{ category_items | size }}</span></button>{% endfor %}
     </div>
@@ -51,7 +55,7 @@ layout: default
     {% assign category_items = repository.resources | where: "category", category.key %}
     <section class="resource-section" id="resources-{{ category.key }}" data-resource-section="{{ category.key }}">
       <header class="resource-section-head">
-        <div><span>{{ category.index }} / {{ category_items | size | prepend: '0' | slice: -2, 2 }}</span><h2>{{ category.label }}</h2></div>
+        <div><span>Sector {{ category.index }} / {{ category_items | size | prepend: '0' | slice: -2, 2 }} nodes</span><h2>{{ category.label }}</h2></div>
         <p>{{ category.description }}</p>
       </header>
       <div class="resource-grid">
@@ -61,6 +65,7 @@ layout: default
           <div class="resource-card-labels"><span>{{ item.type }}</span><b>{{ item.access }}</b></div>
           <h3><a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a></h3>
           <p>{{ item.description }}</p>
+          {% assign resource_tags = item.tags | split: ' ' %}<div class="resource-card-tags" aria-label="Tags">{% for tag in resource_tags limit: 4 %}<span>#{{ tag }}</span>{% endfor %}</div>
           <footer><div><small>Useful for</small><strong>{{ item.audience }}</strong></div><a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" aria-label="Open {{ item.name }} official resource">Visit source <span aria-hidden="true">↗</span></a></footer>
         </article>
         {% endfor %}
@@ -83,6 +88,7 @@ layout: default
     const cards = [...document.querySelectorAll('[data-resource-card]')];
     const sections = [...document.querySelectorAll('[data-resource-section]')];
     const filters = [...document.querySelectorAll('[data-resource-filter]')];
+    const queryButtons = [...document.querySelectorAll('[data-resource-query]')];
     const status = document.querySelector('.resource-result-status');
     const empty = document.querySelector('.resource-empty');
     const usage = document.querySelector('.resource-usage-note');
@@ -113,6 +119,16 @@ layout: default
       filters.forEach((item) => { const active = item === button; item.classList.toggle('is-active', active); item.setAttribute('aria-pressed', active); });
       update();
     }));
+    queryButtons.forEach((button) => button.addEventListener('click', () => {
+      input.value = button.dataset.resourceQuery;
+      category = 'all';
+      filters.forEach((item) => { const active = item.dataset.resourceFilter === 'all'; item.classList.toggle('is-active', active); item.setAttribute('aria-pressed', active); });
+      update(); input.focus();
+    }));
+    document.addEventListener('keydown', (event) => {
+      if (event.key === '/' && document.activeElement !== input) { event.preventDefault(); input.focus(); }
+      if (event.key === 'Escape' && document.activeElement === input) { input.value = ''; update(); input.blur(); }
+    });
     empty.querySelector('button').addEventListener('click', () => {
       input.value = ''; category = 'all';
       filters.forEach((item) => { const active = item.dataset.resourceFilter === 'all'; item.classList.toggle('is-active', active); item.setAttribute('aria-pressed', active); });
