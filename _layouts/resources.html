@@ -6,15 +6,23 @@ layout: default
 <section class="resources-hero">
   <div class="shell">
     <div class="resources-hero-grid">
-      <div>
+      <div class="resources-hero-copy">
         <p class="eyebrow">ShadowContext / Analyst library</p>
-        <h1>Resources<br><span>Repository</span></h1>
+        <h1>Useful security<br><span>resources, indexed.</span></h1>
         <p class="resources-deck">A field-ready index of public guidance and open tools for governance, assurance, investigation, research, and defense.</p>
       </div>
-      <div class="repository-status" aria-label="Repository status">
-        <span class="live-dot"></span>
-        <div><strong>Curated index online</strong><small>Official sources · direct links</small></div>
-      </div>
+      <aside class="resource-map" aria-label="Browse resource categories">
+        <div class="resource-map-head">
+          <span>Library map</span>
+          <div class="repository-status"><span class="live-dot"></span><strong>Curated index online</strong></div>
+        </div>
+        <nav>
+          {% for category in repository.categories %}
+          {% assign category_items = repository.resources | where: "category", category.key %}
+          <a href="#resources-{{ category.key }}"><span>{{ category.index }}</span><strong>{{ category.label }}</strong><small>{{ category_items | size }} entries</small><b aria-hidden="true">↘</b></a>
+          {% endfor %}
+        </nav>
+      </aside>
     </div>
     <div class="resources-metrics">
       <div><span>Resources indexed</span><strong>{{ resource_total }}</strong></div>
@@ -26,8 +34,9 @@ layout: default
 
 <main class="shell resources-main">
   <section class="resource-console" aria-label="Search resources">
+    <div class="resource-console-head"><span>Repository controls</span><p>Filter the entire library by keyword or operational lane.</p></div>
     <div class="resource-search-wrap">
-      <label for="resource-search"><span>Query repository</span><small>Search names, use cases, audiences, and tags</small></label>
+      <label for="resource-search"><span>Search the index</span><small>Names, use cases, audiences, and tags</small></label>
       <div class="resource-search-field"><span aria-hidden="true">⌕</span><input id="resource-search" type="search" autocomplete="off" placeholder="Try “memory forensics”, “NIST”, or “network detection”"><button id="resource-clear" type="button" hidden>Clear</button></div>
     </div>
     <div class="resource-filter-bar" aria-label="Filter by category">
@@ -40,7 +49,7 @@ layout: default
   <div class="resource-sections">
     {% for category in repository.categories %}
     {% assign category_items = repository.resources | where: "category", category.key %}
-    <section class="resource-section" data-resource-section="{{ category.key }}">
+    <section class="resource-section" id="resources-{{ category.key }}" data-resource-section="{{ category.key }}">
       <header class="resource-section-head">
         <div><span>{{ category.index }} / {{ category_items | size | prepend: '0' | slice: -2, 2 }}</span><h2>{{ category.label }}</h2></div>
         <p>{{ category.description }}</p>
@@ -48,10 +57,11 @@ layout: default
       <div class="resource-grid">
         {% for item in category_items %}
         <article class="resource-card" data-resource-card data-category="{{ item.category }}" data-search="{{ item.name | downcase | escape }} {{ item.description | downcase | escape }} {{ item.audience | downcase | escape }} {{ item.type | downcase | escape }} {{ item.tags | downcase | escape }}">
-          <div class="resource-card-top"><span>{{ item.type }}</span><b>{{ item.access }}</b></div>
+          <div class="resource-card-top"><span class="resource-card-mark" aria-hidden="true">{{ item.name | slice: 0, 2 | upcase }}</span><span class="resource-card-ref">{{ category.index }}.{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span></div>
+          <div class="resource-card-labels"><span>{{ item.type }}</span><b>{{ item.access }}</b></div>
           <h3><a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a></h3>
           <p>{{ item.description }}</p>
-          <footer><div><small>Useful for</small><strong>{{ item.audience }}</strong></div><a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" aria-label="Open {{ item.name }} official resource">Open resource <span aria-hidden="true">↗</span></a></footer>
+          <footer><div><small>Useful for</small><strong>{{ item.audience }}</strong></div><a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" aria-label="Open {{ item.name }} official resource">Visit source <span aria-hidden="true">↗</span></a></footer>
         </article>
         {% endfor %}
       </div>
