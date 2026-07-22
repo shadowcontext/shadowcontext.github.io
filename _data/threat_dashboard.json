@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-22T09:30:58Z",
-  "generated_display": "22 Jul 2026 · 09:30 UTC",
+  "generated_at": "2026-07-22T09:37:08Z",
+  "generated_display": "22 Jul 2026 · 09:37 UTC",
   "metrics": {
     "kev_total": 1651,
     "kev_added_30d": 28,
@@ -237,24 +237,28 @@
       "key": "file_hashes",
       "label": "File hash feed",
       "count": 49,
+      "added_today": 0,
       "path": "/assets/data/daily-file-hashes.txt"
     },
     {
       "key": "ip_addresses",
       "label": "IP address feed",
       "count": 92,
+      "added_today": 0,
       "path": "/assets/data/daily-ip-addresses.txt"
     },
     {
       "key": "domains",
       "label": "Domain feed",
       "count": 1,
+      "added_today": 0,
       "path": "/assets/data/daily-domains.txt"
     },
     {
       "key": "urls",
       "label": "URL feed",
       "count": 1,
+      "added_today": 0,
       "path": "/assets/data/daily-urls.txt"
     }
   ],

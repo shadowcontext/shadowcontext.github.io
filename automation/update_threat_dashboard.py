@@ -212,13 +212,19 @@ def write_iocs(rows: list[dict]) -> tuple[str, dict, list[dict]]:
     }
     feeds = []
     for key, path in IOC_FEED_PATHS.items():
-        values = sorted({row["value"] for row in ordered if row["type"] in feed_types[key]}, key=str.lower)
+        current_values = {row["value"] for row in ordered if row["type"] in feed_types[key]}
+        existing_values = {value.strip() for value in path.read_text(encoding="utf-8").splitlines() if value.strip()} if path.exists() else set()
+        added_today = {value.lower() for value in current_values} - {value.lower() for value in existing_values}
+        cumulative = {value.lower(): value for value in existing_values}
+        cumulative.update({value.lower(): value for value in current_values})
+        values = sorted(cumulative.values(), key=str.lower)
         path.write_text("\n".join(values) + ("\n" if values else ""), encoding="utf-8")
         feeds.append(
             {
                 "key": key,
                 "label": feed_labels[key],
                 "count": len(values),
+                "added_today": len(added_today),
                 "path": "/" + str(path.relative_to(ROOT)),
             }
         )
