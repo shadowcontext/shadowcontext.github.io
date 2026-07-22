@@ -1,0 +1,58 @@
+name: One-Time Publish Last Three Articles to Threads
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/threads-last-three-test.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: threads-rss-publishing
+  cancel-in-progress: false
+
+jobs:
+  publish-last-three:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Publish last three eligible RSS articles
+        env:
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+        run: |
+          node --input-type=module <<'NODE'
+          import { publishThreadsText } from './automation/threads/threads-api.mjs';
+          import { buildThreadsText } from './automation/threads/threads-lib.mjs';
+          import { parseRssFeed, rssItemEligibility } from './automation/threads/rss-feed.mjs';
+
+          const response = await fetch('https://shadowcontext.com/feed.xml');
+          if (!response.ok) throw new Error(`RSS request returned HTTP ${response.status}`);
+
+          const newestItems = parseRssFeed(await response.text()).slice(0, 3);
+          if (newestItems.length !== 3) throw new Error('The RSS feed did not contain three articles');
+
+          for (const item of newestItems.toReversed()) {
+            const eligibility = rssItemEligibility(item);
+            if (!eligibility.eligible) {
+              throw new Error(`Refusing to publish ${item.url}: ${eligibility.reason}`);
+            }
+            const text = buildThreadsText({
+              title: item.title,
+              description: item.description,
+              url: item.url,
+            });
+            const postId = await publishThreadsText(text);
+            console.log(`::notice title=Published to Threads::${item.url} (post ID: ${postId})`);
+          }
+          NODE
