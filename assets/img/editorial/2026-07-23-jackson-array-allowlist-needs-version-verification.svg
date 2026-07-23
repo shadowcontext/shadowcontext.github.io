@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Array elements crossing a guarded validation boundary</title>
+  <desc id="desc">Polished abstract editorial artwork showing glass-like arrays moving through a luminous security boundary while one anomalous element is isolated.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071425"/>
+      <stop offset="0.52" stop-color="#102c42"/>
+      <stop offset="1" stop-color="#07111d"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="48%" r="55%">
+      <stop offset="0" stop-color="#49d4c4" stop-opacity=".2"/>
+      <stop offset=".6" stop-color="#2b88a8" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#071425" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f9df8b"/>
+      <stop offset=".5" stop-color="#54e2cf"/>
+      <stop offset="1" stop-color="#2f718c"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b7f7ef" stop-opacity=".72"/>
+      <stop offset=".45" stop-color="#4db8c7" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#183e59" stop-opacity=".42"/>
+    </linearGradient>
+    <linearGradient id="alert" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffb269"/>
+      <stop offset=".55" stop-color="#f05d65"/>
+      <stop offset="1" stop-color="#782e57"/>
+    </linearGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#020812" flood-opacity=".58"/>
+    </filter>
+    <pattern id="grain" width="80" height="80" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="15" r="1" fill="#d9ffff" opacity=".09"/>
+      <circle cx="54" cy="43" r=".8" fill="#d9ffff" opacity=".07"/>
+      <circle cx="27" cy="69" r=".7" fill="#d9ffff" opacity=".05"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#halo)"/>
+  <ellipse cx="792" cy="450" rx="520" ry="330" fill="#38cfc0" opacity=".1" filter="url(#soft)"/>
+
+  <g opacity=".23" fill="none" stroke="#83dcd8" stroke-width="2">
+    <path d="M85 208 C360 112 545 180 720 316"/>
+    <path d="M101 680 C360 755 555 688 731 576"/>
+    <path d="M1510 187 C1260 126 1082 202 887 324"/>
+    <path d="M1502 707 C1245 759 1065 683 881 574"/>
+  </g>
+
+  <g filter="url(#shadow)" transform="translate(185 276) rotate(-7 270 180)">
+    <rect x="0" y="0" width="570" height="360" rx="54" fill="#102f48" fill-opacity=".55" stroke="#72d8d4" stroke-opacity=".4" stroke-width="3"/>
+    <g fill="url(#glass)" stroke="#c8fffa" stroke-opacity=".45" stroke-width="2">
+      <rect x="46" y="52" width="126" height="105" rx="26"/>
+      <rect x="198" y="52" width="126" height="105" rx="26"/>
+      <rect x="350" y="52" width="126" height="105" rx="26"/>
+      <rect x="46" y="188" width="126" height="105" rx="26"/>
+      <rect x="198" y="188" width="126" height="105" rx="26"/>
+      <rect x="350" y="188" width="126" height="105" rx="26"/>
+    </g>
+    <circle cx="514" cy="180" r="10" fill="#7cecdf" filter="url(#glow)"/>
+  </g>
+
+  <g filter="url(#glow)">
+    <path d="M790 122 C746 244 746 656 790 778" fill="none" stroke="#112c3e" stroke-width="66" stroke-linecap="round"/>
+    <path d="M790 122 C758 248 758 652 790 778" fill="none" stroke="url(#gate)" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="784" cy="450" r="32" fill="#092237" stroke="#f4df91" stroke-width="7"/>
+    <circle cx="784" cy="450" r="10" fill="#7cecdf"/>
+  </g>
+
+  <g filter="url(#shadow)" transform="translate(860 245) rotate(6 280 200)">
+    <rect x="0" y="0" width="560" height="410" rx="62" fill="#0c2940" fill-opacity=".68" stroke="#5ac7c4" stroke-opacity=".45" stroke-width="3"/>
+    <g fill="url(#glass)" stroke="#c8fffa" stroke-opacity=".5" stroke-width="2">
+      <rect x="48" y="54" width="130" height="118" rx="29"/>
+      <rect x="205" y="54" width="130" height="118" rx="29"/>
+      <rect x="362" y="54" width="130" height="118" rx="29"/>
+      <rect x="48" y="205" width="130" height="118" rx="29"/>
+      <rect x="205" y="205" width="130" height="118" rx="29"/>
+      <rect x="362" y="205" width="130" height="118" rx="29"/>
+    </g>
+    <path d="M94 104 L132 139 L205 73" fill="none" stroke="#d6fff8" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity=".78"/>
+    <path d="M251 104 L289 139 L362 73" fill="none" stroke="#d6fff8" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity=".78"/>
+  </g>
+
+  <g transform="translate(734 625)" filter="url(#shadow)">
+    <path d="M0 0 C-92 48 -172 55 -255 25" fill="none" stroke="#f1a26d" stroke-width="5" stroke-linecap="round" opacity=".55"/>
+    <rect x="-55" y="-54" width="110" height="110" rx="28" transform="rotate(18)" fill="url(#alert)" stroke="#ffd1a4" stroke-width="4"/>
+    <circle cx="0" cy="0" r="84" fill="none" stroke="#ff9a78" stroke-width="3" opacity=".48"/>
+    <circle cx="0" cy="0" r="112" fill="none" stroke="#ff9a78" stroke-width="2" opacity=".2"/>
+  </g>
+
+  <rect width="1600" height="900" fill="url(#grain)"/>
+  <path d="M0 810 C390 736 620 840 936 796 C1192 761 1370 690 1600 750 L1600 900 L0 900 Z" fill="#050c15" opacity=".42"/>
+</svg>
