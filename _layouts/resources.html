@@ -3,82 +3,134 @@ layout: default
 ---
 {% assign repository = site.data.resources %}
 {% assign resource_total = repository.resources | size %}
-<section class="resources-hero">
+
+<header class="wiki-hero" id="top">
   <div class="shell">
-    <div class="resources-hero-grid">
-      <div class="resources-hero-copy">
-        <div class="resource-hero-status"><span></span>Knowledge grid / online</div>
-        <p class="eyebrow">ShadowContext / Analyst library</p>
-        <h1>Knowledge<br><span>Grid</span></h1>
-        <p class="resources-deck">Open frameworks, standards, investigative utilities, and defensive tooling—curated into one searchable field system.</p>
-        <div class="resource-hero-tags" aria-label="Repository coverage"><span>GRC</span><span>DFIR</span><span>OSINT</span><span>Detection</span><span>AppSec</span></div>
+    <p class="wiki-breadcrumb"><a href="{{ '/' | relative_url }}">ShadowContext</a><span>/</span> Analyst reference</p>
+    <div class="wiki-hero-grid">
+      <div>
+        <p class="eyebrow">Open security knowledge base</p>
+        <h1>Knowledge Grid</h1>
+        <p class="wiki-deck">A practical index of cybersecurity frameworks, standards, benchmarks, investigative utilities, and defensive tools. Search the library or browse it like a field wiki.</p>
       </div>
-      <aside class="resource-map" aria-label="Browse resource categories">
-        <div class="resource-map-head">
-          <span>Sector map // 06 lanes</span>
-          <div class="repository-status"><span class="live-dot"></span><strong>Sources verified</strong></div>
-        </div>
-        <nav>
-          {% for category in repository.categories %}
-          {% assign category_items = repository.resources | where: "category", category.key %}
-          <a href="#resources-{{ category.key }}"><span>{{ category.index }}</span><strong>{{ category.label }}</strong><small>{{ category_items | size }} entries</small><b aria-hidden="true">↘</b></a>
-          {% endfor %}
-        </nav>
-      </aside>
-    </div>
-    <div class="resources-metrics">
-      <div><span>Resources indexed</span><strong>{{ resource_total }}</strong></div>
-      <div><span>Operational lanes</span><strong>{{ repository.categories | size }}</strong></div>
-      <div><span>Access policy</span><strong>Free / Open</strong></div>
+      <dl class="wiki-summary" aria-label="Knowledge Grid summary">
+        <div><dt>Entries</dt><dd>{{ resource_total }}</dd></div>
+        <div><dt>Sections</dt><dd>{{ repository.categories | size }}</dd></div>
+        <div><dt>Access</dt><dd>Free / open</dd></div>
+      </dl>
     </div>
   </div>
-</section>
+</header>
 
-<main class="shell resources-main">
-  <section class="resource-console" aria-label="Search resources">
-    <div class="resource-console-head"><span>Grid search</span><p><kbd>/</kbd> to search · filter by keyword, tag, or operational lane</p></div>
-    <div class="resource-search-wrap">
-      <label for="resource-search"><span>Search all resources</span><small>Names · descriptions · audiences · tags</small></label>
-      <div class="resource-search-field"><span aria-hidden="true">⌕</span><input id="resource-search" type="search" autocomplete="off" aria-keyshortcuts="/" placeholder="Search the knowledge grid…"><button id="resource-clear" type="button" hidden>Clear</button></div>
+<main class="shell wiki-layout">
+  <aside class="wiki-sidebar" aria-label="Knowledge Grid navigation">
+    <div class="wiki-sidebar-inner">
+      <p class="wiki-sidebar-title">Contents</p>
+      <nav class="wiki-contents">
+        {% for category in repository.categories %}
+        {% assign category_items = repository.resources | where: "category", category.key %}
+        <a href="#resources-{{ category.key }}">
+          <span>{{ category.index }}</span>
+          <strong>{{ category.label }}</strong>
+          <small>{{ category_items | size }}</small>
+        </a>
+        {% endfor %}
+      </nav>
+      <div class="wiki-sidebar-note">
+        <strong>Using this index</strong>
+        <p>Descriptions are editorial summaries. Follow each source link for current documentation, licensing, and release details.</p>
+      </div>
     </div>
-    <div class="resource-quick-tags" aria-label="Quick search tags"><span>Trending tags</span><button type="button" data-resource-query="nist">#NIST</button><button type="button" data-resource-query="forensic">#Forensics</button><button type="button" data-resource-query="detection">#Detection</button><button type="button" data-resource-query="cloud">#Cloud</button><button type="button" data-resource-query="incident response">#IncidentResponse</button></div>
-    <div class="resource-filter-bar" aria-label="Filter by category">
-      <span class="resource-filter-label">Sectors</span>
-      <button type="button" class="is-active" data-resource-filter="all" aria-pressed="true">All <span>{{ resource_total }}</span></button>
-      {% for category in repository.categories %}{% assign category_items = repository.resources | where: "category", category.key %}<button type="button" data-resource-filter="{{ category.key }}" aria-pressed="false">{{ category.label }} <span>{{ category_items | size }}</span></button>{% endfor %}
-    </div>
-    <p class="resource-result-status" role="status" aria-live="polite"><strong>{{ resource_total }}</strong> resources visible</p>
-  </section>
+  </aside>
 
-  <div class="resource-sections">
-    {% for category in repository.categories %}
-    {% assign category_items = repository.resources | where: "category", category.key %}
-    <section class="resource-section" id="resources-{{ category.key }}" data-resource-section="{{ category.key }}">
-      <header class="resource-section-head">
-        <div><span>Sector {{ category.index }} / {{ category_items | size | prepend: '0' | slice: -2, 2 }} nodes</span><h2>{{ category.label }}</h2></div>
-        <p>{{ category.description }}</p>
-      </header>
-      <div class="resource-grid">
-        {% for item in category_items %}
-        <article class="resource-card" data-resource-card data-category="{{ item.category }}" data-search="{{ item.name | downcase | escape }} {{ item.description | downcase | escape }} {{ item.audience | downcase | escape }} {{ item.type | downcase | escape }} {{ item.tags | downcase | escape }}">
-          <div class="resource-card-top"><span class="resource-card-mark" aria-hidden="true">{{ item.name | slice: 0, 2 | upcase }}</span><span class="resource-card-ref">{{ category.index }}.{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span></div>
-          <div class="resource-card-labels"><span>{{ item.type }}</span><b>{{ item.access }}</b></div>
-          <h3><a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a></h3>
-          <p>{{ item.description }}</p>
-          {% assign resource_tags = item.tags | split: ' ' %}<div class="resource-card-tags" aria-label="Tags">{% for tag in resource_tags limit: 4 %}<span>#{{ tag }}</span>{% endfor %}</div>
-          <footer><div><small>Useful for</small><strong>{{ item.audience }}</strong></div><a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" aria-label="Open {{ item.name }} official resource">Visit source <span aria-hidden="true">↗</span></a></footer>
-        </article>
+  <div class="wiki-article">
+    <section class="wiki-search" aria-labelledby="wiki-search-title">
+      <div class="wiki-search-heading">
+        <div>
+          <p class="eyebrow">Find an entry</p>
+          <h2 id="wiki-search-title">Search the index</h2>
+        </div>
+        <p class="resource-result-status" role="status" aria-live="polite"><strong>{{ resource_total }}</strong><span> resources visible</span></p>
+      </div>
+
+      <label class="wiki-search-label" for="resource-search">Search names, descriptions, audiences, and tags</label>
+      <div class="wiki-search-field">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg>
+        <input id="resource-search" type="search" autocomplete="off" aria-keyshortcuts="/" placeholder="Try “NIST”, “forensics”, “cloud”, or “detection”…">
+        <kbd aria-hidden="true">/</kbd>
+        <button id="resource-clear" type="button" hidden>Clear</button>
+      </div>
+
+      <div class="wiki-quick-search" aria-label="Suggested searches">
+        <span>Suggested</span>
+        <button type="button" data-resource-query="nist">NIST</button>
+        <button type="button" data-resource-query="forensic">Forensics</button>
+        <button type="button" data-resource-query="detection">Detection</button>
+        <button type="button" data-resource-query="cloud">Cloud</button>
+        <button type="button" data-resource-query="incident response">Incident response</button>
+      </div>
+
+      <div class="wiki-filters" aria-label="Filter by section">
+        <span>Section</span>
+        <button type="button" class="is-active" data-resource-filter="all" aria-pressed="true">All <small>{{ resource_total }}</small></button>
+        {% for category in repository.categories %}
+        {% assign category_items = repository.resources | where: "category", category.key %}
+        <button type="button" data-resource-filter="{{ category.key }}" aria-pressed="false">{{ category.label }} <small>{{ category_items | size }}</small></button>
         {% endfor %}
       </div>
     </section>
-    {% endfor %}
-  </div>
 
-  <section class="resource-usage-note">
-    <div><p class="eyebrow">Usage / verification</p><h2>Use the source. Respect the license.</h2></div>
-    <p>ShadowContext hosts original summaries and links directly to official publishers or project repositories. “Public guidance” and “public resource” mean free to access, not automatically free of copyright. Software and openly licensed material remain subject to the terms published by their maintainers. Verify the current license, release integrity, scope authorization, and organizational policy before use.</p>
-  </section>
-  <div class="resource-empty" hidden><span>NO_MATCH</span><h2>No resources found</h2><p>Try a broader term or clear the active category filter.</p><button type="button">Reset repository search</button></div>
+    <div class="wiki-sections">
+      {% for category in repository.categories %}
+      {% assign category_items = repository.resources | where: "category", category.key %}
+      <section class="wiki-section" id="resources-{{ category.key }}" data-resource-section="{{ category.key }}">
+        <header class="wiki-section-heading">
+          <div class="wiki-section-number">{{ category.index }}</div>
+          <div>
+            <p>{{ category_items | size }} reference entries</p>
+            <h2>{{ category.label }}</h2>
+            <div>{{ category.description }}</div>
+          </div>
+          <a href="#top" aria-label="Back to the top of the page">Top ↑</a>
+        </header>
+
+        <div class="wiki-entry-list">
+          {% for item in category_items %}
+          <article class="wiki-entry" data-resource-card data-category="{{ item.category }}" data-search="{{ item.name | downcase | escape }} {{ item.description | downcase | escape }} {{ item.audience | downcase | escape }} {{ item.type | downcase | escape }} {{ item.access | downcase | escape }} {{ item.tags | downcase | escape }}">
+            <div class="wiki-entry-ref" aria-hidden="true">{{ category.index }}.{{ forloop.index | prepend: '0' | slice: -2, 2 }}</div>
+            <div class="wiki-entry-body">
+              <div class="wiki-entry-kicker"><span>{{ item.type }}</span><span>{{ item.access }}</span></div>
+              <h3><a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.name }} <span aria-hidden="true">↗</span></a></h3>
+              <p>{{ item.description }}</p>
+              {% assign resource_tags = item.tags | split: ' ' %}
+              <div class="wiki-entry-tags" aria-label="Tags">
+                {% for tag in resource_tags limit: 6 %}<button type="button" data-resource-query="{{ tag }}">#{{ tag }}</button>{% endfor %}
+              </div>
+            </div>
+            <dl class="wiki-entry-meta">
+              <div><dt>Useful for</dt><dd>{{ item.audience }}</dd></div>
+              <div><dt>Format</dt><dd>{{ item.type }}</dd></div>
+            </dl>
+          </article>
+          {% endfor %}
+        </div>
+      </section>
+      {% endfor %}
+    </div>
+
+    <section class="wiki-usage resource-usage-note">
+      <p class="eyebrow">Source and licensing note</p>
+      <h2>Use the source. Respect the license.</h2>
+      <p>ShadowContext hosts original summaries and links directly to official publishers or project repositories. “Public guidance” and “public resource” mean free to access, not automatically free of copyright. Software and openly licensed material remain subject to the terms published by their maintainers. Verify the current license, release integrity, scope authorization, and organizational policy before use.</p>
+    </section>
+
+    <section class="wiki-empty resource-empty" hidden>
+      <p class="eyebrow">No matching entries</p>
+      <h2>Nothing matched that search.</h2>
+      <p>Try a broader term, another section, or reset the index.</p>
+      <button type="button">Reset search</button>
+    </section>
+  </div>
 </main>
 
 <script>
@@ -90,11 +142,21 @@ layout: default
     const filters = [...document.querySelectorAll('[data-resource-filter]')];
     const queryButtons = [...document.querySelectorAll('[data-resource-query]')];
     const status = document.querySelector('.resource-result-status');
+    const statusCount = status.querySelector('strong');
+    const statusLabel = status.querySelector('span');
     const empty = document.querySelector('.resource-empty');
     const usage = document.querySelector('.resource-usage-note');
     let category = 'all';
 
     const normalize = (value) => value.toLowerCase().trim().replace(/\s+/g, ' ');
+    const setCategory = (value) => {
+      category = value;
+      filters.forEach((button) => {
+        const active = button.dataset.resourceFilter === category;
+        button.classList.toggle('is-active', active);
+        button.setAttribute('aria-pressed', active);
+      });
+    };
     const update = () => {
       const terms = normalize(input.value).split(' ').filter(Boolean);
       let visible = 0;
@@ -105,34 +167,53 @@ layout: default
         card.hidden = !show;
         if (show) visible += 1;
       });
-      sections.forEach((section) => { section.hidden = !section.querySelector('[data-resource-card]:not([hidden])'); });
+      sections.forEach((section) => {
+        section.hidden = !section.querySelector('[data-resource-card]:not([hidden])');
+      });
       clear.hidden = !input.value;
-      status.innerHTML = `<strong>${visible}</strong> ${visible === 1 ? 'resource' : 'resources'} visible`;
+      statusCount.textContent = visible;
+      statusLabel.textContent = ` ${visible === 1 ? 'resource' : 'resources'} visible`;
       empty.hidden = visible !== 0;
       usage.hidden = visible === 0;
     };
+    const reset = () => {
+      input.value = '';
+      setCategory('all');
+      update();
+    };
 
     input.addEventListener('input', update);
-    clear.addEventListener('click', () => { input.value = ''; input.focus(); update(); });
+    clear.addEventListener('click', () => {
+      input.value = '';
+      input.focus();
+      update();
+    });
     filters.forEach((button) => button.addEventListener('click', () => {
-      category = button.dataset.resourceFilter;
-      filters.forEach((item) => { const active = item === button; item.classList.toggle('is-active', active); item.setAttribute('aria-pressed', active); });
+      setCategory(button.dataset.resourceFilter);
       update();
     }));
     queryButtons.forEach((button) => button.addEventListener('click', () => {
       input.value = button.dataset.resourceQuery;
-      category = 'all';
-      filters.forEach((item) => { const active = item.dataset.resourceFilter === 'all'; item.classList.toggle('is-active', active); item.setAttribute('aria-pressed', active); });
-      update(); input.focus();
+      setCategory('all');
+      update();
+      input.focus();
+      document.querySelector('.wiki-search').scrollIntoView({ behavior: 'smooth', block: 'start' });
     }));
     document.addEventListener('keydown', (event) => {
-      if (event.key === '/' && document.activeElement !== input) { event.preventDefault(); input.focus(); }
-      if (event.key === 'Escape' && document.activeElement === input) { input.value = ''; update(); input.blur(); }
+      const activeTag = document.activeElement?.tagName;
+      const isTyping = ['INPUT', 'TEXTAREA', 'SELECT'].includes(activeTag) || document.activeElement?.isContentEditable;
+      if (event.key === '/' && !isTyping) {
+        event.preventDefault();
+        input.focus();
+      }
+      if (event.key === 'Escape' && document.activeElement === input) {
+        reset();
+        input.blur();
+      }
     });
     empty.querySelector('button').addEventListener('click', () => {
-      input.value = ''; category = 'all';
-      filters.forEach((item) => { const active = item.dataset.resourceFilter === 'all'; item.classList.toggle('is-active', active); item.setAttribute('aria-pressed', active); });
-      update(); input.focus();
+      reset();
+      input.focus();
     });
   })();
 </script>
