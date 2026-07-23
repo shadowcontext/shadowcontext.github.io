@@ -114,6 +114,20 @@ if [[ "${post_stem%.md}" != "${image_stem%.svg}" ]]; then
   log "post and image names do not match"
   exit 1
 fi
+
+# Generated timestamps can drift a few minutes ahead of the commit. Jekyll
+# excludes those posts as future-dated, so normalize to a safely elapsed local
+# time before validation, build, and publication.
+publication_time="$(TZ=Asia/Dubai date --date='2 minutes ago' '+%Y-%m-%d %H:%M:%S %z')"
+ruby - "$RUN_DIR/$NEW_POST" "$publication_time" <<'RUBY'
+post_path, publication_time = ARGV
+source = File.read(post_path)
+unless source.sub!(/^date:.*$/, "date: #{publication_time}")
+  abort "generated post is missing a date field"
+end
+File.write(post_path, source)
+RUBY
+
 ruby "$VALIDATOR_PATH" "$RUN_DIR" "$NEW_POST"
 
 mapfile -t SOURCE_URLS < <(sed -nE 's/^[[:space:]]+url: "(https:\/\/[^"[:space:]]+)"$/\1/p' "$RUN_DIR/$NEW_POST")

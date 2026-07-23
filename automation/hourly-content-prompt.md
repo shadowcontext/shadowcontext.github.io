@@ -95,6 +95,10 @@ sources:
 ---
 ```
 
+Use the actual current `Asia/Dubai` time for `date`; never use a future time.
+The publication runner will normalize this value again before committing to
+prevent Jekyll from omitting the post as future-dated.
+
 Generate a new, original editorial image specifically for the selected story;
 never reuse an existing image or a generic illustration. The visual concept
 must reflect the article's actual subject and central defensive lesson. Create
