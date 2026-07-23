@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Autonomous agent passing through guarded lifecycle controls</title>
+  <desc id="desc">An abstract luminous agent node emerges through layered approval rings while distinct connector paths remain segmented and monitored.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07152c"/>
+      <stop offset="0.55" stop-color="#102a4a"/>
+      <stop offset="1" stop-color="#081c32"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="48%" r="55%">
+      <stop offset="0" stop-color="#6ee7f5" stop-opacity=".28"/>
+      <stop offset=".55" stop-color="#38bdf8" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a7f3d0"/>
+      <stop offset=".48" stop-color="#67e8f9"/>
+      <stop offset="1" stop-color="#818cf8"/>
+    </linearGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f0fdfa"/>
+      <stop offset=".42" stop-color="#67e8f9"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1e4968" stop-opacity=".92"/>
+      <stop offset="1" stop-color="#0a223c" stop-opacity=".8"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#halo)"/>
+
+  <g opacity=".18" fill="none" stroke="#7dd3fc">
+    <path d="M0 710C245 630 370 764 588 704S982 548 1212 642s273 90 388 49" stroke-width="2"/>
+    <path d="M0 758c221-63 382 46 594-12s390-137 606-61 292 74 400 29" stroke-width="1.5"/>
+    <circle cx="132" cy="205" r="78"/>
+    <circle cx="1470" cy="184" r="112"/>
+  </g>
+
+  <g transform="translate(800 447)">
+    <ellipse rx="392" ry="349" fill="#07172a" opacity=".34"/>
+    <ellipse rx="322" ry="286" fill="none" stroke="#5eead4" stroke-opacity=".22" stroke-width="32"/>
+    <ellipse rx="258" ry="229" fill="none" stroke="#67e8f9" stroke-opacity=".34" stroke-width="22" stroke-dasharray="410 76" transform="rotate(-18)"/>
+    <ellipse rx="198" ry="176" fill="none" stroke="url(#ring)" stroke-width="12" stroke-dasharray="242 54" transform="rotate(27)"/>
+    <ellipse rx="145" ry="129" fill="#0b2440" stroke="#bae6fd" stroke-opacity=".54" stroke-width="3"/>
+
+    <g fill="none" stroke="url(#ring)" stroke-linecap="round">
+      <path d="M-146-14H-278c-46 0-58-42-104-42h-82" stroke-width="8"/>
+      <path d="M146-14h132c46 0 58-42 104-42h82" stroke-width="8"/>
+      <path d="M-96 108l-82 82c-25 25-60 30-96 30h-98" stroke-width="8"/>
+      <path d="M96 108l82 82c25 25 60 30 96 30h98" stroke-width="8"/>
+    </g>
+
+    <g>
+      <circle r="76" fill="#143a59" stroke="#cffafe" stroke-width="4"/>
+      <path d="M0-48 47-20v55L0 63l-47-28v-55Z" fill="url(#core)" filter="url(#glow)"/>
+      <circle r="14" fill="#f0fdfa"/>
+      <circle r="105" fill="none" stroke="#e0f2fe" stroke-opacity=".36" stroke-width="2" stroke-dasharray="8 13"/>
+    </g>
+  </g>
+
+  <g fill="url(#panel)" stroke="#7dd3fc" stroke-opacity=".48" stroke-width="3">
+    <path d="M165 332h184l38 38-38 38H165l-38-38Z"/>
+    <path d="M1251 332h184l38 38-38 38h-184l-38-38Z"/>
+    <path d="M210 628h174l34 34-34 34H210l-34-34Z"/>
+    <path d="M1216 628h174l34 34-34 34h-174l-34-34Z"/>
+  </g>
+
+  <g fill="#a7f3d0" filter="url(#glow)">
+    <circle cx="348" cy="370" r="9"/>
+    <circle cx="1252" cy="370" r="9"/>
+    <circle cx="383" cy="662" r="9"/>
+    <circle cx="1217" cy="662" r="9"/>
+  </g>
+
+  <g opacity=".42" fill="#38bdf8" filter="url(#soft)">
+    <ellipse cx="800" cy="785" rx="288" ry="22"/>
+    <circle cx="800" cy="447" r="92"/>
+  </g>
+
+  <g fill="none" stroke="#c4b5fd" stroke-opacity=".5" stroke-width="3">
+    <path d="M710 162c30-38 65-58 90-58s60 20 90 58"/>
+    <path d="M710 732c30 38 65 58 90 58s60-20 90-58"/>
+  </g>
+</svg>
