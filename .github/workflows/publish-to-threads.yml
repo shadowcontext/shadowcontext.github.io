@@ -44,6 +44,7 @@ on:
       - main
     paths:
       - '_posts/**'
+      - '.github/workflows/publish-to-threads.yml'
 
 permissions:
   contents: read
@@ -62,7 +63,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Publish manual custom test
         if: github.event_name == 'workflow_dispatch' && inputs.mode == 'custom'
@@ -106,11 +107,16 @@ jobs:
           THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
           THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
         run: |
+          wait_seconds=0
+          if [[ "${{ github.event_name }}" == "push" ]]; then
+            wait_seconds=180
+          fi
           before_hash=$(sha256sum automation/threads/rss-state.json | cut -d ' ' -f 1)
           set +e
           node automation/threads/publish-rss-feed.mjs \
             --feed-url https://shadowcontext.com/feed.xml \
-            --state-file automation/threads/rss-state.json
+            --state-file automation/threads/rss-state.json \
+            --wait-seconds "$wait_seconds"
           publish_status=$?
           set -e
           after_hash=$(sha256sum automation/threads/rss-state.json | cut -d ' ' -f 1)

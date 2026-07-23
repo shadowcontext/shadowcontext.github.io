@@ -7,18 +7,20 @@ import { buildThreadsText, characterCount, THREADS_CHARACTER_LIMIT } from './thr
 import { parseRssFeed, rssItemEligibility, unseenRssItems } from './rss-feed.mjs';
 
 function parseArguments(argv) {
-  const options = { dryRun: false, previewLatest: 0 };
+  const options = { dryRun: false, previewLatest: 0, waitSeconds: 0 };
   for (let index = 0; index < argv.length; index += 1) {
     const argument = argv[index];
     if (argument === '--dry-run') {
       options.dryRun = true;
       continue;
     }
-    if (['--feed-url', '--state-file', '--preview-latest'].includes(argument)) {
+    if (['--feed-url', '--state-file', '--preview-latest', '--wait-seconds'].includes(argument)) {
       const value = argv[index + 1];
       if (value === undefined) throw new Error(`${argument} requires a value`);
       const key = argument.slice(2).replace(/-([a-z])/g, (_, letter) => letter.toUpperCase());
-      options[key] = argument === '--preview-latest' ? Number.parseInt(value, 10) : value;
+      options[key] = ['--preview-latest', '--wait-seconds'].includes(argument)
+        ? Number.parseInt(value, 10)
+        : value;
       index += 1;
       continue;
     }
@@ -28,6 +30,9 @@ function parseArguments(argv) {
   if (!options.stateFile && options.previewLatest === 0) throw new Error('--state-file is required');
   if (!Number.isInteger(options.previewLatest) || options.previewLatest < 0 || options.previewLatest > 10) {
     throw new Error('--preview-latest must be an integer from 0 to 10');
+  }
+  if (!Number.isInteger(options.waitSeconds) || options.waitSeconds < 0 || options.waitSeconds > 600) {
+    throw new Error('--wait-seconds must be an integer from 0 to 600');
   }
   if (options.previewLatest > 0 && !options.dryRun) {
     throw new Error('--preview-latest can only be used with --dry-run');
@@ -86,7 +91,7 @@ async function preview(items, count) {
 
 async function main() {
   const options = parseArguments(process.argv.slice(2));
-  const items = parseRssFeed(await fetchFeed(options.feedUrl));
+  let items = parseRssFeed(await fetchFeed(options.feedUrl));
   if (options.previewLatest > 0) {
     await preview(items, options.previewLatest);
     return;
@@ -99,7 +104,15 @@ async function main() {
     return;
   }
 
-  const newItems = unseenRssItems(items, lastGuid);
+  let newItems = unseenRssItems(items, lastGuid);
+  const waitDeadline = Date.now() + (options.waitSeconds * 1_000);
+  while (newItems.length === 0 && Date.now() < waitDeadline) {
+    const remainingSeconds = Math.ceil((waitDeadline - Date.now()) / 1_000);
+    console.log(`No new RSS posts yet; waiting for site deployment (${remainingSeconds}s remaining)`);
+    await new Promise((resolve) => setTimeout(resolve, Math.min(15_000, Math.max(0, waitDeadline - Date.now()))));
+    items = parseRssFeed(await fetchFeed(options.feedUrl));
+    newItems = unseenRssItems(items, lastGuid);
+  }
   if (newItems.length === 0) {
     console.log('No new RSS posts to publish');
     return;
