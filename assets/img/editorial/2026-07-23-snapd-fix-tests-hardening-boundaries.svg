@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Closing a seam in layered sandbox boundaries</title>
+  <desc id="desc">Abstract layered blue sandbox walls surround a protected center while a narrow amber seam is closed by a luminous ring, representing a repaired privilege boundary.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07152d"/>
+      <stop offset="0.55" stop-color="#0b2850"/>
+      <stop offset="1" stop-color="#06111f"/>
+    </linearGradient>
+    <radialGradient id="core" cx="50%" cy="48%" r="55%">
+      <stop offset="0" stop-color="#55d8dc" stop-opacity="0.72"/>
+      <stop offset="0.42" stop-color="#2086b8" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#0a1c36" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2d8fc0"/>
+      <stop offset="0.55" stop-color="#174f83"/>
+      <stop offset="1" stop-color="#0c2b55"/>
+    </linearGradient>
+    <linearGradient id="innerWall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#65d2d5"/>
+      <stop offset="1" stop-color="#176b96"/>
+    </linearGradient>
+    <linearGradient id="seal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f5b64b" stop-opacity="0"/>
+      <stop offset="0.38" stop-color="#ffd47a"/>
+      <stop offset="0.62" stop-color="#ffb23c"/>
+      <stop offset="1" stop-color="#f5b64b" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <ellipse cx="800" cy="455" rx="610" ry="365" fill="url(#core)"/>
+  <path d="M170 674 C390 790 1210 790 1430 674" fill="none" stroke="#2a75a0" stroke-opacity="0.18" stroke-width="2"/>
+  <path d="M240 724 C470 820 1130 820 1360 724" fill="none" stroke="#5bcdd0" stroke-opacity="0.11" stroke-width="2"/>
+
+  <g opacity="0.94">
+    <path d="M300 610 L300 282 Q300 230 352 230 L659 230 L659 327 L420 327 Q398 327 398 349 L398 610 Z" fill="url(#wall)"/>
+    <path d="M1300 610 L1300 282 Q1300 230 1248 230 L941 230 L941 327 L1180 327 Q1202 327 1202 349 L1202 610 Z" fill="url(#wall)"/>
+    <path d="M398 610 L398 704 Q398 745 439 745 L690 745 L690 650 L514 650 Q493 650 493 629 L493 610 Z" fill="#123d6b"/>
+    <path d="M1202 610 L1202 704 Q1202 745 1161 745 L910 745 L910 650 L1086 650 Q1107 650 1107 629 L1107 610 Z" fill="#123d6b"/>
+  </g>
+
+  <g>
+    <path d="M520 579 L520 382 Q520 354 548 354 L694 354 L694 424 L607 424 Q590 424 590 441 L590 579 Z" fill="url(#innerWall)"/>
+    <path d="M1080 579 L1080 382 Q1080 354 1052 354 L906 354 L906 424 L993 424 Q1010 424 1010 441 L1010 579 Z" fill="url(#innerWall)"/>
+    <path d="M590 579 L590 628 Q590 650 612 650 L704 650 L704 579 Z" fill="#2785a8"/>
+    <path d="M1010 579 L1010 628 Q1010 650 988 650 L896 650 L896 579 Z" fill="#2785a8"/>
+  </g>
+
+  <circle cx="800" cy="505" r="130" fill="#0b2340" stroke="#69d9d6" stroke-opacity="0.42" stroke-width="3"/>
+  <circle cx="800" cy="505" r="92" fill="#102e4e" stroke="#88ece2" stroke-opacity="0.3" stroke-width="2"/>
+  <path d="M800 414 L800 596" stroke="#ffbd4a" stroke-opacity="0.28" stroke-width="28" filter="url(#soft)"/>
+  <path d="M800 412 L800 598" stroke="#ffcf67" stroke-width="5"/>
+
+  <g filter="url(#glow)">
+    <ellipse cx="800" cy="505" rx="156" ry="145" fill="none" stroke="url(#seal)" stroke-width="16"/>
+    <path d="M688 407 Q800 329 912 407" fill="none" stroke="#ffd272" stroke-width="7" stroke-linecap="round"/>
+    <path d="M912 603 Q800 681 688 603" fill="none" stroke="#f3a93a" stroke-width="7" stroke-linecap="round"/>
+  </g>
+
+  <g fill="#9de8e4">
+    <circle cx="548" cy="296" r="5" opacity="0.7"/>
+    <circle cx="1052" cy="296" r="5" opacity="0.7"/>
+    <circle cx="455" cy="687" r="4" opacity="0.45"/>
+    <circle cx="1145" cy="687" r="4" opacity="0.45"/>
+  </g>
+</svg>
