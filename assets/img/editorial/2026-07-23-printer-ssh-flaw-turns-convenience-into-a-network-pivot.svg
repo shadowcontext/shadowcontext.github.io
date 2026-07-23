@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Printer forwarding path contained by network segmentation</title>
+  <desc id="desc">An abstract office printer sits among flowing network paths while a luminous layered boundary blocks one path from reaching a protected internal node.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07131f"/>
+      <stop offset="0.52" stop-color="#102a3b"/>
+      <stop offset="1" stop-color="#061019"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="52%" cy="48%" r="55%">
+      <stop offset="0" stop-color="#26c7ca" stop-opacity=".22"/>
+      <stop offset=".55" stop-color="#1d7797" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#07131f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="printerFace" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d6e1e2"/>
+      <stop offset=".5" stop-color="#8fa7ad"/>
+      <stop offset="1" stop-color="#405965"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="0" y1="0" x2=".8" y2="1">
+      <stop offset="0" stop-color="#f5fbf8"/>
+      <stop offset="1" stop-color="#b9d1d1"/>
+    </linearGradient>
+    <linearGradient id="boundary" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3ce2d1" stop-opacity=".16"/>
+      <stop offset=".48" stop-color="#78f4df" stop-opacity=".94"/>
+      <stop offset="1" stop-color="#238ead" stop-opacity=".16"/>
+    </linearGradient>
+    <linearGradient id="route" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#55d8ce"/>
+      <stop offset=".58" stop-color="#ffd066"/>
+      <stop offset="1" stop-color="#f1814d"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="13" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="170%" height="190%">
+      <feDropShadow dx="0" dy="25" stdDeviation="26" flood-color="#000812" flood-opacity=".72"/>
+    </filter>
+    <pattern id="grid" width="72" height="72" patternUnits="userSpaceOnUse">
+      <path d="M72 0H0V72" fill="none" stroke="#9dd5db" stroke-opacity=".045"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#halo)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+
+  <g opacity=".52" fill="none" stroke="#318da2" stroke-width="3">
+    <path d="M60 196C250 196 270 286 430 286"/>
+    <path d="M60 280C230 280 285 344 430 344"/>
+    <path d="M60 620C260 620 290 570 430 570"/>
+    <path d="M60 704C240 704 280 630 430 630"/>
+  </g>
+  <g fill="#78e6dc" opacity=".75">
+    <circle cx="60" cy="196" r="7"/><circle cx="60" cy="280" r="7"/>
+    <circle cx="60" cy="620" r="7"/><circle cx="60" cy="704" r="7"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <path d="M520 238h390l76 90v337H446V328z" fill="#193440" stroke="#76949c" stroke-width="5"/>
+    <path d="M555 130h315l38 253H516z" fill="url(#paper)" stroke="#9fbabc" stroke-width="5"/>
+    <path d="M596 202h230M584 252h254M575 302h273" stroke="#66858b" stroke-width="11" stroke-linecap="round" opacity=".56"/>
+    <rect x="490" y="354" width="452" height="249" rx="30" fill="url(#printerFace)"/>
+    <rect x="546" y="392" width="340" height="73" rx="14" fill="#112936"/>
+    <rect x="583" y="416" width="168" height="13" rx="6" fill="#466975"/>
+    <circle cx="840" cy="429" r="16" fill="#35d7bf" filter="url(#glow)"/>
+    <path d="M556 603h318l-30 126H586z" fill="#203b47" stroke="#809ba1" stroke-width="4"/>
+    <path d="M605 638h222M616 677h200" stroke="#a3babd" stroke-width="9" stroke-linecap="round" opacity=".65"/>
+  </g>
+
+  <path d="M96 470C248 470 284 420 422 420C516 420 537 515 648 515H1115"
+        fill="none" stroke="url(#route)" stroke-width="13" stroke-linecap="round" filter="url(#glow)"/>
+  <g fill="#dffef8">
+    <circle cx="96" cy="470" r="12"/><circle cx="273" cy="443" r="9"/>
+    <circle cx="422" cy="420" r="10"/><circle cx="648" cy="515" r="10"/>
+  </g>
+
+  <g filter="url(#glow)">
+    <path d="M1125 120l64 48v564l-64 48-34-37V157z" fill="url(#boundary)" stroke="#7cf5e2" stroke-width="3"/>
+    <path d="M1200 171l36 28v502l-36 28" fill="none" stroke="#3cd2cf" stroke-opacity=".56" stroke-width="9"/>
+    <path d="M1068 185l23 20v490l-23 20" fill="none" stroke="#278eaa" stroke-opacity=".48" stroke-width="6"/>
+  </g>
+
+  <circle cx="1116" cy="515" r="43" fill="#0a2732" stroke="#7af2df" stroke-width="5"/>
+  <path d="M1098 515h36M1116 497v36" stroke="#c6fff6" stroke-width="7" stroke-linecap="round" transform="rotate(45 1116 515)"/>
+
+  <g filter="url(#shadow)">
+    <path d="M1320 356l126 73v146l-126 73-126-73V429z" fill="#17313d" stroke="#6c8a94" stroke-width="5"/>
+    <path d="M1240 448l80-45 80 45-80 46z" fill="#294b58"/>
+    <path d="M1240 448v92l80 46v-92z" fill="#203d49"/>
+    <path d="M1400 448v92l-80 46v-92z" fill="#132d38"/>
+    <circle cx="1320" cy="494" r="18" fill="#f1a454" opacity=".8"/>
+  </g>
+
+  <path d="M1238 515h36" stroke="#4e7884" stroke-width="7" stroke-dasharray="4 14" opacity=".7"/>
+  <path d="M1446 502c50 0 58-42 102-42" fill="none" stroke="#355d6b" stroke-width="4" opacity=".55"/>
+  <path d="M1446 552c48 0 60 38 102 38" fill="none" stroke="#355d6b" stroke-width="4" opacity=".55"/>
+</svg>
