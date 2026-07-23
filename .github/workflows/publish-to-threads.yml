@@ -109,7 +109,7 @@ jobs:
         run: |
           wait_seconds=0
           if [[ "${{ github.event_name }}" == "push" ]]; then
-            wait_seconds=180
+            wait_seconds=300
           fi
           before_hash=$(sha256sum automation/threads/rss-state.json | cut -d ' ' -f 1)
           set +e

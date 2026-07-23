@@ -82,7 +82,7 @@ review the same custom input with **dry_run** enabled first.
 The workflow polls `https://shadowcontext.com/feed.xml` every 15 minutes and
 also checks after pushes to `main` that touch `_posts/**`. The scheduled check
 handles the short delay between a source push and GitHub Pages updating the
-public feed. Push-triggered runs poll the feed for up to three minutes so a new
+public feed. Push-triggered runs poll the feed for up to five minutes so a new
 post is normally published as soon as its deployed RSS entry becomes visible;
 scheduled runs remain the fallback if deployment takes longer.
 
