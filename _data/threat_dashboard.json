@@ -1,15 +1,35 @@
 {
-  "generated_at": "2026-07-22T09:39:49Z",
-  "generated_display": "22 Jul 2026 · 09:39 UTC",
+  "generated_at": "2026-07-23T01:17:45Z",
+  "generated_display": "23 Jul 2026 · 01:17 UTC",
   "metrics": {
-    "kev_total": 1651,
-    "kev_added_30d": 28,
-    "due_next_7d": 5,
+    "kev_total": 1653,
+    "kev_added_30d": 30,
+    "due_next_7d": 7,
     "ioc_total": 143,
     "ioc_total_display": "143",
     "ioc_total_exact": "143"
   },
   "vulnerabilities": [
+    {
+      "cve": "CVE-2026-50522",
+      "name": "Microsoft SharePoint Deserialization of Untrusted Data Vulnerability ",
+      "vendor": "Microsoft",
+      "product": "SharePoint",
+      "date_added": "2026-07-22",
+      "due_date": "2026-07-25",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-50522"
+    },
+    {
+      "cve": "CVE-2026-16232",
+      "name": "Check Point SmartConsole Improper Authentication Vulnerability",
+      "vendor": "Check Point",
+      "product": "SmartConsole",
+      "date_added": "2026-07-22",
+      "due_date": "2026-07-25",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-16232"
+    },
     {
       "cve": "CVE-2026-63030",
       "name": "WordPress Core Interpretation Conflict Vulnerability",
@@ -69,52 +89,26 @@
       "due_date": "2026-07-19",
       "ransomware": "Unknown",
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-39808"
-    },
-    {
-      "cve": "CVE-2026-25089",
-      "name": "Fortinet FortiSandbox OS Command Injection Vulnerability",
-      "vendor": "Fortinet",
-      "product": "FortiSandbox",
-      "date_added": "2026-07-16",
-      "due_date": "2026-07-19",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-25089"
-    },
-    {
-      "cve": "CVE-2026-46817",
-      "name": "Oracle E-Business Suite Improper Privilege Management Vulnerability",
-      "vendor": "Oracle",
-      "product": "E-Business Suite",
-      "date_added": "2026-07-15",
-      "due_date": "2026-07-18",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-46817"
     }
   ],
   "platforms": [
     {
       "vendor": "Microsoft",
       "product": "Windows",
-      "count": 45,
+      "count": 44,
       "percent": 100
     },
     {
       "vendor": "Cisco",
       "product": "Catalyst SD-WAN Manager",
       "count": 18,
-      "percent": 40
+      "percent": 41
     },
     {
       "vendor": "Apple",
       "product": "Multiple Products",
       "count": 10,
-      "percent": 22
-    },
-    {
-      "vendor": "Google",
-      "product": "Chromium V8",
-      "count": 9,
-      "percent": 20
+      "percent": 23
     },
     {
       "vendor": "Fortinet",
@@ -123,10 +117,16 @@
       "percent": 18
     },
     {
+      "vendor": "Google",
+      "product": "Chromium V8",
+      "count": 8,
+      "percent": 18
+    },
+    {
       "vendor": "Oracle",
       "product": "E-Business Suite",
       "count": 6,
-      "percent": 13
+      "percent": 14
     }
   ],
   "actors": [
@@ -161,12 +161,36 @@
   ],
   "advisories": [
     {
+      "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+      "url": "https://www.cisa.gov/news-events/alerts/2026/07/22/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+      "date": "2026-07-22",
+      "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-16232 Check Point SmartConsole…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
       "authority": "Saudi NCA / CERT",
-      "title": "Oracle Alert",
-      "url": "https://nca.gov.sa/en/cert/7788/",
+      "title": "Mozilla Alert",
+      "url": "https://nca.gov.sa/en/cert/7791/",
       "date": "2026-07-22",
       "severity": "Critical",
-      "summary": "Security alert 2026-7665. Review the official notice for affected products and remediation guidance."
+      "summary": "Security alert 2026-7668. Review the official notice for affected products and remediation guidance."
+    },
+    {
+      "authority": "Saudi NCA / CERT",
+      "title": "Drupal Alert",
+      "url": "https://nca.gov.sa/en/cert/7790/",
+      "date": "2026-07-22",
+      "severity": "Critical",
+      "summary": "Security alert 2026-7667. Review the official notice for affected products and remediation guidance."
+    },
+    {
+      "authority": "Saudi NCA / CERT",
+      "title": "Hikvision Alert",
+      "url": "https://nca.gov.sa/en/cert/7789/",
+      "date": "2026-07-22",
+      "severity": "High",
+      "summary": "Security alert 2026-7666. Review the official notice for affected products and remediation guidance."
     },
     {
       "title": "Tycon Systems TPDIN-Monitor-WEB2",
@@ -191,30 +215,6 @@
       "summary": "CISA has added four new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2021-27137 DD-WRT Stack-Based Buffer…",
       "authority": "CISA",
       "severity": ""
-    },
-    {
-      "title": "Siemens IAM Client",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-202-05",
-      "date": "2026-07-21",
-      "summary": "View CSAF Summary Multiple Siemens products are affected by unquoted search path vulnerability in IAM Client. This could allow an authenticated local attacker to perform…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
-      "authority": "Saudi NCA / CERT",
-      "title": "Atlassian Alert",
-      "url": "https://nca.gov.sa/en/cert/7787/",
-      "date": "2026-07-21",
-      "severity": "Critical",
-      "summary": "Security alert 2026-7664. Review the official notice for affected products and remediation guidance."
-    },
-    {
-      "authority": "Saudi NCA / CERT",
-      "title": "Solarwinds Alert",
-      "url": "https://nca.gov.sa/en/cert/7786/",
-      "date": "2026-07-21",
-      "severity": "Critical",
-      "summary": "Security alert 2026-7663. Review the official notice for affected products and remediation guidance."
     },
     {
       "title": "How to secure your online meetings",
@@ -324,7 +324,7 @@
       "path": "/assets/data/daily-urls.txt"
     }
   ],
-  "ioc_sha256": "8b3eeb73eeb6824ba0def0ed674c042be66cbfd880a854ba75e929cd8077754d",
+  "ioc_sha256": "3608fd560c57c7d44b2b618f691d4ac625b4ac23121838f1424e332d4f0f9804",
   "sources": {
     "kev": {
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
