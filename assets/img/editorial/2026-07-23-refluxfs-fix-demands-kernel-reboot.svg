@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Kernel update wave moving through layered XFS storage</title>
+  <desc id="desc">Abstract editorial artwork of deep blue filesystem blocks arranged around a protected amber core while a cyan circular update wave crosses the layered structure.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071426"/>
+      <stop offset="0.55" stop-color="#102f4d"/>
+      <stop offset="1" stop-color="#07101d"/>
+    </linearGradient>
+    <linearGradient id="slab" x1="0" y1="0" x2="0.85" y2="1">
+      <stop offset="0" stop-color="#2e7391"/>
+      <stop offset="1" stop-color="#112b47"/>
+    </linearGradient>
+    <linearGradient id="slabBright" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#52c6d6"/>
+      <stop offset="1" stop-color="#174869"/>
+    </linearGradient>
+    <radialGradient id="core">
+      <stop offset="0" stop-color="#fff2a8"/>
+      <stop offset="0.42" stop-color="#f3b94d"/>
+      <stop offset="1" stop-color="#d56a27"/>
+    </radialGradient>
+    <radialGradient id="halo">
+      <stop offset="0" stop-color="#51e3e6" stop-opacity="0.24"/>
+      <stop offset="0.7" stop-color="#2fc2db" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#2fc2db" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="16"/>
+      <feOffset dy="20"/>
+      <feColorMatrix values="0 0 0 0 0 0 0 0 0 0.04 0 0 0 0 0.08 0 0 0 .55 0"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="805" cy="447" r="420" fill="url(#halo)"/>
+  <path d="M0 690C250 606 428 650 614 705s405 82 609-4c151-64 267-66 377-34v233H0Z" fill="#06101d" opacity="0.72"/>
+  <path d="M96 150c260-95 464-83 642-18 203 75 385 45 699-54" fill="none" stroke="#62dfe7" stroke-opacity="0.09" stroke-width="2"/>
+
+  <g filter="url(#shadow)" stroke="#7ad9e2" stroke-opacity="0.26" stroke-width="2">
+    <path d="M304 313l223-96 193 82-224 101z" fill="url(#slab)"/>
+    <path d="M304 313v87l192 88v-88z" fill="#0b223a"/>
+    <path d="M496 400l224-101v88L496 488z" fill="#153b56"/>
+
+    <path d="M711 218l218-88 192 91-220 93z" fill="url(#slab)"/>
+    <path d="M711 218v88l190 98v-90z" fill="#0b243c"/>
+    <path d="M901 314l220-93v89l-220 94z" fill="#163b55"/>
+
+    <path d="M1049 356l208-91 181 88-209 94z" fill="url(#slab)"/>
+    <path d="M1049 356v88l180 94v-91z" fill="#0b233a"/>
+    <path d="M1229 447l209-94v89l-209 96z" fill="#14394f"/>
+
+    <path d="M183 524l220-95 193 88-222 99z" fill="url(#slab)"/>
+    <path d="M183 524v91l191 94v-93z" fill="#0a2137"/>
+    <path d="M374 616l222-99v91L374 709z" fill="#153a55"/>
+
+    <path d="M971 578l225-100 197 92-226 104z" fill="url(#slabBright)"/>
+    <path d="M971 578v94l196 103V674z" fill="#0b2842"/>
+    <path d="M1167 674l226-104v93l-226 112z" fill="#174c67"/>
+
+    <path d="M536 620l228-102 200 94-229 109z" fill="url(#slabBright)"/>
+    <path d="M536 620v96l199 106V721z" fill="#0b2944"/>
+    <path d="M735 721l229-109v96L735 822z" fill="#174d69"/>
+  </g>
+
+  <g filter="url(#glow)">
+    <path d="M625 417l181-78 161 75-183 83z" fill="#f2b64a" stroke="#ffe596" stroke-width="4"/>
+    <path d="M625 417v117l159 82V497z" fill="#a74f25" stroke="#e88a39" stroke-width="3"/>
+    <path d="M784 497l183-83v116l-183 86z" fill="url(#core)" stroke="#ffd879" stroke-width="3"/>
+    <path d="M713 433l94-40 80 37-95 43z" fill="#fff0a1" opacity="0.72"/>
+  </g>
+
+  <g fill="none" stroke-linecap="round">
+    <circle cx="803" cy="474" r="310" stroke="#64eff0" stroke-opacity="0.16" stroke-width="30"/>
+    <path d="M1029 262a310 310 0 0 1 64 365" stroke="#74f5f0" stroke-width="20" opacity="0.9"/>
+    <path d="M1087 592l21 47 44-25" stroke="#74f5f0" stroke-width="20" stroke-linejoin="round"/>
+    <path d="M576 689a310 310 0 0 1-67-364" stroke="#42cddc" stroke-width="10" opacity="0.62"/>
+  </g>
+
+  <g fill="#a8f5f0">
+    <circle cx="418" cy="243" r="6" opacity="0.55"/>
+    <circle cx="1296" cy="212" r="5" opacity="0.5"/>
+    <circle cx="1420" cy="560" r="7" opacity="0.36"/>
+    <circle cx="251" cy="745" r="5" opacity="0.4"/>
+  </g>
+</svg>
