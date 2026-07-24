@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-23T01:17:45Z",
-  "generated_display": "23 Jul 2026 · 01:17 UTC",
+  "generated_at": "2026-07-24T01:24:45Z",
+  "generated_display": "24 Jul 2026 · 01:24 UTC",
   "metrics": {
     "kev_total": 1653,
-    "kev_added_30d": 30,
+    "kev_added_30d": 26,
     "due_next_7d": 7,
     "ioc_total": 143,
     "ioc_total_display": "143",
@@ -161,12 +161,52 @@
   ],
   "advisories": [
     {
-      "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-      "url": "https://www.cisa.gov/news-events/alerts/2026/07/22/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-      "date": "2026-07-22",
-      "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-16232 Check Point SmartConsole…",
+      "authority": "Saudi NCA / CERT",
+      "title": "Chrome Alert",
+      "url": "https://nca.gov.sa/en/cert/7793/",
+      "date": "2026-07-24",
+      "severity": "High",
+      "summary": "Security alert 2026-7670. Review the official notice for affected products and remediation guidance."
+    },
+    {
+      "title": "Weintek cMT3092X",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-204-03",
+      "date": "2026-07-23",
+      "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow a non-privileged user to escalate privileges or view the credentials of other users. The following…",
       "authority": "CISA",
       "severity": ""
+    },
+    {
+      "title": "Rockwell Automation ThinManager",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-204-05",
+      "date": "2026-07-23",
+      "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an authenticated attacker to write arbitrary files to restricted system directories outside of the…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "title": "Russian State-Supported Cyber Actors Conduct Phishing Campaign Targeting Users of Zimbra Collaboration Suite",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-204a",
+      "date": "2026-07-23",
+      "summary": "Russian State-Supported Cyber Actors Conduct Phishing Campaign Targeting Users of Zimbra Collaboration Suite Executive summary A group of Russian state-supported cyber actors has…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "title": "Johnson Controls XAAP Android",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-204-02",
+      "date": "2026-07-23",
+      "summary": "View CSAF Summary Successful exploitation of this vulnerability could result in an attacker obtaining confidential information from the device. The following versions of Johnson…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "authority": "Saudi NCA / CERT",
+      "title": "F5 Alert",
+      "url": "https://nca.gov.sa/en/cert/7792/",
+      "date": "2026-07-23",
+      "severity": "High",
+      "summary": "Security alert 2026-7669. Review the official notice for affected products and remediation guidance."
     },
     {
       "authority": "Saudi NCA / CERT",
@@ -175,46 +215,6 @@
       "date": "2026-07-22",
       "severity": "Critical",
       "summary": "Security alert 2026-7668. Review the official notice for affected products and remediation guidance."
-    },
-    {
-      "authority": "Saudi NCA / CERT",
-      "title": "Drupal Alert",
-      "url": "https://nca.gov.sa/en/cert/7790/",
-      "date": "2026-07-22",
-      "severity": "Critical",
-      "summary": "Security alert 2026-7667. Review the official notice for affected products and remediation guidance."
-    },
-    {
-      "authority": "Saudi NCA / CERT",
-      "title": "Hikvision Alert",
-      "url": "https://nca.gov.sa/en/cert/7789/",
-      "date": "2026-07-22",
-      "severity": "High",
-      "summary": "Security alert 2026-7666. Review the official notice for affected products and remediation guidance."
-    },
-    {
-      "title": "Tycon Systems TPDIN-Monitor-WEB2",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-202-01",
-      "date": "2026-07-21",
-      "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could result in an attacker accessing sensitive credentials, disrupting connected infrastructure, or…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
-      "title": "Siemens SIDIS Secured SmartPlug",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-202-04",
-      "date": "2026-07-21",
-      "summary": "View CSAF Summary SIDIS Secured SmartPlug before V7.26.0310 is affected by multiple vulnerabilities in the components OpenSSL, OpenSSH, and several other packages as described…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
-      "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
-      "url": "https://www.cisa.gov/news-events/alerts/2026/07/21/cisa-adds-four-known-exploited-vulnerabilities-catalog",
-      "date": "2026-07-21",
-      "summary": "CISA has added four new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2021-27137 DD-WRT Stack-Based Buffer…",
-      "authority": "CISA",
-      "severity": ""
     },
     {
       "title": "How to secure your online meetings",
@@ -324,7 +324,7 @@
       "path": "/assets/data/daily-urls.txt"
     }
   ],
-  "ioc_sha256": "3608fd560c57c7d44b2b618f691d4ac625b4ac23121838f1424e332d4f0f9804",
+  "ioc_sha256": "66e56fbea5ab8d3c3d2e33f9b1c3508c438096823e63390f4cfd1d894702d990",
   "sources": {
     "kev": {
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
