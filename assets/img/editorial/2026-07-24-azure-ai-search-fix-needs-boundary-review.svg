@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Azure AI Search trust boundary review</title>
+  <desc id="desc">Abstract editorial artwork showing a luminous search index core, identity facets and outbound paths contained by a strong network boundary.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071522"/>
+      <stop offset="0.52" stop-color="#102a3b"/>
+      <stop offset="1" stop-color="#08111d"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="50%" cy="48%" r="52%">
+      <stop offset="0" stop-color="#62efd0" stop-opacity=".34"/>
+      <stop offset=".55" stop-color="#258ea2" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#071522" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#baffef"/>
+      <stop offset=".45" stop-color="#51ddc5"/>
+      <stop offset="1" stop-color="#177f96"/>
+    </linearGradient>
+    <linearGradient id="boundary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d5fff5"/>
+      <stop offset=".5" stop-color="#62e8ce"/>
+      <stop offset="1" stop-color="#1a7893"/>
+    </linearGradient>
+    <linearGradient id="warm" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f7d37b"/>
+      <stop offset="1" stop-color="#ff8f6a"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="42"/>
+    </filter>
+    <pattern id="grain" width="72" height="72" patternUnits="userSpaceOnUse">
+      <circle cx="11" cy="16" r="1" fill="#d9fff8" opacity=".1"/>
+      <circle cx="54" cy="35" r=".8" fill="#d9fff8" opacity=".08"/>
+      <circle cx="31" cy="63" r="1.2" fill="#d9fff8" opacity=".07"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#grain)"/>
+  <ellipse cx="785" cy="450" rx="610" ry="410" fill="url(#aura)"/>
+  <ellipse cx="790" cy="760" rx="560" ry="76" fill="#020810" opacity=".58" filter="url(#soft)"/>
+
+  <g opacity=".78" fill="none" stroke="#294d62" stroke-width="3">
+    <path d="M154 184 C324 100 472 108 605 222"/>
+    <path d="M138 716 C316 800 473 785 614 675"/>
+    <path d="M1446 184 C1276 100 1128 108 995 222"/>
+    <path d="M1462 716 C1284 800 1127 785 986 675"/>
+  </g>
+
+  <g transform="translate(800 450)">
+    <g fill="#102d40" stroke="#426b7d" stroke-width="3">
+      <path d="M-420 -240 L-250 -338 L-74 -252 L-89 -62 L-278 -22 L-433 -93 Z"/>
+      <path d="M420 -240 L250 -338 L74 -252 L89 -62 L278 -22 L433 -93 Z"/>
+      <path d="M-420 240 L-250 338 L-74 252 L-89 62 L-278 22 L-433 93 Z"/>
+      <path d="M420 240 L250 338 L74 252 L89 62 L278 22 L433 93 Z"/>
+    </g>
+    <g fill="#6ee8d0" opacity=".62">
+      <circle cx="-306" cy="-192" r="12"/>
+      <circle cx="306" cy="-192" r="12"/>
+      <circle cx="-306" cy="192" r="12"/>
+      <circle cx="306" cy="192" r="12"/>
+    </g>
+    <g stroke="#5ac9bd" stroke-width="7" stroke-linecap="round" opacity=".5">
+      <path d="M-272 -192 H-154"/>
+      <path d="M272 -192 H154"/>
+      <path d="M-272 192 H-154"/>
+      <path d="M272 192 H154"/>
+    </g>
+
+    <circle r="220" fill="#09202f" stroke="#376477" stroke-width="5"/>
+    <circle r="176" fill="none" stroke="#2f9b9b" stroke-width="3" stroke-dasharray="8 18" opacity=".68"/>
+    <circle r="126" fill="url(#core)" filter="url(#glow)"/>
+
+    <g fill="none" stroke="#e4fff8" stroke-width="11" stroke-linecap="round" opacity=".86">
+      <ellipse rx="62" ry="34" transform="translate(0 -48)"/>
+      <ellipse rx="82" ry="40" transform="translate(0 0)"/>
+      <ellipse rx="62" ry="34" transform="translate(0 48)"/>
+      <path d="M-84 0 H84"/>
+    </g>
+    <g fill="#e4fff8">
+      <circle cx="-86" cy="-48" r="7"/><circle cx="86" cy="-48" r="7"/>
+      <circle cx="-106" cy="0" r="7"/><circle cx="106" cy="0" r="7"/>
+      <circle cx="-86" cy="48" r="7"/><circle cx="86" cy="48" r="7"/>
+    </g>
+  </g>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M1022 450 C1114 450 1110 322 1210 322 C1268 322 1296 345 1342 345" stroke="#06121e" stroke-width="30"/>
+    <path d="M1022 450 C1114 450 1110 322 1210 322 C1268 322 1296 345 1342 345" stroke="url(#warm)" stroke-width="9" filter="url(#glow)"/>
+    <path d="M1011 523 C1110 548 1128 665 1231 665 C1275 665 1302 645 1342 645" stroke="#06121e" stroke-width="30"/>
+    <path d="M1011 523 C1110 548 1128 665 1231 665 C1275 665 1302 645 1342 645" stroke="#53d9c5" stroke-width="9" opacity=".9"/>
+  </g>
+
+  <g>
+    <rect x="1318" y="108" width="34" height="684" rx="17" fill="url(#boundary)" filter="url(#glow)"/>
+    <rect x="1328" y="108" width="14" height="684" rx="7" fill="#defff7"/>
+    <path d="M1312 287 L1281 315 L1312 343" fill="none" stroke="#ffad72" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M1312 617 L1281 645 L1312 673" fill="none" stroke="#79ead4" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g opacity=".65">
+    <circle cx="1419" cy="257" r="46" fill="#102b3d" stroke="#426477" stroke-width="3"/>
+    <circle cx="1475" cy="450" r="62" fill="#102b3d" stroke="#426477" stroke-width="3"/>
+    <circle cx="1419" cy="676" r="46" fill="#102b3d" stroke="#426477" stroke-width="3"/>
+    <g fill="#4d7487">
+      <circle cx="1419" cy="257" r="10"/>
+      <circle cx="1475" cy="450" r="13"/>
+      <circle cx="1419" cy="676" r="10"/>
+    </g>
+  </g>
+
+  <g fill="#7cebd6" opacity=".72">
+    <circle cx="284" cy="265" r="6"/><circle cx="230" cy="450" r="5"/>
+    <circle cx="304" cy="646" r="7"/><circle cx="415" cy="154" r="4"/>
+  </g>
+</svg>
