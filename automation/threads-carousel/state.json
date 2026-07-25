@@ -1,4 +1,27 @@
 {
   "version": 1,
-  "posts": {}
+  "posts": {
+    "https://shadowcontext.com/fastjson-rce-makes-safemode-immediate/": {
+      "article_publication_timestamp": "2026-07-26T00:11:26.000+04:00",
+      "source_hash": "5daea61028612a7f522b7d714a2f59408288749cc448959193a0c18f63450ca0",
+      "carousel_hash": "070e1e6e077052a0d69f494df2e183665704b8f6598488688eb2b62a431dafb6",
+      "image_urls": [
+        "https://shadowcontext.com/assets/social/threads/fastjson-rce-makes-safemode-immediate/070e1e6e077052a0/slide-01.png",
+        "https://shadowcontext.com/assets/social/threads/fastjson-rce-makes-safemode-immediate/070e1e6e077052a0/slide-02.png",
+        "https://shadowcontext.com/assets/social/threads/fastjson-rce-makes-safemode-immediate/070e1e6e077052a0/slide-03.png",
+        "https://shadowcontext.com/assets/social/threads/fastjson-rce-makes-safemode-immediate/070e1e6e077052a0/slide-04.png"
+      ],
+      "child_container_ids": [
+        "17907709374445078",
+        "17907709398445078",
+        "17907709422445078",
+        "17907709443445078"
+      ],
+      "carousel_container_id": "17907709458445078",
+      "threads_post_id": "18103942214073760",
+      "published_at": "2026-07-26T00:45:49.412+04:00",
+      "status": "published",
+      "last_error": null
+    }
+  }
 }
