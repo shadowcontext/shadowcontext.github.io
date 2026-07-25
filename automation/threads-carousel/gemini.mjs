@@ -55,6 +55,12 @@ function withTimeout(promise, timeoutMs) {
   ]);
 }
 
+function isNonRetryableGeminiError(error) {
+  return /RESOURCE_EXHAUSTED|GenerateRequestsPerDay|(?:code|status)["':\s]+(?:400|401|403|429)\b/i.test(
+    String(error?.message ?? error),
+  );
+}
+
 export function createGeminiSummarizer({
   apiKey = requireApiKey(),
   model = process.env.GEMINI_MODEL || DEFAULT_GEMINI_MODEL,
@@ -70,7 +76,6 @@ export function createGeminiSummarizer({
         model,
         contents: prompt,
         config: {
-          temperature: 0.15,
           maxOutputTokens: 1_200,
           responseMimeType: "application/json",
           responseJsonSchema: carouselResponseSchema,
@@ -92,6 +97,11 @@ export function createGeminiSummarizer({
         return validateCarouselContent(parsed, post.fullText);
       } catch (error) {
         lastError = error;
+        if (isNonRetryableGeminiError(error)) {
+          throw new Error(
+            `Gemini request cannot be retried safely: ${error.message}`,
+          );
+        }
         feedback = String(error.message).slice(0, 500);
       }
     }

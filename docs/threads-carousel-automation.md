@@ -79,7 +79,7 @@ geometry keep rendering reliable when no illustration exists.
 
 ## Gemini configuration
 
-The official `@google/genai` SDK uses `gemini-2.5-flash-lite` by default. Set
+The official `@google/genai` SDK uses `gemini-3.5-flash-lite` by default. Set
 the repository variable `GEMINI_MODEL` to change the model without changing
 code. The prompt requires factual defensive language and structured JSON.
 [Google's structured-output documentation](https://ai.google.dev/gemini-api/docs/structured-output)
@@ -129,7 +129,7 @@ Variables**:
 | ---------------------------- | ----------------------- | ------------------------------------------- |
 | `THREADS_PUBLISHING_ENABLED` | unset / disabled        | Must be exactly `true` for any live run     |
 | `THREADS_MAX_POSTS_PER_RUN`  | `10`                    | Conservative oldest-first processing limit  |
-| `GEMINI_MODEL`               | `gemini-2.5-flash-lite` | Supported Gemini text model                 |
+| `GEMINI_MODEL`               | `gemini-3.5-flash-lite` | Supported Gemini text model                 |
 | `THREADS_GRAPH_API_VERSION`  | `v1.0`                  | Threads Graph API version used in one place |
 
 To disable publishing immediately, set `THREADS_PUBLISHING_ENABLED` to

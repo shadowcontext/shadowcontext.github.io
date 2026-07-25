@@ -63,6 +63,32 @@ test("invalid Gemini JSON is retried only within the configured limit", async ()
   assert.equal(calls, 2);
 });
 
+test("daily Gemini quota failures are not retried", async () => {
+  let calls = 0;
+  const summarize = createGeminiSummarizer({
+    apiKey: "test-only",
+    attempts: 3,
+    generate: async () => {
+      calls += 1;
+      throw new Error(
+        '{"error":{"code":429,"status":"RESOURCE_EXHAUSTED","message":"GenerateRequestsPerDay quota exceeded"}}',
+      );
+    },
+  });
+  await assert.rejects(
+    summarize({
+      title: "Fixture",
+      category: "defense",
+      publishedAtIso: "2026-07-25T00:00:00+04:00",
+      excerpt: "Fixture excerpt",
+      keyPoints: [],
+      fullText: "Fixture source article",
+    }),
+    /cannot be retried safely/,
+  );
+  assert.equal(calls, 1);
+});
+
 test("caption contains exactly one canonical URL and stays within Threads limit", () => {
   const url = "https://shadowcontext.com/example/";
   const caption = buildThreadsCaption(
