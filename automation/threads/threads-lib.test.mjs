@@ -9,6 +9,7 @@ import {
   postEligibility,
   postSummary,
   THREADS_CHARACTER_LIMIT,
+  THREADS_HASHTAGS,
 } from './threads-lib.mjs';
 
 test('parses quoted, boolean, and folded front matter values', () => {
@@ -61,7 +62,22 @@ test('truncates copy to the Threads limit while preserving the complete URL', ()
   const text = buildThreadsText({ title: 'Security analysis', description: 'x'.repeat(800), url });
   assert.equal(characterCount(text), THREADS_CHARACTER_LIMIT);
   assert.ok(text.endsWith(`\n\n${url}`));
+  assert.ok(text.includes(`\n\n${THREADS_HASHTAGS}\n\n`));
   assert.ok(text.includes('…'));
+});
+
+test('includes every required hashtag exactly once before the canonical URL', () => {
+  const url = 'https://shadowcontext.com/security-analysis/';
+  const text = buildThreadsText({
+    title: 'Security analysis',
+    description: 'A concise update.',
+    url,
+  });
+
+  assert.ok(text.endsWith(`${THREADS_HASHTAGS}\n\n${url}`));
+  for (const hashtag of THREADS_HASHTAGS.split(' ')) {
+    assert.equal(text.split(hashtag).length - 1, 1);
+  }
 });
 
 test('counts Unicode code points instead of UTF-16 units', () => {

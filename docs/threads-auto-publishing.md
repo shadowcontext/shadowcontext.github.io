@@ -2,7 +2,7 @@
 
 ShadowContext can publish newly added Jekyll posts to Threads through Meta's
 official Threads API. The integration is Threads-only and does not use Grok or
-another AI provider.
+another AI provider. It runs independently from the Threads carousel workflows.
 
 ## Repository publishing model
 
@@ -96,7 +96,8 @@ them oldest-first. For each item it:
    and unpublished or future content from the built feed, and `feed.xml`
    explicitly excludes `social_publish: false` posts.
 3. Truncates text to Threads' 500-character limit while retaining the complete
-   RSS article URL.
+   RSS article URL and the required `#cybersecurity`, `#cybernews`,
+   `#vulnerability`, and `#ai` hashtags.
 4. Publishes it through the official Threads API using the text container's
    `auto_publish_text` option.
 5. Records the GUID only after successful publication or an intentional safety

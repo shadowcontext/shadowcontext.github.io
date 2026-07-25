@@ -1,0 +1,132 @@
+name: Publish New Posts to Threads
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Preview the live RSS feed or format custom test text
+        required: true
+        type: choice
+        options:
+          - rss_preview
+          - custom
+        default: rss_preview
+      dry_run:
+        description: Print custom test text without publishing
+        required: true
+        type: boolean
+        default: true
+      preview_count:
+        description: Number of recent RSS posts to preview
+        required: true
+        type: choice
+        options:
+          - "3"
+          - "1"
+          - "5"
+        default: "3"
+      title:
+        description: Custom test title
+        required: false
+        type: string
+      description:
+        description: Custom test description
+        required: false
+        type: string
+      url:
+        description: Custom test canonical URL
+        required: false
+        type: string
+  push:
+    branches:
+      - main
+    paths:
+      - "_posts/**"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: threads-text-publishing
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Publish manual custom test
+        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'custom'
+        env:
+          DRY_RUN: ${{ inputs.dry_run }}
+          TEST_TITLE: ${{ inputs.title }}
+          TEST_DESCRIPTION: ${{ inputs.description }}
+          TEST_URL: ${{ inputs.url }}
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+        run: |
+          arguments=(--title "$TEST_TITLE" --description "$TEST_DESCRIPTION" --url "$TEST_URL")
+          if [[ "$DRY_RUN" == "true" ]]; then
+            arguments+=(--dry-run)
+          fi
+          node automation/threads/publish-to-threads.mjs "${arguments[@]}"
+
+      - name: Preview recent RSS posts
+        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'rss_preview'
+        env:
+          PREVIEW_COUNT: ${{ inputs.preview_count }}
+        run: |
+          node automation/threads/publish-rss-feed.mjs \
+            --dry-run \
+            --preview-latest "$PREVIEW_COUNT" \
+            --feed-url https://shadowcontext.com/feed.xml
+
+      - name: Restore RSS publishing state
+        if: github.event_name != 'workflow_dispatch'
+        uses: actions/cache/restore@v4
+        with:
+          path: automation/threads/rss-state.json
+          key: threads-rss-state-${{ runner.os }}-${{ github.run_id }}
+          restore-keys: |
+            threads-rss-state-${{ runner.os }}-
+
+      - name: Publish new RSS posts
+        if: github.event_name != 'workflow_dispatch'
+        id: publish_feed
+        env:
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+        run: |
+          wait_seconds=0
+          if [[ "${{ github.event_name }}" == "push" ]]; then
+            wait_seconds=300
+          fi
+          before_hash=$(sha256sum automation/threads/rss-state.json | cut -d ' ' -f 1)
+          set +e
+          node automation/threads/publish-rss-feed.mjs \
+            --feed-url https://shadowcontext.com/feed.xml \
+            --state-file automation/threads/rss-state.json \
+            --wait-seconds "$wait_seconds"
+          publish_status=$?
+          set -e
+          after_hash=$(sha256sum automation/threads/rss-state.json | cut -d ' ' -f 1)
+          if [[ "$before_hash" != "$after_hash" ]]; then
+            echo "state_changed=true" >> "$GITHUB_OUTPUT"
+          fi
+          exit "$publish_status"
+
+      - name: Save RSS publishing state
+        if: always() && steps.publish_feed.outputs.state_changed == 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: automation/threads/rss-state.json
+          key: threads-rss-state-${{ runner.os }}-${{ github.run_id }}

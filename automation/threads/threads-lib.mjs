@@ -1,6 +1,7 @@
 import path from 'node:path';
 
 export const THREADS_CHARACTER_LIMIT = 500;
+export const THREADS_HASHTAGS = '#cybersecurity #cybernews #vulnerability #ai';
 
 function stripInlineComment(value) {
   let quote = null;
@@ -218,10 +219,13 @@ export function buildThreadsText({ title, description = '', url, limit = THREADS
 
   const separator = '\n\n';
   const fullPrefix = cleanDescription ? `${cleanTitle}${separator}${cleanDescription}` : cleanTitle;
-  const available = limit - characters(url).length - characters(separator).length;
-  if (available < 2) throw new Error('The canonical URL is too long for a Threads post');
+  const suffix = `${THREADS_HASHTAGS}${separator}${url}`;
+  const available = limit - characters(suffix).length - characters(separator).length;
+  if (available < 2) {
+    throw new Error('The canonical URL and required hashtags are too long for a Threads post');
+  }
   const prefix = truncate(fullPrefix, available);
-  return `${prefix}${separator}${url}`;
+  return `${prefix}${separator}${suffix}`;
 }
 
 export function characterCount(value) {
