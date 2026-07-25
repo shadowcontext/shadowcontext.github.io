@@ -23,7 +23,12 @@
   },
   "scripts": {
     "test:threads": "node --test automation/threads/*.test.mjs",
-    "lint:threads": "node --check automation/threads/threads-api.mjs && node --check automation/threads/threads-lib.mjs && node --check automation/threads/rss-feed.mjs && node --check automation/threads/publish-to-threads.mjs && node --check automation/threads/publish-rss-feed.mjs"
+    "lint:threads": "node --check automation/threads/threads-api.mjs && node --check automation/threads/threads-lib.mjs && node --check automation/threads/rss-feed.mjs && node --check automation/threads/publish-to-threads.mjs && node --check automation/threads/publish-rss-feed.mjs",
+    "test:threads-carousel": "node --test automation/threads-carousel/*.test.mjs",
+    "lint:threads-carousel": "node --check automation/threads-carousel/*.mjs",
+    "format:threads-carousel": "prettier --ignore-unknown --write automation/threads-carousel .github/workflows/publish-threads-carousels.yml docs/threads-carousel-automation.md .env.threads-carousel.example package.json",
+    "format:threads-carousel:check": "prettier --ignore-unknown --check automation/threads-carousel .github/workflows/publish-threads-carousels.yml docs/threads-carousel-automation.md .env.threads-carousel.example package.json",
+    "dry-run:threads-carousel": "node automation/threads-carousel/cli.mjs prepare --dry-run true --mock-gemini"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
@@ -41,9 +46,16 @@
     "json-sass": "^1.3.5",
     "lodash": "^4.17.21",
     "lodash.merge": "^4.6.2",
+    "prettier": "^3.9.6",
     "vinyl-source-stream": "^2.0.0"
   },
   "engines": {
-    "node": "^18"
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@google/genai": "^1.52.0",
+    "gray-matter": "^4.0.3",
+    "luxon": "^3.7.2",
+    "sharp": "^0.34.5"
   }
 }

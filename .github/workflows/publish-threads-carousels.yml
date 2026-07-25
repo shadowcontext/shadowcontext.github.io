@@ -1,0 +1,227 @@
+name: Publish Threads Carousels
+
+on:
+  schedule:
+    - cron: "5 0 * * *"
+      timezone: "Asia/Dubai"
+    - cron: "5 12 * * *"
+      timezone: "Asia/Dubai"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Generate artifacts without calling Threads
+        required: true
+        type: boolean
+        default: true
+      window:
+        description: Dubai publication window
+        required: true
+        type: choice
+        options:
+          - auto
+          - 00-12
+          - 12-00
+        default: auto
+      post_url:
+        description: Optional canonical URL, slug, filename, or repository post path
+        required: false
+        type: string
+      force:
+        description: Regenerate an already-published post in dry-run mode only
+        required: true
+        type: boolean
+        default: false
+
+concurrency:
+  group: shadowcontext-threads-carousel-publishing
+  cancel-in-progress: false
+
+jobs:
+  dry-run:
+    if: github.event_name == 'workflow_dispatch' && inputs.dry_run
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Check formatting
+        run: npm run format:threads-carousel:check
+
+      - name: Lint automation
+        run: npm run lint:threads-carousel
+
+      - name: Run unit tests
+        run: npm run test:threads-carousel
+
+      - name: Generate dry-run carousels
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          SELECTED_WINDOW: ${{ inputs.window }}
+          SELECTED_POST: ${{ inputs.post_url }}
+          FORCE_REGENERATION: ${{ inputs.force }}
+          MAX_POSTS: ${{ vars.THREADS_MAX_POSTS_PER_RUN }}
+        run: |
+          arguments=(
+            prepare
+            --dry-run true
+            --window "$SELECTED_WINDOW"
+            --force "$FORCE_REGENERATION"
+            --max-posts "${MAX_POSTS:-10}"
+          )
+          if [[ -n "$SELECTED_POST" ]]; then
+            arguments+=(--post "$SELECTED_POST")
+          fi
+          node automation/threads-carousel/cli.mjs "${arguments[@]}"
+
+      - name: Upload dry-run output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: threads-carousel-dry-run-${{ github.run_id }}
+          path: .artifacts/threads-carousel/
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Report partial failures
+        if: always() && hashFiles('.artifacts/threads-carousel/manifest.json') != ''
+        run: node automation/threads-carousel/cli.mjs assert-result
+
+  publish:
+    if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && !inputs.dry_run)
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+    steps:
+      - name: Check out default branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Validate live-publishing controls
+        env:
+          PUBLISHING_ENABLED: ${{ vars.THREADS_PUBLISHING_ENABLED }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+        run: |
+          if [[ "$PUBLISHING_ENABLED" != "true" ]]; then
+            echo "::error::Live Threads publishing is disabled. Set THREADS_PUBLISHING_ENABLED=true."
+            exit 1
+          fi
+          for name in GEMINI_API_KEY THREADS_ACCESS_TOKEN THREADS_USER_ID; do
+            if [[ -z "${!name}" ]]; then
+              echo "::error::Required GitHub Actions secret $name is unavailable."
+              exit 1
+            fi
+          done
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Check formatting
+        run: npm run format:threads-carousel:check
+
+      - name: Lint automation
+        run: npm run lint:threads-carousel
+
+      - name: Run unit tests
+        run: npm run test:threads-carousel
+
+      - name: Generate production carousels
+        id: prepare
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          SELECTED_WINDOW: ${{ github.event_name == 'workflow_dispatch' && inputs.window || 'auto' }}
+          SELECTED_POST: ${{ github.event_name == 'workflow_dispatch' && inputs.post_url || '' }}
+          MAX_POSTS: ${{ vars.THREADS_MAX_POSTS_PER_RUN }}
+        run: |
+          arguments=(
+            prepare
+            --dry-run false
+            --window "$SELECTED_WINDOW"
+            --max-posts "${MAX_POSTS:-10}"
+          )
+          if [[ -n "$SELECTED_POST" ]]; then
+            arguments+=(--post "$SELECTED_POST")
+          fi
+          node automation/threads-carousel/cli.mjs "${arguments[@]}"
+
+      - name: Commit generated public media
+        if: steps.prepare.outputs.has_posts == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- assets/social/threads/
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "chore: publish Threads carousel media [skip threads]"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Wait for public media and verify HTTPS URLs
+        if: steps.prepare.outputs.has_posts == 'true'
+        run: node automation/threads-carousel/cli.mjs verify-media
+
+      - name: Publish carousels to Threads
+        id: publish_carousels
+        if: steps.prepare.outputs.has_posts == 'true'
+        continue-on-error: true
+        env:
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          THREADS_GRAPH_API_VERSION: ${{ vars.THREADS_GRAPH_API_VERSION }}
+          THREADS_PUBLISHING_ENABLED: ${{ vars.THREADS_PUBLISHING_ENABLED }}
+        run: node automation/threads-carousel/cli.mjs publish
+
+      - name: Commit publication state
+        if: always() && steps.prepare.outputs.has_posts == 'true'
+        run: |
+          git add -- automation/threads-carousel/state.json
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "chore: record Threads carousel publication [skip threads]"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Upload sanitized run manifest
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: threads-carousel-run-${{ github.run_id }}
+          path: .artifacts/threads-carousel/
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Enforce publisher process result
+        if: always() && steps.publish_carousels.outcome == 'failure'
+        run: |
+          echo "::error::The Threads publisher process failed. Inspect the sanitized run manifest."
+          exit 1
+
+      - name: Report failures
+        if: always() && hashFiles('.artifacts/threads-carousel/manifest.json') != ''
+        run: node automation/threads-carousel/cli.mjs assert-result
