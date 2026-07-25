@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-25T18:11:40Z",
+  "generated_display": "25 Jul 2026 · 18:11 UTC",
+  "ioc_total": 170,
+  "ioc_total_display": "170",
+  "ioc_total_exact": "170",
+  "ioc_sha256": "1a11f117fc07798e2c761b2266ba89b1fbd10957e9d287d1cb42871ff204fb70",
+  "feeds": {
+    "file_hashes": {
+      "count": 49,
+      "count_display": "49",
+      "count_exact": "49",
+      "path": "/assets/data/daily-file-hashes.txt"
+    },
+    "ip_addresses": {
+      "count": 101,
+      "count_display": "101",
+      "count_exact": "101",
+      "path": "/assets/data/daily-ip-addresses.txt"
+    },
+    "domains": {
+      "count": 19,
+      "count_display": "19",
+      "count_exact": "19",
+      "path": "/assets/data/daily-domains.txt"
+    },
+    "urls": {
+      "count": 1,
+      "count_display": "1",
+      "count_exact": "1",
+      "path": "/assets/data/daily-urls.txt"
+    }
+  }
+}

@@ -20,6 +20,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "_data" / "threat_dashboard.json"
 IOC_PATH = ROOT / "assets" / "data" / "daily-iocs.csv"
+MANIFEST_PATH = ROOT / "assets" / "data" / "threat-intel-manifest.json"
 IOC_FEED_PATHS = {
     "file_hashes": ROOT / "assets" / "data" / "daily-file-hashes.txt",
     "ip_addresses": ROOT / "assets" / "data" / "daily-ip-addresses.txt",
@@ -499,6 +500,25 @@ def main() -> int:
     }
     DATA_PATH.parent.mkdir(parents=True, exist_ok=True)
     DATA_PATH.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    manifest = {
+        "schema_version": 1,
+        "generated_at": data["generated_at"],
+        "generated_display": data["generated_display"],
+        "ioc_total": data["metrics"]["ioc_total"],
+        "ioc_total_display": data["metrics"]["ioc_total_display"],
+        "ioc_total_exact": data["metrics"]["ioc_total_exact"],
+        "ioc_sha256": data["ioc_sha256"],
+        "feeds": {
+            feed["key"]: {
+                "count": feed["count"],
+                "count_display": feed["count_display"],
+                "count_exact": feed["count_exact"],
+                "path": feed["path"],
+            }
+            for feed in data["ioc_feeds"]
+        },
+    }
+    MANIFEST_PATH.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"wrote dashboard data, consolidated CSV, and {len(ioc_feeds)} IOC feeds ({ioc_total} indicators)")
     return 0
 

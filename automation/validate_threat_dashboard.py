@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import csv
 import hashlib
+import html as html_lib
 import ipaddress
 import json
 import re
@@ -18,6 +19,7 @@ from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
 DATA_RELATIVE = Path("_data/threat_dashboard.json")
 CSV_RELATIVE = Path("assets/data/daily-iocs.csv")
+MANIFEST_RELATIVE = Path("assets/data/threat-intel-manifest.json")
 FEED_RELATIVES = {
     "file_hashes": Path("assets/data/daily-file-hashes.txt"),
     "ip_addresses": Path("assets/data/daily-ip-addresses.txt"),
@@ -59,6 +61,7 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--root", type=Path, default=ROOT)
     parser.add_argument("--baseline-root", type=Path)
+    parser.add_argument("--site", type=Path)
     parser.add_argument("--max-age-hours", type=int, default=30)
     args = parser.parse_args()
     root = args.root.resolve()
@@ -150,6 +153,71 @@ def main() -> int:
                 baseline = {line.strip().lower() for line in baseline_path.read_text(encoding="utf-8").splitlines() if line.strip()}
                 if not baseline.issubset({value.lower() for value in values}):
                     fail(errors, f"{key} feed is not append-only; prior indicators were removed")
+
+    try:
+        manifest = json.loads((root / MANIFEST_RELATIVE).read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as error:
+        fail(errors, f"public threat-intel manifest is unreadable: {error}")
+        manifest = {}
+    expected_manifest = {
+        "schema_version": 1,
+        "generated_at": data.get("generated_at"),
+        "generated_display": data.get("generated_display"),
+        "ioc_total": metrics.get("ioc_total"),
+        "ioc_total_display": metrics.get("ioc_total_display"),
+        "ioc_total_exact": metrics.get("ioc_total_exact"),
+        "ioc_sha256": data.get("ioc_sha256"),
+        "feeds": {
+            key: {
+                "count": item.get("count"),
+                "count_display": item.get("count_display"),
+                "count_exact": item.get("count_exact"),
+                "path": item.get("path"),
+            }
+            for key, item in feed_metadata.items()
+        },
+    }
+    if manifest != expected_manifest:
+        fail(errors, "public threat-intel manifest does not match dashboard and IOC metadata")
+
+    if args.site:
+        site = args.site.resolve()
+        page_path = site / "category/threat-intelligence/index.html"
+        try:
+            page = page_path.read_text(encoding="utf-8")
+        except OSError as error:
+            fail(errors, f"rendered dashboard is unreadable: {error}")
+            page = ""
+        required_text = (
+            "Threat Intel",
+            "IOC threat feeds",
+            "Top exploited vulnerabilities",
+            "Top targeted platforms",
+            "Top threat actors",
+            "Top defensive advisories",
+            "Source health & methodology",
+            f'title="{metrics.get("ioc_total_exact")} indicators">{metrics.get("ioc_total_display")} indicators',
+            f"SHA-256 {data.get('ioc_sha256', '')[:16]}…",
+            f"Generated {data.get('generated_display')}",
+            vulnerabilities[0].get("cve", "") if vulnerabilities else "",
+            data.get("actors", [{}])[0].get("name", ""),
+        )
+        for text in required_text:
+            if text and html_lib.escape(text, quote=False) not in page and text not in page:
+                fail(errors, f"rendered dashboard is missing expected content: {text[:80]}")
+        for attribute in ("data-ioc-count", "data-ioc-sha", "data-ioc-download", "data-ioc-generated"):
+            if attribute not in page:
+                fail(errors, f"rendered dashboard is missing cache-reconciliation hook {attribute}")
+        built_csv = site / CSV_RELATIVE
+        built_manifest = site / MANIFEST_RELATIVE
+        if not built_csv.exists() or hashlib.sha256(built_csv.read_bytes()).hexdigest() != data.get("ioc_sha256"):
+            fail(errors, "rendered site's IOC CSV does not match dashboard checksum")
+        try:
+            built_manifest_data = json.loads(built_manifest.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            built_manifest_data = None
+        if built_manifest_data != manifest:
+            fail(errors, "rendered site's threat-intel manifest does not match source manifest")
 
     if errors:
         print("\n".join(f"dashboard validation: {error}" for error in errors), file=sys.stderr)

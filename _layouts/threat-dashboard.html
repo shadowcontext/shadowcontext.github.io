@@ -23,11 +23,11 @@ layout: default
 
 <main class="shell intel-dashboard">
   <section class="ioc-panel ioc-panel-top">
-    <div class="ioc-copy"><p class="eyebrow">01 / Detection engineering</p><h2>IOC threat feeds</h2><p>Append-only, de-duplicated endpoints updated daily from government-published TLP:CLEAR indicators. Validate, enrich, and expire indicators according to your environment.</p></div>
-    <div class="ioc-download"><span>Today’s snapshot / CSV</span><strong class="compact-count" title="{{ intel.metrics.ioc_total_exact }} indicators">{{ intel.metrics.ioc_total_display }} indicators</strong><small>SHA-256 {{ intel.ioc_sha256 | slice: 0, 16 }}…</small><a href="{{ '/assets/data/daily-iocs.csv' | relative_url }}" download>Download daily IOC set <b>↓</b></a><time datetime="{{ intel.generated_at }}">Generated {{ intel.generated_display }}</time></div>
+    <div class="ioc-copy"><p class="eyebrow">01 / Detection engineering</p><h2>IOC threat feeds</h2><p>Append-only, de-duplicated endpoints checked daily for government-published TLP:CLEAR indicators. Validate, enrich, and expire indicators according to your environment.</p></div>
+    <div class="ioc-download"><span>Today’s snapshot / CSV</span><strong class="compact-count" data-ioc-count aria-live="polite" title="{{ intel.metrics.ioc_total_exact }} indicators">{{ intel.metrics.ioc_total_display }} indicators</strong><small data-ioc-sha>SHA-256 {{ intel.ioc_sha256 | slice: 0, 16 }}…</small><a data-ioc-download href="{{ '/assets/data/daily-iocs.csv' | relative_url }}?v={{ intel.ioc_sha256 | slice: 0, 12 }}" download>Download daily IOC set <b>↓</b></a><time data-ioc-generated datetime="{{ intel.generated_at }}">Generated {{ intel.generated_display }}</time></div>
     <div class="ioc-feed-list" aria-label="Append-only IOC threat feed URLs">{% for feed in intel.ioc_feeds %}<article class="ioc-feed-card">
       <div class="ioc-feed-card-head"><span>Feed / 0{{ forloop.index }}</span><b>TXT</b></div>
-      <a class="ioc-feed-name" href="{{ feed.path | relative_url }}" target="_blank" rel="noopener"><strong>{{ feed.label }}</strong><small>Append-only · updated daily</small></a>
+      <a class="ioc-feed-name" href="{{ feed.path | relative_url }}" target="_blank" rel="noopener"><strong>{{ feed.label }}</strong><small>Append-only · checked daily</small></a>
       <code>{{ feed.path }}</code>
       <button type="button" class="copy-feed-url" data-copy-url="{{ feed.path | absolute_url }}" aria-label="Copy {{ feed.label }} URL"><span>Copy feed URL</span><b aria-hidden="true">⧉</b></button>
     </article>{% endfor %}<p class="feed-copy-status" role="status" aria-live="polite"></p></div>
@@ -85,6 +85,26 @@ layout: default
 <script>
   (() => {
     const status = document.querySelector('.feed-copy-status');
+    const refreshSnapshot = async () => {
+      try {
+        const response = await fetch(`{{ '/assets/data/threat-intel-manifest.json' | relative_url }}?v=${Date.now()}`, { cache: 'no-store' });
+        if (!response.ok) return;
+        const manifest = await response.json();
+        if (!Number.isSafeInteger(manifest.ioc_total) || manifest.ioc_total < 0 || !/^[a-f0-9]{64}$/.test(manifest.ioc_sha256)) return;
+        const count = document.querySelector('[data-ioc-count]');
+        const checksum = document.querySelector('[data-ioc-sha]');
+        const generated = document.querySelector('[data-ioc-generated]');
+        const download = document.querySelector('[data-ioc-download]');
+        count.textContent = `${manifest.ioc_total_display} indicators`;
+        count.title = `${manifest.ioc_total_exact} indicators`;
+        checksum.textContent = `SHA-256 ${manifest.ioc_sha256.slice(0, 16)}…`;
+        generated.dateTime = manifest.generated_at;
+        generated.textContent = `Generated ${manifest.generated_display}`;
+        download.href = `{{ '/assets/data/daily-iocs.csv' | relative_url }}?v=${manifest.ioc_sha256.slice(0, 12)}`;
+      } catch (_error) {
+        // Keep the server-rendered, build-validated snapshot when the manifest is unreachable.
+      }
+    };
     const copyText = async (value) => {
       if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(value);
       const field = document.createElement('textarea');
@@ -109,5 +129,6 @@ layout: default
         }
       });
     });
+    refreshSnapshot();
   })();
 </script>

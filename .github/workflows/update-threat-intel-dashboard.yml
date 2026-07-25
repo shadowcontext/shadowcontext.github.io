@@ -48,6 +48,7 @@ jobs:
           mkdir -p "$baseline/_data" "$baseline/assets/data"
           cp _data/threat_dashboard.json "$baseline/_data/threat_dashboard.json"
           cp assets/data/daily-iocs.csv "$baseline/assets/data/daily-iocs.csv"
+          cp assets/data/threat-intel-manifest.json "$baseline/assets/data/threat-intel-manifest.json"
           cp assets/data/daily-file-hashes.txt "$baseline/assets/data/daily-file-hashes.txt"
           cp assets/data/daily-ip-addresses.txt "$baseline/assets/data/daily-ip-addresses.txt"
           cp assets/data/daily-domains.txt "$baseline/assets/data/daily-domains.txt"
@@ -64,6 +65,7 @@ jobs:
       - name: Build and validate the rendered site
         run: |
           bundle exec jekyll build
+          python3 automation/validate_threat_dashboard.py --site _site
           ruby automation/validate_seo.rb . _site
 
       - name: Publish before-and-after report
@@ -80,6 +82,7 @@ jobs:
           git add -- \
             _data/threat_dashboard.json \
             assets/data/daily-iocs.csv \
+            assets/data/threat-intel-manifest.json \
             assets/data/daily-file-hashes.txt \
             assets/data/daily-ip-addresses.txt \
             assets/data/daily-domains.txt \
