@@ -1,14 +1,23 @@
 # Threads carousel automation
 
-ShadowContext generates and publishes branded Threads carousels entirely in
-GitHub Actions. No coding agent, always-on device, browser automation, or
-external database is required at runtime.
+ShadowContext generates and publishes branded Threads carousels through two
+independent GitHub Actions workflows. No coding agent, always-on device,
+browser automation, or external database is required at runtime.
 
 ## Architecture
 
-The workflow in
-`.github/workflows/publish-threads-carousels.yml` runs the small Node.js modules
-in `automation/threads-carousel/`:
+The workflow boundary is deliberately durable:
+
+1. `.github/workflows/generate-threads-carousels.yml` runs whenever a Markdown
+   file is newly added under `_posts/`. It uses Gemini for structured copy,
+   renders the carousel, and commits immutable PNGs plus a sanitized
+   `carousel-manifest.json` beside them.
+2. `.github/workflows/publish-threads-carousels.yml` runs at 12:00 and 00:00
+   Dubai time. It finds repository manifests that are ready but absent from
+   publication state, verifies their public image URLs, and publishes them.
+
+The workflows run the small Node.js modules in
+`automation/threads-carousel/`:
 
 1. `windows.mjs` calculates a half-open Dubai publication window.
 2. `posts.mjs` reads Jekyll posts and their YAML front matter directly from
@@ -21,26 +30,33 @@ in `automation/threads-carousel/`:
 6. `hosting.mjs` confirms that every image is publicly available over HTTPS.
 7. `threads-client.mjs` creates and polls image containers, creates and polls
    the carousel container, and publishes through the official Threads API.
-8. `state.mjs` records final publication only after Threads returns a post ID.
-9. `orchestrator.mjs` coordinates posts independently and writes a sanitized
-   run manifest.
+8. `queue.mjs` discovers generated carousel manifests and suppresses already
+   published or future-dated items.
+9. `state.mjs` records final publication only after Threads returns a post ID.
+10. `orchestrator.mjs` coordinates posts independently and writes sanitized
+    manifests.
 
 The workflow runs formatting checks, syntax checks, and unit tests before it
 generates or publishes media. External Gemini and Threads requests are mocked
 in tests.
 
-## Schedule and Dubai windows
+## Triggers and Dubai schedule
 
-GitHub Actions schedules are explicitly configured for `Asia/Dubai`:
+Generation is event-driven. A push to `main` triggers it only when the pushed
+range contains a newly added `_posts/*.md` file. Modified and deleted posts do
+not create another carousel. Multiple newly added posts in one push are
+processed independently.
 
-- `00:05` processes the previous local calendar day's `12:00` inclusive through
-  the next `00:00` exclusive.
-- `12:05` processes the current local calendar day's `00:00` inclusive through
-  `12:00` exclusive.
+GitHub cron expressions use UTC, so the publishing workflow uses:
 
-The interval is always `start <= published_at < end`. Window selection uses the
-canonical `date` in each post's front matter, including its timezone offset. It
-never uses Git history or filesystem timestamps.
+- `0 8 * * *` for 12:00 `Asia/Dubai`;
+- `0 20 * * *` for 00:00 `Asia/Dubai` on the following local date.
+
+Dubai is UTC+4 year-round. The publisher does not use a fragile “last 12 hours”
+query. Its durable queue is every validated carousel manifest not marked
+`published` in `state.json`. This means a missed or failed run is recovered by
+the next run. A carousel for a future-dated article remains queued until its
+canonical front-matter timestamp has passed.
 
 ## Post discovery and eligibility
 
@@ -51,11 +67,12 @@ origin. Each selected post must have a title, exact front-matter publication
 timestamp, valid canonical URL, and a substantive Markdown body.
 
 Posts are skipped when they are drafts, have `published: false`, have
-`social_publish: false`, are future-dated, are breach-related under
-ShadowContext's standing editorial automation policy, or already have a
-`published` state entry. Eligible posts are processed oldest first. The
-conservative default is 10 posts per run; excess posts are reported and left
-unmarked for a later run.
+`social_publish: false`, or are breach-related under ShadowContext's standing
+editorial automation policy. A future-dated post may have its media generated,
+but the publishing queue will not release it early. Published state suppresses
+duplicates. Ready carousels are processed oldest-generated first. The
+conservative default is 10 posts per publishing run; excess posts remain queued
+for a later run.
 
 ## Carousel format and branding
 
@@ -76,6 +93,14 @@ The renderer uses the site's Space Grotesk and DM Mono font families when
 available and safe system fallbacks on GitHub runners. It does not ask an image
 model to draw text. Deterministic gradients, grids, and abstract network
 geometry keep rendering reliable when no illustration exists.
+
+Every Threads caption contains exactly one canonical article URL and the
+consistent reach tags `#cybersecurity`, `#cybernews`, `#vulnerability`, and
+`#ai`. Up to two additional hashtags are deterministically derived from the
+post category and existing tags. Hashtags supplied in generated prose are
+discarded, so the automation cannot introduce unrelated trending tags. When
+necessary, only the caption prose is shortened; the controlled hashtags and
+article URL are preserved within the 500-character limit.
 
 ## Gemini configuration
 
@@ -143,39 +168,44 @@ Threads client.
 
 ## Public image hosting
 
-Live runs write immutable, content-addressed media under:
+The generation workflow writes immutable, content-addressed media under:
 
 `assets/social/threads/<post-slug>/<carousel-hash>/slide-01.png`
 
-The workflow commits only that public media with a `[skip threads]` marker and
-pushes it through the existing GitHub Pages deployment. It then polls each
+The same directory contains `carousel-manifest.json`, the durable handoff
+between the workflows. It holds public image URLs, alt text, caption, hashes,
+and timestamps, but no article body or credential. The generation workflow
+commits the directory with a `[skip threads]` marker and pushes it through the
+existing GitHub Pages deployment. The later publishing workflow polls each
 expected `https://shadowcontext.com/assets/social/threads/...` URL until it
 returns a PNG. Threads is not called if any image is unavailable. Old media is
-not overwritten, and the workflow has one stable concurrency group so
-overlapping runs cannot race.
+not overwritten. Both workflows share one concurrency group so repository
+media and state commits cannot race.
 
 The content hash includes a carousel template version. Increment
 `CAROUSEL_TEMPLATE_VERSION` in `config.mjs` when changing the rendered design
 or layout so new output never overwrites an older visual.
 
-## Dry run
+## Dry runs
 
-Manual runs default to safe dry-run mode:
+To test generation:
 
-1. Open **Actions → Publish Threads Carousels → Run workflow**.
-2. Leave **dry_run** checked.
-3. Choose `auto`, `00-12`, or `12-00`.
-4. Optionally enter a canonical post URL, slug, filename, or `_posts/...` path.
-5. Use **force** only to regenerate a post already present in publication state.
-6. Select **Run workflow**.
-7. Download `threads-carousel-dry-run-<run-id>` from the run's **Artifacts**
-   section.
+1. Open **Actions → Generate Threads Carousels → Run workflow**.
+2. Enter a canonical post URL, slug, filename, or `_posts/...` path.
+3. Leave **dry_run** checked and select **Run workflow**.
+4. Download `threads-carousel-generation-<run-id>` from **Artifacts**.
 
-Dry runs call Gemini and render all images, but never construct a Threads
-client, never call Threads, never modify publication state, and never commit
-generated media. The artifact includes PNGs, validated structured JSON, and a
-sanitized manifest. Inspect the cover and all bullet slides before a first live
-run.
+This calls Gemini and renders all slides, but does not commit public images,
+construct a Threads client, call Threads, or modify publication state.
+
+To preview the publishing queue:
+
+1. Open **Actions → Publish Ready Threads Carousels → Run workflow**.
+2. Leave **dry_run** checked and select **Run workflow**.
+3. Download `threads-carousel-publish-preview-<run-id>`.
+
+The preview reads the same durable queue and duplicate state as a scheduled
+run, but never calls Threads or changes state.
 
 For a local fixture-style render without Gemini or Threads:
 
@@ -189,28 +219,27 @@ node automation/threads-carousel/cli.mjs prepare \
 
 Output is written to `.artifacts/threads-carousel/`, which Git ignores.
 
-## Manual single-post live test
+## Manual live tests
 
-Only after a successful dry run:
+To commit media for one existing post, run **Generate Threads Carousels**
+manually with its exact URL and uncheck **dry_run**. This does not publish to
+Threads; it creates the repository-hosted carousel and ready manifest.
 
-1. Confirm all three secrets and the numeric Threads user ID.
-2. Set `THREADS_PUBLISHING_ENABLED=true`.
-3. Run the workflow manually with **dry_run** unchecked.
-4. Enter one exact canonical post URL in **post_url**.
-5. Leave **force** unchecked; live force-republishing is intentionally not
-   supported.
-
-This is a real publish. The caption contains the full canonical ShadowContext
-URL. Manual live runs use the same public hosting checks, state, and duplicate
-suppression as scheduled runs.
+Only after inspecting that media, confirm the Threads secrets, set
+`THREADS_PUBLISHING_ENABLED=true`, and run **Publish Ready Threads Carousels**
+with **dry_run** unchecked. This publishes every oldest-first ready carousel up
+to `THREADS_MAX_POSTS_PER_RUN`. There is intentionally no force-republish
+option. To restrict an initial live test to one queued item, temporarily set
+`THREADS_MAX_POSTS_PER_RUN=1`.
 
 ## Idempotency, partial failures, and recovery
 
 `automation/threads-carousel/state.json` uses the normalized canonical URL as
 its key. A successful record includes the source and carousel hashes, public
 image URLs, media container IDs, final Threads post ID, and timestamps. Only
-`status: published` suppresses future publication. Editing an already-published
-article does not automatically repost it.
+`status: published` suppresses future publication. Editing an article does not
+trigger generation, and regenerating media for an already-published article
+does not automatically repost it.
 
 Failed preparation or API calls are recorded as failures, never as successful
 publication. Other eligible articles continue processing, and the final job
@@ -225,11 +254,10 @@ Never delete a published state record merely to retry. Partially created,
 unpublished media containers do not mark an article as published and may expire
 on Meta's side.
 
-The workflow commits state after processing all candidates. Its stable
-concurrency group, content-addressed media, canonical URL key, and
+The publishing workflow commits state after processing all candidates. The
+shared concurrency group, immutable media, canonical URL key, and
 published-only suppression protect ordinary reruns. Live republishing of an
-already-published URL is intentionally unavailable; `force` only affects dry
-runs.
+already-published URL is intentionally unavailable.
 
 ## Limits, logs, and artifacts
 

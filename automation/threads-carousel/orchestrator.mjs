@@ -173,7 +173,10 @@ export async function prepareCarouselRun({
       Object.assign(record, {
         status: "rendered",
         carouselHash,
-        caption: buildThreadsCaption(structure.caption, post.canonicalUrl),
+        caption: buildThreadsCaption(structure.caption, post.canonicalUrl, {
+          category: post.category,
+          tags: post.tags,
+        }),
         imageUrls,
         imageFiles: slides.map((slide) =>
           path.relative(repoRoot, slide.filePath).split(path.sep).join("/"),
@@ -187,6 +190,32 @@ export async function prepareCarouselRun({
             `ShadowContext security briefing for ${post.title}, slide ${index + 1} of ${slides.length}`,
         ),
       });
+      if (!dryRun) {
+        const readyManifestPath = path.join(
+          outputDirectory,
+          "carousel-manifest.json",
+        );
+        await writeJson(readyManifestPath, {
+          schemaVersion: 1,
+          status: "ready",
+          generatedAt: now.toISO(),
+          id: record.id,
+          title: record.title,
+          canonicalUrl: record.canonicalUrl,
+          publicationTimestamp: record.publicationTimestamp,
+          sourceHash: record.sourceHash,
+          carouselHash: record.carouselHash,
+          category: record.category,
+          caption: record.caption,
+          imageUrls: record.imageUrls,
+          imageFiles: record.imageFiles,
+          altTexts: record.altTexts,
+        });
+        record.readyManifestFile = path
+          .relative(repoRoot, readyManifestPath)
+          .split(path.sep)
+          .join("/");
+      }
       counters.rendered += 1;
     } catch (error) {
       record.status = "failed";

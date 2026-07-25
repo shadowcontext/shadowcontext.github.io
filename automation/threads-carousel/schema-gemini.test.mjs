@@ -132,6 +132,20 @@ test("hashtags include all mandatory tags and use at most two taxonomy tags", ()
   );
 });
 
+test("generated or source hashtags are replaced by controlled taxonomy hashtags", () => {
+  const caption = buildThreadsCaption(
+    "Defensive update #cybernews #unrelated",
+    "https://shadowcontext.com/example/",
+    { category: "OT Security" },
+  );
+  assert.equal((caption.match(/#[A-Za-z0-9_]+/g) || []).length, 5);
+  assert.match(
+    caption,
+    /#cybersecurity #cybernews #vulnerability #ai #OTSecurity/,
+  );
+  assert.doesNotMatch(caption, /#unrelated/);
+});
+
 test("error sanitization removes credentials and secret-bearing query values", () => {
   const previous = process.env.GEMINI_API_KEY;
   process.env.GEMINI_API_KEY = "fixture-secret-value";

@@ -113,6 +113,7 @@ export function createGeminiSummarizer({
 
 function concise(value, maxWords) {
   return String(value || "")
+    .replace(/(?:^|\s)#[A-Za-z0-9_]+/g, " ")
     .replace(/\s+/g, " ")
     .trim()
     .split(" ")

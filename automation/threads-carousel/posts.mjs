@@ -182,7 +182,7 @@ export async function discoverPosts({
         )
       : true;
     if (!selectorMatch) continue;
-    if (post.publishedAt.toMillis() > now.toMillis()) continue;
+    if (!postSelector && post.publishedAt.toMillis() > now.toMillis()) continue;
     if (!postSelector && !isInWindow(post.publishedAt, window)) continue;
     posts.push(post);
   }

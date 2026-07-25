@@ -62,6 +62,9 @@ function validatePlainString(value, label, maxWords) {
   if (/```|^\s*#{1,6}\s|^\s*[-*+]\s|\[[^\]]+]\([^)]+\)/.test(clean)) {
     throw new Error(`${label} must not contain Markdown`);
   }
+  if (/(?:^|\s)#[A-Za-z0-9_]+/.test(clean)) {
+    throw new Error(`${label} must not contain hashtags`);
+  }
   if (wordCount(clean) > maxWords)
     throw new Error(`${label} exceeds ${maxWords} words`);
   return clean;
@@ -171,6 +174,8 @@ function truncateProse(value, maximumLength) {
 export function buildThreadsCaption(caption, canonicalUrl, taxonomy = {}) {
   const withoutUrls = String(caption)
     .replace(/https?:\/\/\S+/gi, "")
+    .replace(/(?:^|\s)#[A-Za-z0-9_]+/g, " ")
+    .replace(/\s+/g, " ")
     .trim();
   const hashtags = buildThreadsHashtags(taxonomy).join(" ");
   const suffix = `\n\n${hashtags}\n\nRead the full ShadowContext briefing:\n${canonicalUrl}`;

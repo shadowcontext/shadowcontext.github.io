@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { appendFile } from "node:fs/promises";
+import { appendFile, mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 import { DateTime } from "luxon";
@@ -12,6 +12,7 @@ import {
   publishPreparedRun,
   readManifest,
 } from "./orchestrator.mjs";
+import { preparePublishQueue } from "./queue.mjs";
 import { sanitizeError } from "./safety.mjs";
 import { calculateDubaiWindow } from "./windows.mjs";
 
@@ -108,6 +109,30 @@ try {
     await githubOutput({
       has_posts: manifest.posts.some((post) => post.status === "rendered"),
       failures: manifest.counters.failed,
+      manifest_path: manifestPath,
+    });
+  } else if (args.command === "queue") {
+    const dryRun = booleanValue(args.dry_run, true);
+    const manifest = await preparePublishQueue({
+      repoRoot,
+      statePath,
+      dryRun,
+      maxPosts: Number(
+        args.max_posts ||
+          process.env.THREADS_MAX_POSTS_PER_RUN ||
+          DEFAULT_MAX_POSTS,
+      ),
+    });
+    await mkdir(path.dirname(manifestPath), { recursive: true });
+    await writeFile(
+      manifestPath,
+      `${JSON.stringify(manifest, null, 2)}\n`,
+      "utf8",
+    );
+    report(manifest);
+    await githubOutput({
+      has_posts: manifest.posts.length > 0,
+      queued_posts: manifest.posts.length,
       manifest_path: manifestPath,
     });
   } else if (args.command === "verify-media") {

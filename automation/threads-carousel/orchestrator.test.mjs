@@ -1,12 +1,12 @@
 import assert from "node:assert/strict";
-import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
+import { mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import test from "node:test";
 
 import { DateTime } from "luxon";
 
-import { publishPreparedRun } from "./orchestrator.mjs";
+import { prepareCarouselRun, publishPreparedRun } from "./orchestrator.mjs";
 import { emptyState, isPublished } from "./state.mjs";
 
 const now = DateTime.fromISO("2026-07-25T12:05:00+04:00", { setZone: true });
@@ -56,6 +56,69 @@ async function fixtureFiles(value) {
   await writeFile(statePath, JSON.stringify(emptyState()));
   return { root, manifestPath, statePath };
 }
+
+test("live generation writes a durable ready-carousel manifest beside images", async () => {
+  const root = await mkdtemp(path.join(os.tmpdir(), "threads-generate-"));
+  const statePath = path.join(root, "state.json");
+  try {
+    await writeFile(statePath, JSON.stringify(emptyState()));
+    const result = await prepareCarouselRun({
+      repoRoot: root,
+      statePath,
+      artifactRoot: path.join(root, ".artifacts"),
+      manifestPath: path.join(root, ".artifacts", "manifest.json"),
+      dryRun: false,
+      now,
+      window: {
+        name: "fixture",
+        timezone: "Asia/Dubai",
+        startIso: "2026-07-25T00:00:00+04:00",
+        endIso: "2026-07-25T12:00:00+04:00",
+      },
+      discover: async () => [
+        {
+          id: url,
+          slug: "fixture",
+          title: "Fixture",
+          canonicalUrl: url,
+          publishedAtIso: "2026-07-25T01:00:00+04:00",
+          sourceHash: "source",
+          category: "Threat Intelligence",
+          tags: ["Cloud Security"],
+          eligible: true,
+        },
+      ],
+      summarize: async () => ({
+        headline: "Fixture Headline",
+        summary: ["Fixture summary"],
+        why_it_matters: ["Fixture impact"],
+        defender_actions: ["Review relevant controls"],
+        caption: "A concise defensive briefing.",
+        visual_theme: {
+          concept: "Defensive network",
+          keywords: ["defense"],
+        },
+      }),
+      render: async ({ outputDirectory }) => {
+        await mkdir(outputDirectory, { recursive: true });
+        const slides = [];
+        for (const name of ["slide-01.png", "slide-02.png"]) {
+          const filePath = path.join(outputDirectory, name);
+          await writeFile(filePath, "fixture");
+          slides.push({ filePath });
+        }
+        return slides;
+      },
+    });
+    const readyPath = path.join(root, result.posts[0].readyManifestFile);
+    const readyManifest = JSON.parse(await readFile(readyPath, "utf8"));
+    assert.equal(readyManifest.status, "ready");
+    assert.match(readyManifest.caption, /#cybersecurity/);
+    assert.equal(readyManifest.imageUrls.length, 2);
+  } finally {
+    await rm(root, { recursive: true });
+  }
+});
 
 test("dry-run manifest never invokes Threads publishing", async () => {
   const files = await fixtureFiles(manifest(true));
