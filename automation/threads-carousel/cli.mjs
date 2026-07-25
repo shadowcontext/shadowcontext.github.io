@@ -54,10 +54,11 @@ function report(manifest) {
       window: manifest.window,
       dryRun: manifest.dryRun,
       counters: manifest.counters,
-      posts: manifest.posts.map(({ title, canonicalUrl, status }) => ({
+      posts: manifest.posts.map(({ title, canonicalUrl, status, error }) => ({
         title,
         canonicalUrl,
         status,
+        ...(error ? { error } : {}),
       })),
     }),
   );

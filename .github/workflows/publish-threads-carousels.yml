@@ -164,7 +164,7 @@ jobs:
           MAX_POSTS: ${{ vars.THREADS_MAX_POSTS_PER_RUN }}
         run: |
           if [[ "$EVENT_NAME" == "push" ]]; then
-            SELECTED_WINDOW="$(tr -d '\r\n' < .github/threads-carousel-live-test)"
+            SELECTED_WINDOW="$(awk '{print $1}' .github/threads-carousel-live-test)"
             SELECTED_POST=""
           fi
           arguments=(
