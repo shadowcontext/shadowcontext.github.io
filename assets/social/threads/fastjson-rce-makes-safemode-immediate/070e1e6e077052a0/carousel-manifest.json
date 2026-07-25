@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "status": "ready",
+  "generatedAt": "2026-07-26T00:14:01.738+04:00",
+  "id": "https://shadowcontext.com/fastjson-rce-makes-safemode-immediate/",
+  "title": "Fastjson RCE Makes SafeMode an Immediate Control",
+  "canonicalUrl": "https://shadowcontext.com/fastjson-rce-makes-safemode-immediate/",
+  "publicationTimestamp": "2026-07-26T00:11:26.000+04:00",
+  "sourceHash": "5daea61028612a7f522b7d714a2f59408288749cc448959193a0c18f63450ca0",
+  "carouselHash": "070e1e6e077052a0d69f494df2e183665704b8f6598488688eb2b62a431dafb6",
+  "category": "defense",
+  "caption": "Defenders should review Fastjson configurations and verify SafeMode status for applications running as Spring Boot fat JARs.\n\n#cybersecurity #cybernews #vulnerability #ai #Defense #Fastjson\n\nRead the full ShadowContext briefing:\nhttps://shadowcontext.com/fastjson-rce-makes-safemode-immediate/",
+  "imageUrls": [
+    "https://shadowcontext.com/assets/social/threads/fastjson-rce-makes-safemode-immediate/070e1e6e077052a0/slide-01.png",
+    "https://shadowcontext.com/assets/social/threads/fastjson-rce-makes-safemode-immediate/070e1e6e077052a0/slide-02.png",
+    "https://shadowcontext.com/assets/social/threads/fastjson-rce-makes-safemode-immediate/070e1e6e077052a0/slide-03.png",
+    "https://shadowcontext.com/assets/social/threads/fastjson-rce-makes-safemode-immediate/070e1e6e077052a0/slide-04.png"
+  ],
+  "imageFiles": [
+    "assets/social/threads/fastjson-rce-makes-safemode-immediate/070e1e6e077052a0/slide-01.png",
+    "assets/social/threads/fastjson-rce-makes-safemode-immediate/070e1e6e077052a0/slide-02.png",
+    "assets/social/threads/fastjson-rce-makes-safemode-immediate/070e1e6e077052a0/slide-03.png",
+    "assets/social/threads/fastjson-rce-makes-safemode-immediate/070e1e6e077052a0/slide-04.png"
+  ],
+  "altTexts": [
+    "ShadowContext security briefing for Fastjson RCE Makes SafeMode an Immediate Control, slide 1 of 4",
+    "ShadowContext security briefing for Fastjson RCE Makes SafeMode an Immediate Control, slide 2 of 4",
+    "ShadowContext security briefing for Fastjson RCE Makes SafeMode an Immediate Control, slide 3 of 4",
+    "ShadowContext security briefing for Fastjson RCE Makes SafeMode an Immediate Control, slide 4 of 4"
+  ]
+}
