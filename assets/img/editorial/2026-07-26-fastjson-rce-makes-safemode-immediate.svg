@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Fastjson SafeMode barrier protecting a Java application core</title>
+  <desc id="desc">Abstract blue and violet data ribbons flow toward a luminous application core while a curved amber barrier diverts one sharp hostile path.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="0.52" stop-color="#10223a"/>
+      <stop offset="1" stop-color="#080d19"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#5be7ff" stop-opacity=".34"/>
+      <stop offset=".5" stop-color="#4f6cff" stop-opacity=".11"/>
+      <stop offset="1" stop-color="#4f6cff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="streamA" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#17375d" stop-opacity=".2"/>
+      <stop offset=".45" stop-color="#41bde8"/>
+      <stop offset="1" stop-color="#7b7dff"/>
+    </linearGradient>
+    <linearGradient id="streamB" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1b2b52" stop-opacity=".15"/>
+      <stop offset=".55" stop-color="#745eff"/>
+      <stop offset="1" stop-color="#6ee7f2"/>
+    </linearGradient>
+    <linearGradient id="barrier" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff0a8"/>
+      <stop offset=".42" stop-color="#ffbd4a"/>
+      <stop offset="1" stop-color="#f06a3a"/>
+    </linearGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b7f5ff"/>
+      <stop offset=".35" stop-color="#59d7ef"/>
+      <stop offset="1" stop-color="#5667ff"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1125" cy="450" r="395" fill="url(#halo)"/>
+  <path d="M0 154 C312 88 449 239 660 212 C811 193 885 108 1057 135" fill="none" stroke="#72dff4" stroke-opacity=".08" stroke-width="2"/>
+  <path d="M0 760 C266 813 453 667 641 701 C812 732 865 814 1066 779" fill="none" stroke="#9887ff" stroke-opacity=".09" stroke-width="2"/>
+
+  <g opacity=".95">
+    <path d="M-80 267 C212 231 337 327 520 321 C687 315 744 226 911 276 C1012 306 1055 373 1137 404" fill="none" stroke="url(#streamA)" stroke-width="34" stroke-linecap="round"/>
+    <path d="M-94 447 C193 386 369 477 536 466 C683 457 770 380 910 394 C1010 404 1060 431 1134 446" fill="none" stroke="url(#streamB)" stroke-width="26" stroke-linecap="round"/>
+    <path d="M-65 632 C181 677 360 577 532 588 C695 599 770 675 925 617 C1020 582 1065 511 1140 486" fill="none" stroke="url(#streamA)" stroke-width="38" stroke-linecap="round"/>
+  </g>
+
+  <g fill="#b9f4ff">
+    <circle cx="209" cy="251" r="7" opacity=".7"/>
+    <circle cx="365" cy="315" r="5" opacity=".62"/>
+    <circle cx="504" cy="465" r="8" opacity=".67"/>
+    <circle cx="682" cy="421" r="5" opacity=".8"/>
+    <circle cx="345" cy="616" r="7" opacity=".5"/>
+    <circle cx="809" cy="618" r="6" opacity=".72"/>
+  </g>
+
+  <path d="M594 112 C731 202 802 289 849 393 C895 496 923 631 1040 764" fill="none" stroke="#ff9a43" stroke-opacity=".16" stroke-width="76" filter="url(#soft)"/>
+  <path d="M594 112 C731 202 802 289 849 393 C895 496 923 631 1040 764" fill="none" stroke="url(#barrier)" stroke-width="15" stroke-linecap="round"/>
+  <path d="M617 135 C727 217 793 300 833 397 C874 496 912 625 1018 741" fill="none" stroke="#fff4bd" stroke-opacity=".68" stroke-width="3"/>
+
+  <path d="M355 765 C521 727 637 660 718 565 C773 500 799 452 840 422" fill="none" stroke="#ff7248" stroke-width="19" stroke-linecap="round"/>
+  <path d="M355 765 C510 733 611 680 682 615" fill="none" stroke="#ffb34c" stroke-width="5" stroke-linecap="round"/>
+  <path d="M831 424 L788 403 L813 459 Z" fill="#fff0a2"/>
+  <circle cx="840" cy="422" r="30" fill="#ffb246" opacity=".2" filter="url(#glow)"/>
+
+  <g transform="translate(1128 450)">
+    <circle r="205" fill="#4c69ff" opacity=".16" filter="url(#glow)"/>
+    <path d="M0-190 C92-164 149-128 172-105 V14 C172 111 102 169 0 207 C-102 169-172 111-172 14 V-105 C-149-128-92-164 0-190Z" fill="#0c1830" stroke="#68d9ef" stroke-width="5"/>
+    <path d="M0-161 C75-141 119-116 143-94 V9 C143 88 88 137 0 174 C-88 137-143 88-143 9 V-94 C-119-116-75-141 0-161Z" fill="url(#core)" opacity=".9"/>
+    <path d="M0-121 L82-74 V22 L0 70 L-82 22 V-74 Z" fill="#101d38" stroke="#d2fbff" stroke-opacity=".8" stroke-width="4"/>
+    <path d="M0-91 L56-59 V7 L0 40 L-56 7 V-59 Z" fill="#6ce3f4" opacity=".22"/>
+    <circle r="20" fill="#e7fdff"/>
+    <circle r="8" fill="#526cff"/>
+  </g>
+
+  <g fill="none" stroke="#8beaf6" stroke-opacity=".32">
+    <path d="M1260 225 C1373 245 1447 322 1488 420" stroke-width="3"/>
+    <path d="M1284 678 C1395 641 1460 568 1492 472" stroke-width="3"/>
+    <circle cx="1497" cy="445" r="7" fill="#9df1fa" stroke="none"/>
+  </g>
+</svg>
