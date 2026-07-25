@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-24T01:24:45Z",
-  "generated_display": "24 Jul 2026 · 01:24 UTC",
+  "generated_at": "2026-07-25T01:19:45Z",
+  "generated_display": "25 Jul 2026 · 01:19 UTC",
   "metrics": {
     "kev_total": 1653,
     "kev_added_30d": 26,
-    "due_next_7d": 7,
+    "due_next_7d": 4,
     "ioc_total": 143,
     "ioc_total_display": "143",
     "ioc_total_exact": "143"
@@ -162,6 +162,14 @@
   "advisories": [
     {
       "authority": "Saudi NCA / CERT",
+      "title": "HPE Alert",
+      "url": "https://nca.gov.sa/en/cert/7794/",
+      "date": "2026-07-24",
+      "severity": "High",
+      "summary": "Security alert 2026-7671. Review the official notice for affected products and remediation guidance."
+    },
+    {
+      "authority": "Saudi NCA / CERT",
       "title": "Chrome Alert",
       "url": "https://nca.gov.sa/en/cert/7793/",
       "date": "2026-07-24",
@@ -207,14 +215,6 @@
       "date": "2026-07-23",
       "severity": "High",
       "summary": "Security alert 2026-7669. Review the official notice for affected products and remediation guidance."
-    },
-    {
-      "authority": "Saudi NCA / CERT",
-      "title": "Mozilla Alert",
-      "url": "https://nca.gov.sa/en/cert/7791/",
-      "date": "2026-07-22",
-      "severity": "Critical",
-      "summary": "Security alert 2026-7668. Review the official notice for affected products and remediation guidance."
     },
     {
       "title": "How to secure your online meetings",
@@ -324,7 +324,7 @@
       "path": "/assets/data/daily-urls.txt"
     }
   ],
-  "ioc_sha256": "66e56fbea5ab8d3c3d2e33f9b1c3508c438096823e63390f4cfd1d894702d990",
+  "ioc_sha256": "9f7c523657d929a9a7676d00677dead60227ba8116ebd6534e5aead999bc83cf",
   "sources": {
     "kev": {
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
