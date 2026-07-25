@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-25T18:11:40Z",
-  "generated_display": "25 Jul 2026 · 18:11 UTC",
+  "generated_at": "2026-07-25T18:13:44Z",
+  "generated_display": "25 Jul 2026 · 18:13 UTC",
   "metrics": {
     "kev_total": 1653,
     "kev_added_30d": 26,
@@ -358,7 +358,7 @@
       "name": "CISA Advisories",
       "coverage": "Technical and industrial-control advisories",
       "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml",
-      "status": "online"
+      "status": "degraded"
     },
     {
       "name": "UK NCSC",
@@ -374,9 +374,9 @@
     },
     {
       "name": "CISA STIX",
-      "coverage": "TLP:CLEAR indicators from 3 advisories",
+      "coverage": "Last validated TLP:CLEAR indicator snapshot",
       "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-239a",
-      "status": "online"
+      "status": "degraded"
     }
   ]
 }
