@@ -4,6 +4,7 @@ set -Eeuo pipefail
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 UPDATER="$REPO_ROOT/automation/update_threat_dashboard.py"
 VALIDATOR="$REPO_ROOT/automation/validate_seo.rb"
+DATA_VALIDATOR="$REPO_ROOT/automation/validate_threat_dashboard.py"
 LOCK_PATH="${XDG_RUNTIME_DIR:-/tmp}/shadowcontext-threat-dashboard.lock"
 SHARED_BUNDLE_PATH="$REPO_ROOT/vendor/bundle"
 RUN_DIR=""
@@ -27,6 +28,7 @@ check_prerequisites() {
   done
   [[ -f "$UPDATER" ]] || { log "missing updater: $UPDATER"; missing=1; }
   [[ -f "$VALIDATOR" ]] || { log "missing validator: $VALIDATOR"; missing=1; }
+  [[ -f "$DATA_VALIDATOR" ]] || { log "missing data validator: $DATA_VALIDATOR"; missing=1; }
   [[ -d "$SHARED_BUNDLE_PATH" ]] || { log "missing bundled gems: $SHARED_BUNDLE_PATH"; missing=1; }
   git -C "$REPO_ROOT" remote get-url origin >/dev/null 2>&1 || { log "repository has no origin remote"; missing=1; }
   return "$missing"
@@ -36,6 +38,7 @@ if [[ "${1:-}" == "--check" ]]; then
   check_prerequisites
   bash -n "$0"
   python3 -m py_compile "$UPDATER"
+  python3 -m py_compile "$DATA_VALIDATOR"
   git -C "$REPO_ROOT" ls-remote --exit-code origin refs/heads/main >/dev/null
   log "prerequisites, syntax, source updater, and GitHub access are ready"
   exit 0
@@ -57,6 +60,7 @@ log "refreshing official feeds from $BASE_COMMIT"
 (
   cd "$RUN_DIR"
   python3 automation/update_threat_dashboard.py
+  python3 automation/validate_threat_dashboard.py --baseline-root "$REPO_ROOT"
   BUNDLE_PATH="$SHARED_BUNDLE_PATH" bundle exec jekyll build >/dev/null
   ruby automation/validate_seo.rb "$RUN_DIR" "$RUN_DIR/_site"
 )

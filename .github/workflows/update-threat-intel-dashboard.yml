@@ -1,0 +1,105 @@
+name: Update Threat Intel Dashboard
+
+on:
+  schedule:
+    # 01:15 Asia/Dubai (UTC+4); GitHub Actions cron is evaluated in UTC.
+    - cron: "15 21 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/threat-dashboard-live-test"
+
+concurrency:
+  group: shadowcontext-daily-threat-intel
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    if: github.event_name != 'push' || contains(github.event.head_commit.message, '[run threat dashboard test]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out default branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Set up Ruby and locked gems
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+
+      - name: Capture pre-refresh state
+        run: |
+          baseline="$RUNNER_TEMP/threat-dashboard-baseline"
+          mkdir -p "$baseline/_data" "$baseline/assets/data"
+          cp _data/threat_dashboard.json "$baseline/_data/threat_dashboard.json"
+          cp assets/data/daily-iocs.csv "$baseline/assets/data/daily-iocs.csv"
+          cp assets/data/daily-file-hashes.txt "$baseline/assets/data/daily-file-hashes.txt"
+          cp assets/data/daily-ip-addresses.txt "$baseline/assets/data/daily-ip-addresses.txt"
+          cp assets/data/daily-domains.txt "$baseline/assets/data/daily-domains.txt"
+          cp assets/data/daily-urls.txt "$baseline/assets/data/daily-urls.txt"
+
+      - name: Fetch and normalize official intelligence
+        run: python3 automation/update_threat_dashboard.py
+
+      - name: Validate dashboard and append-only IOC feeds
+        run: |
+          python3 automation/validate_threat_dashboard.py \
+            --baseline-root "$RUNNER_TEMP/threat-dashboard-baseline"
+
+      - name: Build and validate the rendered site
+        run: |
+          bundle exec jekyll build
+          ruby automation/validate_seo.rb . _site
+
+      - name: Publish before-and-after report
+        run: |
+          python3 automation/report_threat_dashboard.py \
+            --before "$RUNNER_TEMP/threat-dashboard-baseline/_data/threat_dashboard.json" \
+            --after "_data/threat_dashboard.json" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit refreshed dashboard data
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- \
+            _data/threat_dashboard.json \
+            assets/data/daily-iocs.csv \
+            assets/data/daily-file-hashes.txt \
+            assets/data/daily-ip-addresses.txt \
+            assets/data/daily-domains.txt \
+            assets/data/daily-urls.txt
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git commit -m "chore: refresh daily threat intelligence dashboard"
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Push refreshed dashboard data
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            sleep $((attempt * 5))
+          done
+          echo "::error::Unable to publish dashboard data after three attempts."
+          exit 1

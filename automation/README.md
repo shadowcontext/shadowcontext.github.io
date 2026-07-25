@@ -56,6 +56,12 @@ clear no-publication outcome when evidence is too thin.
 - `daily-seo-prompt.md` limits the SEO agent to evidence-based technical work.
 - `update_threat_dashboard.py` gathers and normalizes allowlisted CISA, UK
   NCSC, and Saudi NCA/Saudi CERT sources.
+- `validate_threat_dashboard.py` verifies freshness, source provenance, KEV
+  structure, IOC integrity, typed-feed counts, and append-only behavior.
+- `.github/workflows/update-threat-intel-dashboard.yml` runs the complete
+  refresh every day at 01:15 Asia/Dubai and can also be started manually. It
+  uses deterministic Python and the repository's Jekyll build only; it has no
+  Codex, model, API-key, or local-machine dependency.
 - `run_daily_threat_dashboard.sh` performs the isolated, validated dashboard
   refresh and publishes only the generated JSON, IOC CSV, and four typed feeds.
 - `validate_seo.rb` audits indexable URLs, metadata, structured data, links,

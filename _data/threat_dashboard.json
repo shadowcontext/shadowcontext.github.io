@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-07-25T01:19:45Z",
-  "generated_display": "25 Jul 2026 · 01:19 UTC",
+  "generated_at": "2026-07-25T18:01:56Z",
+  "generated_display": "25 Jul 2026 · 18:01 UTC",
   "metrics": {
     "kev_total": 1653,
     "kev_added_30d": 26,
     "due_next_7d": 4,
-    "ioc_total": 143,
-    "ioc_total_display": "143",
-    "ioc_total_exact": "143"
+    "ioc_total": 170,
+    "ioc_total_display": "170",
+    "ioc_total_exact": "170"
   },
   "vulnerabilities": [
     {
@@ -131,6 +131,13 @@
   ],
   "actors": [
     {
+      "name": "Russian State-Supported Cyber Actors Conduct Phishing Campaign Targeting Users of Zimbra…",
+      "aliases": "CISA AA26-204A · actor-focused advisory",
+      "focus": "Executive summary A group of Russian state-supported cyber actors has…",
+      "date": "2026-07-23",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-204a"
+    },
+    {
       "name": "Russian FSB Center 16",
       "aliases": "Berserk Bear · Energetic Bear · Static Tundra",
       "focus": "Edge routers, SNMP exposure, and critical infrastructure networks.",
@@ -150,13 +157,6 @@
       "focus": "Internet-exposed operational technology and programmable logic controllers.",
       "date": "2026-04-07",
       "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-097a"
-    },
-    {
-      "name": "PRC global espionage cluster",
-      "aliases": "Salt Typhoon-associated activity",
-      "focus": "Provider networks, routing infrastructure, and long-term access for intelligence collection.",
-      "date": "2025-08-27",
-      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-239a"
     }
   ],
   "advisories": [
@@ -226,8 +226,8 @@
     }
   ],
   "ioc_counts": {
-    "domain": 1,
-    "ipv4": 90,
+    "domain": 19,
+    "ipv4": 99,
     "ipv6": 2,
     "md5": 9,
     "sha1": 8,
@@ -237,15 +237,15 @@
   "ioc_count_summary": [
     {
       "type": "domain",
-      "count": 1,
-      "display": "1",
-      "exact": "1"
+      "count": 19,
+      "display": "19",
+      "exact": "19"
     },
     {
       "type": "ipv4",
-      "count": 90,
-      "display": "90",
-      "exact": "90"
+      "count": 99,
+      "display": "99",
+      "exact": "99"
     },
     {
       "type": "ipv6",
@@ -293,9 +293,9 @@
     {
       "key": "ip_addresses",
       "label": "IP address feed",
-      "count": 92,
-      "count_display": "92",
-      "count_exact": "92",
+      "count": 101,
+      "count_display": "101",
+      "count_exact": "101",
       "added_today": 0,
       "added_today_display": "0",
       "added_today_exact": "0",
@@ -304,9 +304,9 @@
     {
       "key": "domains",
       "label": "Domain feed",
-      "count": 1,
-      "count_display": "1",
-      "count_exact": "1",
+      "count": 19,
+      "count_display": "19",
+      "count_exact": "19",
       "added_today": 0,
       "added_today_display": "0",
       "added_today_exact": "0",
@@ -324,11 +324,28 @@
       "path": "/assets/data/daily-urls.txt"
     }
   ],
-  "ioc_sha256": "9f7c523657d929a9a7676d00677dead60227ba8116ebd6534e5aead999bc83cf",
+  "ioc_sha256": "1a11f117fc07798e2c761b2266ba89b1fbd10957e9d287d1cb42871ff204fb70",
   "sources": {
     "kev": {
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
-    }
+    },
+    "ioc_bundles": [
+      {
+        "url": "https://www.cisa.gov/sites/default/files/2025-09/AA25-239A_Countering_Chinese_State-Sponsored_Actors_Compromise_of_Networks_Worldwide_to_Feed_Global_Espionage_System.stix_.json",
+        "advisory": "CISA AA25-239A",
+        "source": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-239a"
+      },
+      {
+        "url": "https://www.cisa.gov/sites/default/files/2023-12/aa23-347a-russian-foreign-intelligence-service-svr-exploiting-jetbrains-teamcity-cve-globally.json",
+        "advisory": "CISA AA23-347A",
+        "source": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a"
+      },
+      {
+        "url": "https://www.cisa.gov/sites/default/files/2026-07/AA26-204A.stix_.json",
+        "advisory": "CISA AA26-204A",
+        "source": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-204a"
+      }
+    ]
   },
   "source_health": [
     {
@@ -357,7 +374,7 @@
     },
     {
       "name": "CISA STIX",
-      "coverage": "TLP:CLEAR indicators of compromise",
+      "coverage": "TLP:CLEAR indicators from 3 advisories",
       "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-239a",
       "status": "online"
     }

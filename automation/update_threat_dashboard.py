@@ -30,12 +30,13 @@ USER_AGENT = "ShadowContext-Threat-Dashboard/1.0 (+https://shadowcontext.com)"
 
 KEV_URL = "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
 CISA_RSS = "https://www.cisa.gov/cybersecurity-advisories/all.xml"
+CISA_ORIGIN = "https://www.cisa.gov"
 NCSC_FEEDS = (
     "https://www.ncsc.gov.uk/api/1/services/v1/guidance-rss-feed.xml",
     "https://www.ncsc.gov.uk/api/1/services/v1/report-rss-feed.xml",
 )
 NCA_CERT = "https://nca.gov.sa/en/cert/"
-IOC_BUNDLES = (
+IOC_SEED_BUNDLES = (
     {
         "url": "https://www.cisa.gov/sites/default/files/2025-09/AA25-239A_Countering_Chinese_State-Sponsored_Actors_Compromise_of_Networks_Worldwide_to_Feed_Global_Espionage_System.stix_.json",
         "advisory": "CISA AA25-239A",
@@ -46,6 +47,21 @@ IOC_BUNDLES = (
         "advisory": "CISA AA23-347A",
         "source": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a",
     },
+)
+
+ACTOR_TERMS = (
+    "state-sponsored",
+    "state-supported",
+    "threat actor",
+    "cyber actor",
+    "ransomware",
+    "advanced persistent threat",
+    "apt",
+    "irgc",
+    "prc",
+    "russian",
+    "iranian",
+    "north korean",
 )
 
 ACTOR_SOURCES = (
@@ -199,6 +215,63 @@ def extract_iocs(bundle: dict, collected_at: str) -> list[dict]:
     return matches
 
 
+def discover_ioc_bundles(items: list[dict]) -> list[dict]:
+    """Find STIX JSON attached to current CISA cybersecurity advisories."""
+    bundles = list(IOC_SEED_BUNDLES)
+    seen = {bundle["url"] for bundle in bundles}
+    for item in items:
+        source = item.get("url", "")
+        if not source.startswith(f"{CISA_ORIGIN}/news-events/cybersecurity-advisories/"):
+            continue
+        try:
+            page = fetch(source).decode("utf-8", errors="replace")
+        except Exception as error:
+            print(f"warning: unable to inspect CISA advisory attachments ({source}): {error}", file=sys.stderr)
+            continue
+        for href in re.findall(r"""href=["']([^"']+\.json(?:\?[^"']*)?)["']""", page, re.I):
+            href = html.unescape(href)
+            url = urllib.request.urljoin(CISA_ORIGIN, href)
+            if not url.startswith(f"{CISA_ORIGIN}/sites/default/files/") or "stix" not in url.lower() or url in seen:
+                continue
+            bundles.append(
+                {
+                    "url": url,
+                    "advisory": f"CISA {source.rstrip('/').rsplit('/', 1)[-1].upper()}",
+                    "source": source,
+                }
+            )
+            seen.add(url)
+    return bundles
+
+
+def build_actor_items(items: list[dict]) -> list[dict]:
+    """Prefer current actor-focused CISA advisories, with vetted fallbacks."""
+    actors = []
+    for item in items:
+        title = item.get("title", "")
+        searchable = f"{title} {item.get('summary', '')}".lower()
+        if "/cybersecurity-advisories/" not in item.get("url", "") or not any(term in searchable for term in ACTOR_TERMS):
+            continue
+        advisory_id = item["url"].rstrip("/").rsplit("/", 1)[-1].upper()
+        focus = plain(item.get("summary", ""))
+        if focus.lower().startswith(title.lower()):
+            focus = focus[len(title) :].lstrip(" .:–—-")
+        actors.append(
+            {
+                "name": short(title, 92),
+                "aliases": f"CISA {advisory_id} · actor-focused advisory",
+                "focus": short(focus or "Review the joint advisory for observed behavior, affected technology, and mitigations.", 150),
+                "date": item.get("date", ""),
+                "url": item["url"],
+            }
+        )
+    actors.extend(ACTOR_SOURCES)
+    unique = {}
+    for actor in actors:
+        unique.setdefault(actor["url"], actor)
+    return sorted(unique.values(), key=lambda actor: (actor["date"], actor["name"]), reverse=True)[:4]
+
+
 def write_iocs(rows: list[dict]) -> tuple[str, dict, list[dict]]:
     unique = {}
     for row in rows:
@@ -283,7 +356,8 @@ def main() -> int:
 
     iocs = []
     successful_bundles = 0
-    for bundle in IOC_BUNDLES:
+    ioc_bundles = discover_ioc_bundles(cisa)
+    for bundle in ioc_bundles:
         try:
             iocs.extend(extract_iocs(bundle, today.isoformat()))
             successful_bundles += 1
@@ -293,7 +367,7 @@ def main() -> int:
         raise RuntimeError("all allowlisted government IOC bundles failed")
     ioc_sha, ioc_counts, ioc_feeds = write_iocs(iocs)
     ioc_total = sum(ioc_counts.values())
-    health.append({"name": "CISA STIX", "coverage": "TLP:CLEAR indicators of compromise", "url": IOC_BUNDLES[0]["source"], "status": "online" if successful_bundles == len(IOC_BUNDLES) else "degraded"})
+    health.append({"name": "CISA STIX", "coverage": f"TLP:CLEAR indicators from {successful_bundles} advisories", "url": ioc_bundles[0]["source"], "status": "online" if successful_bundles == len(ioc_bundles) else "degraded"})
 
     parsed = []
     for item in vulnerabilities:
@@ -361,7 +435,7 @@ def main() -> int:
         },
         "vulnerabilities": latest,
         "platforms": platforms,
-        "actors": list(ACTOR_SOURCES),
+        "actors": build_actor_items(cisa),
         "advisories": advisory_items,
         "ioc_counts": ioc_counts,
         "ioc_count_summary": [
@@ -370,7 +444,10 @@ def main() -> int:
         ],
         "ioc_feeds": ioc_feeds,
         "ioc_sha256": ioc_sha,
-        "sources": {"kev": {"url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"}},
+        "sources": {
+            "kev": {"url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"},
+            "ioc_bundles": ioc_bundles,
+        },
         "source_health": health,
     }
     DATA_PATH.parent.mkdir(parents=True, exist_ok=True)
