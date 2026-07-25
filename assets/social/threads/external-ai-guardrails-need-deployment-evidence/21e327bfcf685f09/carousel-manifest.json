@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "status": "ready",
+  "generatedAt": "2026-07-26T01:12:58.574+04:00",
+  "id": "https://shadowcontext.com/external-ai-guardrails-need-deployment-evidence/",
+  "title": "External AI Guardrails Need Deployment Evidence",
+  "canonicalUrl": "https://shadowcontext.com/external-ai-guardrails-need-deployment-evidence/",
+  "publicationTimestamp": "2026-07-26T01:10:26.000+04:00",
+  "sourceHash": "1ce63e1bb7383f0a62ad3e7e4c8fb248e5609fdb9370c36cd0b1711fdb3067f9",
+  "carouselHash": "21e327bfcf685f0905f976f7b44c35d30fadfc78b930d5ea4f17cee3f5d8a904",
+  "category": "ai-security",
+  "caption": "Research proposes separating harmful-input detection from LLM inference using an external classifier called SURE. While experiments show strong results with limited labeled data, production adoption requires careful drift testing, observation mode validation, and explicit failure handling.\n\n#cybersecurity #cybernews #vulnerability #ai #AiSecurity #LlmSecurity\n\nRead the full ShadowContext briefing:\nhttps://shadowcontext.com/external-ai-guardrails-need-deployment-evidence/",
+  "imageUrls": [
+    "https://shadowcontext.com/assets/social/threads/external-ai-guardrails-need-deployment-evidence/21e327bfcf685f09/slide-01.png",
+    "https://shadowcontext.com/assets/social/threads/external-ai-guardrails-need-deployment-evidence/21e327bfcf685f09/slide-02.png",
+    "https://shadowcontext.com/assets/social/threads/external-ai-guardrails-need-deployment-evidence/21e327bfcf685f09/slide-03.png",
+    "https://shadowcontext.com/assets/social/threads/external-ai-guardrails-need-deployment-evidence/21e327bfcf685f09/slide-04.png"
+  ],
+  "imageFiles": [
+    "assets/social/threads/external-ai-guardrails-need-deployment-evidence/21e327bfcf685f09/slide-01.png",
+    "assets/social/threads/external-ai-guardrails-need-deployment-evidence/21e327bfcf685f09/slide-02.png",
+    "assets/social/threads/external-ai-guardrails-need-deployment-evidence/21e327bfcf685f09/slide-03.png",
+    "assets/social/threads/external-ai-guardrails-need-deployment-evidence/21e327bfcf685f09/slide-04.png"
+  ],
+  "altTexts": [
+    "ShadowContext security briefing for External AI Guardrails Need Deployment Evidence, slide 1 of 4",
+    "ShadowContext security briefing for External AI Guardrails Need Deployment Evidence, slide 2 of 4",
+    "ShadowContext security briefing for External AI Guardrails Need Deployment Evidence, slide 3 of 4",
+    "ShadowContext security briefing for External AI Guardrails Need Deployment Evidence, slide 4 of 4"
+  ]
+}
