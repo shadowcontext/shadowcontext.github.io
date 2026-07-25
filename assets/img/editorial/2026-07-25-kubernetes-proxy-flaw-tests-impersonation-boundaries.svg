@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Impersonation boundary protecting managed clusters</title>
+  <desc id="desc">Abstract editorial artwork showing an identity ribbon filtered through a luminous proxy boundary before reaching separate blue cluster cells.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071322"/>
+      <stop offset="0.52" stop-color="#0b2740"/>
+      <stop offset="1" stop-color="#07111d"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="52%" cy="48%" r="55%">
+      <stop offset="0" stop-color="#38d9c5" stop-opacity=".2"/>
+      <stop offset=".6" stop-color="#1877b7" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#07111d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff9f6e"/>
+      <stop offset=".47" stop-color="#f2c76e"/>
+      <stop offset=".53" stop-color="#6bf0d4"/>
+      <stop offset="1" stop-color="#49a8ef"/>
+    </linearGradient>
+    <linearGradient id="gate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#92fff0"/>
+      <stop offset=".5" stop-color="#23cbb8"/>
+      <stop offset="1" stop-color="#12819a"/>
+    </linearGradient>
+    <linearGradient id="cell" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#164e78"/>
+      <stop offset="1" stop-color="#0b2947"/>
+    </linearGradient>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+    <pattern id="grain" width="64" height="64" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="14" r="1" fill="#b9e9ff" opacity=".08"/>
+      <circle cx="43" cy="36" r="1.2" fill="#b9e9ff" opacity=".06"/>
+      <circle cx="25" cy="57" r=".8" fill="#b9e9ff" opacity=".05"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#aura)"/>
+  <rect width="1600" height="900" fill="url(#grain)"/>
+
+  <ellipse cx="820" cy="745" rx="610" ry="74" fill="#020911" opacity=".58" filter="url(#soft)"/>
+
+  <g opacity=".22" fill="none" stroke="#74b9df" stroke-width="2">
+    <path d="M1030 250 C1160 185 1370 220 1450 340"/>
+    <path d="M1030 450 C1220 450 1335 415 1490 500"/>
+    <path d="M1030 650 C1170 720 1365 690 1460 592"/>
+  </g>
+
+  <path d="M58 405 C220 305 330 350 485 412 C585 452 638 447 735 424"
+        fill="none" stroke="#ff9f6e" stroke-opacity=".18" stroke-width="92" stroke-linecap="round" filter="url(#soft)"/>
+  <path d="M58 405 C220 305 330 350 485 412 C585 452 638 447 735 424"
+        fill="none" stroke="url(#ribbon)" stroke-width="34" stroke-linecap="round"/>
+  <path d="M58 405 C220 305 330 350 485 412 C585 452 638 447 735 424"
+        fill="none" stroke="#fff8da" stroke-opacity=".5" stroke-width="4" stroke-linecap="round"/>
+
+  <g transform="translate(775 155)">
+    <path d="M25 68 Q25 34 59 34 H177 Q211 34 211 68 V502 Q211 536 177 536 H59 Q25 536 25 502 Z"
+          fill="#0a2637" stroke="#5ee7d2" stroke-opacity=".5" stroke-width="3"/>
+    <path d="M71 0 H165 L204 52 V518 L165 570 H71 L32 518 V52 Z"
+          fill="url(#gate)" opacity=".22" filter="url(#glow)"/>
+    <path d="M71 0 H165 L204 52 V518 L165 570 H71 L32 518 V52 Z"
+          fill="none" stroke="url(#gate)" stroke-width="9"/>
+    <path d="M82 226 L118 190 L154 226 V292 C154 328 118 350 118 350 C118 350 82 328 82 292 Z"
+          fill="#0a3044" stroke="#b5fff2" stroke-width="5"/>
+    <circle cx="118" cy="265" r="13" fill="#b5fff2"/>
+    <path d="M118 278 V306" stroke="#b5fff2" stroke-width="8" stroke-linecap="round"/>
+    <g fill="#b5fff2" opacity=".65">
+      <circle cx="50" cy="120" r="4"/>
+      <circle cx="186" cy="165" r="4"/>
+      <circle cx="50" cy="430" r="4"/>
+      <circle cx="186" cy="393" r="4"/>
+    </g>
+  </g>
+
+  <path d="M986 424 C1045 424 1068 343 1136 327"
+        fill="none" stroke="#61e8d2" stroke-width="22" stroke-linecap="round"/>
+  <path d="M986 440 C1060 452 1080 454 1142 454"
+        fill="none" stroke="#57c6e9" stroke-width="22" stroke-linecap="round"/>
+  <path d="M986 456 C1048 475 1071 553 1136 579"
+        fill="none" stroke="#4a9ee7" stroke-width="22" stroke-linecap="round"/>
+
+  <g transform="translate(1118 207)">
+    <path d="M96 0 L210 64 V192 L96 256 L-18 192 V64 Z" fill="url(#cell)" stroke="#70e5dc" stroke-width="4"/>
+    <path d="M96 48 L168 88 V168 L96 208 L24 168 V88 Z" fill="#0a1f34" stroke="#58a9db" stroke-width="3"/>
+    <circle cx="96" cy="128" r="25" fill="#70e5dc"/>
+    <circle cx="96" cy="128" r="10" fill="#0a2637"/>
+  </g>
+
+  <g transform="translate(1205 356)">
+    <path d="M96 0 L210 64 V192 L96 256 L-18 192 V64 Z" fill="url(#cell)" stroke="#58c9e7" stroke-width="4"/>
+    <path d="M96 48 L168 88 V168 L96 208 L24 168 V88 Z" fill="#0a1f34" stroke="#4e9fd5" stroke-width="3"/>
+    <circle cx="96" cy="128" r="25" fill="#58c9e7"/>
+    <circle cx="96" cy="128" r="10" fill="#0a2637"/>
+  </g>
+
+  <g transform="translate(1118 505)">
+    <path d="M96 0 L210 64 V192 L96 256 L-18 192 V64 Z" fill="url(#cell)" stroke="#4d9fea" stroke-width="4"/>
+    <path d="M96 48 L168 88 V168 L96 208 L24 168 V88 Z" fill="#0a1f34" stroke="#487fc5" stroke-width="3"/>
+    <circle cx="96" cy="128" r="25" fill="#4d9fea"/>
+    <circle cx="96" cy="128" r="10" fill="#0a2637"/>
+  </g>
+
+  <g fill="#f6c36f" opacity=".9">
+    <circle cx="281" cy="337" r="7"/>
+    <circle cx="410" cy="394" r="5"/>
+    <circle cx="544" cy="439" r="6"/>
+  </g>
+  <g fill="#72f3dd" filter="url(#glow)">
+    <circle cx="1016" cy="414" r="6"/>
+    <circle cx="1028" cy="446" r="5"/>
+    <circle cx="1014" cy="473" r="6"/>
+  </g>
+</svg>
