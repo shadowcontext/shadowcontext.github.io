@@ -123,14 +123,22 @@ function baseSvg({
 function renderCover(post, structure, totalSlides) {
   const headline = wrapText(structure.headline, 20, 5);
   const size = headline.length >= 5 ? 68 : headline.length >= 4 ? 76 : 84;
+  const description = wrapText(structure.summary[0], 58, 2);
+  const action = wrapText(structure.defender_actions[0], 58, 2);
   const published = post.publishedAt
     .setZone(DUBAI_ZONE)
     .toFormat("dd LLL yyyy · HH:mm ZZZZ");
   const content = `
     <text x="86" y="270" fill="${BRAND.cyan}" font-family="${BRAND.mono}" font-size="20" letter-spacing="3">SECURITY BRIEFING</text>
     ${textLines(headline, { x: 86, y: 386, size, lineHeight: size * 1.05 })}
-    <text x="86" y="1010" fill="${BRAND.muted}" font-family="${BRAND.mono}" font-size="19" letter-spacing="1">${escapeXml(published)}</text>
-    <rect x="86" y="1050" width="122" height="4" fill="${BRAND.cyan}"/>
+    <rect x="62" y="718" width="956" height="390" rx="8" fill="${BRAND.navy}" fill-opacity=".82" stroke="${BRAND.line}" stroke-width="2"/>
+    <text x="86" y="768" fill="${BRAND.cyan}" font-family="${BRAND.mono}" font-size="17" letter-spacing="2.5">IN BRIEF</text>
+    ${textLines(description, { x: 86, y: 814, size: 27, lineHeight: 36, color: BRAND.inkSecondary, weight: 500 })}
+    <path d="M86 898H994" stroke="${BRAND.line}" stroke-width="2"/>
+    <text x="86" y="941" fill="${BRAND.violet}" font-family="${BRAND.mono}" font-size="17" letter-spacing="2.5">ACTION</text>
+    ${textLines(action, { x: 86, y: 987, size: 27, lineHeight: 36, color: BRAND.ink, weight: 600 })}
+    <text x="86" y="1160" fill="${BRAND.muted}" font-family="${BRAND.mono}" font-size="19" letter-spacing="1">${escapeXml(published)}</text>
+    <rect x="86" y="1195" width="122" height="4" fill="${BRAND.cyan}"/>
   `;
   return baseSvg({
     slideNumber: 1,

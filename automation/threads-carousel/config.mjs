@@ -8,7 +8,7 @@ export const DEFAULT_THREADS_GRAPH_VERSION = "v1.0";
 export const DEFAULT_MAX_POSTS = 10;
 export const MAX_GEMINI_ATTEMPTS = 3;
 export const STATE_VERSION = 1;
-export const CAROUSEL_TEMPLATE_VERSION = 1;
+export const CAROUSEL_TEMPLATE_VERSION = 2;
 
 export const BRAND = Object.freeze({
   ink: "#f1f7fa",

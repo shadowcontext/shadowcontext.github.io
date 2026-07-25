@@ -83,3 +83,22 @@ test("short, simple articles use a compact three-slide structure", () => {
   assert.match(slides[2], /WHY IT MATTERS/);
   assert.match(slides[2], /WHAT DEFENDERS SHOULD DO/);
 });
+
+test("cover includes a concise description and required action", () => {
+  const [cover] = buildSlideSvgs(
+    {
+      id: "https://shadowcontext.com/cover/",
+      title: "Cover",
+      category: "defense",
+      fullText: "A source article.",
+      publishedAt: DateTime.fromISO("2026-07-25T05:09:26+04:00", {
+        setZone: true,
+      }),
+    },
+    structure,
+  );
+  assert.match(cover, /IN BRIEF/);
+  assert.match(cover, /ACTION/);
+  assert.match(cover, /Vendor guidance maps affected products/);
+  assert.match(cover, /Map models to supported operating system branches/);
+});
