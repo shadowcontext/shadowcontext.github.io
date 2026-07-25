@@ -3,7 +3,11 @@ import test from "node:test";
 
 import { createGeminiSummarizer } from "./gemini.mjs";
 import { sanitizeError } from "./safety.mjs";
-import { buildThreadsCaption, validateCarouselContent } from "./schema.mjs";
+import {
+  buildThreadsCaption,
+  buildThreadsHashtags,
+  validateCarouselContent,
+} from "./schema.mjs";
 
 const validStructure = {
   headline: "Defenders Verify Critical Assets",
@@ -92,12 +96,40 @@ test("daily Gemini quota failures are not retried", async () => {
 test("caption contains exactly one canonical URL and stays within Threads limit", () => {
   const url = "https://shadowcontext.com/example/";
   const caption = buildThreadsCaption(
-    "A concise defensive briefing. https://untrusted.example/path",
+    `${"A concise defensive briefing with useful context. ".repeat(20)} https://untrusted.example/path`,
     url,
+    { category: "Cloud Security", tags: ["Zero Trust"] },
   );
   assert.equal((caption.match(/https?:\/\//g) || []).length, 1);
   assert.equal(caption.includes(url), true);
   assert.equal([...caption].length <= 500, true);
+  for (const required of [
+    "#cybersecurity",
+    "#cybernews",
+    "#vulnerability",
+    "#ai",
+  ]) {
+    assert.match(caption, new RegExp(`${required}(?:\\s|$)`));
+  }
+  assert.match(caption, /#CloudSecurity/);
+  assert.equal(caption.endsWith(url), true);
+});
+
+test("hashtags include all mandatory tags and use at most two taxonomy tags", () => {
+  assert.deepEqual(
+    buildThreadsHashtags({
+      category: "Threat Intelligence",
+      tags: ["Cloud Security", "Malware", "Extra"],
+    }),
+    [
+      "#cybersecurity",
+      "#cybernews",
+      "#vulnerability",
+      "#ai",
+      "#ThreatIntelligence",
+      "#CloudSecurity",
+    ],
+  );
 });
 
 test("error sanitization removes credentials and secret-bearing query values", () => {

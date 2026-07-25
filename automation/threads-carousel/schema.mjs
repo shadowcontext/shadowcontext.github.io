@@ -128,11 +128,57 @@ export function validateCarouselContent(value, articleText = "") {
   return result;
 }
 
-export function buildThreadsCaption(caption, canonicalUrl) {
+function hashtag(value) {
+  const words = String(value || "").match(/[A-Za-z0-9]+/g) || [];
+  if (words.length === 0) return null;
+  const tag = words
+    .map((word) => `${word[0].toUpperCase()}${word.slice(1)}`)
+    .join("")
+    .slice(0, 30);
+  return tag ? `#${tag}` : null;
+}
+
+export function buildThreadsHashtags({ category, tags = [] } = {}) {
+  const results = ["#cybersecurity", "#cybernews", "#vulnerability", "#ai"];
+  for (const value of [category, ...tags]) {
+    const candidate = hashtag(value);
+    if (
+      candidate &&
+      !results.some(
+        (existing) => existing.toLowerCase() === candidate.toLowerCase(),
+      )
+    ) {
+      results.push(candidate);
+    }
+    if (results.length === 6) break;
+  }
+  return results;
+}
+
+function truncateProse(value, maximumLength) {
+  const clean = String(value).trim();
+  if ([...clean].length <= maximumLength) return clean;
+  if (maximumLength < 2)
+    throw new Error("Threads caption has no room for prose");
+  const candidate = [...clean].slice(0, maximumLength - 1).join("");
+  const boundary = candidate.lastIndexOf(" ");
+  const shortened = (
+    boundary > maximumLength / 2 ? candidate.slice(0, boundary) : candidate
+  ).trimEnd();
+  return `${shortened}…`;
+}
+
+export function buildThreadsCaption(caption, canonicalUrl, taxonomy = {}) {
   const withoutUrls = String(caption)
     .replace(/https?:\/\/\S+/gi, "")
     .trim();
-  const finalCaption = `${withoutUrls}\n\nRead the full ShadowContext briefing:\n${canonicalUrl}`;
+  const hashtags = buildThreadsHashtags(taxonomy).join(" ");
+  const suffix = `\n\n${hashtags}\n\nRead the full ShadowContext briefing:\n${canonicalUrl}`;
+  const prose = truncateProse(
+    withoutUrls,
+    THREADS_CHARACTER_LIMIT - [...suffix].length,
+  );
+  const finalCaption = `${prose}${suffix}`;
   const matches = finalCaption.match(/https?:\/\/\S+/g) || [];
   if (matches.length !== 1 || matches[0] !== canonicalUrl) {
     throw new Error(
