@@ -338,10 +338,21 @@ def write_iocs(rows: list[dict]) -> tuple[str, dict, list[dict]]:
     return hashlib.sha256(content.encode()).hexdigest(), dict(sorted(Counter(row["type"] for row in ordered).items())), feeds
 
 
+def cached_iocs() -> list[dict]:
+    if not IOC_PATH.exists():
+        return []
+    with IOC_PATH.open(encoding="utf-8", newline="") as handle:
+        return list(csv.DictReader(handle))
+
+
 def main() -> int:
     now = datetime.now(timezone.utc)
     today = now.date()
     health = []
+    try:
+        previous = json.loads(DATA_PATH.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        previous = {}
 
     kev_payload, kev_source = fetch_first(KEV_URLS)
     kev = json.loads(kev_payload)
@@ -350,8 +361,15 @@ def main() -> int:
         raise RuntimeError("CISA KEV feed returned no vulnerabilities")
     health.append({"name": "CISA KEV", "coverage": "Confirmed exploited vulnerabilities", "url": kev_source, "status": "online"})
 
-    cisa = rss_items(fetch(CISA_RSS))
-    health.append({"name": "CISA Advisories", "coverage": "Technical and industrial-control advisories", "url": CISA_RSS, "status": "online"})
+    try:
+        cisa = rss_items(fetch(CISA_RSS))
+        if not cisa:
+            raise RuntimeError("advisory feed returned no items")
+        health.append({"name": "CISA Advisories", "coverage": "Technical and industrial-control advisories", "url": CISA_RSS, "status": "online"})
+    except Exception as error:
+        print(f"warning: CISA advisory feed unavailable: {error}", file=sys.stderr)
+        cisa = []
+        health.append({"name": "CISA Advisories", "coverage": "Technical and industrial-control advisories", "url": CISA_RSS, "status": "degraded"})
 
     ncsc = []
     try:
@@ -375,6 +393,11 @@ def main() -> int:
     iocs = []
     successful_bundles = 0
     ioc_bundles = discover_ioc_bundles(cisa)
+    known_bundle_urls = {bundle["url"] for bundle in ioc_bundles}
+    for bundle in previous.get("sources", {}).get("ioc_bundles", []):
+        if bundle.get("url") not in known_bundle_urls:
+            ioc_bundles.append(bundle)
+            known_bundle_urls.add(bundle["url"])
     for bundle in ioc_bundles:
         try:
             iocs.extend(extract_iocs(bundle, today.isoformat()))
@@ -382,10 +405,14 @@ def main() -> int:
         except Exception as error:
             print(f"warning: IOC bundle unavailable ({bundle['advisory']}): {error}", file=sys.stderr)
     if not successful_bundles:
-        raise RuntimeError("all allowlisted government IOC bundles failed")
+        iocs = cached_iocs()
+        if not iocs:
+            raise RuntimeError("all allowlisted government IOC bundles failed and no validated cache exists")
+        print(f"warning: all live CISA STIX bundles failed; retained {len(iocs)} cached indicators", file=sys.stderr)
     ioc_sha, ioc_counts, ioc_feeds = write_iocs(iocs)
     ioc_total = sum(ioc_counts.values())
-    health.append({"name": "CISA STIX", "coverage": f"TLP:CLEAR indicators from {successful_bundles} advisories", "url": ioc_bundles[0]["source"], "status": "online" if successful_bundles == len(ioc_bundles) else "degraded"})
+    stix_coverage = f"TLP:CLEAR indicators from {successful_bundles} advisories" if successful_bundles else "Last validated TLP:CLEAR indicator snapshot"
+    health.append({"name": "CISA STIX", "coverage": stix_coverage, "url": ioc_bundles[0]["source"], "status": "online" if successful_bundles == len(ioc_bundles) else "degraded"})
 
     parsed = []
     for item in vulnerabilities:
@@ -424,6 +451,8 @@ def main() -> int:
     advisory_items = []
     for item in allowed_cisa[:4]:
         advisory_items.append({**item, "authority": "CISA", "severity": ""})
+    if not allowed_cisa:
+        advisory_items.extend(item for item in previous.get("advisories", []) if item.get("authority") == "CISA")
     for item in sorted(nca, key=lambda x: x["date"], reverse=True)[:3]:
         advisory_items.append(item)
     for item in sorted(ncsc, key=lambda x: x["date"], reverse=True)[:2]:
@@ -453,7 +482,7 @@ def main() -> int:
         },
         "vulnerabilities": latest,
         "platforms": platforms,
-        "actors": build_actor_items(cisa),
+        "actors": previous.get("actors", []) if not cisa and previous.get("actors") else build_actor_items(cisa),
         "advisories": advisory_items,
         "ioc_counts": ioc_counts,
         "ioc_count_summary": [

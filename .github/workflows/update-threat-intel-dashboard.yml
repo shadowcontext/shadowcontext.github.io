@@ -54,7 +54,7 @@ jobs:
           cp assets/data/daily-urls.txt "$baseline/assets/data/daily-urls.txt"
 
       - name: Fetch and normalize official intelligence
-        run: python3 automation/update_threat_dashboard.py
+        run: python3 automation/update_threat_dashboard.py 2>&1 | tee "$RUNNER_TEMP/threat-dashboard-fetch.log"
 
       - name: Validate dashboard and append-only IOC feeds
         run: |
