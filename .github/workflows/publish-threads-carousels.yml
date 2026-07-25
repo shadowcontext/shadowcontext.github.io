@@ -1,11 +1,6 @@
 name: Publish Ready Threads Carousels
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - ".github/threads-carousel-publish-now"
   schedule:
     # 08:00 UTC = 12:00 Asia/Dubai
     - cron: "0 8 * * *"
@@ -70,7 +65,7 @@ jobs:
           retention-days: 14
 
   publish:
-    if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && !inputs.dry_run) || (github.event_name == 'push' && contains(github.event.head_commit.message, '[publish ready carousels]'))
+    if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && !inputs.dry_run)
     runs-on: ubuntu-latest
     timeout-minutes: 45
     permissions:
