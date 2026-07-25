@@ -70,7 +70,11 @@
         "mainEntityOfPage": {"@id": {{ canonical_url | append: "#webpage" | jsonify }}},
         "datePublished": "{{ page.date | date_to_xmlschema }}",
         "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
-        "author": {"@id": {{ site_url | append: "#organization" | jsonify }}},
+        "author": {
+          "@type": "Organization",
+          "name": {{ page.author | default: "ShadowContext Research" | jsonify }},
+          "url": {{ site_url | jsonify }}
+        },
         "publisher": {"@id": {{ site_url | append: "#organization" | jsonify }}},
         "image": {"@type": "ImageObject", "url": {{ image_url | jsonify }}, "caption": {{ page_image_alt | jsonify }}},
         "articleSection": {{ page.category | jsonify }},
