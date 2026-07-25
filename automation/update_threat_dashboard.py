@@ -28,7 +28,10 @@ IOC_FEED_PATHS = {
 }
 USER_AGENT = "ShadowContext-Threat-Dashboard/1.0 (+https://shadowcontext.com)"
 
-KEV_URL = "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
+KEV_URLS = (
+    "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+    "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json",
+)
 CISA_RSS = "https://www.cisa.gov/cybersecurity-advisories/all.xml"
 CISA_ORIGIN = "https://www.cisa.gov"
 NCSC_FEEDS = (
@@ -104,6 +107,20 @@ def fetch(url: str, timeout: int = 30) -> bytes:
         if response.status != 200:
             raise RuntimeError(f"{url} returned HTTP {response.status}")
         return response.read()
+
+
+def fetch_first(urls: tuple[str, ...]) -> tuple[bytes, str]:
+    """Fetch the first available official endpoint and report fallback use."""
+    errors = []
+    for url in urls:
+        try:
+            payload = fetch(url)
+            if url != urls[0]:
+                print(f"warning: canonical source unavailable; used official fallback {url}", file=sys.stderr)
+            return payload, url
+        except Exception as error:
+            errors.append(f"{url}: {error}")
+    raise RuntimeError("all official source endpoints failed: " + "; ".join(errors))
 
 
 def plain(value: str | None) -> str:
@@ -326,11 +343,12 @@ def main() -> int:
     today = now.date()
     health = []
 
-    kev = json.loads(fetch(KEV_URL))
+    kev_payload, kev_source = fetch_first(KEV_URLS)
+    kev = json.loads(kev_payload)
     vulnerabilities = kev.get("vulnerabilities", [])
     if not vulnerabilities:
         raise RuntimeError("CISA KEV feed returned no vulnerabilities")
-    health.append({"name": "CISA KEV", "coverage": "Confirmed exploited vulnerabilities", "url": KEV_URL, "status": "online"})
+    health.append({"name": "CISA KEV", "coverage": "Confirmed exploited vulnerabilities", "url": kev_source, "status": "online"})
 
     cisa = rss_items(fetch(CISA_RSS))
     health.append({"name": "CISA Advisories", "coverage": "Technical and industrial-control advisories", "url": CISA_RSS, "status": "online"})
