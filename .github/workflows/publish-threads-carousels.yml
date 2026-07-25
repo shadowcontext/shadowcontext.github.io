@@ -1,6 +1,11 @@
 name: Publish Threads Carousels
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/threads-carousel-live-test"
   schedule:
     - cron: "5 0 * * *"
       timezone: "Asia/Dubai"
@@ -100,7 +105,7 @@ jobs:
         run: node automation/threads-carousel/cli.mjs assert-result
 
   publish:
-    if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && !inputs.dry_run)
+    if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && !inputs.dry_run) || (github.event_name == 'push' && contains(github.event.head_commit.message, '[run threads carousel test]'))
     runs-on: ubuntu-latest
     timeout-minutes: 45
     permissions:
@@ -155,8 +160,12 @@ jobs:
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
           SELECTED_WINDOW: ${{ github.event_name == 'workflow_dispatch' && inputs.window || 'auto' }}
           SELECTED_POST: ${{ github.event_name == 'workflow_dispatch' && inputs.post_url || '' }}
+          EVENT_NAME: ${{ github.event_name }}
           MAX_POSTS: ${{ vars.THREADS_MAX_POSTS_PER_RUN }}
         run: |
+          if [[ "$EVENT_NAME" == "push" ]]; then
+            SELECTED_POST="$(tr -d '\r\n' < .github/threads-carousel-live-test)"
+          fi
           arguments=(
             prepare
             --dry-run false
