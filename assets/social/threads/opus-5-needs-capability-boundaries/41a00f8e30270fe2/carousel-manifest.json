@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "status": "ready",
+  "generatedAt": "2026-07-26T14:13:04.501+04:00",
+  "id": "https://shadowcontext.com/opus-5-needs-capability-boundaries/",
+  "title": "Claude Opus 5 Needs Capability Boundaries, Not Just Model Safeguards",
+  "canonicalUrl": "https://shadowcontext.com/opus-5-needs-capability-boundaries/",
+  "publicationTimestamp": "2026-07-26T14:10:26.000+04:00",
+  "sourceHash": "2294c3f551722a9ab1784df1a0773e284006b384dbfe1415f6a62023070f41df",
+  "carouselHash": "41a00f8e30270fe248f5012f89ed22d291b0c970a6b0b6d48c1d370c842226df",
+  "category": "ai-security",
+  "caption": "Claude Opus 5 safety evaluations demonstrate that capable AI agents require scoped tools, approval gates, isolation, and deployment evidence to manage risk effectively.\n\n#cybersecurity #cybernews #vulnerability #ai #AiSecurity #AiAgents\n\nRead the full ShadowContext briefing:\nhttps://shadowcontext.com/opus-5-needs-capability-boundaries/",
+  "imageUrls": [
+    "https://shadowcontext.com/assets/social/threads/opus-5-needs-capability-boundaries/41a00f8e30270fe2/slide-01.png",
+    "https://shadowcontext.com/assets/social/threads/opus-5-needs-capability-boundaries/41a00f8e30270fe2/slide-02.png",
+    "https://shadowcontext.com/assets/social/threads/opus-5-needs-capability-boundaries/41a00f8e30270fe2/slide-03.png",
+    "https://shadowcontext.com/assets/social/threads/opus-5-needs-capability-boundaries/41a00f8e30270fe2/slide-04.png"
+  ],
+  "imageFiles": [
+    "assets/social/threads/opus-5-needs-capability-boundaries/41a00f8e30270fe2/slide-01.png",
+    "assets/social/threads/opus-5-needs-capability-boundaries/41a00f8e30270fe2/slide-02.png",
+    "assets/social/threads/opus-5-needs-capability-boundaries/41a00f8e30270fe2/slide-03.png",
+    "assets/social/threads/opus-5-needs-capability-boundaries/41a00f8e30270fe2/slide-04.png"
+  ],
+  "altTexts": [
+    "ShadowContext security briefing for Claude Opus 5 Needs Capability Boundaries, Not Just Model Safeguards, slide 1 of 4",
+    "ShadowContext security briefing for Claude Opus 5 Needs Capability Boundaries, Not Just Model Safeguards, slide 2 of 4",
+    "ShadowContext security briefing for Claude Opus 5 Needs Capability Boundaries, Not Just Model Safeguards, slide 3 of 4",
+    "ShadowContext security briefing for Claude Opus 5 Needs Capability Boundaries, Not Just Model Safeguards, slide 4 of 4"
+  ]
+}
