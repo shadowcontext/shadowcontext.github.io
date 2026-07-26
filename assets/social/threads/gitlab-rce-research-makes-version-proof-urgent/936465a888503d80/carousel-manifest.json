@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "status": "ready",
+  "generatedAt": "2026-07-26T04:13:56.762+04:00",
+  "id": "https://shadowcontext.com/gitlab-rce-research-makes-version-proof-urgent/",
+  "title": "GitLab RCE Research Makes Version Proof Urgent",
+  "canonicalUrl": "https://shadowcontext.com/gitlab-rce-research-makes-version-proof-urgent/",
+  "publicationTimestamp": "2026-07-26T04:11:24.000+04:00",
+  "sourceHash": "4d41956c3e9cf8b1c129f97ced1317d10a78ed07efa39c9b7745b0189c7d162c",
+  "carouselHash": "936465a888503d808b0b8c1ee7fc0804810f63ee84ab30bf6683a215ac15139e",
+  "category": "defense",
+  "caption": "Operators of self managed GitLab should verify running application versions following public remote code execution research. Ensure deployments run fixed releases and review native code dependency changes that process untrusted data.\n\n#cybersecurity #cybernews #vulnerability #ai #Defense #Gitlab\n\nRead the full ShadowContext briefing:\nhttps://shadowcontext.com/gitlab-rce-research-makes-version-proof-urgent/",
+  "imageUrls": [
+    "https://shadowcontext.com/assets/social/threads/gitlab-rce-research-makes-version-proof-urgent/936465a888503d80/slide-01.png",
+    "https://shadowcontext.com/assets/social/threads/gitlab-rce-research-makes-version-proof-urgent/936465a888503d80/slide-02.png",
+    "https://shadowcontext.com/assets/social/threads/gitlab-rce-research-makes-version-proof-urgent/936465a888503d80/slide-03.png",
+    "https://shadowcontext.com/assets/social/threads/gitlab-rce-research-makes-version-proof-urgent/936465a888503d80/slide-04.png"
+  ],
+  "imageFiles": [
+    "assets/social/threads/gitlab-rce-research-makes-version-proof-urgent/936465a888503d80/slide-01.png",
+    "assets/social/threads/gitlab-rce-research-makes-version-proof-urgent/936465a888503d80/slide-02.png",
+    "assets/social/threads/gitlab-rce-research-makes-version-proof-urgent/936465a888503d80/slide-03.png",
+    "assets/social/threads/gitlab-rce-research-makes-version-proof-urgent/936465a888503d80/slide-04.png"
+  ],
+  "altTexts": [
+    "ShadowContext security briefing for GitLab RCE Research Makes Version Proof Urgent, slide 1 of 4",
+    "ShadowContext security briefing for GitLab RCE Research Makes Version Proof Urgent, slide 2 of 4",
+    "ShadowContext security briefing for GitLab RCE Research Makes Version Proof Urgent, slide 3 of 4",
+    "ShadowContext security briefing for GitLab RCE Research Makes Version Proof Urgent, slide 4 of 4"
+  ]
+}
