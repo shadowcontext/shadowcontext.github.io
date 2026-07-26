@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Configuration-aware protection for layered web forms</title>
+  <desc id="desc">Abstract layered form panels pass through a guarded blue gateway while an amber configuration node is isolated from an identity profile.</desc>
+  <defs>
+    <linearGradient id="background" x1="130" y1="80" x2="1450" y2="820" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#07162F"/>
+      <stop offset="0.52" stop-color="#0B2D50"/>
+      <stop offset="1" stop-color="#071B35"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="0" cy="0" r="1" gradientTransform="translate(1155 414) rotate(148) scale(520 390)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#23B5D3" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#23B5D3" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="365" y1="242" x2="892" y2="678" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EAF8FF" stop-opacity=".94"/>
+      <stop offset="1" stop-color="#9ED7EC" stop-opacity=".66"/>
+    </linearGradient>
+    <linearGradient id="gate" x1="956" y1="207" x2="1224" y2="705" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6CE4EF"/>
+      <stop offset=".52" stop-color="#218EB7"/>
+      <stop offset="1" stop-color="#125076"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="1050" y1="325" x2="1197" y2="568" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E8FCFF"/>
+      <stop offset="1" stop-color="#75D8E8"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#020A16" flood-opacity=".48"/>
+    </filter>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <pattern id="grain" width="80" height="80" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="13" r="1.2" fill="#B6ECF7" opacity=".12"/>
+      <circle cx="43" cy="32" r=".8" fill="#B6ECF7" opacity=".1"/>
+      <circle cx="68" cy="65" r="1" fill="#B6ECF7" opacity=".08"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#aura)"/>
+  <rect width="1600" height="900" fill="url(#grain)"/>
+
+  <g opacity=".24" fill="none" stroke="#67D2E5" stroke-width="2">
+    <path d="M76 160C252 89 352 130 485 91"/>
+    <path d="M1177 108C1333 159 1438 154 1546 102"/>
+    <path d="M90 754C220 697 322 731 448 789"/>
+    <path d="M1274 773C1397 724 1482 729 1571 778"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <path d="M300 285L692 191L873 322L472 428Z" fill="#4C9BBC" opacity=".28"/>
+    <path d="M275 340L690 237L880 378L452 492Z" fill="#6AB7D0" opacity=".38"/>
+    <path d="M255 402L689 292L893 440L443 563Z" fill="#84C9DC" opacity=".52"/>
+    <path d="M246 469L689 351L909 506L444 639Z" fill="url(#panel)"/>
+  </g>
+
+  <g fill="#0B3558" opacity=".72">
+    <rect x="382" y="454" width="298" height="18" rx="9" transform="rotate(-15 382 454)"/>
+    <rect x="407" y="510" width="242" height="15" rx="7.5" transform="rotate(-15 407 510)"/>
+    <rect x="429" y="560" width="172" height="15" rx="7.5" transform="rotate(-15 429 560)"/>
+  </g>
+  <g fill="#E8FAFF" stroke="#206889" stroke-width="5">
+    <circle cx="724" cy="399" r="21"/>
+    <circle cx="766" cy="447" r="21"/>
+    <circle cx="808" cy="495" r="21"/>
+  </g>
+
+  <path d="M820 437C902 424 947 424 1012 433" fill="none" stroke="#78DCE9" stroke-width="10" stroke-linecap="round" opacity=".48"/>
+  <path d="M827 492C905 485 949 484 1012 487" fill="none" stroke="#78DCE9" stroke-width="10" stroke-linecap="round" opacity=".32"/>
+
+  <g filter="url(#shadow)">
+    <path d="M1015 199L1246 256V633L1015 702L930 649V250L1015 199Z" fill="url(#gate)" opacity=".95"/>
+    <path d="M1015 242L1201 287V601L1015 656L972 629V276L1015 242Z" fill="#082542" opacity=".94"/>
+    <path d="M1015 242V656L972 629V276L1015 242Z" fill="#104A70"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <path d="M1090 338L1168 367V445C1168 503 1136 544 1090 568C1044 544 1012 503 1012 445V367L1090 338Z" fill="url(#shield)"/>
+    <path d="M1054 444L1077 467L1128 409" fill="none" stroke="#0B5378" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g>
+    <circle cx="806" cy="690" r="84" fill="#F6A83B" opacity=".14" filter="url(#glow)"/>
+    <circle cx="806" cy="690" r="52" fill="#F6A83B"/>
+    <circle cx="806" cy="690" r="27" fill="#FFF0C7"/>
+    <path d="M846 665C901 626 953 616 1002 632" fill="none" stroke="#F6A83B" stroke-width="9" stroke-linecap="round"/>
+    <path d="M844 718C902 755 966 749 1020 700" fill="none" stroke="#F6A83B" stroke-width="5" stroke-linecap="round" opacity=".62"/>
+  </g>
+
+  <g transform="translate(1228 475)" filter="url(#shadow)">
+    <circle cx="108" cy="95" r="108" fill="#0A3557" stroke="#43B9D1" stroke-width="5"/>
+    <circle cx="108" cy="66" r="32" fill="#B6EAF2"/>
+    <path d="M48 154C55 112 76 95 108 95C140 95 161 112 168 154" fill="#77CFE0"/>
+    <path d="M25 182H191" stroke="#43B9D1" stroke-width="4" stroke-linecap="round" opacity=".5"/>
+  </g>
+
+  <g fill="#7AD8E6">
+    <circle cx="196" cy="211" r="6"/>
+    <circle cx="1402" cy="268" r="8" opacity=".7"/>
+    <circle cx="1322" cy="174" r="4" opacity=".55"/>
+    <circle cx="1447" cy="681" r="5" opacity=".65"/>
+  </g>
+</svg>
