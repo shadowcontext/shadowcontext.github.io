@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "status": "ready",
+  "generatedAt": "2026-07-26T19:11:57.761+04:00",
+  "id": "https://shadowcontext.com/schema-codegen-needs-an-execution-boundary/",
+  "title": "Schema Code Generation Needs an Execution Boundary",
+  "canonicalUrl": "https://shadowcontext.com/schema-codegen-needs-an-execution-boundary/",
+  "publicationTimestamp": "2026-07-26T19:09:21.000+04:00",
+  "sourceHash": "3166f6e64771ae6bc951bd2d93f8a4d7c308d5164eef9b748467d01428dc4720",
+  "carouselHash": "679f8f989f34292c1d4cd1b25d45a1c39a4c8741c3511c1faa6f819aae2aea2f",
+  "category": "defense",
+  "caption": "Schema code generation transforms data inputs into executable source code, creating critical trust boundaries that require careful version control, package verification, and strict isolation during build pipelines.\n\n#cybersecurity #cybernews #vulnerability #ai #Defense #Python\n\nRead the full ShadowContext briefing:\nhttps://shadowcontext.com/schema-codegen-needs-an-execution-boundary/",
+  "imageUrls": [
+    "https://shadowcontext.com/assets/social/threads/schema-codegen-needs-an-execution-boundary/679f8f989f34292c/slide-01.png",
+    "https://shadowcontext.com/assets/social/threads/schema-codegen-needs-an-execution-boundary/679f8f989f34292c/slide-02.png",
+    "https://shadowcontext.com/assets/social/threads/schema-codegen-needs-an-execution-boundary/679f8f989f34292c/slide-03.png",
+    "https://shadowcontext.com/assets/social/threads/schema-codegen-needs-an-execution-boundary/679f8f989f34292c/slide-04.png"
+  ],
+  "imageFiles": [
+    "assets/social/threads/schema-codegen-needs-an-execution-boundary/679f8f989f34292c/slide-01.png",
+    "assets/social/threads/schema-codegen-needs-an-execution-boundary/679f8f989f34292c/slide-02.png",
+    "assets/social/threads/schema-codegen-needs-an-execution-boundary/679f8f989f34292c/slide-03.png",
+    "assets/social/threads/schema-codegen-needs-an-execution-boundary/679f8f989f34292c/slide-04.png"
+  ],
+  "altTexts": [
+    "ShadowContext security briefing for Schema Code Generation Needs an Execution Boundary, slide 1 of 4",
+    "ShadowContext security briefing for Schema Code Generation Needs an Execution Boundary, slide 2 of 4",
+    "ShadowContext security briefing for Schema Code Generation Needs an Execution Boundary, slide 3 of 4",
+    "ShadowContext security briefing for Schema Code Generation Needs an Execution Boundary, slide 4 of 4"
+  ]
+}
