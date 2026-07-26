@@ -22,6 +22,94 @@
       "published_at": "2026-07-26T00:45:49.412+04:00",
       "status": "published",
       "last_error": null
+    },
+    "https://shadowcontext.com/external-ai-guardrails-need-deployment-evidence/": {
+      "article_publication_timestamp": "2026-07-26T01:10:26.000+04:00",
+      "source_hash": "1ce63e1bb7383f0a62ad3e7e4c8fb248e5609fdb9370c36cd0b1711fdb3067f9",
+      "carousel_hash": "21e327bfcf685f0905f976f7b44c35d30fadfc78b930d5ea4f17cee3f5d8a904",
+      "image_urls": [
+        "https://shadowcontext.com/assets/social/threads/external-ai-guardrails-need-deployment-evidence/21e327bfcf685f09/slide-01.png",
+        "https://shadowcontext.com/assets/social/threads/external-ai-guardrails-need-deployment-evidence/21e327bfcf685f09/slide-02.png",
+        "https://shadowcontext.com/assets/social/threads/external-ai-guardrails-need-deployment-evidence/21e327bfcf685f09/slide-03.png",
+        "https://shadowcontext.com/assets/social/threads/external-ai-guardrails-need-deployment-evidence/21e327bfcf685f09/slide-04.png"
+      ],
+      "child_container_ids": [
+        "17907785946445078",
+        "17907785961445078",
+        "17907785976445078",
+        "17907785991445078"
+      ],
+      "carousel_container_id": "17907786009445078",
+      "threads_post_id": "18103405367273082",
+      "published_at": "2026-07-26T13:52:51.782+04:00",
+      "status": "published",
+      "last_error": null
+    },
+    "https://shadowcontext.com/gitlab-rce-research-makes-version-proof-urgent/": {
+      "article_publication_timestamp": "2026-07-26T04:11:24.000+04:00",
+      "source_hash": "4d41956c3e9cf8b1c129f97ced1317d10a78ed07efa39c9b7745b0189c7d162c",
+      "carousel_hash": "936465a888503d808b0b8c1ee7fc0804810f63ee84ab30bf6683a215ac15139e",
+      "image_urls": [
+        "https://shadowcontext.com/assets/social/threads/gitlab-rce-research-makes-version-proof-urgent/936465a888503d80/slide-01.png",
+        "https://shadowcontext.com/assets/social/threads/gitlab-rce-research-makes-version-proof-urgent/936465a888503d80/slide-02.png",
+        "https://shadowcontext.com/assets/social/threads/gitlab-rce-research-makes-version-proof-urgent/936465a888503d80/slide-03.png",
+        "https://shadowcontext.com/assets/social/threads/gitlab-rce-research-makes-version-proof-urgent/936465a888503d80/slide-04.png"
+      ],
+      "child_container_ids": [
+        "17907786030445078",
+        "17907786048445078",
+        "17907786069445078",
+        "17907786162445078"
+      ],
+      "carousel_container_id": "17907786183445078",
+      "threads_post_id": "17996947448994032",
+      "published_at": "2026-07-26T13:52:51.782+04:00",
+      "status": "published",
+      "last_error": null
+    },
+    "https://shadowcontext.com/mcp-tools-need-action-level-authorization/": {
+      "article_publication_timestamp": "2026-07-26T06:11:29.000+04:00",
+      "source_hash": "9e0385281659d9f9fe9f5d74bb1a1b99815e9663c918ef0791f78aea929eb3e3",
+      "carousel_hash": "92ea7906d64700e62a9d7cbcf793195358bef2f483ccfbed25296792262e3cc2",
+      "image_urls": [
+        "https://shadowcontext.com/assets/social/threads/mcp-tools-need-action-level-authorization/92ea7906d64700e6/slide-01.png",
+        "https://shadowcontext.com/assets/social/threads/mcp-tools-need-action-level-authorization/92ea7906d64700e6/slide-02.png",
+        "https://shadowcontext.com/assets/social/threads/mcp-tools-need-action-level-authorization/92ea7906d64700e6/slide-03.png",
+        "https://shadowcontext.com/assets/social/threads/mcp-tools-need-action-level-authorization/92ea7906d64700e6/slide-04.png"
+      ],
+      "child_container_ids": [
+        "17907786201445078",
+        "17907786219445078",
+        "17907786237445078",
+        "17907786252445078"
+      ],
+      "carousel_container_id": "17907786270445078",
+      "threads_post_id": "18105574352119657",
+      "published_at": "2026-07-26T13:52:51.782+04:00",
+      "status": "published",
+      "last_error": null
+    },
+    "https://shadowcontext.com/forum-clickfix-turns-help-into-execution-risk/": {
+      "article_publication_timestamp": "2026-07-26T13:10:19.000+04:00",
+      "source_hash": "d49eda5bf067c16a18f5236afc52d65bd2822e37cb693607370c35b6f95c79d5",
+      "carousel_hash": "528973283b8ae2e090237d6ad5da7f916d2b150fcbe1e3f3ab72793e75d4217b",
+      "image_urls": [
+        "https://shadowcontext.com/assets/social/threads/forum-clickfix-turns-help-into-execution-risk/528973283b8ae2e0/slide-01.png",
+        "https://shadowcontext.com/assets/social/threads/forum-clickfix-turns-help-into-execution-risk/528973283b8ae2e0/slide-02.png",
+        "https://shadowcontext.com/assets/social/threads/forum-clickfix-turns-help-into-execution-risk/528973283b8ae2e0/slide-03.png",
+        "https://shadowcontext.com/assets/social/threads/forum-clickfix-turns-help-into-execution-risk/528973283b8ae2e0/slide-04.png"
+      ],
+      "child_container_ids": [
+        "17907786276445078",
+        "17907786294445078",
+        "17907786312445078",
+        "17907786333445078"
+      ],
+      "carousel_container_id": "17907786351445078",
+      "threads_post_id": "17893122459570987",
+      "published_at": "2026-07-26T13:52:51.782+04:00",
+      "status": "published",
+      "last_error": null
     }
   }
 }
