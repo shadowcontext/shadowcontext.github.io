@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "status": "ready",
+  "generatedAt": "2026-07-27T01:12:46.071+04:00",
+  "id": "https://shadowcontext.com/notegen-needs-capability-boundaries/",
+  "title": "NoteGen Fix Separates AI Content From Desktop Command Execution",
+  "canonicalUrl": "https://shadowcontext.com/notegen-needs-capability-boundaries/",
+  "publicationTimestamp": "2026-07-27T01:10:08.000+04:00",
+  "sourceHash": "f1b58996a5dedee9575d69b9ff4ce0b9fe511e7586d9ca475c1f505d6a9c5f7a",
+  "carouselHash": "6b569f65bb1e49f06251c7c0f6068fd2a7cffd32fdda2322bbe455f06b6c5d91",
+  "category": "ai-security",
+  "caption": "NoteGen versions before 0.32.0 exposed shell execution to the webview, highlighting the need for least-privilege capability design in desktop AI tools.\n\n#cybersecurity #cybernews #vulnerability #ai #AiSecurity #Notegen\n\nRead the full ShadowContext briefing:\nhttps://shadowcontext.com/notegen-needs-capability-boundaries/",
+  "imageUrls": [
+    "https://shadowcontext.com/assets/social/threads/notegen-needs-capability-boundaries/6b569f65bb1e49f0/slide-01.png",
+    "https://shadowcontext.com/assets/social/threads/notegen-needs-capability-boundaries/6b569f65bb1e49f0/slide-02.png",
+    "https://shadowcontext.com/assets/social/threads/notegen-needs-capability-boundaries/6b569f65bb1e49f0/slide-03.png",
+    "https://shadowcontext.com/assets/social/threads/notegen-needs-capability-boundaries/6b569f65bb1e49f0/slide-04.png"
+  ],
+  "imageFiles": [
+    "assets/social/threads/notegen-needs-capability-boundaries/6b569f65bb1e49f0/slide-01.png",
+    "assets/social/threads/notegen-needs-capability-boundaries/6b569f65bb1e49f0/slide-02.png",
+    "assets/social/threads/notegen-needs-capability-boundaries/6b569f65bb1e49f0/slide-03.png",
+    "assets/social/threads/notegen-needs-capability-boundaries/6b569f65bb1e49f0/slide-04.png"
+  ],
+  "altTexts": [
+    "ShadowContext security briefing for NoteGen Fix Separates AI Content From Desktop Command Execution, slide 1 of 4",
+    "ShadowContext security briefing for NoteGen Fix Separates AI Content From Desktop Command Execution, slide 2 of 4",
+    "ShadowContext security briefing for NoteGen Fix Separates AI Content From Desktop Command Execution, slide 3 of 4",
+    "ShadowContext security briefing for NoteGen Fix Separates AI Content From Desktop Command Execution, slide 4 of 4"
+  ]
+}
