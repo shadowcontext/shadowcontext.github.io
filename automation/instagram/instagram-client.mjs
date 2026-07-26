@@ -160,5 +160,29 @@ export function createInstagramClient({
     };
   }
 
-  return { discoverAccount, publishCarousel };
+  async function findRecentPost(canonicalUrl) {
+    const account = await discoverAccount();
+    const payload = await request(`/${encodeURIComponent(account.id)}/media`, {
+      params: {
+        fields: "id,permalink,caption,timestamp,media_type",
+        limit: "10",
+      },
+    });
+    const match = (payload.data || []).find((media) =>
+      String(media.caption || "").includes(canonicalUrl),
+    );
+    return {
+      account,
+      media: match
+        ? {
+            id: String(match.id),
+            permalink: match.permalink ? String(match.permalink) : null,
+            timestamp: match.timestamp ? String(match.timestamp) : null,
+            mediaType: match.media_type ? String(match.media_type) : null,
+          }
+        : null,
+    };
+  }
+
+  return { discoverAccount, findRecentPost, publishCarousel };
 }

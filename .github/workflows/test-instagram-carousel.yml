@@ -32,22 +32,19 @@ jobs:
       - name: Test Instagram client
         run: node --test automation/instagram/*.test.mjs
 
-      - name: Publish latest carousel to Instagram
-        id: publish
-        continue-on-error: true
+      - name: Diagnose shared token and check recent Instagram media
         env:
           THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
           THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
           INSTAGRAM_GRAPH_API_VERSION: ${{ vars.INSTAGRAM_GRAPH_API_VERSION }}
-        run: node automation/instagram/publish-latest-carousel.mjs
+        run: node automation/instagram/diagnose-shared-token.mjs
 
-      - name: Commit successful Instagram publication state
-        if: steps.publish.outcome == 'success'
+      - name: Commit sanitized diagnostic
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- automation/instagram/state.json
-          git commit -m "chore: record Instagram carousel publication"
+          git add -- automation/instagram/last-diagnostic.json
+          git commit -m "test: record Instagram token diagnostic"
           git pull --rebase origin main
           git push origin HEAD:main
 
@@ -59,9 +56,3 @@ jobs:
           path: .artifacts/instagram/
           if-no-files-found: warn
           retention-days: 14
-
-      - name: Enforce publication result
-        if: steps.publish.outcome == 'failure'
-        run: |
-          echo "::error::Instagram carousel publication failed. Inspect the sanitized artifact."
-          exit 1
