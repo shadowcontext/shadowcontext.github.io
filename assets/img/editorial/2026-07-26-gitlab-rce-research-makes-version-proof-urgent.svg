@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Repository vault protected by a verified patch layer</title>
+  <desc id="desc">An abstract dark repository vault sits behind a luminous teal boundary while fragmented amber data forms press toward the protected edge.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07131f"/>
+      <stop offset="0.52" stop-color="#10273a"/>
+      <stop offset="1" stop-color="#07101a"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="48%" r="55%">
+      <stop offset="0" stop-color="#1ce1c2" stop-opacity="0.2"/>
+      <stop offset="0.58" stop-color="#1089a2" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#07131f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6fffe8"/>
+      <stop offset="0.48" stop-color="#19cdb4"/>
+      <stop offset="1" stop-color="#0a738a"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#dffcff" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#4aa3c2" stop-opacity="0.03"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd071"/>
+      <stop offset="0.5" stop-color="#f58a3b"/>
+      <stop offset="1" stop-color="#a83a38"/>
+    </linearGradient>
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="smallGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#000812" flood-opacity="0.65"/>
+    </filter>
+    <pattern id="mesh" width="56" height="56" patternUnits="userSpaceOnUse">
+      <path d="M56 0H0V56" fill="none" stroke="#8ad8e5" stroke-opacity="0.055" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#mesh)"/>
+  <ellipse cx="860" cy="440" rx="650" ry="410" fill="url(#halo)"/>
+
+  <g opacity="0.5">
+    <path d="M95 724C310 638 376 697 544 635S844 519 1018 570s298 45 487-42" fill="none" stroke="#57bcd0" stroke-opacity="0.16" stroke-width="2"/>
+    <path d="M110 761C320 692 408 739 572 681s278-129 449-79 304 34 463-27" fill="none" stroke="#57bcd0" stroke-opacity="0.09" stroke-width="2"/>
+  </g>
+
+  <g transform="translate(690 142)" filter="url(#shadow)">
+    <path d="M235 0 470 126v290L235 542 0 416V126Z" fill="#071521" stroke="#37788c" stroke-width="3"/>
+    <path d="M235 28 442 140v260L235 512 28 400V140Z" fill="url(#glass)" stroke="#7bd8dd" stroke-opacity="0.35" stroke-width="2"/>
+    <path d="m235 28 207 112-207 114L28 140Z" fill="#173447" stroke="#73c9d2" stroke-opacity="0.35" stroke-width="2"/>
+    <path d="M235 254v258L28 400V140Z" fill="#0d2535"/>
+    <path d="M235 254v258l207-112V140Z" fill="#0a1e2c"/>
+
+    <g opacity="0.82">
+      <path d="m90 181 145 78 145-78v58l-145 79-145-79Z" fill="#23485a" stroke="#76c9d3" stroke-opacity="0.35"/>
+      <path d="m90 265 145 79 145-79v58l-145 79-145-79Z" fill="#193b4c" stroke="#76c9d3" stroke-opacity="0.28"/>
+      <path d="m90 350 145 78 145-78v50l-145 79-145-79Z" fill="#123141" stroke="#76c9d3" stroke-opacity="0.2"/>
+    </g>
+
+    <path d="M235 62 414 158v218L235 474 56 376V158Z" fill="none" stroke="url(#shield)" stroke-width="14" stroke-linejoin="round"/>
+    <path d="M235 62 414 158v218L235 474" fill="none" stroke="#a5fff0" stroke-opacity="0.7" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="414" cy="258" r="15" fill="#7effe9"/>
+    <circle cx="414" cy="258" r="34" fill="#35e0c4" opacity="0.28" filter="url(#smallGlow)"/>
+  </g>
+
+  <g transform="translate(132 188)">
+    <path d="M0 86 136 8l120 66-136 80Z" fill="url(#amber)" opacity="0.72"/>
+    <path d="m171 187 119-69 109 61-121 70Z" fill="#f19947" opacity="0.62"/>
+    <path d="m25 284 146-84 120 68-146 84Z" fill="#d75d3e" opacity="0.54"/>
+    <path d="m223 389 112-65 95 54-112 65Z" fill="#ffbd60" opacity="0.58"/>
+    <path d="m29 486 129-74 110 61-130 76Z" fill="#be4340" opacity="0.48"/>
+    <g fill="none" stroke="#ffd889" stroke-width="5" stroke-linecap="round" opacity="0.76">
+      <path d="m60 80 76-43 65 36"/>
+      <path d="m211 183 79-45 60 34"/>
+      <path d="m65 278 85-49 75 42"/>
+      <path d="m257 383 77-44 53 30"/>
+      <path d="m73 480 83-48 62 35"/>
+    </g>
+  </g>
+
+  <g opacity="0.8">
+    <path d="M480 232c98 14 137 62 185 125" fill="none" stroke="#f19a4a" stroke-width="6" stroke-dasharray="9 22" stroke-linecap="round"/>
+    <path d="M468 432c109 2 154 38 211 86" fill="none" stroke="#df6341" stroke-width="6" stroke-dasharray="9 22" stroke-linecap="round"/>
+    <path d="M473 628c98-16 144-4 213 28" fill="none" stroke="#f2b05b" stroke-width="6" stroke-dasharray="9 22" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(1100 636)">
+    <path d="m0 58 92-53 92 53-92 54Z" fill="#183b4c" stroke="#58b9c7" stroke-width="2"/>
+    <path d="m92 112 92-54v58l-92 53-92-53V58Z" fill="#0d2534" stroke="#3b8799" stroke-width="2"/>
+    <path d="m220 35 72-42 73 42-73 42Z" fill="#173647" stroke="#58b9c7" stroke-width="2"/>
+    <path d="m292 77 73-42v48l-73 42-72-42V35Z" fill="#0b2231" stroke="#3b8799" stroke-width="2"/>
+    <circle cx="92" cy="58" r="9" fill="#58f2da"/>
+    <circle cx="292" cy="35" r="8" fill="#58f2da"/>
+  </g>
+
+  <g filter="url(#softGlow)" opacity="0.34">
+    <ellipse cx="925" cy="438" rx="220" ry="300" fill="#1fe0c3"/>
+    <ellipse cx="495" cy="432" rx="95" ry="265" fill="#ed7b42"/>
+  </g>
+
+  <path d="M1325 148c56 24 96 63 121 118" fill="none" stroke="#76d9df" stroke-opacity="0.22" stroke-width="3"/>
+  <circle cx="1450" cy="280" r="7" fill="#76d9df" opacity="0.55"/>
+  <circle cx="1358" cy="164" r="4" fill="#76d9df" opacity="0.45"/>
+</svg>
