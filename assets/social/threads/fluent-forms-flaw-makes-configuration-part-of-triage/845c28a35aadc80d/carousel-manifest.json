@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "status": "ready",
+  "generatedAt": "2026-07-26T23:12:54.074+04:00",
+  "id": "https://shadowcontext.com/fluent-forms-flaw-makes-configuration-part-of-triage/",
+  "title": "Fluent Forms flaw makes configuration part of patch triage",
+  "canonicalUrl": "https://shadowcontext.com/fluent-forms-flaw-makes-configuration-part-of-triage/",
+  "publicationTimestamp": "2026-07-26T23:10:19.000+04:00",
+  "sourceHash": "0a23ef7f4b5740f9075ec0a5e46ad516619cb7acef768437e618f6810b8c0190",
+  "carouselHash": "845c28a35aadc80dfc8977126a78f67c077fd74bb236ba91d7b2f96ce3622313",
+  "category": "defense",
+  "caption": "Defenders analyzing CVE-2026-15962 must review both plugin versions and specific configuration settings to accurately prioritize remediation.\n\n#cybersecurity #cybernews #vulnerability #ai #Defense #Wordpress\n\nRead the full ShadowContext briefing:\nhttps://shadowcontext.com/fluent-forms-flaw-makes-configuration-part-of-triage/",
+  "imageUrls": [
+    "https://shadowcontext.com/assets/social/threads/fluent-forms-flaw-makes-configuration-part-of-triage/845c28a35aadc80d/slide-01.png",
+    "https://shadowcontext.com/assets/social/threads/fluent-forms-flaw-makes-configuration-part-of-triage/845c28a35aadc80d/slide-02.png",
+    "https://shadowcontext.com/assets/social/threads/fluent-forms-flaw-makes-configuration-part-of-triage/845c28a35aadc80d/slide-03.png",
+    "https://shadowcontext.com/assets/social/threads/fluent-forms-flaw-makes-configuration-part-of-triage/845c28a35aadc80d/slide-04.png"
+  ],
+  "imageFiles": [
+    "assets/social/threads/fluent-forms-flaw-makes-configuration-part-of-triage/845c28a35aadc80d/slide-01.png",
+    "assets/social/threads/fluent-forms-flaw-makes-configuration-part-of-triage/845c28a35aadc80d/slide-02.png",
+    "assets/social/threads/fluent-forms-flaw-makes-configuration-part-of-triage/845c28a35aadc80d/slide-03.png",
+    "assets/social/threads/fluent-forms-flaw-makes-configuration-part-of-triage/845c28a35aadc80d/slide-04.png"
+  ],
+  "altTexts": [
+    "ShadowContext security briefing for Fluent Forms flaw makes configuration part of patch triage, slide 1 of 4",
+    "ShadowContext security briefing for Fluent Forms flaw makes configuration part of patch triage, slide 2 of 4",
+    "ShadowContext security briefing for Fluent Forms flaw makes configuration part of patch triage, slide 3 of 4",
+    "ShadowContext security briefing for Fluent Forms flaw makes configuration part of patch triage, slide 4 of 4"
+  ]
+}
