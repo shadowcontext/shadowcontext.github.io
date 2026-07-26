@@ -110,6 +110,86 @@
       "published_at": "2026-07-26T13:52:51.782+04:00",
       "status": "published",
       "last_error": null
+    },
+    "https://shadowcontext.com/opus-5-needs-capability-boundaries/": {
+      "article_publication_timestamp": "2026-07-26T14:10:26.000+04:00",
+      "source_hash": "2294c3f551722a9ab1784df1a0773e284006b384dbfe1415f6a62023070f41df",
+      "carousel_hash": "41a00f8e30270fe248f5012f89ed22d291b0c970a6b0b6d48c1d370c842226df",
+      "image_urls": [
+        "https://shadowcontext.com/assets/social/threads/opus-5-needs-capability-boundaries/41a00f8e30270fe2/slide-01.png",
+        "https://shadowcontext.com/assets/social/threads/opus-5-needs-capability-boundaries/41a00f8e30270fe2/slide-02.png",
+        "https://shadowcontext.com/assets/social/threads/opus-5-needs-capability-boundaries/41a00f8e30270fe2/slide-03.png",
+        "https://shadowcontext.com/assets/social/threads/opus-5-needs-capability-boundaries/41a00f8e30270fe2/slide-04.png"
+      ],
+      "child_container_ids": [
+        "17907864048445078",
+        "17907864063445078",
+        "17907864084445078",
+        "17907864102445078"
+      ],
+      "carousel_container_id": "17907864120445078",
+      "threads_post_id": "18080315621670916",
+      "published_at": "2026-07-27T01:05:25.205+04:00",
+      "status": "published",
+      "last_error": null
+    },
+    "https://shadowcontext.com/browser-assembled-malware-demands-chain-level-detection/": {
+      "article_publication_timestamp": "2026-07-26T16:10:04.000+04:00",
+      "source_hash": "7a61aad5eda92a04492a86cea2493143d933df09ca2896e9388a5445939c7c65",
+      "carousel_hash": "5eb3e74eb4023cf837e69f79bb540205d76ea309799f43626ddd1280cc49f91c",
+      "image_urls": [
+        "https://shadowcontext.com/assets/social/threads/browser-assembled-malware-demands-chain-level-detection/5eb3e74eb4023cf8/slide-01.png",
+        "https://shadowcontext.com/assets/social/threads/browser-assembled-malware-demands-chain-level-detection/5eb3e74eb4023cf8/slide-02.png",
+        "https://shadowcontext.com/assets/social/threads/browser-assembled-malware-demands-chain-level-detection/5eb3e74eb4023cf8/slide-03.png",
+        "https://shadowcontext.com/assets/social/threads/browser-assembled-malware-demands-chain-level-detection/5eb3e74eb4023cf8/slide-04.png"
+      ],
+      "child_container_ids": [
+        "17907864135445078",
+        "17907864153445078",
+        "17907864171445078",
+        "17907864201445078"
+      ],
+      "carousel_container_id": "17907864231445078",
+      "threads_post_id": "18117873893485293",
+      "published_at": "2026-07-27T01:05:25.205+04:00",
+      "status": "published",
+      "last_error": null
+    },
+    "https://shadowcontext.com/schema-codegen-needs-an-execution-boundary/": {
+      "article_publication_timestamp": "2026-07-26T19:09:21.000+04:00",
+      "source_hash": "3166f6e64771ae6bc951bd2d93f8a4d7c308d5164eef9b748467d01428dc4720",
+      "carousel_hash": "679f8f989f34292c1d4cd1b25d45a1c39a4c8741c3511c1faa6f819aae2aea2f",
+      "image_urls": [
+        "https://shadowcontext.com/assets/social/threads/schema-codegen-needs-an-execution-boundary/679f8f989f34292c/slide-01.png",
+        "https://shadowcontext.com/assets/social/threads/schema-codegen-needs-an-execution-boundary/679f8f989f34292c/slide-02.png",
+        "https://shadowcontext.com/assets/social/threads/schema-codegen-needs-an-execution-boundary/679f8f989f34292c/slide-03.png",
+        "https://shadowcontext.com/assets/social/threads/schema-codegen-needs-an-execution-boundary/679f8f989f34292c/slide-04.png"
+      ],
+      "last_error": "Threads API request failed (400): Invalid parameter",
+      "failed_at": "2026-07-27T01:05:25.205+04:00",
+      "status": "failed"
+    },
+    "https://shadowcontext.com/fluent-forms-flaw-makes-configuration-part-of-triage/": {
+      "article_publication_timestamp": "2026-07-26T23:10:19.000+04:00",
+      "source_hash": "0a23ef7f4b5740f9075ec0a5e46ad516619cb7acef768437e618f6810b8c0190",
+      "carousel_hash": "845c28a35aadc80dfc8977126a78f67c077fd74bb236ba91d7b2f96ce3622313",
+      "image_urls": [
+        "https://shadowcontext.com/assets/social/threads/fluent-forms-flaw-makes-configuration-part-of-triage/845c28a35aadc80d/slide-01.png",
+        "https://shadowcontext.com/assets/social/threads/fluent-forms-flaw-makes-configuration-part-of-triage/845c28a35aadc80d/slide-02.png",
+        "https://shadowcontext.com/assets/social/threads/fluent-forms-flaw-makes-configuration-part-of-triage/845c28a35aadc80d/slide-03.png",
+        "https://shadowcontext.com/assets/social/threads/fluent-forms-flaw-makes-configuration-part-of-triage/845c28a35aadc80d/slide-04.png"
+      ],
+      "child_container_ids": [
+        "17907864318445078",
+        "17907864333445078",
+        "17907864351445078",
+        "17907864366445078"
+      ],
+      "carousel_container_id": "17907864384445078",
+      "threads_post_id": "18098963693626363",
+      "published_at": "2026-07-27T01:05:25.205+04:00",
+      "status": "published",
+      "last_error": null
     }
   }
 }
