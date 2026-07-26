@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "status": "ready",
+  "generatedAt": "2026-07-26T06:14:05.105+04:00",
+  "id": "https://shadowcontext.com/mcp-tools-need-action-level-authorization/",
+  "title": "SiYuan Flaw Shows Why MCP Tools Need Action-Level Authorization",
+  "canonicalUrl": "https://shadowcontext.com/mcp-tools-need-action-level-authorization/",
+  "publicationTimestamp": "2026-07-26T06:11:29.000+04:00",
+  "sourceHash": "9e0385281659d9f9fe9f5d74bb1a1b99815e9663c918ef0791f78aea929eb3e3",
+  "carouselHash": "92ea7906d64700e62a9d7cbcf793195358bef2f483ccfbed25296792262e3cc2",
+  "category": "ai-security",
+  "caption": "A summary of CVE-2026-66012 in SiYuan, highlighting the need for robust action-level authorization across Model Context Protocol tool implementations.\n\n#cybersecurity #cybernews #vulnerability #ai #AiSecurity #Mcp\n\nRead the full ShadowContext briefing:\nhttps://shadowcontext.com/mcp-tools-need-action-level-authorization/",
+  "imageUrls": [
+    "https://shadowcontext.com/assets/social/threads/mcp-tools-need-action-level-authorization/92ea7906d64700e6/slide-01.png",
+    "https://shadowcontext.com/assets/social/threads/mcp-tools-need-action-level-authorization/92ea7906d64700e6/slide-02.png",
+    "https://shadowcontext.com/assets/social/threads/mcp-tools-need-action-level-authorization/92ea7906d64700e6/slide-03.png",
+    "https://shadowcontext.com/assets/social/threads/mcp-tools-need-action-level-authorization/92ea7906d64700e6/slide-04.png"
+  ],
+  "imageFiles": [
+    "assets/social/threads/mcp-tools-need-action-level-authorization/92ea7906d64700e6/slide-01.png",
+    "assets/social/threads/mcp-tools-need-action-level-authorization/92ea7906d64700e6/slide-02.png",
+    "assets/social/threads/mcp-tools-need-action-level-authorization/92ea7906d64700e6/slide-03.png",
+    "assets/social/threads/mcp-tools-need-action-level-authorization/92ea7906d64700e6/slide-04.png"
+  ],
+  "altTexts": [
+    "ShadowContext security briefing for SiYuan Flaw Shows Why MCP Tools Need Action-Level Authorization, slide 1 of 4",
+    "ShadowContext security briefing for SiYuan Flaw Shows Why MCP Tools Need Action-Level Authorization, slide 2 of 4",
+    "ShadowContext security briefing for SiYuan Flaw Shows Why MCP Tools Need Action-Level Authorization, slide 3 of 4",
+    "ShadowContext security briefing for SiYuan Flaw Shows Why MCP Tools Need Action-Level Authorization, slide 4 of 4"
+  ]
+}
