@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "status": "ready",
+  "generatedAt": "2026-07-26T13:12:55.471+04:00",
+  "id": "https://shadowcontext.com/forum-clickfix-turns-help-into-execution-risk/",
+  "title": "Forum ClickFix Turns Helpful Replies Into an Execution Risk",
+  "canonicalUrl": "https://shadowcontext.com/forum-clickfix-turns-help-into-execution-risk/",
+  "publicationTimestamp": "2026-07-26T13:10:19.000+04:00",
+  "sourceHash": "d49eda5bf067c16a18f5236afc52d65bd2822e37cb693607370c35b6f95c79d5",
+  "carouselHash": "528973283b8ae2e090237d6ad5da7f916d2b150fcbe1e3f3ab72793e75d4217b",
+  "category": "threat-intelligence",
+  "caption": "A ClickFix campaign in gaming forums uses trusted troubleshooting context to trick users into running local scripts that install cryptominers.\n\n#cybersecurity #cybernews #vulnerability #ai #ThreatIntelligence #Clickfix\n\nRead the full ShadowContext briefing:\nhttps://shadowcontext.com/forum-clickfix-turns-help-into-execution-risk/",
+  "imageUrls": [
+    "https://shadowcontext.com/assets/social/threads/forum-clickfix-turns-help-into-execution-risk/528973283b8ae2e0/slide-01.png",
+    "https://shadowcontext.com/assets/social/threads/forum-clickfix-turns-help-into-execution-risk/528973283b8ae2e0/slide-02.png",
+    "https://shadowcontext.com/assets/social/threads/forum-clickfix-turns-help-into-execution-risk/528973283b8ae2e0/slide-03.png",
+    "https://shadowcontext.com/assets/social/threads/forum-clickfix-turns-help-into-execution-risk/528973283b8ae2e0/slide-04.png"
+  ],
+  "imageFiles": [
+    "assets/social/threads/forum-clickfix-turns-help-into-execution-risk/528973283b8ae2e0/slide-01.png",
+    "assets/social/threads/forum-clickfix-turns-help-into-execution-risk/528973283b8ae2e0/slide-02.png",
+    "assets/social/threads/forum-clickfix-turns-help-into-execution-risk/528973283b8ae2e0/slide-03.png",
+    "assets/social/threads/forum-clickfix-turns-help-into-execution-risk/528973283b8ae2e0/slide-04.png"
+  ],
+  "altTexts": [
+    "ShadowContext security briefing for Forum ClickFix Turns Helpful Replies Into an Execution Risk, slide 1 of 4",
+    "ShadowContext security briefing for Forum ClickFix Turns Helpful Replies Into an Execution Risk, slide 2 of 4",
+    "ShadowContext security briefing for Forum ClickFix Turns Helpful Replies Into an Execution Risk, slide 3 of 4",
+    "ShadowContext security briefing for Forum ClickFix Turns Helpful Replies Into an Execution Risk, slide 4 of 4"
+  ]
+}
