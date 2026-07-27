@@ -36,6 +36,30 @@
       "github_run_id": "30292702155",
       "status": "published",
       "last_error": null
+    },
+    "e356519c538156151be4964536b0b7a488f9693c70b987deb654083bb9f98b07": {
+      "title": "GNU C Library Fixes Need Reboot-Level Proof",
+      "canonical_url": "https://shadowcontext.com/glibc-fixes-need-reboot-level-proof/",
+      "carousel_hash": "e356519c538156151be4964536b0b7a488f9693c70b987deb654083bb9f98b07",
+      "generated_at": "2026-07-28T01:11:35.846+04:00",
+      "image_files": [
+        "assets/social/threads/glibc-fixes-need-reboot-level-proof/e356519c53815615/slide-01.png",
+        "assets/social/threads/glibc-fixes-need-reboot-level-proof/e356519c53815615/slide-02.png",
+        "assets/social/threads/glibc-fixes-need-reboot-level-proof/e356519c53815615/slide-03.png",
+        "assets/social/threads/glibc-fixes-need-reboot-level-proof/e356519c53815615/slide-04.png"
+      ],
+      "linkedin_image_urns": [
+        "urn:li:image:D4D10AQEnJcngLgc_Qg",
+        "urn:li:image:D4D10AQFzaq28keXbFg",
+        "urn:li:image:D4D10AQFHtj2gphDorQ",
+        "urn:li:image:D4D10AQFPLLNLjQ9fBQ"
+      ],
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7487615786417557504",
+      "published_at": "2026-07-27T21:11:56.917Z",
+      "github_run_id": "30305818080",
+      "status": "published",
+      "last_error": null
     }
   }
 }
