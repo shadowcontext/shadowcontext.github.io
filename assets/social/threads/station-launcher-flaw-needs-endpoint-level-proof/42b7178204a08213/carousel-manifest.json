@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "status": "ready",
+  "generatedAt": "2026-07-27T15:12:14.144+04:00",
+  "id": "https://shadowcontext.com/station-launcher-flaw-needs-endpoint-level-proof/",
+  "title": "Station Launcher flaw needs endpoint-level remediation proof",
+  "canonicalUrl": "https://shadowcontext.com/station-launcher-flaw-needs-endpoint-level-proof/",
+  "publicationTimestamp": "2026-07-27T15:09:45.000+04:00",
+  "sourceHash": "5ecec493b3e3ca448ee63f1d9fc2c6d3ed02db3a84bed761f9a5254d1377d9f5",
+  "carouselHash": "42b7178204a08213335e8abd4f7c1f754008918d58bec3939075adf52d04e9b0",
+  "category": "defense",
+  "caption": "Defenders must verify endpoint remediation for CVE-2026-11756 rather than relying on central platform checks.\n\n#cybersecurity #cybernews #vulnerability #ai #Defense #VulnerabilityManagement\n\nRead the full ShadowContext briefing:\nhttps://shadowcontext.com/station-launcher-flaw-needs-endpoint-level-proof/",
+  "imageUrls": [
+    "https://shadowcontext.com/assets/social/threads/station-launcher-flaw-needs-endpoint-level-proof/42b7178204a08213/slide-01.png",
+    "https://shadowcontext.com/assets/social/threads/station-launcher-flaw-needs-endpoint-level-proof/42b7178204a08213/slide-02.png",
+    "https://shadowcontext.com/assets/social/threads/station-launcher-flaw-needs-endpoint-level-proof/42b7178204a08213/slide-03.png",
+    "https://shadowcontext.com/assets/social/threads/station-launcher-flaw-needs-endpoint-level-proof/42b7178204a08213/slide-04.png"
+  ],
+  "imageFiles": [
+    "assets/social/threads/station-launcher-flaw-needs-endpoint-level-proof/42b7178204a08213/slide-01.png",
+    "assets/social/threads/station-launcher-flaw-needs-endpoint-level-proof/42b7178204a08213/slide-02.png",
+    "assets/social/threads/station-launcher-flaw-needs-endpoint-level-proof/42b7178204a08213/slide-03.png",
+    "assets/social/threads/station-launcher-flaw-needs-endpoint-level-proof/42b7178204a08213/slide-04.png"
+  ],
+  "altTexts": [
+    "ShadowContext security briefing for Station Launcher flaw needs endpoint-level remediation proof, slide 1 of 4",
+    "ShadowContext security briefing for Station Launcher flaw needs endpoint-level remediation proof, slide 2 of 4",
+    "ShadowContext security briefing for Station Launcher flaw needs endpoint-level remediation proof, slide 3 of 4",
+    "ShadowContext security briefing for Station Launcher flaw needs endpoint-level remediation proof, slide 4 of 4"
+  ]
+}
