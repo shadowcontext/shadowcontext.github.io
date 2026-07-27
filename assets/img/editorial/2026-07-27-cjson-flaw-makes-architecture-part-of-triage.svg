@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Data constrained at a 32-bit software boundary</title>
+  <desc id="desc">Abstract JSON-like data ribbons narrow through a constrained channel while a luminous boundary contains an overflowing wave.</desc>
+  <defs>
+    <linearGradient id="background" x1="116" y1="82" x2="1482" y2="838" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071A27"/>
+      <stop offset=".52" stop-color="#10273A"/>
+      <stop offset="1" stop-color="#07121E"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="0" cy="0" r="1" gradientTransform="translate(806 442) rotate(90) scale(380 530)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#42D7C2" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#42D7C2" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="data" x1="150" y1="296" x2="846" y2="530" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7486F4"/>
+      <stop offset=".52" stop-color="#46BFD3"/>
+      <stop offset="1" stop-color="#50E0BF"/>
+    </linearGradient>
+    <linearGradient id="channel" x1="700" y1="184" x2="968" y2="724" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5B7892"/>
+      <stop offset=".5" stop-color="#1B4055"/>
+      <stop offset="1" stop-color="#0D2638"/>
+    </linearGradient>
+    <linearGradient id="boundary" x1="991" y1="191" x2="1021" y2="711" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C4FFF4"/>
+      <stop offset=".45" stop-color="#49E1C8"/>
+      <stop offset="1" stop-color="#1595AF"/>
+    </linearGradient>
+    <linearGradient id="overflow" x1="1014" y1="310" x2="1455" y2="636" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F39A87"/>
+      <stop offset=".48" stop-color="#D9698C"/>
+      <stop offset="1" stop-color="#694C82"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-40%" width="260%" height="180%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <clipPath id="leftClip">
+      <path d="M105 178H635C718 178 769 234 793 308L835 437L793 566C769 640 718 696 635 696H105Z"/>
+    </clipPath>
+    <clipPath id="channelClip">
+      <path d="M632 178H900L975 337V559L900 718H632C732 639 773 542 789 448C773 354 732 257 632 178Z"/>
+    </clipPath>
+  </defs>
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <ellipse cx="806" cy="442" rx="530" ry="380" fill="url(#aura)"/>
+  <g fill="none" stroke="#6C93AC" stroke-width="2" opacity=".22">
+    <path d="M69 151C265 79 442 104 588 181"/>
+    <path d="M1112 102C1304 91 1454 166 1535 286"/>
+    <path d="M1053 795C1248 850 1427 796 1537 679"/>
+  </g>
+  <g clip-path="url(#leftClip)" fill="none" stroke-linecap="round">
+    <path d="M-12 280C171 190 298 367 464 281C594 214 674 297 809 383" stroke="#7586F4" stroke-width="54" opacity=".15"/>
+    <path d="M-20 418C180 323 307 507 475 414C602 344 685 411 821 446" stroke="#46BFD3" stroke-width="58" opacity=".16"/>
+    <path d="M-11 557C163 472 306 632 466 551C604 481 678 524 810 500" stroke="#50E0BF" stroke-width="56" opacity=".15"/>
+    <path d="M-12 280C171 190 298 367 464 281C594 214 674 297 826 397" stroke="url(#data)" stroke-width="9"/>
+    <path d="M-20 418C180 323 307 507 475 414C602 344 685 411 829 446" stroke="url(#data)" stroke-width="9"/>
+    <path d="M-11 557C163 472 306 632 466 551C604 481 678 524 826 492" stroke="url(#data)" stroke-width="9"/>
+  </g>
+  <g fill="#8FA8BC" opacity=".38">
+    <circle cx="159" cy="265" r="14"/>
+    <circle cx="240" cy="330" r="8"/>
+    <circle cx="317" cy="244" r="11"/>
+    <circle cx="385" cy="457" r="13"/>
+    <circle cx="210" cy="524" r="10"/>
+    <circle cx="542" cy="347" r="9"/>
+    <circle cx="599" cy="522" r="12"/>
+  </g>
+  <path d="M632 178H900L975 337V559L900 718H632C732 639 773 542 789 448C773 354 732 257 632 178Z" fill="url(#channel)" stroke="#7196AD" stroke-width="3" opacity=".92"/>
+  <g clip-path="url(#channelClip)" fill="none" stroke-linecap="round">
+    <path d="M657 316C752 344 786 391 958 414" stroke="url(#data)" stroke-width="8"/>
+    <path d="M655 447C765 447 823 447 972 447" stroke="url(#data)" stroke-width="8"/>
+    <path d="M657 578C752 550 786 503 958 480" stroke="url(#data)" stroke-width="8"/>
+  </g>
+  <g opacity=".52" fill="#B9D4DF">
+    <rect x="822" y="298" width="76" height="12" rx="6"/>
+    <rect x="842" y="327" width="56" height="12" rx="6"/>
+    <rect x="851" y="589" width="47" height="12" rx="6"/>
+  </g>
+  <g filter="url(#glow)" opacity=".58">
+    <rect x="973" y="183" width="46" height="530" rx="23" fill="#42E0C5"/>
+  </g>
+  <rect x="982" y="184" width="28" height="528" rx="14" fill="url(#boundary)"/>
+  <circle cx="996" cy="447" r="46" fill="#0B2739" stroke="#B7FFF0" stroke-width="8"/>
+  <path d="M974 447L991 464L1021 428" fill="none" stroke="#BFFFF3" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1025 383C1102 306 1212 287 1316 322C1418 357 1476 448 1459 544C1447 615 1397 662 1327 676C1368 622 1352 568 1309 544C1264 519 1219 539 1177 563C1121 594 1069 570 1046 529C1022 487 1044 444 1084 414C1064 409 1043 399 1025 383Z" fill="url(#overflow)" opacity=".84"/>
+  <path d="M1037 398C1111 341 1193 336 1270 358C1353 382 1410 446 1400 518" fill="none" stroke="#FFC2BA" stroke-width="6" stroke-linecap="round" opacity=".5"/>
+  <g fill="#EE8C96" filter="url(#soft)" opacity=".58">
+    <circle cx="1108" cy="363" r="10"/>
+    <circle cx="1188" cy="331" r="8"/>
+    <circle cx="1354" cy="397" r="12"/>
+    <circle cx="1389" cy="539" r="9"/>
+  </g>
+  <path d="M141 774H1459" stroke="#668DA6" stroke-width="2" opacity=".2"/>
+</svg>
