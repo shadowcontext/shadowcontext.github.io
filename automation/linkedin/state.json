@@ -84,6 +84,30 @@
       "github_run_id": "30309849849",
       "status": "published",
       "last_error": null
+    },
+    "dc32efb4c038e871659f2e9c3fafbcacbb8ad424a18a9448dbed7f3a68ef518e": {
+      "title": "Traefik Fix Protects Shared Connection Boundaries",
+      "canonical_url": "https://shadowcontext.com/traefik-fix-protects-shared-connection-boundaries/",
+      "carousel_hash": "dc32efb4c038e871659f2e9c3fafbcacbb8ad424a18a9448dbed7f3a68ef518e",
+      "generated_at": "2026-07-28T03:14:05.614+04:00",
+      "image_files": [
+        "assets/social/threads/traefik-fix-protects-shared-connection-boundaries/dc32efb4c038e871/slide-01.png",
+        "assets/social/threads/traefik-fix-protects-shared-connection-boundaries/dc32efb4c038e871/slide-02.png",
+        "assets/social/threads/traefik-fix-protects-shared-connection-boundaries/dc32efb4c038e871/slide-03.png",
+        "assets/social/threads/traefik-fix-protects-shared-connection-boundaries/dc32efb4c038e871/slide-04.png"
+      ],
+      "linkedin_image_urns": [
+        "urn:li:image:D4D10AQG_nZDidEWiIA",
+        "urn:li:image:D4D10AQHC5Z3wCG6qRA",
+        "urn:li:image:D4D10AQH3y2yzASnnIg",
+        "urn:li:image:D4D10AQHCI4na-fdrEw"
+      ],
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7487646638153580544",
+      "published_at": "2026-07-27T23:14:32.527Z",
+      "github_run_id": "30313483678",
+      "status": "published",
+      "last_error": null
     }
   }
 }
