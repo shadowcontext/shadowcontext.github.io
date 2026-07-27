@@ -216,6 +216,10 @@ async function main() {
 }
 
 main().catch((error) => {
-  console.error(`LinkedIn publication failed: ${error.message}`);
+  const message = `LinkedIn publication failed: ${error.message}`;
+  console.error(message);
+  if (process.env.GITHUB_ACTIONS === "true") {
+    console.error(`::error title=LinkedIn publication failed::${message}`);
+  }
   process.exitCode = 1;
 });
