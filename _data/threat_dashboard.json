@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-26T22:11:10Z",
-  "generated_display": "26 Jul 2026 · 22:11 UTC",
+  "generated_at": "2026-07-27T01:25:45Z",
+  "generated_display": "27 Jul 2026 · 01:25 UTC",
   "metrics": {
     "kev_total": 1653,
     "kev_added_30d": 24,
@@ -324,7 +324,7 @@
       "path": "/assets/data/daily-urls.txt"
     }
   ],
-  "ioc_sha256": "e78e543d18ffa1d19a9eea72bfd2af86d02cf6e77cafd71f360b118a68d9f2fc",
+  "ioc_sha256": "34f92bb1a50b36aabb1e903e03f5c6af7376015c4c45eec35164f1b4ae3e6001",
   "sources": {
     "kev": {
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
@@ -358,7 +358,7 @@
       "name": "CISA Advisories",
       "coverage": "Technical and industrial-control advisories",
       "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml",
-      "status": "degraded"
+      "status": "online"
     },
     {
       "name": "UK NCSC",
@@ -374,9 +374,9 @@
     },
     {
       "name": "CISA STIX",
-      "coverage": "Last validated TLP:CLEAR indicator snapshot",
+      "coverage": "TLP:CLEAR indicators from 3 advisories",
       "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-239a",
-      "status": "degraded"
+      "status": "online"
     }
   ]
 }
