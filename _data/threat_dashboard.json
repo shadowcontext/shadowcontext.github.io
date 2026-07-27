@@ -1,15 +1,35 @@
 {
-  "generated_at": "2026-07-27T01:25:45Z",
-  "generated_display": "27 Jul 2026 · 01:25 UTC",
+  "generated_at": "2026-07-27T22:16:42Z",
+  "generated_display": "27 Jul 2026 · 22:16 UTC",
   "metrics": {
-    "kev_total": 1653,
-    "kev_added_30d": 24,
-    "due_next_7d": 2,
+    "kev_total": 1655,
+    "kev_added_30d": 26,
+    "due_next_7d": 3,
     "ioc_total": 170,
     "ioc_total_display": "170",
     "ioc_total_exact": "170"
   },
   "vulnerabilities": [
+    {
+      "cve": "CVE-2026-16812",
+      "name": "Arista VeloCloud Orchestrator On-Prem OS Command Injection Vulnerability",
+      "vendor": "Arista",
+      "product": "VeloCloud Orchestrator",
+      "date_added": "2026-07-27",
+      "due_date": "2026-07-30",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-16812"
+    },
+    {
+      "cve": "CVE-2025-68686",
+      "name": "Fortinet FortiOS Exposure of Sensitive Information to an Unauthorized Actor Vulnerability",
+      "vendor": "Fortinet",
+      "product": "FortiOS",
+      "date_added": "2026-07-27",
+      "due_date": "2026-08-10",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2025-68686"
+    },
     {
       "cve": "CVE-2026-50522",
       "name": "Microsoft SharePoint Deserialization of Untrusted Data Vulnerability ",
@@ -69,26 +89,6 @@
       "due_date": "2026-07-24",
       "ransomware": "Unknown",
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2021-27137"
-    },
-    {
-      "cve": "CVE-2026-58644",
-      "name": "Microsoft SharePoint Deserialization of Untrusted Data Vulnerability",
-      "vendor": "Microsoft",
-      "product": "SharePoint",
-      "date_added": "2026-07-16",
-      "due_date": "2026-07-19",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-58644"
-    },
-    {
-      "cve": "CVE-2026-39808",
-      "name": "Fortinet FortiSandbox OS Command Injection Vulnerability",
-      "vendor": "Fortinet",
-      "product": "FortiSandbox",
-      "date_added": "2026-07-16",
-      "due_date": "2026-07-19",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-39808"
     }
   ],
   "platforms": [
@@ -113,8 +113,8 @@
     {
       "vendor": "Fortinet",
       "product": "FortiSandbox",
-      "count": 8,
-      "percent": 18
+      "count": 9,
+      "percent": 20
     },
     {
       "vendor": "Google",
@@ -162,27 +162,27 @@
   "advisories": [
     {
       "authority": "Saudi NCA / CERT",
-      "title": "Weekly Vulnerabilities Summary 12 July - 18 July",
-      "url": "https://nca.gov.sa/en/cert/7795/",
-      "date": "2026-07-26",
-      "severity": "Critical",
-      "summary": "Security alert 2026-7672. Review the official notice for affected products and remediation guidance."
+      "title": "Apple Alert",
+      "url": "https://nca.gov.sa/en/cert/7801/",
+      "date": "2026-07-27",
+      "severity": "High",
+      "summary": "Security alert 2026-7678. Review the official notice for affected products and remediation guidance."
     },
     {
       "authority": "Saudi NCA / CERT",
-      "title": "HPE Alert",
-      "url": "https://nca.gov.sa/en/cert/7794/",
-      "date": "2026-07-24",
+      "title": "Apple Alert",
+      "url": "https://nca.gov.sa/en/cert/7800/",
+      "date": "2026-07-27",
       "severity": "High",
-      "summary": "Security alert 2026-7671. Review the official notice for affected products and remediation guidance."
+      "summary": "Security alert 2026-7677. Review the official notice for affected products and remediation guidance."
     },
     {
       "authority": "Saudi NCA / CERT",
-      "title": "Chrome Alert",
-      "url": "https://nca.gov.sa/en/cert/7793/",
-      "date": "2026-07-24",
+      "title": "F5 Alert",
+      "url": "https://nca.gov.sa/en/cert/7799/",
+      "date": "2026-07-27",
       "severity": "High",
-      "summary": "Security alert 2026-7670. Review the official notice for affected products and remediation guidance."
+      "summary": "Security alert 2026-7676. Review the official notice for affected products and remediation guidance."
     },
     {
       "title": "Weintek cMT3092X",
@@ -358,7 +358,7 @@
       "name": "CISA Advisories",
       "coverage": "Technical and industrial-control advisories",
       "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml",
-      "status": "online"
+      "status": "degraded"
     },
     {
       "name": "UK NCSC",
@@ -374,9 +374,9 @@
     },
     {
       "name": "CISA STIX",
-      "coverage": "TLP:CLEAR indicators from 3 advisories",
+      "coverage": "Last validated TLP:CLEAR indicator snapshot",
       "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-239a",
-      "status": "online"
+      "status": "degraded"
     }
   ]
 }
