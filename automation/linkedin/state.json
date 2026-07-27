@@ -60,6 +60,30 @@
       "github_run_id": "30305818080",
       "status": "published",
       "last_error": null
+    },
+    "3bb0001372b577eff30c1f339b7e634d4c4641476705199cc90795600d819ed7": {
+      "title": "Apple Updates Need Fleet-Level Proof",
+      "canonical_url": "https://shadowcontext.com/apple-updates-need-fleet-level-proof/",
+      "carousel_hash": "3bb0001372b577eff30c1f339b7e634d4c4641476705199cc90795600d819ed7",
+      "generated_at": "2026-07-28T02:11:56.530+04:00",
+      "image_files": [
+        "assets/social/threads/apple-updates-need-fleet-level-proof/3bb0001372b577ef/slide-01.png",
+        "assets/social/threads/apple-updates-need-fleet-level-proof/3bb0001372b577ef/slide-02.png",
+        "assets/social/threads/apple-updates-need-fleet-level-proof/3bb0001372b577ef/slide-03.png",
+        "assets/social/threads/apple-updates-need-fleet-level-proof/3bb0001372b577ef/slide-04.png"
+      ],
+      "linkedin_image_urns": [
+        "urn:li:image:D4D10AQExu2p_YGG7-g",
+        "urn:li:image:D4D10AQHuczkh_8Vb7g",
+        "urn:li:image:D4D10AQFAnbFl9Dm7rg",
+        "urn:li:image:D4D10AQGUNNdoe_gIZA"
+      ],
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7487630981445890048",
+      "published_at": "2026-07-27T22:12:19.791Z",
+      "github_run_id": "30309849849",
+      "status": "published",
+      "last_error": null
     }
   }
 }
