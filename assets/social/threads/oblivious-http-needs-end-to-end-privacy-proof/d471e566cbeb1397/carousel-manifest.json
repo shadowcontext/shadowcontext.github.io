@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "status": "ready",
+  "generatedAt": "2026-07-27T22:11:55.741+04:00",
+  "id": "https://shadowcontext.com/oblivious-http-needs-end-to-end-privacy-proof/",
+  "title": "Oblivious HTTP Needs End-to-End Privacy Proof",
+  "canonicalUrl": "https://shadowcontext.com/oblivious-http-needs-end-to-end-privacy-proof/",
+  "publicationTimestamp": "2026-07-27T22:09:16.000+04:00",
+  "sourceHash": "e5226ef4482509259b43eb5ba6cefc22749c92e9bf70f5a53a22c3a8c97a6fae",
+  "carouselHash": "d471e566cbeb1397036e0785d05c46cbeaaabb788fb05eb99c395e2d98c5bc49",
+  "category": "defense",
+  "caption": "Defenders must test end-to-end Oblivious HTTP pathways to ensure role separation and proper failure handling remain intact.\n\n#cybersecurity #cybernews #vulnerability #ai #Defense #Privacy\n\nRead the full ShadowContext briefing:\nhttps://shadowcontext.com/oblivious-http-needs-end-to-end-privacy-proof/",
+  "imageUrls": [
+    "https://shadowcontext.com/assets/social/threads/oblivious-http-needs-end-to-end-privacy-proof/d471e566cbeb1397/slide-01.png",
+    "https://shadowcontext.com/assets/social/threads/oblivious-http-needs-end-to-end-privacy-proof/d471e566cbeb1397/slide-02.png",
+    "https://shadowcontext.com/assets/social/threads/oblivious-http-needs-end-to-end-privacy-proof/d471e566cbeb1397/slide-03.png",
+    "https://shadowcontext.com/assets/social/threads/oblivious-http-needs-end-to-end-privacy-proof/d471e566cbeb1397/slide-04.png"
+  ],
+  "imageFiles": [
+    "assets/social/threads/oblivious-http-needs-end-to-end-privacy-proof/d471e566cbeb1397/slide-01.png",
+    "assets/social/threads/oblivious-http-needs-end-to-end-privacy-proof/d471e566cbeb1397/slide-02.png",
+    "assets/social/threads/oblivious-http-needs-end-to-end-privacy-proof/d471e566cbeb1397/slide-03.png",
+    "assets/social/threads/oblivious-http-needs-end-to-end-privacy-proof/d471e566cbeb1397/slide-04.png"
+  ],
+  "altTexts": [
+    "ShadowContext security briefing for Oblivious HTTP Needs End-to-End Privacy Proof, slide 1 of 4",
+    "ShadowContext security briefing for Oblivious HTTP Needs End-to-End Privacy Proof, slide 2 of 4",
+    "ShadowContext security briefing for Oblivious HTTP Needs End-to-End Privacy Proof, slide 3 of 4",
+    "ShadowContext security briefing for Oblivious HTTP Needs End-to-End Privacy Proof, slide 4 of 4"
+  ]
+}
