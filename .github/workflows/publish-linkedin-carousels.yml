@@ -1,0 +1,78 @@
+name: Publish Ready LinkedIn Carousels
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "assets/social/threads/**/carousel-manifest.json"
+  workflow_run:
+    workflows:
+      - Generate Threads Carousels
+    types:
+      - completed
+  schedule:
+    - cron: "15 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: shadowcontext-linkedin-carousel-mutations
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - name: Check out default branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Validate LinkedIn automation
+        run: |
+          for file in automation/linkedin/*.mjs; do
+            node --check "$file"
+          done
+          node --test automation/linkedin/*.test.mjs
+          node automation/linkedin/cli.mjs --dry-run true
+
+      - name: Publish ready carousels
+        id: publish
+        continue-on-error: true
+        env:
+          LINKEDIN_CLIENT_ID: ${{ secrets.LINKEDIN_CLIENT_ID }}
+          LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          MAX_POSTS: ${{ vars.LINKEDIN_MAX_POSTS_PER_RUN }}
+        run: |
+          node automation/linkedin/cli.mjs \
+            --max-posts "${MAX_POSTS:-10}"
+
+      - name: Commit LinkedIn publication state
+        if: always()
+        run: |
+          git add -- automation/linkedin/state.json
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: record LinkedIn carousel publication"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Enforce publisher result
+        if: always() && steps.publish.outcome == 'failure'
+        run: |
+          echo "::error::The LinkedIn publisher failed after saving its state."
+          exit 1

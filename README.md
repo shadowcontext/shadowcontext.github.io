@@ -3,6 +3,8 @@
 Operational documentation for the automated, branded Threads carousel
 publisher is available in
 [docs/threads-carousel-automation.md](docs/threads-carousel-automation.md).
+Automatic LinkedIn multi-image publishing is documented in
+[docs/linkedin-carousel-automation.md](docs/linkedin-carousel-automation.md).
 
 [ShadowContext](https://shadowcontext.com) is an independent cybersecurity
 publication and operational threat-intelligence site. It turns primary-source

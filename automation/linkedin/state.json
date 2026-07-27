@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "ignoreBeforeGeneratedAt": "2026-07-27T20:13:08.228+04:00",
+  "posts": {
+    "d5609b92ec10506dd8fc26b9cec1956074bdbefce5be3299d512cb9c56504647": {
+      "status": "published",
+      "title": "Open Secure AI Alliance Puts Controls Around the Agent Stack",
+      "canonical_url": "https://shadowcontext.com/open-ai-alliance-makes-agent-security-a-stack-control/",
+      "carousel_hash": "d5609b92ec10506dd8fc26b9cec1956074bdbefce5be3299d512cb9c56504647",
+      "generated_at": "2026-07-27T20:13:08.228+04:00",
+      "linkedin_post_id": null,
+      "github_run_id": "30286894486",
+      "imported": true,
+      "last_error": null
+    }
+  }
+}
