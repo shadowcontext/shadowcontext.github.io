@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "status": "ready",
+  "generatedAt": "2026-07-27T09:13:19.402+04:00",
+  "id": "https://shadowcontext.com/agentic-cves-need-risk-context/",
+  "title": "Agentic CVEs Need Risk Context, Not Severity Alone",
+  "canonicalUrl": "https://shadowcontext.com/agentic-cves-need-risk-context/",
+  "publicationTimestamp": "2026-07-27T09:10:45.000+04:00",
+  "sourceHash": "57d5b831479edf2c0b91aa0de3f0271eb31680f00f8a953c9cdaa2750b4ff557",
+  "carouselHash": "717aca910e3e79ab79109b25fc79968a51c092fc1ac9cd02c120c380b335f342",
+  "category": "ai-security",
+  "caption": "Berkeley dataset analysis shows weak alignment between severity and exploit risk for agentic CVEs, highlighting the need for context-led vulnerability triage.\n\n#cybersecurity #cybernews #vulnerability #ai #AiSecurity #AgenticAi\n\nRead the full ShadowContext briefing:\nhttps://shadowcontext.com/agentic-cves-need-risk-context/",
+  "imageUrls": [
+    "https://shadowcontext.com/assets/social/threads/agentic-cves-need-risk-context/717aca910e3e79ab/slide-01.png",
+    "https://shadowcontext.com/assets/social/threads/agentic-cves-need-risk-context/717aca910e3e79ab/slide-02.png",
+    "https://shadowcontext.com/assets/social/threads/agentic-cves-need-risk-context/717aca910e3e79ab/slide-03.png",
+    "https://shadowcontext.com/assets/social/threads/agentic-cves-need-risk-context/717aca910e3e79ab/slide-04.png"
+  ],
+  "imageFiles": [
+    "assets/social/threads/agentic-cves-need-risk-context/717aca910e3e79ab/slide-01.png",
+    "assets/social/threads/agentic-cves-need-risk-context/717aca910e3e79ab/slide-02.png",
+    "assets/social/threads/agentic-cves-need-risk-context/717aca910e3e79ab/slide-03.png",
+    "assets/social/threads/agentic-cves-need-risk-context/717aca910e3e79ab/slide-04.png"
+  ],
+  "altTexts": [
+    "ShadowContext security briefing for Agentic CVEs Need Risk Context, Not Severity Alone, slide 1 of 4",
+    "ShadowContext security briefing for Agentic CVEs Need Risk Context, Not Severity Alone, slide 2 of 4",
+    "ShadowContext security briefing for Agentic CVEs Need Risk Context, Not Severity Alone, slide 3 of 4",
+    "ShadowContext security briefing for Agentic CVEs Need Risk Context, Not Severity Alone, slide 4 of 4"
+  ]
+}
