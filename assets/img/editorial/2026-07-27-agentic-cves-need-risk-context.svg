@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Risk context filters a stream of agent-discovered vulnerabilities</title>
+  <desc id="desc">Abstract streams of vulnerability fragments pass through a luminous prism, emerging as a small set of prioritized signals against a deep blue background.</desc>
+  <defs>
+    <linearGradient id="bg" x1="80" y1="40" x2="1510" y2="850" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#07172b"/>
+      <stop offset="0.52" stop-color="#0b2544"/>
+      <stop offset="1" stop-color="#111a35"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(853 454) rotate(90) scale(355 440)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38e3cc" stop-opacity=".26"/>
+      <stop offset=".58" stop-color="#488cff" stop-opacity=".09"/>
+      <stop offset="1" stop-color="#07172b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="streamA" x1="170" y1="300" x2="825" y2="440" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ff5f88" stop-opacity=".18"/>
+      <stop offset=".55" stop-color="#ff8a65" stop-opacity=".88"/>
+      <stop offset="1" stop-color="#ffc267"/>
+    </linearGradient>
+    <linearGradient id="streamB" x1="160" y1="610" x2="825" y2="470" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4b79ff" stop-opacity=".18"/>
+      <stop offset=".6" stop-color="#55b9ff" stop-opacity=".86"/>
+      <stop offset="1" stop-color="#75e7dc"/>
+    </linearGradient>
+    <linearGradient id="prism" x1="692" y1="233" x2="1004" y2="685" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9df8ed" stop-opacity=".68"/>
+      <stop offset=".48" stop-color="#46c8e8" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#6d77ff" stop-opacity=".5"/>
+    </linearGradient>
+    <linearGradient id="out" x1="945" y1="453" x2="1420" y2="453" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#91fff0"/>
+      <stop offset=".6" stop-color="#55d6ed"/>
+      <stop offset="1" stop-color="#7ca4ff" stop-opacity=".25"/>
+    </linearGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="bright" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" fill="none" stroke="#8eb5df" stroke-opacity=".055" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" rx="36" fill="url(#bg)"/>
+  <rect width="1600" height="900" rx="36" fill="url(#grid)"/>
+  <ellipse cx="853" cy="454" rx="440" ry="355" fill="url(#glow)"/>
+
+  <g opacity=".8" fill="none" stroke-linecap="round">
+    <path d="M124 222C360 224 522 340 784 397" stroke="url(#streamA)" stroke-width="8"/>
+    <path d="M108 286C356 287 503 369 788 419" stroke="url(#streamA)" stroke-width="4"/>
+    <path d="M119 356C337 356 535 398 791 435" stroke="url(#streamA)" stroke-width="11"/>
+    <path d="M122 676C367 657 533 552 790 482" stroke="url(#streamB)" stroke-width="7"/>
+    <path d="M98 606C343 596 520 521 791 467" stroke="url(#streamB)" stroke-width="12"/>
+    <path d="M124 530C372 532 558 484 790 453" stroke="url(#streamB)" stroke-width="5"/>
+  </g>
+
+  <g fill="#ff9f78" opacity=".86">
+    <path d="M239 260l18-26 30 12-3 34-33 8z"/>
+    <circle cx="372" cy="334" r="13"/>
+    <path d="M492 323l22-17 26 18-9 30-31-1z"/>
+    <rect x="602" y="381" width="28" height="28" rx="7" transform="rotate(18 616 395)"/>
+    <path d="M691 397l20-12 23 15-5 27-29 3z"/>
+  </g>
+  <g fill="#67d9ee" opacity=".88">
+    <circle cx="257" cy="621" r="14"/>
+    <path d="M367 573l19-26 31 8 5 32-29 17z"/>
+    <rect x="501" y="516" width="31" height="31" rx="7" transform="rotate(-14 516 531)"/>
+    <path d="M610 488l21-17 28 13-2 31-31 7z"/>
+    <circle cx="719" cy="472" r="12"/>
+  </g>
+
+  <path d="M817 221L1014 451 822 684 738 454z" fill="url(#prism)" stroke="#8ff5ec" stroke-opacity=".78" stroke-width="3"/>
+  <path d="M817 221L822 684M738 454h276" fill="none" stroke="#a8fff4" stroke-opacity=".22" stroke-width="2"/>
+  <path d="M785 454h248" stroke="#c7fff8" stroke-opacity=".42" stroke-width="3" filter="url(#bright)"/>
+  <ellipse cx="851" cy="454" rx="142" ry="88" fill="#42dcca" opacity=".12" filter="url(#soft)"/>
+
+  <g fill="none" stroke="url(#out)" stroke-linecap="round" filter="url(#bright)">
+    <path d="M1003 423C1148 414 1247 355 1459 322" stroke-width="3"/>
+    <path d="M1015 451C1161 451 1279 451 1478 451" stroke-width="8"/>
+    <path d="M1004 480C1155 492 1255 550 1452 588" stroke-width="4"/>
+  </g>
+
+  <g>
+    <circle cx="1128" cy="435" r="11" fill="#a5fff2"/>
+    <circle cx="1266" cy="451" r="17" fill="#61dcea"/>
+    <circle cx="1399" cy="464" r="10" fill="#89aaff"/>
+    <circle cx="1211" cy="381" r="6" fill="#87f6e8"/>
+    <circle cx="1329" cy="559" r="7" fill="#68c9f4"/>
+  </g>
+
+  <g fill="none" stroke="#b2cce9" stroke-opacity=".16">
+    <circle cx="851" cy="454" r="280"/>
+    <circle cx="851" cy="454" r="338" stroke-dasharray="5 20"/>
+  </g>
+</svg>
