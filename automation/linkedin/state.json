@@ -12,6 +12,30 @@
       "github_run_id": "30286894486",
       "imported": true,
       "last_error": null
+    },
+    "d471e566cbeb1397036e0785d05c46cbeaaabb788fb05eb99c395e2d98c5bc49": {
+      "title": "Oblivious HTTP Needs End-to-End Privacy Proof",
+      "canonical_url": "https://shadowcontext.com/oblivious-http-needs-end-to-end-privacy-proof/",
+      "carousel_hash": "d471e566cbeb1397036e0785d05c46cbeaaabb788fb05eb99c395e2d98c5bc49",
+      "generated_at": "2026-07-27T22:11:55.741+04:00",
+      "image_files": [
+        "assets/social/threads/oblivious-http-needs-end-to-end-privacy-proof/d471e566cbeb1397/slide-01.png",
+        "assets/social/threads/oblivious-http-needs-end-to-end-privacy-proof/d471e566cbeb1397/slide-02.png",
+        "assets/social/threads/oblivious-http-needs-end-to-end-privacy-proof/d471e566cbeb1397/slide-03.png",
+        "assets/social/threads/oblivious-http-needs-end-to-end-privacy-proof/d471e566cbeb1397/slide-04.png"
+      ],
+      "linkedin_image_urns": [
+        "urn:li:image:D4D10AQFQfWC1bF9Nug",
+        "urn:li:image:D4D10AQFF-EqvawhBvg",
+        "urn:li:image:D4D10AQFhosxxiWlaWQ",
+        "urn:li:image:D4D10AQEK3y2OvQa7cg"
+      ],
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7487570579550695426",
+      "published_at": "2026-07-27T18:12:18.833Z",
+      "github_run_id": "30292702155",
+      "status": "published",
+      "last_error": null
     }
   }
 }
