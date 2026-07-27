@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "status": "ready",
+  "generatedAt": "2026-07-27T18:12:31.962+04:00",
+  "id": "https://shadowcontext.com/cjson-flaw-makes-architecture-part-of-triage/",
+  "title": "cJSON Flaw Makes Architecture Part of Vulnerability Triage",
+  "canonicalUrl": "https://shadowcontext.com/cjson-flaw-makes-architecture-part-of-triage/",
+  "publicationTimestamp": "2026-07-27T18:09:57.000+04:00",
+  "sourceHash": "23d9ec9bb25e16ad5d1bff0e0bfe19945326642f6435fc4990953728053eb6f9",
+  "carouselHash": "67f8bb4543906ec92b5daabde7befb4e6a091e034e9779aff6025d73d8e70d5f",
+  "category": "defense",
+  "caption": "CERT Polska confirms CVE-2026-16554 in cJSON 1.7.19 on 32-bit platforms. Triage requires verifying architecture, API paths, and data reachability to understand exposure.\n\n#cybersecurity #cybernews #vulnerability #ai #Defense #Cjson\n\nRead the full ShadowContext briefing:\nhttps://shadowcontext.com/cjson-flaw-makes-architecture-part-of-triage/",
+  "imageUrls": [
+    "https://shadowcontext.com/assets/social/threads/cjson-flaw-makes-architecture-part-of-triage/67f8bb4543906ec9/slide-01.png",
+    "https://shadowcontext.com/assets/social/threads/cjson-flaw-makes-architecture-part-of-triage/67f8bb4543906ec9/slide-02.png",
+    "https://shadowcontext.com/assets/social/threads/cjson-flaw-makes-architecture-part-of-triage/67f8bb4543906ec9/slide-03.png",
+    "https://shadowcontext.com/assets/social/threads/cjson-flaw-makes-architecture-part-of-triage/67f8bb4543906ec9/slide-04.png"
+  ],
+  "imageFiles": [
+    "assets/social/threads/cjson-flaw-makes-architecture-part-of-triage/67f8bb4543906ec9/slide-01.png",
+    "assets/social/threads/cjson-flaw-makes-architecture-part-of-triage/67f8bb4543906ec9/slide-02.png",
+    "assets/social/threads/cjson-flaw-makes-architecture-part-of-triage/67f8bb4543906ec9/slide-03.png",
+    "assets/social/threads/cjson-flaw-makes-architecture-part-of-triage/67f8bb4543906ec9/slide-04.png"
+  ],
+  "altTexts": [
+    "ShadowContext security briefing for cJSON Flaw Makes Architecture Part of Vulnerability Triage, slide 1 of 4",
+    "ShadowContext security briefing for cJSON Flaw Makes Architecture Part of Vulnerability Triage, slide 2 of 4",
+    "ShadowContext security briefing for cJSON Flaw Makes Architecture Part of Vulnerability Triage, slide 3 of 4",
+    "ShadowContext security briefing for cJSON Flaw Makes Architecture Part of Vulnerability Triage, slide 4 of 4"
+  ]
+}
