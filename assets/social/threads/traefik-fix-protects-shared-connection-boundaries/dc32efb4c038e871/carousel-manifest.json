@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "status": "ready",
+  "generatedAt": "2026-07-28T03:14:05.614+04:00",
+  "id": "https://shadowcontext.com/traefik-fix-protects-shared-connection-boundaries/",
+  "title": "Traefik Fix Protects Shared Connection Boundaries",
+  "canonicalUrl": "https://shadowcontext.com/traefik-fix-protects-shared-connection-boundaries/",
+  "publicationTimestamp": "2026-07-28T03:11:32.000+04:00",
+  "sourceHash": "9c42f623edf67e2b13665105280702aaeac8fb1ac1448652680a8078c2f5c34c",
+  "carouselHash": "dc32efb4c038e871659f2e9c3fafbcacbb8ad424a18a9448dbed7f3a68ef518e",
+  "category": "defense",
+  "caption": "Traefik released updates to address a high-severity cross-user response poisoning vulnerability affecting specific proxy and backend protocol combinations. Defenders should verify running proxy versions, apply patches, and review shared connection pools across ingress paths.\n\n#cybersecurity #cybernews #vulnerability #ai #Defense #Traefik\n\nRead the full ShadowContext briefing:\nhttps://shadowcontext.com/traefik-fix-protects-shared-connection-boundaries/",
+  "imageUrls": [
+    "https://shadowcontext.com/assets/social/threads/traefik-fix-protects-shared-connection-boundaries/dc32efb4c038e871/slide-01.png",
+    "https://shadowcontext.com/assets/social/threads/traefik-fix-protects-shared-connection-boundaries/dc32efb4c038e871/slide-02.png",
+    "https://shadowcontext.com/assets/social/threads/traefik-fix-protects-shared-connection-boundaries/dc32efb4c038e871/slide-03.png",
+    "https://shadowcontext.com/assets/social/threads/traefik-fix-protects-shared-connection-boundaries/dc32efb4c038e871/slide-04.png"
+  ],
+  "imageFiles": [
+    "assets/social/threads/traefik-fix-protects-shared-connection-boundaries/dc32efb4c038e871/slide-01.png",
+    "assets/social/threads/traefik-fix-protects-shared-connection-boundaries/dc32efb4c038e871/slide-02.png",
+    "assets/social/threads/traefik-fix-protects-shared-connection-boundaries/dc32efb4c038e871/slide-03.png",
+    "assets/social/threads/traefik-fix-protects-shared-connection-boundaries/dc32efb4c038e871/slide-04.png"
+  ],
+  "altTexts": [
+    "ShadowContext security briefing for Traefik Fix Protects Shared Connection Boundaries, slide 1 of 4",
+    "ShadowContext security briefing for Traefik Fix Protects Shared Connection Boundaries, slide 2 of 4",
+    "ShadowContext security briefing for Traefik Fix Protects Shared Connection Boundaries, slide 3 of 4",
+    "ShadowContext security briefing for Traefik Fix Protects Shared Connection Boundaries, slide 4 of 4"
+  ]
+}
