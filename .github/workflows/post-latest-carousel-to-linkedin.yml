@@ -1,6 +1,7 @@
 name: Post Latest Carousel to LinkedIn
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
