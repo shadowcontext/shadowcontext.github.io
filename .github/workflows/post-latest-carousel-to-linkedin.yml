@@ -1,0 +1,40 @@
+name: Post Latest Carousel to LinkedIn
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/post-latest-carousel-to-linkedin.yml
+      - automation/linkedin/publish-latest-carousel.mjs
+
+concurrency:
+  group: shadowcontext-linkedin-one-shot
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Validate publisher and selection
+        run: |
+          node --check automation/linkedin/publish-latest-carousel.mjs
+          node automation/linkedin/publish-latest-carousel.mjs --dry-run
+
+      - name: Publish latest carousel
+        env:
+          LINKEDIN_CLIENT_ID: ${{ secrets.LINKEDIN_CLIENT_ID }}
+          LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+        run: node automation/linkedin/publish-latest-carousel.mjs
