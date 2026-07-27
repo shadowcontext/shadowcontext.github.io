@@ -165,9 +165,18 @@
         "https://shadowcontext.com/assets/social/threads/schema-codegen-needs-an-execution-boundary/679f8f989f34292c/slide-03.png",
         "https://shadowcontext.com/assets/social/threads/schema-codegen-needs-an-execution-boundary/679f8f989f34292c/slide-04.png"
       ],
-      "last_error": "Threads API request failed (400): Invalid parameter",
+      "last_error": null,
       "failed_at": "2026-07-27T01:05:25.205+04:00",
-      "status": "failed"
+      "status": "published",
+      "child_container_ids": [
+        "17907941694445078",
+        "17907941709445078",
+        "17907941724445078",
+        "17907941748445078"
+      ],
+      "carousel_container_id": "17907941766445078",
+      "threads_post_id": "18183387817400165",
+      "published_at": "2026-07-27T15:12:45.622+04:00"
     },
     "https://shadowcontext.com/fluent-forms-flaw-makes-configuration-part-of-triage/": {
       "article_publication_timestamp": "2026-07-26T23:10:19.000+04:00",
@@ -190,6 +199,86 @@
       "published_at": "2026-07-27T01:05:25.205+04:00",
       "status": "published",
       "last_error": null
+    },
+    "https://shadowcontext.com/notegen-needs-capability-boundaries/": {
+      "article_publication_timestamp": "2026-07-27T01:10:08.000+04:00",
+      "source_hash": "f1b58996a5dedee9575d69b9ff4ce0b9fe511e7586d9ca475c1f505d6a9c5f7a",
+      "carousel_hash": "6b569f65bb1e49f06251c7c0f6068fd2a7cffd32fdda2322bbe455f06b6c5d91",
+      "image_urls": [
+        "https://shadowcontext.com/assets/social/threads/notegen-needs-capability-boundaries/6b569f65bb1e49f0/slide-01.png",
+        "https://shadowcontext.com/assets/social/threads/notegen-needs-capability-boundaries/6b569f65bb1e49f0/slide-02.png",
+        "https://shadowcontext.com/assets/social/threads/notegen-needs-capability-boundaries/6b569f65bb1e49f0/slide-03.png",
+        "https://shadowcontext.com/assets/social/threads/notegen-needs-capability-boundaries/6b569f65bb1e49f0/slide-04.png"
+      ],
+      "child_container_ids": [
+        "17907941799445078",
+        "17907941829445078",
+        "17907941847445078",
+        "17907941865445078"
+      ],
+      "carousel_container_id": "17907941883445078",
+      "threads_post_id": "18410044693158294",
+      "published_at": "2026-07-27T15:12:45.622+04:00",
+      "status": "published",
+      "last_error": null
+    },
+    "https://shadowcontext.com/agentic-cves-need-risk-context/": {
+      "article_publication_timestamp": "2026-07-27T09:10:45.000+04:00",
+      "source_hash": "57d5b831479edf2c0b91aa0de3f0271eb31680f00f8a953c9cdaa2750b4ff557",
+      "carousel_hash": "717aca910e3e79ab79109b25fc79968a51c092fc1ac9cd02c120c380b335f342",
+      "image_urls": [
+        "https://shadowcontext.com/assets/social/threads/agentic-cves-need-risk-context/717aca910e3e79ab/slide-01.png",
+        "https://shadowcontext.com/assets/social/threads/agentic-cves-need-risk-context/717aca910e3e79ab/slide-02.png",
+        "https://shadowcontext.com/assets/social/threads/agentic-cves-need-risk-context/717aca910e3e79ab/slide-03.png",
+        "https://shadowcontext.com/assets/social/threads/agentic-cves-need-risk-context/717aca910e3e79ab/slide-04.png"
+      ],
+      "child_container_ids": [
+        "17907941892445078",
+        "17907941907445078",
+        "17907941922445078",
+        "17907941940445078"
+      ],
+      "carousel_container_id": "17907941961445078",
+      "threads_post_id": "17903617935305678",
+      "published_at": "2026-07-27T15:12:45.622+04:00",
+      "status": "published",
+      "last_error": null
+    },
+    "https://shadowcontext.com/default-credentials-turn-document-security-into-an-open-door/": {
+      "article_publication_timestamp": "2026-07-27T11:11:01.000+04:00",
+      "source_hash": "d3bf306b599cd9ff9d96994f8c10c8f72b421dcee89cb3cd46eddc8874d28ada",
+      "carousel_hash": "fe89ecbfbbf8d6bb0d78c978439c7769de11ea9f270f3dfab3bf148b37316d8e",
+      "image_urls": [
+        "https://shadowcontext.com/assets/social/threads/default-credentials-turn-document-security-into-an-open-door/fe89ecbfbbf8d6bb/slide-01.png",
+        "https://shadowcontext.com/assets/social/threads/default-credentials-turn-document-security-into-an-open-door/fe89ecbfbbf8d6bb/slide-02.png",
+        "https://shadowcontext.com/assets/social/threads/default-credentials-turn-document-security-into-an-open-door/fe89ecbfbbf8d6bb/slide-03.png",
+        "https://shadowcontext.com/assets/social/threads/default-credentials-turn-document-security-into-an-open-door/fe89ecbfbbf8d6bb/slide-04.png"
+      ],
+      "child_container_ids": [
+        "17907941973445078",
+        "17907942000445078",
+        "17907942033445078",
+        "17907942048445078"
+      ],
+      "carousel_container_id": "17907942072445078",
+      "threads_post_id": "18109661500811294",
+      "published_at": "2026-07-27T15:12:45.622+04:00",
+      "status": "published",
+      "last_error": null
+    },
+    "https://shadowcontext.com/station-launcher-flaw-needs-endpoint-level-proof/": {
+      "article_publication_timestamp": "2026-07-27T15:09:45.000+04:00",
+      "source_hash": "5ecec493b3e3ca448ee63f1d9fc2c6d3ed02db3a84bed761f9a5254d1377d9f5",
+      "carousel_hash": "42b7178204a08213335e8abd4f7c1f754008918d58bec3939075adf52d04e9b0",
+      "image_urls": [
+        "https://shadowcontext.com/assets/social/threads/station-launcher-flaw-needs-endpoint-level-proof/42b7178204a08213/slide-01.png",
+        "https://shadowcontext.com/assets/social/threads/station-launcher-flaw-needs-endpoint-level-proof/42b7178204a08213/slide-02.png",
+        "https://shadowcontext.com/assets/social/threads/station-launcher-flaw-needs-endpoint-level-proof/42b7178204a08213/slide-03.png",
+        "https://shadowcontext.com/assets/social/threads/station-launcher-flaw-needs-endpoint-level-proof/42b7178204a08213/slide-04.png"
+      ],
+      "last_error": "Threads API request failed (400): The requested resource does not exist",
+      "failed_at": "2026-07-27T15:12:45.622+04:00",
+      "status": "failed"
     }
   }
 }
