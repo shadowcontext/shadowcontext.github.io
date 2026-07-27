@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "status": "ready",
+  "generatedAt": "2026-07-28T02:11:56.530+04:00",
+  "id": "https://shadowcontext.com/apple-updates-need-fleet-level-proof/",
+  "title": "Apple Updates Need Fleet-Level Proof",
+  "canonicalUrl": "https://shadowcontext.com/apple-updates-need-fleet-level-proof/",
+  "publicationTimestamp": "2026-07-28T02:09:20.000+04:00",
+  "sourceHash": "d1a02b8ac68c45a437ed5de37e85bba61bd9103fd0dd0e45cb4b3924d2480c22",
+  "carouselHash": "3bb0001372b577eff30c1f339b7e634d4c4641476705199cc90795600d819ed7",
+  "category": "defense",
+  "caption": "Defenders must verify Apple security updates across mixed device fleets to ensure every managed endpoint reaches the correct fixed version.\n\n#cybersecurity #cybernews #vulnerability #ai #Defense #AppleSecurity\n\nRead the full ShadowContext briefing:\nhttps://shadowcontext.com/apple-updates-need-fleet-level-proof/",
+  "imageUrls": [
+    "https://shadowcontext.com/assets/social/threads/apple-updates-need-fleet-level-proof/3bb0001372b577ef/slide-01.png",
+    "https://shadowcontext.com/assets/social/threads/apple-updates-need-fleet-level-proof/3bb0001372b577ef/slide-02.png",
+    "https://shadowcontext.com/assets/social/threads/apple-updates-need-fleet-level-proof/3bb0001372b577ef/slide-03.png",
+    "https://shadowcontext.com/assets/social/threads/apple-updates-need-fleet-level-proof/3bb0001372b577ef/slide-04.png"
+  ],
+  "imageFiles": [
+    "assets/social/threads/apple-updates-need-fleet-level-proof/3bb0001372b577ef/slide-01.png",
+    "assets/social/threads/apple-updates-need-fleet-level-proof/3bb0001372b577ef/slide-02.png",
+    "assets/social/threads/apple-updates-need-fleet-level-proof/3bb0001372b577ef/slide-03.png",
+    "assets/social/threads/apple-updates-need-fleet-level-proof/3bb0001372b577ef/slide-04.png"
+  ],
+  "altTexts": [
+    "ShadowContext security briefing for Apple Updates Need Fleet-Level Proof, slide 1 of 4",
+    "ShadowContext security briefing for Apple Updates Need Fleet-Level Proof, slide 2 of 4",
+    "ShadowContext security briefing for Apple Updates Need Fleet-Level Proof, slide 3 of 4",
+    "ShadowContext security briefing for Apple Updates Need Fleet-Level Proof, slide 4 of 4"
+  ]
+}
