@@ -162,6 +162,7 @@ async function uploadImage({ token, owner, filePath }) {
 async function main() {
   const repoRoot = process.cwd();
   const { manifest, manifestPath } = await latestReadyCarousel(repoRoot);
+  console.log(`LinkedIn API version: ${API_VERSION}`);
   console.log(`Selected: ${manifest.title}`);
   console.log(`Manifest: ${path.relative(repoRoot, manifestPath)}`);
   console.log(`Images: ${manifest.imageFiles.length}`);
