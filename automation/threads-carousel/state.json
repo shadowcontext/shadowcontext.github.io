@@ -276,8 +276,92 @@
         "https://shadowcontext.com/assets/social/threads/station-launcher-flaw-needs-endpoint-level-proof/42b7178204a08213/slide-03.png",
         "https://shadowcontext.com/assets/social/threads/station-launcher-flaw-needs-endpoint-level-proof/42b7178204a08213/slide-04.png"
       ],
-      "last_error": "Threads API request failed (400): The requested resource does not exist",
-      "failed_at": "2026-07-27T15:12:45.622+04:00",
+      "last_error": "Threads API request failed (400): API access blocked.",
+      "failed_at": "2026-07-28T01:19:01.092+04:00",
+      "status": "failed"
+    },
+    "https://shadowcontext.com/cra-guidance-makes-reporting-an-engineering-workflow/": {
+      "article_publication_timestamp": "2026-07-27T17:09:49.000+04:00",
+      "source_hash": "fa31385a1f1fd63a4fe2801fc0b649c5ed035e5e85d4f64658989da22a02bbe6",
+      "carousel_hash": "a2e517359232599841b3c340b670e0bdb61747a171f9a8b356f45328049a0f84",
+      "image_urls": [
+        "https://shadowcontext.com/assets/social/threads/cra-guidance-makes-reporting-an-engineering-workflow/a2e5173592325998/slide-01.png",
+        "https://shadowcontext.com/assets/social/threads/cra-guidance-makes-reporting-an-engineering-workflow/a2e5173592325998/slide-02.png",
+        "https://shadowcontext.com/assets/social/threads/cra-guidance-makes-reporting-an-engineering-workflow/a2e5173592325998/slide-03.png",
+        "https://shadowcontext.com/assets/social/threads/cra-guidance-makes-reporting-an-engineering-workflow/a2e5173592325998/slide-04.png"
+      ],
+      "last_error": "Threads API request failed (400): API access blocked.",
+      "failed_at": "2026-07-28T01:19:01.092+04:00",
+      "status": "failed"
+    },
+    "https://shadowcontext.com/cjson-flaw-makes-architecture-part-of-triage/": {
+      "article_publication_timestamp": "2026-07-27T18:09:57.000+04:00",
+      "source_hash": "23d9ec9bb25e16ad5d1bff0e0bfe19945326642f6435fc4990953728053eb6f9",
+      "carousel_hash": "67f8bb4543906ec92b5daabde7befb4e6a091e034e9779aff6025d73d8e70d5f",
+      "image_urls": [
+        "https://shadowcontext.com/assets/social/threads/cjson-flaw-makes-architecture-part-of-triage/67f8bb4543906ec9/slide-01.png",
+        "https://shadowcontext.com/assets/social/threads/cjson-flaw-makes-architecture-part-of-triage/67f8bb4543906ec9/slide-02.png",
+        "https://shadowcontext.com/assets/social/threads/cjson-flaw-makes-architecture-part-of-triage/67f8bb4543906ec9/slide-03.png",
+        "https://shadowcontext.com/assets/social/threads/cjson-flaw-makes-architecture-part-of-triage/67f8bb4543906ec9/slide-04.png"
+      ],
+      "last_error": "Threads API request failed (400): API access blocked.",
+      "failed_at": "2026-07-28T01:19:01.092+04:00",
+      "status": "failed"
+    },
+    "https://shadowcontext.com/salary-day-scams-need-payment-friction/": {
+      "article_publication_timestamp": "2026-07-27T19:10:42.000+04:00",
+      "source_hash": "660efd714669b901d65ec87568219618f9a544649f43480c61ac6ad20256963a",
+      "carousel_hash": "f37800590629fa71da103b3b3eeec3e48209addfbe65a2b6096369ed8903e18d",
+      "image_urls": [
+        "https://shadowcontext.com/assets/social/threads/salary-day-scams-need-payment-friction/f37800590629fa71/slide-01.png",
+        "https://shadowcontext.com/assets/social/threads/salary-day-scams-need-payment-friction/f37800590629fa71/slide-02.png",
+        "https://shadowcontext.com/assets/social/threads/salary-day-scams-need-payment-friction/f37800590629fa71/slide-03.png",
+        "https://shadowcontext.com/assets/social/threads/salary-day-scams-need-payment-friction/f37800590629fa71/slide-04.png"
+      ],
+      "last_error": "Threads API request failed (400): API access blocked.",
+      "failed_at": "2026-07-28T01:19:01.092+04:00",
+      "status": "failed"
+    },
+    "https://shadowcontext.com/open-ai-alliance-makes-agent-security-a-stack-control/": {
+      "article_publication_timestamp": "2026-07-27T20:10:35.000+04:00",
+      "source_hash": "b736f2d849bc945a483a2e010c0231e583812c1370594ada398fe319fdcb3914",
+      "carousel_hash": "d5609b92ec10506dd8fc26b9cec1956074bdbefce5be3299d512cb9c56504647",
+      "image_urls": [
+        "https://shadowcontext.com/assets/social/threads/open-ai-alliance-makes-agent-security-a-stack-control/d5609b92ec10506d/slide-01.png",
+        "https://shadowcontext.com/assets/social/threads/open-ai-alliance-makes-agent-security-a-stack-control/d5609b92ec10506d/slide-02.png",
+        "https://shadowcontext.com/assets/social/threads/open-ai-alliance-makes-agent-security-a-stack-control/d5609b92ec10506d/slide-03.png",
+        "https://shadowcontext.com/assets/social/threads/open-ai-alliance-makes-agent-security-a-stack-control/d5609b92ec10506d/slide-04.png"
+      ],
+      "last_error": "Threads API request failed (400): API access blocked.",
+      "failed_at": "2026-07-28T01:19:01.092+04:00",
+      "status": "failed"
+    },
+    "https://shadowcontext.com/oblivious-http-needs-end-to-end-privacy-proof/": {
+      "article_publication_timestamp": "2026-07-27T22:09:16.000+04:00",
+      "source_hash": "e5226ef4482509259b43eb5ba6cefc22749c92e9bf70f5a53a22c3a8c97a6fae",
+      "carousel_hash": "d471e566cbeb1397036e0785d05c46cbeaaabb788fb05eb99c395e2d98c5bc49",
+      "image_urls": [
+        "https://shadowcontext.com/assets/social/threads/oblivious-http-needs-end-to-end-privacy-proof/d471e566cbeb1397/slide-01.png",
+        "https://shadowcontext.com/assets/social/threads/oblivious-http-needs-end-to-end-privacy-proof/d471e566cbeb1397/slide-02.png",
+        "https://shadowcontext.com/assets/social/threads/oblivious-http-needs-end-to-end-privacy-proof/d471e566cbeb1397/slide-03.png",
+        "https://shadowcontext.com/assets/social/threads/oblivious-http-needs-end-to-end-privacy-proof/d471e566cbeb1397/slide-04.png"
+      ],
+      "last_error": "Threads API request failed (400): API access blocked.",
+      "failed_at": "2026-07-28T01:19:01.092+04:00",
+      "status": "failed"
+    },
+    "https://shadowcontext.com/glibc-fixes-need-reboot-level-proof/": {
+      "article_publication_timestamp": "2026-07-28T01:08:54.000+04:00",
+      "source_hash": "b3a1b588e9e1627ed99dfba590e7ed58d5d9095c217ea92a296a2fbfea815f40",
+      "carousel_hash": "e356519c538156151be4964536b0b7a488f9693c70b987deb654083bb9f98b07",
+      "image_urls": [
+        "https://shadowcontext.com/assets/social/threads/glibc-fixes-need-reboot-level-proof/e356519c53815615/slide-01.png",
+        "https://shadowcontext.com/assets/social/threads/glibc-fixes-need-reboot-level-proof/e356519c53815615/slide-02.png",
+        "https://shadowcontext.com/assets/social/threads/glibc-fixes-need-reboot-level-proof/e356519c53815615/slide-03.png",
+        "https://shadowcontext.com/assets/social/threads/glibc-fixes-need-reboot-level-proof/e356519c53815615/slide-04.png"
+      ],
+      "last_error": "Threads API request failed (400): API access blocked.",
+      "failed_at": "2026-07-28T01:19:01.092+04:00",
       "status": "failed"
     }
   }
