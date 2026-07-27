@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "status": "ready",
+  "generatedAt": "2026-07-27T11:13:41.686+04:00",
+  "id": "https://shadowcontext.com/default-credentials-turn-document-security-into-an-open-door/",
+  "title": "Default Credentials Turn Document Security Into an Open Door",
+  "canonicalUrl": "https://shadowcontext.com/default-credentials-turn-document-security-into-an-open-door/",
+  "publicationTimestamp": "2026-07-27T11:11:01.000+04:00",
+  "sourceHash": "d3bf306b599cd9ff9d96994f8c10c8f72b421dcee89cb3cd46eddc8874d28ada",
+  "carouselHash": "fe89ecbfbbf8d6bb0d78c978439c7769de11ea9f270f3dfab3bf148b37316d8e",
+  "category": "threat-intelligence",
+  "caption": "Recent internet scanning activity highlights the risk of shared vendor credentials in ESAFENET CDG 3. Defenders should verify asset exposure, rotate default passwords, and audit authentication logs.\n\n#cybersecurity #cybernews #vulnerability #ai #ThreatIntelligence #DefaultCredentials\n\nRead the full ShadowContext briefing:\nhttps://shadowcontext.com/default-credentials-turn-document-security-into-an-open-door/",
+  "imageUrls": [
+    "https://shadowcontext.com/assets/social/threads/default-credentials-turn-document-security-into-an-open-door/fe89ecbfbbf8d6bb/slide-01.png",
+    "https://shadowcontext.com/assets/social/threads/default-credentials-turn-document-security-into-an-open-door/fe89ecbfbbf8d6bb/slide-02.png",
+    "https://shadowcontext.com/assets/social/threads/default-credentials-turn-document-security-into-an-open-door/fe89ecbfbbf8d6bb/slide-03.png",
+    "https://shadowcontext.com/assets/social/threads/default-credentials-turn-document-security-into-an-open-door/fe89ecbfbbf8d6bb/slide-04.png"
+  ],
+  "imageFiles": [
+    "assets/social/threads/default-credentials-turn-document-security-into-an-open-door/fe89ecbfbbf8d6bb/slide-01.png",
+    "assets/social/threads/default-credentials-turn-document-security-into-an-open-door/fe89ecbfbbf8d6bb/slide-02.png",
+    "assets/social/threads/default-credentials-turn-document-security-into-an-open-door/fe89ecbfbbf8d6bb/slide-03.png",
+    "assets/social/threads/default-credentials-turn-document-security-into-an-open-door/fe89ecbfbbf8d6bb/slide-04.png"
+  ],
+  "altTexts": [
+    "ShadowContext security briefing for Default Credentials Turn Document Security Into an Open Door, slide 1 of 4",
+    "ShadowContext security briefing for Default Credentials Turn Document Security Into an Open Door, slide 2 of 4",
+    "ShadowContext security briefing for Default Credentials Turn Document Security Into an Open Door, slide 3 of 4",
+    "ShadowContext security briefing for Default Credentials Turn Document Security Into an Open Door, slide 4 of 4"
+  ]
+}
