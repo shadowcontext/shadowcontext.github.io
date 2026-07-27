@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "status": "ready",
+  "generatedAt": "2026-07-28T01:11:35.846+04:00",
+  "id": "https://shadowcontext.com/glibc-fixes-need-reboot-level-proof/",
+  "title": "GNU C Library Fixes Need Reboot-Level Proof",
+  "canonicalUrl": "https://shadowcontext.com/glibc-fixes-need-reboot-level-proof/",
+  "publicationTimestamp": "2026-07-28T01:08:54.000+04:00",
+  "sourceHash": "b3a1b588e9e1627ed99dfba590e7ed58d5d9095c217ea92a296a2fbfea815f40",
+  "carouselHash": "e356519c538156151be4964536b0b7a488f9693c70b987deb654083bb9f98b07",
+  "category": "defense",
+  "caption": "Ubuntu issued updates for seven GNU C Library vulnerabilities across multiple LTS releases, requiring a reboot to ensure running processes use the corrected code.\n\n#cybersecurity #cybernews #vulnerability #ai #Defense #Ubuntu\n\nRead the full ShadowContext briefing:\nhttps://shadowcontext.com/glibc-fixes-need-reboot-level-proof/",
+  "imageUrls": [
+    "https://shadowcontext.com/assets/social/threads/glibc-fixes-need-reboot-level-proof/e356519c53815615/slide-01.png",
+    "https://shadowcontext.com/assets/social/threads/glibc-fixes-need-reboot-level-proof/e356519c53815615/slide-02.png",
+    "https://shadowcontext.com/assets/social/threads/glibc-fixes-need-reboot-level-proof/e356519c53815615/slide-03.png",
+    "https://shadowcontext.com/assets/social/threads/glibc-fixes-need-reboot-level-proof/e356519c53815615/slide-04.png"
+  ],
+  "imageFiles": [
+    "assets/social/threads/glibc-fixes-need-reboot-level-proof/e356519c53815615/slide-01.png",
+    "assets/social/threads/glibc-fixes-need-reboot-level-proof/e356519c53815615/slide-02.png",
+    "assets/social/threads/glibc-fixes-need-reboot-level-proof/e356519c53815615/slide-03.png",
+    "assets/social/threads/glibc-fixes-need-reboot-level-proof/e356519c53815615/slide-04.png"
+  ],
+  "altTexts": [
+    "ShadowContext security briefing for GNU C Library Fixes Need Reboot-Level Proof, slide 1 of 4",
+    "ShadowContext security briefing for GNU C Library Fixes Need Reboot-Level Proof, slide 2 of 4",
+    "ShadowContext security briefing for GNU C Library Fixes Need Reboot-Level Proof, slide 3 of 4",
+    "ShadowContext security briefing for GNU C Library Fixes Need Reboot-Level Proof, slide 4 of 4"
+  ]
+}
