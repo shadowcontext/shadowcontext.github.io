@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Payment pulse passing through verification layers</title>
+  <desc id="desc">An abstract editorial scene in deep blue and warm gold, with a bright payment pulse approaching translucent verification gates while deceptive side paths dissolve in the background.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071526"/>
+      <stop offset="0.52" stop-color="#0B2940"/>
+      <stop offset="1" stop-color="#123B4A"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#FFE59A" stop-opacity="0.92"/>
+      <stop offset="0.32" stop-color="#F8B84E" stop-opacity="0.48"/>
+      <stop offset="1" stop-color="#F8B84E" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="pulse" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F5A63A" stop-opacity="0"/>
+      <stop offset="0.55" stop-color="#F6B748"/>
+      <stop offset="1" stop-color="#FFF0B5"/>
+    </linearGradient>
+    <linearGradient id="gate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9EEBE2" stop-opacity="0.82"/>
+      <stop offset="1" stop-color="#3CB7B0" stop-opacity="0.18"/>
+    </linearGradient>
+    <linearGradient id="safePath" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8BE4D8" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#B9FFF5" stop-opacity="0.75"/>
+    </linearGradient>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="smallGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <pattern id="microgrid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" fill="none" stroke="#8AD7D0" stroke-width="1" stroke-opacity="0.055"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#microgrid)"/>
+
+  <circle cx="1195" cy="432" r="370" fill="url(#halo)" opacity="0.18"/>
+  <circle cx="250" cy="166" r="210" fill="#38B6B0" opacity="0.06"/>
+  <circle cx="1395" cy="760" r="250" fill="#F5A63A" opacity="0.055"/>
+
+  <g opacity="0.18" fill="none" stroke="#79CFC8" stroke-width="3">
+    <path d="M80 202C280 202 313 333 493 333"/>
+    <path d="M116 708C282 708 327 587 493 587"/>
+    <path d="M87 452H397"/>
+  </g>
+
+  <g opacity="0.24">
+    <path d="M415 448C563 322 623 213 756 166" fill="none" stroke="#E17954" stroke-width="10" stroke-linecap="round"/>
+    <path d="M415 452C584 572 634 694 770 739" fill="none" stroke="#E17954" stroke-width="10" stroke-linecap="round"/>
+    <path d="M612 284l34-32m-3 76 49-46m-27 105 43-40" stroke="#FFAD72" stroke-width="5" stroke-linecap="round"/>
+    <path d="M621 611l38 31m-6-74 51 42m-28-101 45 38" stroke="#FFAD72" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <g opacity="0.14" fill="#F6A13B">
+    <circle cx="747" cy="161" r="8"/>
+    <circle cx="783" cy="147" r="5"/>
+    <circle cx="811" cy="134" r="3"/>
+    <circle cx="761" cy="748" r="8"/>
+    <circle cx="798" cy="761" r="5"/>
+    <circle cx="826" cy="771" r="3"/>
+  </g>
+
+  <path d="M103 451H1190" stroke="url(#pulse)" stroke-width="18" stroke-linecap="round"/>
+  <path d="M1190 451H1495" stroke="url(#safePath)" stroke-width="18" stroke-linecap="round"/>
+  <path d="M151 451H1122" stroke="#FFD987" stroke-width="4" stroke-linecap="round" opacity="0.78" filter="url(#smallGlow)"/>
+
+  <g>
+    <circle cx="378" cy="451" r="82" fill="#F7B548" opacity="0.16" filter="url(#softGlow)"/>
+    <circle cx="378" cy="451" r="46" fill="#FFD87E"/>
+    <circle cx="378" cy="451" r="34" fill="#EFA339"/>
+    <path d="M362 432h32m-32 19h32m-32 19h32" stroke="#FFF1C1" stroke-width="7" stroke-linecap="round"/>
+  </g>
+
+  <g>
+    <path d="M694 226Q731 206 768 226V674Q731 694 694 674Z" fill="url(#gate)" opacity="0.52"/>
+    <path d="M694 226Q731 206 768 226V674Q731 694 694 674Z" fill="none" stroke="#A9F1E8" stroke-width="4" stroke-opacity="0.82"/>
+    <circle cx="731" cy="451" r="44" fill="#0A2D3E" stroke="#C1FFF7" stroke-width="5"/>
+    <path d="M711 451l14 15 28-33" fill="none" stroke="#C1FFF7" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g>
+    <path d="M953 182Q995 158 1037 182V718Q995 742 953 718Z" fill="url(#gate)" opacity="0.68"/>
+    <path d="M953 182Q995 158 1037 182V718Q995 742 953 718Z" fill="none" stroke="#B7F9F0" stroke-width="4" stroke-opacity="0.9"/>
+    <rect x="962" y="418" width="66" height="66" rx="18" fill="#0A2D3E" stroke="#C1FFF7" stroke-width="5"/>
+    <circle cx="995" cy="441" r="10" fill="#C1FFF7"/>
+    <path d="M995 451v18" stroke="#C1FFF7" stroke-width="8" stroke-linecap="round"/>
+  </g>
+
+  <g>
+    <path d="M1197 242Q1231 222 1265 242V658Q1231 678 1197 658Z" fill="url(#gate)" opacity="0.82"/>
+    <path d="M1197 242Q1231 222 1265 242V658Q1231 678 1197 658Z" fill="none" stroke="#C9FFF8" stroke-width="4"/>
+    <path d="M1231 401l37 17v31c0 34-17 58-37 71-20-13-37-37-37-71v-31Z" fill="#0A2D3E" stroke="#C9FFF8" stroke-width="5"/>
+    <path d="M1215 453l12 13 23-28" fill="none" stroke="#C9FFF8" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g opacity="0.7">
+    <circle cx="1378" cy="451" r="55" fill="#84DDD3" opacity="0.2" filter="url(#softGlow)"/>
+    <circle cx="1378" cy="451" r="19" fill="#C7FFF7"/>
+    <circle cx="1378" cy="451" r="7" fill="#0A5861"/>
+  </g>
+
+  <g fill="#B6F6EE" opacity="0.34">
+    <circle cx="1103" cy="309" r="5"/>
+    <circle cx="1138" cy="286" r="3"/>
+    <circle cx="1324" cy="331" r="4"/>
+    <circle cx="1348" cy="303" r="3"/>
+    <circle cx="1118" cy="620" r="4"/>
+    <circle cx="1310" cy="603" r="5"/>
+  </g>
+</svg>
