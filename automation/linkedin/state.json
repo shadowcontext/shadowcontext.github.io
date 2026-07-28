@@ -300,6 +300,30 @@
       "github_run_id": "30349921406",
       "status": "published",
       "last_error": null
+    },
+    "f657964c6e58b5eb2f956289fcead9a25f3abe1f470325cd3c51639c754b6f01": {
+      "title": "External AI Red Teaming Needs Context, Not Just More Testers",
+      "canonical_url": "https://shadowcontext.com/external-ai-red-teaming-needs-context/",
+      "carousel_hash": "f657964c6e58b5eb2f956289fcead9a25f3abe1f470325cd3c51639c754b6f01",
+      "generated_at": "2026-07-28T15:13:23.736+04:00",
+      "image_files": [
+        "assets/social/threads/external-ai-red-teaming-needs-context/f657964c6e58b5eb/slide-01.png",
+        "assets/social/threads/external-ai-red-teaming-needs-context/f657964c6e58b5eb/slide-02.png",
+        "assets/social/threads/external-ai-red-teaming-needs-context/f657964c6e58b5eb/slide-03.png",
+        "assets/social/threads/external-ai-red-teaming-needs-context/f657964c6e58b5eb/slide-04.png"
+      ],
+      "linkedin_image_urns": [
+        "urn:li:image:D4D10AQHAmbTKNK8ong",
+        "urn:li:image:D4D10AQH8FzcD-J0spw",
+        "urn:li:image:D4D10AQH3K9LzWrYItg",
+        "urn:li:image:D4D10AQEhXuFP7yozSA"
+      ],
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7487827673839329281",
+      "published_at": "2026-07-28T11:13:54.823Z",
+      "github_run_id": "30353927118",
+      "status": "published",
+      "last_error": null
     }
   }
 }
