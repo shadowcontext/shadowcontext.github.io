@@ -156,6 +156,30 @@
       "github_run_id": "30319668158",
       "status": "published",
       "last_error": null
+    },
+    "8ae30ab125ef6267b5425711d73aa41c674b43adacf594705d45831e2f4a2b42": {
+      "title": "Erlang Fix Restores Certificate Checks Before TLS 1.3",
+      "canonical_url": "https://shadowcontext.com/erlang-fix-restores-pre-tls13-certificate-checks/",
+      "carousel_hash": "8ae30ab125ef6267b5425711d73aa41c674b43adacf594705d45831e2f4a2b42",
+      "generated_at": "2026-07-28T06:13:04.995+04:00",
+      "image_files": [
+        "assets/social/threads/erlang-fix-restores-pre-tls13-certificate-checks/8ae30ab125ef6267/slide-01.png",
+        "assets/social/threads/erlang-fix-restores-pre-tls13-certificate-checks/8ae30ab125ef6267/slide-02.png",
+        "assets/social/threads/erlang-fix-restores-pre-tls13-certificate-checks/8ae30ab125ef6267/slide-03.png",
+        "assets/social/threads/erlang-fix-restores-pre-tls13-certificate-checks/8ae30ab125ef6267/slide-04.png"
+      ],
+      "linkedin_image_urns": [
+        "urn:li:image:D4D10AQFjCFvDhNHm7g",
+        "urn:li:image:D4D10AQEeUpkYoVdCOw",
+        "urn:li:image:D4D10AQGIzsFf0tdDUA",
+        "urn:li:image:D4D10AQGHa2nCGqnv1A"
+      ],
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7487691699561873408",
+      "published_at": "2026-07-28T02:13:36.056Z",
+      "github_run_id": "30322487028",
+      "status": "published",
+      "last_error": null
     }
   }
 }
