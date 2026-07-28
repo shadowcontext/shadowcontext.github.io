@@ -372,6 +372,30 @@
       "github_run_id": "30377242688",
       "status": "published",
       "last_error": null
+    },
+    "3f712fe120208f52b7cad2123dd4fda00f1220d1fcd1d685d21f29b07f053e20": {
+      "title": "Cowlib Fix Needs Dependency-Level Proof",
+      "canonical_url": "https://shadowcontext.com/cowlib-fix-needs-dependency-level-proof/",
+      "carousel_hash": "3f712fe120208f52b7cad2123dd4fda00f1220d1fcd1d685d21f29b07f053e20",
+      "generated_at": "2026-07-29T01:14:03.057+04:00",
+      "image_files": [
+        "assets/social/threads/cowlib-fix-needs-dependency-level-proof/3f712fe120208f52/slide-01.png",
+        "assets/social/threads/cowlib-fix-needs-dependency-level-proof/3f712fe120208f52/slide-02.png",
+        "assets/social/threads/cowlib-fix-needs-dependency-level-proof/3f712fe120208f52/slide-03.png",
+        "assets/social/threads/cowlib-fix-needs-dependency-level-proof/3f712fe120208f52/slide-04.png"
+      ],
+      "linkedin_image_urns": [
+        "urn:li:image:D4D10AQEKt4thZSbV7Q",
+        "urn:li:image:D4D10AQFDyCiLEJLMJg",
+        "urn:li:image:D4D10AQEHtVpKtQeY7Q",
+        "urn:li:image:D4D10AQGcYacxv8Elkw"
+      ],
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7487978800820047872",
+      "published_at": "2026-07-28T21:14:26.269Z",
+      "github_run_id": "30399818976",
+      "status": "published",
+      "last_error": null
     }
   }
 }
