@@ -324,6 +324,30 @@
       "github_run_id": "30353927118",
       "status": "published",
       "last_error": null
+    },
+    "2e45a7f29db2804745a0d05f7b72a6bfd97c7d0d70d0f26f4f5e189e4104b385": {
+      "title": "Safe Generative AI Use Starts With a Data Boundary",
+      "canonical_url": "https://shadowcontext.com/generative-ai-use-needs-a-data-boundary/",
+      "carousel_hash": "2e45a7f29db2804745a0d05f7b72a6bfd97c7d0d70d0f26f4f5e189e4104b385",
+      "generated_at": "2026-07-28T17:12:51.055+04:00",
+      "image_files": [
+        "assets/social/threads/generative-ai-use-needs-a-data-boundary/2e45a7f29db28047/slide-01.png",
+        "assets/social/threads/generative-ai-use-needs-a-data-boundary/2e45a7f29db28047/slide-02.png",
+        "assets/social/threads/generative-ai-use-needs-a-data-boundary/2e45a7f29db28047/slide-03.png",
+        "assets/social/threads/generative-ai-use-needs-a-data-boundary/2e45a7f29db28047/slide-04.png"
+      ],
+      "linkedin_image_urns": [
+        "urn:li:image:D4D10AQFdEqntlMURlA",
+        "urn:li:image:D4D10AQGUhNACdG92kA",
+        "urn:li:image:D4D10AQFyUceKaYp6mA",
+        "urn:li:image:D4D10AQHxzzF3-ydCug"
+      ],
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7487857713922654208",
+      "published_at": "2026-07-28T13:13:16.973Z",
+      "github_run_id": "30362453149",
+      "status": "published",
+      "last_error": null
     }
   }
 }
