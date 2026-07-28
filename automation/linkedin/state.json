@@ -228,6 +228,30 @@
       "github_run_id": "30328065868",
       "status": "published",
       "last_error": null
+    },
+    "a2caae1596fc7441b347af58bf345facd613fa3fbc2c873bbb490378194ceafd": {
+      "title": "Agentic Defense Needs Boundaries at the Action Layer",
+      "canonical_url": "https://shadowcontext.com/agentic-defense-needs-action-boundaries/",
+      "carousel_hash": "a2caae1596fc7441b347af58bf345facd613fa3fbc2c873bbb490378194ceafd",
+      "generated_at": "2026-07-28T09:11:55.279+04:00",
+      "image_files": [
+        "assets/social/threads/agentic-defense-needs-action-boundaries/a2caae1596fc7441/slide-01.png",
+        "assets/social/threads/agentic-defense-needs-action-boundaries/a2caae1596fc7441/slide-02.png",
+        "assets/social/threads/agentic-defense-needs-action-boundaries/a2caae1596fc7441/slide-03.png",
+        "assets/social/threads/agentic-defense-needs-action-boundaries/a2caae1596fc7441/slide-04.png"
+      ],
+      "linkedin_image_urns": [
+        "urn:li:image:D4D10AQG8S125g9YU2g",
+        "urn:li:image:D4D10AQEFBUB-j2_k8w",
+        "urn:li:image:D4D10AQGKU9FbNHCc2Q",
+        "urn:li:image:D4D10AQFj2Koun4Zztw"
+      ],
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7487736683589746688",
+      "published_at": "2026-07-28T05:12:21.040Z",
+      "github_run_id": "30330934315",
+      "status": "published",
+      "last_error": null
     }
   }
 }
