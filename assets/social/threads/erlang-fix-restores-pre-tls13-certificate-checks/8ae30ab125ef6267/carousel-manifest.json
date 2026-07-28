@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "status": "ready",
+  "generatedAt": "2026-07-28T06:13:04.995+04:00",
+  "id": "https://shadowcontext.com/erlang-fix-restores-pre-tls13-certificate-checks/",
+  "title": "Erlang Fix Restores Certificate Checks Before TLS 1.3",
+  "canonicalUrl": "https://shadowcontext.com/erlang-fix-restores-pre-tls13-certificate-checks/",
+  "publicationTimestamp": "2026-07-28T06:10:25.000+04:00",
+  "sourceHash": "11122bfff340a5cd791b8e295fc280e9c73a0a8ad50b1fbc03373b78d93ed242",
+  "carouselHash": "8ae30ab125ef6267b5425711d73aa41c674b43adacf594705d45831e2f4a2b42",
+  "category": "defense",
+  "caption": "Erlang/OTP 29.0.4 addresses a pre-TLS 1.3 certificate-validation bypass and denial-of-service weaknesses in certificate handling. Defenders must inventory runtimes, update complete dependency sets, and verify live component versions.\n\n#cybersecurity #cybernews #vulnerability #ai #Defense #Erlang\n\nRead the full ShadowContext briefing:\nhttps://shadowcontext.com/erlang-fix-restores-pre-tls13-certificate-checks/",
+  "imageUrls": [
+    "https://shadowcontext.com/assets/social/threads/erlang-fix-restores-pre-tls13-certificate-checks/8ae30ab125ef6267/slide-01.png",
+    "https://shadowcontext.com/assets/social/threads/erlang-fix-restores-pre-tls13-certificate-checks/8ae30ab125ef6267/slide-02.png",
+    "https://shadowcontext.com/assets/social/threads/erlang-fix-restores-pre-tls13-certificate-checks/8ae30ab125ef6267/slide-03.png",
+    "https://shadowcontext.com/assets/social/threads/erlang-fix-restores-pre-tls13-certificate-checks/8ae30ab125ef6267/slide-04.png"
+  ],
+  "imageFiles": [
+    "assets/social/threads/erlang-fix-restores-pre-tls13-certificate-checks/8ae30ab125ef6267/slide-01.png",
+    "assets/social/threads/erlang-fix-restores-pre-tls13-certificate-checks/8ae30ab125ef6267/slide-02.png",
+    "assets/social/threads/erlang-fix-restores-pre-tls13-certificate-checks/8ae30ab125ef6267/slide-03.png",
+    "assets/social/threads/erlang-fix-restores-pre-tls13-certificate-checks/8ae30ab125ef6267/slide-04.png"
+  ],
+  "altTexts": [
+    "ShadowContext security briefing for Erlang Fix Restores Certificate Checks Before TLS 1.3, slide 1 of 4",
+    "ShadowContext security briefing for Erlang Fix Restores Certificate Checks Before TLS 1.3, slide 2 of 4",
+    "ShadowContext security briefing for Erlang Fix Restores Certificate Checks Before TLS 1.3, slide 3 of 4",
+    "ShadowContext security briefing for Erlang Fix Restores Certificate Checks Before TLS 1.3, slide 4 of 4"
+  ]
+}
