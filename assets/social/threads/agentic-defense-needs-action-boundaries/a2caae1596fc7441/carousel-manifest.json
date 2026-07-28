@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "status": "ready",
+  "generatedAt": "2026-07-28T09:11:55.279+04:00",
+  "id": "https://shadowcontext.com/agentic-defense-needs-action-boundaries/",
+  "title": "Agentic Defense Needs Boundaries at the Action Layer",
+  "canonicalUrl": "https://shadowcontext.com/agentic-defense-needs-action-boundaries/",
+  "publicationTimestamp": "2026-07-28T09:09:09.000+04:00",
+  "sourceHash": "d7c48e2b6802b82f1ec4b117bc31f9d9cbd6eb6491123745904f3affbbc33838",
+  "carouselHash": "a2caae1596fc7441b347af58bf345facd613fa3fbc2c873bbb490378194ceafd",
+  "category": "ai-security",
+  "caption": "Microsoft announced Project Perception to connect security signals and defensive actions, with a public preview scheduled for August 3. Defenders must treat automated actions as privileged access, ensuring trusted context, narrow authority, explicit policy controls, and measurable human oversight rather than relying…\n\n#cybersecurity #cybernews #vulnerability #ai #AiSecurity #AgenticSecurity\n\nRead the full ShadowContext briefing:\nhttps://shadowcontext.com/agentic-defense-needs-action-boundaries/",
+  "imageUrls": [
+    "https://shadowcontext.com/assets/social/threads/agentic-defense-needs-action-boundaries/a2caae1596fc7441/slide-01.png",
+    "https://shadowcontext.com/assets/social/threads/agentic-defense-needs-action-boundaries/a2caae1596fc7441/slide-02.png",
+    "https://shadowcontext.com/assets/social/threads/agentic-defense-needs-action-boundaries/a2caae1596fc7441/slide-03.png",
+    "https://shadowcontext.com/assets/social/threads/agentic-defense-needs-action-boundaries/a2caae1596fc7441/slide-04.png"
+  ],
+  "imageFiles": [
+    "assets/social/threads/agentic-defense-needs-action-boundaries/a2caae1596fc7441/slide-01.png",
+    "assets/social/threads/agentic-defense-needs-action-boundaries/a2caae1596fc7441/slide-02.png",
+    "assets/social/threads/agentic-defense-needs-action-boundaries/a2caae1596fc7441/slide-03.png",
+    "assets/social/threads/agentic-defense-needs-action-boundaries/a2caae1596fc7441/slide-04.png"
+  ],
+  "altTexts": [
+    "ShadowContext security briefing for Agentic Defense Needs Boundaries at the Action Layer, slide 1 of 4",
+    "ShadowContext security briefing for Agentic Defense Needs Boundaries at the Action Layer, slide 2 of 4",
+    "ShadowContext security briefing for Agentic Defense Needs Boundaries at the Action Layer, slide 3 of 4",
+    "ShadowContext security briefing for Agentic Defense Needs Boundaries at the Action Layer, slide 4 of 4"
+  ]
+}
