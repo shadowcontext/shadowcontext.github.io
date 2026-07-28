@@ -204,6 +204,30 @@
       "github_run_id": "30325234014",
       "status": "published",
       "last_error": null
+    },
+    "9de40f171db2e8130daea9662cd3bbaba1023c110af4c652471c47987695bee3": {
+      "title": "Redis RESTORE Privilege Needs a Hard Security Boundary",
+      "canonical_url": "https://shadowcontext.com/redis-restore-privilege-needs-a-hard-boundary/",
+      "carousel_hash": "9de40f171db2e8130daea9662cd3bbaba1023c110af4c652471c47987695bee3",
+      "generated_at": "2026-07-28T08:11:43.577+04:00",
+      "image_files": [
+        "assets/social/threads/redis-restore-privilege-needs-a-hard-boundary/9de40f171db2e813/slide-01.png",
+        "assets/social/threads/redis-restore-privilege-needs-a-hard-boundary/9de40f171db2e813/slide-02.png",
+        "assets/social/threads/redis-restore-privilege-needs-a-hard-boundary/9de40f171db2e813/slide-03.png",
+        "assets/social/threads/redis-restore-privilege-needs-a-hard-boundary/9de40f171db2e813/slide-04.png"
+      ],
+      "linkedin_image_urns": [
+        "urn:li:image:D4D10AQEtVFxS90EEtQ",
+        "urn:li:image:D4D10AQH3NvQgzwQ7Jg",
+        "urn:li:image:D4D10AQGqqoiGdX9hbw",
+        "urn:li:image:D4D10AQGZUoDPG5TKmg"
+      ],
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7487721514277060608",
+      "published_at": "2026-07-28T04:12:04.422Z",
+      "github_run_id": "30328065868",
+      "status": "published",
+      "last_error": null
     }
   }
 }
