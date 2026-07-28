@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-28T01:24:46Z",
-  "generated_display": "28 Jul 2026 · 01:24 UTC",
+  "generated_at": "2026-07-28T22:15:33Z",
+  "generated_display": "28 Jul 2026 · 22:15 UTC",
   "metrics": {
     "kev_total": 1655,
     "kev_added_30d": 26,
@@ -161,36 +161,36 @@
   ],
   "advisories": [
     {
+      "authority": "Saudi NCA / CERT",
+      "title": "F5 Alert",
+      "url": "https://nca.gov.sa/en/cert/7808/",
+      "date": "2026-07-28",
+      "severity": "High",
+      "summary": "Security alert 2026-7685. Review the official notice for affected products and remediation guidance."
+    },
+    {
+      "authority": "Saudi NCA / CERT",
+      "title": "F5 Alert",
+      "url": "https://nca.gov.sa/en/cert/7807/",
+      "date": "2026-07-28",
+      "severity": "High",
+      "summary": "Security alert 2026-7684. Review the official notice for affected products and remediation guidance."
+    },
+    {
+      "authority": "Saudi NCA / CERT",
+      "title": "HP Alert",
+      "url": "https://nca.gov.sa/en/cert/7806/",
+      "date": "2026-07-28",
+      "severity": "High",
+      "summary": "Security alert 2026-7683. Review the official notice for affected products and remediation guidance."
+    },
+    {
       "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
       "url": "https://www.cisa.gov/news-events/alerts/2026/07/27/cisa-adds-two-known-exploited-vulnerabilities-catalog",
       "date": "2026-07-27",
       "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2025-68686 Fortinet FortiOS Exposure…",
       "authority": "CISA",
       "severity": ""
-    },
-    {
-      "authority": "Saudi NCA / CERT",
-      "title": "Apple Alert",
-      "url": "https://nca.gov.sa/en/cert/7801/",
-      "date": "2026-07-27",
-      "severity": "High",
-      "summary": "Security alert 2026-7678. Review the official notice for affected products and remediation guidance."
-    },
-    {
-      "authority": "Saudi NCA / CERT",
-      "title": "Apple Alert",
-      "url": "https://nca.gov.sa/en/cert/7800/",
-      "date": "2026-07-27",
-      "severity": "High",
-      "summary": "Security alert 2026-7677. Review the official notice for affected products and remediation guidance."
-    },
-    {
-      "authority": "Saudi NCA / CERT",
-      "title": "F5 Alert",
-      "url": "https://nca.gov.sa/en/cert/7799/",
-      "date": "2026-07-27",
-      "severity": "High",
-      "summary": "Security alert 2026-7676. Review the official notice for affected products and remediation guidance."
     },
     {
       "title": "Weintek cMT3092X",
@@ -358,7 +358,7 @@
       "name": "CISA Advisories",
       "coverage": "Technical and industrial-control advisories",
       "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml",
-      "status": "online"
+      "status": "degraded"
     },
     {
       "name": "UK NCSC",
@@ -374,9 +374,9 @@
     },
     {
       "name": "CISA STIX",
-      "coverage": "TLP:CLEAR indicators from 3 advisories",
+      "coverage": "Last validated TLP:CLEAR indicator snapshot",
       "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-239a",
-      "status": "online"
+      "status": "degraded"
     }
   ]
 }
