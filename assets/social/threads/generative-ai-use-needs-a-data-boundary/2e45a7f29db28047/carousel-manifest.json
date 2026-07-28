@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "status": "ready",
+  "generatedAt": "2026-07-28T17:12:51.055+04:00",
+  "id": "https://shadowcontext.com/generative-ai-use-needs-a-data-boundary/",
+  "title": "Safe Generative AI Use Starts With a Data Boundary",
+  "canonicalUrl": "https://shadowcontext.com/generative-ai-use-needs-a-data-boundary/",
+  "publicationTimestamp": "2026-07-28T17:10:16.000+04:00",
+  "sourceHash": "2f2f41e617590dec59389cf84427e68eae1e1d0b5dfa968b1efaa291509fddd9",
+  "carouselHash": "2e45a7f29db2804745a0d05f7b72a6bfd97c7d0d70d0f26f4f5e189e4104b385",
+  "category": "ai-security",
+  "caption": "Singapore issued a generative AI advisory emphasizing input control, output verification, and clear user pathways for safe tool usage.\n\n#cybersecurity #cybernews #vulnerability #ai #AiSecurity #GenerativeAi\n\nRead the full ShadowContext briefing:\nhttps://shadowcontext.com/generative-ai-use-needs-a-data-boundary/",
+  "imageUrls": [
+    "https://shadowcontext.com/assets/social/threads/generative-ai-use-needs-a-data-boundary/2e45a7f29db28047/slide-01.png",
+    "https://shadowcontext.com/assets/social/threads/generative-ai-use-needs-a-data-boundary/2e45a7f29db28047/slide-02.png",
+    "https://shadowcontext.com/assets/social/threads/generative-ai-use-needs-a-data-boundary/2e45a7f29db28047/slide-03.png",
+    "https://shadowcontext.com/assets/social/threads/generative-ai-use-needs-a-data-boundary/2e45a7f29db28047/slide-04.png"
+  ],
+  "imageFiles": [
+    "assets/social/threads/generative-ai-use-needs-a-data-boundary/2e45a7f29db28047/slide-01.png",
+    "assets/social/threads/generative-ai-use-needs-a-data-boundary/2e45a7f29db28047/slide-02.png",
+    "assets/social/threads/generative-ai-use-needs-a-data-boundary/2e45a7f29db28047/slide-03.png",
+    "assets/social/threads/generative-ai-use-needs-a-data-boundary/2e45a7f29db28047/slide-04.png"
+  ],
+  "altTexts": [
+    "ShadowContext security briefing for Safe Generative AI Use Starts With a Data Boundary, slide 1 of 4",
+    "ShadowContext security briefing for Safe Generative AI Use Starts With a Data Boundary, slide 2 of 4",
+    "ShadowContext security briefing for Safe Generative AI Use Starts With a Data Boundary, slide 3 of 4",
+    "ShadowContext security briefing for Safe Generative AI Use Starts With a Data Boundary, slide 4 of 4"
+  ]
+}
