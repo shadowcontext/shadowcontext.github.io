@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "status": "ready",
+  "generatedAt": "2026-07-28T05:13:53.611+04:00",
+  "id": "https://shadowcontext.com/certighost-fix-protects-certificate-trust/",
+  "title": "Certighost Fix Protects Active Directory Certificate Trust",
+  "canonicalUrl": "https://shadowcontext.com/certighost-fix-protects-certificate-trust/",
+  "publicationTimestamp": "2026-07-28T05:11:22.000+04:00",
+  "sourceHash": "2bf7cb55a30c07d416411ea3680b39567541fb2aba4f6b91514baa47225e810b",
+  "carouselHash": "8f15e68f619b120da9e99b43976e8625aea387626981ee23970db3db31d5c14e",
+  "category": "defense",
+  "caption": "Defensive review of CVE-2026-54121 highlighting the importance of Active Directory Certificate Services patching and inventory precision.\n\n#cybersecurity #cybernews #vulnerability #ai #Defense #ActiveDirectory\n\nRead the full ShadowContext briefing:\nhttps://shadowcontext.com/certighost-fix-protects-certificate-trust/",
+  "imageUrls": [
+    "https://shadowcontext.com/assets/social/threads/certighost-fix-protects-certificate-trust/8f15e68f619b120d/slide-01.png",
+    "https://shadowcontext.com/assets/social/threads/certighost-fix-protects-certificate-trust/8f15e68f619b120d/slide-02.png",
+    "https://shadowcontext.com/assets/social/threads/certighost-fix-protects-certificate-trust/8f15e68f619b120d/slide-03.png",
+    "https://shadowcontext.com/assets/social/threads/certighost-fix-protects-certificate-trust/8f15e68f619b120d/slide-04.png"
+  ],
+  "imageFiles": [
+    "assets/social/threads/certighost-fix-protects-certificate-trust/8f15e68f619b120d/slide-01.png",
+    "assets/social/threads/certighost-fix-protects-certificate-trust/8f15e68f619b120d/slide-02.png",
+    "assets/social/threads/certighost-fix-protects-certificate-trust/8f15e68f619b120d/slide-03.png",
+    "assets/social/threads/certighost-fix-protects-certificate-trust/8f15e68f619b120d/slide-04.png"
+  ],
+  "altTexts": [
+    "ShadowContext security briefing for Certighost Fix Protects Active Directory Certificate Trust, slide 1 of 4",
+    "ShadowContext security briefing for Certighost Fix Protects Active Directory Certificate Trust, slide 2 of 4",
+    "ShadowContext security briefing for Certighost Fix Protects Active Directory Certificate Trust, slide 3 of 4",
+    "ShadowContext security briefing for Certighost Fix Protects Active Directory Certificate Trust, slide 4 of 4"
+  ]
+}
