@@ -396,6 +396,30 @@
       "github_run_id": "30399818976",
       "status": "published",
       "last_error": null
+    },
+    "b5b74e4df9f48031d71915ab0e53dea72564b03ab2c4b71d7d8a1e55123177e8": {
+      "title": "Malicious-Package Alerts Need Ecosystem-Level Proof",
+      "canonical_url": "https://shadowcontext.com/malware-alerts-need-ecosystem-level-proof/",
+      "carousel_hash": "b5b74e4df9f48031d71915ab0e53dea72564b03ab2c4b71d7d8a1e55123177e8",
+      "generated_at": "2026-07-29T02:11:52.288+04:00",
+      "image_files": [
+        "assets/social/threads/malware-alerts-need-ecosystem-level-proof/b5b74e4df9f48031/slide-01.png",
+        "assets/social/threads/malware-alerts-need-ecosystem-level-proof/b5b74e4df9f48031/slide-02.png",
+        "assets/social/threads/malware-alerts-need-ecosystem-level-proof/b5b74e4df9f48031/slide-03.png",
+        "assets/social/threads/malware-alerts-need-ecosystem-level-proof/b5b74e4df9f48031/slide-04.png"
+      ],
+      "linkedin_image_urns": [
+        "urn:li:image:D4D10AQGq_A7NpLUvKQ",
+        "urn:li:image:D4D10AQG71kg21hvcPw",
+        "urn:li:image:D4D10AQHSrbUlTtntDA",
+        "urn:li:image:D4D10AQH8wCi8YZWlcg"
+      ],
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7487993384004005888",
+      "published_at": "2026-07-28T22:12:23.189Z",
+      "github_run_id": "30403670701",
+      "status": "published",
+      "last_error": null
     }
   }
 }
