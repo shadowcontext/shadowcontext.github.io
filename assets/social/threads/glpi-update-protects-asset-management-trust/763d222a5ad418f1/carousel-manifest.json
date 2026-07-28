@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "status": "ready",
+  "generatedAt": "2026-07-28T12:14:51.701+04:00",
+  "id": "https://shadowcontext.com/glpi-update-protects-asset-management-trust/",
+  "title": "GLPI Security Update Protects the System That Maps the Fleet",
+  "canonicalUrl": "https://shadowcontext.com/glpi-update-protects-asset-management-trust/",
+  "publicationTimestamp": "2026-07-28T12:12:11.000+04:00",
+  "sourceHash": "299bed506616787ea6fa695ea0b800e2d2dde3e8a876ba840ce6d218bce38cdd",
+  "carouselHash": "763d222a5ad418f1ade78a17686fa24e89bd74d176cb7609ee6e5679a1855f5f",
+  "category": "defense",
+  "caption": "CERT-FR documented eight GLPI security advisories affecting versions 11.0.x before 11.0.8 and older branches before 10.0.26. Risks include privilege escalation, SQL injection, and authorization problems. Defenders must update the platform, verify privileged roles, and check dependencies.\n\n#cybersecurity #cybernews #vulnerability #ai #Defense #GLPI\n\nRead the full ShadowContext briefing:\nhttps://shadowcontext.com/glpi-update-protects-asset-management-trust/",
+  "imageUrls": [
+    "https://shadowcontext.com/assets/social/threads/glpi-update-protects-asset-management-trust/763d222a5ad418f1/slide-01.png",
+    "https://shadowcontext.com/assets/social/threads/glpi-update-protects-asset-management-trust/763d222a5ad418f1/slide-02.png",
+    "https://shadowcontext.com/assets/social/threads/glpi-update-protects-asset-management-trust/763d222a5ad418f1/slide-03.png",
+    "https://shadowcontext.com/assets/social/threads/glpi-update-protects-asset-management-trust/763d222a5ad418f1/slide-04.png"
+  ],
+  "imageFiles": [
+    "assets/social/threads/glpi-update-protects-asset-management-trust/763d222a5ad418f1/slide-01.png",
+    "assets/social/threads/glpi-update-protects-asset-management-trust/763d222a5ad418f1/slide-02.png",
+    "assets/social/threads/glpi-update-protects-asset-management-trust/763d222a5ad418f1/slide-03.png",
+    "assets/social/threads/glpi-update-protects-asset-management-trust/763d222a5ad418f1/slide-04.png"
+  ],
+  "altTexts": [
+    "ShadowContext security briefing for GLPI Security Update Protects the System That Maps the Fleet, slide 1 of 4",
+    "ShadowContext security briefing for GLPI Security Update Protects the System That Maps the Fleet, slide 2 of 4",
+    "ShadowContext security briefing for GLPI Security Update Protects the System That Maps the Fleet, slide 3 of 4",
+    "ShadowContext security briefing for GLPI Security Update Protects the System That Maps the Fleet, slide 4 of 4"
+  ]
+}
