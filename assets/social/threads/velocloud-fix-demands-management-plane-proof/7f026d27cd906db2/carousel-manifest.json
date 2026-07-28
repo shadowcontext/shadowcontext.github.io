@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "status": "ready",
+  "generatedAt": "2026-07-28T04:12:32.555+04:00",
+  "id": "https://shadowcontext.com/velocloud-fix-demands-management-plane-proof/",
+  "title": "VeloCloud Fix Demands Management-Plane Proof",
+  "canonicalUrl": "https://shadowcontext.com/velocloud-fix-demands-management-plane-proof/",
+  "publicationTimestamp": "2026-07-28T04:09:55.000+04:00",
+  "sourceHash": "4aa3fcb1fef9c1e49b6f7741f08a55a3657288fd2833bbcefabcce740d0dc001",
+  "carouselHash": "7f026d27cd906db237087b859d4fafc1f4b3b939961303b640f5c3a94a402947",
+  "category": "defense",
+  "caption": "Arista has issued fixes for CVE-2026-16812 in on-premises VeloCloud Orchestrator. Defenders must verify running builds, restrict management access, and validate administrative integrity to ensure control-plane security.\n\n#cybersecurity #cybernews #vulnerability #ai #Defense #VulnerabilityManagement\n\nRead the full ShadowContext briefing:\nhttps://shadowcontext.com/velocloud-fix-demands-management-plane-proof/",
+  "imageUrls": [
+    "https://shadowcontext.com/assets/social/threads/velocloud-fix-demands-management-plane-proof/7f026d27cd906db2/slide-01.png",
+    "https://shadowcontext.com/assets/social/threads/velocloud-fix-demands-management-plane-proof/7f026d27cd906db2/slide-02.png",
+    "https://shadowcontext.com/assets/social/threads/velocloud-fix-demands-management-plane-proof/7f026d27cd906db2/slide-03.png",
+    "https://shadowcontext.com/assets/social/threads/velocloud-fix-demands-management-plane-proof/7f026d27cd906db2/slide-04.png"
+  ],
+  "imageFiles": [
+    "assets/social/threads/velocloud-fix-demands-management-plane-proof/7f026d27cd906db2/slide-01.png",
+    "assets/social/threads/velocloud-fix-demands-management-plane-proof/7f026d27cd906db2/slide-02.png",
+    "assets/social/threads/velocloud-fix-demands-management-plane-proof/7f026d27cd906db2/slide-03.png",
+    "assets/social/threads/velocloud-fix-demands-management-plane-proof/7f026d27cd906db2/slide-04.png"
+  ],
+  "altTexts": [
+    "ShadowContext security briefing for VeloCloud Fix Demands Management-Plane Proof, slide 1 of 4",
+    "ShadowContext security briefing for VeloCloud Fix Demands Management-Plane Proof, slide 2 of 4",
+    "ShadowContext security briefing for VeloCloud Fix Demands Management-Plane Proof, slide 3 of 4",
+    "ShadowContext security briefing for VeloCloud Fix Demands Management-Plane Proof, slide 4 of 4"
+  ]
+}
