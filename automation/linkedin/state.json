@@ -252,6 +252,30 @@
       "github_run_id": "30330934315",
       "status": "published",
       "last_error": null
+    },
+    "763d222a5ad418f1ade78a17686fa24e89bd74d176cb7609ee6e5679a1855f5f": {
+      "title": "GLPI Security Update Protects the System That Maps the Fleet",
+      "canonical_url": "https://shadowcontext.com/glpi-update-protects-asset-management-trust/",
+      "carousel_hash": "763d222a5ad418f1ade78a17686fa24e89bd74d176cb7609ee6e5679a1855f5f",
+      "generated_at": "2026-07-28T12:14:51.701+04:00",
+      "image_files": [
+        "assets/social/threads/glpi-update-protects-asset-management-trust/763d222a5ad418f1/slide-01.png",
+        "assets/social/threads/glpi-update-protects-asset-management-trust/763d222a5ad418f1/slide-02.png",
+        "assets/social/threads/glpi-update-protects-asset-management-trust/763d222a5ad418f1/slide-03.png",
+        "assets/social/threads/glpi-update-protects-asset-management-trust/763d222a5ad418f1/slide-04.png"
+      ],
+      "linkedin_image_urns": [
+        "urn:li:image:D4D10AQED1-wbxGNQjA",
+        "urn:li:image:D4D10AQEo1RHHiCNimA",
+        "urn:li:image:D4D10AQEOIg_TuI6BGg",
+        "urn:li:image:D4D10AQHK-b6F40nmDg"
+      ],
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7487782726926778369",
+      "published_at": "2026-07-28T08:15:18.671Z",
+      "github_run_id": "30341618498",
+      "status": "published",
+      "last_error": null
     }
   }
 }
