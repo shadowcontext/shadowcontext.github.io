@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-27T22:16:42Z",
-  "generated_display": "27 Jul 2026 · 22:16 UTC",
+  "generated_at": "2026-07-28T01:24:46Z",
+  "generated_display": "28 Jul 2026 · 01:24 UTC",
   "metrics": {
     "kev_total": 1655,
     "kev_added_30d": 26,
-    "due_next_7d": 3,
+    "due_next_7d": 4,
     "ioc_total": 170,
     "ioc_total_display": "170",
     "ioc_total_exact": "170"
@@ -161,6 +161,14 @@
   ],
   "advisories": [
     {
+      "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+      "url": "https://www.cisa.gov/news-events/alerts/2026/07/27/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+      "date": "2026-07-27",
+      "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2025-68686 Fortinet FortiOS Exposure…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
       "authority": "Saudi NCA / CERT",
       "title": "Apple Alert",
       "url": "https://nca.gov.sa/en/cert/7801/",
@@ -205,14 +213,6 @@
       "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-204a",
       "date": "2026-07-23",
       "summary": "Russian State-Supported Cyber Actors Conduct Phishing Campaign Targeting Users of Zimbra Collaboration Suite Executive summary A group of Russian state-supported cyber actors has…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
-      "title": "Johnson Controls XAAP Android",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-204-02",
-      "date": "2026-07-23",
-      "summary": "View CSAF Summary Successful exploitation of this vulnerability could result in an attacker obtaining confidential information from the device. The following versions of Johnson…",
       "authority": "CISA",
       "severity": ""
     },
@@ -324,7 +324,7 @@
       "path": "/assets/data/daily-urls.txt"
     }
   ],
-  "ioc_sha256": "34f92bb1a50b36aabb1e903e03f5c6af7376015c4c45eec35164f1b4ae3e6001",
+  "ioc_sha256": "ccc6d6fd1a14ef968b2277073bd089e3f661383f3258f1c78b761c9eebfbcf8a",
   "sources": {
     "kev": {
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
@@ -358,7 +358,7 @@
       "name": "CISA Advisories",
       "coverage": "Technical and industrial-control advisories",
       "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml",
-      "status": "degraded"
+      "status": "online"
     },
     {
       "name": "UK NCSC",
@@ -374,9 +374,9 @@
     },
     {
       "name": "CISA STIX",
-      "coverage": "Last validated TLP:CLEAR indicator snapshot",
+      "coverage": "TLP:CLEAR indicators from 3 advisories",
       "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-239a",
-      "status": "degraded"
+      "status": "online"
     }
   ]
 }
