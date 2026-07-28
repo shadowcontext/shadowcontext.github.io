@@ -132,6 +132,30 @@
       "github_run_id": "30316625539",
       "status": "published",
       "last_error": null
+    },
+    "8f15e68f619b120da9e99b43976e8625aea387626981ee23970db3db31d5c14e": {
+      "title": "Certighost Fix Protects Active Directory Certificate Trust",
+      "canonical_url": "https://shadowcontext.com/certighost-fix-protects-certificate-trust/",
+      "carousel_hash": "8f15e68f619b120da9e99b43976e8625aea387626981ee23970db3db31d5c14e",
+      "generated_at": "2026-07-28T05:13:53.611+04:00",
+      "image_files": [
+        "assets/social/threads/certighost-fix-protects-certificate-trust/8f15e68f619b120d/slide-01.png",
+        "assets/social/threads/certighost-fix-protects-certificate-trust/8f15e68f619b120d/slide-02.png",
+        "assets/social/threads/certighost-fix-protects-certificate-trust/8f15e68f619b120d/slide-03.png",
+        "assets/social/threads/certighost-fix-protects-certificate-trust/8f15e68f619b120d/slide-04.png"
+      ],
+      "linkedin_image_urns": [
+        "urn:li:image:D4D10AQHSTbA2v_jFjg",
+        "urn:li:image:D4D10AQG6nJqza8RtJw",
+        "urn:li:image:D4D10AQFo__NVx7zpLQ",
+        "urn:li:image:D4D10AQGXNYD20RhbdA"
+      ],
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7487676760306798592",
+      "published_at": "2026-07-28T01:14:14.179Z",
+      "github_run_id": "30319668158",
+      "status": "published",
+      "last_error": null
     }
   }
 }
