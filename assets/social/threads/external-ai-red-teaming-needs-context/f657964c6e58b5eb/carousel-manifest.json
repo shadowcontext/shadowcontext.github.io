@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "status": "ready",
+  "generatedAt": "2026-07-28T15:13:23.736+04:00",
+  "id": "https://shadowcontext.com/external-ai-red-teaming-needs-context/",
+  "title": "External AI Red Teaming Needs Context, Not Just More Testers",
+  "canonicalUrl": "https://shadowcontext.com/external-ai-red-teaming-needs-context/",
+  "publicationTimestamp": "2026-07-28T15:10:49.000+04:00",
+  "sourceHash": "cb13dcc9d81f9ae9a334bd33aff082684a62368e519aad5800d63bdf48b8f535",
+  "carouselHash": "f657964c6e58b5eb2f956289fcead9a25f3abe1f470325cd3c51639c754b6f01",
+  "category": "ai-security",
+  "caption": "Microsoft created an External Red Team Alliance to fund university research and build a distributed network of regional and domain specialists for AI security testing.\n\n#cybersecurity #cybernews #vulnerability #ai #AiSecurity #RedTeaming\n\nRead the full ShadowContext briefing:\nhttps://shadowcontext.com/external-ai-red-teaming-needs-context/",
+  "imageUrls": [
+    "https://shadowcontext.com/assets/social/threads/external-ai-red-teaming-needs-context/f657964c6e58b5eb/slide-01.png",
+    "https://shadowcontext.com/assets/social/threads/external-ai-red-teaming-needs-context/f657964c6e58b5eb/slide-02.png",
+    "https://shadowcontext.com/assets/social/threads/external-ai-red-teaming-needs-context/f657964c6e58b5eb/slide-03.png",
+    "https://shadowcontext.com/assets/social/threads/external-ai-red-teaming-needs-context/f657964c6e58b5eb/slide-04.png"
+  ],
+  "imageFiles": [
+    "assets/social/threads/external-ai-red-teaming-needs-context/f657964c6e58b5eb/slide-01.png",
+    "assets/social/threads/external-ai-red-teaming-needs-context/f657964c6e58b5eb/slide-02.png",
+    "assets/social/threads/external-ai-red-teaming-needs-context/f657964c6e58b5eb/slide-03.png",
+    "assets/social/threads/external-ai-red-teaming-needs-context/f657964c6e58b5eb/slide-04.png"
+  ],
+  "altTexts": [
+    "ShadowContext security briefing for External AI Red Teaming Needs Context, Not Just More Testers, slide 1 of 4",
+    "ShadowContext security briefing for External AI Red Teaming Needs Context, Not Just More Testers, slide 2 of 4",
+    "ShadowContext security briefing for External AI Red Teaming Needs Context, Not Just More Testers, slide 3 of 4",
+    "ShadowContext security briefing for External AI Red Teaming Needs Context, Not Just More Testers, slide 4 of 4"
+  ]
+}
