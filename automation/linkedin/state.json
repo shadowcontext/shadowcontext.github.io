@@ -348,6 +348,30 @@
       "github_run_id": "30362453149",
       "status": "published",
       "last_error": null
+    },
+    "0aa1a08168114262f5697a89d957f92e3192c056e5487ecd1518989716ff780a": {
+      "title": "EShare Fix Protects Room Screen Control",
+      "canonical_url": "https://shadowcontext.com/eshare-fix-protects-room-screen-control/",
+      "carousel_hash": "0aa1a08168114262f5697a89d957f92e3192c056e5487ecd1518989716ff780a",
+      "generated_at": "2026-07-28T20:11:52.863+04:00",
+      "image_files": [
+        "assets/social/threads/eshare-fix-protects-room-screen-control/0aa1a08168114262/slide-01.png",
+        "assets/social/threads/eshare-fix-protects-room-screen-control/0aa1a08168114262/slide-02.png",
+        "assets/social/threads/eshare-fix-protects-room-screen-control/0aa1a08168114262/slide-03.png",
+        "assets/social/threads/eshare-fix-protects-room-screen-control/0aa1a08168114262/slide-04.png"
+      ],
+      "linkedin_image_urns": [
+        "urn:li:image:D4D10AQFafpG_xV5KEQ",
+        "urn:li:image:D4D10AQGasyVBfVyZSA",
+        "urn:li:image:D4D10AQGUZR9QbYTtVw",
+        "urn:li:image:D4D10AQHDBjAgzL-Tzw"
+      ],
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7487903211195056129",
+      "published_at": "2026-07-28T16:14:04.333Z",
+      "github_run_id": "30377242688",
+      "status": "published",
+      "last_error": null
     }
   }
 }
