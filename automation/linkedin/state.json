@@ -276,6 +276,30 @@
       "github_run_id": "30341618498",
       "status": "published",
       "last_error": null
+    },
+    "ca870b3b7f2325f044d3e1a24385024a3e05556e9f7f68eaf7b0837feae1ee1b": {
+      "title": "Cyber Recovery Needs a Minimum Viable Operations Plan",
+      "canonical_url": "https://shadowcontext.com/cyber-recovery-needs-minimum-viable-operations/",
+      "carousel_hash": "ca870b3b7f2325f044d3e1a24385024a3e05556e9f7f68eaf7b0837feae1ee1b",
+      "generated_at": "2026-07-28T14:13:40.904+04:00",
+      "image_files": [
+        "assets/social/threads/cyber-recovery-needs-minimum-viable-operations/ca870b3b7f2325f0/slide-01.png",
+        "assets/social/threads/cyber-recovery-needs-minimum-viable-operations/ca870b3b7f2325f0/slide-02.png",
+        "assets/social/threads/cyber-recovery-needs-minimum-viable-operations/ca870b3b7f2325f0/slide-03.png",
+        "assets/social/threads/cyber-recovery-needs-minimum-viable-operations/ca870b3b7f2325f0/slide-04.png"
+      ],
+      "linkedin_image_urns": [
+        "urn:li:image:D4D10AQEyFPnbOUiVTg",
+        "urn:li:image:D4D10AQH_RxAUxZI9Fg",
+        "urn:li:image:D4D10AQFYs6O3gYtRwg",
+        "urn:li:image:D4D10AQH-Yn_YencL_g"
+      ],
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7487812633199439872",
+      "published_at": "2026-07-28T10:14:08.871Z",
+      "github_run_id": "30349921406",
+      "status": "published",
+      "last_error": null
     }
   }
 }
