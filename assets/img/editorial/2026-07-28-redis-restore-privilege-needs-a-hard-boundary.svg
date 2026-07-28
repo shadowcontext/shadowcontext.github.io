@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Guarded data restoration boundary</title>
+  <desc id="desc">Abstract data stream entering a protected memory chamber while a duplicated fragment is diverted into a contained side channel.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071627"/>
+      <stop offset="0.55" stop-color="#0b2636"/>
+      <stop offset="1" stop-color="#11192b"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="52%" cy="48%" r="58%">
+      <stop offset="0" stop-color="#22d3b6" stop-opacity=".24"/>
+      <stop offset=".55" stop-color="#1596a8" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#071627" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="stream" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3677c8" stop-opacity=".16"/>
+      <stop offset=".48" stop-color="#51d7ce"/>
+      <stop offset="1" stop-color="#b9fff1"/>
+    </linearGradient>
+    <linearGradient id="gate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d2fff6" stop-opacity=".94"/>
+      <stop offset=".5" stop-color="#30cdb5" stop-opacity=".7"/>
+      <stop offset="1" stop-color="#0b5c69" stop-opacity=".52"/>
+    </linearGradient>
+    <linearGradient id="chamber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#153f56" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#091b30" stop-opacity=".98"/>
+    </linearGradient>
+    <linearGradient id="quarantine" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffb95c"/>
+      <stop offset="1" stop-color="#e56b58"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="34"/>
+    </filter>
+    <pattern id="mesh" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" fill="none" stroke="#9de8e1" stroke-opacity=".045" stroke-width="1"/>
+      <circle cx="0" cy="0" r="2" fill="#9de8e1" fill-opacity=".12"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#aura)"/>
+  <rect width="1600" height="900" fill="url(#mesh)"/>
+  <ellipse cx="850" cy="456" rx="470" ry="310" fill="#13baa9" fill-opacity=".07" filter="url(#soft)"/>
+
+  <g opacity=".52">
+    <path d="M82 247C270 247 309 310 469 310" fill="none" stroke="#397da9" stroke-width="2"/>
+    <path d="M84 653C286 653 348 594 484 594" fill="none" stroke="#397da9" stroke-width="2"/>
+    <circle cx="84" cy="247" r="7" fill="#62c9d2"/>
+    <circle cx="84" cy="653" r="7" fill="#62c9d2"/>
+  </g>
+
+  <path d="M70 449C225 449 285 449 440 449S615 449 700 449" fill="none" stroke="#4ee4d0" stroke-opacity=".18" stroke-width="76" stroke-linecap="round" filter="url(#glow)"/>
+  <path d="M70 449C236 449 291 449 442 449S600 449 700 449" fill="none" stroke="url(#stream)" stroke-width="20" stroke-linecap="round"/>
+
+  <g fill="#b9fff1" stroke="#071627" stroke-width="8">
+    <rect x="176" y="415" width="66" height="66" rx="18" transform="rotate(45 209 448)"/>
+    <rect x="292" y="415" width="66" height="66" rx="18" transform="rotate(45 325 448)"/>
+    <rect x="408" y="415" width="66" height="66" rx="18" transform="rotate(45 441 448)"/>
+    <rect x="524" y="415" width="66" height="66" rx="18" transform="rotate(45 557 448)"/>
+  </g>
+
+  <g>
+    <rect x="660" y="162" width="102" height="576" rx="48" fill="#25d3ba" fill-opacity=".16" filter="url(#glow)"/>
+    <rect x="678" y="150" width="70" height="600" rx="35" fill="url(#gate)" fill-opacity=".82"/>
+    <rect x="697" y="192" width="32" height="516" rx="16" fill="#d7fff7" fill-opacity=".28"/>
+    <circle cx="713" cy="449" r="59" fill="#082235" stroke="#d2fff6" stroke-width="7"/>
+    <path d="M684 449l21 22 39-47" fill="none" stroke="#8fffe9" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g>
+    <path d="M807 219C807 179 839 147 879 147h432c40 0 72 32 72 72v462c0 40-32 72-72 72H879c-40 0-72-32-72-72z" fill="url(#chamber)" stroke="#6de4d7" stroke-opacity=".46" stroke-width="3"/>
+    <path d="M847 262h496M847 638h496" stroke="#7ce5da" stroke-opacity=".18" stroke-width="2"/>
+    <g fill="none" stroke="#63d9d1" stroke-opacity=".34" stroke-width="3">
+      <path d="M900 336h136c28 0 51 23 51 51v126c0 28 23 51 51 51h140"/>
+      <path d="M900 564h88c28 0 51-23 51-51V387c0-28 23-51 51-51h188"/>
+    </g>
+    <g fill="#61ddcf">
+      <circle cx="900" cy="336" r="11"/>
+      <circle cx="900" cy="564" r="11"/>
+      <circle cx="1278" cy="336" r="11"/>
+      <circle cx="1278" cy="564" r="11"/>
+    </g>
+    <circle cx="1088" cy="450" r="104" fill="#0a2235" stroke="#7ce5da" stroke-opacity=".5" stroke-width="3"/>
+    <circle cx="1088" cy="450" r="72" fill="#1a5866" fill-opacity=".72"/>
+    <circle cx="1088" cy="450" r="35" fill="#a8fff0"/>
+  </g>
+
+  <path d="M557 449C591 497 595 545 618 584c24 41 65 60 120 60" fill="none" stroke="#f2a65b" stroke-opacity=".18" stroke-width="42" stroke-linecap="round" filter="url(#glow)"/>
+  <path d="M557 449C591 497 595 545 618 584c24 41 65 60 120 60" fill="none" stroke="url(#quarantine)" stroke-width="10" stroke-linecap="round"/>
+  <rect x="563" y="485" width="58" height="58" rx="16" transform="rotate(45 592 514)" fill="#ffc477" stroke="#142338" stroke-width="7"/>
+  <rect x="704" y="605" width="126" height="82" rx="28" fill="#111d2c" stroke="#f29b5b" stroke-width="4"/>
+  <path d="M738 630h58M738 647h58M738 664h38" stroke="#ffbd78" stroke-width="6" stroke-linecap="round" opacity=".78"/>
+
+  <g opacity=".24" fill="#a6fff1">
+    <circle cx="1460" cy="188" r="4"/>
+    <circle cx="1491" cy="232" r="7"/>
+    <circle cx="1408" cy="715" r="5"/>
+    <circle cx="1520" cy="654" r="3"/>
+    <circle cx="129" cy="135" r="5"/>
+  </g>
+</svg>
