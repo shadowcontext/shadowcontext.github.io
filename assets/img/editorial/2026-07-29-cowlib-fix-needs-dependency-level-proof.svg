@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Compressed data meeting a protected memory boundary</title>
+  <desc id="desc">Abstract teal and violet data ribbons narrow toward a luminous bounded core, surrounded by a dark network field and protective arcs.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071426"/>
+      <stop offset="0.52" stop-color="#101a37"/>
+      <stop offset="1" stop-color="#190f31"/>
+    </linearGradient>
+    <radialGradient id="core" cx="50%" cy="50%" r="58%">
+      <stop offset="0" stop-color="#f4ffff"/>
+      <stop offset="0.18" stop-color="#78f4e8"/>
+      <stop offset="0.52" stop-color="#467ad9" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#7b3dc4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tealRibbon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1c82a3" stop-opacity="0.12"/>
+      <stop offset="0.55" stop-color="#42d7d0" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#a4fff1"/>
+    </linearGradient>
+    <linearGradient id="violetRibbon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5f49b4" stop-opacity="0.12"/>
+      <stop offset="0.58" stop-color="#9c64e8" stop-opacity="0.78"/>
+      <stop offset="1" stop-color="#e3b6ff"/>
+    </linearGradient>
+    <linearGradient id="boundary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b6fff4"/>
+      <stop offset="0.5" stop-color="#56d9dc"/>
+      <stop offset="1" stop-color="#8466e8"/>
+    </linearGradient>
+    <pattern id="mesh" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M0 40H80M40 0V80" stroke="#9bb7d3" stroke-opacity="0.055" stroke-width="1"/>
+      <circle cx="40" cy="40" r="2" fill="#8edcd6" fill-opacity="0.16"/>
+    </pattern>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#mesh)"/>
+  <ellipse cx="1100" cy="445" rx="410" ry="390" fill="url(#core)" opacity="0.34"/>
+
+  <g opacity="0.32" fill="none" stroke-linecap="round">
+    <path d="M95 143C312 101 461 158 636 249" stroke="#36b5c2" stroke-width="2"/>
+    <path d="M68 736C302 790 470 716 648 626" stroke="#8068d7" stroke-width="2"/>
+    <path d="M270 68C451 103 533 171 689 284" stroke="#7d85d9" stroke-width="1.5"/>
+    <path d="M246 833C451 787 548 713 696 615" stroke="#3ab8ad" stroke-width="1.5"/>
+  </g>
+
+  <g fill="#b4fff3">
+    <circle cx="95" cy="143" r="5" opacity="0.65"/>
+    <circle cx="270" cy="68" r="4" opacity="0.5"/>
+    <circle cx="68" cy="736" r="5" opacity="0.54"/>
+    <circle cx="246" cy="833" r="4" opacity="0.48"/>
+  </g>
+
+  <g>
+    <path d="M80 226C331 204 448 265 670 376C779 430 835 446 936 447" fill="none" stroke="url(#tealRibbon)" stroke-width="38" stroke-linecap="round"/>
+    <path d="M42 334C306 323 455 353 674 409C782 437 844 447 936 447" fill="none" stroke="url(#violetRibbon)" stroke-width="24" stroke-linecap="round"/>
+    <path d="M76 676C319 688 469 620 678 500C783 440 844 447 936 447" fill="none" stroke="url(#tealRibbon)" stroke-width="32" stroke-linecap="round"/>
+    <path d="M36 558C287 577 449 549 675 477C789 441 846 447 936 447" fill="none" stroke="url(#violetRibbon)" stroke-width="20" stroke-linecap="round"/>
+    <path d="M169 429C395 419 526 431 710 445C797 451 860 448 936 447" fill="none" stroke="#d7ffff" stroke-opacity="0.38" stroke-width="8" stroke-linecap="round"/>
+  </g>
+
+  <g opacity="0.75">
+    <circle cx="295" cy="217" r="8" fill="#8ff9e9"/>
+    <circle cx="407" cy="302" r="6" fill="#bd8df2"/>
+    <circle cx="348" cy="665" r="7" fill="#69e0dc"/>
+    <circle cx="526" cy="553" r="6" fill="#c39bf8"/>
+    <circle cx="623" cy="376" r="5" fill="#d8ffff"/>
+  </g>
+
+  <g transform="translate(1080 450)">
+    <circle r="236" fill="none" stroke="#5573a5" stroke-opacity="0.22" stroke-width="2" stroke-dasharray="3 17"/>
+    <circle r="192" fill="none" stroke="url(#boundary)" stroke-opacity="0.46" stroke-width="5"/>
+    <path d="M-131-139A191 191 0 0 1 137-134" fill="none" stroke="#9effef" stroke-width="10" stroke-linecap="round" filter="url(#glow)"/>
+    <path d="M139 132A191 191 0 0 1-135 136" fill="none" stroke="#8d68e8" stroke-width="10" stroke-linecap="round" filter="url(#glow)"/>
+    <rect x="-112" y="-112" width="224" height="224" rx="46" fill="#0c1a32" stroke="url(#boundary)" stroke-width="4"/>
+    <rect x="-82" y="-82" width="164" height="164" rx="32" fill="url(#core)" opacity="0.72"/>
+    <g fill="#d5fffa" filter="url(#glow)">
+      <circle cx="-38" cy="-36" r="10"/>
+      <circle cx="36" cy="-36" r="10"/>
+      <circle cx="-38" cy="38" r="10"/>
+      <circle cx="36" cy="38" r="10"/>
+      <circle r="14"/>
+    </g>
+    <g stroke="#a9fff3" stroke-opacity="0.72" stroke-width="3">
+      <path d="M-38-36L0 0L36-36M-38 38L0 0L36 38"/>
+    </g>
+  </g>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M1300 208C1424 287 1486 374 1511 492" stroke="#58d8d3" stroke-opacity="0.28" stroke-width="3"/>
+    <path d="M1308 696C1421 623 1482 543 1511 492" stroke="#9b6ce8" stroke-opacity="0.3" stroke-width="3"/>
+    <path d="M957 208C880 265 842 326 823 385" stroke="#67d7d1" stroke-opacity="0.2" stroke-width="2"/>
+    <path d="M958 694C881 635 843 578 823 514" stroke="#a47be3" stroke-opacity="0.22" stroke-width="2"/>
+  </g>
+
+  <g filter="url(#soft)">
+    <circle cx="1511" cy="492" r="7" fill="#9bfff2" opacity="0.65"/>
+    <circle cx="823" cy="385" r="5" fill="#62dcd5" opacity="0.55"/>
+    <circle cx="823" cy="514" r="5" fill="#b17bf1" opacity="0.55"/>
+  </g>
+
+  <rect x="48" y="48" width="1504" height="804" rx="34" fill="none" stroke="#b3d6e7" stroke-opacity="0.1" stroke-width="2"/>
+</svg>
