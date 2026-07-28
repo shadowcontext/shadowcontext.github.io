@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "status": "ready",
+  "generatedAt": "2026-07-29T01:14:03.057+04:00",
+  "id": "https://shadowcontext.com/cowlib-fix-needs-dependency-level-proof/",
+  "title": "Cowlib Fix Needs Dependency-Level Proof",
+  "canonicalUrl": "https://shadowcontext.com/cowlib-fix-needs-dependency-level-proof/",
+  "publicationTimestamp": "2026-07-29T01:11:22.000+04:00",
+  "sourceHash": "c395c558e95ee79c7fafb232f5c822fc94d02ad6e2e73455184af84cd8575612",
+  "carouselHash": "3f712fe120208f52b7cad2123dd4fda00f1220d1fcd1d685d21f29b07f053e20",
+  "category": "defense",
+  "caption": "Defenders must verify transitive dependencies and protocol exposure to address CVE-2026-59248 effectively.\n\n#cybersecurity #cybernews #vulnerability #ai #Defense #VulnerabilityManagement\n\nRead the full ShadowContext briefing:\nhttps://shadowcontext.com/cowlib-fix-needs-dependency-level-proof/",
+  "imageUrls": [
+    "https://shadowcontext.com/assets/social/threads/cowlib-fix-needs-dependency-level-proof/3f712fe120208f52/slide-01.png",
+    "https://shadowcontext.com/assets/social/threads/cowlib-fix-needs-dependency-level-proof/3f712fe120208f52/slide-02.png",
+    "https://shadowcontext.com/assets/social/threads/cowlib-fix-needs-dependency-level-proof/3f712fe120208f52/slide-03.png",
+    "https://shadowcontext.com/assets/social/threads/cowlib-fix-needs-dependency-level-proof/3f712fe120208f52/slide-04.png"
+  ],
+  "imageFiles": [
+    "assets/social/threads/cowlib-fix-needs-dependency-level-proof/3f712fe120208f52/slide-01.png",
+    "assets/social/threads/cowlib-fix-needs-dependency-level-proof/3f712fe120208f52/slide-02.png",
+    "assets/social/threads/cowlib-fix-needs-dependency-level-proof/3f712fe120208f52/slide-03.png",
+    "assets/social/threads/cowlib-fix-needs-dependency-level-proof/3f712fe120208f52/slide-04.png"
+  ],
+  "altTexts": [
+    "ShadowContext security briefing for Cowlib Fix Needs Dependency-Level Proof, slide 1 of 4",
+    "ShadowContext security briefing for Cowlib Fix Needs Dependency-Level Proof, slide 2 of 4",
+    "ShadowContext security briefing for Cowlib Fix Needs Dependency-Level Proof, slide 3 of 4",
+    "ShadowContext security briefing for Cowlib Fix Needs Dependency-Level Proof, slide 4 of 4"
+  ]
+}
