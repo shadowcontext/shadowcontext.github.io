@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "status": "ready",
+  "generatedAt": "2026-07-28T08:11:43.577+04:00",
+  "id": "https://shadowcontext.com/redis-restore-privilege-needs-a-hard-boundary/",
+  "title": "Redis RESTORE Privilege Needs a Hard Security Boundary",
+  "canonicalUrl": "https://shadowcontext.com/redis-restore-privilege-needs-a-hard-boundary/",
+  "publicationTimestamp": "2026-07-28T08:09:00.000+04:00",
+  "sourceHash": "548bfd5a29d2f007133c3e129534a3edc2c5656182e8da95e8737d6ecf0c4920",
+  "carouselHash": "9de40f171db2e8130daea9662cd3bbaba1023c110af4c652471c47987695bee3",
+  "category": "defense",
+  "caption": "CVE-2026-66373 turns authorized Redis RESTORE access into a potential remote code-execution path. Defenders should upgrade affected deployments and restrict import capabilities.\n\n#cybersecurity #cybernews #vulnerability #ai #Defense #Redis\n\nRead the full ShadowContext briefing:\nhttps://shadowcontext.com/redis-restore-privilege-needs-a-hard-boundary/",
+  "imageUrls": [
+    "https://shadowcontext.com/assets/social/threads/redis-restore-privilege-needs-a-hard-boundary/9de40f171db2e813/slide-01.png",
+    "https://shadowcontext.com/assets/social/threads/redis-restore-privilege-needs-a-hard-boundary/9de40f171db2e813/slide-02.png",
+    "https://shadowcontext.com/assets/social/threads/redis-restore-privilege-needs-a-hard-boundary/9de40f171db2e813/slide-03.png",
+    "https://shadowcontext.com/assets/social/threads/redis-restore-privilege-needs-a-hard-boundary/9de40f171db2e813/slide-04.png"
+  ],
+  "imageFiles": [
+    "assets/social/threads/redis-restore-privilege-needs-a-hard-boundary/9de40f171db2e813/slide-01.png",
+    "assets/social/threads/redis-restore-privilege-needs-a-hard-boundary/9de40f171db2e813/slide-02.png",
+    "assets/social/threads/redis-restore-privilege-needs-a-hard-boundary/9de40f171db2e813/slide-03.png",
+    "assets/social/threads/redis-restore-privilege-needs-a-hard-boundary/9de40f171db2e813/slide-04.png"
+  ],
+  "altTexts": [
+    "ShadowContext security briefing for Redis RESTORE Privilege Needs a Hard Security Boundary, slide 1 of 4",
+    "ShadowContext security briefing for Redis RESTORE Privilege Needs a Hard Security Boundary, slide 2 of 4",
+    "ShadowContext security briefing for Redis RESTORE Privilege Needs a Hard Security Boundary, slide 3 of 4",
+    "ShadowContext security briefing for Redis RESTORE Privilege Needs a Hard Security Boundary, slide 4 of 4"
+  ]
+}
