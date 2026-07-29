@@ -9,6 +9,8 @@ Review-only daily LinkedIn digest generation is documented in
 [docs/linkedin-daily-digest-automation.md](docs/linkedin-daily-digest-automation.md).
 Scheduled LinkedIn PDF digest publishing is documented in
 [docs/linkedin-daily-digest-publishing.md](docs/linkedin-daily-digest-publishing.md).
+Consent-first Google Analytics 4 setup is documented in
+[docs/google-analytics.md](docs/google-analytics.md).
 
 [ShadowContext](https://shadowcontext.com) is an independent cybersecurity
 publication and operational threat-intelligence site. It turns primary-source

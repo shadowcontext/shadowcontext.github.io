@@ -5,7 +5,7 @@ description: How ShadowContext handles information when you read the site or con
 permalink: /privacypolicy/
 ---
 
-**Last updated: 21 July 2026**
+**Last updated: 29 July 2026**
 
 ShadowContext is an independent cybersecurity publication. This policy explains what information may be processed when you visit `shadowcontext.com`, contact us, or follow links from the site.
 
@@ -25,7 +25,16 @@ Please do not send passwords, credentials, unnecessary personal data, confidenti
 
 ## Cookies, analytics, and advertising
 
+{% assign analytics_id = site.google_analytics | default: "" | strip %}
+{% if analytics_id != "" %}
+ShadowContext uses Google Analytics 4 only when you select **Allow analytics** in the analytics-choice panel. Before that choice, the Google Analytics script is not loaded and no analytics measurement request is sent. Your choice is stored in your browser's local storage so it can be respected on later visits.
+
+When allowed, Google Analytics may process information such as the page visited, approximate location derived from the IP address, browser and device characteristics, referral information, and interaction timing. Google Analytics may set first-party analytics cookies. ShadowContext disables advertising storage, Google signals, ad personalization, and advertising-personalization signals in its site configuration. We use the resulting aggregate reporting to understand readership and improve site performance and editorial navigation.
+
+You can decline analytics when first asked or reopen **Analytics settings** in the site footer to change your choice. Declining or withdrawing consent disables further analytics collection from the site and removes accessible Google Analytics cookies. Browser privacy controls and content blockers provide additional controls. Google processes analytics information under its own terms; see [Google's privacy policy](https://policies.google.com/privacy) and [Google Analytics data safeguards](https://support.google.com/analytics/answer/6004245).
+{% else %}
 As of the date above, ShadowContext does not use first-party cookies, advertising trackers, behavioral profiling, or an active web-analytics service. Comments and on-site account features are not enabled. Google Fonts does not set or log cookies through its Web API, according to Google.
+{% endif %}
 
 If these practices materially change, this policy will be updated before or when the new processing begins, as appropriate.
 

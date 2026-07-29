@@ -1,0 +1,15 @@
+{% assign analytics_id = site.google_analytics | default: "" | strip %}
+{% assign analytics_prefix = analytics_id | slice: 0, 2 %}
+{% if jekyll.environment == "production" and analytics_prefix == "G-" %}
+<aside class="analytics-consent" data-analytics-consent hidden role="dialog" aria-labelledby="analytics-consent-title" aria-describedby="analytics-consent-copy">
+  <div>
+    <p class="eyebrow">Analytics choice</p>
+    <h2 id="analytics-consent-title">Help improve ShadowContext</h2>
+    <p id="analytics-consent-copy">Allow privacy-limited Google Analytics to measure readership and site performance. Advertising storage and personalization remain disabled. See our <a href="{{ '/privacypolicy/' | relative_url }}">privacy policy</a>.</p>
+  </div>
+  <div class="analytics-consent-actions">
+    <button class="button primary" type="button" data-analytics-accept>Allow analytics</button>
+    <button class="button secondary" type="button" data-analytics-decline>Decline</button>
+  </div>
+</aside>
+{% endif %}

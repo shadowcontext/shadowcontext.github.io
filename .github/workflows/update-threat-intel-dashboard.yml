@@ -67,6 +67,7 @@ jobs:
           bundle exec jekyll build
           python3 automation/validate_threat_dashboard.py --site _site
           ruby automation/validate_seo.rb . _site
+          node automation/analytics/validate.mjs
 
       - name: Publish before-and-after report
         run: |

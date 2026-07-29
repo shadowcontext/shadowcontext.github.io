@@ -1,0 +1,129 @@
+{% assign analytics_id = site.google_analytics | default: "" | strip %}
+{% assign analytics_prefix = analytics_id | slice: 0, 2 %}
+{% if jekyll.environment == "production" and analytics_prefix == "G-" %}
+<script>
+  (function () {
+    "use strict";
+
+    var measurementId = {{ analytics_id | jsonify }};
+    var storageKey = "shadowcontext.analytics-consent.v1";
+    var disableKey = "ga-disable-" + measurementId;
+    var scriptId = "shadowcontext-google-analytics";
+
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function () {
+      window.dataLayer.push(arguments);
+    };
+
+    window.gtag("consent", "default", {
+      analytics_storage: "denied",
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied",
+      wait_for_update: 500
+    });
+    window.gtag("set", "ads_data_redaction", true);
+
+    function readChoice() {
+      try {
+        return window.localStorage.getItem(storageKey);
+      } catch (error) {
+        return null;
+      }
+    }
+
+    function saveChoice(value) {
+      try {
+        window.localStorage.setItem(storageKey, value);
+      } catch (error) {
+        // The choice remains valid for the current page when storage is blocked.
+      }
+    }
+
+    function setBannerVisibility(visible) {
+      var banner = document.querySelector("[data-analytics-consent]");
+      if (!banner) return;
+      banner.hidden = !visible;
+      if (visible) {
+        var primaryAction = banner.querySelector("[data-analytics-accept]");
+        if (primaryAction) primaryAction.focus();
+      }
+    }
+
+    function loadAnalytics() {
+      if (document.getElementById(scriptId)) return;
+      window[disableKey] = false;
+      window.gtag("consent", "update", {
+        analytics_storage: "granted",
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied"
+      });
+      window.gtag("js", new Date());
+      window.gtag("config", measurementId, {
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false
+      });
+
+      var script = document.createElement("script");
+      script.async = true;
+      script.id = scriptId;
+      script.src =
+        "https://www.googletagmanager.com/gtag/js?id=" +
+        encodeURIComponent(measurementId);
+      document.head.appendChild(script);
+    }
+
+    function removeAnalyticsCookies() {
+      document.cookie.split(";").forEach(function (cookie) {
+        var name = cookie.split("=")[0].trim();
+        if (name === "_ga" || name.indexOf("_ga_") === 0) {
+          document.cookie =
+            name +
+            "=; Max-Age=0; path=/; domain=" +
+            window.location.hostname +
+            "; SameSite=Lax";
+          document.cookie = name + "=; Max-Age=0; path=/; SameSite=Lax";
+        }
+      });
+    }
+
+    function acceptAnalytics() {
+      saveChoice("granted");
+      loadAnalytics();
+      setBannerVisibility(false);
+    }
+
+    function declineAnalytics() {
+      saveChoice("denied");
+      window[disableKey] = true;
+      window.gtag("consent", "update", {
+        analytics_storage: "denied",
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied"
+      });
+      removeAnalyticsCookies();
+      setBannerVisibility(false);
+    }
+
+    if (readChoice() === "granted") loadAnalytics();
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var choice = readChoice();
+      document.querySelectorAll("[data-analytics-accept]").forEach(function (button) {
+        button.addEventListener("click", acceptAnalytics);
+      });
+      document.querySelectorAll("[data-analytics-decline]").forEach(function (button) {
+        button.addEventListener("click", declineAnalytics);
+      });
+      document.querySelectorAll("[data-analytics-settings]").forEach(function (button) {
+        button.addEventListener("click", function () {
+          setBannerVisibility(true);
+        });
+      });
+      setBannerVisibility(choice !== "granted" && choice !== "denied");
+    });
+  })();
+</script>
+{% endif %}

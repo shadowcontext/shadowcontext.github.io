@@ -494,9 +494,10 @@ collections:
             name: "url"
             widget: "string"
             hint: "The base hostname and protocol for your site, e.g. https://rossener.com"
-          - label: "Google Analytics ID"
+          - label: "Google Analytics 4 Measurement ID"
             name: "google_analytics"
             widget: "string"
+            hint: "GA4 ID beginning with G-. Leave blank to disable analytics."
             required: false
           - label: "Language"
             name: "language"
@@ -511,5 +512,4 @@ collections:
             name: "sent_message_url"
             hint: "URL where the user will be redirected for after submit the contact form. Ex: /contact/message-sent/"
             required: false
-
 

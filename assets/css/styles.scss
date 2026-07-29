@@ -1193,3 +1193,71 @@ p { line-height: 1.7; }
 .wiki-section[hidden],
 .wiki-usage.resource-usage-note[hidden],
 .wiki-empty.resource-empty[hidden] { display: none; }
+
+/* Consent-first Google Analytics */
+.footer-link-button {
+  display: block;
+  padding: 0;
+  color: var(--ink-2);
+  background: transparent;
+  border: 0;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.footer-link-button:hover,
+.footer-link-button:focus-visible {
+  color: var(--cyan);
+}
+
+.footer-link-button:focus-visible,
+.analytics-consent button:focus-visible,
+.analytics-consent a:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 3px;
+}
+
+.analytics-consent {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 1000;
+  width: min(560px, calc(100vw - 44px));
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: end;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 100% 0, rgba(139, 125, 255, .11), transparent 34%),
+    #0d1319;
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--cyan);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, .48);
+}
+
+.analytics-consent[hidden] { display: none; }
+.analytics-consent .eyebrow { margin-bottom: 8px; }
+.analytics-consent h2 { margin: 0; color: var(--ink); font-size: 1.15rem; }
+.analytics-consent p:not(.eyebrow) { margin: 9px 0 0; color: var(--ink-2); font-size: .72rem; line-height: 1.65; }
+.analytics-consent a { color: var(--cyan); text-decoration: underline; text-underline-offset: 3px; }
+.analytics-consent-actions { display: flex; flex-direction: column; gap: 9px; min-width: 145px; }
+.analytics-consent .button { width: 100%; min-height: 42px; padding: 10px 14px; border: 1px solid var(--line); font-size: .65rem; cursor: pointer; }
+.analytics-consent .button.secondary { color: var(--ink-2); background: transparent; }
+
+@media (max-width: 680px) {
+  .analytics-consent {
+    right: 15px;
+    bottom: 15px;
+    width: calc(100vw - 30px);
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 20px;
+  }
+
+  .analytics-consent-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

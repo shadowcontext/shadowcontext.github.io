@@ -397,11 +397,12 @@ url: ""
 
 Type: *string*
 
-Set your Google Analytics [tracking ID](https://www.youtube.com/watch?v=Mtzl4tkVdbI).
+Set your Google Analytics 4 Measurement ID. It must begin with `G-`. Leave the
+value blank to keep analytics disabled.
 
 ```yaml
 # advanced.yml
-google_analytics: "UA-XXXXXXXX-X"
+google_analytics: "G-XXXXXXXXXX"
 ```
 
 #### `language`
