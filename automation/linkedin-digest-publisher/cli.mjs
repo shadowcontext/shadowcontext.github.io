@@ -1,8 +1,6 @@
 import path from "node:path";
 
-import { DateTime } from "luxon";
-
-import { DUBAI_ZONE } from "../linkedin-digest/config.mjs";
+import { previousDubaiDate } from "./date.mjs";
 import { publishDailyDigest } from "./publisher.mjs";
 
 function argument(name, fallback) {
@@ -10,10 +8,7 @@ function argument(name, fallback) {
   return index === -1 ? fallback : process.argv[index + 1];
 }
 
-const defaultDate = DateTime.now()
-  .setZone(DUBAI_ZONE)
-  .minus({ days: 1 })
-  .toFormat("yyyy-MM-dd");
+const defaultDate = previousDubaiDate();
 const targetDate = argument("date", defaultDate);
 const dryRun = argument("dry-run", "false") === "true";
 
