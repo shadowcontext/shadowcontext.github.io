@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Repository content isolated from a server execution core</title>
+  <desc id="desc">Abstract repository branches pass through a luminous isolation boundary before reaching a protected server execution core.</desc>
+  <defs>
+    <linearGradient id="gitea-bg" x1="90" y1="60" x2="1510" y2="850" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#071526"/>
+      <stop offset="0.52" stop-color="#10233b"/>
+      <stop offset="1" stop-color="#080d1b"/>
+    </linearGradient>
+    <radialGradient id="gitea-halo" cx="0.73" cy="0.5" r="0.46">
+      <stop offset="0" stop-color="#6ef0c2" stop-opacity="0.22"/>
+      <stop offset="0.48" stop-color="#3d8fe0" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#08101f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gitea-branch" x1="130" y1="450" x2="1010" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6579ff" stop-opacity="0.28"/>
+      <stop offset="0.5" stop-color="#5cbcff"/>
+      <stop offset="1" stop-color="#70efd0"/>
+    </linearGradient>
+    <linearGradient id="gitea-gate" x1="920" y1="150" x2="1110" y2="760" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8bf7da" stop-opacity="0.34"/>
+      <stop offset="0.48" stop-color="#66e7cf"/>
+      <stop offset="1" stop-color="#3384bd" stop-opacity="0.42"/>
+    </linearGradient>
+    <linearGradient id="gitea-core" x1="1120" y1="300" x2="1390" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#77f3cf"/>
+      <stop offset="0.55" stop-color="#48b9d4"/>
+      <stop offset="1" stop-color="#486bd6"/>
+    </linearGradient>
+    <pattern id="gitea-grid" width="72" height="72" patternUnits="userSpaceOnUse">
+      <path d="M72 0H0V72" fill="none" stroke="#9ecbed" stroke-opacity="0.045"/>
+    </pattern>
+    <filter id="gitea-glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <filter id="gitea-line-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#gitea-bg)"/>
+  <rect width="1600" height="900" fill="url(#gitea-halo)"/>
+  <rect width="1600" height="900" fill="url(#gitea-grid)"/>
+
+  <g opacity="0.7">
+    <circle cx="218" cy="450" r="118" fill="#587fff" opacity="0.08" filter="url(#gitea-glow)"/>
+    <circle cx="218" cy="450" r="72" fill="#0b2038" stroke="#728cff" stroke-opacity="0.38" stroke-width="2"/>
+    <circle cx="218" cy="450" r="22" fill="#7892ff"/>
+    <circle cx="218" cy="284" r="14" fill="#6088ff"/>
+    <circle cx="218" cy="616" r="14" fill="#53b9ee"/>
+    <circle cx="418" cy="330" r="13" fill="#657cff"/>
+    <circle cx="418" cy="570" r="13" fill="#55c5ea"/>
+  </g>
+
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M218 428V284M218 306C300 306 328 330 405 330" stroke="#657cff" stroke-opacity="0.34" stroke-width="24"/>
+    <path d="M218 428V284M218 306C300 306 328 330 405 330" stroke="url(#gitea-branch)" stroke-width="6" filter="url(#gitea-line-glow)"/>
+    <path d="M218 472V616M218 594C300 594 328 570 405 570" stroke="#55bfe9" stroke-opacity="0.3" stroke-width="24"/>
+    <path d="M218 472V616M218 594C300 594 328 570 405 570" stroke="url(#gitea-branch)" stroke-width="6" filter="url(#gitea-line-glow)"/>
+    <path d="M240 450H850" stroke="#5fbdea" stroke-opacity="0.24" stroke-width="30"/>
+    <path d="M240 450H850" stroke="url(#gitea-branch)" stroke-width="8" filter="url(#gitea-line-glow)"/>
+    <path d="M418 330C554 330 558 416 692 416H850" stroke="#697fff" stroke-opacity="0.2" stroke-width="22"/>
+    <path d="M418 330C554 330 558 416 692 416H850" stroke="url(#gitea-branch)" stroke-width="5"/>
+    <path d="M418 570C554 570 558 484 692 484H850" stroke="#55c8e9" stroke-opacity="0.2" stroke-width="22"/>
+    <path d="M418 570C554 570 558 484 692 484H850" stroke="url(#gitea-branch)" stroke-width="5"/>
+  </g>
+
+  <g transform="translate(738 332)" opacity="0.9">
+    <path d="M0 0H92C124 0 140 18 140 48V86" fill="none" stroke="#78dffc" stroke-opacity="0.54" stroke-width="4" stroke-linecap="round"/>
+    <path d="M120 72L140 94L160 72" fill="none" stroke="#78e9dc" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <rect x="900" y="142" width="196" height="616" rx="98" fill="#52dbc9" opacity="0.06" filter="url(#gitea-glow)"/>
+  <path d="M949 152C1006 180 1042 180 1098 152V748C1042 720 1006 720 949 748Z" fill="#0b293b" fill-opacity="0.8" stroke="url(#gitea-gate)" stroke-width="7" filter="url(#gitea-line-glow)"/>
+  <path d="M984 214V686" stroke="#7af1d4" stroke-opacity="0.18" stroke-width="3"/>
+  <path d="M1063 214V686" stroke="#62cfdb" stroke-opacity="0.16" stroke-width="3"/>
+
+  <g transform="translate(1023 450)">
+    <circle r="78" fill="#5ae3cf" opacity="0.12" filter="url(#gitea-glow)"/>
+    <circle r="48" fill="#102e42" stroke="#80f2d7" stroke-width="4"/>
+    <path d="M-18-7V-17C-18-41 18-41 18-17V-7" fill="none" stroke="#84f3d9" stroke-width="7" stroke-linecap="round"/>
+    <rect x="-30" y="-8" width="60" height="48" rx="12" fill="#6be9d2"/>
+    <circle cy="13" r="7" fill="#123749"/>
+    <path d="M0 19V29" stroke="#123749" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <path d="M1098 450H1170" stroke="#6ce4d2" stroke-opacity="0.22" stroke-width="30" stroke-linecap="round"/>
+  <path d="M1098 450H1170" stroke="#72ecd4" stroke-width="7" stroke-linecap="round" filter="url(#gitea-line-glow)"/>
+
+  <g transform="translate(1302 450)">
+    <circle r="190" fill="#4ccfc6" opacity="0.08" filter="url(#gitea-glow)"/>
+    <path d="M0-154L134-77V77L0 154L-134 77V-77Z" fill="#0b1d32" stroke="url(#gitea-core)" stroke-width="6"/>
+    <path d="M0-112L96-56V56L0 112L-96 56V-56Z" fill="#102d43" stroke="#66d8d6" stroke-opacity="0.38" stroke-width="2"/>
+    <circle r="60" fill="#153a4d" stroke="#7bf0d5" stroke-width="3"/>
+    <circle r="29" fill="#72ebd1"/>
+    <path d="M-10 0H10M0-10V10" stroke="#11384b" stroke-width="6" stroke-linecap="round"/>
+    <g fill="#6fe4d3">
+      <circle cx="0" cy="-128" r="6"/>
+      <circle cx="111" cy="-64" r="6"/>
+      <circle cx="111" cy="64" r="6"/>
+      <circle cx="0" cy="128" r="6"/>
+      <circle cx="-111" cy="64" r="6"/>
+      <circle cx="-111" cy="-64" r="6"/>
+    </g>
+  </g>
+
+  <g opacity="0.55">
+    <circle cx="582" cy="450" r="7" fill="#78d7ff"/>
+    <circle cx="666" cy="416" r="5" fill="#788eff"/>
+    <circle cx="666" cy="484" r="5" fill="#5bd5e5"/>
+    <circle cx="794" cy="450" r="6" fill="#73e5db"/>
+  </g>
+
+  <path d="M812 708C852 680 876 642 884 598" fill="none" stroke="#ef7294" stroke-opacity="0.28" stroke-width="3" stroke-dasharray="7 14"/>
+  <circle cx="806" cy="712" r="10" fill="#ef7294" opacity="0.48"/>
+  <path d="M844 698L874 668M874 698L844 668" stroke="#f07b98" stroke-width="5" stroke-linecap="round" opacity="0.72"/>
+</svg>
