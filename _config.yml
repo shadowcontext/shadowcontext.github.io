@@ -49,7 +49,7 @@ two_columns_layout: true
 # Advanced Settings
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://shadowcontext.com"
-google_analytics: "" # GA4 Measurement ID, for example G-XXXXXXXXXX
+google_analytics: "G-HW7X7P354P"
 language: "en"
 categories_folder: category
 sent_message_url: "/contact/message-sent/"
