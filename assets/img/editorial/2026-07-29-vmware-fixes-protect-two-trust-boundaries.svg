@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Two protected virtualization trust boundaries</title>
+  <desc id="desc">Abstract virtual machine forms enclosed by a luminous host boundary, connected to a separately shielded management plane.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071220"/>
+      <stop offset="0.52" stop-color="#0b2032"/>
+      <stop offset="1" stop-color="#10172b"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#1cd9d2" stop-opacity=".26"/>
+      <stop offset=".58" stop-color="#197aa6" stop-opacity=".1"/>
+      <stop offset="1" stop-color="#071220" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6cf9e9"/>
+      <stop offset="1" stop-color="#32a6e6"/>
+    </linearGradient>
+    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ad8cff"/>
+      <stop offset="1" stop-color="#5574dc"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#17354b" stop-opacity=".92"/>
+      <stop offset="1" stop-color="#0b1b2c" stop-opacity=".96"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+    <pattern id="grid" width="72" height="72" patternUnits="userSpaceOnUse">
+      <path d="M72 0H0V72" fill="none" stroke="#79c9d7" stroke-opacity=".055" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <ellipse cx="610" cy="470" rx="620" ry="460" fill="url(#aura)"/>
+  <ellipse cx="1260" cy="350" rx="280" ry="260" fill="#7966e8" fill-opacity=".08" filter="url(#soft)"/>
+
+  <path d="M104 713C344 670 472 778 700 720S1052 615 1490 700" fill="none" stroke="#48d8d3" stroke-opacity=".11" stroke-width="2"/>
+  <path d="M92 748C355 706 482 812 726 755S1081 654 1514 739" fill="none" stroke="#8a72f3" stroke-opacity=".08" stroke-width="2"/>
+
+  <g opacity=".48">
+    <circle cx="183" cy="191" r="4" fill="#61efe4"/>
+    <circle cx="259" cy="126" r="3" fill="#61efe4"/>
+    <circle cx="1391" cy="196" r="4" fill="#8e83ff"/>
+    <circle cx="1477" cy="305" r="3" fill="#8e83ff"/>
+    <path d="M183 191L259 126M1391 196L1477 305" stroke="#8edfdc" stroke-opacity=".3"/>
+  </g>
+
+  <!-- Hypervisor boundary -->
+  <g>
+    <rect x="166" y="230" width="790" height="490" rx="66" fill="#0b1b2a" stroke="#59eadf" stroke-opacity=".28" stroke-width="2"/>
+    <rect x="190" y="254" width="742" height="442" rx="50" fill="url(#panel)" stroke="url(#cyan)" stroke-width="4"/>
+    <rect x="216" y="280" width="690" height="390" rx="38" fill="#081725" stroke="#58dcd4" stroke-opacity=".3" stroke-width="2"/>
+
+    <path d="M253 612H871" stroke="#4dd8d0" stroke-opacity=".32" stroke-width="2"/>
+    <path d="M279 637H845" stroke="#4dd8d0" stroke-opacity=".13" stroke-width="2"/>
+
+    <!-- Abstract virtual machines -->
+    <g transform="translate(270 350)">
+      <path d="M0 42L80 0l80 42-80 44z" fill="#1a4961" stroke="#68efe3" stroke-width="2"/>
+      <path d="M0 42v106l80 44V86z" fill="#0d2a3e" stroke="#4ebfc0" stroke-width="2"/>
+      <path d="M160 42v106l-80 44V86z" fill="#12364d" stroke="#4ebfc0" stroke-width="2"/>
+      <path d="M31 58l49-26 49 26-49 27z" fill="#55dfd5" fill-opacity=".24"/>
+    </g>
+    <g transform="translate(492 350)">
+      <path d="M0 42L80 0l80 42-80 44z" fill="#25445f" stroke="#88a8ff" stroke-width="2"/>
+      <path d="M0 42v106l80 44V86z" fill="#10263b" stroke="#687fd0" stroke-width="2"/>
+      <path d="M160 42v106l-80 44V86z" fill="#172c49" stroke="#687fd0" stroke-width="2"/>
+      <path d="M31 58l49-26 49 26-49 27z" fill="#887eea" fill-opacity=".28"/>
+    </g>
+    <g transform="translate(714 350)">
+      <path d="M0 42L80 0l80 42-80 44z" fill="#1a4961" stroke="#68efe3" stroke-width="2"/>
+      <path d="M0 42v106l80 44V86z" fill="#0d2a3e" stroke="#4ebfc0" stroke-width="2"/>
+      <path d="M160 42v106l-80 44V86z" fill="#12364d" stroke="#4ebfc0" stroke-width="2"/>
+      <path d="M31 58l49-26 49 26-49 27z" fill="#55dfd5" fill-opacity=".24"/>
+    </g>
+
+    <path d="M561 284v42" stroke="#68f1e4" stroke-width="7" stroke-linecap="round" filter="url(#glow)"/>
+    <circle cx="561" cy="301" r="7" fill="#d6fffb"/>
+  </g>
+
+  <!-- Segmented connector -->
+  <g>
+    <path d="M956 438H1094" stroke="#142b43" stroke-width="30" stroke-linecap="round"/>
+    <path d="M956 438H1094" stroke="url(#cyan)" stroke-opacity=".72" stroke-width="5" stroke-dasharray="16 14" stroke-linecap="round" filter="url(#glow)"/>
+    <circle cx="1024" cy="438" r="14" fill="#0a1828" stroke="#65eee4" stroke-width="4"/>
+  </g>
+
+  <!-- Management plane -->
+  <g>
+    <path d="M1237 170l232 93v171c0 158-93 256-232 305-139-49-232-147-232-305V263z" fill="#0b1929" stroke="#887bef" stroke-opacity=".35" stroke-width="3"/>
+    <path d="M1237 198l202 81v151c0 136-79 219-202 266-123-47-202-130-202-266V279z" fill="url(#panel)" stroke="url(#violet)" stroke-width="5"/>
+    <path d="M1237 232l166 66v127c0 111-63 178-166 221-103-43-166-110-166-221V298z" fill="#0b1729" stroke="#9c8cff" stroke-opacity=".35" stroke-width="2"/>
+
+    <g transform="translate(1133 318)">
+      <rect width="208" height="228" rx="24" fill="#132a43" stroke="#9388f5" stroke-width="3"/>
+      <rect x="26" y="29" width="156" height="24" rx="12" fill="#776ee0" fill-opacity=".4"/>
+      <circle cx="47" cy="41" r="6" fill="#c7c2ff"/>
+      <path d="M27 84H181M27 124H181M27 164H181" stroke="#71dcd7" stroke-opacity=".4" stroke-width="3"/>
+      <circle cx="48" cy="84" r="8" fill="#66e9df"/>
+      <circle cx="48" cy="124" r="8" fill="#66e9df"/>
+      <circle cx="48" cy="164" r="8" fill="#8f85ef"/>
+      <path d="M77 84h77M77 124h55M77 164h86" stroke="#a9c9d3" stroke-opacity=".45" stroke-width="7" stroke-linecap="round"/>
+      <path d="M104 193l18 18 37-43" fill="none" stroke="#70f0df" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+    </g>
+  </g>
+
+  <!-- Boundary accents -->
+  <path d="M189 381c-18 0-33 15-33 33v114c0 18 15 33 33 33" fill="none" stroke="#6ff3e7" stroke-width="7" stroke-linecap="round" filter="url(#glow)"/>
+  <path d="M1042 350c-15 27-23 56-23 87s8 61 23 88" fill="none" stroke="#9988ff" stroke-width="7" stroke-linecap="round" filter="url(#glow)"/>
+</svg>
