@@ -1,0 +1,122 @@
+name: Generate LinkedIn Daily Digest
+
+on:
+  schedule:
+    # 20:15 UTC = 00:15 Asia/Dubai; generate the completed previous day.
+    - cron: "15 20 * * *"
+  workflow_dispatch:
+    inputs:
+      digest_date:
+        description: Dubai calendar date (YYYY-MM-DD); blank uses today
+        required: false
+        type: string
+      dry_run:
+        description: Generate an artifact without committing review assets
+        required: true
+        type: boolean
+        default: false
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/generate-linkedin-daily-digest.yml"
+      - "automation/linkedin-digest/**"
+
+concurrency:
+  group: shadowcontext-linkedin-digest-generation
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    steps:
+      - name: Check out default branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Resolve digest date and mode
+        id: target
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          SELECTED_DATE: ${{ inputs.digest_date }}
+          SELECTED_DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          if [[ "$EVENT_NAME" == "schedule" ]]; then
+            digest_date="$(TZ=Asia/Dubai date --date='yesterday' +%F)"
+            dry_run=false
+          else
+            digest_date="${SELECTED_DATE:-$(TZ=Asia/Dubai date +%F)}"
+            dry_run="${SELECTED_DRY_RUN:-false}"
+          fi
+          if [[ ! "$digest_date" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+            echo "::error::digest_date must use YYYY-MM-DD."
+            exit 1
+          fi
+          echo "digest_date=$digest_date" >> "$GITHUB_OUTPUT"
+          echo "dry_run=$dry_run" >> "$GITHUB_OUTPUT"
+
+      - name: Validate digest automation
+        run: |
+          for file in automation/linkedin-digest/*.mjs; do
+            node --check "$file"
+          done
+          node --test automation/linkedin-digest/*.test.mjs
+
+      - name: Validate Gemini credentials
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          if [[ -z "$GEMINI_API_KEY" ]]; then
+            echo "::error::Required GitHub Actions secret GEMINI_API_KEY is unavailable."
+            exit 1
+          fi
+
+      - name: Generate review-ready digest
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          LINKEDIN_DIGEST_GEMINI_MODEL: ${{ vars.LINKEDIN_DIGEST_GEMINI_MODEL }}
+          DIGEST_DATE: ${{ steps.target.outputs.digest_date }}
+          DRY_RUN: ${{ steps.target.outputs.dry_run }}
+        run: |
+          node automation/linkedin-digest/cli.mjs \
+            --date "$DIGEST_DATE" \
+            --dry-run "$DRY_RUN"
+
+      - name: Commit digest review assets
+        if: steps.target.outputs.dry_run == 'false'
+        run: |
+          git add -- assets/social/linkedin-digest/
+          if git diff --cached --quiet; then
+            echo "Digest is unchanged; nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "content: generate LinkedIn daily digest for ${{ steps.target.outputs.digest_date }}"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Upload review artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: linkedin-daily-digest-${{ steps.target.outputs.digest_date }}-${{ github.run_id }}
+          path: |
+            assets/social/linkedin-digest/${{ steps.target.outputs.digest_date }}/
+            .artifacts/linkedin-digest/${{ steps.target.outputs.digest_date }}/
+          if-no-files-found: warn
+          retention-days: 14
