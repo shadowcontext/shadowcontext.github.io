@@ -31,7 +31,8 @@ generateDailyDigest({
     console.log(`Generated LinkedIn digest: ${result.manifest.title}`);
     console.log(`Date: ${result.manifest.digestDate}`);
     console.log(`Articles: ${result.manifest.articleCount}`);
-    console.log(`Slides: ${result.manifest.imageFiles.length}`);
+    console.log(`HTML: ${result.manifest.htmlFile}`);
+    console.log(`PDF: ${result.manifest.pdfFile}`);
     console.log(`Output: ${result.relativeDirectory}`);
   })
   .catch((error) => {

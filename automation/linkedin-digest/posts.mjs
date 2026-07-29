@@ -5,7 +5,7 @@ import { DateTime } from "luxon";
 
 import { parseSiteConfig } from "../threads/threads-lib.mjs";
 import { parsePostFile } from "../threads-carousel/posts.mjs";
-import { DUBAI_ZONE, MAX_ARTICLES, SITE_ORIGIN } from "./config.mjs";
+import { DUBAI_ZONE, SITE_ORIGIN } from "./config.mjs";
 
 export function validateDigestDate(value) {
   const parsed = DateTime.fromFormat(String(value || ""), "yyyy-MM-dd", {
@@ -49,11 +49,6 @@ export async function selectDigestPosts({
   );
   if (!posts.length) {
     throw new Error(`No eligible published posts found for ${digestDate}`);
-  }
-  if (posts.length > MAX_ARTICLES) {
-    throw new Error(
-      `${digestDate} has ${posts.length} eligible posts; maximum is ${MAX_ARTICLES}`,
-    );
   }
   return posts;
 }

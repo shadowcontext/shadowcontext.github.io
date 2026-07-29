@@ -1,257 +1,138 @@
-import { createHash } from "node:crypto";
-import { mkdir } from "node:fs/promises";
+import { execFile } from "node:child_process";
+import { access, readFile, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { promisify } from "node:util";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
-import sharp from "sharp";
+import { SITE_ORIGIN } from "./config.mjs";
 
-import {
-  BRAND,
-  SLIDE_HEIGHT,
-  SLIDE_WIDTH,
-  SITE_ORIGIN,
-} from "./config.mjs";
+const execFileAsync = promisify(execFile);
+const MODULE_DIRECTORY = path.dirname(fileURLToPath(import.meta.url));
+const DEFAULT_TEMPLATE_PATH = path.join(MODULE_DIRECTORY, "template.html");
 
-function escapeXml(value) {
-  return String(value)
+function escapeHtml(value) {
+  return String(value ?? "")
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
-    .replaceAll("'", "&apos;");
+    .replaceAll("'", "&#39;");
 }
 
-export function wrapText(value, maxCharacters, maxLines) {
-  const words = String(value).trim().split(/\s+/).filter(Boolean);
-  const lines = [];
-  let current = "";
-  for (const word of words) {
-    const next = current ? `${current} ${word}` : word;
-    if (next.length <= maxCharacters || !current) current = next;
-    else {
-      lines.push(current);
-      current = word;
+function replaceToken(template, token, value) {
+  return template.replaceAll(`{{${token}}}`, String(value));
+}
+
+function storyMarkup(story, post, index) {
+  return `
+    <article class="story">
+      <div class="story-index">${String(index + 1).padStart(2, "0")}</div>
+      <div class="story-copy">
+        <p class="topic">${escapeHtml(story.topic)}</p>
+        <h3>${escapeHtml(story.headline)}</h3>
+        <p class="summary">${escapeHtml(story.summary)}</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>${escapeHtml(story.why_it_matters)}</p>
+        </div>
+        <a class="source-link" href="${escapeHtml(post.canonicalUrl)}">${escapeHtml(post.title)} ↗</a>
+      </div>
+    </article>`;
+}
+
+function sourceMarkup(post, index) {
+  return `
+    <li>
+      <span>${String(index + 1).padStart(2, "0")}</span>
+      <a href="${escapeHtml(post.canonicalUrl)}">${escapeHtml(post.title)}</a>
+    </li>`;
+}
+
+export async function buildDigestHtml({
+  digestDate,
+  posts,
+  content,
+  templatePath = DEFAULT_TEMPLATE_PATH,
+}) {
+  let html = await readFile(templatePath, "utf8");
+  const replacements = {
+    DOCUMENT_TITLE: escapeHtml(`${content.digest_title} | ShadowContext`),
+    DIGEST_DATE: escapeHtml(digestDate),
+    ARTICLE_COUNT: posts.length,
+    DIGEST_TITLE: escapeHtml(content.digest_title),
+    DEK: escapeHtml(content.dek),
+    OVERVIEW: escapeHtml(content.overview),
+    STORIES: content.stories
+      .map((story, index) => storyMarkup(story, posts[index], index))
+      .join("\n"),
+    OPERATING_VIEW: escapeHtml(content.operating_view),
+    WATCH_ITEMS: content.watch_items
+      .map(
+        (item, index) =>
+          `<li><span>${index + 1}</span><p>${escapeHtml(item)}</p></li>`,
+      )
+      .join("\n"),
+    SOURCE_LIST: posts.map(sourceMarkup).join("\n"),
+    SITE_ORIGIN: escapeHtml(`${SITE_ORIGIN}/`),
+  };
+  for (const [token, value] of Object.entries(replacements)) {
+    html = replaceToken(html, token, value);
+  }
+  const unresolved = html.match(/\{\{[A-Z0-9_]+\}\}/g);
+  if (unresolved) {
+    throw new Error(`Unresolved digest template token: ${unresolved[0]}`);
+  }
+  return html;
+}
+
+async function findChrome() {
+  const configured = process.env.CHROME_PATH;
+  const candidates = [
+    configured,
+    "/usr/bin/google-chrome",
+    "/usr/bin/google-chrome-stable",
+    "/usr/bin/chromium",
+    "/usr/bin/chromium-browser",
+  ].filter(Boolean);
+  for (const candidate of candidates) {
+    try {
+      await access(candidate);
+      return candidate;
+    } catch {
+      // Try the next known runner location.
     }
   }
-  if (current) lines.push(current);
-  if (lines.length > maxLines) {
-    throw new Error(
-      `Text exceeds layout capacity (${lines.length}/${maxLines} lines): ${value}`,
-    );
+  throw new Error(
+    "Chrome is required for deterministic HTML-to-PDF rendering; set CHROME_PATH",
+  );
+}
+
+export async function renderHtmlToPdf({
+  htmlPath,
+  pdfPath,
+  chromePath,
+}) {
+  const executable = chromePath || (await findChrome());
+  await execFileAsync(
+    executable,
+    [
+      "--headless=new",
+      "--no-sandbox",
+      "--disable-dev-shm-usage",
+      "--disable-gpu",
+      "--no-pdf-header-footer",
+      "--run-all-compositor-stages-before-draw",
+      "--virtual-time-budget=1000",
+      `--print-to-pdf=${path.resolve(pdfPath)}`,
+      pathToFileURL(path.resolve(htmlPath)).href,
+    ],
+    { timeout: 120_000, maxBuffer: 1024 * 1024 },
+  );
+  const metadata = await stat(pdfPath);
+  if (metadata.size < 1_000) {
+    throw new Error(`Generated PDF is unexpectedly small: ${metadata.size} bytes`);
   }
-  return lines;
-}
-
-function textLines(
-  lines,
-  {
-    x,
-    y,
-    size,
-    lineHeight,
-    color = BRAND.ink,
-    weight = 600,
-    family = BRAND.sans,
-    anchor,
-  },
-) {
-  return lines
-    .map(
-      (line, index) =>
-        `<text x="${x}" y="${y + index * lineHeight}"${anchor ? ` text-anchor="${anchor}"` : ""} fill="${color}" font-family="${family}" font-size="${size}" font-weight="${weight}">${escapeXml(line)}</text>`,
-    )
-    .join("");
-}
-
-function brandMark() {
-  return `
-    <g transform="translate(86 76) rotate(30 24 24)">
-      <rect x="3" y="3" width="42" height="42" rx="5" fill="none" stroke="${BRAND.cyan}" stroke-width="4"/>
-      <rect x="13" y="13" width="22" height="22" rx="4" fill="none" stroke="${BRAND.violet}" stroke-width="4"/>
-      <rect x="21" y="21" width="7" height="7" rx="2" fill="${BRAND.cyan}"/>
-    </g>
-    <text x="152" y="110" fill="${BRAND.ink}" font-family="${BRAND.sans}" font-size="31" font-weight="700">Shadow<tspan fill="${BRAND.cyan}">Context</tspan></text>
-  `;
-}
-
-function signalField(seed) {
-  const bytes = createHash("sha256").update(seed).digest();
-  const nodes = Array.from({ length: 13 }, (_, index) => {
-    const x = 610 + (bytes[index] % 390);
-    const y = 170 + (bytes[index + 13] % 430);
-    const radius = 4 + (bytes[index + 5] % 8);
-    return `<circle cx="${x}" cy="${y}" r="${radius}" fill="${index % 3 ? BRAND.cyan : BRAND.violet}" opacity="${0.12 + (index % 4) * 0.06}"/>`;
-  }).join("");
-  return `
-    <g>
-      <circle cx="824" cy="360" r="250" fill="none" stroke="${BRAND.violet}" stroke-opacity=".1" stroke-width="2"/>
-      <circle cx="824" cy="360" r="176" fill="none" stroke="${BRAND.cyan}" stroke-opacity=".08" stroke-width="2"/>
-      <path d="M574 360h500M824 110v500" stroke="${BRAND.cyan}" stroke-opacity=".06" stroke-width="2"/>
-      ${nodes}
-    </g>`;
-}
-
-function baseSvg({ number, total, label, seed, content }) {
-  return `
-  <svg xmlns="http://www.w3.org/2000/svg" width="${SLIDE_WIDTH}" height="${SLIDE_HEIGHT}" viewBox="0 0 ${SLIDE_WIDTH} ${SLIDE_HEIGHT}">
-    <defs>
-      <linearGradient id="bg" x1="0" y1="0" x2="1080" y2="1350">
-        <stop stop-color="${BRAND.navy}"/>
-        <stop offset=".62" stop-color="#081017"/>
-        <stop offset="1" stop-color="#0c101c"/>
-      </linearGradient>
-      <pattern id="grid" width="54" height="54" patternUnits="userSpaceOnUse">
-        <path d="M54 0H0V54" fill="none" stroke="${BRAND.cyan}" stroke-opacity=".032" stroke-width="1"/>
-      </pattern>
-    </defs>
-    <rect width="1080" height="1350" fill="url(#bg)"/>
-    <rect width="1080" height="1350" fill="url(#grid)"/>
-    <rect x="32" y="32" width="1016" height="1286" rx="6" fill="none" stroke="${BRAND.line}" stroke-width="2"/>
-    <path d="M32 170H1048" stroke="${BRAND.line}" stroke-width="2"/>
-    ${signalField(seed)}
-    ${brandMark()}
-    <text x="994" y="105" text-anchor="end" fill="${BRAND.muted}" font-family="${BRAND.mono}" font-size="18" letter-spacing="2">${escapeXml(label)}</text>
-    ${content}
-    <path d="M86 1245H994" stroke="${BRAND.line}" stroke-width="2"/>
-    <text x="86" y="1291" fill="${BRAND.muted}" font-family="${BRAND.mono}" font-size="18" letter-spacing="1.4">SHADOWCONTEXT.COM</text>
-    <text x="994" y="1291" text-anchor="end" fill="${BRAND.cyan}" font-family="${BRAND.mono}" font-size="18">${number}/${total}</text>
-  </svg>`;
-}
-
-function renderCover({ digestDate, content, articleCount, total }) {
-  const title = wrapText(content.digest_title, 19, 4);
-  const titleSize = title.length >= 4 ? 69 : 78;
-  const dek = wrapText(content.dek, 49, 3);
-  const overview = wrapText(content.overview, 65, 3);
-  return baseSvg({
-    number: 1,
-    total,
-    label: "DAILY DIGEST",
-    seed: `${digestDate}:${content.digest_title}`,
-    content: `
-      <text x="86" y="252" fill="${BRAND.cyan}" font-family="${BRAND.mono}" font-size="20" letter-spacing="3">DAILY SECURITY DIGEST</text>
-      ${textLines(title, { x: 86, y: 365, size: titleSize, lineHeight: titleSize * 1.06 })}
-      ${textLines(dek, { x: 86, y: 690, size: 31, lineHeight: 42, color: BRAND.inkSecondary, weight: 500 })}
-      <rect x="62" y="850" width="956" height="270" rx="8" fill="${BRAND.panel}" fill-opacity=".9" stroke="${BRAND.line}" stroke-width="2"/>
-      <text x="86" y="908" fill="${BRAND.violet}" font-family="${BRAND.mono}" font-size="17" letter-spacing="2.4">THE DAY IN CONTEXT</text>
-      ${textLines(overview, { x: 86, y: 960, size: 26, lineHeight: 36, color: BRAND.inkSecondary, weight: 500 })}
-      <text x="86" y="1177" fill="${BRAND.muted}" font-family="${BRAND.mono}" font-size="18" letter-spacing="1.2">${escapeXml(digestDate)} · ${articleCount} BRIEFINGS</text>
-      <rect x="86" y="1202" width="145" height="4" fill="${BRAND.cyan}"/>
-    `,
-  });
-}
-
-function storyPanel({ story, post, index, x, y, width }) {
-  const headline = wrapText(story.headline, width > 850 ? 48 : 34, 3);
-  const summary = wrapText(story.summary, width > 850 ? 76 : 52, 3);
-  const why = wrapText(story.why_it_matters, width > 850 ? 82 : 55, 2);
-  const slug = new URL(post.canonicalUrl).pathname;
-  return `
-    <rect x="${x}" y="${y}" width="${width}" height="418" rx="8" fill="${BRAND.panel}" fill-opacity=".93" stroke="${BRAND.line}" stroke-width="2"/>
-    <text x="${x + 28}" y="${y + 50}" fill="${BRAND.cyan}" font-family="${BRAND.mono}" font-size="17" letter-spacing="2">${String(index + 1).padStart(2, "0")} / ${escapeXml(story.topic.toUpperCase())}</text>
-    ${textLines(headline, { x: x + 28, y: y + 105, size: 34, lineHeight: 40, color: BRAND.ink, weight: 650 })}
-    ${textLines(summary, { x: x + 28, y: y + 228, size: 22, lineHeight: 30, color: BRAND.inkSecondary, weight: 500 })}
-    <text x="${x + 28}" y="${y + 342}" fill="${BRAND.violet}" font-family="${BRAND.mono}" font-size="15" letter-spacing="1.5">WHY IT MATTERS</text>
-    ${textLines(why, { x: x + 28, y: y + 376, size: 18, lineHeight: 24, color: BRAND.ink, weight: 550 })}
-    <text x="${x + width - 28}" y="${y + 405}" text-anchor="end" fill="${BRAND.muted}" font-family="${BRAND.mono}" font-size="13">${escapeXml(slug)}</text>
-  `;
-}
-
-function renderStories({ stories, posts, pageIndex, total }) {
-  const number = pageIndex + 2;
-  const firstIndex = pageIndex * 2;
-  const pageStories = stories.slice(firstIndex, firstIndex + 2);
-  const panels =
-    pageStories.length === 1
-      ? storyPanel({
-          story: pageStories[0],
-          post: posts[firstIndex],
-          index: firstIndex,
-          x: 62,
-          y: 370,
-          width: 956,
-        })
-      : [
-          storyPanel({
-            story: pageStories[0],
-            post: posts[firstIndex],
-            index: firstIndex,
-            x: 62,
-            y: 310,
-            width: 956,
-          }),
-          storyPanel({
-            story: pageStories[1],
-            post: posts[firstIndex + 1],
-            index: firstIndex + 1,
-            x: 62,
-            y: 750,
-            width: 956,
-          }),
-        ].join("");
-  return baseSvg({
-    number,
-    total,
-    label: `TODAY'S SIGNALS / ${String(number).padStart(2, "0")}`,
-    seed: `${stories[firstIndex].source_id}:${stories[firstIndex].headline}`,
-    content: `
-      <text x="86" y="246" fill="${BRAND.cyan}" font-family="${BRAND.mono}" font-size="19" letter-spacing="3">TODAY'S SIGNALS</text>
-      <text x="994" y="246" text-anchor="end" fill="${BRAND.muted}" font-family="${BRAND.mono}" font-size="17">${firstIndex + 1}–${firstIndex + pageStories.length} OF ${stories.length}</text>
-      ${panels}
-    `,
-  });
-}
-
-function renderClosing({ content, total }) {
-  const view = wrapText(content.operating_view, 37, 5);
-  const items = content.watch_items
-    .map((item, index) => {
-      const lines = wrapText(item, 50, 2);
-      const y = 690 + index * 128;
-      return `
-        <rect x="86" y="${y - 21}" width="36" height="36" rx="5" fill="${index === 1 ? BRAND.violet : BRAND.cyan}" fill-opacity=".16" stroke="${index === 1 ? BRAND.violet : BRAND.cyan}" stroke-width="2"/>
-        <text x="104" y="${y + 4}" text-anchor="middle" fill="${index === 1 ? BRAND.violet : BRAND.cyan}" font-family="${BRAND.mono}" font-size="16">${index + 1}</text>
-        ${textLines(lines, { x: 150, y, size: 27, lineHeight: 34, color: BRAND.inkSecondary, weight: 500 })}
-      `;
-    })
-    .join("");
-  return baseSvg({
-    number: total,
-    total,
-    label: "OPERATING VIEW",
-    seed: content.operating_view,
-    content: `
-      <text x="86" y="252" fill="${BRAND.cyan}" font-family="${BRAND.mono}" font-size="20" letter-spacing="3">THE OPERATING VIEW</text>
-      ${textLines(view, { x: 86, y: 350, size: 38, lineHeight: 46, color: BRAND.ink, weight: 620 })}
-      <path d="M86 596H994" stroke="${BRAND.line}" stroke-width="2"/>
-      <text x="86" y="644" fill="${BRAND.violet}" font-family="${BRAND.mono}" font-size="17" letter-spacing="2.4">WHAT TO VERIFY NEXT</text>
-      ${items}
-      <rect x="62" y="1088" width="956" height="112" rx="8" fill="${BRAND.cyan}" fill-opacity=".08" stroke="${BRAND.cyan}" stroke-opacity=".35" stroke-width="2"/>
-      <text x="86" y="1135" fill="${BRAND.ink}" font-family="${BRAND.sans}" font-size="25" font-weight="600">Read the full analysis</text>
-      <text x="86" y="1172" fill="${BRAND.cyan}" font-family="${BRAND.mono}" font-size="20">${SITE_ORIGIN}/</text>
-    `,
-  });
-}
-
-export function buildSlideSvgs({ digestDate, posts, content }) {
-  const storyPages = Math.ceil(content.stories.length / 2);
-  const total = storyPages + 2;
-  return [
-    renderCover({
-      digestDate,
-      content,
-      articleCount: posts.length,
-      total,
-    }),
-    ...Array.from({ length: storyPages }, (_, pageIndex) =>
-      renderStories({
-        stories: content.stories,
-        posts,
-        pageIndex,
-        total,
-      }),
-    ),
-    renderClosing({ content, total }),
-  ];
+  return metadata;
 }
 
 export async function renderDigest({
@@ -259,29 +140,21 @@ export async function renderDigest({
   posts,
   content,
   outputDirectory,
+  templatePath,
+  pdfRenderer = renderHtmlToPdf,
 }) {
-  await mkdir(outputDirectory, { recursive: true });
-  const svgs = buildSlideSvgs({ digestDate, posts, content });
-  const slides = [];
-  for (const [index, svg] of svgs.entries()) {
-    const filename = `slide-${String(index + 1).padStart(2, "0")}.png`;
-    const filePath = path.join(outputDirectory, filename);
-    await sharp(Buffer.from(svg))
-      .resize(SLIDE_WIDTH, SLIDE_HEIGHT, { fit: "fill" })
-      .flatten({ background: BRAND.navy })
-      .toColourspace("srgb")
-      .png({ compressionLevel: 9 })
-      .toFile(filePath);
-    const metadata = await sharp(filePath).metadata();
-    if (
-      metadata.width !== SLIDE_WIDTH ||
-      metadata.height !== SLIDE_HEIGHT ||
-      metadata.space !== "srgb" ||
-      metadata.channels !== 3
-    ) {
-      throw new Error(`${filename} failed RGB output validation`);
-    }
-    slides.push({ filename, filePath, width: metadata.width, height: metadata.height });
-  }
-  return slides;
+  const html = await buildDigestHtml({
+    digestDate,
+    posts,
+    content,
+    templatePath,
+  });
+  const htmlPath = path.join(outputDirectory, "daily-digest.html");
+  const pdfPath = path.join(outputDirectory, "daily-digest.pdf");
+  await writeFile(htmlPath, html, "utf8");
+  await pdfRenderer({ htmlPath, pdfPath });
+  return {
+    html: { filename: "daily-digest.html", filePath: htmlPath },
+    pdf: { filename: "daily-digest.pdf", filePath: pdfPath },
+  };
 }

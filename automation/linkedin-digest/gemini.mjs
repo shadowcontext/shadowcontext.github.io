@@ -26,12 +26,12 @@ function promptFor({ digestDate, posts, validationFeedback }) {
   return `
 You are the editorial digest writer for ShadowContext, an independent defensive cybersecurity publication.
 
-Create a professional daily LinkedIn digest using only the supplied ShadowContext articles. Return JSON matching the schema.
+Create a professional daily security-news digest using only the supplied ShadowContext articles. Return JSON matching the schema.
 
 Editorial rules:
 - Ground every statement in its matching source. Do not add outside knowledge.
 - Keep stories in the exact supplied order and preserve each source_id.
-- Include exactly one story for every source.
+- Include exactly one story for every source. Never omit or combine sources, even when several cover related subjects.
 - Do not invent CVEs, versions, actors, attribution, impact, or remediation.
 - Preserve identifiers and product names exactly when used.
 - Use calm, precise, decision-useful language; no fear, hype, or engagement bait.

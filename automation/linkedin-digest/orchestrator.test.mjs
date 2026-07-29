@@ -45,14 +45,16 @@ test("orchestrator writes a review manifest without publishing", async () => {
       now: DateTime.fromISO("2026-07-29T03:00:00.000+04:00"),
       selectPosts: async () => posts,
       writeDigest: createFixtureDigestWriter(),
-      render: async ({ outputDirectory }) => [
-        {
-          filename: "slide-01.png",
-          filePath: path.join(outputDirectory, "slide-01.png"),
-          width: 1080,
-          height: 1350,
+      render: async ({ outputDirectory }) => ({
+        html: {
+          filename: "daily-digest.html",
+          filePath: path.join(outputDirectory, "daily-digest.html"),
         },
-      ],
+        pdf: {
+          filename: "daily-digest.pdf",
+          filePath: path.join(outputDirectory, "daily-digest.pdf"),
+        },
+      }),
     });
     const manifest = JSON.parse(
       await readFile(
@@ -65,6 +67,9 @@ test("orchestrator writes a review manifest without publishing", async () => {
     assert.equal(manifest.published, false);
     assert.equal(manifest.articleCount, 1);
     assert.equal(manifest.sourceArticles[0].canonicalUrl, posts[0].canonicalUrl);
+    assert.match(manifest.htmlFile, /daily-digest\.html$/);
+    assert.match(manifest.pdfFile, /daily-digest\.pdf$/);
+    assert.equal(manifest.aiUsedForPdfRendering, false);
   } finally {
     await rm(repoRoot, { recursive: true, force: true });
   }

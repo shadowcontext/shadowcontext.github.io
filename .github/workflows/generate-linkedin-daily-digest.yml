@@ -2,12 +2,12 @@ name: Generate LinkedIn Daily Digest
 
 on:
   schedule:
-    # 20:15 UTC = 00:15 Asia/Dubai; generate the completed previous day.
-    - cron: "15 20 * * *"
+    # 01:00 UTC = 05:00 Asia/Dubai; generate the completed previous day.
+    - cron: "0 1 * * *"
   workflow_dispatch:
     inputs:
       digest_date:
-        description: Dubai calendar date (YYYY-MM-DD); blank uses today
+        description: Dubai calendar date (YYYY-MM-DD); blank uses yesterday
         required: false
         type: string
       dry_run:
@@ -55,13 +55,9 @@ jobs:
           SELECTED_DATE: ${{ inputs.digest_date }}
           SELECTED_DRY_RUN: ${{ inputs.dry_run }}
         run: |
-          if [[ "$EVENT_NAME" == "schedule" ]]; then
-            digest_date="$(TZ=Asia/Dubai date --date='yesterday' +%F)"
-            dry_run=false
-          else
-            digest_date="${SELECTED_DATE:-$(TZ=Asia/Dubai date +%F)}"
-            dry_run="${SELECTED_DRY_RUN:-false}"
-          fi
+          digest_date="${SELECTED_DATE:-$(TZ=Asia/Dubai date --date='yesterday' +%F)}"
+          dry_run="${SELECTED_DRY_RUN:-false}"
+          if [[ "$EVENT_NAME" == "schedule" ]]; then dry_run=false; fi
           if [[ ! "$digest_date" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
             echo "::error::digest_date must use YYYY-MM-DD."
             exit 1
@@ -85,6 +81,16 @@ jobs:
             exit 1
           fi
 
+      - name: Locate deterministic PDF renderer
+        run: |
+          chrome_path="$(command -v google-chrome || command -v google-chrome-stable || true)"
+          if [[ -z "$chrome_path" ]]; then
+            echo "::error::Google Chrome is unavailable on the GitHub-hosted runner."
+            exit 1
+          fi
+          echo "CHROME_PATH=$chrome_path" >> "$GITHUB_ENV"
+          "$chrome_path" --version
+
       - name: Generate review-ready digest
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -95,6 +101,20 @@ jobs:
           node automation/linkedin-digest/cli.mjs \
             --date "$DIGEST_DATE" \
             --dry-run "$DRY_RUN"
+
+      - name: Validate generated HTML and PDF
+        env:
+          DIGEST_DATE: ${{ steps.target.outputs.digest_date }}
+        run: |
+          output_root="assets/social/linkedin-digest/$DIGEST_DATE"
+          if [[ "${{ steps.target.outputs.dry_run }}" == "true" ]]; then
+            output_root=".artifacts/linkedin-digest/$DIGEST_DATE"
+          fi
+          html_file="$(find "$output_root" -name daily-digest.html -type f | head -1)"
+          pdf_file="$(find "$output_root" -name daily-digest.pdf -type f | head -1)"
+          test -n "$html_file" && test -s "$html_file"
+          test -n "$pdf_file" && test -s "$pdf_file"
+          node -e "const fs=require('fs'); const file=process.argv[1]; const b=fs.readFileSync(file); if (b.subarray(0,5).toString() !== '%PDF-') throw new Error('Invalid PDF signature'); if (b.length < 10000) throw new Error('PDF is unexpectedly small'); console.log('Validated PDF:', file, b.length, 'bytes');" "$pdf_file"
 
       - name: Commit digest review assets
         if: steps.target.outputs.dry_run == 'false'

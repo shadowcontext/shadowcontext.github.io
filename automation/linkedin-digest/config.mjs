@@ -2,10 +2,7 @@ export const DUBAI_ZONE = "Asia/Dubai";
 export const SITE_ORIGIN = "https://shadowcontext.com";
 export const DEFAULT_GEMINI_MODEL = "gemini-3.5-flash-lite";
 export const MAX_GEMINI_ATTEMPTS = 3;
-export const MAX_ARTICLES = 18;
-export const TEMPLATE_VERSION = 1;
-export const SLIDE_WIDTH = 1080;
-export const SLIDE_HEIGHT = 1350;
+export const TEMPLATE_VERSION = 2;
 
 export const BRAND = Object.freeze({
   ink: "#f1f7fa",

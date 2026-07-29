@@ -66,22 +66,21 @@ export async function generateDailyDigest({
       );
   const outputDirectory = path.join(repoRoot, relativeDirectory);
   await mkdir(outputDirectory, { recursive: true });
-  const slides = await render({
+  const documents = await render({
     digestDate,
     posts,
     content,
     outputDirectory,
   });
   const caption = buildLinkedInCaption(content);
-  const imageFiles = slides.map((slide) =>
-    path.join(relativeDirectory, slide.filename).replaceAll("\\", "/"),
-  );
-  const altTexts = slides.map(
-    (_, index) =>
-      `ShadowContext daily security digest for ${digestDate}, slide ${index + 1} of ${slides.length}`,
-  );
+  const htmlFile = path
+    .join(relativeDirectory, documents.html.filename)
+    .replaceAll("\\", "/");
+  const pdfFile = path
+    .join(relativeDirectory, documents.pdf.filename)
+    .replaceAll("\\", "/");
   const manifest = {
-    schemaVersion: 1,
+    schemaVersion: 2,
     status: "review",
     linkedinReady: true,
     published: false,
@@ -100,11 +99,12 @@ export async function generateDailyDigest({
       sourceHash: post.sourceHash,
     })),
     caption,
-    imageFiles,
-    imageUrls: imageFiles.map(
-      (file) => new URL(file, `${SITE_ORIGIN}/`).toString(),
-    ),
-    altTexts,
+    htmlFile,
+    htmlUrl: new URL(htmlFile, `${SITE_ORIGIN}/`).toString(),
+    pdfFile,
+    pdfUrl: new URL(pdfFile, `${SITE_ORIGIN}/`).toString(),
+    pdfRenderer: "headless Chrome print-to-PDF",
+    aiUsedForPdfRendering: false,
   };
   await writeFile(
     path.join(outputDirectory, "digest-content.json"),
