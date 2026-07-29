@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-28T22:15:33Z",
-  "generated_display": "28 Jul 2026 · 22:15 UTC",
+  "generated_at": "2026-07-29T01:18:46Z",
+  "generated_display": "29 Jul 2026 · 01:18 UTC",
   "metrics": {
     "kev_total": 1655,
     "kev_added_30d": 26,
-    "due_next_7d": 4,
+    "due_next_7d": 3,
     "ioc_total": 170,
     "ioc_total_display": "170",
     "ioc_total_exact": "170"
@@ -101,8 +101,8 @@
     {
       "vendor": "Cisco",
       "product": "Catalyst SD-WAN Manager",
-      "count": 18,
-      "percent": 41
+      "count": 16,
+      "percent": 36
     },
     {
       "vendor": "Apple",
@@ -162,6 +162,46 @@
   "advisories": [
     {
       "authority": "Saudi NCA / CERT",
+      "title": "Chrome Alert",
+      "url": "https://nca.gov.sa/en/cert/7809/",
+      "date": "2026-07-29",
+      "severity": "Critical",
+      "summary": "Security alert 2026-7686. Review the official notice for affected products and remediation guidance."
+    },
+    {
+      "title": "Siemens Mendix Runtime",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-209-02",
+      "date": "2026-07-28",
+      "summary": "View CSAF Summary Mendix documentation for access rules does not adequately describe the special behavior of the System.User entity, leaving developers without sufficient…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "title": "MikroTik RouterOS and Cloud Hosted Router",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-209-05",
+      "date": "2026-07-28",
+      "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow attackers to rapidly guess passwords and gain unauthorized system access. The following versions of…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "title": "Siemens SIMATIC S7-PLCSIM Advanced",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-209-03",
+      "date": "2026-07-28",
+      "summary": "View CSAF Summary SIMATIC S7-PLCSIM Advanced contains a vulnerability that could allow an attacker to cause a denial of service condition. Siemens is preparing fix versions and…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "title": "Siemens Desigo CC",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-209-01",
+      "date": "2026-07-28",
+      "summary": "View CSAF Summary OpenSSL has published a stack based buffer overflow vulnerability that allows a remote attacker to cause a denial of service (DoS) or potentially allow for…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "authority": "Saudi NCA / CERT",
       "title": "F5 Alert",
       "url": "https://nca.gov.sa/en/cert/7808/",
       "date": "2026-07-28",
@@ -175,46 +215,6 @@
       "date": "2026-07-28",
       "severity": "High",
       "summary": "Security alert 2026-7684. Review the official notice for affected products and remediation guidance."
-    },
-    {
-      "authority": "Saudi NCA / CERT",
-      "title": "HP Alert",
-      "url": "https://nca.gov.sa/en/cert/7806/",
-      "date": "2026-07-28",
-      "severity": "High",
-      "summary": "Security alert 2026-7683. Review the official notice for affected products and remediation guidance."
-    },
-    {
-      "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-      "url": "https://www.cisa.gov/news-events/alerts/2026/07/27/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-      "date": "2026-07-27",
-      "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2025-68686 Fortinet FortiOS Exposure…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
-      "title": "Weintek cMT3092X",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-204-03",
-      "date": "2026-07-23",
-      "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow a non-privileged user to escalate privileges or view the credentials of other users. The following…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
-      "title": "Rockwell Automation ThinManager",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-204-05",
-      "date": "2026-07-23",
-      "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an authenticated attacker to write arbitrary files to restricted system directories outside of the…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
-      "title": "Russian State-Supported Cyber Actors Conduct Phishing Campaign Targeting Users of Zimbra Collaboration Suite",
-      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-204a",
-      "date": "2026-07-23",
-      "summary": "Russian State-Supported Cyber Actors Conduct Phishing Campaign Targeting Users of Zimbra Collaboration Suite Executive summary A group of Russian state-supported cyber actors has…",
-      "authority": "CISA",
-      "severity": ""
     },
     {
       "title": "How to secure your online meetings",
@@ -324,7 +324,7 @@
       "path": "/assets/data/daily-urls.txt"
     }
   ],
-  "ioc_sha256": "ccc6d6fd1a14ef968b2277073bd089e3f661383f3258f1c78b761c9eebfbcf8a",
+  "ioc_sha256": "1e098ca5201dbdfb5013ec0dd73dca0f89f25a7a085cfda549855aa733fc13f3",
   "sources": {
     "kev": {
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
@@ -358,7 +358,7 @@
       "name": "CISA Advisories",
       "coverage": "Technical and industrial-control advisories",
       "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml",
-      "status": "degraded"
+      "status": "online"
     },
     {
       "name": "UK NCSC",
@@ -374,9 +374,9 @@
     },
     {
       "name": "CISA STIX",
-      "coverage": "Last validated TLP:CLEAR indicator snapshot",
+      "coverage": "TLP:CLEAR indicators from 3 advisories",
       "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-239a",
-      "status": "degraded"
+      "status": "online"
     }
   ]
 }
