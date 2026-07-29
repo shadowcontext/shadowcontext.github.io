@@ -56,6 +56,9 @@ The HTML follows ShadowContext's navy, cyan, violet, sans-serif, and monospace
 visual system. The PDF has no AI rendering dependency: Gemini supplies editorial
 copy only, while normal HTML/CSS and Chrome perform the document rendering.
 
+The separate 06:30 LinkedIn document publisher is documented in
+`docs/linkedin-daily-digest-publishing.md`.
+
 ## Local fixture validation
 
 The test suite does not call Gemini, Chrome, or LinkedIn:

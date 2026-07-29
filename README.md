@@ -7,6 +7,8 @@ Automatic LinkedIn multi-image publishing is documented in
 [docs/linkedin-carousel-automation.md](docs/linkedin-carousel-automation.md).
 Review-only daily LinkedIn digest generation is documented in
 [docs/linkedin-daily-digest-automation.md](docs/linkedin-daily-digest-automation.md).
+Scheduled LinkedIn PDF digest publishing is documented in
+[docs/linkedin-daily-digest-publishing.md](docs/linkedin-daily-digest-publishing.md).
 
 [ShadowContext](https://shadowcontext.com) is an independent cybersecurity
 publication and operational threat-intelligence site. It turns primary-source

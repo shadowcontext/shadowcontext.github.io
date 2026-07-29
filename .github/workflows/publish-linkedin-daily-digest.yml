@@ -1,0 +1,118 @@
+name: Publish LinkedIn Daily Digest
+
+on:
+  schedule:
+    # 02:30 UTC = 06:30 Asia/Dubai.
+    - cron: "30 2 * * *"
+  workflow_dispatch:
+    inputs:
+      digest_date:
+        description: Dubai digest date (YYYY-MM-DD); blank uses yesterday
+        required: false
+        type: string
+      dry_run:
+        description: Validate and preview without posting to LinkedIn
+        required: true
+        type: boolean
+        default: true
+
+concurrency:
+  group: shadowcontext-linkedin-digest-publication
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - name: Check out default branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Resolve digest date and mode
+        id: target
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          SELECTED_DATE: ${{ inputs.digest_date }}
+          SELECTED_DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          digest_date="${SELECTED_DATE:-$(TZ=Asia/Dubai date --date='yesterday' +%F)}"
+          dry_run="${SELECTED_DRY_RUN:-true}"
+          if [[ "$EVENT_NAME" == "schedule" ]]; then dry_run=false; fi
+          if [[ ! "$digest_date" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+            echo "::error::digest_date must use YYYY-MM-DD."
+            exit 1
+          fi
+          echo "digest_date=$digest_date" >> "$GITHUB_OUTPUT"
+          echo "dry_run=$dry_run" >> "$GITHUB_OUTPUT"
+
+      - name: Validate LinkedIn digest publisher
+        env:
+          DIGEST_DATE: ${{ steps.target.outputs.digest_date }}
+        run: |
+          for file in automation/linkedin/*.mjs automation/linkedin-digest-publisher/*.mjs; do
+            node --check "$file"
+          done
+          node --test \
+            automation/linkedin/*.test.mjs \
+            automation/linkedin-digest-publisher/*.test.mjs
+          node automation/linkedin-digest-publisher/cli.mjs \
+            --date "$DIGEST_DATE" \
+            --dry-run true
+
+      - name: Validate LinkedIn credentials
+        if: steps.target.outputs.dry_run == 'false'
+        env:
+          LINKEDIN_CLIENT_ID: ${{ secrets.LINKEDIN_CLIENT_ID }}
+          LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+        run: |
+          for name in LINKEDIN_CLIENT_ID LINKEDIN_CLIENT_SECRET LINKEDIN_ACCESS_TOKEN; do
+            if [[ -z "${!name}" ]]; then
+              echo "::error::Required GitHub Actions secret $name is unavailable."
+              exit 1
+            fi
+          done
+
+      - name: Publish digest document
+        id: publish
+        continue-on-error: true
+        env:
+          LINKEDIN_CLIENT_ID: ${{ secrets.LINKEDIN_CLIENT_ID }}
+          LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          DIGEST_DATE: ${{ steps.target.outputs.digest_date }}
+          DRY_RUN: ${{ steps.target.outputs.dry_run }}
+        run: |
+          node automation/linkedin-digest-publisher/cli.mjs \
+            --date "$DIGEST_DATE" \
+            --dry-run "$DRY_RUN"
+
+      - name: Commit LinkedIn digest publication state
+        if: always()
+        run: |
+          git add -- automation/linkedin-digest-publisher/state.json
+          if git diff --cached --quiet; then
+            echo "Publication state is unchanged."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: record LinkedIn daily digest publication"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Enforce publisher result
+        if: always() && steps.publish.outcome == 'failure'
+        run: |
+          echo "::error::The LinkedIn digest publisher failed after saving its state."
+          exit 1

@@ -132,6 +132,41 @@ export class LinkedInClient {
     return value.image;
   }
 
+  async uploadDocument(filePath) {
+    const initialize = await this.request(
+      "https://api.linkedin.com/rest/documents?action=initializeUpload",
+      {
+        method: "POST",
+        headers: { ...this.restHeaders, "Content-Type": "application/json" },
+        body: JSON.stringify({
+          initializeUploadRequest: { owner: this.owner },
+        }),
+      },
+      `Initialize ${path.basename(filePath)}`,
+    );
+    const value = (await responseBody(initialize)).value;
+    if (!value?.uploadUrl || !value.document) {
+      throw new Error(
+        `LinkedIn returned an incomplete document upload for ${path.basename(filePath)}`,
+      );
+    }
+
+    await this.request(
+      value.uploadUrl,
+      {
+        method: "PUT",
+        headers: {
+          Authorization: `Bearer ${this.token}`,
+          "Content-Type": "application/octet-stream",
+        },
+        body: await readFile(filePath),
+      },
+      `Upload ${path.basename(filePath)}`,
+      120_000,
+    );
+    return value.document;
+  }
+
   async publishCarousel({ repoRoot, carousel }) {
     if (!this.owner) await this.authenticate();
     const images = [];
@@ -173,5 +208,43 @@ export class LinkedInClient {
       throw new Error("LinkedIn created the post but returned no post ID");
     }
     return { postId, imageUrns, owner: this.owner };
+  }
+
+  async publishDocument({ repoRoot, digest }) {
+    if (!this.owner) await this.authenticate();
+    const documentUrn = await this.uploadDocument(
+      path.join(repoRoot, digest.pdfFile),
+    );
+    const response = await this.request(
+      "https://api.linkedin.com/rest/posts",
+      {
+        method: "POST",
+        headers: { ...this.restHeaders, "Content-Type": "application/json" },
+        body: JSON.stringify({
+          author: this.owner,
+          commentary: digest.caption,
+          visibility: "PUBLIC",
+          distribution: {
+            feedDistribution: "MAIN_FEED",
+            targetEntities: [],
+            thirdPartyDistributionChannels: [],
+          },
+          content: {
+            media: {
+              title: digest.documentTitle,
+              id: documentUrn,
+            },
+          },
+          lifecycleState: "PUBLISHED",
+          isReshareDisabledByAuthor: false,
+        }),
+      },
+      "Create LinkedIn document post",
+    );
+    const postId = response.headers.get("x-restli-id");
+    if (!postId) {
+      throw new Error("LinkedIn created the document post but returned no post ID");
+    }
+    return { postId, documentUrn, owner: this.owner };
   }
 }
