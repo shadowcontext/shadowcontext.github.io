@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-07-29T04:47:36.323+04:00",
+  "digestDate": "2026-07-29",
+  "digestHash": "94d4a75faa0f79424f38ec0646d4b4426b73ad4acb3cc526ae31d22f6114077c",
+  "templateVersion": 1,
+  "model": "gemini-3.5-flash-lite",
+  "title": "Daily Security Digest: Verifying Dependencies and Ecosystem Alerts",
+  "articleCount": 2,
+  "sourceArticles": [
+    {
+      "title": "Cowlib Fix Needs Dependency-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/cowlib-fix-needs-dependency-level-proof/",
+      "publishedAt": "2026-07-29T01:11:22.000+04:00",
+      "category": "defense",
+      "sourceHash": "c395c558e95ee79c7fafb232f5c822fc94d02ad6e2e73455184af84cd8575612"
+    },
+    {
+      "title": "Malicious-Package Alerts Need Ecosystem-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/malware-alerts-need-ecosystem-level-proof/",
+      "publishedAt": "2026-07-29T02:09:15.000+04:00",
+      "category": "defense",
+      "sourceHash": "69062c0f813f8d884fb9c071a0818957be1669ef4ce92c668c41e928b85ea3b1"
+    }
+  ],
+  "caption": "Read our complete analysis on verifying dependency security and malicious package alerts for defensive operations.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "imageFiles": [
+    "assets/social/linkedin-digest/2026-07-29/94d4a75faa0f7942/slide-01.png",
+    "assets/social/linkedin-digest/2026-07-29/94d4a75faa0f7942/slide-02.png",
+    "assets/social/linkedin-digest/2026-07-29/94d4a75faa0f7942/slide-03.png"
+  ],
+  "imageUrls": [
+    "https://shadowcontext.com/assets/social/linkedin-digest/2026-07-29/94d4a75faa0f7942/slide-01.png",
+    "https://shadowcontext.com/assets/social/linkedin-digest/2026-07-29/94d4a75faa0f7942/slide-02.png",
+    "https://shadowcontext.com/assets/social/linkedin-digest/2026-07-29/94d4a75faa0f7942/slide-03.png"
+  ],
+  "altTexts": [
+    "ShadowContext daily security digest for 2026-07-29, slide 1 of 3",
+    "ShadowContext daily security digest for 2026-07-29, slide 2 of 3",
+    "ShadowContext daily security digest for 2026-07-29, slide 3 of 3"
+  ]
+}

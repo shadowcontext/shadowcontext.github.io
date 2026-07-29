@@ -1,0 +1,28 @@
+{
+  "digest_title": "Daily Security Digest: Verifying Dependencies and Ecosystem Alerts",
+  "dek": "ShadowContext analyzes verification strategies for Cowlib memory exhaustion vulnerabilities and expanded malicious package alerts.",
+  "overview": "Defenders must verify dependency trees for CVE-2026-59248 in Cowlib and ensure proper alert routing for expanded open source malware feeds.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "Cowlib Memory Exhaustion Flaw Requires Dependency-Level Proof",
+      "summary": "CVE-2026-59248 causes excessive memory usage during HTTP/2 and HTTP/3 header decoding, requiring careful verification of resolved versions in dependency graphs.",
+      "why_it_matters": "Top-level release checks are insufficient because hidden transitive dependencies can leave services exposed to denial-of-service risks.",
+      "topic": "Dependency Security"
+    },
+    {
+      "source_id": "S02",
+      "headline": "OpenSSF Malware Ingestion Expands GitHub Dependabot Alert Coverage",
+      "summary": "GitHub now ingests OpenSSF malicious-package reports beyond npm, improving ecosystem coverage for supply chain threats like typosquatting and malicious binaries.",
+      "why_it_matters": "Enabling alerts is only the first step; teams must verify ecosystem coverage, notification routing, and dependency graph accuracy.",
+      "topic": "Supply Chain"
+    }
+  ],
+  "operating_view": "Maintain rigorous visibility into transitive dependencies and ensure alert feeds map directly to active operational ownership and remediation workflows.",
+  "watch_items": [
+    "Confirm actual Cowlib library versions in locked build artifacts.",
+    "Verify active repository subscription settings for expanded Dependabot feeds.",
+    "Map protocol reachability for internet-facing Erlang and Elixir services."
+  ],
+  "caption_intro": "Read our complete analysis on verifying dependency security and malicious package alerts for defensive operations."
+}
