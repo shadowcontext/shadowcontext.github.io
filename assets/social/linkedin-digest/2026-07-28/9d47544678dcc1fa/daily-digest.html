@@ -1,0 +1,755 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Defending Core Runtimes, Identity Boundaries, and Fleet Visibility | ShadowContext</title>
+    <style>
+      :root {
+        --paper: #05080d;
+        --panel: #0d1319;
+        --panel-soft: #091017;
+        --ink: #f1f7fa;
+        --ink-2: #c4d1d8;
+        --muted: #8496a1;
+        --line: #1d2b34;
+        --cyan: #35e6d1;
+        --violet: #8b7dff;
+        --sans: "Space Grotesk", Inter, Arial, sans-serif;
+        --mono: "DM Mono", Consolas, monospace;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: var(--sans);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        font-size: 10.5pt;
+        line-height: 1.55;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        position: relative;
+        width: 210mm;
+        min-height: 297mm;
+        padding: 18mm;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 83% 18%, rgba(139, 125, 255, 0.1), transparent 28%),
+          linear-gradient(145deg, #05080d 0%, #081017 62%, #0c101c 100%);
+      }
+
+      .page::before {
+        content: "";
+        position: absolute;
+        inset: 8mm;
+        pointer-events: none;
+        border: 0.25mm solid var(--line);
+      }
+
+      .cover {
+        display: flex;
+        flex-direction: column;
+        page-break-after: always;
+      }
+
+      .brand-row,
+      .section-head,
+      .document-footer {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 4mm;
+        font-size: 20pt;
+        font-weight: 750;
+        letter-spacing: -0.04em;
+      }
+
+      .brand em {
+        color: var(--cyan);
+        font-style: normal;
+      }
+
+      .brand-mark {
+        position: relative;
+        display: block;
+        width: 12mm;
+        height: 12mm;
+        transform: rotate(30deg);
+        border: 1mm solid var(--cyan);
+        border-radius: 1.2mm;
+      }
+
+      .brand-mark::before {
+        content: "";
+        position: absolute;
+        inset: 2.2mm;
+        border: 0.8mm solid var(--violet);
+        border-radius: 0.9mm;
+      }
+
+      .brand-mark::after {
+        content: "";
+        position: absolute;
+        inset: 4.5mm;
+        background: var(--cyan);
+        border-radius: 0.5mm;
+      }
+
+      .edition,
+      .eyebrow,
+      .topic,
+      .section-count,
+      .why span,
+      .document-footer,
+      .source-link {
+        font-family: var(--mono);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .edition,
+      .section-count,
+      .document-footer {
+        color: var(--muted);
+        font-size: 8pt;
+      }
+
+      .cover-copy {
+        position: relative;
+        z-index: 1;
+        margin: 30mm 0 0;
+      }
+
+      .eyebrow {
+        margin: 0 0 7mm;
+        color: var(--cyan);
+        font-size: 10pt;
+      }
+
+      h1 {
+        max-width: 165mm;
+        margin: 0;
+        font-size: 37pt;
+        line-height: 1.03;
+        letter-spacing: -0.05em;
+      }
+
+      .dek {
+        max-width: 155mm;
+        margin: 10mm 0 0;
+        color: var(--ink-2);
+        font-size: 16pt;
+        line-height: 1.45;
+      }
+
+      .context {
+        position: relative;
+        z-index: 1;
+        margin-top: auto;
+        padding: 9mm;
+        background: rgba(13, 19, 25, 0.94);
+        border: 0.3mm solid var(--line);
+        border-left: 1mm solid var(--violet);
+      }
+
+      .context h2,
+      .section-head h2,
+      .operating-view h2,
+      .sources h2 {
+        margin: 0;
+      }
+
+      .context h2 {
+        color: var(--violet);
+        font-family: var(--mono);
+        font-size: 9pt;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .context p {
+        margin: 4mm 0 0;
+        color: var(--ink-2);
+        font-size: 13pt;
+      }
+
+      .cover-meta {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 9mm;
+        color: var(--muted);
+        font: 8pt var(--mono);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .content {
+        padding-top: 15mm;
+        padding-bottom: 18mm;
+      }
+
+      .section-head {
+        margin-bottom: 9mm;
+        padding-bottom: 5mm;
+        border-bottom: 0.3mm solid var(--line);
+      }
+
+      .section-head h2 {
+        font-size: 23pt;
+      }
+
+      .stories {
+        position: relative;
+        z-index: 1;
+      }
+
+      .story {
+        display: grid;
+        grid-template-columns: 15mm 1fr;
+        gap: 5mm;
+        margin: 0 0 6mm;
+        padding: 7mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: rgba(13, 19, 25, 0.96);
+        border: 0.3mm solid var(--line);
+      }
+
+      .story-index {
+        color: var(--cyan);
+        font: 12pt var(--mono);
+      }
+
+      .topic {
+        margin: 0 0 2mm;
+        color: var(--cyan);
+        font-size: 7.5pt;
+      }
+
+      .story h3 {
+        margin: 0;
+        font-size: 16pt;
+        line-height: 1.18;
+        letter-spacing: -0.025em;
+      }
+
+      .summary {
+        margin: 3mm 0;
+        color: var(--ink-2);
+        font-size: 10.5pt;
+      }
+
+      .why {
+        padding-top: 3mm;
+        border-top: 0.25mm solid var(--line);
+      }
+
+      .why span {
+        color: var(--violet);
+        font-size: 7pt;
+      }
+
+      .why p {
+        display: inline;
+        margin: 0 0 0 2mm;
+        font-weight: 650;
+      }
+
+      .source-link {
+        display: inline-block;
+        margin-top: 4mm;
+        color: var(--cyan);
+        font-size: 6.8pt;
+        letter-spacing: 0.04em;
+        text-transform: none;
+      }
+
+      .operating-view,
+      .sources {
+        position: relative;
+        z-index: 1;
+        margin-top: 12mm;
+        padding: 9mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: var(--panel-soft);
+        border: 0.3mm solid var(--line);
+      }
+
+      .operating-view {
+        border-top: 1mm solid var(--cyan);
+      }
+
+      .operating-view h2,
+      .sources h2 {
+        font-size: 18pt;
+      }
+
+      .operating-view > p {
+        color: var(--ink-2);
+        font-size: 12pt;
+      }
+
+      .watch-list,
+      .source-list {
+        margin: 6mm 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .watch-list li {
+        display: grid;
+        grid-template-columns: 9mm 1fr;
+        gap: 4mm;
+        align-items: start;
+        margin: 3mm 0;
+      }
+
+      .watch-list span {
+        display: grid;
+        width: 8mm;
+        height: 8mm;
+        place-items: center;
+        color: var(--cyan);
+        border: 0.3mm solid var(--cyan);
+        font: 8pt var(--mono);
+      }
+
+      .watch-list p {
+        margin: 0;
+      }
+
+      .source-list li {
+        display: grid;
+        grid-template-columns: 10mm 1fr;
+        gap: 3mm;
+        margin: 2.5mm 0;
+        color: var(--ink-2);
+        font-size: 8.5pt;
+      }
+
+      .source-list span {
+        color: var(--violet);
+        font-family: var(--mono);
+      }
+
+      .source-list a {
+        color: var(--cyan);
+        text-decoration: underline;
+        text-decoration-color: rgba(53, 230, 209, 0.35);
+        text-underline-offset: 1mm;
+      }
+
+      .cta {
+        position: relative;
+        z-index: 1;
+        margin: 12mm 0 0;
+        padding: 7mm 9mm;
+        break-inside: avoid;
+        color: #04100f;
+        background: var(--cyan);
+      }
+
+      .cta strong {
+        display: block;
+        font-size: 14pt;
+      }
+
+      .cta span {
+        font: 9pt var(--mono);
+      }
+
+      .document-footer {
+        margin-top: 12mm;
+        padding-top: 5mm;
+        border-top: 0.3mm solid var(--line);
+      }
+
+      @media screen {
+        body {
+          width: 210mm;
+          margin: 0 auto;
+        }
+
+        .page {
+          box-shadow: 0 0 20mm rgba(0, 0, 0, 0.45);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="page cover">
+      <header class="brand-row">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Shadow<em>Context</em></span>
+        </div>
+        <span class="edition">Daily security digest</span>
+      </header>
+
+      <main class="cover-copy">
+        <p class="eyebrow">The day in context / 2026-07-28</p>
+        <h1>Defending Core Runtimes, Identity Boundaries, and Fleet Visibility</h1>
+        <p class="dek">Defensive security highlights for July 28, 2026: kernel and runtime patches, identity boundary hardening, asset visibility, and cyber recovery planning.</p>
+      </main>
+
+      <aside class="context">
+        <h2>Executive summary</h2>
+        <p>July 28, 2026, security advisories demand rigorous run-time verification, strict network and identity segmentation, and comprehensive asset inventory across operating systems, core libraries, proxies, orchestrators, and AI systems.</p>
+      </aside>
+
+      <div class="cover-meta">
+        <span>15 briefings included</span>
+        <span>https://shadowcontext.com/</span>
+      </div>
+    </section>
+
+    <section class="page content">
+      <header class="section-head">
+        <h2>All news from the day</h2>
+        <span class="section-count">15 / 2026-07-28</span>
+      </header>
+
+      <main class="stories">
+    <article class="story">
+      <div class="story-index">01</div>
+      <div class="story-copy">
+        <p class="topic">Linux Runtime Security</p>
+        <h3>Ubuntu glibc updates demand full system reboots</h3>
+        <p class="summary">Ubuntu fixed seven glibc issues across three LTS releases, requiring a system update and reboot to move running processes onto corrected libraries.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Long-running services retain vulnerable code in memory even after packages update on disk.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/glibc-fixes-need-reboot-level-proof/">GNU C Library Fixes Need Reboot-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">02</div>
+      <div class="story-copy">
+        <p class="topic">Apple Fleet Security</p>
+        <h3>Apple issues multi-platform security updates</h3>
+        <p class="summary">Apple released security updates across eight product lines, requiring fleet visibility and version verification to ensure complete coverage.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Selective patching is brittle; complete inventory ensures no endpoints remain exposed on unsupported branches.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/apple-updates-need-fleet-level-proof/">Apple Updates Need Fleet-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">03</div>
+      <div class="story-copy">
+        <p class="topic">Proxy Security</p>
+        <h3>Traefik fix protects shared connection boundaries</h3>
+        <p class="summary">Traefik patched unauthenticated cross-user response poisoning in its default proxy, prompting upgrades and shared-connection reviews.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>An intermediary reusing backend connections can cause one user to receive another user&#39;s response.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/traefik-fix-protects-shared-connection-boundaries/">Traefik Fix Protects Shared Connection Boundaries ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">04</div>
+      <div class="story-copy">
+        <p class="topic">SD-WAN Security</p>
+        <h3>Arista patches exploited VeloCloud orchestrator flaw</h3>
+        <p class="summary">Arista published fixes for an actively exploited privilege issue in on-premises VeloCloud Orchestrator, urging version proof and access control.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Compromise of an orchestrator destabilizes downstream network policy across the entire environment.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/velocloud-fix-demands-management-plane-proof/">VeloCloud Fix Demands Management-Plane Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">05</div>
+      <div class="story-copy">
+        <p class="topic">Identity Infrastructure</p>
+        <h3>Certighost fix hardens Active Directory certificate trust</h3>
+        <p class="summary">Microsoft patched an improper authorization vulnerability in AD CS, prompting asset discovery and July update verification.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Mistaken identity decisions at the certificate authority layer carry authority into the entire domain.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/certighost-fix-protects-certificate-trust/">Certighost Fix Protects Active Directory Certificate Trust ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">06</div>
+      <div class="story-copy">
+        <p class="topic">Runtime Security</p>
+        <h3>Erlang update restores TLS certificate checks</h3>
+        <p class="summary">Erlang/OTP 29.0.4 fixes a pre-TLS 1.3 certificate negotiation bypass and multiple certificate-chain denial-of-service vulnerabilities.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Transport security depends on the entire validation state machine operating on corrected runtimes.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/erlang-fix-restores-pre-tls13-certificate-checks/">Erlang Fix Restores Certificate Checks Before TLS 1.3 ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">07</div>
+      <div class="story-copy">
+        <p class="topic">Travel Security</p>
+        <h3>UAE travel guidance highlights security hygiene</h3>
+        <p class="summary">UAE Cyber Security Council guidance details travel risks, urging MFA, secure charging, safe Wi-Fi use, and recovery planning.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Travel conditions increase pressure and distraction, weakening ordinary security decisions.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/uae-travel-cyber-hygiene/">UAE Travel Warning Makes Cyber Hygiene Part of the Packing List ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">08</div>
+      <div class="story-copy">
+        <p class="topic">Database Security</p>
+        <h3>Redis RESTORE flaw requires privilege review</h3>
+        <p class="summary">A Redis vulnerability allows authenticated users with RESTORE access to trigger memory errors leading to remote code execution.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Data restore functions cross a data-to-code trust boundary requiring strict authorization controls.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/redis-restore-privilege-needs-a-hard-boundary/">Redis RESTORE Privilege Needs a Hard Security Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">09</div>
+      <div class="story-copy">
+        <p class="topic">AI Security</p>
+        <h3>Microsoft preview tests agentic security systems</h3>
+        <p class="summary">Microsoft announced Project Perception, connecting security signals and specialized models to automate defensive actions.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Agentic action paths require strict boundaries, trusted context, and measurable human control.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/agentic-defense-needs-action-boundaries/">Agentic Defense Needs Boundaries at the Action Layer ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">10</div>
+      <div class="story-copy">
+        <p class="topic">Asset Management</p>
+        <h3>GLPI security updates protect asset management platforms</h3>
+        <p class="summary">CERT-FR documented eight GLPI security advisories affecting multiple branch versions, highlighting the need for platform updates.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>The platform holding the enterprise inventory map represents a high-value security boundary.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/glpi-update-protects-asset-management-trust/">GLPI Security Update Protects the System That Maps the Fleet ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">11</div>
+      <div class="story-copy">
+        <p class="topic">Cyber Resilience</p>
+        <h3>NCSC recovery guidance focuses on minimum operations</h3>
+        <p class="summary">UK NCSC resilience guidance emphasizes trusted identity, dependency mapping, and defined minimum viable operations during recovery.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Fast restarts recreate risk when underlying technical dependencies remain untrusted.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/cyber-recovery-needs-minimum-viable-operations/">Cyber Recovery Needs a Minimum Viable Operations Plan ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">12</div>
+      <div class="story-copy">
+        <p class="topic">AI Security</p>
+        <h3>External AI red teaming requires regional context</h3>
+        <p class="summary">Microsoft launched the External Red Team Alliance to incorporate independent academic and regional expertise into AI safety testing.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Diverse perspectives are necessary to discover failures across different languages and specialized domains.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/external-ai-red-teaming-needs-context/">External AI Red Teaming Needs Context, Not Just More Testers ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">13</div>
+      <div class="story-copy">
+        <p class="topic">AI Governance</p>
+        <h3>Singapore guidance urges generative AI data boundaries</h3>
+        <p class="summary">Singapore authorities issued guidelines for safe generative AI use, highlighting data input controls and output verification.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Prompt boxes act as external destinations requiring strict handling requirements for sensitive data.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/generative-ai-use-needs-a-data-boundary/">Safe Generative AI Use Starts With a Data Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">14</div>
+      <div class="story-copy">
+        <p class="topic">Supply Chain</p>
+        <h3>Artifactory deserialization fix demands repository boundaries</h3>
+        <p class="summary">JFrog patched a high-severity deserialization vulnerability affecting multiple Artifactory release streams and low-privilege controls.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Artifact repositories sit centrally in the software supply chain delivery assurance chain.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/artifactory-deserialization-fix-needs-repository-boundaries/">Artifactory Deserialization Fix Needs Repository-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">15</div>
+      <div class="story-copy">
+        <p class="topic">Endpoint Security</p>
+        <h3>EShare update secures smart display screen control</h3>
+        <p class="summary">Singapore CSA disclosed an EShare screen-sharing application vulnerability, urging immediate updates and network segmentation.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Shared presentation displays represent managed network endpoints requiring visible control boundaries.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/eshare-fix-protects-room-screen-control/">EShare Fix Protects Room Screen Control ↗</a>
+      </div>
+    </article></main>
+
+      <section class="operating-view">
+        <p class="eyebrow">The operating view</p>
+        <h2>What the day means for defenders</h2>
+        <p>Maintain operational rigor by enforcing runtime version proofs, restricting administrative access planes, validating certificate authorities, and treating recovery plans as living, testable operational baselines rather than static documentation.</p>
+        <ol class="watch-list"><li><span>1</span><p>Verify runtime process restart completion after foundational library and package updates.</p></li>
+<li><span>2</span><p>Audit low-privilege access paths across artifact repositories and data-restore interfaces.</p></li>
+<li><span>3</span><p>Validate identity provenance and minimum viable operational baselines before recovery tasks.</p></li></ol>
+      </section>
+
+      <section class="sources">
+        <p class="eyebrow">Source index</p>
+        <h2>Every briefing in this digest</h2>
+        <ol class="source-list">
+    <li>
+      <span>01</span>
+      <a href="https://shadowcontext.com/glibc-fixes-need-reboot-level-proof/">GNU C Library Fixes Need Reboot-Level Proof</a>
+    </li>
+
+    <li>
+      <span>02</span>
+      <a href="https://shadowcontext.com/apple-updates-need-fleet-level-proof/">Apple Updates Need Fleet-Level Proof</a>
+    </li>
+
+    <li>
+      <span>03</span>
+      <a href="https://shadowcontext.com/traefik-fix-protects-shared-connection-boundaries/">Traefik Fix Protects Shared Connection Boundaries</a>
+    </li>
+
+    <li>
+      <span>04</span>
+      <a href="https://shadowcontext.com/velocloud-fix-demands-management-plane-proof/">VeloCloud Fix Demands Management-Plane Proof</a>
+    </li>
+
+    <li>
+      <span>05</span>
+      <a href="https://shadowcontext.com/certighost-fix-protects-certificate-trust/">Certighost Fix Protects Active Directory Certificate Trust</a>
+    </li>
+
+    <li>
+      <span>06</span>
+      <a href="https://shadowcontext.com/erlang-fix-restores-pre-tls13-certificate-checks/">Erlang Fix Restores Certificate Checks Before TLS 1.3</a>
+    </li>
+
+    <li>
+      <span>07</span>
+      <a href="https://shadowcontext.com/uae-travel-cyber-hygiene/">UAE Travel Warning Makes Cyber Hygiene Part of the Packing List</a>
+    </li>
+
+    <li>
+      <span>08</span>
+      <a href="https://shadowcontext.com/redis-restore-privilege-needs-a-hard-boundary/">Redis RESTORE Privilege Needs a Hard Security Boundary</a>
+    </li>
+
+    <li>
+      <span>09</span>
+      <a href="https://shadowcontext.com/agentic-defense-needs-action-boundaries/">Agentic Defense Needs Boundaries at the Action Layer</a>
+    </li>
+
+    <li>
+      <span>10</span>
+      <a href="https://shadowcontext.com/glpi-update-protects-asset-management-trust/">GLPI Security Update Protects the System That Maps the Fleet</a>
+    </li>
+
+    <li>
+      <span>11</span>
+      <a href="https://shadowcontext.com/cyber-recovery-needs-minimum-viable-operations/">Cyber Recovery Needs a Minimum Viable Operations Plan</a>
+    </li>
+
+    <li>
+      <span>12</span>
+      <a href="https://shadowcontext.com/external-ai-red-teaming-needs-context/">External AI Red Teaming Needs Context, Not Just More Testers</a>
+    </li>
+
+    <li>
+      <span>13</span>
+      <a href="https://shadowcontext.com/generative-ai-use-needs-a-data-boundary/">Safe Generative AI Use Starts With a Data Boundary</a>
+    </li>
+
+    <li>
+      <span>14</span>
+      <a href="https://shadowcontext.com/artifactory-deserialization-fix-needs-repository-boundaries/">Artifactory Deserialization Fix Needs Repository-Level Proof</a>
+    </li>
+
+    <li>
+      <span>15</span>
+      <a href="https://shadowcontext.com/eshare-fix-protects-room-screen-control/">EShare Fix Protects Room Screen Control</a>
+    </li></ol>
+      </section>
+
+      <div class="cta">
+        <strong>Read the full analysis</strong>
+        <span>https://shadowcontext.com/</span>
+      </div>
+
+      <footer class="document-footer">
+        <span>ShadowContext</span>
+        <span>Independent defensive security intelligence</span>
+      </footer>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+{
+  "digest_title": "Defending Core Runtimes, Identity Boundaries, and Fleet Visibility",
+  "dek": "Defensive security highlights for July 28, 2026: kernel and runtime patches, identity boundary hardening, asset visibility, and cyber recovery planning.",
+  "overview": "July 28, 2026, security advisories demand rigorous run-time verification, strict network and identity segmentation, and comprehensive asset inventory across operating systems, core libraries, proxies, orchestrators, and AI systems.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "Ubuntu glibc updates demand full system reboots",
+      "summary": "Ubuntu fixed seven glibc issues across three LTS releases, requiring a system update and reboot to move running processes onto corrected libraries.",
+      "why_it_matters": "Long-running services retain vulnerable code in memory even after packages update on disk.",
+      "topic": "Linux Runtime Security"
+    },
+    {
+      "source_id": "S02",
+      "headline": "Apple issues multi-platform security updates",
+      "summary": "Apple released security updates across eight product lines, requiring fleet visibility and version verification to ensure complete coverage.",
+      "why_it_matters": "Selective patching is brittle; complete inventory ensures no endpoints remain exposed on unsupported branches.",
+      "topic": "Apple Fleet Security"
+    },
+    {
+      "source_id": "S03",
+      "headline": "Traefik fix protects shared connection boundaries",
+      "summary": "Traefik patched unauthenticated cross-user response poisoning in its default proxy, prompting upgrades and shared-connection reviews.",
+      "why_it_matters": "An intermediary reusing backend connections can cause one user to receive another user's response.",
+      "topic": "Proxy Security"
+    },
+    {
+      "source_id": "S04",
+      "headline": "Arista patches exploited VeloCloud orchestrator flaw",
+      "summary": "Arista published fixes for an actively exploited privilege issue in on-premises VeloCloud Orchestrator, urging version proof and access control.",
+      "why_it_matters": "Compromise of an orchestrator destabilizes downstream network policy across the entire environment.",
+      "topic": "SD-WAN Security"
+    },
+    {
+      "source_id": "S05",
+      "headline": "Certighost fix hardens Active Directory certificate trust",
+      "summary": "Microsoft patched an improper authorization vulnerability in AD CS, prompting asset discovery and July update verification.",
+      "why_it_matters": "Mistaken identity decisions at the certificate authority layer carry authority into the entire domain.",
+      "topic": "Identity Infrastructure"
+    },
+    {
+      "source_id": "S06",
+      "headline": "Erlang update restores TLS certificate checks",
+      "summary": "Erlang/OTP 29.0.4 fixes a pre-TLS 1.3 certificate negotiation bypass and multiple certificate-chain denial-of-service vulnerabilities.",
+      "why_it_matters": "Transport security depends on the entire validation state machine operating on corrected runtimes.",
+      "topic": "Runtime Security"
+    },
+    {
+      "source_id": "S07",
+      "headline": "UAE travel guidance highlights security hygiene",
+      "summary": "UAE Cyber Security Council guidance details travel risks, urging MFA, secure charging, safe Wi-Fi use, and recovery planning.",
+      "why_it_matters": "Travel conditions increase pressure and distraction, weakening ordinary security decisions.",
+      "topic": "Travel Security"
+    },
+    {
+      "source_id": "S08",
+      "headline": "Redis RESTORE flaw requires privilege review",
+      "summary": "A Redis vulnerability allows authenticated users with RESTORE access to trigger memory errors leading to remote code execution.",
+      "why_it_matters": "Data restore functions cross a data-to-code trust boundary requiring strict authorization controls.",
+      "topic": "Database Security"
+    },
+    {
+      "source_id": "S09",
+      "headline": "Microsoft preview tests agentic security systems",
+      "summary": "Microsoft announced Project Perception, connecting security signals and specialized models to automate defensive actions.",
+      "why_it_matters": "Agentic action paths require strict boundaries, trusted context, and measurable human control.",
+      "topic": "AI Security"
+    },
+    {
+      "source_id": "S10",
+      "headline": "GLPI security updates protect asset management platforms",
+      "summary": "CERT-FR documented eight GLPI security advisories affecting multiple branch versions, highlighting the need for platform updates.",
+      "why_it_matters": "The platform holding the enterprise inventory map represents a high-value security boundary.",
+      "topic": "Asset Management"
+    },
+    {
+      "source_id": "S11",
+      "headline": "NCSC recovery guidance focuses on minimum operations",
+      "summary": "UK NCSC resilience guidance emphasizes trusted identity, dependency mapping, and defined minimum viable operations during recovery.",
+      "why_it_matters": "Fast restarts recreate risk when underlying technical dependencies remain untrusted.",
+      "topic": "Cyber Resilience"
+    },
+    {
+      "source_id": "S12",
+      "headline": "External AI red teaming requires regional context",
+      "summary": "Microsoft launched the External Red Team Alliance to incorporate independent academic and regional expertise into AI safety testing.",
+      "why_it_matters": "Diverse perspectives are necessary to discover failures across different languages and specialized domains.",
+      "topic": "AI Security"
+    },
+    {
+      "source_id": "S13",
+      "headline": "Singapore guidance urges generative AI data boundaries",
+      "summary": "Singapore authorities issued guidelines for safe generative AI use, highlighting data input controls and output verification.",
+      "why_it_matters": "Prompt boxes act as external destinations requiring strict handling requirements for sensitive data.",
+      "topic": "AI Governance"
+    },
+    {
+      "source_id": "S14",
+      "headline": "Artifactory deserialization fix demands repository boundaries",
+      "summary": "JFrog patched a high-severity deserialization vulnerability affecting multiple Artifactory release streams and low-privilege controls.",
+      "why_it_matters": "Artifact repositories sit centrally in the software supply chain delivery assurance chain.",
+      "topic": "Supply Chain"
+    },
+    {
+      "source_id": "S15",
+      "headline": "EShare update secures smart display screen control",
+      "summary": "Singapore CSA disclosed an EShare screen-sharing application vulnerability, urging immediate updates and network segmentation.",
+      "why_it_matters": "Shared presentation displays represent managed network endpoints requiring visible control boundaries.",
+      "topic": "Endpoint Security"
+    }
+  ],
+  "operating_view": "Maintain operational rigor by enforcing runtime version proofs, restricting administrative access planes, validating certificate authorities, and treating recovery plans as living, testable operational baselines rather than static documentation.",
+  "watch_items": [
+    "Verify runtime process restart completion after foundational library and package updates.",
+    "Audit low-privilege access paths across artifact repositories and data-restore interfaces.",
+    "Validate identity provenance and minimum viable operational baselines before recovery tasks."
+  ],
+  "caption_intro": "Read the complete ShadowContext operational digest for July 28, 2026, featuring verified security updates, runtime hardening strategies, and defensive analysis for enterprise infrastructure."
+}
