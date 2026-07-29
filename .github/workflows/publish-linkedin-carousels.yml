@@ -1,18 +1,7 @@
 name: Publish Ready LinkedIn Carousels
 
+# Paused on 2026-07-29. Restore the automatic triggers and remove the job guard to resume.
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - "assets/social/threads/**/carousel-manifest.json"
-  workflow_run:
-    workflows:
-      - Generate Threads Carousels
-    types:
-      - completed
-  schedule:
-    - cron: "15 * * * *"
   workflow_dispatch:
 
 concurrency:
@@ -21,7 +10,7 @@ concurrency:
 
 jobs:
   publish:
-    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    if: ${{ false }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
     permissions:

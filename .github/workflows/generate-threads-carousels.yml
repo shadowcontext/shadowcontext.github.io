@@ -1,11 +1,7 @@
 name: Generate Threads Carousels
 
+# Paused on 2026-07-29. Restore the push trigger and remove the job guard to resume.
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - "_posts/**"
   workflow_dispatch:
     inputs:
       post_url:
@@ -24,9 +20,11 @@ concurrency:
 
 jobs:
   generate:
+    if: ${{ false }}
     runs-on: ubuntu-latest
     timeout-minutes: 45
     permissions:
+      actions: write
       contents: write
     steps:
       - name: Check out default branch
@@ -116,8 +114,10 @@ jobs:
           echo "failures=$failures" >> "$GITHUB_OUTPUT"
 
       - name: Commit generated public media and queue manifests
+        id: commit_media
         if: steps.generate.outputs.dry_run == 'false'
         run: |
+          echo "committed=false" >> "$GITHUB_OUTPUT"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -- assets/social/threads/
@@ -127,6 +127,16 @@ jobs:
           git commit -m "chore: generate Threads carousel media [skip threads]"
           git pull --rebase origin main
           git push origin HEAD:main
+          echo "committed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Publish ready carousels immediately
+        if: steps.commit_media.outputs.committed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh workflow run publish-threads-carousels.yml \
+            --ref main \
+            --field dry_run=false
 
       - name: Upload sanitized generation artifacts
         if: always()
