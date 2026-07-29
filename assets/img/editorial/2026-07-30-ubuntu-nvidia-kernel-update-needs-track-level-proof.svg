@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Two kernel tracks crossing a verified reboot boundary</title>
+  <desc id="desc">Abstract editorial illustration of layered processor tiles and two luminous kernel paths converging through a secure central boundary.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071426"/>
+      <stop offset="0.58" stop-color="#102b49"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#54e6d2" stop-opacity=".34"/>
+      <stop offset=".55" stop-color="#3182c8" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#071426" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="trackA" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#35a9ff" stop-opacity=".18"/>
+      <stop offset=".42" stop-color="#53d9ff"/>
+      <stop offset="1" stop-color="#7cf5d5"/>
+    </linearGradient>
+    <linearGradient id="trackB" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7566e8" stop-opacity=".2"/>
+      <stop offset=".44" stop-color="#9a8cff"/>
+      <stop offset="1" stop-color="#7cf5d5"/>
+    </linearGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#173c61"/>
+      <stop offset="1" stop-color="#0b2039"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="13"/>
+    </filter>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <pattern id="grid" width="86" height="86" patternUnits="userSpaceOnUse">
+      <rect x="8" y="8" width="70" height="70" rx="9" fill="#173654" fill-opacity=".2" stroke="#7eb8df" stroke-opacity=".08"/>
+      <path d="M24 43h38M43 24v38" stroke="#8cc9eb" stroke-opacity=".055" stroke-width="2"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <ellipse cx="810" cy="460" rx="560" ry="390" fill="url(#halo)"/>
+
+  <g opacity=".46">
+    <path d="M84 194h267l55 55h128" fill="none" stroke="#4e95c5" stroke-width="2"/>
+    <path d="M1516 706h-276l-53-53h-131" fill="none" stroke="#4e95c5" stroke-width="2"/>
+    <circle cx="84" cy="194" r="7" fill="#4cccf0"/>
+    <circle cx="1516" cy="706" r="7" fill="#73ebd1"/>
+  </g>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M150 322C365 322 433 382 602 398S771 437 814 450" stroke="#2daaff" stroke-opacity=".2" stroke-width="40" filter="url(#glow)"/>
+    <path d="M150 322C365 322 433 382 602 398S771 437 814 450" stroke="url(#trackA)" stroke-width="12"/>
+    <path d="M150 580C358 580 437 528 600 510S764 469 814 450" stroke="#907cff" stroke-opacity=".18" stroke-width="40" filter="url(#glow)"/>
+    <path d="M150 580C358 580 437 528 600 510S764 469 814 450" stroke="url(#trackB)" stroke-width="12"/>
+    <path d="M814 450C994 450 1121 450 1448 450" stroke="#72f0d1" stroke-opacity=".22" stroke-width="44" filter="url(#glow)"/>
+    <path d="M814 450C994 450 1121 450 1448 450" stroke="#7cf5d5" stroke-width="13"/>
+  </g>
+
+  <g opacity=".78">
+    <circle cx="247" cy="322" r="16" fill="#0a1c31" stroke="#54c7ff" stroke-width="5"/>
+    <circle cx="407" cy="355" r="13" fill="#0a1c31" stroke="#54c7ff" stroke-width="4"/>
+    <circle cx="247" cy="580" r="16" fill="#0a1c31" stroke="#9a8cff" stroke-width="5"/>
+    <circle cx="407" cy="548" r="13" fill="#0a1c31" stroke="#9a8cff" stroke-width="4"/>
+    <circle cx="1188" cy="450" r="15" fill="#0a1c31" stroke="#7cf5d5" stroke-width="5"/>
+    <circle cx="1358" cy="450" r="12" fill="#0a1c31" stroke="#7cf5d5" stroke-width="4"/>
+  </g>
+
+  <g transform="translate(800 450)">
+    <circle r="176" fill="#65e7d1" fill-opacity=".13" filter="url(#glow)"/>
+    <circle r="151" fill="#08172a" stroke="#65e7d1" stroke-opacity=".24" stroke-width="3"/>
+    <circle r="124" fill="none" stroke="#4a9aca" stroke-opacity=".34" stroke-width="2" stroke-dasharray="8 15"/>
+    <rect x="-82" y="-82" width="164" height="164" rx="30" fill="url(#core)" stroke="#86f4dc" stroke-width="4"/>
+    <rect x="-57" y="-57" width="114" height="114" rx="19" fill="#0a2037" stroke="#5cc7d2" stroke-opacity=".75" stroke-width="3"/>
+    <path d="M-25 4l18 20 39-48" fill="none" stroke="#8cf6d9" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+    <g stroke="#63c9d7" stroke-width="5" stroke-linecap="round">
+      <path d="M-48-94v-25M0-94v-25M48-94v-25"/>
+      <path d="M-48 94v25M0 94v25M48 94v25"/>
+      <path d="M-94-48h-25M-94 0h-25M-94 48h-25"/>
+      <path d="M94-48h25M94 0h25M94 48h25"/>
+    </g>
+  </g>
+
+  <g fill="url(#core)" stroke="#5fa7ca" stroke-opacity=".44" stroke-width="2" filter="url(#soft)">
+    <rect x="110" y="678" width="150" height="74" rx="16"/>
+    <rect x="282" y="706" width="126" height="62" rx="14"/>
+    <rect x="1182" y="157" width="144" height="72" rx="16"/>
+    <rect x="1347" y="185" width="116" height="58" rx="14"/>
+  </g>
+  <g fill="#72e8d1">
+    <circle cx="146" cy="715" r="7"/>
+    <circle cx="314" cy="737" r="6"/>
+    <circle cx="1218" cy="193" r="7"/>
+    <circle cx="1378" cy="214" r="6"/>
+  </g>
+
+  <path d="M905 284c57 29 94 88 94 154 0 15-2 30-6 44" fill="none" stroke="#80f2d7" stroke-opacity=".56" stroke-width="5" stroke-linecap="round"/>
+  <path d="M985 475l11 20 16-17" fill="none" stroke="#80f2d7" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
