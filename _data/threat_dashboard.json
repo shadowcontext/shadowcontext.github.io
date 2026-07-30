@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-29T01:18:46Z",
-  "generated_display": "29 Jul 2026 · 01:18 UTC",
+  "generated_at": "2026-07-30T01:19:46Z",
+  "generated_display": "30 Jul 2026 · 01:19 UTC",
   "metrics": {
-    "kev_total": 1655,
+    "kev_total": 1656,
     "kev_added_30d": 26,
     "due_next_7d": 3,
     "ioc_total": 170,
@@ -10,6 +10,16 @@
     "ioc_total_exact": "170"
   },
   "vulnerabilities": [
+    {
+      "cve": "CVE-2026-20316",
+      "name": "Cisco Secure Firewall Management Center Use of Hard-coded Password Vulnerability",
+      "vendor": "Cisco",
+      "product": "Secure Firewall Management Center (FMC)",
+      "date_added": "2026-07-29",
+      "due_date": "2026-08-01",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-20316"
+    },
     {
       "cve": "CVE-2026-16812",
       "name": "Arista VeloCloud Orchestrator On-Prem OS Command Injection Vulnerability",
@@ -79,16 +89,6 @@
       "due_date": "2026-07-24",
       "ransomware": "Unknown",
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-0770"
-    },
-    {
-      "cve": "CVE-2021-27137",
-      "name": "DD-WRT Stack-Based Buffer Overflow Vulnerability",
-      "vendor": "DD-WRT",
-      "product": "DD-WRT",
-      "date_added": "2026-07-21",
-      "due_date": "2026-07-24",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2021-27137"
     }
   ],
   "platforms": [
@@ -101,8 +101,8 @@
     {
       "vendor": "Cisco",
       "product": "Catalyst SD-WAN Manager",
-      "count": 16,
-      "percent": 36
+      "count": 17,
+      "percent": 39
     },
     {
       "vendor": "Apple",
@@ -162,11 +162,35 @@
   "advisories": [
     {
       "authority": "Saudi NCA / CERT",
-      "title": "Chrome Alert",
-      "url": "https://nca.gov.sa/en/cert/7809/",
+      "title": "F5 Alert",
+      "url": "https://nca.gov.sa/en/cert/7816/",
+      "date": "2026-07-30",
+      "severity": "High",
+      "summary": "Security alert 2026-7693. Review the official notice for affected products and remediation guidance."
+    },
+    {
+      "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+      "url": "https://www.cisa.gov/news-events/alerts/2026/07/29/cisa-adds-one-known-exploited-vulnerability-catalog",
       "date": "2026-07-29",
-      "severity": "Critical",
-      "summary": "Security alert 2026-7686. Review the official notice for affected products and remediation guidance."
+      "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-20316 Cisco Secure Firewall…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "authority": "Saudi NCA / CERT",
+      "title": "Drupal Alert",
+      "url": "https://nca.gov.sa/en/cert/7815/",
+      "date": "2026-07-29",
+      "severity": "High",
+      "summary": "Security alert 2026-7692. Review the official notice for affected products and remediation guidance."
+    },
+    {
+      "authority": "Saudi NCA / CERT",
+      "title": "TP-Link Alert",
+      "url": "https://nca.gov.sa/en/cert/7814/",
+      "date": "2026-07-29",
+      "severity": "High",
+      "summary": "Security alert 2026-7691. Review the official notice for affected products and remediation guidance."
     },
     {
       "title": "Siemens Mendix Runtime",
@@ -191,30 +215,6 @@
       "summary": "View CSAF Summary SIMATIC S7-PLCSIM Advanced contains a vulnerability that could allow an attacker to cause a denial of service condition. Siemens is preparing fix versions and…",
       "authority": "CISA",
       "severity": ""
-    },
-    {
-      "title": "Siemens Desigo CC",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-209-01",
-      "date": "2026-07-28",
-      "summary": "View CSAF Summary OpenSSL has published a stack based buffer overflow vulnerability that allows a remote attacker to cause a denial of service (DoS) or potentially allow for…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
-      "authority": "Saudi NCA / CERT",
-      "title": "F5 Alert",
-      "url": "https://nca.gov.sa/en/cert/7808/",
-      "date": "2026-07-28",
-      "severity": "High",
-      "summary": "Security alert 2026-7685. Review the official notice for affected products and remediation guidance."
-    },
-    {
-      "authority": "Saudi NCA / CERT",
-      "title": "F5 Alert",
-      "url": "https://nca.gov.sa/en/cert/7807/",
-      "date": "2026-07-28",
-      "severity": "High",
-      "summary": "Security alert 2026-7684. Review the official notice for affected products and remediation guidance."
     },
     {
       "title": "How to secure your online meetings",
@@ -324,7 +324,7 @@
       "path": "/assets/data/daily-urls.txt"
     }
   ],
-  "ioc_sha256": "1e098ca5201dbdfb5013ec0dd73dca0f89f25a7a085cfda549855aa733fc13f3",
+  "ioc_sha256": "5b52634c34cf8a32bfe8ede1cd981f9aafa8b029c9ae6be6dfb8c6c6df89e5da",
   "sources": {
     "kev": {
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
