@@ -1,0 +1,98 @@
+{
+  "digest_title": "Daily Security Digest: Trust Boundaries and Software Supply Chains",
+  "dek": "Critical updates across parsing libraries, CI/CD platforms, hypervisors, and security scanners demand version-level proof and verified boundaries.",
+  "overview": "Defenders must verify fixed builds, service roles, and dependency paths across multiple advisory disclosures. These updates highlight the need to secure trust boundaries from protocols to virtualization layers.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "Cowlib CVE-2026-59248 Demands Dependency-Level Proof",
+      "summary": "CVE-2026-59248 causes memory exhaustion during HTTP/2 or HTTP/3 header decoding. Defenders must verify resolved dependency versions and restrict protocols.",
+      "why_it_matters": "Top-level release checks miss vulnerable transitive dependencies hidden deep within application graphs.",
+      "topic": "Dependency Defense"
+    },
+    {
+      "source_id": "S02",
+      "headline": "GitHub Ingests OpenSSF Malicious-Package Data",
+      "summary": "GitHub now automatically ingests OpenSSF malicious-package reports into Dependabot. Teams must verify coverage and establish incident-ready workflows.",
+      "why_it_matters": "Malware alerts require exposure validation and accountable response rather than a routine patch queue.",
+      "topic": "Supply Chain"
+    },
+    {
+      "source_id": "S03",
+      "headline": "Ubuntu Issues Seven-Issue Samba Update",
+      "summary": "USN-8621-1 fixes seven security issues in Samba across three Ubuntu LTS releases. Operators must build role-aware inventories.",
+      "why_it_matters": "A multi-role package is patched only when fixed binaries are active and business functions remain bounded.",
+      "topic": "Host Security"
+    },
+    {
+      "source_id": "S04",
+      "headline": "XSA-497 Fixes Xen Pygrub Parser Flaws",
+      "summary": "XSA-497 fixes five ISO 9660 parser flaws in Xen pygrub, preventing untrusted guest data from escaping to the host.",
+      "why_it_matters": "Pre-boot helpers and storage parsers are critical host-boundary security components requiring strict isolation.",
+      "topic": "Virtualization"
+    },
+    {
+      "source_id": "S05",
+      "headline": "JetBrains TeamCity Fixes Critical CVE-2026-63077",
+      "summary": "JetBrains updated TeamCity to fix CVE-2026-63077, allowing unauthenticated remote command execution. Operators must patch and restrict server access.",
+      "why_it_matters": "Build servers sit between source and production, making server compromise a pipeline-wide threat.",
+      "topic": "CI/CD Security"
+    },
+    {
+      "source_id": "S06",
+      "headline": "PROCON-WEB SQL Injection Affects SCADA",
+      "summary": "CVE-2026-16462 introduces an unauthenticated SQL injection path in PROCON-WEB SCADA GetGridData, requiring network boundary reviews.",
+      "why_it_matters": "SCADA web endpoints are control system security boundaries where database compromise threatens operations.",
+      "topic": "OT Security"
+    },
+    {
+      "source_id": "S07",
+      "headline": "Singapore Task Force Focuses on AI Risk",
+      "summary": "Singapore created a task force to test machine-speed AI controls, fraud detection, and shared defensive insights.",
+      "why_it_matters": "Shared testing helps financial institutions validate controls and manage accelerated vulnerability discovery.",
+      "topic": "AI Security"
+    },
+    {
+      "source_id": "S08",
+      "headline": "Broadcom VMSA-2026-0006 Fixes VMware Flaws",
+      "summary": "Broadcom released critical patches for vCenter authentication bypass, syslog traversal, and ESX VMXNET3 VM escape.",
+      "why_it_matters": "Virtualization environments contain multiple perimeters requiring separate component updates and verified builds.",
+      "topic": "Virtualization"
+    },
+    {
+      "source_id": "S09",
+      "headline": "Apache Traffic Server Updates Fix Smuggling",
+      "summary": "Apache Traffic Server versions 10.1.4 and 9.2.15 fix request smuggling vulnerabilities caused by parsing disagreements.",
+      "why_it_matters": "Reverse proxies must interpret request boundaries exactly as origin systems do to prevent smuggling.",
+      "topic": "Web Security"
+    },
+    {
+      "source_id": "S10",
+      "headline": "npm Adds Automated Package Scanning Gate",
+      "summary": "npm now automatically scans newly published packages before installation and requires content declarations for dual-use tools.",
+      "why_it_matters": "Registry scanning adds vital supply chain friction before packages reach downstream automation runners.",
+      "topic": "Supply Chain"
+    },
+    {
+      "source_id": "S11",
+      "headline": "CodeQL 2.26.1 Expands Framework Coverage",
+      "summary": "CodeQL 2.26.1 improves models for Go, Apache POI, Spring WebFlux, and Angular, refining security alert accuracy.",
+      "why_it_matters": "Static analysis requires scanner currency and version proof to ensure intended framework paths are covered.",
+      "topic": "Code Analysis"
+    },
+    {
+      "source_id": "S12",
+      "headline": "cPanel Targeted Security Release Addresses Smuggling",
+      "summary": "cPanel version 136.0.32 addresses request smuggling, database privilege escalation, and Exim .forward risks.",
+      "why_it_matters": "Control panels compress multiple administrative trust domains into a single surface requiring complete build verification.",
+      "topic": "Hosting Security"
+    }
+  ],
+  "operating_view": "Maintain strict visibility across dependencies, build pipelines, and virtualization boundaries. Validate that software updates, policy changes, and network segmentations successfully reach running artifacts rather than relying on deployment tool tickets or download tasks.",
+  "watch_items": [
+    "Confirm fixed library versions and runtime builds directly on active hosts rather than trusting deployment receipts.",
+    "Restrict network reachability and enforce strict administrative access boundaries for management interfaces and proxies.",
+    "Validate that static analysis scanners and dependency monitoring tools are current and actively reporting."
+  ],
+  "caption_intro": "ShadowContext reviews today's defensive priorities across software supply chains, infrastructure boundaries, and enterprise networks."
+}

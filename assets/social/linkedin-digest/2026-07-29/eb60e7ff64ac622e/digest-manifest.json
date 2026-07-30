@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-07-30T07:51:33.517+04:00",
+  "digestDate": "2026-07-29",
+  "digestHash": "eb60e7ff64ac622e277a5107694f04dc737ec31a20cbf9c8950982dd9ab770be",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "Daily Security Digest: Trust Boundaries and Software Supply Chains",
+  "articleCount": 12,
+  "sourceArticles": [
+    {
+      "title": "Cowlib Fix Needs Dependency-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/cowlib-fix-needs-dependency-level-proof/",
+      "publishedAt": "2026-07-29T01:11:22.000+04:00",
+      "category": "defense",
+      "sourceHash": "c395c558e95ee79c7fafb232f5c822fc94d02ad6e2e73455184af84cd8575612"
+    },
+    {
+      "title": "Malicious-Package Alerts Need Ecosystem-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/malware-alerts-need-ecosystem-level-proof/",
+      "publishedAt": "2026-07-29T02:09:15.000+04:00",
+      "category": "defense",
+      "sourceHash": "69062c0f813f8d884fb9c071a0818957be1669ef4ce92c668c41e928b85ea3b1"
+    },
+    {
+      "title": "Ubuntu Samba Update Needs Role-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/ubuntu-samba-update-needs-role-level-proof/",
+      "publishedAt": "2026-07-29T09:12:16.000+04:00",
+      "category": "defense",
+      "sourceHash": "dcab141c64abc50881c0da9745fd762ead431e603a16b7c1312df1a195d469ce"
+    },
+    {
+      "title": "Xen pygrub fixes protect the host boundary",
+      "canonicalUrl": "https://shadowcontext.com/xen-pygrub-fix-protects-host-boundary/",
+      "publishedAt": "2026-07-29T11:12:47.000+04:00",
+      "category": "defense",
+      "sourceHash": "48dd3a29a2221dfedbc4cf9118b94768f79b6e7b1a5baf2a6e7dd1a7043dbbb3"
+    },
+    {
+      "title": "TeamCity Fix Protects the Build Pipeline Trust Boundary",
+      "canonicalUrl": "https://shadowcontext.com/teamcity-fix-protects-build-trust/",
+      "publishedAt": "2026-07-29T12:10:22.000+04:00",
+      "category": "defense",
+      "sourceHash": "ff7d482c1210bc6201dfe44d1c19df0fc3ade98f428de05c5e3ad6c28018d66b"
+    },
+    {
+      "title": "PROCON-WEB SQL Injection Puts SCADA Reachability Under Review",
+      "canonicalUrl": "https://shadowcontext.com/procon-web-sql-injection-needs-network-boundaries/",
+      "publishedAt": "2026-07-29T14:12:17.000+04:00",
+      "category": "defense",
+      "sourceHash": "bef4fb629fde71a161a2f53ba284ab8877166d25b51e617732c2e8b4a9f20fed"
+    },
+    {
+      "title": "AI Cyber Defense Needs Shared Proof",
+      "canonicalUrl": "https://shadowcontext.com/ai-cyber-taskforce-needs-shared-proof/",
+      "publishedAt": "2026-07-29T16:10:18.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "f78b21e1eaef2bbe8081e0f96cd5b0cf1d140e6b7f46d3539d0023c524b5e4f9"
+    },
+    {
+      "title": "Critical VMware Fixes Protect Two Trust Boundaries",
+      "canonicalUrl": "https://shadowcontext.com/vmware-fixes-protect-two-trust-boundaries/",
+      "publishedAt": "2026-07-29T17:10:44.000+04:00",
+      "category": "defense",
+      "sourceHash": "c885aa0f1b3dd4845e156ebd2372cbefeffe450daeec1aefb72c6c090541c907"
+    },
+    {
+      "title": "Apache Traffic Server Fix Restores Request Boundaries",
+      "canonicalUrl": "https://shadowcontext.com/apache-traffic-server-fix-restores-request-boundaries/",
+      "publishedAt": "2026-07-29T18:10:49.000+04:00",
+      "category": "defense",
+      "sourceHash": "c73501f3f47543af4adc08145994997ac98a82fe6dd5a7ff93aa13cafca5d490"
+    },
+    {
+      "title": "npm Publish Scanning Adds a Security Gate Before Install",
+      "canonicalUrl": "https://shadowcontext.com/npm-publish-scanning-adds-a-security-gate/",
+      "publishedAt": "2026-07-29T21:09:15.000+04:00",
+      "category": "defense",
+      "sourceHash": "cb4d1d1ad2044dc584a4f76cd578e1dcf47a3df486ab9e7245076c807c7dc1ab"
+    },
+    {
+      "title": "CodeQL Framework Coverage Needs Version-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/codeql-framework-coverage-needs-version-proof/",
+      "publishedAt": "2026-07-29T22:08:42.000+04:00",
+      "category": "defense",
+      "sourceHash": "8725b1cfe3bc9373ccda24027caf191c7ed91dfbccb14a6f0910f4cf4b0c6b2b"
+    },
+    {
+      "title": "cPanel Security Release Needs Version Proof",
+      "canonicalUrl": "https://shadowcontext.com/cpanel-security-release-needs-version-proof/",
+      "publishedAt": "2026-07-29T23:12:18.000+04:00",
+      "category": "defense",
+      "sourceHash": "e3870837a53c7bb607032ba140c2f87cef05e151ff5a80ec8d394912cf2b9c64"
+    }
+  ],
+  "caption": "ShadowContext reviews today's defensive priorities across software supply chains, infrastructure boundaries, and enterprise networks.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-07-29/eb60e7ff64ac622e/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-07-29/eb60e7ff64ac622e/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-07-29/eb60e7ff64ac622e/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-07-29/eb60e7ff64ac622e/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}

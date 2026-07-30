@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Daily Security Digest: Trust Boundaries and Software Supply Chains | ShadowContext</title>
+    <style>
+      :root {
+        --paper: #05080d;
+        --panel: #0d1319;
+        --panel-soft: #091017;
+        --ink: #f1f7fa;
+        --ink-2: #c4d1d8;
+        --muted: #8496a1;
+        --line: #1d2b34;
+        --cyan: #35e6d1;
+        --violet: #8b7dff;
+        --sans: "Space Grotesk", Inter, Arial, sans-serif;
+        --mono: "DM Mono", Consolas, monospace;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: var(--sans);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        font-size: 10.5pt;
+        line-height: 1.55;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        position: relative;
+        width: 210mm;
+        min-height: 297mm;
+        padding: 18mm;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 83% 18%, rgba(139, 125, 255, 0.1), transparent 28%),
+          linear-gradient(145deg, #05080d 0%, #081017 62%, #0c101c 100%);
+      }
+
+      .page::before {
+        content: "";
+        position: absolute;
+        inset: 8mm;
+        pointer-events: none;
+        border: 0.25mm solid var(--line);
+      }
+
+      .cover {
+        display: flex;
+        flex-direction: column;
+        page-break-after: always;
+      }
+
+      .brand-row,
+      .section-head,
+      .document-footer {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 4mm;
+        font-size: 20pt;
+        font-weight: 750;
+        letter-spacing: -0.04em;
+      }
+
+      .brand em {
+        color: var(--cyan);
+        font-style: normal;
+      }
+
+      .brand-mark {
+        position: relative;
+        display: block;
+        width: 12mm;
+        height: 12mm;
+        transform: rotate(30deg);
+        border: 1mm solid var(--cyan);
+        border-radius: 1.2mm;
+      }
+
+      .brand-mark::before {
+        content: "";
+        position: absolute;
+        inset: 2.2mm;
+        border: 0.8mm solid var(--violet);
+        border-radius: 0.9mm;
+      }
+
+      .brand-mark::after {
+        content: "";
+        position: absolute;
+        inset: 4.5mm;
+        background: var(--cyan);
+        border-radius: 0.5mm;
+      }
+
+      .edition,
+      .eyebrow,
+      .topic,
+      .section-count,
+      .why span,
+      .document-footer,
+      .source-link {
+        font-family: var(--mono);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .edition,
+      .section-count,
+      .document-footer {
+        color: var(--muted);
+        font-size: 8pt;
+      }
+
+      .cover-copy {
+        position: relative;
+        z-index: 1;
+        margin: 30mm 0 0;
+      }
+
+      .eyebrow {
+        margin: 0 0 7mm;
+        color: var(--cyan);
+        font-size: 10pt;
+      }
+
+      h1 {
+        max-width: 165mm;
+        margin: 0;
+        font-size: 37pt;
+        line-height: 1.03;
+        letter-spacing: -0.05em;
+      }
+
+      .dek {
+        max-width: 155mm;
+        margin: 10mm 0 0;
+        color: var(--ink-2);
+        font-size: 16pt;
+        line-height: 1.45;
+      }
+
+      .context {
+        position: relative;
+        z-index: 1;
+        margin-top: auto;
+        padding: 9mm;
+        background: rgba(13, 19, 25, 0.94);
+        border: 0.3mm solid var(--line);
+        border-left: 1mm solid var(--violet);
+      }
+
+      .context h2,
+      .section-head h2,
+      .operating-view h2,
+      .sources h2 {
+        margin: 0;
+      }
+
+      .context h2 {
+        color: var(--violet);
+        font-family: var(--mono);
+        font-size: 9pt;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .context p {
+        margin: 4mm 0 0;
+        color: var(--ink-2);
+        font-size: 13pt;
+      }
+
+      .cover-meta {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 9mm;
+        color: var(--muted);
+        font: 8pt var(--mono);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .content {
+        padding-top: 15mm;
+        padding-bottom: 18mm;
+      }
+
+      .section-head {
+        margin-bottom: 9mm;
+        padding-bottom: 5mm;
+        border-bottom: 0.3mm solid var(--line);
+      }
+
+      .section-head h2 {
+        font-size: 23pt;
+      }
+
+      .stories {
+        position: relative;
+        z-index: 1;
+      }
+
+      .story {
+        display: grid;
+        grid-template-columns: 15mm 1fr;
+        gap: 5mm;
+        margin: 0 0 6mm;
+        padding: 7mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: rgba(13, 19, 25, 0.96);
+        border: 0.3mm solid var(--line);
+      }
+
+      .story-index {
+        color: var(--cyan);
+        font: 12pt var(--mono);
+      }
+
+      .topic {
+        margin: 0 0 2mm;
+        color: var(--cyan);
+        font-size: 7.5pt;
+      }
+
+      .story h3 {
+        margin: 0;
+        font-size: 16pt;
+        line-height: 1.18;
+        letter-spacing: -0.025em;
+      }
+
+      .summary {
+        margin: 3mm 0;
+        color: var(--ink-2);
+        font-size: 10.5pt;
+      }
+
+      .why {
+        padding-top: 3mm;
+        border-top: 0.25mm solid var(--line);
+      }
+
+      .why span {
+        color: var(--violet);
+        font-size: 7pt;
+      }
+
+      .why p {
+        display: inline;
+        margin: 0 0 0 2mm;
+        font-weight: 650;
+      }
+
+      .source-link {
+        display: inline-block;
+        margin-top: 4mm;
+        color: var(--cyan);
+        font-size: 6.8pt;
+        letter-spacing: 0.04em;
+        text-transform: none;
+      }
+
+      .operating-view,
+      .sources {
+        position: relative;
+        z-index: 1;
+        margin-top: 12mm;
+        padding: 9mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: var(--panel-soft);
+        border: 0.3mm solid var(--line);
+      }
+
+      .operating-view {
+        border-top: 1mm solid var(--cyan);
+      }
+
+      .operating-view h2,
+      .sources h2 {
+        font-size: 18pt;
+      }
+
+      .operating-view > p {
+        color: var(--ink-2);
+        font-size: 12pt;
+      }
+
+      .watch-list,
+      .source-list {
+        margin: 6mm 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .watch-list li {
+        display: grid;
+        grid-template-columns: 9mm 1fr;
+        gap: 4mm;
+        align-items: start;
+        margin: 3mm 0;
+      }
+
+      .watch-list span {
+        display: grid;
+        width: 8mm;
+        height: 8mm;
+        place-items: center;
+        color: var(--cyan);
+        border: 0.3mm solid var(--cyan);
+        font: 8pt var(--mono);
+      }
+
+      .watch-list p {
+        margin: 0;
+      }
+
+      .source-list li {
+        display: grid;
+        grid-template-columns: 10mm 1fr;
+        gap: 3mm;
+        margin: 2.5mm 0;
+        color: var(--ink-2);
+        font-size: 8.5pt;
+      }
+
+      .source-list span {
+        color: var(--violet);
+        font-family: var(--mono);
+      }
+
+      .source-list a {
+        color: var(--cyan);
+        text-decoration: underline;
+        text-decoration-color: rgba(53, 230, 209, 0.35);
+        text-underline-offset: 1mm;
+      }
+
+      .cta {
+        position: relative;
+        z-index: 1;
+        margin: 12mm 0 0;
+        padding: 7mm 9mm;
+        break-inside: avoid;
+        color: #04100f;
+        background: var(--cyan);
+      }
+
+      .cta strong {
+        display: block;
+        font-size: 14pt;
+      }
+
+      .cta span {
+        font: 9pt var(--mono);
+      }
+
+      .document-footer {
+        margin-top: 12mm;
+        padding-top: 5mm;
+        border-top: 0.3mm solid var(--line);
+      }
+
+      @media screen {
+        body {
+          width: 210mm;
+          margin: 0 auto;
+        }
+
+        .page {
+          box-shadow: 0 0 20mm rgba(0, 0, 0, 0.45);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="page cover">
+      <header class="brand-row">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Shadow<em>Context</em></span>
+        </div>
+        <span class="edition">Daily security digest</span>
+      </header>
+
+      <main class="cover-copy">
+        <p class="eyebrow">The day in context / 2026-07-29</p>
+        <h1>Daily Security Digest: Trust Boundaries and Software Supply Chains</h1>
+        <p class="dek">Critical updates across parsing libraries, CI/CD platforms, hypervisors, and security scanners demand version-level proof and verified boundaries.</p>
+      </main>
+
+      <aside class="context">
+        <h2>Executive summary</h2>
+        <p>Defenders must verify fixed builds, service roles, and dependency paths across multiple advisory disclosures. These updates highlight the need to secure trust boundaries from protocols to virtualization layers.</p>
+      </aside>
+
+      <div class="cover-meta">
+        <span>12 briefings included</span>
+        <span>https://shadowcontext.com/</span>
+      </div>
+    </section>
+
+    <section class="page content">
+      <header class="section-head">
+        <h2>All news from the day</h2>
+        <span class="section-count">12 / 2026-07-29</span>
+      </header>
+
+      <main class="stories">
+    <article class="story">
+      <div class="story-index">01</div>
+      <div class="story-copy">
+        <p class="topic">Dependency Defense</p>
+        <h3>Cowlib CVE-2026-59248 Demands Dependency-Level Proof</h3>
+        <p class="summary">CVE-2026-59248 causes memory exhaustion during HTTP/2 or HTTP/3 header decoding. Defenders must verify resolved dependency versions and restrict protocols.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Top-level release checks miss vulnerable transitive dependencies hidden deep within application graphs.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/cowlib-fix-needs-dependency-level-proof/">Cowlib Fix Needs Dependency-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">02</div>
+      <div class="story-copy">
+        <p class="topic">Supply Chain</p>
+        <h3>GitHub Ingests OpenSSF Malicious-Package Data</h3>
+        <p class="summary">GitHub now automatically ingests OpenSSF malicious-package reports into Dependabot. Teams must verify coverage and establish incident-ready workflows.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Malware alerts require exposure validation and accountable response rather than a routine patch queue.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/malware-alerts-need-ecosystem-level-proof/">Malicious-Package Alerts Need Ecosystem-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">03</div>
+      <div class="story-copy">
+        <p class="topic">Host Security</p>
+        <h3>Ubuntu Issues Seven-Issue Samba Update</h3>
+        <p class="summary">USN-8621-1 fixes seven security issues in Samba across three Ubuntu LTS releases. Operators must build role-aware inventories.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>A multi-role package is patched only when fixed binaries are active and business functions remain bounded.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ubuntu-samba-update-needs-role-level-proof/">Ubuntu Samba Update Needs Role-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">04</div>
+      <div class="story-copy">
+        <p class="topic">Virtualization</p>
+        <h3>XSA-497 Fixes Xen Pygrub Parser Flaws</h3>
+        <p class="summary">XSA-497 fixes five ISO 9660 parser flaws in Xen pygrub, preventing untrusted guest data from escaping to the host.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Pre-boot helpers and storage parsers are critical host-boundary security components requiring strict isolation.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/xen-pygrub-fix-protects-host-boundary/">Xen pygrub fixes protect the host boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">05</div>
+      <div class="story-copy">
+        <p class="topic">CI/CD Security</p>
+        <h3>JetBrains TeamCity Fixes Critical CVE-2026-63077</h3>
+        <p class="summary">JetBrains updated TeamCity to fix CVE-2026-63077, allowing unauthenticated remote command execution. Operators must patch and restrict server access.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Build servers sit between source and production, making server compromise a pipeline-wide threat.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/teamcity-fix-protects-build-trust/">TeamCity Fix Protects the Build Pipeline Trust Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">06</div>
+      <div class="story-copy">
+        <p class="topic">OT Security</p>
+        <h3>PROCON-WEB SQL Injection Affects SCADA</h3>
+        <p class="summary">CVE-2026-16462 introduces an unauthenticated SQL injection path in PROCON-WEB SCADA GetGridData, requiring network boundary reviews.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>SCADA web endpoints are control system security boundaries where database compromise threatens operations.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/procon-web-sql-injection-needs-network-boundaries/">PROCON-WEB SQL Injection Puts SCADA Reachability Under Review ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">07</div>
+      <div class="story-copy">
+        <p class="topic">AI Security</p>
+        <h3>Singapore Task Force Focuses on AI Risk</h3>
+        <p class="summary">Singapore created a task force to test machine-speed AI controls, fraud detection, and shared defensive insights.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Shared testing helps financial institutions validate controls and manage accelerated vulnerability discovery.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ai-cyber-taskforce-needs-shared-proof/">AI Cyber Defense Needs Shared Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">08</div>
+      <div class="story-copy">
+        <p class="topic">Virtualization</p>
+        <h3>Broadcom VMSA-2026-0006 Fixes VMware Flaws</h3>
+        <p class="summary">Broadcom released critical patches for vCenter authentication bypass, syslog traversal, and ESX VMXNET3 VM escape.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Virtualization environments contain multiple perimeters requiring separate component updates and verified builds.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/vmware-fixes-protect-two-trust-boundaries/">Critical VMware Fixes Protect Two Trust Boundaries ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">09</div>
+      <div class="story-copy">
+        <p class="topic">Web Security</p>
+        <h3>Apache Traffic Server Updates Fix Smuggling</h3>
+        <p class="summary">Apache Traffic Server versions 10.1.4 and 9.2.15 fix request smuggling vulnerabilities caused by parsing disagreements.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Reverse proxies must interpret request boundaries exactly as origin systems do to prevent smuggling.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/apache-traffic-server-fix-restores-request-boundaries/">Apache Traffic Server Fix Restores Request Boundaries ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">10</div>
+      <div class="story-copy">
+        <p class="topic">Supply Chain</p>
+        <h3>npm Adds Automated Package Scanning Gate</h3>
+        <p class="summary">npm now automatically scans newly published packages before installation and requires content declarations for dual-use tools.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Registry scanning adds vital supply chain friction before packages reach downstream automation runners.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/npm-publish-scanning-adds-a-security-gate/">npm Publish Scanning Adds a Security Gate Before Install ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">11</div>
+      <div class="story-copy">
+        <p class="topic">Code Analysis</p>
+        <h3>CodeQL 2.26.1 Expands Framework Coverage</h3>
+        <p class="summary">CodeQL 2.26.1 improves models for Go, Apache POI, Spring WebFlux, and Angular, refining security alert accuracy.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Static analysis requires scanner currency and version proof to ensure intended framework paths are covered.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/codeql-framework-coverage-needs-version-proof/">CodeQL Framework Coverage Needs Version-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">12</div>
+      <div class="story-copy">
+        <p class="topic">Hosting Security</p>
+        <h3>cPanel Targeted Security Release Addresses Smuggling</h3>
+        <p class="summary">cPanel version 136.0.32 addresses request smuggling, database privilege escalation, and Exim .forward risks.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Control panels compress multiple administrative trust domains into a single surface requiring complete build verification.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/cpanel-security-release-needs-version-proof/">cPanel Security Release Needs Version Proof ↗</a>
+      </div>
+    </article></main>
+
+      <section class="operating-view">
+        <p class="eyebrow">The operating view</p>
+        <h2>What the day means for defenders</h2>
+        <p>Maintain strict visibility across dependencies, build pipelines, and virtualization boundaries. Validate that software updates, policy changes, and network segmentations successfully reach running artifacts rather than relying on deployment tool tickets or download tasks.</p>
+        <ol class="watch-list"><li><span>1</span><p>Confirm fixed library versions and runtime builds directly on active hosts rather than trusting deployment receipts.</p></li>
+<li><span>2</span><p>Restrict network reachability and enforce strict administrative access boundaries for management interfaces and proxies.</p></li>
+<li><span>3</span><p>Validate that static analysis scanners and dependency monitoring tools are current and actively reporting.</p></li></ol>
+      </section>
+
+      <section class="sources">
+        <p class="eyebrow">Source index</p>
+        <h2>Every briefing in this digest</h2>
+        <ol class="source-list">
+    <li>
+      <span>01</span>
+      <a href="https://shadowcontext.com/cowlib-fix-needs-dependency-level-proof/">Cowlib Fix Needs Dependency-Level Proof</a>
+    </li>
+
+    <li>
+      <span>02</span>
+      <a href="https://shadowcontext.com/malware-alerts-need-ecosystem-level-proof/">Malicious-Package Alerts Need Ecosystem-Level Proof</a>
+    </li>
+
+    <li>
+      <span>03</span>
+      <a href="https://shadowcontext.com/ubuntu-samba-update-needs-role-level-proof/">Ubuntu Samba Update Needs Role-Level Proof</a>
+    </li>
+
+    <li>
+      <span>04</span>
+      <a href="https://shadowcontext.com/xen-pygrub-fix-protects-host-boundary/">Xen pygrub fixes protect the host boundary</a>
+    </li>
+
+    <li>
+      <span>05</span>
+      <a href="https://shadowcontext.com/teamcity-fix-protects-build-trust/">TeamCity Fix Protects the Build Pipeline Trust Boundary</a>
+    </li>
+
+    <li>
+      <span>06</span>
+      <a href="https://shadowcontext.com/procon-web-sql-injection-needs-network-boundaries/">PROCON-WEB SQL Injection Puts SCADA Reachability Under Review</a>
+    </li>
+
+    <li>
+      <span>07</span>
+      <a href="https://shadowcontext.com/ai-cyber-taskforce-needs-shared-proof/">AI Cyber Defense Needs Shared Proof</a>
+    </li>
+
+    <li>
+      <span>08</span>
+      <a href="https://shadowcontext.com/vmware-fixes-protect-two-trust-boundaries/">Critical VMware Fixes Protect Two Trust Boundaries</a>
+    </li>
+
+    <li>
+      <span>09</span>
+      <a href="https://shadowcontext.com/apache-traffic-server-fix-restores-request-boundaries/">Apache Traffic Server Fix Restores Request Boundaries</a>
+    </li>
+
+    <li>
+      <span>10</span>
+      <a href="https://shadowcontext.com/npm-publish-scanning-adds-a-security-gate/">npm Publish Scanning Adds a Security Gate Before Install</a>
+    </li>
+
+    <li>
+      <span>11</span>
+      <a href="https://shadowcontext.com/codeql-framework-coverage-needs-version-proof/">CodeQL Framework Coverage Needs Version-Level Proof</a>
+    </li>
+
+    <li>
+      <span>12</span>
+      <a href="https://shadowcontext.com/cpanel-security-release-needs-version-proof/">cPanel Security Release Needs Version Proof</a>
+    </li></ol>
+      </section>
+
+      <div class="cta">
+        <strong>Read the full analysis</strong>
+        <span>https://shadowcontext.com/</span>
+      </div>
+
+      <footer class="document-footer">
+        <span>ShadowContext</span>
+        <span>Independent defensive security intelligence</span>
+      </footer>
+    </section>
+  </body>
+</html>
