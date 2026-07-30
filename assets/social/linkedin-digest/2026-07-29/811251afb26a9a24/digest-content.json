@@ -1,0 +1,98 @@
+{
+  "digest_title": "Daily Security News Digest: Multi-Boundary Vulnerabilities and Ecosystem Defenses",
+  "dek": "Defensive analysis of 11 security advisories covering dependency flaws, virtualization boundaries, software supply-chain controls, and verified patch deployments.",
+  "overview": "Recent advisories highlight critical boundaries across protocols, build pipelines, virtualization, and hosting platforms. Reliable security requires dependency inventories, branch-aware patching, and verification that fixed binaries are active in production.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "Cowlib Fix Needs Dependency-Level Proof",
+      "summary": "CVE-2026-59248 turns HTTP/2 and HTTP/3 header decoding into memory exhaustion, making dependency discovery and exposure checks essential.",
+      "why_it_matters": "Transitive dependencies hide vulnerable parser code beneath top-level product names.",
+      "topic": "Dependency Defense"
+    },
+    {
+      "source_id": "S02",
+      "headline": "Malicious-Package Alerts Need Ecosystem-Level Proof",
+      "summary": "GitHub integrated OpenSSF malicious-package alerts for ecosystems like npm and PyPI, requiring verification of coverage and alert routing.",
+      "why_it_matters": "Package malware requires exposure validation rather than a conventional patch queue.",
+      "topic": "Supply Chain"
+    },
+    {
+      "source_id": "S03",
+      "headline": "Ubuntu Samba Update Needs Role-Level Proof",
+      "summary": "Canonical patched multiple CVEs across three Ubuntu LTS releases, requiring role-aware inventory and service-level verification.",
+      "why_it_matters": "Multi-role packages require verified service-level closure rather than package counts alone.",
+      "topic": "Linux Security"
+    },
+    {
+      "source_id": "S04",
+      "headline": "Xen pygrub fixes protect the host boundary",
+      "summary": "XSA-497 fixes five ISO parser flaws in pygrub that can allow guests to reach host-level control.",
+      "why_it_matters": "Pre-boot helpers parsing tenant storage form part of the host attack surface.",
+      "topic": "Virtualization"
+    },
+    {
+      "source_id": "S05",
+      "headline": "TeamCity Fix Protects the Build Pipeline Trust Boundary",
+      "summary": "JetBrains fixed critical CVE-2026-63077 in self-hosted TeamCity servers, enabling authentication bypass and OS command execution.",
+      "why_it_matters": "Build servers sit between source code, secrets, and released artifacts.",
+      "topic": "CI/CD Security"
+    },
+    {
+      "source_id": "S06",
+      "headline": "PROCON-WEB SQL Injection Puts SCADA Reachability Under Review",
+      "summary": "CVE-2026-16462 exposes an unauthenticated remote SQL injection path in PROCON-WEB SCADA, demanding network boundary reviews.",
+      "why_it_matters": "SCADA web endpoints and database connections form critical control-system boundaries.",
+      "topic": "OT Security"
+    },
+    {
+      "source_id": "S07",
+      "headline": "AI Cyber Defense Needs Shared Proof",
+      "summary": "Singapore established an AI cyber task force to test machine-speed controls and measure scam detection and patching outcomes.",
+      "why_it_matters": "Collective trials expose brittle controls and validate AI-assisted defensive workflows.",
+      "topic": "AI Security"
+    },
+    {
+      "source_id": "S08",
+      "headline": "Critical VMware Fixes Protect Two Trust Boundaries",
+      "summary": "Broadcom patched critical vulnerabilities affecting vCenter authentication, the Syslog server, and VMXNET3 virtual network adapters.",
+      "why_it_matters": "Virtualization estates contain distinct perimeters requiring independent update verification.",
+      "topic": "Virtualization"
+    },
+    {
+      "source_id": "S09",
+      "headline": "Apache Traffic Server Fix Restores Request Boundaries",
+      "summary": "Apache Traffic Server released updates addressing request-smuggling paths caused by protocol translation and chunked message handling.",
+      "why_it_matters": "Reverse proxies and origin servers must interpret request boundaries identically.",
+      "topic": "Proxy Security"
+    },
+    {
+      "source_id": "S10",
+      "headline": "npm Publish Scanning Adds a Security Gate Before Install",
+      "summary": "npm introduced pre-install package scanning and dual-use content declarations to strengthen registry-level supply-chain defenses.",
+      "why_it_matters": "Automated registry checks add useful friction before vulnerable code reaches downstream builds.",
+      "topic": "Supply Chain"
+    },
+    {
+      "source_id": "S11",
+      "headline": "CodeQL Framework Coverage Needs Version-Level Proof",
+      "summary": "CodeQL 2.26.1 expands framework models for Go, Apache POI, Spring WebFlux, and Angular to improve data-flow analysis.",
+      "why_it_matters": "Scanner currency determines whether static analysis covers actual framework patterns.",
+      "topic": "Static Analysis"
+    },
+    {
+      "source_id": "S12",
+      "headline": "cPanel Security Release Needs Version Proof",
+      "summary": "cPanel issued targeted security builds addressing request smuggling, database privilege escalation, and Exim .forward issues.",
+      "why_it_matters": "Control panels compress multiple trust domains into a single administrative surface.",
+      "topic": "Hosting Security"
+    }
+  ],
+  "operating_view": "Treat software updates, security scanners, and registry scans as initial controls. Defensible security requires verifying dependency graphs, mapping network reachability, confirming running process versions, and maintaining recovery options.",
+  "watch_items": [
+    "Verify exact dependency resolutions for transitively included protocol libraries across all deployment targets.",
+    "Validate running build versions after patching virtualization and hosting management planes.",
+    "Ensure build pipelines tolerate delayed availability and strict security gates for public packages."
+  ],
+  "caption_intro": "Explore today's comprehensive briefing on multi-boundary vulnerabilities, dependency hygiene, and verified patch deployments across enterprise systems."
+}
