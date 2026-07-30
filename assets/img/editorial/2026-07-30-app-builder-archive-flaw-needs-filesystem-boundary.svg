@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Archive extraction contained by a filesystem boundary</title>
+  <desc id="desc">Abstract archive layers enter a dark macOS filesystem chamber while a cyan security boundary redirects an amber linked path away from protected files.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07151f"/>
+      <stop offset="0.52" stop-color="#0b2530"/>
+      <stop offset="1" stop-color="#101827"/>
+    </linearGradient>
+    <linearGradient id="archive" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#49d8dc"/>
+      <stop offset="1" stop-color="#176b87"/>
+    </linearGradient>
+    <linearGradient id="chamber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#183a47"/>
+      <stop offset="1" stop-color="#0b202d"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffd37a"/>
+      <stop offset="1" stop-color="#f08a4b"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#64f3ef" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#64f3ef" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+    <filter id="lineGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" fill="none" stroke="#8ad9de" stroke-opacity=".055" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <ellipse cx="1040" cy="450" rx="520" ry="390" fill="url(#glow)" filter="url(#soft)"/>
+  <circle cx="145" cy="128" r="4" fill="#6de6e3" opacity=".65"/>
+  <circle cx="1510" cy="735" r="5" fill="#f3ad65" opacity=".55"/>
+  <circle cx="1390" cy="132" r="3" fill="#6de6e3" opacity=".42"/>
+
+  <!-- Layered archive entering from the left -->
+  <g transform="translate(165 248)">
+    <path d="M0 84 252 0l198 90-252 84Z" fill="#102f3c" stroke="#54d5da" stroke-opacity=".55" stroke-width="3"/>
+    <path d="M0 84v190l198 98V174Z" fill="#0c2430" stroke="#3da7b5" stroke-opacity=".45" stroke-width="3"/>
+    <path d="M198 174 450 90v190l-252 92Z" fill="url(#archive)" opacity=".78" stroke="#71ece8" stroke-opacity=".6" stroke-width="3"/>
+    <path d="m30 143 164 77 224-73" fill="none" stroke="#76ebe7" stroke-opacity=".38" stroke-width="3"/>
+    <path d="m30 204 164 78 224-75" fill="none" stroke="#76ebe7" stroke-opacity=".3" stroke-width="3"/>
+    <path d="M159 75h138" stroke="#b3ffff" stroke-width="10" stroke-linecap="round" opacity=".88"/>
+    <path d="M228 38v74" stroke="#b3ffff" stroke-width="8" stroke-linecap="round" opacity=".72"/>
+  </g>
+
+  <!-- Filesystem chamber -->
+  <g transform="translate(835 150)">
+    <path d="M42 85 335 0l307 116-302 90Z" fill="#1b414d" stroke="#6be7e4" stroke-opacity=".35" stroke-width="3"/>
+    <path d="M42 85v484l298 142V206Z" fill="#0b1b28" stroke="#4ab9c2" stroke-opacity=".35" stroke-width="3"/>
+    <path d="M340 206 642 116v485l-302 110Z" fill="url(#chamber)" stroke="#6be7e4" stroke-opacity=".42" stroke-width="3"/>
+    <path d="M98 189 303 277v123L98 308Z" fill="#14323e" stroke="#56cfd1" stroke-opacity=".4" stroke-width="2"/>
+    <path d="M376 262 586 202v119l-210 66Z" fill="#173743" stroke="#56cfd1" stroke-opacity=".35" stroke-width="2"/>
+    <path d="M376 430 586 366v119l-210 67Z" fill="#173743" stroke="#56cfd1" stroke-opacity=".35" stroke-width="2"/>
+    <path d="M98 381 303 473v122L98 495Z" fill="#14323e" stroke="#56cfd1" stroke-opacity=".3" stroke-width="2"/>
+    <g fill="#78e9e5" opacity=".72">
+      <circle cx="142" cy="245" r="9"/><circle cx="424" cy="301" r="9"/>
+      <circle cx="424" cy="469" r="9"/><circle cx="142" cy="440" r="9"/>
+    </g>
+  </g>
+
+  <!-- Security boundary -->
+  <path d="M755 132C702 261 710 644 777 775" fill="none" stroke="#5ff3ef" stroke-opacity=".18" stroke-width="44" filter="url(#lineGlow)"/>
+  <path d="M755 132C702 261 710 644 777 775" fill="none" stroke="#8cffff" stroke-width="6"/>
+  <path d="M738 395c19-25 43-38 72-38 30 0 57 15 78 44" fill="none" stroke="#b8ffff" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="755" cy="454" r="24" fill="#0b2530" stroke="#a4ffff" stroke-width="6"/>
+
+  <!-- Safe path and diverted symlink path -->
+  <path d="M585 430C665 430 697 441 748 454 820 473 858 436 925 394" fill="none" stroke="#70efeb" stroke-width="10" stroke-linecap="round" filter="url(#lineGlow)"/>
+  <path d="M585 486C650 486 697 482 744 467 783 455 812 472 823 512 835 558 801 606 747 635" fill="none" stroke="url(#amber)" stroke-width="11" stroke-linecap="round" filter="url(#lineGlow)"/>
+  <path d="m760 611-17 28 34-4" fill="none" stroke="#ffd17b" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Protected file forms -->
+  <g transform="translate(1032 352)">
+    <path d="M0 0h126l45 45v179H0Z" fill="#102b37" stroke="#75e5e2" stroke-width="4"/>
+    <path d="M126 0v45h45" fill="none" stroke="#75e5e2" stroke-width="4"/>
+    <path d="M38 97h92M38 135h68M38 173h82" stroke="#75e5e2" stroke-opacity=".72" stroke-width="9" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(1238 448)" opacity=".72">
+    <path d="M0 0h93l34 34v132H0Z" fill="#102b37" stroke="#4ab6c1" stroke-width="3"/>
+    <path d="M93 0v34h34" fill="none" stroke="#4ab6c1" stroke-width="3"/>
+    <path d="M28 78h67M28 108h49" stroke="#61cbd0" stroke-width="7" stroke-linecap="round"/>
+  </g>
+
+  <!-- Foreground depth -->
+  <path d="M0 786c286-80 517-66 770 12 268 83 531 77 830-16v118H0Z" fill="#061019" opacity=".62"/>
+  <path d="M0 786c286-80 517-66 770 12 268 83 531 77 830-16" fill="none" stroke="#3fb4bd" stroke-opacity=".18" stroke-width="3"/>
+</svg>
