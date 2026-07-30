@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Selective repair of persistent AI agent memory</title>
+  <desc id="desc">Abstract teal memory layers pass through a luminous security ring while a corrupted red fragment is separated and contained.</desc>
+  <defs>
+    <linearGradient id="bg" x1="120" y1="70" x2="1450" y2="830" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#071827"/>
+      <stop offset="0.52" stop-color="#0b2634"/>
+      <stop offset="1" stop-color="#07131e"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0" cy="0" r="1" gradientTransform="translate(817 444) rotate(90) scale(372 525)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#47e5d0" stop-opacity=".2"/>
+      <stop offset=".52" stop-color="#1ba6b6" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#071827" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="memory" x1="300" y1="270" x2="1120" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#72f1df"/>
+      <stop offset=".55" stop-color="#24b8c6"/>
+      <stop offset="1" stop-color="#16738f"/>
+    </linearGradient>
+    <linearGradient id="memorySoft" x1="280" y1="240" x2="1110" y2="690" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#b7fff3" stop-opacity=".72"/>
+      <stop offset="1" stop-color="#1ba8b8" stop-opacity=".16"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="620" y1="170" x2="998" y2="724" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#b8fff5"/>
+      <stop offset=".43" stop-color="#3ee1cf"/>
+      <stop offset="1" stop-color="#147590"/>
+    </linearGradient>
+    <linearGradient id="corrupt" x1="1020" y1="320" x2="1310" y2="650" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffb068"/>
+      <stop offset=".42" stop-color="#f05a62"/>
+      <stop offset="1" stop-color="#8b274f"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#020a11" flood-opacity=".62"/>
+    </filter>
+    <clipPath id="coreClip">
+      <ellipse cx="800" cy="450" rx="194" ry="292"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#halo)"/>
+
+  <g opacity=".28" fill="none" stroke="#70dfd4" stroke-width="2">
+    <path d="M72 196C282 126 417 144 573 249"/>
+    <path d="M1026 172c180-72 329-45 502 73"/>
+    <path d="M55 708c193 69 341 52 494-38"/>
+    <path d="M1055 718c172 68 320 49 482-50"/>
+  </g>
+  <g fill="#77e8dc">
+    <circle cx="180" cy="164" r="5" opacity=".72"/>
+    <circle cx="349" cy="170" r="3" opacity=".38"/>
+    <circle cx="1280" cy="168" r="4" opacity=".5"/>
+    <circle cx="1440" cy="270" r="6" opacity=".32"/>
+    <circle cx="240" cy="737" r="4" opacity=".48"/>
+    <circle cx="1358" cy="724" r="5" opacity=".55"/>
+  </g>
+
+  <ellipse cx="799" cy="475" rx="249" ry="348" fill="#3ee1cf" opacity=".13" filter="url(#glow)"/>
+
+  <g filter="url(#shadow)">
+    <path d="M192 378C311 322 435 311 602 334l61 86c-173-25-311-17-440 40z" fill="url(#memorySoft)" opacity=".48"/>
+    <path d="M160 458c132-57 278-64 472-25l30 92c-191-38-334-29-465 30z" fill="url(#memory)" opacity=".62"/>
+    <path d="M206 552c124-47 257-47 431-5l-31 84c-158-36-279-31-384 8z" fill="url(#memorySoft)" opacity=".42"/>
+    <path d="M319 285c94-31 190-29 307 5l58 73c-134-28-235-24-330 12z" fill="url(#memory)" opacity=".35"/>
+  </g>
+
+  <g>
+    <ellipse cx="800" cy="450" rx="218" ry="322" fill="#071923" stroke="#2aaebe" stroke-width="7" opacity=".92"/>
+    <ellipse cx="800" cy="450" rx="194" ry="292" fill="#0c3540" stroke="url(#ring)" stroke-width="12"/>
+    <ellipse cx="800" cy="450" rx="175" ry="267" fill="none" stroke="#a2fff1" stroke-width="3" opacity=".42"/>
+    <path d="M643 324c82-85 228-103 318-22" fill="none" stroke="#c9fff7" stroke-width="9" stroke-linecap="round" opacity=".76" filter="url(#softGlow)"/>
+  </g>
+
+  <g clip-path="url(#coreClip)">
+    <path d="M511 348c156-50 315-36 476 42l-27 80c-156-69-293-83-431-42z" fill="url(#memory)" opacity=".7"/>
+    <path d="M514 474c152-45 305-26 458 58l-38 76c-137-68-269-81-408-42z" fill="url(#memorySoft)" opacity=".74"/>
+    <path d="M563 261c124-27 249-2 374 74" fill="none" stroke="#8bf5e5" stroke-width="18" stroke-linecap="round" opacity=".27"/>
+    <g fill="#c2fff6">
+      <circle cx="694" cy="389" r="9" opacity=".82"/>
+      <circle cx="787" cy="412" r="6" opacity=".6"/>
+      <circle cx="878" cy="447" r="11" opacity=".78"/>
+      <circle cx="730" cy="522" r="7" opacity=".58"/>
+      <circle cx="841" cy="555" r="9" opacity=".7"/>
+    </g>
+    <g stroke="#a7fff1" stroke-width="3" opacity=".38">
+      <path d="M694 389l93 23 91 35"/>
+      <path d="M730 522l111 33"/>
+    </g>
+  </g>
+
+  <g filter="url(#shadow)">
+    <path d="M967 377c124-27 245-13 389 49l-17 68c-132-53-239-63-352-38z" fill="url(#memory)" opacity=".7"/>
+    <path d="M969 492c123-15 237 12 350 79l-35 65c-98-54-195-76-297-68z" fill="url(#memorySoft)" opacity=".62"/>
+    <path d="M995 286c101-13 200 9 299 66l-25 53c-88-44-176-60-265-47z" fill="url(#memory)" opacity=".38"/>
+  </g>
+
+  <g transform="rotate(8 1135 500)" filter="url(#shadow)">
+    <path d="M1054 399l112-37 86 86-18 132-111 58-96-78z" fill="url(#corrupt)"/>
+    <path d="M1068 421l91-30 62 65-13 103-82 43-72-58z" fill="#591d3c" opacity=".48"/>
+    <path d="M1098 424l70 139M1193 421l-101 123" stroke="#ffd0a1" stroke-width="9" stroke-linecap="round" opacity=".62"/>
+  </g>
+  <ellipse cx="1137" cy="505" rx="157" ry="156" fill="none" stroke="#ff786f" stroke-width="4" stroke-dasharray="10 18" opacity=".6"/>
+  <circle cx="1137" cy="505" r="183" fill="none" stroke="#f75b68" stroke-width="2" opacity=".18"/>
+
+  <g fill="#c4fff6">
+    <circle cx="1051" cy="347" r="7" opacity=".75"/>
+    <circle cx="1285" cy="432" r="5" opacity=".54"/>
+    <circle cx="1014" cy="630" r="6" opacity=".65"/>
+    <circle cx="1319" cy="604" r="8" opacity=".42"/>
+  </g>
+</svg>
