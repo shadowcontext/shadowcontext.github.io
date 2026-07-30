@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Protected industrial controller containing a distorted network pulse</title>
+  <desc id="desc">Abstract industrial controller core protected by layered teal shields as a distorted amber network pulse is contained at its edge.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07151f"/>
+      <stop offset=".52" stop-color="#0d2734"/>
+      <stop offset="1" stop-color="#11152b"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="50%" cy="48%" r="54%">
+      <stop offset="0" stop-color="#35d9c3" stop-opacity=".28"/>
+      <stop offset=".58" stop-color="#208ea8" stop-opacity=".1"/>
+      <stop offset="1" stop-color="#142640" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#80f5df"/>
+      <stop offset=".45" stop-color="#25bfc0"/>
+      <stop offset="1" stop-color="#3772b7"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b1fff0"/>
+      <stop offset=".46" stop-color="#2bd5c2"/>
+      <stop offset="1" stop-color="#277fa8"/>
+    </linearGradient>
+    <linearGradient id="pulse" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffca68" stop-opacity=".16"/>
+      <stop offset=".54" stop-color="#ffba45"/>
+      <stop offset="1" stop-color="#ff755e"/>
+    </linearGradient>
+    <filter id="glow" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="42"/>
+    </filter>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#9ee7e0" stroke-opacity=".065" stroke-width="2"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <ellipse cx="846" cy="446" rx="610" ry="430" fill="url(#aura)"/>
+  <circle cx="154" cy="124" r="190" fill="#174d63" opacity=".18" filter="url(#soft)"/>
+  <circle cx="1458" cy="770" r="220" fill="#27255d" opacity=".2" filter="url(#soft)"/>
+
+  <g fill="none" stroke="#75dacd" stroke-width="3" opacity=".2">
+    <path d="M70 228 C302 121 475 153 617 275"/>
+    <path d="M1022 718 C1202 815 1397 787 1550 666"/>
+    <path d="M113 296 C288 221 423 234 548 323" opacity=".55"/>
+  </g>
+
+  <g opacity=".45">
+    <path d="M80 492 C230 492 278 363 415 363 C512 363 534 449 627 449" fill="none" stroke="#49bfc2" stroke-width="10" stroke-linecap="round"/>
+    <path d="M80 572 C244 572 288 674 431 674 C526 674 550 584 633 584" fill="none" stroke="#3f83b2" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="126" cy="492" r="15" fill="#83eee2"/>
+    <circle cx="205" cy="572" r="12" fill="#6bbbd3"/>
+    <circle cx="348" cy="363" r="12" fill="#83eee2"/>
+    <circle cx="424" cy="674" r="15" fill="#6bbbd3"/>
+  </g>
+
+  <g transform="translate(825 458)">
+    <path d="M-277 -241 L0 -344 L277 -241 L277 84 C277 248 150 340 0 391 C-150 340 -277 248 -277 84 Z"
+          fill="#0b2531" fill-opacity=".78" stroke="url(#shield)" stroke-width="12" filter="url(#glow)"/>
+    <path d="M-223 -195 L0 -278 L223 -195 L223 72 C223 198 126 270 0 317 C-126 270 -223 198 -223 72 Z"
+          fill="#0d3040" fill-opacity=".84" stroke="#52dcca" stroke-opacity=".66" stroke-width="4"/>
+
+    <g transform="translate(0 4)">
+      <rect x="-151" y="-148" width="302" height="296" rx="42" fill="#091c29" stroke="url(#core)" stroke-width="8"/>
+      <rect x="-112" y="-109" width="224" height="218" rx="25" fill="#102f3e" stroke="#8cf4e2" stroke-opacity=".6" stroke-width="3"/>
+      <g fill="url(#core)">
+        <rect x="-69" y="-65" width="42" height="42" rx="8"/>
+        <rect x="-13" y="-65" width="42" height="42" rx="8"/>
+        <rect x="43" y="-65" width="42" height="42" rx="8"/>
+        <rect x="-69" y="-9" width="42" height="42" rx="8"/>
+        <rect x="-13" y="-9" width="42" height="42" rx="8"/>
+        <rect x="43" y="-9" width="42" height="42" rx="8"/>
+        <rect x="-69" y="47" width="42" height="42" rx="8"/>
+        <rect x="-13" y="47" width="42" height="42" rx="8"/>
+        <rect x="43" y="47" width="42" height="42" rx="8"/>
+      </g>
+      <g stroke="#53d6cc" stroke-width="7" stroke-linecap="round">
+        <path d="M-151 -92 H-187"/>
+        <path d="M-151 -28 H-199"/>
+        <path d="M-151 36 H-199"/>
+        <path d="M-151 100 H-187"/>
+        <path d="M151 -92 H187"/>
+        <path d="M151 -28 H199"/>
+        <path d="M151 36 H199"/>
+        <path d="M151 100 H187"/>
+      </g>
+    </g>
+  </g>
+
+  <g filter="url(#glow)">
+    <path d="M1530 363 C1428 363 1429 305 1342 305 C1260 305 1252 474 1164 474
+             C1105 474 1095 418 1048 418"
+          fill="none" stroke="url(#pulse)" stroke-width="18" stroke-linecap="round"/>
+    <path d="M1530 410 C1415 410 1401 478 1318 478 C1241 478 1233 381 1167 381
+             C1102 381 1090 440 1048 440"
+          fill="none" stroke="#ff8a58" stroke-opacity=".42" stroke-width="6" stroke-dasharray="18 26" stroke-linecap="round"/>
+    <circle cx="1461" cy="363" r="16" fill="#ffc65e"/>
+    <circle cx="1342" cy="305" r="13" fill="#ffae4f"/>
+    <circle cx="1252" cy="474" r="15" fill="#ff875a"/>
+    <circle cx="1164" cy="474" r="12" fill="#ffb153"/>
+  </g>
+
+  <g transform="translate(1050 430)" filter="url(#glow)">
+    <path d="M0 -132 C52 -112 93 -102 128 -98 V-1 C128 76 75 119 0 146 C-75 119 -128 76 -128 -1 V-98 C-93 -102 -52 -112 0 -132 Z"
+          fill="#0c2937" stroke="#9cfae8" stroke-width="8"/>
+    <path d="M-48 -14 L-8 28 L59 -48" fill="none" stroke="#baffee" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g fill="#bafbf1">
+    <circle cx="165" cy="751" r="5" opacity=".42"/>
+    <circle cx="317" cy="162" r="4" opacity=".55"/>
+    <circle cx="540" cy="756" r="6" opacity=".35"/>
+    <circle cx="1167" cy="174" r="5" opacity=".4"/>
+    <circle cx="1376" cy="686" r="4" opacity=".48"/>
+    <circle cx="1510" cy="212" r="6" opacity=".32"/>
+  </g>
+</svg>
