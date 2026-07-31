@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Deployment-specific security emerging from a one-click cloud template</title>
+  <desc id="desc">Abstract cloud deployment tiles receive distinct luminous keys behind a layered shield, representing unique secrets and restricted network exposure.</desc>
+  <defs>
+    <linearGradient id="bg" x1="120" y1="40" x2="1460" y2="850" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071429"/>
+      <stop offset="0.52" stop-color="#102849"/>
+      <stop offset="1" stop-color="#07111F"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="0" cy="0" r="1" gradientTransform="translate(1050 414) rotate(151) scale(680 510)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#26D5C7" stop-opacity=".24"/>
+      <stop offset="1" stop-color="#26D5C7" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shield" x1="884" y1="194" x2="1258" y2="746" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#86FFF1" stop-opacity=".86"/>
+      <stop offset=".5" stop-color="#35C8D0" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#2D7CE2" stop-opacity=".16"/>
+    </linearGradient>
+    <linearGradient id="tile" x1="348" y1="242" x2="738" y2="690" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#274B76"/>
+      <stop offset="1" stop-color="#10243E"/>
+    </linearGradient>
+    <linearGradient id="keyA" x1="913" y1="320" x2="1134" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF1A8"/>
+      <stop offset="1" stop-color="#F6A84A"/>
+    </linearGradient>
+    <linearGradient id="keyB" x1="1004" y1="489" x2="1212" y2="650" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B4F8FF"/>
+      <stop offset="1" stop-color="#4CB7FF"/>
+    </linearGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="shieldClip">
+      <path d="M1067 160C1139 217 1228 244 1318 258V446C1318 597 1226 710 1067 770C908 710 816 597 816 446V258C906 244 995 217 1067 160Z"/>
+    </clipPath>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#aura)"/>
+  <circle cx="1280" cy="180" r="180" fill="#3179E5" opacity=".08" filter="url(#soft)"/>
+  <circle cx="390" cy="720" r="240" fill="#19BEB1" opacity=".07" filter="url(#soft)"/>
+
+  <g opacity=".3" fill="none" stroke="#7DA4CF" stroke-width="2">
+    <path d="M92 208C240 208 254 162 390 162"/>
+    <path d="M94 680C248 680 284 738 432 738"/>
+    <path d="M1382 150H1515"/>
+    <path d="M1372 746H1518"/>
+  </g>
+  <g fill="#6EE7DE">
+    <circle cx="92" cy="208" r="5"/><circle cx="94" cy="680" r="5"/>
+  </g>
+
+  <g transform="translate(198 190)">
+    <path d="M111 82C134 34 180 6 232 6C294 6 347 48 362 106C413 111 452 153 452 205C452 261 407 306 351 306H103C45 306 0 260 0 203C0 148 42 103 96 99C100 93 105 87 111 82Z" fill="#143457" stroke="#5597C9" stroke-width="3"/>
+    <path d="M90 189H358" stroke="#86C9EA" stroke-opacity=".38" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="172" cy="150" r="20" fill="#F2B85D" opacity=".9"/>
+    <path d="M200 150H295M274 150V171M250 150V165" stroke="#FFE5A0" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="172" cy="150" r="7" fill="#143457"/>
+  </g>
+
+  <g transform="translate(306 436)">
+    <path d="M0 44L235 0L430 72L195 118L0 44Z" fill="#345E8D" stroke="#6FA9D0" stroke-width="3"/>
+    <path d="M0 44V165L195 242V118L0 44Z" fill="#17304F" stroke="#4D799F" stroke-width="3"/>
+    <path d="M195 118V242L430 187V72L195 118Z" fill="url(#tile)" stroke="#4D799F" stroke-width="3"/>
+    <g fill="#F0B65B" opacity=".78">
+      <circle cx="74" cy="93" r="8"/><circle cx="99" cy="103" r="8"/><circle cx="124" cy="113" r="8"/>
+    </g>
+    <path d="M245 145L368 118M245 178L342 157M245 208L321 191" stroke="#74A5C9" stroke-width="7" stroke-linecap="round" opacity=".6"/>
+  </g>
+
+  <g opacity=".65" stroke="#F3B557" stroke-width="5" stroke-linecap="round" stroke-dasharray="10 18">
+    <path d="M735 525C810 524 830 472 885 444"/>
+    <path d="M744 606C821 612 843 634 912 635"/>
+  </g>
+
+  <path d="M1067 160C1139 217 1228 244 1318 258V446C1318 597 1226 710 1067 770C908 710 816 597 816 446V258C906 244 995 217 1067 160Z" fill="url(#shield)" stroke="#83F4E8" stroke-width="5"/>
+  <path d="M1067 201C1126 244 1196 267 1272 282V444C1272 564 1202 655 1067 713C932 655 862 564 862 444V282C938 267 1008 244 1067 201Z" fill="#0C253E" fill-opacity=".78" stroke="#57D8D2" stroke-opacity=".65" stroke-width="3"/>
+
+  <g clip-path="url(#shieldClip)" opacity=".24" stroke="#7AF7EA" stroke-width="2">
+    <path d="M792 340H1341M783 430H1348M794 520H1339M827 610H1310"/>
+    <path d="M925 205V706M1067 165V770M1209 205V706"/>
+  </g>
+
+  <g filter="url(#glow)">
+    <g transform="translate(917 323) rotate(-7)">
+      <circle cx="48" cy="48" r="38" fill="none" stroke="url(#keyA)" stroke-width="18"/>
+      <path d="M82 69L191 134M158 114L177 82M181 128L204 94" stroke="url(#keyA)" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <g transform="translate(1011 500) rotate(8)">
+      <circle cx="42" cy="42" r="32" fill="none" stroke="url(#keyB)" stroke-width="16"/>
+      <path d="M72 59L170 108M140 93L155 63M161 103L179 76" stroke="url(#keyB)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+
+  <g fill="#8FF8EB">
+    <circle cx="1370" cy="351" r="7"/><circle cx="1408" cy="399" r="4"/><circle cx="1378" cy="445" r="5"/>
+  </g>
+  <g stroke="#76DCD7" stroke-width="3" opacity=".55">
+    <path d="M1317 350H1370M1316 399H1408M1317 445H1378"/>
+  </g>
+  <path d="M139 806H1461" stroke="#7AA3C8" stroke-opacity=".18" stroke-width="2"/>
+</svg>
