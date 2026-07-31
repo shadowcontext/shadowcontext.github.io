@@ -33,6 +33,22 @@
       "github_run_id": "30516397922",
       "status": "published",
       "last_error": null
+    },
+    "903ef252251c8820c92cf0b169e7c0ac898da9f8a91d40baa77ac4ed5bd7500e": {
+      "title": "ShadowContext Security Digest for July 30, 2026",
+      "digest_date": "2026-07-30",
+      "digest_hash": "903ef252251c8820c92cf0b169e7c0ac898da9f8a91d40baa77ac4ed5bd7500e",
+      "generated_at": "2026-07-31T08:17:26.026+04:00",
+      "briefing_url": "https://shadowcontext.com/assets/social/linkedin-digest/2026-07-30/903ef252251c8820/daily-digest.html",
+      "pdf_file": "assets/social/linkedin-digest/2026-07-30/903ef252251c8820/daily-digest.pdf",
+      "linkedin_caption": "Review today's independent security updates and technical breakdowns from ShadowContext for defensive guidance.\n\nThis edition brings together 14 ShadowContext briefings from July 30, 2026, with direct source links and operational priorities.\n\nRead the full daily briefing:\nhttps://shadowcontext.com/assets/social/linkedin-digest/2026-07-30/903ef252251c8820/daily-digest.html\n\n#Cybersecurity #ThreatIntelligence #InfoSec #AISecurity",
+      "linkedin_document_urn": "urn:li:document:D4D10AQEow1M27LerEw",
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7488832910553309184",
+      "published_at": "2026-07-31T05:48:22.027Z",
+      "github_run_id": "30607798859",
+      "status": "published",
+      "last_error": null
     }
   }
 }
