@@ -1,0 +1,736 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ShadowContext Security Digest for July 30, 2026 | ShadowContext</title>
+    <style>
+      :root {
+        --paper: #05080d;
+        --panel: #0d1319;
+        --panel-soft: #091017;
+        --ink: #f1f7fa;
+        --ink-2: #c4d1d8;
+        --muted: #8496a1;
+        --line: #1d2b34;
+        --cyan: #35e6d1;
+        --violet: #8b7dff;
+        --sans: "Space Grotesk", Inter, Arial, sans-serif;
+        --mono: "DM Mono", Consolas, monospace;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: var(--sans);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        font-size: 10.5pt;
+        line-height: 1.55;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        position: relative;
+        width: 210mm;
+        min-height: 297mm;
+        padding: 18mm;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 83% 18%, rgba(139, 125, 255, 0.1), transparent 28%),
+          linear-gradient(145deg, #05080d 0%, #081017 62%, #0c101c 100%);
+      }
+
+      .page::before {
+        content: "";
+        position: absolute;
+        inset: 8mm;
+        pointer-events: none;
+        border: 0.25mm solid var(--line);
+      }
+
+      .cover {
+        display: flex;
+        flex-direction: column;
+        page-break-after: always;
+      }
+
+      .brand-row,
+      .section-head,
+      .document-footer {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 4mm;
+        font-size: 20pt;
+        font-weight: 750;
+        letter-spacing: -0.04em;
+      }
+
+      .brand em {
+        color: var(--cyan);
+        font-style: normal;
+      }
+
+      .brand-mark {
+        position: relative;
+        display: block;
+        width: 12mm;
+        height: 12mm;
+        transform: rotate(30deg);
+        border: 1mm solid var(--cyan);
+        border-radius: 1.2mm;
+      }
+
+      .brand-mark::before {
+        content: "";
+        position: absolute;
+        inset: 2.2mm;
+        border: 0.8mm solid var(--violet);
+        border-radius: 0.9mm;
+      }
+
+      .brand-mark::after {
+        content: "";
+        position: absolute;
+        inset: 4.5mm;
+        background: var(--cyan);
+        border-radius: 0.5mm;
+      }
+
+      .edition,
+      .eyebrow,
+      .topic,
+      .section-count,
+      .why span,
+      .document-footer,
+      .source-link {
+        font-family: var(--mono);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .edition,
+      .section-count,
+      .document-footer {
+        color: var(--muted);
+        font-size: 8pt;
+      }
+
+      .cover-copy {
+        position: relative;
+        z-index: 1;
+        margin: 30mm 0 0;
+      }
+
+      .eyebrow {
+        margin: 0 0 7mm;
+        color: var(--cyan);
+        font-size: 10pt;
+      }
+
+      h1 {
+        max-width: 165mm;
+        margin: 0;
+        font-size: 37pt;
+        line-height: 1.03;
+        letter-spacing: -0.05em;
+      }
+
+      .dek {
+        max-width: 155mm;
+        margin: 10mm 0 0;
+        color: var(--ink-2);
+        font-size: 16pt;
+        line-height: 1.45;
+      }
+
+      .context {
+        position: relative;
+        z-index: 1;
+        margin-top: auto;
+        padding: 9mm;
+        background: rgba(13, 19, 25, 0.94);
+        border: 0.3mm solid var(--line);
+        border-left: 1mm solid var(--violet);
+      }
+
+      .context h2,
+      .section-head h2,
+      .operating-view h2,
+      .sources h2 {
+        margin: 0;
+      }
+
+      .context h2 {
+        color: var(--violet);
+        font-family: var(--mono);
+        font-size: 9pt;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .context p {
+        margin: 4mm 0 0;
+        color: var(--ink-2);
+        font-size: 13pt;
+      }
+
+      .cover-meta {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 9mm;
+        color: var(--muted);
+        font: 8pt var(--mono);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .content {
+        padding-top: 15mm;
+        padding-bottom: 18mm;
+      }
+
+      .section-head {
+        margin-bottom: 9mm;
+        padding-bottom: 5mm;
+        border-bottom: 0.3mm solid var(--line);
+      }
+
+      .section-head h2 {
+        font-size: 23pt;
+      }
+
+      .stories {
+        position: relative;
+        z-index: 1;
+      }
+
+      .story {
+        display: grid;
+        grid-template-columns: 15mm 1fr;
+        gap: 5mm;
+        margin: 0 0 6mm;
+        padding: 7mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: rgba(13, 19, 25, 0.96);
+        border: 0.3mm solid var(--line);
+      }
+
+      .story-index {
+        color: var(--cyan);
+        font: 12pt var(--mono);
+      }
+
+      .topic {
+        margin: 0 0 2mm;
+        color: var(--cyan);
+        font-size: 7.5pt;
+      }
+
+      .story h3 {
+        margin: 0;
+        font-size: 16pt;
+        line-height: 1.18;
+        letter-spacing: -0.025em;
+      }
+
+      .summary {
+        margin: 3mm 0;
+        color: var(--ink-2);
+        font-size: 10.5pt;
+      }
+
+      .why {
+        padding-top: 3mm;
+        border-top: 0.25mm solid var(--line);
+      }
+
+      .why span {
+        color: var(--violet);
+        font-size: 7pt;
+      }
+
+      .why p {
+        display: inline;
+        margin: 0 0 0 2mm;
+        font-weight: 650;
+      }
+
+      .source-link {
+        display: inline-block;
+        margin-top: 4mm;
+        color: var(--cyan);
+        font-size: 6.8pt;
+        letter-spacing: 0.04em;
+        text-transform: none;
+      }
+
+      .operating-view,
+      .sources {
+        position: relative;
+        z-index: 1;
+        margin-top: 12mm;
+        padding: 9mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: var(--panel-soft);
+        border: 0.3mm solid var(--line);
+      }
+
+      .operating-view {
+        border-top: 1mm solid var(--cyan);
+      }
+
+      .operating-view h2,
+      .sources h2 {
+        font-size: 18pt;
+      }
+
+      .operating-view > p {
+        color: var(--ink-2);
+        font-size: 12pt;
+      }
+
+      .watch-list,
+      .source-list {
+        margin: 6mm 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .watch-list li {
+        display: grid;
+        grid-template-columns: 9mm 1fr;
+        gap: 4mm;
+        align-items: start;
+        margin: 3mm 0;
+      }
+
+      .watch-list span {
+        display: grid;
+        width: 8mm;
+        height: 8mm;
+        place-items: center;
+        color: var(--cyan);
+        border: 0.3mm solid var(--cyan);
+        font: 8pt var(--mono);
+      }
+
+      .watch-list p {
+        margin: 0;
+      }
+
+      .source-list li {
+        display: grid;
+        grid-template-columns: 10mm 1fr;
+        gap: 3mm;
+        margin: 2.5mm 0;
+        color: var(--ink-2);
+        font-size: 8.5pt;
+      }
+
+      .source-list span {
+        color: var(--violet);
+        font-family: var(--mono);
+      }
+
+      .source-list a {
+        color: var(--cyan);
+        text-decoration: underline;
+        text-decoration-color: rgba(53, 230, 209, 0.35);
+        text-underline-offset: 1mm;
+      }
+
+      .cta {
+        position: relative;
+        z-index: 1;
+        margin: 12mm 0 0;
+        padding: 7mm 9mm;
+        break-inside: avoid;
+        color: #04100f;
+        background: var(--cyan);
+      }
+
+      .cta strong {
+        display: block;
+        font-size: 14pt;
+      }
+
+      .cta span {
+        font: 9pt var(--mono);
+      }
+
+      .document-footer {
+        margin-top: 12mm;
+        padding-top: 5mm;
+        border-top: 0.3mm solid var(--line);
+      }
+
+      @media screen {
+        body {
+          width: 210mm;
+          margin: 0 auto;
+        }
+
+        .page {
+          box-shadow: 0 0 20mm rgba(0, 0, 0, 0.45);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="page cover">
+      <header class="brand-row">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Shadow<em>Context</em></span>
+        </div>
+        <span class="edition">Daily security digest</span>
+      </header>
+
+      <main class="cover-copy">
+        <p class="eyebrow">The day in context / 2026-07-30</p>
+        <h1>ShadowContext Security Digest for July 30, 2026</h1>
+        <p class="dek">Today&#39;s defense digest covers critical vulnerabilities, AI pipeline risks, and control-plane boundaries across open-source and enterprise platforms.</p>
+      </main>
+
+      <aside class="context">
+        <h2>Executive summary</h2>
+        <p>July 30 security advisories cover critical vulnerabilities across Oopendap Hyrax, Gitea, Linux kernels, Cisco FMC, FreeBSD, CODESYS, Develar app-builder, Ruflo, Rails, and AI security research. Defenders must prioritize verified patches, memory hygiene, and configuration isolation.</p>
+      </aside>
+
+      <div class="cover-meta">
+        <span>14 briefings included</span>
+        <span>https://shadowcontext.com/</span>
+      </div>
+    </section>
+
+    <section class="page content">
+      <header class="section-head">
+        <h2>All news from the day</h2>
+        <span class="section-count">14 / 2026-07-30</span>
+      </header>
+
+      <main class="stories">
+    <article class="story">
+      <div class="story-index">01</div>
+      <div class="story-copy">
+        <p class="topic">Application Security</p>
+        <h3>Hyrax Redirect Flaw Requires Hop-by-Hop Trust</h3>
+        <p class="summary">CERT/CC disclosed a server-side request forgery in OPeNDAP Hyrax where HTTP redirects bypass host restrictions and leak credential headers.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Allowlist controls must revalidate every redirect hop to prevent unintended identity disclosure.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/hyrax-redirect-flaw-needs-hop-by-hop-trust/">Hyrax redirect flaw needs hop-by-hop trust checks ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">02</div>
+      <div class="story-copy">
+        <p class="topic">Source Code Management</p>
+        <h3>Gitea Fix Separates Content From Execution</h3>
+        <p class="summary">Gitea 1.27.1 addresses a critical remote-code-execution path where repository write access permits arbitrary command execution.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Open registration lets unauthenticated visitors create repositories and reach vulnerable patch functions.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/gitea-fix-separates-repository-content-from-server-execution/">Gitea Fix Separates Repository Content From Server Execution ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">03</div>
+      <div class="story-copy">
+        <p class="topic">Kernel Security</p>
+        <h3>Ubuntu NVIDIA Kernels Need Track Proof</h3>
+        <p class="summary">Canonical updated Linux kernels for NVIDIA systems, requiring track-level validation and module recompilation after reboots.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Coarse version checks miss track differences, leaving security controls inactive after package updates.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ubuntu-nvidia-kernel-update-needs-track-level-proof/">Ubuntu NVIDIA Kernel Updates Need Track-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">04</div>
+      <div class="story-copy">
+        <p class="topic">AI Security</p>
+        <h3>Model Poisoning Screening Needs Multiple Signals</h3>
+        <p class="summary">ToxScreen research shows that model backdoor detection requires layered behavioral checks and artifact traceability.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>No single screening method reliably exposes every training-time trigger without false negatives.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/model-poisoning-screening-needs-multiple-signals/">Model Poisoning Screening Needs Multiple Signals ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">05</div>
+      <div class="story-copy">
+        <p class="topic">AI Governance</p>
+        <h3>AI Code Review Demands Context Boundaries</h3>
+        <p class="summary">GitHub Copilot review now uses MCP context and agent skills, requiring strict tool scoping and credential isolation.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>External tool connections expand review capabilities but increase potential context leakage and over-broad access.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ai-code-review-needs-context-boundaries/">AI Code Review Needs Boundaries Around Its New Context ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">06</div>
+      <div class="story-copy">
+        <p class="topic">Kubernetes Security</p>
+        <h3>Kubernetes AI Patches Require Live Topology</h3>
+        <p class="summary">Research demonstrates that AI-generated Kubernetes patches need live service dependency mapping to prevent breaking operational constraints.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Scanner-only context risks severing critical service relationships and credentials during remediation.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/kubernetes-ai-patches-need-live-topology/">Kubernetes AI Patches Need Live Topology ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">07</div>
+      <div class="story-copy">
+        <p class="topic">Network Security</p>
+        <h3>Cisco FMC Static Credential Flaw Under Attack</h3>
+        <p class="summary">Cisco warns of active exploitation for CVE-2026-20316, a static credential weakness affecting all Secure FMC versions.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Moderate CVSS scores can mask high security impact when low-privileged access enables privilege escalation.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/cisco-fmc-static-credential-needs-management-plane-proof/">Cisco FMC static credential flaw demands management-plane proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">08</div>
+      <div class="story-copy">
+        <p class="topic">Network Security</p>
+        <h3>FreeBSD WireGuard Fix Restores Authentication</h3>
+        <p class="summary">FreeBSD fixed a kernel driver weakness that allowed forged packets to bypass authentication checks.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Tunnel endpoints must explicitly handle cryptographic failures to ensure packet authenticity.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/freebsd-wireguard-fix-restores-packet-authentication/">FreeBSD WireGuard Fix Restores Packet Authentication ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">09</div>
+      <div class="story-copy">
+        <p class="topic">Operational Technology</p>
+        <h3>CODESYS PROFINET Flaw Needs PLC Redeployment</h3>
+        <p class="summary">CERT/CC warned that CODESYS PROFINET memory errors allow unauthenticated actors to stop PLC applications.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Installing engineering updates is insufficient; projects must be recompiled and redeployed to controllers.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/codesys-profinet-fix-needs-plc-redeployment/">CODESYS PROFINET Fix Needs PLC Redeployment ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">10</div>
+      <div class="story-copy">
+        <p class="topic">Supply Chain</p>
+        <h3>App-Builder Archive Flaw Needs Filesystem Bounds</h3>
+        <p class="summary">Develar app-builder zipx extraction on macOS APFS is vulnerable to arbitrary file overwrites via symlinks.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>String checks are insufficient; archive extraction must validate actual filesystem destination paths.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/app-builder-archive-flaw-needs-filesystem-boundary/">App-Builder Archive Flaw Needs a Filesystem Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">11</div>
+      <div class="story-copy">
+        <p class="topic">Agent Security</p>
+        <h3>Ruflo Fix Secures Unauthenticated MCP Bridge</h3>
+        <p class="summary">Ruflo 3.16.3 fixes a critical unauthenticated endpoint weakness that permitted terminal tool execution.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Orchestration interfaces with tool access function as control planes and require strict loopback binds.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ruflo-mcp-bridge-fix-needs-a-control-plane-boundary/">Ruflo Fix Makes the MCP Bridge a Control-Plane Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">12</div>
+      <div class="story-copy">
+        <p class="topic">Kernel Security</p>
+        <h3>FreeBSD Kernel Memory Fixes Require Reboot Proof</h3>
+        <p class="summary">FreeBSD patched two heap access weaknesses across all supported releases, requiring system reboots.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Installing corrected kernel packages does not mitigate risk until the live system restarts.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/freebsd-kernel-fixes-require-reboot-proof/">FreeBSD Kernel Fixes Require Reboot Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">13</div>
+      <div class="story-copy">
+        <p class="topic">Agent Security</p>
+        <h3>AI Agent Memory Repair Needs Benign State Proof</h3>
+        <p class="summary">MemSecBench research highlights that agent memory cleanups must remove malicious rules without destroying required state.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Clearing memory is a blunt response that can cause collateral loss of valid user preferences.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/agent-memory-repair-needs-benign-state-proof/">AI Agent Memory Repair Needs Proof of What Survived ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">14</div>
+      <div class="story-copy">
+        <p class="topic">Application Security</p>
+        <h3>Rails Active Storage Fix Requires Secret Rotation</h3>
+        <p class="summary">Rails fixed an image-processing flaw in Active Storage, requiring libvips updates and secret replacements.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>File-processing vulnerabilities can expose environment variables, necessitating comprehensive credential rotation.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/rails-active-storage-fix-needs-secret-rotation/">Rails Active Storage Fix Needs Secret Rotation ↗</a>
+      </div>
+    </article></main>
+
+      <section class="operating-view">
+        <p class="eyebrow">The operating view</p>
+        <h2>What the day means for defenders</h2>
+        <p>Defenders must treat security advisories as operational challenges rather than simple package updates. Prioritize live topology verification, kernel execution checks, rigorous memory governance, and strict credential scoping across all infrastructure components.</p>
+        <ol class="watch-list"><li><span>1</span><p>Verify running kernel versions and active module health after completing system reboots.</p></li>
+<li><span>2</span><p>Inspect persistent memory stores and agent pattern databases for unauthorized modifications.</p></li>
+<li><span>3</span><p>Confirm that application environment secrets are rotated following file-processing updates.</p></li></ol>
+      </section>
+
+      <section class="sources">
+        <p class="eyebrow">Source index</p>
+        <h2>Every briefing in this digest</h2>
+        <ol class="source-list">
+    <li>
+      <span>01</span>
+      <a href="https://shadowcontext.com/hyrax-redirect-flaw-needs-hop-by-hop-trust/">Hyrax redirect flaw needs hop-by-hop trust checks</a>
+    </li>
+
+    <li>
+      <span>02</span>
+      <a href="https://shadowcontext.com/gitea-fix-separates-repository-content-from-server-execution/">Gitea Fix Separates Repository Content From Server Execution</a>
+    </li>
+
+    <li>
+      <span>03</span>
+      <a href="https://shadowcontext.com/ubuntu-nvidia-kernel-update-needs-track-level-proof/">Ubuntu NVIDIA Kernel Updates Need Track-Level Proof</a>
+    </li>
+
+    <li>
+      <span>04</span>
+      <a href="https://shadowcontext.com/model-poisoning-screening-needs-multiple-signals/">Model Poisoning Screening Needs Multiple Signals</a>
+    </li>
+
+    <li>
+      <span>05</span>
+      <a href="https://shadowcontext.com/ai-code-review-needs-context-boundaries/">AI Code Review Needs Boundaries Around Its New Context</a>
+    </li>
+
+    <li>
+      <span>06</span>
+      <a href="https://shadowcontext.com/kubernetes-ai-patches-need-live-topology/">Kubernetes AI Patches Need Live Topology</a>
+    </li>
+
+    <li>
+      <span>07</span>
+      <a href="https://shadowcontext.com/cisco-fmc-static-credential-needs-management-plane-proof/">Cisco FMC static credential flaw demands management-plane proof</a>
+    </li>
+
+    <li>
+      <span>08</span>
+      <a href="https://shadowcontext.com/freebsd-wireguard-fix-restores-packet-authentication/">FreeBSD WireGuard Fix Restores Packet Authentication</a>
+    </li>
+
+    <li>
+      <span>09</span>
+      <a href="https://shadowcontext.com/codesys-profinet-fix-needs-plc-redeployment/">CODESYS PROFINET Fix Needs PLC Redeployment</a>
+    </li>
+
+    <li>
+      <span>10</span>
+      <a href="https://shadowcontext.com/app-builder-archive-flaw-needs-filesystem-boundary/">App-Builder Archive Flaw Needs a Filesystem Boundary</a>
+    </li>
+
+    <li>
+      <span>11</span>
+      <a href="https://shadowcontext.com/ruflo-mcp-bridge-fix-needs-a-control-plane-boundary/">Ruflo Fix Makes the MCP Bridge a Control-Plane Boundary</a>
+    </li>
+
+    <li>
+      <span>12</span>
+      <a href="https://shadowcontext.com/freebsd-kernel-fixes-require-reboot-proof/">FreeBSD Kernel Fixes Require Reboot Proof</a>
+    </li>
+
+    <li>
+      <span>13</span>
+      <a href="https://shadowcontext.com/agent-memory-repair-needs-benign-state-proof/">AI Agent Memory Repair Needs Proof of What Survived</a>
+    </li>
+
+    <li>
+      <span>14</span>
+      <a href="https://shadowcontext.com/rails-active-storage-fix-needs-secret-rotation/">Rails Active Storage Fix Needs Secret Rotation</a>
+    </li></ol>
+      </section>
+
+      <div class="cta">
+        <strong>Read the full analysis</strong>
+        <span>https://shadowcontext.com/</span>
+      </div>
+
+      <footer class="document-footer">
+        <span>ShadowContext</span>
+        <span>Independent defensive security intelligence</span>
+      </footer>
+    </section>
+  </body>
+</html>

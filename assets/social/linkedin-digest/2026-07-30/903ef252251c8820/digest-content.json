@@ -1,0 +1,112 @@
+{
+  "digest_title": "ShadowContext Security Digest for July 30, 2026",
+  "dek": "Today's defense digest covers critical vulnerabilities, AI pipeline risks, and control-plane boundaries across open-source and enterprise platforms.",
+  "overview": "July 30 security advisories cover critical vulnerabilities across Oopendap Hyrax, Gitea, Linux kernels, Cisco FMC, FreeBSD, CODESYS, Develar app-builder, Ruflo, Rails, and AI security research. Defenders must prioritize verified patches, memory hygiene, and configuration isolation.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "Hyrax Redirect Flaw Requires Hop-by-Hop Trust",
+      "summary": "CERT/CC disclosed a server-side request forgery in OPeNDAP Hyrax where HTTP redirects bypass host restrictions and leak credential headers.",
+      "why_it_matters": "Allowlist controls must revalidate every redirect hop to prevent unintended identity disclosure.",
+      "topic": "Application Security"
+    },
+    {
+      "source_id": "S02",
+      "headline": "Gitea Fix Separates Content From Execution",
+      "summary": "Gitea 1.27.1 addresses a critical remote-code-execution path where repository write access permits arbitrary command execution.",
+      "why_it_matters": "Open registration lets unauthenticated visitors create repositories and reach vulnerable patch functions.",
+      "topic": "Source Code Management"
+    },
+    {
+      "source_id": "S03",
+      "headline": "Ubuntu NVIDIA Kernels Need Track Proof",
+      "summary": "Canonical updated Linux kernels for NVIDIA systems, requiring track-level validation and module recompilation after reboots.",
+      "why_it_matters": "Coarse version checks miss track differences, leaving security controls inactive after package updates.",
+      "topic": "Kernel Security"
+    },
+    {
+      "source_id": "S04",
+      "headline": "Model Poisoning Screening Needs Multiple Signals",
+      "summary": "ToxScreen research shows that model backdoor detection requires layered behavioral checks and artifact traceability.",
+      "why_it_matters": "No single screening method reliably exposes every training-time trigger without false negatives.",
+      "topic": "AI Security"
+    },
+    {
+      "source_id": "S05",
+      "headline": "AI Code Review Demands Context Boundaries",
+      "summary": "GitHub Copilot review now uses MCP context and agent skills, requiring strict tool scoping and credential isolation.",
+      "why_it_matters": "External tool connections expand review capabilities but increase potential context leakage and over-broad access.",
+      "topic": "AI Governance"
+    },
+    {
+      "source_id": "S06",
+      "headline": "Kubernetes AI Patches Require Live Topology",
+      "summary": "Research demonstrates that AI-generated Kubernetes patches need live service dependency mapping to prevent breaking operational constraints.",
+      "why_it_matters": "Scanner-only context risks severing critical service relationships and credentials during remediation.",
+      "topic": "Kubernetes Security"
+    },
+    {
+      "source_id": "S07",
+      "headline": "Cisco FMC Static Credential Flaw Under Attack",
+      "summary": "Cisco warns of active exploitation for CVE-2026-20316, a static credential weakness affecting all Secure FMC versions.",
+      "why_it_matters": "Moderate CVSS scores can mask high security impact when low-privileged access enables privilege escalation.",
+      "topic": "Network Security"
+    },
+    {
+      "source_id": "S08",
+      "headline": "FreeBSD WireGuard Fix Restores Authentication",
+      "summary": "FreeBSD fixed a kernel driver weakness that allowed forged packets to bypass authentication checks.",
+      "why_it_matters": "Tunnel endpoints must explicitly handle cryptographic failures to ensure packet authenticity.",
+      "topic": "Network Security"
+    },
+    {
+      "source_id": "S09",
+      "headline": "CODESYS PROFINET Flaw Needs PLC Redeployment",
+      "summary": "CERT/CC warned that CODESYS PROFINET memory errors allow unauthenticated actors to stop PLC applications.",
+      "why_it_matters": "Installing engineering updates is insufficient; projects must be recompiled and redeployed to controllers.",
+      "topic": "Operational Technology"
+    },
+    {
+      "source_id": "S10",
+      "headline": "App-Builder Archive Flaw Needs Filesystem Bounds",
+      "summary": "Develar app-builder zipx extraction on macOS APFS is vulnerable to arbitrary file overwrites via symlinks.",
+      "why_it_matters": "String checks are insufficient; archive extraction must validate actual filesystem destination paths.",
+      "topic": "Supply Chain"
+    },
+    {
+      "source_id": "S11",
+      "headline": "Ruflo Fix Secures Unauthenticated MCP Bridge",
+      "summary": "Ruflo 3.16.3 fixes a critical unauthenticated endpoint weakness that permitted terminal tool execution.",
+      "why_it_matters": "Orchestration interfaces with tool access function as control planes and require strict loopback binds.",
+      "topic": "Agent Security"
+    },
+    {
+      "source_id": "S12",
+      "headline": "FreeBSD Kernel Memory Fixes Require Reboot Proof",
+      "summary": "FreeBSD patched two heap access weaknesses across all supported releases, requiring system reboots.",
+      "why_it_matters": "Installing corrected kernel packages does not mitigate risk until the live system restarts.",
+      "topic": "Kernel Security"
+    },
+    {
+      "source_id": "S13",
+      "headline": "AI Agent Memory Repair Needs Benign State Proof",
+      "summary": "MemSecBench research highlights that agent memory cleanups must remove malicious rules without destroying required state.",
+      "why_it_matters": "Clearing memory is a blunt response that can cause collateral loss of valid user preferences.",
+      "topic": "Agent Security"
+    },
+    {
+      "source_id": "S14",
+      "headline": "Rails Active Storage Fix Requires Secret Rotation",
+      "summary": "Rails fixed an image-processing flaw in Active Storage, requiring libvips updates and secret replacements.",
+      "why_it_matters": "File-processing vulnerabilities can expose environment variables, necessitating comprehensive credential rotation.",
+      "topic": "Application Security"
+    }
+  ],
+  "operating_view": "Defenders must treat security advisories as operational challenges rather than simple package updates. Prioritize live topology verification, kernel execution checks, rigorous memory governance, and strict credential scoping across all infrastructure components.",
+  "watch_items": [
+    "Verify running kernel versions and active module health after completing system reboots.",
+    "Inspect persistent memory stores and agent pattern databases for unauthorized modifications.",
+    "Confirm that application environment secrets are rotated following file-processing updates."
+  ],
+  "caption_intro": "Review today's independent security updates and technical breakdowns from ShadowContext for defensive guidance."
+}
