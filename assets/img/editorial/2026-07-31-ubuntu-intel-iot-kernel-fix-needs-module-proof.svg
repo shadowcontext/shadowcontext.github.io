@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Verified kernel transition for an industrial edge processor</title>
+  <desc id="desc">An abstract blue industrial edge processor is encircled by a luminous reboot arc while amber and cyan module tiles reconnect around it.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071426"/>
+      <stop offset="0.55" stop-color="#0a2940"/>
+      <stop offset="1" stop-color="#06121f"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="48%" r="50%">
+      <stop offset="0" stop-color="#28c7d8" stop-opacity="0.28"/>
+      <stop offset="0.58" stop-color="#1688b7" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#071426" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="chip" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#163f5d"/>
+      <stop offset="0.48" stop-color="#0d2239"/>
+      <stop offset="1" stop-color="#102d45"/>
+    </linearGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#52e0df"/>
+      <stop offset="1" stop-color="#168ab8"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd37a"/>
+      <stop offset="1" stop-color="#ed8d32"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="13" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#5ac2d0" stroke-opacity="0.055" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <ellipse cx="800" cy="445" rx="590" ry="420" fill="url(#halo)"/>
+  <path d="M118 730C326 605 402 716 595 618S918 527 1102 596s270 19 380-60" fill="none" stroke="#66d9df" stroke-opacity="0.1" stroke-width="2"/>
+  <path d="M102 766C329 651 431 777 609 676s308-98 494-21 291-5 401-68" fill="none" stroke="#ec9b47" stroke-opacity="0.09" stroke-width="2"/>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M443 644A410 410 0 0 1 1190 326" stroke="#163d57" stroke-width="22"/>
+    <path d="M443 644A410 410 0 0 1 1171 298" stroke="url(#core)" stroke-width="8" filter="url(#glow)"/>
+    <path d="M1160 263l43 47-63 12" stroke="#54dfe0" stroke-width="11" stroke-linejoin="round"/>
+    <path d="M1157 271l36 39" stroke="#d4ffff" stroke-opacity="0.8" stroke-width="3"/>
+  </g>
+
+  <g stroke="#59c9d7" stroke-opacity="0.5" stroke-width="3" fill="none">
+    <path d="M291 306h224l92 72"/>
+    <path d="M260 446h271"/>
+    <path d="M328 589h191l93-69"/>
+    <path d="M1309 306h-224l-92 72"/>
+    <path d="M1340 446h-271"/>
+    <path d="M1272 589h-191l-93-69"/>
+  </g>
+
+  <g fill="#0d263b" stroke="#4bcbd7" stroke-width="3">
+    <rect x="214" y="263" width="148" height="86" rx="18"/>
+    <rect x="179" y="403" width="148" height="86" rx="18"/>
+    <rect x="251" y="546" width="148" height="86" rx="18"/>
+    <rect x="1238" y="263" width="148" height="86" rx="18"/>
+    <rect x="1273" y="403" width="148" height="86" rx="18"/>
+    <rect x="1201" y="546" width="148" height="86" rx="18"/>
+  </g>
+  <g fill="url(#amber)" filter="url(#glow)">
+    <circle cx="288" cy="306" r="12"/>
+    <circle cx="253" cy="446" r="12"/>
+    <circle cx="325" cy="589" r="12"/>
+    <circle cx="1312" cy="306" r="12"/>
+    <circle cx="1347" cy="446" r="12"/>
+    <circle cx="1275" cy="589" r="12"/>
+  </g>
+  <g fill="#66d9df" opacity="0.55">
+    <rect x="313" y="294" width="25" height="8" rx="4"/>
+    <rect x="278" y="434" width="25" height="8" rx="4"/>
+    <rect x="350" y="577" width="25" height="8" rx="4"/>
+    <rect x="1262" y="294" width="25" height="8" rx="4"/>
+    <rect x="1297" y="434" width="25" height="8" rx="4"/>
+    <rect x="1225" y="577" width="25" height="8" rx="4"/>
+  </g>
+
+  <ellipse cx="800" cy="735" rx="265" ry="46" fill="#000b14" opacity="0.65" filter="url(#soft)"/>
+  <g>
+    <rect x="565" y="230" width="470" height="470" rx="82" fill="#06111f" stroke="#1d6885" stroke-width="4"/>
+    <rect x="604" y="269" width="392" height="392" rx="58" fill="url(#chip)" stroke="#55d6dc" stroke-opacity="0.65" stroke-width="3"/>
+    <path d="M656 332h288v266H656z" fill="#071829" stroke="#287b97" stroke-width="2"/>
+    <path d="M705 378h190v174H705z" fill="url(#core)" opacity="0.92" filter="url(#glow)"/>
+    <path d="M734 406h132v118H734z" fill="#0a263c" stroke="#b7ffff" stroke-opacity="0.75" stroke-width="3"/>
+    <circle cx="800" cy="465" r="28" fill="none" stroke="#ffd37a" stroke-width="8" filter="url(#glow)"/>
+    <path d="M800 437v28l18 13" fill="none" stroke="#fff2bf" stroke-width="6" stroke-linecap="round"/>
+    <g stroke="#49c8d5" stroke-width="7" stroke-linecap="round">
+      <path d="M625 308h-43M625 364h-43M625 420h-43M625 476h-43M625 532h-43M625 588h-43"/>
+      <path d="M975 308h43M975 364h43M975 420h43M975 476h43M975 532h43M975 588h43"/>
+      <path d="M644 289v-43M704 289v-43M764 289v-43M824 289v-43M884 289v-43M944 289v-43"/>
+      <path d="M644 641v43M704 641v43M764 641v43M824 641v43M884 641v43M944 641v43"/>
+    </g>
+  </g>
+
+  <g fill="#8eeff0">
+    <circle cx="515" cy="378" r="6"/>
+    <circle cx="531" cy="446" r="6"/>
+    <circle cx="519" cy="520" r="6"/>
+    <circle cx="1085" cy="378" r="6"/>
+    <circle cx="1069" cy="446" r="6"/>
+    <circle cx="1081" cy="520" r="6"/>
+  </g>
+</svg>
