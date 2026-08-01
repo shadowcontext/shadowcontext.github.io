@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Solar datalogger at a security support boundary</title>
+  <desc id="desc">An abstract solar array sends luminous data through an amber gateway toward a protected cyan monitoring cloud, while layered boundaries emphasize segmentation and lifecycle transition.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071321"/>
+      <stop offset="0.55" stop-color="#0b2940"/>
+      <stop offset="1" stop-color="#071a2d"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2c7896"/>
+      <stop offset="1" stop-color="#12364d"/>
+    </linearGradient>
+    <linearGradient id="gateway" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffc45c"/>
+      <stop offset="1" stop-color="#d9712f"/>
+    </linearGradient>
+    <radialGradient id="halo">
+      <stop offset="0" stop-color="#48e0dc" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#48e0dc" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="13" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1280" cy="300" r="390" fill="url(#halo)"/>
+  <path d="M0 720 C300 620 490 730 760 670 C1040 608 1260 655 1600 540 V900 H0Z" fill="#081522" opacity="0.86"/>
+  <path d="M0 760 C340 674 540 774 810 718 C1100 660 1330 686 1600 610" fill="none" stroke="#1a4f64" stroke-width="2" opacity="0.7"/>
+
+  <g transform="translate(150 365) skewX(-10)">
+    <polygon points="0,92 440,0 535,235 82,334" fill="url(#panel)" stroke="#55c9d7" stroke-width="4"/>
+    <path d="M107 70 L194 308 M218 47 L307 283 M329 24 L421 259 M24 151 L464 58 M50 218 L490 124 M76 285 L516 190" fill="none" stroke="#8de8e5" stroke-width="3" opacity="0.48"/>
+    <path d="M270 290 L310 390 M130 390 H470" fill="none" stroke="#658596" stroke-width="16" stroke-linecap="round"/>
+  </g>
+
+  <path d="M675 556 C760 556 770 476 846 476" fill="none" stroke="#48ded7" stroke-width="9" stroke-linecap="round"/>
+  <path d="M675 556 C760 556 770 476 846 476" fill="none" stroke="#bdfdf5" stroke-width="2" stroke-dasharray="4 22" stroke-linecap="round"/>
+
+  <g transform="translate(835 335)">
+    <rect x="0" y="0" width="245" height="300" rx="48" fill="#0b1e2d" stroke="#f5a446" stroke-width="5"/>
+    <rect x="25" y="25" width="195" height="250" rx="34" fill="url(#gateway)" opacity="0.92"/>
+    <circle cx="122" cy="86" r="27" fill="#fff2c8" filter="url(#glow)"/>
+    <path d="M75 155 C95 132 149 132 169 155 M55 193 C92 152 153 152 190 193 M92 225 C108 210 137 210 153 225" fill="none" stroke="#152b38" stroke-width="13" stroke-linecap="round" opacity="0.88"/>
+  </g>
+
+  <path d="M1080 476 C1175 476 1180 352 1268 352" fill="none" stroke="#f1a047" stroke-width="9" stroke-linecap="round"/>
+  <path d="M1080 476 C1175 476 1180 352 1268 352" fill="none" stroke="#ffe0a1" stroke-width="2" stroke-dasharray="4 22" stroke-linecap="round"/>
+
+  <g transform="translate(1230 190)">
+    <path d="M85 235 C24 235 0 194 12 155 C22 123 51 108 80 110 C92 58 132 25 184 25 C241 25 280 62 290 110 C333 106 370 137 370 178 C370 214 341 240 300 240 H85Z" fill="#0d3247" stroke="#60e5dc" stroke-width="6"/>
+    <path d="M190 112 L248 139 V190 C248 229 222 257 190 271 C158 257 132 229 132 190 V139Z" fill="#113e50" stroke="#88fff0" stroke-width="5"/>
+    <path d="M162 188 L184 210 L224 165" fill="none" stroke="#a8fff2" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g fill="none" stroke="#f4a34a" opacity="0.34">
+    <ellipse cx="958" cy="486" rx="205" ry="292" stroke-width="3"/>
+    <ellipse cx="958" cy="486" rx="255" ry="348" stroke-width="2" stroke-dasharray="10 22"/>
+  </g>
+  <g fill="#69e4dd" opacity="0.7">
+    <circle cx="736" cy="527" r="6"/><circle cx="786" cy="495" r="5"/><circle cx="1146" cy="430" r="6"/><circle cx="1196" cy="386" r="5"/>
+  </g>
+</svg>
