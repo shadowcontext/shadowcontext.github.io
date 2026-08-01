@@ -49,6 +49,22 @@
       "github_run_id": "30607798859",
       "status": "published",
       "last_error": null
+    },
+    "328227eab39f7fda6f5d6fb70766a33355e66eb336a7f9803599d659bbeeb6c2": {
+      "title": "Daily Security Digest: Fleet Proof and Runtime Verification Across Infrastructure",
+      "digest_date": "2026-07-31",
+      "digest_hash": "328227eab39f7fda6f5d6fb70766a33355e66eb336a7f9803599d659bbeeb6c2",
+      "generated_at": "2026-08-01T08:16:51.931+04:00",
+      "briefing_url": "https://shadowcontext.com/assets/social/linkedin-digest/2026-07-31/328227eab39f7fda/daily-digest.html",
+      "pdf_file": "assets/social/linkedin-digest/2026-07-31/328227eab39f7fda/daily-digest.pdf",
+      "linkedin_caption": "Read the complete ShadowContext daily security digest to maintain defensible operational visibility and robust verification workflows across your fleets.\n\nThis edition brings together 7 ShadowContext briefings from July 31, 2026, with direct source links and operational priorities.\n\nRead the full daily briefing:\nhttps://shadowcontext.com/assets/social/linkedin-digest/2026-07-31/328227eab39f7fda/daily-digest.html\n\n#Cybersecurity #ThreatIntelligence #InfoSec #AISecurity",
+      "linkedin_document_urn": "urn:li:document:D4D10AQFdOM4y1FLp-A",
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7489192963428921344",
+      "published_at": "2026-08-01T05:39:05.287Z",
+      "github_run_id": "30686230847",
+      "status": "published",
+      "last_error": null
     }
   }
 }
