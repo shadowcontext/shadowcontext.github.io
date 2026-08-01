@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-31T01:18:45Z",
-  "generated_display": "31 Jul 2026 · 01:18 UTC",
+  "generated_at": "2026-08-01T01:19:45Z",
+  "generated_display": "01 Aug 2026 · 01:19 UTC",
   "metrics": {
     "kev_total": 1656,
-    "kev_added_30d": 26,
+    "kev_added_30d": 25,
     "due_next_7d": 2,
     "ioc_total": 170,
     "ioc_total_display": "170",
@@ -161,6 +161,22 @@
   ],
   "advisories": [
     {
+      "authority": "Saudi NCA / CERT",
+      "title": "TP-Link Alert",
+      "url": "https://nca.gov.sa/en/cert/7819/",
+      "date": "2026-08-01",
+      "severity": "High",
+      "summary": "Security alert 2026-7696. Review the official notice for affected products and remediation guidance."
+    },
+    {
+      "authority": "Saudi NCA / CERT",
+      "title": "Hikvision Alert",
+      "url": "https://nca.gov.sa/en/cert/7818/",
+      "date": "2026-07-31",
+      "severity": "High",
+      "summary": "Security alert 2026-7695. Review the official notice for affected products and remediation guidance."
+    },
+    {
       "title": "NASA Core Flight System (cFS) Health & Safety (HS) Application",
       "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-211-06",
       "date": "2026-07-30",
@@ -199,22 +215,6 @@
       "date": "2026-07-30",
       "severity": "Critical",
       "summary": "Security alert 2026-7694. Review the official notice for affected products and remediation guidance."
-    },
-    {
-      "authority": "Saudi NCA / CERT",
-      "title": "F5 Alert",
-      "url": "https://nca.gov.sa/en/cert/7816/",
-      "date": "2026-07-30",
-      "severity": "High",
-      "summary": "Security alert 2026-7693. Review the official notice for affected products and remediation guidance."
-    },
-    {
-      "authority": "Saudi NCA / CERT",
-      "title": "Drupal Alert",
-      "url": "https://nca.gov.sa/en/cert/7815/",
-      "date": "2026-07-29",
-      "severity": "High",
-      "summary": "Security alert 2026-7692. Review the official notice for affected products and remediation guidance."
     },
     {
       "title": "How to secure your online meetings",
@@ -324,7 +324,7 @@
       "path": "/assets/data/daily-urls.txt"
     }
   ],
-  "ioc_sha256": "c60878a3e4d7baef58be3101120ec582b6ac72e5595281b52864eb13e5400171",
+  "ioc_sha256": "c331f00fb8b7cda013ce37b10787163e05120f8325993e2b29d0e5110d12e1f9",
   "sources": {
     "kev": {
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
