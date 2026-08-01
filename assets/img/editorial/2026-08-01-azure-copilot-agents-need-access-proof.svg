@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Agent access held behind a verified cloud boundary</title>
+  <desc id="desc">An abstract midnight cloud workspace contains six luminous agent nodes, while a layered shield and narrow illuminated path represent controlled access and permission verification.</desc>
+  <defs>
+    <linearGradient id="background" x1="120" y1="70" x2="1460" y2="850" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07172E"/>
+      <stop offset="0.52" stop-color="#102950"/>
+      <stop offset="1" stop-color="#0A1730"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0" cy="0" r="1" gradientTransform="translate(800 430) rotate(90) scale(430 650)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2A78A8" stop-opacity=".38"/>
+      <stop offset="1" stop-color="#2A78A8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="glass" x1="430" y1="210" x2="1180" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#79DCE4" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#3D71B8" stop-opacity=".06"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="760" y1="300" x2="850" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8CF3DF"/>
+      <stop offset="1" stop-color="#3DA4D7"/>
+    </linearGradient>
+    <linearGradient id="path" x1="800" y1="760" x2="800" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7BF1D8" stop-opacity="0"/>
+      <stop offset=".55" stop-color="#7BF1D8" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#D2FFF6"/>
+    </linearGradient>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="smallGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" fill="none" stroke="#8CB7D8" stroke-opacity=".075"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#halo)"/>
+  <rect x="70" y="55" width="1460" height="790" rx="48" fill="url(#grid)"/>
+
+  <path d="M364 653C286 646 234 594 234 524c0-67 49-119 117-126 22-113 116-190 232-174 47-77 133-125 229-113 101 12 180 82 205 175 106-18 205 50 220 153 74 8 129 63 129 133 0 78-67 141-151 141H392c-10 0-19 0-28-1Z" fill="url(#glass)" stroke="#8BCFDC" stroke-opacity=".28" stroke-width="3"/>
+  <path d="M343 658H1254" stroke="#7CAECC" stroke-opacity=".2" stroke-width="2"/>
+
+  <g stroke="#72BCD2" stroke-opacity=".28" stroke-width="3">
+    <path d="M483 380 653 435"/>
+    <path d="M487 547 653 475"/>
+    <path d="M1117 380 947 435"/>
+    <path d="M1113 547 947 475"/>
+    <path d="M800 267v122"/>
+    <path d="M800 520v109"/>
+  </g>
+
+  <g fill="#57C8DB" opacity=".18" filter="url(#softGlow)">
+    <circle cx="480" cy="377" r="48"/>
+    <circle cx="486" cy="552" r="48"/>
+    <circle cx="800" cy="260" r="48"/>
+    <circle cx="1120" cy="377" r="48"/>
+    <circle cx="1114" cy="552" r="48"/>
+    <circle cx="800" cy="650" r="48"/>
+  </g>
+
+  <g fill="#173D61" stroke="#84E9E5" stroke-width="4">
+    <circle cx="480" cy="377" r="31"/>
+    <circle cx="486" cy="552" r="31"/>
+    <circle cx="800" cy="260" r="31"/>
+    <circle cx="1120" cy="377" r="31"/>
+    <circle cx="1114" cy="552" r="31"/>
+    <circle cx="800" cy="650" r="31"/>
+  </g>
+  <g fill="#B7FFF1">
+    <circle cx="480" cy="377" r="8"/>
+    <circle cx="486" cy="552" r="8"/>
+    <circle cx="800" cy="260" r="8"/>
+    <circle cx="1120" cy="377" r="8"/>
+    <circle cx="1114" cy="552" r="8"/>
+    <circle cx="800" cy="650" r="8"/>
+  </g>
+
+  <path d="M800 325 936 374v111c0 89-51 160-136 197-85-37-136-108-136-197V374l136-49Z" fill="#0A1D37" stroke="url(#shield)" stroke-width="7"/>
+  <path d="M800 352 907 391v92c0 69-38 125-107 158-69-33-107-89-107-158v-92l107-39Z" fill="url(#glass)" stroke="#78D8DA" stroke-opacity=".35" stroke-width="2"/>
+  <circle cx="800" cy="463" r="46" fill="#0D2948" stroke="#93F5E7" stroke-width="5"/>
+  <path d="m777 463 16 17 34-39" fill="none" stroke="#C8FFF5" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M800 794c-54-82-41-145 0-206 41 61 54 124 0 206Z" fill="url(#path)" opacity=".75" filter="url(#smallGlow)"/>
+  <path d="M800 792V641" stroke="#B9FFF2" stroke-width="5" stroke-linecap="round" opacity=".9"/>
+  <circle cx="800" cy="792" r="11" fill="#CBFFF6"/>
+
+  <g fill="#B5E9ED" opacity=".55">
+    <circle cx="278" cy="253" r="4"/>
+    <circle cx="1321" cy="267" r="5"/>
+    <circle cx="1412" cy="586" r="3"/>
+    <circle cx="198" cy="691" r="4"/>
+    <circle cx="1051" cy="157" r="3"/>
+    <circle cx="591" cy="739" r="3"/>
+  </g>
+</svg>
