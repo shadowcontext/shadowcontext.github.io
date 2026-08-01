@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Recovery phrase protected from a deceptive firmware update</title>
+  <desc id="desc">An abstract cold-wallet card and luminous recovery key sit behind layered cyan protection while an amber update wave breaks apart at the boundary.</desc>
+  <defs>
+    <linearGradient id="bg" x1="160" y1="70" x2="1450" y2="850" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07172C"/>
+      <stop offset="0.52" stop-color="#0A2740"/>
+      <stop offset="1" stop-color="#06111F"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0" cy="0" r="1" gradientTransform="translate(779 449) rotate(90) scale(360 520)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#36D9D3" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#36D9D3" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="510" y1="260" x2="1010" y2="670" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#173E5B"/>
+      <stop offset="1" stop-color="#0B2238"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="570" y1="210" x2="1050" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#63F3E8" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#159CB6" stop-opacity="0.16"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="1180" y1="250" x2="990" y2="650" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFCA65"/>
+      <stop offset="1" stop-color="#F07845"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#halo)"/>
+  <circle cx="1320" cy="180" r="120" fill="#F29B4B" opacity="0.08" filter="url(#soft)"/>
+  <circle cx="278" cy="720" r="165" fill="#27C9D1" opacity="0.08" filter="url(#soft)"/>
+
+  <g opacity="0.34" fill="none" stroke="#61C9D3" stroke-width="2">
+    <path d="M96 175C286 75 433 89 552 171"/>
+    <path d="M107 728C299 825 451 816 565 742"/>
+    <circle cx="104" cy="173" r="7" fill="#61C9D3"/>
+    <circle cx="109" cy="730" r="7" fill="#61C9D3"/>
+  </g>
+
+  <g transform="rotate(-5 753 455)">
+    <rect x="450" y="216" width="610" height="478" rx="72" fill="#020A13" opacity="0.48" transform="translate(0 22)"/>
+    <rect x="450" y="216" width="610" height="478" rx="72" fill="url(#card)" stroke="#2A7793" stroke-width="3"/>
+    <rect x="486" y="252" width="538" height="406" rx="49" fill="none" stroke="#6DE7E0" stroke-opacity="0.2" stroke-width="2"/>
+    <path d="M514 318H694" stroke="#4EA8BA" stroke-width="14" stroke-linecap="round" opacity="0.35"/>
+    <path d="M514 354H625" stroke="#4EA8BA" stroke-width="10" stroke-linecap="round" opacity="0.2"/>
+    <circle cx="919" cy="319" r="46" fill="#0B1E31" stroke="#4FC8D0" stroke-width="3"/>
+    <path d="M899 319C899 307 908 298 920 298C931 298 940 307 940 319C940 331 931 340 920 340" fill="none" stroke="#62E6DF" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="920" cy="340" r="4" fill="#62E6DF"/>
+  </g>
+
+  <path d="M783 158C966 211 1084 313 1084 465C1084 615 968 718 783 770C598 718 482 615 482 465C482 313 600 211 783 158Z" fill="url(#shield)" fill-opacity="0.13" stroke="#63E5DF" stroke-width="5"/>
+  <path d="M783 197C940 243 1041 330 1041 463C1041 589 945 679 783 728" fill="none" stroke="#5BD9DB" stroke-width="2" stroke-dasharray="10 16" opacity="0.5"/>
+
+  <g filter="url(#glow)">
+    <circle cx="737" cy="483" r="69" fill="#0A3043" stroke="#79FFF1" stroke-width="10"/>
+    <circle cx="737" cy="483" r="24" fill="none" stroke="#8CFFF4" stroke-width="12"/>
+    <path d="M760 483H906L931 458L958 485L933 510L906 485" fill="none" stroke="#8CFFF4" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g fill="none" stroke="url(#amber)" stroke-linecap="round">
+    <path d="M1460 272C1310 248 1191 306 1123 394" stroke-width="28" opacity="0.86"/>
+    <path d="M1478 390C1324 367 1209 398 1132 454" stroke-width="16" opacity="0.68"/>
+    <path d="M1463 507C1329 517 1220 501 1133 482" stroke-width="9" opacity="0.48"/>
+  </g>
+  <g fill="#FFB85C">
+    <path d="M1100 384L1135 413L1095 434L1064 403Z" opacity="0.9"/>
+    <path d="M1113 444L1147 462L1119 492L1084 472Z" opacity="0.72"/>
+    <path d="M1110 501L1138 515L1117 544L1085 527Z" opacity="0.54"/>
+    <circle cx="1176" cy="350" r="8" opacity="0.7"/>
+    <circle cx="1209" cy="525" r="6" opacity="0.5"/>
+  </g>
+
+  <g opacity="0.7">
+    <path d="M1291 258a66 66 0 1 1-35-62" fill="none" stroke="#FFC66D" stroke-width="8" stroke-linecap="round"/>
+    <path d="M1248 176L1278 198L1248 215Z" fill="#FFC66D"/>
+    <circle cx="1260" cy="258" r="23" fill="#F59B4A" opacity="0.24"/>
+  </g>
+
+  <g fill="#58D6D8" opacity="0.32">
+    <circle cx="340" cy="267" r="6"/>
+    <circle cx="288" cy="332" r="4"/>
+    <circle cx="349" cy="616" r="5"/>
+    <circle cx="1315" cy="667" r="5"/>
+    <circle cx="1380" cy="624" r="3"/>
+  </g>
+</svg>
