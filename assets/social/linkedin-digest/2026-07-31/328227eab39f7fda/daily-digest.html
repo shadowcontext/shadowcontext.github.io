@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Daily Security Digest: Fleet Proof and Runtime Verification Across Infrastructure | ShadowContext</title>
+    <style>
+      :root {
+        --paper: #05080d;
+        --panel: #0d1319;
+        --panel-soft: #091017;
+        --ink: #f1f7fa;
+        --ink-2: #c4d1d8;
+        --muted: #8496a1;
+        --line: #1d2b34;
+        --cyan: #35e6d1;
+        --violet: #8b7dff;
+        --sans: "Space Grotesk", Inter, Arial, sans-serif;
+        --mono: "DM Mono", Consolas, monospace;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: var(--sans);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        font-size: 10.5pt;
+        line-height: 1.55;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        position: relative;
+        width: 210mm;
+        min-height: 297mm;
+        padding: 18mm;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 83% 18%, rgba(139, 125, 255, 0.1), transparent 28%),
+          linear-gradient(145deg, #05080d 0%, #081017 62%, #0c101c 100%);
+      }
+
+      .page::before {
+        content: "";
+        position: absolute;
+        inset: 8mm;
+        pointer-events: none;
+        border: 0.25mm solid var(--line);
+      }
+
+      .cover {
+        display: flex;
+        flex-direction: column;
+        page-break-after: always;
+      }
+
+      .brand-row,
+      .section-head,
+      .document-footer {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 4mm;
+        font-size: 20pt;
+        font-weight: 750;
+        letter-spacing: -0.04em;
+      }
+
+      .brand em {
+        color: var(--cyan);
+        font-style: normal;
+      }
+
+      .brand-mark {
+        position: relative;
+        display: block;
+        width: 12mm;
+        height: 12mm;
+        transform: rotate(30deg);
+        border: 1mm solid var(--cyan);
+        border-radius: 1.2mm;
+      }
+
+      .brand-mark::before {
+        content: "";
+        position: absolute;
+        inset: 2.2mm;
+        border: 0.8mm solid var(--violet);
+        border-radius: 0.9mm;
+      }
+
+      .brand-mark::after {
+        content: "";
+        position: absolute;
+        inset: 4.5mm;
+        background: var(--cyan);
+        border-radius: 0.5mm;
+      }
+
+      .edition,
+      .eyebrow,
+      .topic,
+      .section-count,
+      .why span,
+      .document-footer,
+      .source-link {
+        font-family: var(--mono);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .edition,
+      .section-count,
+      .document-footer {
+        color: var(--muted);
+        font-size: 8pt;
+      }
+
+      .cover-copy {
+        position: relative;
+        z-index: 1;
+        margin: 30mm 0 0;
+      }
+
+      .eyebrow {
+        margin: 0 0 7mm;
+        color: var(--cyan);
+        font-size: 10pt;
+      }
+
+      h1 {
+        max-width: 165mm;
+        margin: 0;
+        font-size: 37pt;
+        line-height: 1.03;
+        letter-spacing: -0.05em;
+      }
+
+      .dek {
+        max-width: 155mm;
+        margin: 10mm 0 0;
+        color: var(--ink-2);
+        font-size: 16pt;
+        line-height: 1.45;
+      }
+
+      .context {
+        position: relative;
+        z-index: 1;
+        margin-top: auto;
+        padding: 9mm;
+        background: rgba(13, 19, 25, 0.94);
+        border: 0.3mm solid var(--line);
+        border-left: 1mm solid var(--violet);
+      }
+
+      .context h2,
+      .section-head h2,
+      .operating-view h2,
+      .sources h2 {
+        margin: 0;
+      }
+
+      .context h2 {
+        color: var(--violet);
+        font-family: var(--mono);
+        font-size: 9pt;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .context p {
+        margin: 4mm 0 0;
+        color: var(--ink-2);
+        font-size: 13pt;
+      }
+
+      .cover-meta {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 9mm;
+        color: var(--muted);
+        font: 8pt var(--mono);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .content {
+        padding-top: 15mm;
+        padding-bottom: 18mm;
+      }
+
+      .section-head {
+        margin-bottom: 9mm;
+        padding-bottom: 5mm;
+        border-bottom: 0.3mm solid var(--line);
+      }
+
+      .section-head h2 {
+        font-size: 23pt;
+      }
+
+      .stories {
+        position: relative;
+        z-index: 1;
+      }
+
+      .story {
+        display: grid;
+        grid-template-columns: 15mm 1fr;
+        gap: 5mm;
+        margin: 0 0 6mm;
+        padding: 7mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: rgba(13, 19, 25, 0.96);
+        border: 0.3mm solid var(--line);
+      }
+
+      .story-index {
+        color: var(--cyan);
+        font: 12pt var(--mono);
+      }
+
+      .topic {
+        margin: 0 0 2mm;
+        color: var(--cyan);
+        font-size: 7.5pt;
+      }
+
+      .story h3 {
+        margin: 0;
+        font-size: 16pt;
+        line-height: 1.18;
+        letter-spacing: -0.025em;
+      }
+
+      .summary {
+        margin: 3mm 0;
+        color: var(--ink-2);
+        font-size: 10.5pt;
+      }
+
+      .why {
+        padding-top: 3mm;
+        border-top: 0.25mm solid var(--line);
+      }
+
+      .why span {
+        color: var(--violet);
+        font-size: 7pt;
+      }
+
+      .why p {
+        display: inline;
+        margin: 0 0 0 2mm;
+        font-weight: 650;
+      }
+
+      .source-link {
+        display: inline-block;
+        margin-top: 4mm;
+        color: var(--cyan);
+        font-size: 6.8pt;
+        letter-spacing: 0.04em;
+        text-transform: none;
+      }
+
+      .operating-view,
+      .sources {
+        position: relative;
+        z-index: 1;
+        margin-top: 12mm;
+        padding: 9mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: var(--panel-soft);
+        border: 0.3mm solid var(--line);
+      }
+
+      .operating-view {
+        border-top: 1mm solid var(--cyan);
+      }
+
+      .operating-view h2,
+      .sources h2 {
+        font-size: 18pt;
+      }
+
+      .operating-view > p {
+        color: var(--ink-2);
+        font-size: 12pt;
+      }
+
+      .watch-list,
+      .source-list {
+        margin: 6mm 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .watch-list li {
+        display: grid;
+        grid-template-columns: 9mm 1fr;
+        gap: 4mm;
+        align-items: start;
+        margin: 3mm 0;
+      }
+
+      .watch-list span {
+        display: grid;
+        width: 8mm;
+        height: 8mm;
+        place-items: center;
+        color: var(--cyan);
+        border: 0.3mm solid var(--cyan);
+        font: 8pt var(--mono);
+      }
+
+      .watch-list p {
+        margin: 0;
+      }
+
+      .source-list li {
+        display: grid;
+        grid-template-columns: 10mm 1fr;
+        gap: 3mm;
+        margin: 2.5mm 0;
+        color: var(--ink-2);
+        font-size: 8.5pt;
+      }
+
+      .source-list span {
+        color: var(--violet);
+        font-family: var(--mono);
+      }
+
+      .source-list a {
+        color: var(--cyan);
+        text-decoration: underline;
+        text-decoration-color: rgba(53, 230, 209, 0.35);
+        text-underline-offset: 1mm;
+      }
+
+      .cta {
+        position: relative;
+        z-index: 1;
+        margin: 12mm 0 0;
+        padding: 7mm 9mm;
+        break-inside: avoid;
+        color: #04100f;
+        background: var(--cyan);
+      }
+
+      .cta strong {
+        display: block;
+        font-size: 14pt;
+      }
+
+      .cta span {
+        font: 9pt var(--mono);
+      }
+
+      .document-footer {
+        margin-top: 12mm;
+        padding-top: 5mm;
+        border-top: 0.3mm solid var(--line);
+      }
+
+      @media screen {
+        body {
+          width: 210mm;
+          margin: 0 auto;
+        }
+
+        .page {
+          box-shadow: 0 0 20mm rgba(0, 0, 0, 0.45);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="page cover">
+      <header class="brand-row">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Shadow<em>Context</em></span>
+        </div>
+        <span class="edition">Daily security digest</span>
+      </header>
+
+      <main class="cover-copy">
+        <p class="eyebrow">The day in context / 2026-07-31</p>
+        <h1>Daily Security Digest: Fleet Proof and Runtime Verification Across Infrastructure</h1>
+        <p class="dek">Defensive security digest covering Cisco IOS XE, Ubuntu OpenSSL, Chrome, GitLab AI, Ubuntu IoT kernels, PHP, and Azure Cosmos DB updates.</p>
+      </main>
+
+      <aside class="context">
+        <h2>Executive summary</h2>
+        <p>Independent daily intelligence covering recent vendor advisories, ecosystem fixes, and architectural boundaries. Today&#39;s focus highlights the operational gap between deploying a package version and proving that the live runtime has adopted the required security posture.</p>
+      </aside>
+
+      <div class="cover-meta">
+        <span>7 briefings included</span>
+        <span>https://shadowcontext.com/</span>
+      </div>
+    </section>
+
+    <section class="page content">
+      <header class="section-head">
+        <h2>All news from the day</h2>
+        <span class="section-count">7 / 2026-07-31</span>
+      </header>
+
+      <main class="stories">
+    <article class="story">
+      <div class="story-index">01</div>
+      <div class="story-copy">
+        <p class="topic">Network Security</p>
+        <h3>IOS XE Insecure Mode Highlights Legacy Fleet Configuration Risks</h3>
+        <p class="summary">IOS XE 26.1.1 blocks insecure features on new devices while preserving legacy configurations on upgrade, making fleet posture visibility essential.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Patch compliance does not prove a hardened state; operators must verify effective configuration across mixed networks.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ios-xe-insecure-mode-needs-fleet-proof/">IOS XE insecure mode turns legacy configuration into visible risk ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">02</div>
+      <div class="story-copy">
+        <p class="topic">Linux Security</p>
+        <h3>Ubuntu OpenSSL Fixes Demand Live Runtime Validation Proof</h3>
+        <p class="summary">Canonical released fixed OpenSSL packages for three LTS generations addressing buffer handling, requiring standard updates and process restarts.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Replacing a shared library on disk does not guarantee long-running processes have loaded the new code.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ubuntu-openssl-fix-needs-runtime-proof/">Ubuntu OpenSSL Fix Needs Runtime-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">03</div>
+      <div class="story-copy">
+        <p class="topic">Endpoint Security</p>
+        <h3>Chrome 151 Release Demands Fleet-Wide Browser Version Proof</h3>
+        <p class="summary">Google moved Chrome 151 to stable with 370 fixes, including seven critical vulnerabilities across rendering components and parsers.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Automatic update policies only reduce exposure when the browser downloads, applies, and successfully restarts into the new binary.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/chrome-151-update-needs-fleet-level-proof/">Chrome 151&#39;s 370 fixes demand fleet-level version proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">04</div>
+      <div class="story-copy">
+        <p class="topic">AI Security</p>
+        <h3>GitLab AI Updates Reinforce Server-Side Authorization Boundaries</h3>
+        <p class="summary">GitLab patched 13 security fixes addressing prompt injection, tool governance, and confidential issue visibility in AI-assisted features.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Model-driven workflows must never make authorization decisions; server-side permissions must remain authoritative.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/gitlab-ai-fixes-need-server-side-boundaries/">GitLab AI Fixes Need Server-Side Boundaries ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">05</div>
+      <div class="story-copy">
+        <p class="topic">Kernel Security</p>
+        <h3>Ubuntu IoT Kernel Fixes Need Module-Level Verification</h3>
+        <p class="summary">Canonical issued security notices for Intel IoT and real-time kernels, requiring reboots and third-party module verification.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Specialized kernel updates can leave old images active or silently disrupt out-of-tree drivers if unverified.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ubuntu-intel-iot-kernel-fix-needs-module-proof/">Ubuntu Intel IoT Kernel Fix Needs Module-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">06</div>
+      <div class="story-copy">
+        <p class="topic">Application Security</p>
+        <h3>PHP Security Releases Require Process-Level Runtime Proof</h3>
+        <p class="summary">PHP updated supported branches to address PostgreSQL escaping, Phar recursion flaws, and out-of-bounds write issues.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Runtime security is a property of active processes, requiring restarts across web workers and CLI jobs.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/php-security-releases-need-runtime-proof/">PHP Security Releases Need Runtime-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">07</div>
+      <div class="story-copy">
+        <p class="topic">Cloud Security</p>
+        <h3>CosmosEscape Remediation Reframes Multi-Tenant Cloud Boundaries</h3>
+        <p class="summary">Microsoft completed a long-term architectural fix for CosmosEscape, eliminating a platform-wide signing key and adding guardrails.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Cloud sandboxes must be designed with strict credential scoping to prevent cross-tenant exposure after sandbox escape.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/cosmosescape-fix-reframes-cloud-key-boundaries/">CosmosEscape Fix Reframes Cloud Key Boundaries ↗</a>
+      </div>
+    </article></main>
+
+      <section class="operating-view">
+        <p class="eyebrow">The operating view</p>
+        <h2>What the day means for defenders</h2>
+        <p>Treat updates as state transitions rather than simple downloads. Verify that live processes run repaired binaries, confirm module stability on specialized devices, enforce strict server-side authorization for AI workflows, and ensure multi-tenant cloud credentials remain strictly scoped.</p>
+        <ol class="watch-list"><li><span>1</span><p>Verify active runtime versions rather than relying solely on package inventory or disk paths.</p></li>
+<li><span>2</span><p>Monitor out-of-tree driver and third-party module stability following kernel maintenance.</p></li>
+<li><span>3</span><p>Ensure server-side access controls remain authoritative for all model-driven features.</p></li></ol>
+      </section>
+
+      <section class="sources">
+        <p class="eyebrow">Source index</p>
+        <h2>Every briefing in this digest</h2>
+        <ol class="source-list">
+    <li>
+      <span>01</span>
+      <a href="https://shadowcontext.com/ios-xe-insecure-mode-needs-fleet-proof/">IOS XE insecure mode turns legacy configuration into visible risk</a>
+    </li>
+
+    <li>
+      <span>02</span>
+      <a href="https://shadowcontext.com/ubuntu-openssl-fix-needs-runtime-proof/">Ubuntu OpenSSL Fix Needs Runtime-Level Proof</a>
+    </li>
+
+    <li>
+      <span>03</span>
+      <a href="https://shadowcontext.com/chrome-151-update-needs-fleet-level-proof/">Chrome 151&#39;s 370 fixes demand fleet-level version proof</a>
+    </li>
+
+    <li>
+      <span>04</span>
+      <a href="https://shadowcontext.com/gitlab-ai-fixes-need-server-side-boundaries/">GitLab AI Fixes Need Server-Side Boundaries</a>
+    </li>
+
+    <li>
+      <span>05</span>
+      <a href="https://shadowcontext.com/ubuntu-intel-iot-kernel-fix-needs-module-proof/">Ubuntu Intel IoT Kernel Fix Needs Module-Level Proof</a>
+    </li>
+
+    <li>
+      <span>06</span>
+      <a href="https://shadowcontext.com/php-security-releases-need-runtime-proof/">PHP Security Releases Need Runtime-Level Proof</a>
+    </li>
+
+    <li>
+      <span>07</span>
+      <a href="https://shadowcontext.com/cosmosescape-fix-reframes-cloud-key-boundaries/">CosmosEscape Fix Reframes Cloud Key Boundaries</a>
+    </li></ol>
+      </section>
+
+      <div class="cta">
+        <strong>Read the full analysis</strong>
+        <span>https://shadowcontext.com/</span>
+      </div>
+
+      <footer class="document-footer">
+        <span>ShadowContext</span>
+        <span>Independent defensive security intelligence</span>
+      </footer>
+    </section>
+  </body>
+</html>

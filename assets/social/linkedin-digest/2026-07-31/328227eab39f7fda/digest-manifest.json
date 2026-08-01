@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-08-01T08:16:51.931+04:00",
+  "digestDate": "2026-07-31",
+  "digestHash": "328227eab39f7fda6f5d6fb70766a33355e66eb336a7f9803599d659bbeeb6c2",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "Daily Security Digest: Fleet Proof and Runtime Verification Across Infrastructure",
+  "articleCount": 7,
+  "sourceArticles": [
+    {
+      "title": "IOS XE insecure mode turns legacy configuration into visible risk",
+      "canonicalUrl": "https://shadowcontext.com/ios-xe-insecure-mode-needs-fleet-proof/",
+      "publishedAt": "2026-07-31T01:10:00.000+04:00",
+      "category": "defense",
+      "sourceHash": "2ab677337df46c353aaa0456f4f6a68ea6c57749eded2f8101384f02c2b00c81"
+    },
+    {
+      "title": "Ubuntu OpenSSL Fix Needs Runtime-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/ubuntu-openssl-fix-needs-runtime-proof/",
+      "publishedAt": "2026-07-31T02:10:00.000+04:00",
+      "category": "defense",
+      "sourceHash": "8e8732704004afa061425fe133a210674618327d3c021cc5838149f0adde820c"
+    },
+    {
+      "title": "Chrome 151's 370 fixes demand fleet-level version proof",
+      "canonicalUrl": "https://shadowcontext.com/chrome-151-update-needs-fleet-level-proof/",
+      "publishedAt": "2026-07-31T06:09:05.000+04:00",
+      "category": "defense",
+      "sourceHash": "8d0c89ccb525e5f24cce191d1c9054d7fa239ca16e7a863364aa315087e0f209"
+    },
+    {
+      "title": "GitLab AI Fixes Need Server-Side Boundaries",
+      "canonicalUrl": "https://shadowcontext.com/gitlab-ai-fixes-need-server-side-boundaries/",
+      "publishedAt": "2026-07-31T09:10:51.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "61ffbe1a11ba2fc4cfd28d3e379aad8881afbcbd29da33f3898b4430f6e14dc7"
+    },
+    {
+      "title": "Ubuntu Intel IoT Kernel Fix Needs Module-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/ubuntu-intel-iot-kernel-fix-needs-module-proof/",
+      "publishedAt": "2026-07-31T16:09:11.000+04:00",
+      "category": "defense",
+      "sourceHash": "94ccf7869760662435fff30155dec6e25a91011cd9299683424151e8f56b7863"
+    },
+    {
+      "title": "PHP Security Releases Need Runtime-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/php-security-releases-need-runtime-proof/",
+      "publishedAt": "2026-07-31T18:11:41.000+04:00",
+      "category": "defense",
+      "sourceHash": "8f73315b1d85f19052fa1c35c240198fc24b1bd988fc81e68c37e2f65eb1193d"
+    },
+    {
+      "title": "CosmosEscape Fix Reframes Cloud Key Boundaries",
+      "canonicalUrl": "https://shadowcontext.com/cosmosescape-fix-reframes-cloud-key-boundaries/",
+      "publishedAt": "2026-07-31T21:11:01.000+04:00",
+      "category": "defense",
+      "sourceHash": "6aa52f77c19a59d060047b57c0b3c2645495e434c92cdbd05ca162b6ac8e8ace"
+    }
+  ],
+  "caption": "Read the complete ShadowContext daily security digest to maintain defensible operational visibility and robust verification workflows across your fleets.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-07-31/328227eab39f7fda/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-07-31/328227eab39f7fda/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-07-31/328227eab39f7fda/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-07-31/328227eab39f7fda/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}

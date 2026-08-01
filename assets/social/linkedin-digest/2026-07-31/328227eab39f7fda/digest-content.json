@@ -1,0 +1,63 @@
+{
+  "digest_title": "Daily Security Digest: Fleet Proof and Runtime Verification Across Infrastructure",
+  "dek": "Defensive security digest covering Cisco IOS XE, Ubuntu OpenSSL, Chrome, GitLab AI, Ubuntu IoT kernels, PHP, and Azure Cosmos DB updates.",
+  "overview": "Independent daily intelligence covering recent vendor advisories, ecosystem fixes, and architectural boundaries. Today's focus highlights the operational gap between deploying a package version and proving that the live runtime has adopted the required security posture.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "IOS XE Insecure Mode Highlights Legacy Fleet Configuration Risks",
+      "summary": "IOS XE 26.1.1 blocks insecure features on new devices while preserving legacy configurations on upgrade, making fleet posture visibility essential.",
+      "why_it_matters": "Patch compliance does not prove a hardened state; operators must verify effective configuration across mixed networks.",
+      "topic": "Network Security"
+    },
+    {
+      "source_id": "S02",
+      "headline": "Ubuntu OpenSSL Fixes Demand Live Runtime Validation Proof",
+      "summary": "Canonical released fixed OpenSSL packages for three LTS generations addressing buffer handling, requiring standard updates and process restarts.",
+      "why_it_matters": "Replacing a shared library on disk does not guarantee long-running processes have loaded the new code.",
+      "topic": "Linux Security"
+    },
+    {
+      "source_id": "S03",
+      "headline": "Chrome 151 Release Demands Fleet-Wide Browser Version Proof",
+      "summary": "Google moved Chrome 151 to stable with 370 fixes, including seven critical vulnerabilities across rendering components and parsers.",
+      "why_it_matters": "Automatic update policies only reduce exposure when the browser downloads, applies, and successfully restarts into the new binary.",
+      "topic": "Endpoint Security"
+    },
+    {
+      "source_id": "S04",
+      "headline": "GitLab AI Updates Reinforce Server-Side Authorization Boundaries",
+      "summary": "GitLab patched 13 security fixes addressing prompt injection, tool governance, and confidential issue visibility in AI-assisted features.",
+      "why_it_matters": "Model-driven workflows must never make authorization decisions; server-side permissions must remain authoritative.",
+      "topic": "AI Security"
+    },
+    {
+      "source_id": "S05",
+      "headline": "Ubuntu IoT Kernel Fixes Need Module-Level Verification",
+      "summary": "Canonical issued security notices for Intel IoT and real-time kernels, requiring reboots and third-party module verification.",
+      "why_it_matters": "Specialized kernel updates can leave old images active or silently disrupt out-of-tree drivers if unverified.",
+      "topic": "Kernel Security"
+    },
+    {
+      "source_id": "S06",
+      "headline": "PHP Security Releases Require Process-Level Runtime Proof",
+      "summary": "PHP updated supported branches to address PostgreSQL escaping, Phar recursion flaws, and out-of-bounds write issues.",
+      "why_it_matters": "Runtime security is a property of active processes, requiring restarts across web workers and CLI jobs.",
+      "topic": "Application Security"
+    },
+    {
+      "source_id": "S07",
+      "headline": "CosmosEscape Remediation Reframes Multi-Tenant Cloud Boundaries",
+      "summary": "Microsoft completed a long-term architectural fix for CosmosEscape, eliminating a platform-wide signing key and adding guardrails.",
+      "why_it_matters": "Cloud sandboxes must be designed with strict credential scoping to prevent cross-tenant exposure after sandbox escape.",
+      "topic": "Cloud Security"
+    }
+  ],
+  "operating_view": "Treat updates as state transitions rather than simple downloads. Verify that live processes run repaired binaries, confirm module stability on specialized devices, enforce strict server-side authorization for AI workflows, and ensure multi-tenant cloud credentials remain strictly scoped.",
+  "watch_items": [
+    "Verify active runtime versions rather than relying solely on package inventory or disk paths.",
+    "Monitor out-of-tree driver and third-party module stability following kernel maintenance.",
+    "Ensure server-side access controls remain authoritative for all model-driven features."
+  ],
+  "caption_intro": "Read the complete ShadowContext daily security digest to maintain defensible operational visibility and robust verification workflows across your fleets."
+}
