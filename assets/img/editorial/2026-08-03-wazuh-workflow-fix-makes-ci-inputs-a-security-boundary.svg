@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Protected input gate for a continuous-integration pipeline</title>
+  <desc id="desc">Abstract editorial artwork showing irregular untrusted paths filtered through a luminous security gate before joining orderly pipeline lanes.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071526"/>
+      <stop offset="0.55" stop-color="#102b43"/>
+      <stop offset="1" stop-color="#07131f"/>
+    </linearGradient>
+    <linearGradient id="gate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#64f1d2"/>
+      <stop offset="1" stop-color="#1697a9"/>
+    </linearGradient>
+    <linearGradient id="lane" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2cc4bc" stop-opacity="0.15"/>
+      <stop offset="0.35" stop-color="#67f4d3" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#57a7ff" stop-opacity="0.25"/>
+    </linearGradient>
+    <radialGradient id="halo">
+      <stop offset="0" stop-color="#58efd1" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#58efd1" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#9cc7df" stroke-opacity="0.055" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <ellipse cx="835" cy="450" rx="430" ry="360" fill="url(#halo)" filter="url(#soft)"/>
+
+  <g opacity="0.82" fill="none" stroke-linecap="round">
+    <path d="M70 205 C210 195 265 300 420 310 S555 348 645 375" stroke="#ffad68" stroke-width="9"/>
+    <path d="M45 380 C185 390 265 325 410 410 S555 440 645 438" stroke="#ed7593" stroke-width="7"/>
+    <path d="M85 620 C225 570 300 665 430 585 S565 545 645 510" stroke="#f2b65e" stroke-width="10"/>
+    <path d="M160 745 C295 675 370 740 465 650 S560 605 645 565" stroke="#da6ca0" stroke-width="6"/>
+  </g>
+
+  <g fill="#102437" stroke-width="4">
+    <circle cx="145" cy="202" r="24" stroke="#ffad68"/>
+    <path d="M58 354l23 13v27l-23 13-23-13v-27z" stroke="#ed7593"/>
+    <circle cx="118" cy="609" r="19" stroke="#f2b65e"/>
+    <path d="M168 716l22 38h-44z" stroke="#da6ca0"/>
+    <circle cx="402" cy="405" r="13" stroke="#ed7593"/>
+    <path d="M416 563l17 10v20l-17 10-17-10v-20z" stroke="#f2b65e"/>
+  </g>
+
+  <g filter="url(#glow)">
+    <path d="M705 205 Q800 150 895 205 V448 Q895 620 800 690 Q705 620 705 448Z" fill="#0d2638" stroke="url(#gate)" stroke-width="14"/>
+    <path d="M755 390 L791 427 L855 348" fill="none" stroke="#69f1d3" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M740 535 Q800 575 860 535" fill="none" stroke="#36bdb8" stroke-opacity="0.7" stroke-width="7"/>
+  </g>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M916 370 C1085 370 1175 300 1535 300" stroke="url(#lane)" stroke-width="10"/>
+    <path d="M920 438 C1110 438 1190 430 1560 430" stroke="url(#lane)" stroke-width="13"/>
+    <path d="M916 510 C1080 510 1190 575 1525 575" stroke="url(#lane)" stroke-width="9"/>
+  </g>
+
+  <g fill="#61e6d2" opacity="0.9">
+    <circle cx="1050" cy="370" r="8"/>
+    <circle cx="1240" cy="430" r="10"/>
+    <circle cx="1410" cy="575" r="8"/>
+  </g>
+  <g fill="#17384e" stroke="#67d9d1" stroke-width="3">
+    <rect x="1100" y="272" width="76" height="56" rx="14"/>
+    <rect x="1330" y="402" width="76" height="56" rx="14"/>
+    <rect x="1195" y="547" width="76" height="56" rx="14"/>
+  </g>
+
+  <path d="M610 135V765" stroke="#8ebbd0" stroke-opacity="0.12" stroke-width="2" stroke-dasharray="8 18"/>
+  <path d="M980 135V765" stroke="#8ebbd0" stroke-opacity="0.12" stroke-width="2" stroke-dasharray="8 18"/>
+</svg>
