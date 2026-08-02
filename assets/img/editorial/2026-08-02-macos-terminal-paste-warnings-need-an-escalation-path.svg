@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Terminal command stopped at a protected execution boundary</title>
+  <desc id="desc">An abstract amber command ribbon approaches a dark workstation but is halted by a luminous cyan shield-like boundary, with calm telemetry arcs surrounding the protected device.</desc>
+  <defs>
+    <linearGradient id="bg" x1="180" y1="60" x2="1420" y2="840" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07111f"/>
+      <stop offset="0.55" stop-color="#0b2030"/>
+      <stop offset="1" stop-color="#08131d"/>
+    </linearGradient>
+    <radialGradient id="cyanGlow" cx="0" cy="0" r="1" gradientTransform="translate(1030 430) rotate(90) scale(390 470)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#27e1dc" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#27e1dc" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="screen" x1="924" y1="273" x2="1274" y2="672" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#173a4a"/>
+      <stop offset="1" stop-color="#0a1a29"/>
+    </linearGradient>
+    <linearGradient id="barrier" x1="791" y1="169" x2="894" y2="746" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8ffff4" stop-opacity="0.18"/>
+      <stop offset="0.48" stop-color="#32e3dc" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#42b7ff" stop-opacity="0.22"/>
+    </linearGradient>
+    <linearGradient id="ribbon" x1="170" y1="366" x2="805" y2="489" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffb44b" stop-opacity="0.08"/>
+      <stop offset="0.45" stop-color="#ffb44b" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#ffd08a"/>
+    </linearGradient>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <filter id="smallGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <clipPath id="screenClip">
+      <rect x="938" y="283" width="328" height="350" rx="22"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#cyanGlow)"/>
+
+  <g opacity="0.35" fill="none" stroke="#55ddd8">
+    <path d="M1146 98C1380 184 1470 370 1424 586C1392 735 1268 827 1105 838" stroke-width="2"/>
+    <path d="M1198 141C1371 231 1421 386 1387 546C1358 678 1262 765 1132 787" stroke-width="1.5" stroke-dasharray="5 16"/>
+    <path d="M1050 82C1310 90 1486 251 1510 472" stroke-width="1" opacity="0.55"/>
+  </g>
+
+  <g opacity="0.28" fill="#3de1dc">
+    <circle cx="1407" cy="326" r="5"/>
+    <circle cx="1370" cy="621" r="4"/>
+    <circle cx="1268" cy="751" r="6"/>
+    <circle cx="1461" cy="475" r="3"/>
+  </g>
+
+  <path d="M108 385C260 337 363 348 482 386C590 420 670 461 786 448" fill="none" stroke="#ffad3f" stroke-width="56" stroke-linecap="round" opacity="0.12" filter="url(#softGlow)"/>
+  <path d="M108 385C260 337 363 348 482 386C590 420 670 461 786 448" fill="none" stroke="url(#ribbon)" stroke-width="24" stroke-linecap="round"/>
+  <path d="M135 386C278 357 370 370 470 401" fill="none" stroke="#ffe0ad" stroke-width="3" stroke-linecap="round" opacity="0.64"/>
+  <g fill="#ffd08a" opacity="0.76">
+    <circle cx="264" cy="365" r="5"/>
+    <circle cx="342" cy="371" r="4"/>
+    <circle cx="426" cy="391" r="5"/>
+    <circle cx="536" cy="419" r="4"/>
+    <circle cx="639" cy="448" r="5"/>
+    <circle cx="738" cy="451" r="4"/>
+  </g>
+
+  <path d="M833 143C871 177 899 222 899 278V608C899 669 873 718 829 757C785 718 759 669 759 608V278C759 222 789 177 833 143Z" fill="#2ce4de" opacity="0.11" filter="url(#softGlow)"/>
+  <path d="M833 151C870 184 889 226 889 277V607C889 658 869 702 833 736C797 702 777 658 777 607V277C777 226 796 184 833 151Z" fill="url(#barrier)" opacity="0.22"/>
+  <path d="M833 151C870 184 889 226 889 277V607C889 658 869 702 833 736C797 702 777 658 777 607V277C777 226 796 184 833 151Z" fill="none" stroke="#52efe7" stroke-width="6"/>
+  <path d="M833 211V677" stroke="#b9fffa" stroke-width="2" opacity="0.72"/>
+  <circle cx="833" cy="448" r="18" fill="#b9fffa" opacity="0.28" filter="url(#smallGlow)"/>
+  <circle cx="833" cy="448" r="8" fill="#d8fffc"/>
+
+  <g>
+    <rect x="910" y="255" width="384" height="410" rx="34" fill="#050d16" stroke="#245264" stroke-width="4"/>
+    <rect x="938" y="283" width="328" height="350" rx="22" fill="url(#screen)"/>
+    <g clip-path="url(#screenClip)" opacity="0.55">
+      <circle cx="1126" cy="446" r="137" fill="none" stroke="#36dcd6" stroke-width="2"/>
+      <circle cx="1126" cy="446" r="91" fill="none" stroke="#36dcd6" stroke-width="2" stroke-dasharray="4 14"/>
+      <path d="M1000 503C1061 446 1128 424 1219 390" fill="none" stroke="#55e7df" stroke-width="5" stroke-linecap="round"/>
+      <path d="M1017 546C1080 499 1145 482 1231 477" fill="none" stroke="#338eaa" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="1126" cy="446" r="26" fill="#27e1dc" opacity="0.16"/>
+      <circle cx="1126" cy="446" r="8" fill="#76fff6"/>
+    </g>
+    <path d="M1018 665H1186L1227 726H977L1018 665Z" fill="#0c1b28" stroke="#2c6675" stroke-width="4"/>
+    <rect x="946" y="726" width="312" height="20" rx="10" fill="#163442"/>
+    <circle cx="1102" cy="649" r="5" fill="#5af0e8"/>
+  </g>
+
+  <g opacity="0.56">
+    <path d="M905 214L946 181L988 204" fill="none" stroke="#45dcd7" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="946" cy="181" r="6" fill="#72fff7"/>
+    <path d="M919 707L949 680L980 699" fill="none" stroke="#45dcd7" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="949" cy="680" r="5" fill="#72fff7"/>
+  </g>
+
+  <path d="M119 744C348 796 551 786 721 721" fill="none" stroke="#1b5665" stroke-width="2"/>
+  <path d="M119 774C352 826 589 810 744 746" fill="none" stroke="#1b5665" stroke-width="1" stroke-dasharray="8 18"/>
+</svg>
