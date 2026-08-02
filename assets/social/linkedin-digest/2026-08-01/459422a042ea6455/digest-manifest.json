@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-08-02T08:19:47.452+04:00",
+  "digestDate": "2026-08-01",
+  "digestHash": "459422a042ea645528372b6b664bdb591702055a2a75fa1f0fd2b321769549ef",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "Daily Security and Infrastructure Lifecycle Review for August 2026",
+  "articleCount": 8,
+  "sourceArticles": [
+    {
+      "title": "Jabber support deadline turns version proof into a security control",
+      "canonicalUrl": "https://shadowcontext.com/jabber-support-deadline-needs-version-proof/",
+      "publishedAt": "2026-08-01T00:08:32.000+04:00",
+      "category": "defense",
+      "sourceHash": "9251d7ef3d4b9bedfb9ff623511f42fc527a05d7a4cd6b9d228d62c70cbfd00a"
+    },
+    {
+      "title": "One-click hosting needs deployment-specific security proof",
+      "canonicalUrl": "https://shadowcontext.com/one-click-hosting-needs-deployment-proof/",
+      "publishedAt": "2026-08-01T02:10:25.000+04:00",
+      "category": "defense",
+      "sourceHash": "41afc73785ff871a47aae3b3b3d0d776f3b0a0a92b922a77b6cc659f2698ed9c"
+    },
+    {
+      "title": "Fake Firmware Alerts Test Recovery-Phrase Discipline",
+      "canonicalUrl": "https://shadowcontext.com/fake-firmware-alerts-test-recovery-phrase-discipline/",
+      "publishedAt": "2026-08-01T05:09:03.000+04:00",
+      "category": "threat-intelligence",
+      "sourceHash": "0ec3bbd9213fca2ee43277703f093b64848d2a2eff07ad35d935df272c524ad3"
+    },
+    {
+      "title": "RDS Monitoring Transition Needs Telemetry-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/rds-monitoring-transition-needs-telemetry-proof/",
+      "publishedAt": "2026-08-01T06:08:47.000+04:00",
+      "category": "defense",
+      "sourceHash": "bafa51536b580cd5ed7df7a1da778747f59a59b2a25c107431780582aded6ee7"
+    },
+    {
+      "title": "Solar Datalogger Support Deadline Needs Gateway-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/solar-datalogger-support-deadline-needs-gateway-proof/",
+      "publishedAt": "2026-08-01T10:10:20.000+04:00",
+      "category": "defense",
+      "sourceHash": "fcc078e3df7f1a88bd7a0f7e4ca70349082a89c27953639a8d3650c7f63f6e04"
+    },
+    {
+      "title": "MCP Toolbox fixes need route-level authorization proof",
+      "canonicalUrl": "https://shadowcontext.com/mcp-toolbox-fixes-need-route-level-proof/",
+      "publishedAt": "2026-08-01T12:11:51.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "f412b3fcbeafbacc7afb5d8b530bb54360c6c2d84f5cf46ec68496d085ecb262"
+    },
+    {
+      "title": "Defender TI Retirement Needs Workflow-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/defender-ti-retirement-needs-workflow-proof/",
+      "publishedAt": "2026-08-01T13:09:51.000+04:00",
+      "category": "defense",
+      "sourceHash": "b4656cb7dca37365755a12f1f3252e24a003d6263bde9911b795ccdb88551d5e"
+    },
+    {
+      "title": "Azure Copilot Agents Need Access Proof Before Adoption",
+      "canonicalUrl": "https://shadowcontext.com/azure-copilot-agents-need-access-proof/",
+      "publishedAt": "2026-08-01T22:09:23.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "2d7adf8f5faa52e8941a735799db3dc5eb4b8d7eeced2cc298bbe44a49fc1980"
+    }
+  ],
+  "caption": "Read the complete ShadowContext daily defensive security digest to maintain situational awareness and verify your operational controls.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-08-01/459422a042ea6455/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-01/459422a042ea6455/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-08-01/459422a042ea6455/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-01/459422a042ea6455/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}

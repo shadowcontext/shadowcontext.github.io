@@ -1,0 +1,70 @@
+{
+  "digest_title": "Daily Security and Infrastructure Lifecycle Review for August 2026",
+  "dek": "Defensive priorities for August 1, 2026 cover support deadlines, template security, threat intel workflows, monitoring shifts, and AI access.",
+  "overview": "August 1 brings multiple operational and support transitions across enterprise software, cloud monitoring, solar infrastructure, and security tooling. Defenders must prioritize empirical evidence over assumption, verifying actual versions, network reachability, and permission boundaries.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "Jabber support cutoff demands endpoint version proof",
+      "summary": "Cisco ended support for Jabber 12.8.x and 12.9.x, requiring teams to verify running endpoint binaries rather than relying on deployment records.",
+      "why_it_matters": "Lifecycle expirations remove future security patches, demanding precise inventory to prevent dormant vulnerable clients from persisting.",
+      "topic": "Endpoint Security"
+    },
+    {
+      "source_id": "S02",
+      "headline": "One-click templates need deployment-specific security validation",
+      "summary": "CERT/CC warned that specific VPS templates for Supabase and Zulip deploy hard-coded credentials and secrets that require immediate rotation.",
+      "why_it_matters": "Template automation can silently scale insecure default secrets and excessive network exposure across multiple instances.",
+      "topic": "Cloud Security"
+    },
+    {
+      "source_id": "S03",
+      "headline": "Fake firmware warnings test recovery-phrase discipline",
+      "summary": "A phishing email used a fake chip vulnerability to request a wallet recovery phrase, demonstrating the need for separate verification paths.",
+      "why_it_matters": "Recovery phrases are master secrets; no administrative process or update prompt justifies entering them online.",
+      "topic": "Threat Intelligence"
+    },
+    {
+      "source_id": "S04",
+      "headline": "RDS monitoring transition requires telemetry-level validation",
+      "summary": "AWS retired the standalone Performance Insights console, redirecting users to CloudWatch Database Insights and shifting advanced analysis features.",
+      "why_it_matters": "Platform updates can alter investigation capabilities and access paths, requiring confirmation that essential forensic history remains accessible.",
+      "topic": "Cloud Monitoring"
+    },
+    {
+      "source_id": "S05",
+      "headline": "Solar datalogger support deadline requires gateway inventory",
+      "summary": "Four Solis datalogger models reached their security-update end date, requiring model-level asset inventory and strict network segmentation.",
+      "why_it_matters": "Small embedded components carry independent lifecycles that can leave external monitoring pathways exposed after support expires.",
+      "topic": "IoT Security"
+    },
+    {
+      "source_id": "S06",
+      "headline": "MCP Toolbox updates require route-level authorization proof",
+      "summary": "Google disclosed three MCP Toolbox vulnerabilities affecting authentication flags, OAuth audience validation, and generic HTTP destinations.",
+      "why_it_matters": "AI tool servers require strict route governance, explicit audience checks, and egress controls to prevent unintended actions.",
+      "topic": "AI Security"
+    },
+    {
+      "source_id": "S07",
+      "headline": "Defender TI standalone retirement requires workflow verification",
+      "summary": "Microsoft retired standalone Defender Threat Intelligence, moving its features into the main Defender portal for eligible customers.",
+      "why_it_matters": "Service transitions require continuity checks to ensure analysts maintain uninterrupted access to intelligence projects and workflows.",
+      "topic": "Threat Intelligence"
+    },
+    {
+      "source_id": "S08",
+      "headline": "Azure Copilot agents require strict access governance",
+      "summary": "Microsoft began surfacing individual Azure Copilot agents by default, making tenant access settings and user role scoping critical.",
+      "why_it_matters": "AI agents inherit human permissions, making standing privilege review essential to prevent excessive resource exposure.",
+      "topic": "Cloud Governance"
+    }
+  ],
+  "operating_view": "Treat every software lifecycle deadline, monitoring transition, and feature enablement as an operational change requiring empirical validation. Verify actual running versions, inspect network bindings, constrain token audiences, and enforce strict human approval for all automated actions.",
+  "watch_items": [
+    "Verify endpoint binaries and VDI base images to confirm all unsupported Jabber versions are fully eliminated.",
+    "Audit cloud templates, rotate inherited secrets, and restrict network reachability for all deployed services.",
+    "Restrict Azure Copilot tenant access with rigorous role-based assignments and monitor agent capabilities."
+  ],
+  "caption_intro": "Read the complete ShadowContext daily defensive security digest to maintain situational awareness and verify your operational controls."
+}
