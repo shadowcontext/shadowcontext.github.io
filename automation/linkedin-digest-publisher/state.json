@@ -65,6 +65,22 @@
       "github_run_id": "30686230847",
       "status": "published",
       "last_error": null
+    },
+    "459422a042ea645528372b6b664bdb591702055a2a75fa1f0fd2b321769549ef": {
+      "title": "Daily Security and Infrastructure Lifecycle Review for August 2026",
+      "digest_date": "2026-08-01",
+      "digest_hash": "459422a042ea645528372b6b664bdb591702055a2a75fa1f0fd2b321769549ef",
+      "generated_at": "2026-08-02T08:19:47.452+04:00",
+      "briefing_url": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-01/459422a042ea6455/daily-digest.html",
+      "pdf_file": "assets/social/linkedin-digest/2026-08-01/459422a042ea6455/daily-digest.pdf",
+      "linkedin_caption": "Read the complete ShadowContext daily defensive security digest to maintain situational awareness and verify your operational controls.\n\nThis edition brings together 8 ShadowContext briefings from August 1, 2026, with direct source links and operational priorities.\n\nRead the full daily briefing:\nhttps://shadowcontext.com/assets/social/linkedin-digest/2026-08-01/459422a042ea6455/daily-digest.html\n\n#Cybersecurity #ThreatIntelligence #InfoSec #AISecurity",
+      "linkedin_document_urn": "urn:li:document:D4D10AQEeCbOytNeqrQ",
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7489555558488854528",
+      "published_at": "2026-08-02T05:39:54.718Z",
+      "github_run_id": "30734513816",
+      "status": "published",
+      "last_error": null
     }
   }
 }
