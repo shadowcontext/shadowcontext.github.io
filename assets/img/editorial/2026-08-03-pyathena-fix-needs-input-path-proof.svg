@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Protected data path into a cloud query system</title>
+  <desc id="desc">Abstract blue data capsules travel through an amber guarded boundary toward layered cloud database forms, illustrating safe parameter handling.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07172d"/>
+      <stop offset="0.55" stop-color="#0b2943"/>
+      <stop offset="1" stop-color="#10253a"/>
+    </linearGradient>
+    <linearGradient id="stream" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4fd1e5" stop-opacity="0.2"/>
+      <stop offset="0.55" stop-color="#69d5ec" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#b9f3ff" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="guard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd27a"/>
+      <stop offset="1" stop-color="#e38a35"/>
+    </linearGradient>
+    <linearGradient id="vault" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#55d4dd"/>
+      <stop offset="1" stop-color="#287ca7"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1260" cy="190" r="260" fill="#2b91ad" opacity="0.12" filter="url(#soft)"/>
+  <circle cx="240" cy="740" r="270" fill="#17628e" opacity="0.17" filter="url(#soft)"/>
+
+  <g opacity="0.16" fill="none" stroke="#8deafb" stroke-width="2">
+    <path d="M70 215 C260 105 400 120 575 228"/>
+    <path d="M45 678 C260 790 425 760 592 642"/>
+    <path d="M1020 120 C1210 35 1425 115 1540 260"/>
+    <path d="M1010 760 C1230 860 1435 770 1550 640"/>
+  </g>
+
+  <path d="M90 450 C280 310 430 600 635 450 S970 310 1160 450" fill="none" stroke="url(#stream)" stroke-width="84" stroke-linecap="round" opacity="0.42"/>
+  <path d="M90 450 C280 310 430 600 635 450 S970 310 1160 450" fill="none" stroke="#7ce7f4" stroke-width="5" stroke-linecap="round" opacity="0.72"/>
+
+  <g fill="#76dce9" stroke="#c5f7ff" stroke-width="3" filter="url(#glow)">
+    <rect x="150" y="384" width="118" height="64" rx="32" transform="rotate(-15 209 416)"/>
+    <rect x="330" y="435" width="146" height="72" rx="36" transform="rotate(14 403 471)"/>
+    <rect x="510" y="455" width="104" height="58" rx="29" transform="rotate(-10 562 484)"/>
+  </g>
+
+  <g transform="translate(675 190)">
+    <path d="M120 0 L250 52 L250 214 C250 320 192 397 120 438 C48 397 -10 320 -10 214 L-10 52 Z" fill="#0c2036" stroke="url(#guard)" stroke-width="14"/>
+    <path d="M120 68 L186 96 L186 205 C186 260 160 303 120 332 C80 303 54 260 54 205 L54 96 Z" fill="url(#guard)" opacity="0.94"/>
+    <path d="M88 194 L112 219 L158 163" fill="none" stroke="#102942" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="120" cy="205" r="164" fill="none" stroke="#ffc766" stroke-width="4" opacity="0.24" filter="url(#glow)"/>
+  </g>
+
+  <g transform="translate(1100 285)">
+    <ellipse cx="225" cy="70" rx="190" ry="66" fill="#74dfeb" opacity="0.94"/>
+    <path d="M35 70 V315 C35 352 120 382 225 382 C330 382 415 352 415 315 V70" fill="url(#vault)" opacity="0.92"/>
+    <ellipse cx="225" cy="187" rx="190" ry="66" fill="none" stroke="#a9f3fb" stroke-width="7" opacity="0.75"/>
+    <ellipse cx="225" cy="307" rx="190" ry="66" fill="none" stroke="#a9f3fb" stroke-width="7" opacity="0.75"/>
+    <ellipse cx="225" cy="70" rx="190" ry="66" fill="none" stroke="#d0fbff" stroke-width="8"/>
+    <path d="M182 58 C194 14 256 14 268 58 C308 64 320 102 291 123 H165 C132 101 145 65 182 58Z" fill="#d5fbff" opacity="0.82"/>
+    <path d="M225 113 V183" stroke="#e9feff" stroke-width="10" stroke-linecap="round" opacity="0.72"/>
+    <circle cx="225" cy="209" r="15" fill="#f3c86f"/>
+  </g>
+
+  <g fill="#d1f8ff" opacity="0.5">
+    <circle cx="1015" cy="410" r="10"/><circle cx="1055" cy="432" r="7"/><circle cx="1088" cy="449" r="5"/>
+  </g>
+  <rect x="50" y="50" width="1500" height="800" rx="42" fill="none" stroke="#9eeaf4" stroke-width="2" opacity="0.12"/>
+</svg>
