@@ -81,6 +81,22 @@
       "github_run_id": "30734513816",
       "status": "published",
       "last_error": null
+    },
+    "c51eab1e4b0d599d6ceddf2528ab0a449e7fe483435e07c1c219e19fb24ef17f": {
+      "title": "AI Phishing, Dependency Flaws, and Provenance Risks Shape Operations",
+      "digest_date": "2026-08-02",
+      "digest_hash": "c51eab1e4b0d599d6ceddf2528ab0a449e7fe483435e07c1c219e19fb24ef17f",
+      "generated_at": "2026-08-03T08:25:22.087+04:00",
+      "briefing_url": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-02/c51eab1e4b0d599d/daily-digest.html",
+      "pdf_file": "assets/social/linkedin-digest/2026-08-02/c51eab1e4b0d599d/daily-digest.pdf",
+      "linkedin_caption": "Review today's essential defensive updates across threat intelligence, identity boundaries, and AI transparency rules.\n\nThis edition brings together 6 ShadowContext briefings from August 2, 2026, with direct source links and operational priorities.\n\nRead the full daily briefing:\nhttps://shadowcontext.com/assets/social/linkedin-digest/2026-08-02/c51eab1e4b0d599d/daily-digest.html\n\n#Cybersecurity #ThreatIntelligence #InfoSec #AISecurity",
+      "linkedin_document_urn": "urn:li:document:D4D10AQFe904cMxIuPw",
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7489921889826422784",
+      "published_at": "2026-08-03T05:55:34.829Z",
+      "github_run_id": "30788517866",
+      "status": "published",
+      "last_error": null
     }
   }
 }
