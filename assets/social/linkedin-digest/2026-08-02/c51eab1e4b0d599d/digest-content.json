@@ -1,0 +1,56 @@
+{
+  "digest_title": "AI Phishing, Dependency Flaws, and Provenance Risks Shape Operations",
+  "dek": "Defenders address AI billing phishing, library boundaries, transparency regulations, and macOS execution lures in the latest defensive context.",
+  "overview": "Today's security landscape features concrete defensive priorities spanning AI billing lures, identity boundaries in Better Auth, and option safety in GitPython. Organizations must also operationalize EU AI transparency duties and verify ArcadeDB access controls.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "AI Billing Phishing Preys on Month-End Urgency",
+      "summary": "Phishing emails impersonating AI services target month-end billing cycles to steal payment details, exploiting gaps in subscription ownership.",
+      "why_it_matters": "Billing alerts create operational pressure, but payment verification must bypass the email link entirely.",
+      "topic": "Threat Intelligence"
+    },
+    {
+      "source_id": "S02",
+      "headline": "Better Auth SCIM Fix Addresses Provider Collisions",
+      "summary": "CVE-2026-67330 in Better Auth fixes SCIM provider ID collisions, ensuring provisioning tokens only reach authorized namespaces.",
+      "why_it_matters": "Identity automation is authorization automation; boundary verification prevents cross-account access.",
+      "topic": "Defense"
+    },
+    {
+      "source_id": "S03",
+      "headline": "GitPython Fix Requires Strict Argument Boundaries",
+      "summary": "CVE-2026-67325 in GitPython blocks abbreviated unsafe options, requiring version 3.1.51 and structured arguments to prevent injection.",
+      "why_it_matters": "Blocklists fail against abbreviations; option selection must remain a trusted application decision.",
+      "topic": "Defense"
+    },
+    {
+      "source_id": "S04",
+      "headline": "EU AI Act Transparency Enforces Provenance Proof",
+      "summary": "Article 50 of the EU AI Act takes effect, turning AI disclosure and machine-readable content provenance into mandatory controls.",
+      "why_it_matters": "Provenance must survive transformations while presentation layers provide clear disclosures to the audience.",
+      "topic": "AI Security"
+    },
+    {
+      "source_id": "S05",
+      "headline": "ArcadeDB Fix Restores Cross-Database Access Boundaries",
+      "summary": "ArcadeDB 26.7.2 patches an authorization flaw in HTTP handlers that allowed unauthorized cross-database access.",
+      "why_it_matters": "Every service endpoint requires a shared, fail-closed authorization boundary before processing payloads.",
+      "topic": "Defense"
+    },
+    {
+      "source_id": "S06",
+      "headline": "macOS Terminal Paste Warnings Demand Trusted Escalations",
+      "summary": "A lab trace demonstrates a fake utility delivering a stealer via pasted Terminal input, highlighting built-in Apple warnings.",
+      "why_it_matters": "Pasted commands require immediate verification through an independent channel rather than user overrides.",
+      "topic": "Threat Intelligence"
+    }
+  ],
+  "operating_view": "Maintain rigorous dependency inventories and verify patches at runtime. Ensure authorization is enforced consistently across auxiliary routes and establish independent verification paths for billing and terminal inputs.",
+  "watch_items": [
+    "Verify dependency versions for GitPython 3.1.51 and ArcadeDB 26.7.2 across all deployed environments.",
+    "Monitor endpoint telemetry for unexpected Terminal paste activity and unauthorized cross-database requests.",
+    "Audit AI system workflows to ensure machine-readable markings and deployer disclosures persist correctly."
+  ],
+  "caption_intro": "Review today's essential defensive updates across threat intelligence, identity boundaries, and AI transparency rules."
+}

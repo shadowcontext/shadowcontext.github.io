@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-08-03T08:25:22.087+04:00",
+  "digestDate": "2026-08-02",
+  "digestHash": "c51eab1e4b0d599d6ceddf2528ab0a449e7fe483435e07c1c219e19fb24ef17f",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "AI Phishing, Dependency Flaws, and Provenance Risks Shape Operations",
+  "articleCount": 6,
+  "sourceArticles": [
+    {
+      "title": "AI Billing Phishing Needs a Named Subscription Owner",
+      "canonicalUrl": "https://shadowcontext.com/ai-billing-phishing-needs-an-owner/",
+      "publishedAt": "2026-08-02T00:09:01.000+04:00",
+      "category": "threat-intelligence",
+      "sourceHash": "efffd9754e6e7d1d8633d4f31f60126fb5c7c22458a93af4efca4eafc64ddf9e"
+    },
+    {
+      "title": "Better Auth SCIM Fix Needs Namespace-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/better-auth-scim-fix-needs-namespace-proof/",
+      "publishedAt": "2026-08-02T11:09:44.000+04:00",
+      "category": "defense",
+      "sourceHash": "1d4fe524abf4fa78019e3e1bc5e0406a50ebd3098040c767677f16691dab01fa"
+    },
+    {
+      "title": "GitPython Fix Needs Argument-Boundary Proof",
+      "canonicalUrl": "https://shadowcontext.com/gitpython-fix-needs-argument-boundary-proof/",
+      "publishedAt": "2026-08-02T15:11:24.000+04:00",
+      "category": "defense",
+      "sourceHash": "4629f226ff8dcfb98de8bc72a7ed8aa9384ad596b8b9b471b98913a42c30d79a"
+    },
+    {
+      "title": "EU AI Transparency Rules Turn Provenance Into a Security Control",
+      "canonicalUrl": "https://shadowcontext.com/ai-transparency-needs-provenance-proof/",
+      "publishedAt": "2026-08-02T17:09:43.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "5fb607e4a7b8e6ca3421976171ed4f524919aa7cf97e6fcebf3c1c159956f2b6"
+    },
+    {
+      "title": "ArcadeDB Fix Restores Cross-Database Access Boundaries",
+      "canonicalUrl": "https://shadowcontext.com/arcadedb-fix-restores-database-boundaries/",
+      "publishedAt": "2026-08-02T20:09:47.000+04:00",
+      "category": "defense",
+      "sourceHash": "c2a39051b32f1eb0dc05156a6e04c58d7e353da0966d4e8c62c6b2cdaa272c98"
+    },
+    {
+      "title": "macOS Terminal Paste Warnings Need an Escalation Path",
+      "canonicalUrl": "https://shadowcontext.com/macos-terminal-paste-warnings-need-an-escalation-path/",
+      "publishedAt": "2026-08-02T22:10:29.000+04:00",
+      "category": "threat-intelligence",
+      "sourceHash": "886e96ee761dd4bde4e3c63a14ebdda86259000c1d7cc16e6697e84006094231"
+    }
+  ],
+  "caption": "Review today's essential defensive updates across threat intelligence, identity boundaries, and AI transparency rules.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-08-02/c51eab1e4b0d599d/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-02/c51eab1e4b0d599d/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-08-02/c51eab1e4b0d599d/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-02/c51eab1e4b0d599d/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}
