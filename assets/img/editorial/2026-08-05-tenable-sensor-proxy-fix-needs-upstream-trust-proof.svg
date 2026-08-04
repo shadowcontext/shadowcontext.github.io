@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Verified sensor traffic through a hardened proxy</title>
+  <desc id="desc">Abstract teal sensor streams converge through a luminous fortified arch and continue toward a verified upstream endpoint.</desc>
+  <defs>
+    <linearGradient id="bg" x1="120" y1="40" x2="1480" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071728"/>
+      <stop offset="0.52" stop-color="#0B2C3A"/>
+      <stop offset="1" stop-color="#111E37"/>
+    </linearGradient>
+    <linearGradient id="arch" x1="590" y1="170" x2="1000" y2="755" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#73F2D0"/>
+      <stop offset="0.48" stop-color="#25B9C1"/>
+      <stop offset="1" stop-color="#3565A8"/>
+    </linearGradient>
+    <linearGradient id="flow" x1="130" y1="450" x2="1460" y2="450" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2796AE" stop-opacity="0.18"/>
+      <stop offset="0.46" stop-color="#83FFE1"/>
+      <stop offset="1" stop-color="#6D9EFF"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0" cy="0" r="1" gradientTransform="translate(1260 450) rotate(90) scale(285)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#57D7EA" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#57D7EA" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="32"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1260" cy="450" r="285" fill="url(#halo)"/>
+  <path d="M0 180C260 92 427 120 622 248C823 380 1030 250 1600 102V0H0Z" fill="#19425D" opacity="0.28"/>
+  <path d="M0 735C258 632 425 686 650 805C854 912 1108 763 1600 690V900H0Z" fill="#152C52" opacity="0.55"/>
+  <ellipse cx="802" cy="772" rx="365" ry="58" fill="#02101D" opacity="0.52" filter="url(#soft)"/>
+
+  <g fill="none" stroke="url(#flow)" stroke-linecap="round">
+    <path d="M146 265C352 265 416 370 610 406C692 421 736 422 792 422" stroke-width="10"/>
+    <path d="M146 450H792" stroke-width="12"/>
+    <path d="M146 635C352 635 416 530 610 494C692 479 736 478 792 478" stroke-width="10"/>
+    <path d="M808 450C978 450 1090 450 1260 450" stroke-width="14"/>
+  </g>
+
+  <g fill="#64E6D5" filter="url(#glow)">
+    <circle cx="146" cy="265" r="13"/><circle cx="146" cy="450" r="13"/><circle cx="146" cy="635" r="13"/>
+  </g>
+  <g fill="none" stroke="#63D5D1" stroke-width="3" opacity="0.52">
+    <circle cx="146" cy="265" r="32"/><circle cx="146" cy="450" r="32"/><circle cx="146" cy="635" r="32"/>
+    <circle cx="146" cy="265" r="52" opacity="0.35"/><circle cx="146" cy="450" r="52" opacity="0.35"/><circle cx="146" cy="635" r="52" opacity="0.35"/>
+  </g>
+
+  <path d="M575 720V392C575 266 676 165 802 165C928 165 1029 266 1029 392V720H907V396C907 337 861 291 802 291C743 291 697 337 697 396V720Z" fill="url(#arch)" opacity="0.94"/>
+  <path d="M612 720V400C612 293 696 207 802 207C908 207 992 293 992 400V720" fill="none" stroke="#B5FFF0" stroke-width="5" opacity="0.7"/>
+  <path d="M697 720V396C697 337 743 291 802 291C861 291 907 337 907 396V720Z" fill="#071A2A"/>
+  <path d="M802 328V705" stroke="#77F5DA" stroke-width="4" stroke-dasharray="7 18" opacity="0.5"/>
+  <circle cx="802" cy="450" r="33" fill="#8BFFE3" opacity="0.13" filter="url(#glow)"/>
+  <circle cx="802" cy="450" r="12" fill="#C8FFF3"/>
+
+  <g transform="translate(1260 450)">
+    <circle r="116" fill="#0A2035" stroke="#5D94E7" stroke-width="4"/>
+    <circle r="87" fill="none" stroke="#67DBE0" stroke-width="3" stroke-dasharray="5 12" opacity="0.75"/>
+    <path d="M-45 2L-12 35L50-35" fill="none" stroke="#A8FFEB" stroke-width="17" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  </g>
+  <g fill="#B5FFF0" opacity="0.72">
+    <circle cx="1108" cy="450" r="6"/><circle cx="1150" cy="450" r="6"/><circle cx="1192" cy="450" r="6"/>
+  </g>
+  <rect x="520" y="720" width="565" height="10" rx="5" fill="#74EFD7" opacity="0.55"/>
+</svg>
