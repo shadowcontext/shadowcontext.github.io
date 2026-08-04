@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Verified mobile browser security update</title>
+  <desc id="desc">An abstract blue mobile browser window moves through layered update bands toward a green verification shield.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07162b"/>
+      <stop offset="0.55" stop-color="#102d50"/>
+      <stop offset="1" stop-color="#0a1d35"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#45d6c4" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#45d6c4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="phone" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8ed8ff"/>
+      <stop offset="0.48" stop-color="#3d87ca"/>
+      <stop offset="1" stop-color="#174a80"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#eefbff"/>
+      <stop offset="1" stop-color="#a8d9ed"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8bf1c5"/>
+      <stop offset="1" stop-color="#1ca889"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="18"/>
+      <feOffset dy="18"/>
+      <feColorMatrix values="0 0 0 0 0 0 0 0 0 0.04 0 0 0 0 0.1 0 0 0 .55 0"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <ellipse cx="1170" cy="448" rx="420" ry="390" fill="url(#glow)"/>
+  <path d="M-80 705 C270 520 430 770 790 568 S1280 395 1690 232" fill="none" stroke="#3b78ad" stroke-opacity="0.22" stroke-width="110"/>
+  <path d="M-90 768 C265 585 485 824 835 617 S1305 442 1695 294" fill="none" stroke="#56b7d8" stroke-opacity="0.16" stroke-width="42"/>
+  <g opacity="0.38" fill="#8fd9f3">
+    <circle cx="152" cy="210" r="7"/><circle cx="238" cy="164" r="4"/><circle cx="345" cy="231" r="6"/>
+    <circle cx="1312" cy="154" r="5"/><circle cx="1430" cy="238" r="8"/><circle cx="1505" cy="137" r="4"/>
+  </g>
+  <g filter="url(#shadow)" transform="translate(350 120) rotate(-5 340 330)">
+    <rect x="70" y="20" width="540" height="690" rx="76" fill="url(#phone)" stroke="#b7eaff" stroke-opacity="0.5" stroke-width="4"/>
+    <rect x="104" y="82" width="472" height="548" rx="38" fill="url(#screen)"/>
+    <rect x="255" y="48" width="170" height="17" rx="9" fill="#123d69"/>
+    <circle cx="340" cy="670" r="22" fill="#173f69" stroke="#8ed8ff" stroke-width="3"/>
+    <rect x="137" y="118" width="406" height="56" rx="28" fill="#1d5c91" opacity="0.92"/>
+    <circle cx="174" cy="146" r="12" fill="#75e0c8"/>
+    <path d="M216 146 H480" stroke="#b7e8f4" stroke-width="10" stroke-linecap="round" opacity="0.8"/>
+    <path d="M151 248 C230 181 335 190 403 246 C467 299 478 390 429 456 C372 532 251 527 187 462 C127 401 109 300 151 248Z" fill="#2d78b7" opacity="0.9"/>
+    <path d="M202 278 C255 233 327 237 375 278 C421 319 428 382 393 426 C351 478 269 476 224 431 C181 390 169 314 202 278Z" fill="#d8f5ff"/>
+    <path d="M241 316 C278 283 329 288 359 320 C386 350 383 397 353 426 C322 456 271 449 246 414 C226 385 216 339 241 316Z" fill="#52b7d4"/>
+  </g>
+  <g opacity="0.86">
+    <path d="M787 255 C922 201 1035 201 1166 247" fill="none" stroke="#78cce8" stroke-width="22" stroke-linecap="round"/>
+    <path d="M815 340 C949 294 1051 297 1190 350" fill="none" stroke="#5aa9d0" stroke-width="30" stroke-linecap="round"/>
+    <path d="M835 442 C965 405 1072 411 1213 470" fill="none" stroke="#4583b6" stroke-width="40" stroke-linecap="round"/>
+    <circle cx="829" cy="251" r="14" fill="#bceeff"/><circle cx="867" cy="326" r="18" fill="#97ddf3"/><circle cx="894" cy="425" r="22" fill="#75c7e2"/>
+  </g>
+  <g filter="url(#shadow)" transform="translate(1050 260)">
+    <path d="M190 10 C246 54 311 67 362 70 V235 C362 344 294 428 190 476 C86 428 18 344 18 235 V70 C69 67 134 54 190 10Z" fill="url(#shield)" stroke="#c5ffe8" stroke-width="6"/>
+    <path d="M103 245 L165 307 L286 172" fill="none" stroke="#073f42" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M190 43 C239 77 291 89 329 91" fill="none" stroke="#d4fff0" stroke-opacity="0.5" stroke-width="9" stroke-linecap="round"/>
+  </g>
+  <path d="M1002 753 C1122 720 1285 718 1418 755" fill="none" stroke="#5ee0be" stroke-opacity="0.45" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="1030" cy="747" r="10" fill="#80f2ce"/><circle cx="1404" cy="752" r="10" fill="#80f2ce"/>
+</svg>
