@@ -97,6 +97,22 @@
       "github_run_id": "30788517866",
       "status": "published",
       "last_error": null
+    },
+    "5f0e09179cff0106e080292a3e970de2e395b4eaa96c5743867b16dd9eb98f31": {
+      "title": "Daily Security Digest: Validating Infrastructure, Dependencies, and Updates",
+      "digest_date": "2026-08-03",
+      "digest_hash": "5f0e09179cff0106e080292a3e970de2e395b4eaa96c5743867b16dd9eb98f31",
+      "generated_at": "2026-08-04T07:59:08.757+04:00",
+      "briefing_url": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-03/5f0e09179cff0106/daily-digest.html",
+      "pdf_file": "assets/social/linkedin-digest/2026-08-03/5f0e09179cff0106/daily-digest.pdf",
+      "linkedin_caption": "Read the complete ShadowContext advisory breakdowns and technical analysis for today's verified security updates.\n\nThis edition brings together 6 ShadowContext briefings from August 3, 2026, with direct source links and operational priorities.\n\nRead the full daily briefing:\nhttps://shadowcontext.com/assets/social/linkedin-digest/2026-08-03/5f0e09179cff0106/daily-digest.html\n\n#Cybersecurity #ThreatIntelligence #InfoSec #SecurityOperations",
+      "linkedin_document_urn": "urn:li:document:D4D10AQG1juD2jNdH6A",
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7490277471850844161",
+      "published_at": "2026-08-04T05:28:32.183Z",
+      "github_run_id": "30880787852",
+      "status": "published",
+      "last_error": null
     }
   }
 }
