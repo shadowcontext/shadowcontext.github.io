@@ -1,15 +1,25 @@
 {
-  "generated_at": "2026-08-03T01:18:50Z",
-  "generated_display": "03 Aug 2026 · 01:18 UTC",
+  "generated_at": "2026-08-04T01:22:46Z",
+  "generated_display": "04 Aug 2026 · 01:22 UTC",
   "metrics": {
-    "kev_total": 1656,
-    "kev_added_30d": 25,
-    "due_next_7d": 2,
+    "kev_total": 1657,
+    "kev_added_30d": 26,
+    "due_next_7d": 3,
     "ioc_total": 170,
     "ioc_total_display": "170",
     "ioc_total_exact": "170"
   },
   "vulnerabilities": [
+    {
+      "cve": "CVE-2026-18577",
+      "name": "N-able N-central Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+      "vendor": "N-able",
+      "product": "N-central",
+      "date_added": "2026-08-03",
+      "due_date": "2026-08-06",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-18577"
+    },
     {
       "cve": "CVE-2026-20316",
       "name": "Cisco Secure Firewall Management Center Use of Hard-coded Password Vulnerability",
@@ -79,16 +89,6 @@
       "due_date": "2026-08-04",
       "ransomware": "Unknown",
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-60137"
-    },
-    {
-      "cve": "CVE-2026-0770",
-      "name": "Langflow Inclusion of Functionality from Untrusted Control Sphere Vulnerability",
-      "vendor": "Langflow",
-      "product": "Langflow",
-      "date_added": "2026-07-21",
-      "due_date": "2026-07-24",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-0770"
     }
   ],
   "platforms": [
@@ -161,6 +161,30 @@
   ],
   "advisories": [
     {
+      "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+      "url": "https://www.cisa.gov/news-events/alerts/2026/08/03/cisa-adds-one-known-exploited-vulnerability-catalog",
+      "date": "2026-08-03",
+      "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-18577 N-able N-central…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "authority": "Saudi NCA / CERT",
+      "title": "TP-Link Alert",
+      "url": "https://nca.gov.sa/en/cert/7821/",
+      "date": "2026-08-03",
+      "severity": "High",
+      "summary": "Security alert 2026-7698. Review the official notice for affected products and remediation guidance."
+    },
+    {
+      "authority": "Saudi NCA / CERT",
+      "title": "Synology Alert",
+      "url": "https://nca.gov.sa/en/cert/7820/",
+      "date": "2026-08-03",
+      "severity": "High",
+      "summary": "Security alert 2026-7697. Review the official notice for affected products and remediation guidance."
+    },
+    {
       "authority": "Saudi NCA / CERT",
       "title": "TP-Link Alert",
       "url": "https://nca.gov.sa/en/cert/7819/",
@@ -169,18 +193,10 @@
       "summary": "Security alert 2026-7696. Review the official notice for affected products and remediation guidance."
     },
     {
-      "authority": "Saudi NCA / CERT",
-      "title": "Hikvision Alert",
-      "url": "https://nca.gov.sa/en/cert/7818/",
-      "date": "2026-07-31",
-      "severity": "High",
-      "summary": "Security alert 2026-7695. Review the official notice for affected products and remediation guidance."
-    },
-    {
-      "title": "NASA Core Flight System (cFS) Health & Safety (HS) Application",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-211-06",
+      "title": "MZ Automation GmbH libiec61850",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-211-10",
       "date": "2026-07-30",
-      "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to cause a denial-of-service condition. The following versions of NASA Core Flight System…",
+      "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to cause a denial-of-service condition on the device. The following versions of MZ…",
       "authority": "CISA",
       "severity": ""
     },
@@ -199,22 +215,6 @@
       "summary": "View CSAF Summary Schneider Electric is aware of a vulnerability in its IGSS Definition module for the IGSS (Interactive Graphical SCADA System) product. The…",
       "authority": "CISA",
       "severity": ""
-    },
-    {
-      "title": "MikroTik RouterOS",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-211-01",
-      "date": "2026-07-30",
-      "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to extract the router's WireGuard private key in plaintext using only low‑privilege API…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
-      "authority": "Saudi NCA / CERT",
-      "title": "Adobe Alert",
-      "url": "https://nca.gov.sa/en/cert/7817/",
-      "date": "2026-07-30",
-      "severity": "Critical",
-      "summary": "Security alert 2026-7694. Review the official notice for affected products and remediation guidance."
     },
     {
       "title": "How to secure your online meetings",
@@ -324,7 +324,7 @@
       "path": "/assets/data/daily-urls.txt"
     }
   ],
-  "ioc_sha256": "fcaeeb86de76c7d435958703f0aaf3a3aad42423b79b47c7d871a97c2267eef8",
+  "ioc_sha256": "8d7a890460e0769c898909af3bf51915f375d5c428d7320df03e445b0fc6d41a",
   "sources": {
     "kev": {
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
