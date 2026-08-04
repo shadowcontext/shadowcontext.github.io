@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-08-04T07:59:08.757+04:00",
+  "digestDate": "2026-08-03",
+  "digestHash": "5f0e09179cff0106e080292a3e970de2e395b4eaa96c5743867b16dd9eb98f31",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "Daily Security Digest: Validating Infrastructure, Dependencies, and Updates",
+  "articleCount": 6,
+  "sourceArticles": [
+    {
+      "title": "Wazuh workflow fix makes CI inputs a security boundary",
+      "canonicalUrl": "https://shadowcontext.com/wazuh-workflow-fix-makes-ci-inputs-a-security-boundary/",
+      "publishedAt": "2026-08-03T00:11:30.000+04:00",
+      "category": "defense",
+      "sourceHash": "dbfc9fea614f3daac52e6e76c49deb92e90ce7ee5c973ed881436be681e2f5ea"
+    },
+    {
+      "title": "Amazon Linux NVIDIA Update Needs Runtime Proof",
+      "canonicalUrl": "https://shadowcontext.com/amazon-linux-nvidia-update-needs-runtime-proof/",
+      "publishedAt": "2026-08-03T06:13:30.000+04:00",
+      "category": "defense",
+      "sourceHash": "adbb6a595452f15a99d78676d1e1cf3840cfba1bf506c3157c901fc4893837aa"
+    },
+    {
+      "title": "Bouncy Castle Fix Restores Certificate-Status Binding",
+      "canonicalUrl": "https://shadowcontext.com/bouncy-castle-fix-restores-certificate-status-binding/",
+      "publishedAt": "2026-08-03T15:10:36.000+04:00",
+      "category": "defense",
+      "sourceHash": "600ad055c1f6624b14883c1007911de118adb209f271ca98e34357e77475610f"
+    },
+    {
+      "title": "PyAthena Fix Needs Proof Across the Input-to-Query Path",
+      "canonicalUrl": "https://shadowcontext.com/pyathena-fix-needs-input-path-proof/",
+      "publishedAt": "2026-08-03T18:11:33.000+04:00",
+      "category": "defense",
+      "sourceHash": "fa1153b3a9c2ac6f07fcf5aff0774cdf6b85c3cef61f65752b754f0ff3ee854f"
+    },
+    {
+      "title": "WAPT Server fix needs session-boundary proof",
+      "canonicalUrl": "https://shadowcontext.com/wapt-server-fix-needs-session-boundary-proof/",
+      "publishedAt": "2026-08-03T21:09:34.000+04:00",
+      "category": "defense",
+      "sourceHash": "4be20cd354bde54a96433aa7a0ad0598ef5d957f5585c53a2157c39554649f75"
+    },
+    {
+      "title": "eParakstītājs Update Fix Needs Version Proof",
+      "canonicalUrl": "https://shadowcontext.com/eparakstitajs-update-fix-needs-version-proof/",
+      "publishedAt": "2026-08-03T23:12:23.000+04:00",
+      "category": "defense",
+      "sourceHash": "cf458d2ec8c345e44ae2c7c438bece1081f960926086c49419437ad21d077e09"
+    }
+  ],
+  "caption": "Read the complete ShadowContext advisory breakdowns and technical analysis for today's verified security updates.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-08-03/5f0e09179cff0106/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-03/5f0e09179cff0106/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-08-03/5f0e09179cff0106/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-03/5f0e09179cff0106/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}

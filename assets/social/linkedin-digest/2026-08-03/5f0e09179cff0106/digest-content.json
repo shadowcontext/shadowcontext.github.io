@@ -1,0 +1,56 @@
+{
+  "digest_title": "Daily Security Digest: Validating Infrastructure, Dependencies, and Updates",
+  "dek": "Defensive security digest covering software updates, dependency validation, session integrity, and build pipeline boundaries.",
+  "overview": "Today's advisories cover critical fixes across CI workflows, GPU drivers, cryptography libraries, database clients, server management platforms, and desktop applications. Defenders must verify runtime state rather than relying solely on package metadata or vendor patch announcements.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "Wazuh Workflow Fix Secures CI Inputs",
+      "summary": "Wazuh GitHub Actions workflows before commit 44bf114 contain shell injection risks via untrusted pull-request inputs. The fix introduces environment variables and quoting.",
+      "why_it_matters": "Automation pipelines combine untrusted code with sensitive credentials, requiring strict input boundaries.",
+      "topic": "CI Security"
+    },
+    {
+      "source_id": "S02",
+      "headline": "Amazon Linux NVIDIA Update R580 Released",
+      "summary": "Amazon Linux released version 580.159.03 for nvidia-driver to address an out-of-bounds write vulnerability. Operators must verify active runtime drivers.",
+      "why_it_matters": "Package installation does not guarantee older loaded kernel-adjacent drivers have stopped running.",
+      "topic": "GPU Drivers"
+    },
+    {
+      "source_id": "S03",
+      "headline": "Bouncy Castle Patch Restores OCSP Binding",
+      "summary": "Bouncy Castle Java versions before 1.85 lack proper certificate binding for stapled OCSP responses, risking validation bypass.",
+      "why_it_matters": "Cryptographic libraries require verification of transitive dependencies and active library versions.",
+      "topic": "Cryptography"
+    },
+    {
+      "source_id": "S04",
+      "headline": "PyAthena Fix Addresses SQL Parameter Escape",
+      "summary": "PyAthena before version 3.35.4 contains a SQL injection flaw in DefaultParameterFormatter affecting Amazon Athena queries.",
+      "why_it_matters": "Parameter formatting flaws allow crafted inputs to alter generated query structures.",
+      "topic": "Database Client"
+    },
+    {
+      "source_id": "S05",
+      "headline": "WAPT Server Fix Targets Session Bypass",
+      "summary": "WAPT Enterprise versions from 2.6.0.16767 through 2.6.1.17787 allow unauthenticated session token retrieval, fixed in 2.6.1.17813.",
+      "why_it_matters": "Endpoint management servers act as high-trust control planes requiring strict session validation.",
+      "topic": "Server Security"
+    },
+    {
+      "source_id": "S06",
+      "headline": "eParakstītājs Update Fixes Updater Behavior",
+      "summary": "Windows versions of eParakstītājs 3.0 before 1.10.0 have vulnerabilities in automatic update retrieval and execution behavior.",
+      "why_it_matters": "Desktop tools used for digital signing require trusted deployment channels and version proof.",
+      "topic": "Desktop Software"
+    }
+  ],
+  "operating_view": "Treat package upgrades as initial milestones rather than complete remediation. Defenders must independently verify runtime binary versions, active driver states, dependency trees, and access boundaries to ensure fixes are fully applied across production systems.",
+  "watch_items": [
+    "Confirm that running processes match patched package versions across all hosts.",
+    "Audit transitive software dependencies for embedded vulnerable cryptographic libraries.",
+    "Restrict network exposure and verify session controls for administrative platforms."
+  ],
+  "caption_intro": "Read the complete ShadowContext advisory breakdowns and technical analysis for today's verified security updates."
+}
