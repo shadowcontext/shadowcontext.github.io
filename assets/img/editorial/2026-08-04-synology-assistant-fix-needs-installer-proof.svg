@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Protected installation path to network storage</title>
+  <desc id="desc">Abstract desktop installation package passing through a protected verification chamber before reaching a network storage node.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08172b"/>
+      <stop offset="0.58" stop-color="#102b43"/>
+      <stop offset="1" stop-color="#124653"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#62d9d0" stop-opacity="0"/>
+      <stop offset="0.25" stop-color="#62d9d0" stop-opacity="0.55"/>
+      <stop offset="0.75" stop-color="#c8ffdc" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#c8ffdc" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="package" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f3c86a"/>
+      <stop offset="1" stop-color="#db7a50"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#020912" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1320" cy="135" r="270" fill="#47c7bd" opacity="0.08"/>
+  <circle cx="160" cy="800" r="330" fill="#f0ad62" opacity="0.06"/>
+  <g opacity="0.16" fill="none" stroke="#91e4dc" stroke-width="2">
+    <path d="M90 170C315 70 430 235 630 150S1010 65 1180 180s255 80 350 15"/>
+    <path d="M35 710c205-100 375 35 560-35s330-35 480 70 320 50 490-35"/>
+    <circle cx="245" cy="220" r="7" fill="#91e4dc"/><circle cx="1420" cy="680" r="7" fill="#91e4dc"/>
+  </g>
+  <path d="M300 450H1300" stroke="url(#beam)" stroke-width="110" filter="url(#glow)"/>
+  <path d="M300 450H1300" stroke="#8ce7d6" stroke-width="3" stroke-dasharray="9 22" opacity="0.6"/>
+  <g filter="url(#shadow)">
+    <rect x="120" y="265" width="390" height="370" rx="34" fill="#0d2238" stroke="#5ba7b2" stroke-width="3"/>
+    <rect x="155" y="305" width="320" height="220" rx="20" fill="#132f49"/>
+    <path d="M195 480l70-78 68 45 58-84 48 117z" fill="#1e5363" opacity="0.75"/>
+    <circle cx="404" cy="350" r="20" fill="#6ddfd3" opacity="0.7"/>
+    <rect x="245" y="556" width="140" height="18" rx="9" fill="#75c5c7" opacity="0.45"/>
+    <path d="M205 614h220" stroke="#75c5c7" stroke-width="10" stroke-linecap="round" opacity="0.25"/>
+  </g>
+  <g transform="translate(650 285)" filter="url(#shadow)">
+    <path d="M150 0l135 78v160L150 316 15 238V78z" fill="#0a1c31" stroke="#77dfd3" stroke-width="5"/>
+    <path d="M15 78l135 78 135-78M150 156v160" fill="none" stroke="#77dfd3" stroke-width="4" opacity="0.7"/>
+    <path d="M150 42l91 52-91 53-91-53z" fill="url(#package)"/>
+    <path d="M117 105h66" stroke="#fff0b3" stroke-width="9" stroke-linecap="round" opacity="0.85"/>
+    <circle cx="150" cy="226" r="38" fill="#75e1cc" opacity="0.16"/>
+    <path d="M132 226l12 13 27-31" fill="none" stroke="#bfffe2" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="1100" y="235" width="355" height="430" rx="34" fill="#0a1c31" stroke="#72d8cc" stroke-width="3"/>
+    <rect x="1140" y="285" width="275" height="92" rx="18" fill="#153c50"/>
+    <rect x="1140" y="404" width="275" height="92" rx="18" fill="#153c50"/>
+    <rect x="1140" y="523" width="275" height="92" rx="18" fill="#153c50"/>
+    <g fill="#9bf0db"><circle cx="1185" cy="331" r="11"/><circle cx="1185" cy="450" r="11"/><circle cx="1185" cy="569" r="11"/></g>
+    <g stroke="#5b9ba6" stroke-width="8" stroke-linecap="round" opacity="0.65">
+      <path d="M1230 331h130"/><path d="M1230 450h130"/><path d="M1230 569h130"/>
+    </g>
+  </g>
+  <g fill="#bafbea">
+    <circle cx="555" cy="450" r="6"/><circle cx="1040" cy="450" r="6"/>
+  </g>
+  <path d="M535 450h70m390 0h70" stroke="#bafbea" stroke-width="5" stroke-linecap="round" opacity="0.7"/>
+</svg>
