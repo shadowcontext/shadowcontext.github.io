@@ -1,0 +1,112 @@
+{
+  "digest_title": "Daily Security Digest: Vulnerabilities, Management, and Verification",
+  "dek": "Reviewing defensive priorities across threat-intelligence tooling, endpoint utilities, database connectors, and mobile browsers on August 4, 2026.",
+  "overview": "Today's advisories cover a wide array of defensive challenges, ranging from input handling in threat-intelligence platforms to version verification for mobile applications and monitoring tools. Defenders must prioritize patch application, strict ingress and egress boundaries, and rigorous post-installation telemetry.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "CTI-Transmute Fixes Need Input Boundaries",
+      "summary": "Three high-severity CVEs address uncontrolled resource consumption, SSRF, and CSRF in CTI-Transmute. Operators must verify deployed code and segregate outbound network traffic.",
+      "why_it_matters": "Security tooling inherits the risk of the content it processes; proper input controls prevent wider infrastructure failures.",
+      "topic": "Vulnerability Management"
+    },
+    {
+      "source_id": "S02",
+      "headline": "Synology Assistant Fix Needs Installer-Level Proof",
+      "summary": "CVE-2026-4793 involves incorrect default permissions during Synology Assistant installation, allowing local file access and denial of service.",
+      "why_it_matters": "Management utilities execute with elevated rights and require the same asset verification as the hardware they administer.",
+      "topic": "Endpoint Security"
+    },
+    {
+      "source_id": "S03",
+      "headline": "Guzzle Fix Aligns URL Policy With Network Reality",
+      "summary": "CVE-2026-69246 exposes host-confusion weaknesses in Guzzle versions prior to 7.15.2 and 8.0.1, leading to potential server-side request forgery risks.",
+      "why_it_matters": "URL policy must be enforced against the destination that actually receives the request on the wire.",
+      "topic": "Application Security"
+    },
+    {
+      "source_id": "S04",
+      "headline": "Benign Agent Memories Need Set-Level Safety Checks",
+      "summary": "Research shows AI agent memories can produce unsafe outcomes when benign-looking entries are combined during retrieval.",
+      "why_it_matters": "Approving persistent experiences individually is not proof that the resulting aggregated memory state remains safe.",
+      "topic": "AI Security"
+    },
+    {
+      "source_id": "S05",
+      "headline": "Compact Security Models Need Repository-Level Proof",
+      "summary": "Evaluation of compact models highlights their capability in vulnerability localization while exposing performance drops in large codebases.",
+      "why_it_matters": "Local triage models help prioritize review queues, but they must be treated as candidates rather than absolute verdicts.",
+      "topic": "AI Security"
+    },
+    {
+      "source_id": "S06",
+      "headline": "Agent Audit Records Need Platform Proof",
+      "summary": "A proposed framework binds AI agent action records to independent platform attestation evidence to verify runtime integrity.",
+      "why_it_matters": "A valid signature proves key control, but independent platform evidence verifies the actual execution state.",
+      "topic": "AI Security"
+    },
+    {
+      "source_id": "S07",
+      "headline": "Sequelize Oracle Fix Needs Dialect-Level Proof",
+      "summary": "CVE-2026-69240 is a critical SQL injection vulnerability in Sequelize affecting applications using the Oracle dialect prior to version 6.37.4.",
+      "why_it_matters": "An ORM is only a security boundary if the deployed version handles the active database dialect correctly.",
+      "topic": "Application Security"
+    },
+    {
+      "source_id": "S08",
+      "headline": "Samsung Mobile Update Needs Device-Level Proof",
+      "summary": "Samsung's SMR Aug-2026 Release 1 addresses multiple vulnerabilities, including critical access control and input validation defects.",
+      "why_it_matters": "Vendor bulletin release does not equal fleet deployment; endpoint telemetry must confirm the installed patch version.",
+      "topic": "Mobile Security"
+    },
+    {
+      "source_id": "S09",
+      "headline": "Microsoft 365 App Permissions Need Purpose-Level Proof",
+      "summary": "Research into Microsoft 365 apps highlights the need to govern opaque third-party permission requests and broad access scopes.",
+      "why_it_matters": "OAuth consent creates durable access, making permission-to-purpose tracking essential for tenant security.",
+      "topic": "Identity Security"
+    },
+    {
+      "source_id": "S10",
+      "headline": "Omada Provisioning Flaws Put Device Adoption on the Security Boundary",
+      "summary": "Forescout disclosed provisioning vulnerabilities across the TP-Link Omada ecosystem involving hardcoded keys and weak certificate validation.",
+      "why_it_matters": "Device adoption is an authorization event that decides which controller and configuration a network asset trusts.",
+      "topic": "Network Security"
+    },
+    {
+      "source_id": "S11",
+      "headline": "Contextual Security Training Needs Control Boundaries",
+      "summary": "Research into contextual training architectures explores delivering risk education directly within workflow detection events.",
+      "why_it_matters": "Coaching should explain security risks without replacing independent, automated preventive controls.",
+      "topic": "Security Awareness"
+    },
+    {
+      "source_id": "S12",
+      "headline": "LibreNMS Fixes Need Monitoring-Plane Proof",
+      "summary": "Advisories for LibreNMS describe remote code execution, SSRF, and XSS risks, supporting version 26.7.0 as a common patch floor.",
+      "why_it_matters": "Visibility infrastructure is privileged infrastructure and requires boundaries as strong as the systems it monitors.",
+      "topic": "Vulnerability Management"
+    },
+    {
+      "source_id": "S13",
+      "headline": "Adobe Campaign Update Requires Build and Restart Proof",
+      "summary": "Adobe Campaign Classic build 9399 fixes seven critical vulnerabilities, requiring an explicit server restart to enforce fixes.",
+      "why_it_matters": "Installing a package is insufficient if the running process has not been restarted to load the corrected code.",
+      "topic": "Vulnerability Management"
+    },
+    {
+      "source_id": "S14",
+      "headline": "Firefox Android Update Needs Version-Level Proof",
+      "summary": "Mozilla published Firefox for Android 153.0.3 as a security update, requiring device inventory verification for proper deployment.",
+      "why_it_matters": "Automatic app store delivery settings do not guarantee that managed mobile endpoints have successfully installed the release.",
+      "topic": "Mobile Security"
+    }
+  ],
+  "operating_view": "Maintain strict version verification and rigorous input boundaries across all application stacks, threat intelligence platforms, and endpoint management tools. Treat automated deployment mechanisms as incomplete until endpoint telemetry confirms active, up-to-date execution states.",
+  "watch_items": [
+    "Verify endpoint inventories for deployed application builds rather than relying solely on installer distribution channels.",
+    "Monitor outbound request security and enforce strict egress filtering across CTI and integration workers.",
+    "Audit third-party application permissions and zero-touch device enrollment procedures across managed network assets."
+  ],
+  "caption_intro": "Reviewing independent defensive cybersecurity updates, vulnerability disclosures, and verification practices for August 4, 2026."
+}

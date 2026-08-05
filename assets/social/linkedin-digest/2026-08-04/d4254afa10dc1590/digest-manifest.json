@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-08-05T07:54:22.758+04:00",
+  "digestDate": "2026-08-04",
+  "digestHash": "d4254afa10dc1590838ea6f8f46c0c724c29ae3dd102cffdfa7d2fa4fe20bb80",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "Daily Security Digest: Vulnerabilities, Management, and Verification",
+  "articleCount": 14,
+  "sourceArticles": [
+    {
+      "title": "CTI-Transmute Fixes Need Input Boundaries",
+      "canonicalUrl": "https://shadowcontext.com/cti-transmute-fixes-need-input-boundaries/",
+      "publishedAt": "2026-08-04T03:11:02.000+04:00",
+      "category": "defense",
+      "sourceHash": "ff3b72bc7d5bd9ca1d0c6c847d0ea65065bfc5dcb5d1d233c3733b26ba7c4c95"
+    },
+    {
+      "title": "Synology Assistant Fix Needs Installer-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/synology-assistant-fix-needs-installer-proof/",
+      "publishedAt": "2026-08-04T04:10:24.000+04:00",
+      "category": "defense",
+      "sourceHash": "ca12389f663ec7b8e5627cb5a8109b5cce047512dc8aed0ee02f3e657460242f"
+    },
+    {
+      "title": "Guzzle Fix Aligns URL Policy With Network Reality",
+      "canonicalUrl": "https://shadowcontext.com/guzzle-fix-aligns-url-policy-with-network-reality/",
+      "publishedAt": "2026-08-04T08:10:03.000+04:00",
+      "category": "defense",
+      "sourceHash": "5146ddf534d1af51f0cc16e44f51e7dd3c9e8db9ae09fa89d3da00c2100cb299"
+    },
+    {
+      "title": "Benign Agent Memories Need Set-Level Safety Checks",
+      "canonicalUrl": "https://shadowcontext.com/benign-agent-memories-need-set-level-checks/",
+      "publishedAt": "2026-08-04T10:11:08.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "388ddbb48276e07f39e41945641e5d81914ef710c8b76a171a09b75657ead8e7"
+    },
+    {
+      "title": "Compact Security Models Need Repository-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/compact-security-models-need-repository-proof/",
+      "publishedAt": "2026-08-04T11:10:14.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "6690ed84a70d0ce553a15163faa1e9b08f206d150b02969ef70a463bfd2a3744"
+    },
+    {
+      "title": "Agent Audit Records Need Platform Proof",
+      "canonicalUrl": "https://shadowcontext.com/agent-audit-records-need-platform-proof/",
+      "publishedAt": "2026-08-04T12:12:40.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "7404f26908b680fba4d75416a2fe0130cd691411373df9e96d3c089f68a81d24"
+    },
+    {
+      "title": "Sequelize Oracle Fix Needs Dialect-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/sequelize-oracle-fix-needs-dialect-proof/",
+      "publishedAt": "2026-08-04T13:10:50.000+04:00",
+      "category": "defense",
+      "sourceHash": "cdc9cf3918282bc9eff83e8d0cebbdf27d1926dcff027f607d66a5c86f1f3941"
+    },
+    {
+      "title": "Samsung Mobile Update Needs Device-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/samsung-mobile-update-needs-device-level-proof/",
+      "publishedAt": "2026-08-04T14:09:53.000+04:00",
+      "category": "defense",
+      "sourceHash": "3e4e27d0bd9a20a032ad01c453845744a122db5264913a59d3220cb80c97eb02"
+    },
+    {
+      "title": "Microsoft 365 App Permissions Need Purpose-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/m365-app-permissions-need-purpose-proof/",
+      "publishedAt": "2026-08-04T15:11:12.000+04:00",
+      "category": "defense",
+      "sourceHash": "8b28fc79f777a4c3034a62b8767c1b169a805370faac8b5b8ac34644ee7334ff"
+    },
+    {
+      "title": "Omada Provisioning Flaws Put Device Adoption on the Security Boundary",
+      "canonicalUrl": "https://shadowcontext.com/omada-provisioning-needs-trust-boundaries/",
+      "publishedAt": "2026-08-04T17:11:27.000+04:00",
+      "category": "defense",
+      "sourceHash": "be77f95fd927a3b711daad919143c5bc6786fb66cf41d75e340c0169f2c4cce0"
+    },
+    {
+      "title": "Contextual Security Training Needs Control Boundaries",
+      "canonicalUrl": "https://shadowcontext.com/contextual-security-training-needs-control-boundaries/",
+      "publishedAt": "2026-08-04T18:11:33.000+04:00",
+      "category": "defense",
+      "sourceHash": "964cb9ada91db6d1c76a23dbe2b64acf666e79e930fcdc6af3a5646d9e064e02"
+    },
+    {
+      "title": "LibreNMS Fixes Need Monitoring-Plane Proof",
+      "canonicalUrl": "https://shadowcontext.com/librenms-fixes-need-monitoring-plane-proof/",
+      "publishedAt": "2026-08-04T20:09:06.000+04:00",
+      "category": "defense",
+      "sourceHash": "c2a3908f155c442f424fdb962db54db003605b33f53b383d20a7b43aa6790cd9"
+    },
+    {
+      "title": "Adobe Campaign Update Requires Build and Restart Proof",
+      "canonicalUrl": "https://shadowcontext.com/adobe-campaign-fix-needs-restart-proof/",
+      "publishedAt": "2026-08-04T21:11:12.000+04:00",
+      "category": "defense",
+      "sourceHash": "88f143683bb10f4ca1b7806314f822fdb57679f8dc422fca6c4fbd78d45d92a0"
+    },
+    {
+      "title": "Firefox Android Update Needs Version-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/firefox-android-update-needs-version-proof/",
+      "publishedAt": "2026-08-04T23:10:35.000+04:00",
+      "category": "defense",
+      "sourceHash": "2c1d35ce51d0106a4e2f8f2180c4352d404833213712c53e2821a560b602166c"
+    }
+  ],
+  "caption": "Reviewing independent defensive cybersecurity updates, vulnerability disclosures, and verification practices for August 4, 2026.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-08-04/d4254afa10dc1590/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-04/d4254afa10dc1590/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-08-04/d4254afa10dc1590/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-04/d4254afa10dc1590/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}
