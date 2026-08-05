@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Verified boundary around an SD-WAN control core</title>
+  <desc id="desc">Abstract editorial artwork showing a central network control core, five protective arcs, and orderly branch paths crossing a luminous verification boundary.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071525"/>
+      <stop offset="0.52" stop-color="#102642"/>
+      <stop offset="1" stop-color="#091827"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="46%" r="55%">
+      <stop offset="0" stop-color="#4ee4ce" stop-opacity="0.28"/>
+      <stop offset="0.55" stop-color="#36a9e1" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#071525" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#84f7df"/>
+      <stop offset="1" stop-color="#36a9e1"/>
+    </linearGradient>
+    <linearGradient id="arc" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#44b8e8" stop-opacity="0.22"/>
+      <stop offset="0.5" stop-color="#73f2d6" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#44b8e8" stop-opacity="0.22"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="12" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#halo)"/>
+  <g opacity="0.2" fill="none" stroke="#8bb3ca" stroke-width="2">
+    <path d="M0 178 C260 178 294 306 514 306"/>
+    <path d="M0 710 C246 710 336 586 526 586"/>
+    <path d="M1600 204 C1372 204 1292 322 1084 322"/>
+    <path d="M1600 696 C1380 696 1306 574 1076 574"/>
+  </g>
+  <ellipse cx="800" cy="454" rx="430" ry="342" fill="#32cbb8" opacity="0.06" filter="url(#soft)"/>
+  <g fill="none" stroke="url(#arc)" stroke-linecap="round">
+    <path d="M515 244 A350 350 0 0 1 1085 244" stroke-width="16"/>
+    <path d="M442 345 A390 390 0 0 1 1158 345" stroke-width="13"/>
+    <path d="M418 455 A382 382 0 0 0 1182 455" stroke-width="11"/>
+    <path d="M460 570 A365 365 0 0 0 1140 570" stroke-width="13"/>
+    <path d="M540 661 A330 330 0 0 0 1060 661" stroke-width="16"/>
+  </g>
+  <g fill="none" stroke="#59d8cf" stroke-opacity="0.48" stroke-width="4">
+    <path d="M108 178 H318 C392 178 421 356 524 390"/>
+    <path d="M108 710 H330 C410 710 434 556 532 518"/>
+    <path d="M1492 204 H1280 C1202 204 1174 362 1074 397"/>
+    <path d="M1492 696 H1272 C1190 696 1166 550 1068 512"/>
+    <path d="M800 54 V256"/>
+  </g>
+  <g fill="#7eeed8" filter="url(#glow)">
+    <circle cx="108" cy="178" r="9"/><circle cx="108" cy="710" r="9"/>
+    <circle cx="1492" cy="204" r="9"/><circle cx="1492" cy="696" r="9"/>
+    <circle cx="800" cy="54" r="9"/>
+  </g>
+  <circle cx="800" cy="454" r="202" fill="#0a1e30" stroke="#74efd7" stroke-width="5"/>
+  <circle cx="800" cy="454" r="178" fill="none" stroke="#338ead" stroke-width="2" stroke-dasharray="4 13"/>
+  <path d="M800 304 L924 376 V520 L800 592 676 520 V376 Z" fill="url(#core)" opacity="0.18" stroke="#7af2dc" stroke-width="5"/>
+  <path d="M800 350 L881 397 V491 L800 538 719 491 V397 Z" fill="#0d2d42" stroke="#84f7df" stroke-width="4"/>
+  <circle cx="800" cy="444" r="42" fill="url(#core)" filter="url(#glow)"/>
+  <circle cx="800" cy="444" r="17" fill="#e5fff9"/>
+  <g fill="#89f4de">
+    <circle cx="676" cy="376" r="8"/><circle cx="924" cy="376" r="8"/>
+    <circle cx="676" cy="520" r="8"/><circle cx="924" cy="520" r="8"/>
+    <circle cx="800" cy="592" r="8"/>
+  </g>
+  <g fill="#47bddc" opacity="0.78">
+    <circle cx="318" cy="178" r="6"/><circle cx="330" cy="710" r="6"/>
+    <circle cx="1280" cy="204" r="6"/><circle cx="1272" cy="696" r="6"/>
+  </g>
+</svg>
