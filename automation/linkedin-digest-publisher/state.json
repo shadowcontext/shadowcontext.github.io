@@ -113,6 +113,22 @@
       "github_run_id": "30880787852",
       "status": "published",
       "last_error": null
+    },
+    "d4254afa10dc1590838ea6f8f46c0c724c29ae3dd102cffdfa7d2fa4fe20bb80": {
+      "title": "Daily Security Digest: Vulnerabilities, Management, and Verification",
+      "digest_date": "2026-08-04",
+      "digest_hash": "d4254afa10dc1590838ea6f8f46c0c724c29ae3dd102cffdfa7d2fa4fe20bb80",
+      "generated_at": "2026-08-05T07:54:22.758+04:00",
+      "briefing_url": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-04/d4254afa10dc1590/daily-digest.html",
+      "pdf_file": "assets/social/linkedin-digest/2026-08-04/d4254afa10dc1590/daily-digest.pdf",
+      "linkedin_caption": "Reviewing independent defensive cybersecurity updates, vulnerability disclosures, and verification practices for August 4, 2026.\n\nThis edition brings together 14 ShadowContext briefings from August 4, 2026, with direct source links and operational priorities.\n\nRead the full daily briefing:\nhttps://shadowcontext.com/assets/social/linkedin-digest/2026-08-04/d4254afa10dc1590/daily-digest.html\n\n#Cybersecurity #ThreatIntelligence #InfoSec #AISecurity",
+      "linkedin_document_urn": "urn:li:document:D4D10AQHguJbp2WjEcw",
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7490639685560709120",
+      "published_at": "2026-08-05T05:27:50.727Z",
+      "github_run_id": "30978170312",
+      "status": "published",
+      "last_error": null
     }
   }
 }
