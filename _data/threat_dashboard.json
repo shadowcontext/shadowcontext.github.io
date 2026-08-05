@@ -1,15 +1,45 @@
 {
-  "generated_at": "2026-08-04T01:22:46Z",
-  "generated_display": "04 Aug 2026 · 01:22 UTC",
+  "generated_at": "2026-08-05T01:17:45Z",
+  "generated_display": "05 Aug 2026 · 01:17 UTC",
   "metrics": {
-    "kev_total": 1657,
-    "kev_added_30d": 26,
-    "due_next_7d": 3,
+    "kev_total": 1660,
+    "kev_added_30d": 29,
+    "due_next_7d": 5,
     "ioc_total": 170,
     "ioc_total_display": "170",
     "ioc_total_exact": "170"
   },
   "vulnerabilities": [
+    {
+      "cve": "CVE-2026-9198",
+      "name": "IBM Langflow Code Injection Vulnerability",
+      "vendor": "IBM",
+      "product": "Langflow",
+      "date_added": "2026-08-04",
+      "due_date": "2026-08-07",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-9198"
+    },
+    {
+      "cve": "CVE-2026-34486",
+      "name": "Apache Tomcat Missing Encryption of Sensitive Data Vulnerability",
+      "vendor": "Apache",
+      "product": "Tomcat",
+      "date_added": "2026-08-04",
+      "due_date": "2026-08-07",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-34486"
+    },
+    {
+      "cve": "CVE-2026-18556",
+      "name": "N-able N-central Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+      "vendor": "N-able",
+      "product": "N-central",
+      "date_added": "2026-08-04",
+      "due_date": "2026-08-07",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-18556"
+    },
     {
       "cve": "CVE-2026-18577",
       "name": "N-able N-central Authentication Bypass Using an Alternate Path or Channel Vulnerability",
@@ -59,36 +89,6 @@
       "due_date": "2026-07-25",
       "ransomware": "Unknown",
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-50522"
-    },
-    {
-      "cve": "CVE-2026-16232",
-      "name": "Check Point SmartConsole Improper Authentication Vulnerability",
-      "vendor": "Check Point",
-      "product": "SmartConsole",
-      "date_added": "2026-07-22",
-      "due_date": "2026-07-25",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-16232"
-    },
-    {
-      "cve": "CVE-2026-63030",
-      "name": "WordPress Core Interpretation Conflict Vulnerability",
-      "vendor": "WordPress",
-      "product": "Core",
-      "date_added": "2026-07-21",
-      "due_date": "2026-07-24",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-63030"
-    },
-    {
-      "cve": "CVE-2026-60137",
-      "name": "WordPress Core SQL Injection Vulnerability",
-      "vendor": "WordPress",
-      "product": "Core",
-      "date_added": "2026-07-21",
-      "due_date": "2026-08-04",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-60137"
     }
   ],
   "platforms": [
@@ -161,6 +161,46 @@
   ],
   "advisories": [
     {
+      "authority": "Saudi NCA / CERT",
+      "title": "F5 Alert",
+      "url": "https://nca.gov.sa/en/cert/7833/",
+      "date": "2026-08-05",
+      "severity": "High",
+      "summary": "Security alert 2026-7710. Review the official notice for affected products and remediation guidance."
+    },
+    {
+      "title": "Acrisure KARR BT and DR-100",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-216-01",
+      "date": "2026-08-04",
+      "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to perform unauthorized vehicle control operations. The following versions of Acrisure…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
+      "url": "https://www.cisa.gov/news-events/alerts/2026/08/04/cisa-adds-three-known-exploited-vulnerabilities-catalog",
+      "date": "2026-08-04",
+      "summary": "CISA has added three new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-9198 IBM Langflow Code…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "authority": "Saudi NCA / CERT",
+      "title": "Lenovo Alert",
+      "url": "https://nca.gov.sa/en/cert/7832/",
+      "date": "2026-08-04",
+      "severity": "High",
+      "summary": "Security alert 2026-7709. Review the official notice for affected products and remediation guidance."
+    },
+    {
+      "authority": "Saudi NCA / CERT",
+      "title": "TP-Link Alert",
+      "url": "https://nca.gov.sa/en/cert/7831/",
+      "date": "2026-08-04",
+      "severity": "High",
+      "summary": "Security alert 2026-7708. Review the official notice for affected products and remediation guidance."
+    },
+    {
       "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
       "url": "https://www.cisa.gov/news-events/alerts/2026/08/03/cisa-adds-one-known-exploited-vulnerability-catalog",
       "date": "2026-08-03",
@@ -169,50 +209,10 @@
       "severity": ""
     },
     {
-      "authority": "Saudi NCA / CERT",
-      "title": "TP-Link Alert",
-      "url": "https://nca.gov.sa/en/cert/7821/",
-      "date": "2026-08-03",
-      "severity": "High",
-      "summary": "Security alert 2026-7698. Review the official notice for affected products and remediation guidance."
-    },
-    {
-      "authority": "Saudi NCA / CERT",
-      "title": "Synology Alert",
-      "url": "https://nca.gov.sa/en/cert/7820/",
-      "date": "2026-08-03",
-      "severity": "High",
-      "summary": "Security alert 2026-7697. Review the official notice for affected products and remediation guidance."
-    },
-    {
-      "authority": "Saudi NCA / CERT",
-      "title": "TP-Link Alert",
-      "url": "https://nca.gov.sa/en/cert/7819/",
-      "date": "2026-08-01",
-      "severity": "High",
-      "summary": "Security alert 2026-7696. Review the official notice for affected products and remediation guidance."
-    },
-    {
       "title": "MZ Automation GmbH libiec61850",
       "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-211-10",
       "date": "2026-07-30",
       "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to cause a denial-of-service condition on the device. The following versions of MZ…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
-      "title": "Mitsubishi Electric CC-Link IE TSN Communication Protocol",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-211-07",
-      "date": "2026-07-30",
-      "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker with access to the same network segment to tamper with communication data in the affected…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
-      "title": "Schneider Electric IGSS",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-211-04",
-      "date": "2026-07-30",
-      "summary": "View CSAF Summary Schneider Electric is aware of a vulnerability in its IGSS Definition module for the IGSS (Interactive Graphical SCADA System) product. The…",
       "authority": "CISA",
       "severity": ""
     },
@@ -324,7 +324,7 @@
       "path": "/assets/data/daily-urls.txt"
     }
   ],
-  "ioc_sha256": "8d7a890460e0769c898909af3bf51915f375d5c428d7320df03e445b0fc6d41a",
+  "ioc_sha256": "e7ef7e2a1b052821c070bb0f97a84d95a75723676b6d3de82a970b401404d383",
   "sources": {
     "kev": {
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
