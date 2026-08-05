@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Protected REST API log records</title>
+  <desc id="desc">Abstract layered API records pass through a translucent access shield while one record remains isolated in a protected channel.</desc>
+  <defs>
+    <linearGradient id="bg" x1="120" y1="40" x2="1490" y2="850" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07162B"/>
+      <stop offset="0.52" stop-color="#102E46"/>
+      <stop offset="1" stop-color="#071A27"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="640" y1="180" x2="980" y2="730" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#72E6D1" stop-opacity="0.78"/>
+      <stop offset="1" stop-color="#2C81A8" stop-opacity="0.28"/>
+    </linearGradient>
+    <linearGradient id="record" x1="250" y1="300" x2="1220" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8DD8E7" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#B6F5DE" stop-opacity="0.34"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(825 456) rotate(90) scale(390 520)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#43D7C0" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#43D7C0" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#020A12" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="825" cy="456" r="430" fill="url(#glow)"/>
+  <path d="M0 718C282 638 416 760 682 684C989 596 1187 650 1600 542V900H0Z" fill="#06121F" fill-opacity="0.58"/>
+  <g opacity="0.28" fill="none" stroke="#73C9DD" stroke-width="2">
+    <path d="M126 216C336 160 470 213 611 306"/>
+    <path d="M1017 604C1194 693 1370 688 1532 617"/>
+    <path d="M99 648C265 577 394 591 526 653"/>
+  </g>
+  <g filter="url(#shadow)">
+    <g transform="translate(180 260) rotate(-4 350 90)">
+      <rect width="690" height="180" rx="38" fill="url(#record)" stroke="#71BDD0" stroke-opacity="0.42" stroke-width="3"/>
+      <circle cx="72" cy="66" r="18" fill="#73D7CA" fill-opacity="0.72"/>
+      <rect x="112" y="49" width="325" height="28" rx="14" fill="#A1DCE4" fill-opacity="0.34"/>
+      <rect x="70" y="111" width="510" height="20" rx="10" fill="#6EAFC2" fill-opacity="0.22"/>
+    </g>
+    <g transform="translate(226 480) rotate(3 350 90)">
+      <rect width="700" height="180" rx="38" fill="url(#record)" stroke="#71BDD0" stroke-opacity="0.36" stroke-width="3"/>
+      <circle cx="72" cy="66" r="18" fill="#73D7CA" fill-opacity="0.58"/>
+      <rect x="112" y="49" width="275" height="28" rx="14" fill="#A1DCE4" fill-opacity="0.29"/>
+      <rect x="70" y="111" width="550" height="20" rx="10" fill="#6EAFC2" fill-opacity="0.2"/>
+    </g>
+  </g>
+  <ellipse cx="814" cy="477" rx="180" ry="300" fill="#3AD9C0" fill-opacity="0.14" filter="url(#blur)"/>
+  <path d="M810 157C879 211 958 236 1037 251V434C1037 592 949 708 810 758C671 708 583 592 583 434V251C662 236 741 211 810 157Z" fill="url(#shield)" stroke="#A9F5E7" stroke-opacity="0.78" stroke-width="5"/>
+  <path d="M810 207C868 249 927 269 988 282V431C988 555 921 650 810 699C699 650 632 555 632 431V282C693 269 752 249 810 207Z" fill="#0A2637" fill-opacity="0.6" stroke="#70DDCD" stroke-opacity="0.34" stroke-width="3"/>
+  <g filter="url(#shadow)">
+    <rect x="690" y="387" width="240" height="166" rx="34" fill="#0D3C50" stroke="#A5F1E2" stroke-width="4"/>
+    <circle cx="745" cy="442" r="17" fill="#84E8D5"/>
+    <rect x="782" y="425" width="104" height="25" rx="12.5" fill="#C3F7EB" fill-opacity="0.72"/>
+    <rect x="734" y="489" width="151" height="18" rx="9" fill="#78CBD4" fill-opacity="0.44"/>
+  </g>
+  <path d="M1043 359C1135 348 1204 381 1269 443" fill="none" stroke="#83DECF" stroke-opacity="0.54" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="1291" cy="465" r="28" fill="#102E42" stroke="#8BE5D5" stroke-width="4"/>
+  <circle cx="1291" cy="465" r="7" fill="#9BF0DF"/>
+  <g opacity="0.55">
+    <circle cx="1410" cy="174" r="6" fill="#8CE6D7"/>
+    <circle cx="1482" cy="258" r="4" fill="#79BFD0"/>
+    <circle cx="1330" cy="716" r="5" fill="#8CE6D7"/>
+    <circle cx="189" cy="731" r="5" fill="#79BFD0"/>
+  </g>
+</svg>
