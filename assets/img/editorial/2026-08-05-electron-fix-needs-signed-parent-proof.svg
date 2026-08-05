@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Signed parent process trust boundary</title>
+  <desc id="desc">Abstract nested process orbs crossing a luminous signed trust boundary while a forged path is deflected.</desc>
+  <defs>
+    <linearGradient id="bg" x1="120" y1="70" x2="1480" y2="830" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07172D"/>
+      <stop offset="0.55" stop-color="#102442"/>
+      <stop offset="1" stop-color="#07131F"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0" cy="0" r="1" gradientTransform="translate(830 445) rotate(90) scale(365 520)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#43D8D0" stop-opacity="0.24"/>
+      <stop offset="0.55" stop-color="#538BFF" stop-opacity="0.09"/>
+      <stop offset="1" stop-color="#07172D" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="boundary" x1="618" y1="164" x2="1000" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B7FFF1"/>
+      <stop offset="0.44" stop-color="#46D9D0"/>
+      <stop offset="1" stop-color="#568BFF"/>
+    </linearGradient>
+    <linearGradient id="orb" x1="660" y1="310" x2="975" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4FFFD"/>
+      <stop offset="0.2" stop-color="#7BECE3"/>
+      <stop offset="0.65" stop-color="#3978D7"/>
+      <stop offset="1" stop-color="#152B58"/>
+    </linearGradient>
+    <linearGradient id="forged" x1="172" y1="665" x2="636" y2="485" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF668A" stop-opacity="0"/>
+      <stop offset="0.38" stop-color="#FF668A" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#FFB374"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="38"/>
+    </filter>
+    <pattern id="grain" width="54" height="54" patternUnits="userSpaceOnUse">
+      <circle cx="6" cy="10" r="1" fill="#D9FFFF" opacity="0.08"/>
+      <circle cx="32" cy="37" r="1.2" fill="#8AB5FF" opacity="0.07"/>
+      <circle cx="48" cy="18" r="0.8" fill="#FFFFFF" opacity="0.06"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#halo)"/>
+  <rect width="1600" height="900" fill="url(#grain)"/>
+
+  <g opacity="0.38" fill="none" stroke="#77A6D8">
+    <path d="M70 212C276 92 410 130 520 238" stroke-width="2"/>
+    <path d="M1080 676C1265 824 1438 786 1560 678" stroke-width="2"/>
+    <path d="M1165 128C1310 153 1415 258 1494 405" stroke-width="1.5" stroke-dasharray="7 16"/>
+  </g>
+
+  <ellipse cx="812" cy="456" rx="330" ry="324" fill="#20D8CF" opacity="0.08" filter="url(#soft)"/>
+  <circle cx="812" cy="456" r="286" fill="none" stroke="#2E5B85" stroke-width="38" opacity="0.28"/>
+  <circle cx="812" cy="456" r="274" fill="none" stroke="url(#boundary)" stroke-width="8" filter="url(#glow)"/>
+  <circle cx="812" cy="456" r="228" fill="none" stroke="#86F7EC" stroke-width="2" stroke-dasharray="3 18" opacity="0.62"/>
+
+  <g transform="rotate(-12 812 456)">
+    <path d="M812 176L864 198L910 180L941 225L993 236L1000 290L1040 324L1019 374L1037 424L997 458L989 512L936 521L905 565L858 547L807 570L775 527L721 520L713 466L671 434L688 383L666 334L705 298L711 244L764 233Z" fill="#0A1B34" stroke="#4EE2D9" stroke-width="4" opacity="0.88"/>
+  </g>
+
+  <circle cx="812" cy="456" r="130" fill="url(#orb)" stroke="#C9FFF7" stroke-width="5" filter="url(#glow)"/>
+  <circle cx="775" cy="416" r="54" fill="#FFFFFF" opacity="0.16"/>
+  <circle cx="812" cy="456" r="70" fill="#0A1D3A" opacity="0.72"/>
+  <path d="M775 460L800 485L852 425" fill="none" stroke="#BFFFF4" stroke-width="19" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#glow)">
+    <path d="M156 690C318 654 426 590 548 515C585 492 610 476 642 464" fill="none" stroke="url(#forged)" stroke-width="12" stroke-linecap="round"/>
+    <path d="M615 435L654 461L617 491" fill="none" stroke="#FFB374" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <path d="M640 412L692 456L640 500" fill="#0A2039" stroke="#87F8EC" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M619 386L664 409M603 456L651 456M619 526L664 503" stroke="#FF8E92" stroke-width="5" stroke-linecap="round" opacity="0.9"/>
+
+  <g fill="#8CF3EA" opacity="0.8">
+    <circle cx="1126" cy="332" r="11"/>
+    <circle cx="1181" cy="386" r="6"/>
+    <circle cx="1097" cy="558" r="8"/>
+    <circle cx="508" cy="335" r="7"/>
+  </g>
+  <g fill="none" stroke="#6398D3" opacity="0.5">
+    <circle cx="1126" cy="332" r="27"/>
+    <circle cx="1097" cy="558" r="22"/>
+    <circle cx="508" cy="335" r="20"/>
+  </g>
+
+  <path d="M1106 720C985 766 668 793 429 718" fill="none" stroke="#5E8FC1" stroke-width="2" opacity="0.25"/>
+  <path d="M1191 758C980 852 536 830 307 685" fill="none" stroke="#70E8DF" stroke-width="2" opacity="0.16"/>
+</svg>
