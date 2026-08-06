@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Separate permission gate for a mobile GUI agent</title>
+  <desc id="desc">Abstract editorial artwork showing a luminous mobile task path paused at an independent amber permission gate before protected data orbits.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#061522"/>
+      <stop offset="0.52" stop-color="#0b2a3a"/>
+      <stop offset="1" stop-color="#123447"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="50%" cy="47%" r="56%">
+      <stop offset="0" stop-color="#55e1d4" stop-opacity="0.22"/>
+      <stop offset="0.58" stop-color="#238aa3" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#061522" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="device" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#153f53"/>
+      <stop offset="1" stop-color="#081c2b"/>
+    </linearGradient>
+    <linearGradient id="task" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#58eadc"/>
+      <stop offset="1" stop-color="#279bb8"/>
+    </linearGradient>
+    <linearGradient id="gate" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffe08a"/>
+      <stop offset="1" stop-color="#e48a36"/>
+    </linearGradient>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#020810" flood-opacity="0.58"/>
+    </filter>
+    <pattern id="mesh" width="72" height="72" patternUnits="userSpaceOnUse">
+      <path d="M72 0H0V72" fill="none" stroke="#8de4df" stroke-opacity="0.05"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#mesh)"/>
+  <ellipse cx="800" cy="425" rx="680" ry="440" fill="url(#aura)"/>
+
+  <g opacity="0.45" fill="none" stroke="#72ddd7" stroke-linecap="round">
+    <path d="M88 210C310 210 346 330 510 354" stroke-width="5"/>
+    <path d="M88 690C310 690 346 570 510 546" stroke-width="5"/>
+    <path d="M1512 210C1290 210 1254 330 1090 354" stroke-width="5"/>
+    <path d="M1512 690C1290 690 1254 570 1090 546" stroke-width="5"/>
+  </g>
+
+  <g transform="translate(470 72)" filter="url(#shadow)">
+    <rect x="0" y="0" width="660" height="756" rx="88" fill="url(#device)" stroke="#73ddd7" stroke-opacity="0.52" stroke-width="4"/>
+    <rect x="36" y="42" width="588" height="672" rx="58" fill="#071a28" stroke="#2a7083" stroke-width="3"/>
+    <path d="M266 22H394" stroke="#a8eee7" stroke-opacity="0.58" stroke-width="9" stroke-linecap="round"/>
+
+    <g fill="none" stroke="#4bcfc8" stroke-opacity="0.28">
+      <rect x="88" y="104" width="204" height="98" rx="26" stroke-width="3"/>
+      <rect x="368" y="104" width="204" height="98" rx="26" stroke-width="3"/>
+      <rect x="88" y="554" width="204" height="98" rx="26" stroke-width="3"/>
+      <rect x="368" y="554" width="204" height="98" rx="26" stroke-width="3"/>
+    </g>
+
+    <path d="M116 258C210 258 214 336 304 336" fill="none" stroke="url(#task)" stroke-width="18" stroke-linecap="round" filter="url(#softGlow)"/>
+    <circle cx="116" cy="258" r="20" fill="#61ebdd"/>
+    <circle cx="238" cy="314" r="11" fill="#8cf2e8"/>
+
+    <g transform="translate(300 226)">
+      <rect x="0" y="0" width="60" height="240" rx="30" fill="url(#gate)" filter="url(#softGlow)"/>
+      <rect x="-48" y="84" width="156" height="72" rx="36" fill="#123548" stroke="#ffd37b" stroke-width="5"/>
+      <circle cx="30" cy="120" r="18" fill="#ffd77f"/>
+    </g>
+
+    <path d="M360 346C448 346 452 420 544 420" fill="none" stroke="#54c9c4" stroke-opacity="0.32" stroke-width="12" stroke-linecap="round" stroke-dasharray="4 22"/>
+
+    <g transform="translate(512 420)" fill="none">
+      <circle r="86" stroke="#5bd7d1" stroke-opacity="0.34" stroke-width="3"/>
+      <circle r="57" stroke="#92ebe4" stroke-opacity="0.5" stroke-width="4" stroke-dasharray="3 13"/>
+      <circle r="25" fill="#1b5367" stroke="#7ee7df" stroke-width="4"/>
+      <circle cx="0" cy="-86" r="9" fill="#f3ad53"/>
+      <circle cx="57" cy="0" r="8" fill="#f3ad53"/>
+      <circle cx="-40" cy="40" r="7" fill="#f3ad53"/>
+    </g>
+  </g>
+
+  <g fill="#68e4da" filter="url(#softGlow)">
+    <circle cx="220" cy="210" r="8"/>
+    <circle cx="256" cy="675" r="8"/>
+    <circle cx="1380" cy="210" r="8"/>
+    <circle cx="1344" cy="675" r="8"/>
+  </g>
+  <path d="M0 814C260 760 460 842 710 806C1010 762 1265 848 1600 780V900H0Z" fill="#04101c" fill-opacity="0.68"/>
+</svg>
