@@ -1,15 +1,25 @@
 {
-  "generated_at": "2026-08-05T01:17:45Z",
-  "generated_display": "05 Aug 2026 · 01:17 UTC",
+  "generated_at": "2026-08-06T01:23:45Z",
+  "generated_display": "06 Aug 2026 · 01:23 UTC",
   "metrics": {
-    "kev_total": 1660,
-    "kev_added_30d": 29,
-    "due_next_7d": 5,
+    "kev_total": 1661,
+    "kev_added_30d": 30,
+    "due_next_7d": 6,
     "ioc_total": 170,
     "ioc_total_display": "170",
     "ioc_total_exact": "170"
   },
   "vulnerabilities": [
+    {
+      "cve": "CVE-2026-63077",
+      "name": "JetBrains TeamCity Deserialization of Untrusted Data Vulnerability",
+      "vendor": "JetBrains",
+      "product": "TeamCity",
+      "date_added": "2026-08-05",
+      "due_date": "2026-08-08",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-63077"
+    },
     {
       "cve": "CVE-2026-9198",
       "name": "IBM Langflow Code Injection Vulnerability",
@@ -79,16 +89,6 @@
       "due_date": "2026-08-10",
       "ransomware": "Unknown",
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2025-68686"
-    },
-    {
-      "cve": "CVE-2026-50522",
-      "name": "Microsoft SharePoint Deserialization of Untrusted Data Vulnerability ",
-      "vendor": "Microsoft",
-      "product": "SharePoint",
-      "date_added": "2026-07-22",
-      "due_date": "2026-07-25",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-50522"
     }
   ],
   "platforms": [
@@ -161,12 +161,36 @@
   ],
   "advisories": [
     {
+      "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+      "url": "https://www.cisa.gov/news-events/alerts/2026/08/05/cisa-adds-one-known-exploited-vulnerability-catalog",
+      "date": "2026-08-05",
+      "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-63077 JetBrains TeamCity…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
       "authority": "Saudi NCA / CERT",
-      "title": "F5 Alert",
-      "url": "https://nca.gov.sa/en/cert/7833/",
+      "title": "Cisco Alert",
+      "url": "https://nca.gov.sa/en/cert/7837/",
+      "date": "2026-08-05",
+      "severity": "Critical",
+      "summary": "Security alert 2026-7714. Review the official notice for affected products and remediation guidance."
+    },
+    {
+      "authority": "Saudi NCA / CERT",
+      "title": "Jenkins Alert",
+      "url": "https://nca.gov.sa/en/cert/7836/",
+      "date": "2026-08-05",
+      "severity": "Critical",
+      "summary": "Security alert 2026-7713. Review the official notice for affected products and remediation guidance."
+    },
+    {
+      "authority": "Saudi NCA / CERT",
+      "title": "ManageEngine Alert",
+      "url": "https://nca.gov.sa/en/cert/7835/",
       "date": "2026-08-05",
       "severity": "High",
-      "summary": "Security alert 2026-7710. Review the official notice for affected products and remediation guidance."
+      "summary": "Security alert 2026-7712. Review the official notice for affected products and remediation guidance."
     },
     {
       "title": "Acrisure KARR BT and DR-100",
@@ -185,34 +209,10 @@
       "severity": ""
     },
     {
-      "authority": "Saudi NCA / CERT",
-      "title": "Lenovo Alert",
-      "url": "https://nca.gov.sa/en/cert/7832/",
-      "date": "2026-08-04",
-      "severity": "High",
-      "summary": "Security alert 2026-7709. Review the official notice for affected products and remediation guidance."
-    },
-    {
-      "authority": "Saudi NCA / CERT",
-      "title": "TP-Link Alert",
-      "url": "https://nca.gov.sa/en/cert/7831/",
-      "date": "2026-08-04",
-      "severity": "High",
-      "summary": "Security alert 2026-7708. Review the official notice for affected products and remediation guidance."
-    },
-    {
       "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
       "url": "https://www.cisa.gov/news-events/alerts/2026/08/03/cisa-adds-one-known-exploited-vulnerability-catalog",
       "date": "2026-08-03",
       "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-18577 N-able N-central…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
-      "title": "MZ Automation GmbH libiec61850",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-211-10",
-      "date": "2026-07-30",
-      "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to cause a denial-of-service condition on the device. The following versions of MZ…",
       "authority": "CISA",
       "severity": ""
     },
@@ -324,7 +324,7 @@
       "path": "/assets/data/daily-urls.txt"
     }
   ],
-  "ioc_sha256": "e7ef7e2a1b052821c070bb0f97a84d95a75723676b6d3de82a970b401404d383",
+  "ioc_sha256": "03bc78e2b689d1c89a7254eae7e4db4bb9222cc7623d7a095a4991d0c0375afe",
   "sources": {
     "kev": {
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
