@@ -129,6 +129,22 @@
       "github_run_id": "30978170312",
       "status": "published",
       "last_error": null
+    },
+    "bcbb9b28d8f5f56ceefb8e603c86caff4ca904a8feb4b3556bd9586bc4413ac4": {
+      "title": "Defensive Security-News Digest: August 5, 2026",
+      "digest_date": "2026-08-05",
+      "digest_hash": "bcbb9b28d8f5f56ceefb8e603c86caff4ca904a8feb4b3556bd9586bc4413ac4",
+      "generated_at": "2026-08-06T07:59:31.178+04:00",
+      "briefing_url": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-05/bcbb9b28d8f5f56c/daily-digest.html",
+      "pdf_file": "assets/social/linkedin-digest/2026-08-05/bcbb9b28d8f5f56c/daily-digest.pdf",
+      "linkedin_caption": "Review today's essential defensive cybersecurity briefings covering management controls, framework patches, and AI workflow security.\n\nThis edition brings together 13 ShadowContext briefings from August 5, 2026, with direct source links and operational priorities.\n\nRead the full daily briefing:\nhttps://shadowcontext.com/assets/social/linkedin-digest/2026-08-05/bcbb9b28d8f5f56c/daily-digest.html\n\n#Cybersecurity #ThreatIntelligence #InfoSec #AISecurity",
+      "linkedin_document_urn": "urn:li:document:D4E10AQH9r_I0D07-zA",
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7491002622447955968",
+      "published_at": "2026-08-06T05:30:01.600Z",
+      "github_run_id": "31074284832",
+      "status": "published",
+      "last_error": null
     }
   }
 }
