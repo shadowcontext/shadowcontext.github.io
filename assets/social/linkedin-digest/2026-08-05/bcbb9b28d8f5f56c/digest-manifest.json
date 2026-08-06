@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-08-06T07:59:31.178+04:00",
+  "digestDate": "2026-08-05",
+  "digestHash": "bcbb9b28d8f5f56ceefb8e603c86caff4ca904a8feb4b3556bd9586bc4413ac4",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "Defensive Security-News Digest: August 5, 2026",
+  "articleCount": 13,
+  "sourceArticles": [
+    {
+      "title": "Check Point Management Fix Needs Server-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/check-point-management-fix-needs-server-proof/",
+      "publishedAt": "2026-08-05T00:10:15.000+04:00",
+      "category": "defense",
+      "sourceHash": "bd1d5f645b4b88db323e58e8d322d5746f8b62db52128c102b47448eb3849500"
+    },
+    {
+      "title": "Tenable Sensor Proxy Fix Needs Upstream Trust Proof",
+      "canonicalUrl": "https://shadowcontext.com/tenable-sensor-proxy-fix-needs-upstream-trust-proof/",
+      "publishedAt": "2026-08-05T02:09:01.000+04:00",
+      "category": "defense",
+      "sourceHash": "6ef2e3548afc8f7bc55203639e57f5a25364df3c4d3c4d60c921ab3d79aca289"
+    },
+    {
+      "title": "Traefik Fixes Need Namespace-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/traefik-fixes-need-namespace-level-proof/",
+      "publishedAt": "2026-08-05T04:10:47.000+04:00",
+      "category": "defense",
+      "sourceHash": "b2dc943f2fc2d4e1f52dbb79a7cec4e9389ac134a9f07d4d1acd534fefb17f0e"
+    },
+    {
+      "title": "Agent Workflows Need Unforgeable Authorization",
+      "canonicalUrl": "https://shadowcontext.com/agent-workflows-need-unforgeable-authorization/",
+      "publishedAt": "2026-08-05T08:10:55.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "e18e96e9a9b821051ce209a129ba7f7b86d7c9db3a8fa9a6ba31c32514826728"
+    },
+    {
+      "title": "Persona Skills Need Privacy and Authenticity Controls",
+      "canonicalUrl": "https://shadowcontext.com/persona-skills-need-privacy-and-authenticity-controls/",
+      "publishedAt": "2026-08-05T10:10:36.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "ef8644df2dd8a8008e6be5266064bf6bd2c269d5530fab037f0af4044c7799dd"
+    },
+    {
+      "title": "Self-Evolving Agent Skills Need Lifecycle Controls",
+      "canonicalUrl": "https://shadowcontext.com/self-evolving-agent-skills-need-lifecycle-controls/",
+      "publishedAt": "2026-08-05T11:10:18.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "e1a793947dd64d8f8416e963d4ecbbcac6d2e5be2e14ee3c0cadde240f668b1b"
+    },
+    {
+      "title": "Edge Mobile Security Update Needs Device-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/edge-mobile-update-needs-device-level-proof/",
+      "publishedAt": "2026-08-05T12:09:35.000+04:00",
+      "category": "defense",
+      "sourceHash": "1e71e5117c96d8c18cfa92a825be6169c16538bb2cb1558265e535618bc2788a"
+    },
+    {
+      "title": "REST API Logs Need Data-Level Authorization",
+      "canonicalUrl": "https://shadowcontext.com/rest-api-logs-need-data-level-authorization/",
+      "publishedAt": "2026-08-05T13:10:18.000+04:00",
+      "category": "defense",
+      "sourceHash": "3c7a9f766f81d3997e3240e686d3577f00019bb62b02b25996351d46b4b3123d"
+    },
+    {
+      "title": "OVSwrap Fix Needs Kernel and Module Proof",
+      "canonicalUrl": "https://shadowcontext.com/ovswrap-fix-needs-kernel-and-module-proof/",
+      "publishedAt": "2026-08-05T18:10:27.000+04:00",
+      "category": "defense",
+      "sourceHash": "385de4178f67840516ed534ceb7c58f1edfe2e946ce1f1ee1c7449916c3c449d"
+    },
+    {
+      "title": "Veeam Console Fix Needs Control-Plane Proof",
+      "canonicalUrl": "https://shadowcontext.com/veeam-console-fix-needs-control-plane-proof/",
+      "publishedAt": "2026-08-05T20:09:21.000+04:00",
+      "category": "defense",
+      "sourceHash": "8e25a52ea148770d4213dfd507df2bdf95056bf543204c1981905eee8bac1533"
+    },
+    {
+      "title": "Electron’s macOS Fix Needs Signed-Parent Proof",
+      "canonicalUrl": "https://shadowcontext.com/electron-fix-needs-signed-parent-proof/",
+      "publishedAt": "2026-08-05T21:11:06.000+04:00",
+      "category": "defense",
+      "sourceHash": "6c8e0d3c3b6bb0a645d518bfe76282daf8a0b06d650cbd8e72665cec1c1ab8b7"
+    },
+    {
+      "title": "Pixel August Update Needs Patch-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/pixel-august-update-needs-patch-level-proof/",
+      "publishedAt": "2026-08-05T22:12:45.000+04:00",
+      "category": "defense",
+      "sourceHash": "36a2b645c27440f7216997628bb6b871b163c225eb651703aa3efc961d7e55ff"
+    },
+    {
+      "title": "macOS Screen Sharing Needs Configuration-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/macos-screen-sharing-needs-config-level-proof/",
+      "publishedAt": "2026-08-05T23:10:02.000+04:00",
+      "category": "defense",
+      "sourceHash": "2528d16dbb99d2824024905269125d17622a416fdee61a8b0eb937746afe6262"
+    }
+  ],
+  "caption": "Review today's essential defensive cybersecurity briefings covering management controls, framework patches, and AI workflow security.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-08-05/bcbb9b28d8f5f56c/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-05/bcbb9b28d8f5f56c/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-08-05/bcbb9b28d8f5f56c/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-05/bcbb9b28d8f5f56c/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}

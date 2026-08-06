@@ -1,0 +1,105 @@
+{
+  "digest_title": "Defensive Security-News Digest: August 5, 2026",
+  "dek": "Daily defensive cybersecurity intelligence covering management plane updates, API authorization, agent AI workflow risks, and endpoint patch-level verifications.",
+  "overview": "Today's digest spans critical management plane fixes, AI agent trust boundaries, authorization flaws, and endpoint verification steps across multiple vendors and open source platforms.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "Check Point Management Hotfix Takes Address Authentication Bypass",
+      "summary": "Check Point released hotfix takes to fix CVE-2026-18574, a management authentication bypass affecting primary, secondary, and multi-domain security management servers.",
+      "why_it_matters": "Management servers define security policy and carry administrative authority, making control-plane updates critical.",
+      "topic": "Check Point defense"
+    },
+    {
+      "source_id": "S02",
+      "headline": "Tenable Sensor Proxy 1.4.2 Fixes Code Injection Flaw",
+      "summary": "Tenable released Sensor Proxy 1.4.2 to fix CVE-2026-18667, a code-injection vulnerability in the sensor communication proxy.",
+      "why_it_matters": "Defenders must verify running proxy versions and upstream trust to prevent unauthorized redirection.",
+      "topic": "Tenable Sensor Proxy"
+    },
+    {
+      "source_id": "S03",
+      "headline": "Traefik Fixes Route Identity And Cross-Namespace Boundaries",
+      "summary": "Traefik fixed a high-severity route-collision issue in the Gateway API provider and a cross-namespace reference flaw in the CRD provider.",
+      "why_it_matters": "Shared Kubernetes clusters require correct runtime versions to preserve tenant boundaries.",
+      "topic": "Traefik Kubernetes security"
+    },
+    {
+      "source_id": "S04",
+      "headline": "Research Exposes Agent Handoff Authorization Flaws",
+      "summary": "Research into Google's ADK Python repository showed how untrusted public inputs can influence triage agents to trigger privileged workflows.",
+      "why_it_matters": "Trusted agent identities require provenance-aware authorization rather than simple author checks.",
+      "topic": "AI agent security"
+    },
+    {
+      "source_id": "S05",
+      "headline": "Persona Skill Benchmark Highlights Aggregation And Privacy Risks",
+      "summary": "A new preprint benchmark evaluates persona skills distilled from interaction histories, revealing potential privacy leakage and behavioral impersonation risks.",
+      "why_it_matters": "Reusable AI profiles combine scattered preference fragments into portable identity artifacts.",
+      "topic": "AI persona security"
+    },
+    {
+      "source_id": "S06",
+      "headline": "SkillJack Research Warns Of Persistent Poisoned Agent Skills",
+      "summary": "SkillJack research demonstrates how poisoned agent interaction experiences can be converted into durable, persistent skills that survive memory cleanup.",
+      "why_it_matters": "Safety checks must follow information through transformation because learned artifacts outlive source records.",
+      "topic": "AI skill evolution"
+    },
+    {
+      "source_id": "S07",
+      "headline": "Microsoft Edge 151.0.4129.59 Updates Android And iOS",
+      "summary": "Microsoft released Edge 151.0.4129.59 for Android and iOS incorporating the latest Chromium project security updates.",
+      "why_it_matters": "Mobile browsers require direct device inventory rather than relying on automatic store updates.",
+      "topic": "Edge mobile defense"
+    },
+    {
+      "source_id": "S08",
+      "headline": "WordPress REST API Log Plugin Fixes Access Flaw",
+      "summary": "CVE-2026-16547 in REST API Log versions before 1.7.1 allowed valid tokens to access other logged REST entries.",
+      "why_it_matters": "Diagnostic logs aggregate sensitive data and require object-level authorization and minimization.",
+      "topic": "WordPress security"
+    },
+    {
+      "source_id": "S09",
+      "headline": "OVSwrap Local Privilege Escalation Kernel Flaw Patched",
+      "summary": "The OVSwrap vulnerability in the Linux kernel Open vSwitch datapath allows local privilege escalation under specific conditions.",
+      "why_it_matters": "Defenders must verify distributor-patched kernels and module states across mixed server fleets.",
+      "topic": "Linux kernel defense"
+    },
+    {
+      "source_id": "S10",
+      "headline": "Veeam Service Provider Console 9.3 Fixes Critical Flaws",
+      "summary": "Veeam fixed four vulnerabilities in Service Provider Console version 9 builds, releasing version 9.3.0.35057.",
+      "why_it_matters": "Console vulnerabilities can compromise core trust relationships and managed agent credentials.",
+      "topic": "Veeam Service Console"
+    },
+    {
+      "source_id": "S11",
+      "headline": "Electron macOS Fixes Same-Signed-Parent Check Bypass",
+      "summary": "Electron updated its advisory for a macOS flaw allowing local processes to bypass same-signed-parent checks in hardened apps.",
+      "why_it_matters": "Framework patches require affected apps to be rebuilt, re-signed, distributed, and verified.",
+      "topic": "Electron macOS defense"
+    },
+    {
+      "source_id": "S12",
+      "headline": "Google Releases August Pixel Update With VPU Fix",
+      "summary": "Google's August Pixel update addresses a high-severity elevation-of-privilege flaw in the Video Processing Unit.",
+      "why_it_matters": "Hardware-aware inventory and endpoint proof ensure devices reach the 2026-08-05 patch level.",
+      "topic": "Pixel device defense"
+    },
+    {
+      "source_id": "S13",
+      "headline": "macOS Screen Sharing Access-Control Weakness Addressed",
+      "summary": "Apple addressed an access-control weakness in the Screen Sharing Server where legacy VNC password options risked file-transfer misuse.",
+      "why_it_matters": "Remote access security depends on patch level, service status, and configuration evidence.",
+      "topic": "macOS screen sharing"
+    }
+  ],
+  "operating_view": "Verify patches and configurations directly on managed nodes, management servers, and mobile devices while enforcing strict authorization and lifecycle controls across all integrated AI agent automation pipelines.",
+  "watch_items": [
+    "Confirm running build versions and active hotfix takes across management servers and intermediary proxies.",
+    "Audit agent workflows, distilled persona artifacts, and self-evolving skills for robust provenance and lifecycle controls.",
+    "Verify endpoint patch levels and configuration states across mobile devices and desktop operating systems."
+  ],
+  "caption_intro": "Review today's essential defensive cybersecurity briefings covering management controls, framework patches, and AI workflow security."
+}
