@@ -145,6 +145,22 @@
       "github_run_id": "31074284832",
       "status": "published",
       "last_error": null
+    },
+    "01adf4a4556e540ed68493fd31ac61b73d4db22a8e68dccbd55909eb92685271": {
+      "title": "Daily Security News Digest: Infrastructure Hardening and Agent Permissions",
+      "digest_date": "2026-08-06",
+      "digest_hash": "01adf4a4556e540ed68493fd31ac61b73d4db22a8e68dccbd55909eb92685271",
+      "generated_at": "2026-08-07T07:44:16.139+04:00",
+      "briefing_url": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-06/01adf4a4556e540e/daily-digest.html",
+      "pdf_file": "assets/social/linkedin-digest/2026-08-06/01adf4a4556e540e/daily-digest.pdf",
+      "linkedin_caption": "Review today's security intelligence digest for defensive insights, operational validation practices, and platform hardening updates.\n\nThis edition brings together 16 ShadowContext briefings from August 6, 2026, with direct source links and operational priorities.\n\nRead the full daily briefing:\nhttps://shadowcontext.com/assets/social/linkedin-digest/2026-08-06/01adf4a4556e540e/daily-digest.html\n\n#Cybersecurity #ThreatIntelligence #InfoSec #AISecurity",
+      "linkedin_document_urn": "urn:li:document:D4D10AQG42Tjpxvjy-g",
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7491351205336694784",
+      "published_at": "2026-08-07T04:35:10.271Z",
+      "github_run_id": "31147867332",
+      "status": "published",
+      "last_error": null
     }
   }
 }
