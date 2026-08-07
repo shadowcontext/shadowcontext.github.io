@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Protected publishing layers with twelve closing security seams</title>
+  <desc id="desc">An abstract editorial scene of translucent publishing pages held inside a luminous cyan protective band. Twelve small seams around the page edges transition from amber exposure to sealed blue-green light.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="0.52" stop-color="#102942"/>
+      <stop offset="1" stop-color="#07131e"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="55%" cy="48%" r="57%">
+      <stop offset="0" stop-color="#42dfd0" stop-opacity=".27"/>
+      <stop offset=".58" stop-color="#318eb6" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#07111f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d7fff8" stop-opacity=".62"/>
+      <stop offset=".44" stop-color="#64cbd1" stop-opacity=".25"/>
+      <stop offset="1" stop-color="#216381" stop-opacity=".12"/>
+    </linearGradient>
+    <linearGradient id="band" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2fa6e3"/>
+      <stop offset=".45" stop-color="#a7fff0"/>
+      <stop offset="1" stop-color="#2bd7ba"/>
+    </linearGradient>
+    <linearGradient id="seam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffb25b"/>
+      <stop offset=".35" stop-color="#ffe29b"/>
+      <stop offset=".7" stop-color="#91f7df"/>
+      <stop offset="1" stop-color="#36c9cc"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="26" stdDeviation="26" flood-color="#02070d" flood-opacity=".68"/>
+    </filter>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <ellipse cx="865" cy="438" rx="690" ry="430" fill="url(#aura)"/>
+  <g fill="none" stroke="#6adfd5" opacity=".15">
+    <path d="M-90 720 C235 520 426 645 684 508 C938 373 1182 452 1690 180" stroke-width="2"/>
+    <path d="M-90 757 C241 557 442 680 696 545 C952 410 1193 489 1690 220"/>
+    <path d="M-90 794 C250 595 456 718 711 582 C969 446 1210 526 1690 260"/>
+  </g>
+  <g transform="translate(330 175) rotate(-7 470 290)" filter="url(#shadow)">
+    <path d="M92 90 L786 22 L912 453 L221 540 Z" fill="url(#paper)" stroke="#4aa4ba" stroke-width="3" opacity=".48"/>
+    <path d="M58 130 L760 57 L886 500 L184 574 Z" fill="url(#paper)" stroke="#63c1c8" stroke-width="3" opacity=".68"/>
+    <path d="M28 172 L731 94 L856 542 L154 621 Z" fill="url(#paper)" stroke="#a8f4e8" stroke-width="4"/>
+    <path d="M106 240 C296 211 501 188 691 172" fill="none" stroke="#d5fff7" stroke-width="8" stroke-linecap="round" opacity=".32"/>
+    <path d="M121 302 C322 269 532 246 716 232" fill="none" stroke="#78d7d3" stroke-width="6" stroke-linecap="round" opacity=".28"/>
+    <path d="M137 364 C309 337 489 318 653 306" fill="none" stroke="#78d7d3" stroke-width="6" stroke-linecap="round" opacity=".22"/>
+    <path d="M153 426 C331 397 522 378 690 365" fill="none" stroke="#78d7d3" stroke-width="6" stroke-linecap="round" opacity=".18"/>
+  </g>
+  <g fill="none" stroke="url(#band)" stroke-linecap="round">
+    <path d="M387 269 C520 104 924 79 1190 204 C1392 299 1410 534 1240 674 C1045 835 629 808 401 646 C226 521 239 374 387 269 Z" stroke-width="30" opacity=".22" filter="url(#glow)"/>
+    <path d="M387 269 C520 104 924 79 1190 204 C1392 299 1410 534 1240 674 C1045 835 629 808 401 646 C226 521 239 374 387 269 Z" stroke-width="13"/>
+    <path d="M415 287 C544 136 919 112 1169 228 C1350 312 1367 516 1216 646 C1031 795 650 773 427 618 C273 511 278 386 415 287 Z" stroke="#d3fff7" stroke-width="2" opacity=".55"/>
+  </g>
+  <g stroke="url(#seam)" stroke-width="10" stroke-linecap="round">
+    <path d="M400 269 l32 29"/><path d="M515 181 l19 39"/><path d="M663 132 l8 43"/>
+    <path d="M827 115 l-2 44"/><path d="M991 129 l-12 42"/><path d="M1141 184 l-22 38"/>
+    <path d="M1302 305 l-40 18"/><path d="M1350 446 l-44 1"/><path d="M1303 589 l-40 -18"/>
+    <path d="M1179 702 l-24 -37"/><path d="M1011 769 l-11 -42"/><path d="M824 791 l1 -44"/>
+  </g>
+  <g fill="#b9fff2">
+    <circle cx="432" cy="298" r="7"/><circle cx="534" cy="220" r="7"/><circle cx="671" cy="175" r="7"/>
+    <circle cx="825" cy="159" r="7"/><circle cx="979" cy="171" r="7"/><circle cx="1119" cy="222" r="7"/>
+    <circle cx="1262" cy="323" r="7"/><circle cx="1306" cy="447" r="7"/><circle cx="1263" cy="571" r="7"/>
+    <circle cx="1155" cy="665" r="7"/><circle cx="1000" cy="727" r="7"/><circle cx="825" cy="747" r="7"/>
+  </g>
+  <g fill="#4bd7ca" opacity=".35" filter="url(#glow)">
+    <circle cx="287" cy="210" r="25"/><circle cx="1390" cy="270" r="22"/><circle cx="1255" cy="742" r="27"/>
+  </g>
+  <g fill="#9cf8ec" opacity=".38">
+    <circle cx="175" cy="598" r="4"/><circle cx="244" cy="677" r="3"/><circle cx="1435" cy="546" r="4"/>
+    <circle cx="1332" cy="159" r="3"/><circle cx="555" cy="82" r="4"/><circle cx="1092" cy="92" r="3"/>
+  </g>
+</svg>
