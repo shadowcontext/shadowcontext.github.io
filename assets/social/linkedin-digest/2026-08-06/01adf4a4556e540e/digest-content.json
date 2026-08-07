@@ -1,0 +1,126 @@
+{
+  "digest_title": "Daily Security News Digest: Infrastructure Hardening and Agent Permissions",
+  "dek": "A daily briefing covering critical software fixes, network device hardening, log hygiene, and permission authorization controls.",
+  "overview": "Today's security updates emphasize rigorous inventory, exact build verification, and feature-level exposure checks across major networking, management, and application platforms. Defensive posture requires separating task execution from permission authorization and maintaining strict boundary controls.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "EdgeConnect Orchestrator Fixes Need Build Proof",
+      "summary": "HPE fixed two EdgeConnect SD-WAN Orchestrator vulnerabilities. Defenders must verify specific builds rather than relying on general version numbers.",
+      "why_it_matters": "Central management plane security states influence configuration and visibility across many network paths.",
+      "topic": "SD-WAN Defense"
+    },
+    {
+      "source_id": "S02",
+      "headline": "IOS XE Hardening Needs Release-Level Proof",
+      "summary": "Cisco updated IOS XE across seven vulnerability classes. Defenders must map exact releases and upgrade, as no workarounds exist.",
+      "why_it_matters": "The breadth of affected platforms requires precise inventory and controlled patching without configuration substitutes.",
+      "topic": "IOS XE Hardening"
+    },
+    {
+      "source_id": "S03",
+      "headline": "Catalyst SD-WAN Hardening Needs Deployment Proof",
+      "summary": "Cisco addressed five Catalyst SD-WAN vulnerability classes with no workarounds available, necessitating precise deployment inventory and updates.",
+      "why_it_matters": "Platform-wide advisories demand deployment-wide evidence to ensure the distributed control plane returns to its operating state.",
+      "topic": "Catalyst SD-WAN"
+    },
+    {
+      "source_id": "S04",
+      "headline": "Cisco IMC Fixes Need Firmware Proof",
+      "summary": "Cisco fixed two Integrated Management Controller argument-injection flaws. Defenders must map hardware modes and verify firmware evidence.",
+      "why_it_matters": "Out-of-band management controllers require separate security asset tracking and specific appliance-level firmware validation.",
+      "topic": "IMC Security"
+    },
+    {
+      "source_id": "S05",
+      "headline": "XMCP Fix Needs Feature-Level Exposure Proof",
+      "summary": "Cisco fixed an XMCP denial-of-service flaw in IOS and IOS XE. Defenders must verify feature exposure, restrict clients, and update.",
+      "why_it_matters": "Platform inventory starts the search, but enabled feature and reachability evidence determine actual exposure.",
+      "topic": "XMCP Security"
+    },
+    {
+      "source_id": "S06",
+      "headline": "IOS XE BEEP Fix Needs Protocol Exposure Proof",
+      "summary": "Cisco fixed an unauthenticated BEEP denial-of-service flaw in IOS XE. Defenders must verify protocol exposure and upgrade affected devices.",
+      "why_it_matters": "Feature-aware exposure data decides remediation priority, and post-change evidence proves availability risk was reduced.",
+      "topic": "BEEP Protocol"
+    },
+    {
+      "source_id": "S07",
+      "headline": "IOS XE SNMP Fix Needs Monitoring-Path Proof",
+      "summary": "Cisco fixed an IOS XE SNMP denial-of-service flaw. Defenders must verify exposure, update devices, and preserve monitoring coverage.",
+      "why_it_matters": "Mitigations can cause visibility gaps, requiring comprehensive evidence across the entire monitoring path.",
+      "topic": "SNMP Security"
+    },
+    {
+      "source_id": "S08",
+      "headline": "MarkLogic Hadoop Fix Needs Role-and-Service Proof",
+      "summary": "Progress published a critical MarkLogic Server vulnerability crossing into the Security database. Defenders should update and narrow roles.",
+      "why_it_matters": "A fixed build closes the code path while role and service evidence ensures the integration boundary is controlled.",
+      "topic": "Database Defense"
+    },
+    {
+      "source_id": "S09",
+      "headline": "TS Agent Fix Needs Identity-Mapping Proof",
+      "summary": "Cisco fixed a Terminal Services Agent mapping flaw that incorrectly assigned firewall rules. Defenders must verify versions and policy outcomes.",
+      "why_it_matters": "Identity-based enforcement is a pipeline where connection mapping correctness requires direct evidence.",
+      "topic": "Identity Mapping"
+    },
+    {
+      "source_id": "S10",
+      "headline": "SD-WAN Logs Need Credential Boundaries",
+      "summary": "Cisco fixed an SD-WAN Manager flaw exposing credentials in logs. Defenders should update, restrict log access, and assess retained copies.",
+      "why_it_matters": "Observability data inherits the sensitivity of what software writes, requiring distinct authorization boundaries.",
+      "topic": "Log Security"
+    },
+    {
+      "source_id": "S11",
+      "headline": "RoomOS Logs Need Diagnostic-Data Boundaries",
+      "summary": "Cisco patched a RoomOS logging vulnerability exposing login credentials. Defenders must verify extended logging state and fixed releases.",
+      "why_it_matters": "Diagnostic modes increase detail, making logging paths a critical trust model surface.",
+      "topic": "RoomOS Security"
+    },
+    {
+      "source_id": "S12",
+      "headline": "IOS XE Web UI Fixes Need Feature-Level Proof",
+      "summary": "Cisco fixed two IOS XE web interface denial-of-service flaws. Defenders must verify enabled features, restrict access, and update.",
+      "why_it_matters": "Feature-level exposure provides a precise basis for triage over product names alone.",
+      "topic": "Web UI Security"
+    },
+    {
+      "source_id": "S13",
+      "headline": "Cisco IMC XSS Fix Needs Browser-Level Boundaries",
+      "summary": "Cisco published a fix for an IMC cross-site scripting flaw. Defenders must patch firmware, restrict management access, and protect browsers.",
+      "why_it_matters": "Privileged web administration requires a dedicated browser profile to prevent mixing administrative sessions with untrusted content.",
+      "topic": "IMC XSS"
+    },
+    {
+      "source_id": "S14",
+      "headline": "WPMU Dashboard Fix Needs Connection-State Proof",
+      "summary": "CVE-2026-15459 affects unconnected WPMU DEV Dashboard sites. Defenders should verify both update and connection state.",
+      "why_it_matters": "Enrollment and connection states determine whether a management plugin is vulnerable.",
+      "topic": "Plugin Security"
+    },
+    {
+      "source_id": "S15",
+      "headline": "Wallix Fixes Put Privileged-Access Control Planes on Patch List",
+      "summary": "CERT-FR highlighted critical Wallix Bastion and Access Manager flaws. Defenders must verify builds, API reachability, and SAML scope.",
+      "why_it_matters": "Privileged-access systems concentrate authority, requiring comprehensive build and access control evidence.",
+      "topic": "Privileged Access"
+    },
+    {
+      "source_id": "S16",
+      "headline": "Mobile GUI Agents Need a Separate Permission Gate",
+      "summary": "A mobile GUI agent preprint demonstrates that multimodal models make inconsistent permission decisions, requiring separate authorization gates.",
+      "why_it_matters": "Completing a delegated task does not authorize every capability; permission judgment needs its own evaluation.",
+      "topic": "AI Security"
+    }
+  ],
+  "operating_view": "Maintain strict asset inventory, enforce exact build-level and feature-level verification, and treat logs and permissions as independent security boundaries. Transition from simple task completion tracking to rigorous, evidence-led operational validation.",
+  "watch_items": [
+    "Verify exact build strings rather than relying on major or minor version labels.",
+    "Treat logging systems and diagnostic files as sensitive credential-bearing repositories.",
+    "Isolate permission authorization from task execution layers in automation and AI agents."
+  ],
+  "caption_intro": "Review today's security intelligence digest for defensive insights, operational validation practices, and platform hardening updates."
+}

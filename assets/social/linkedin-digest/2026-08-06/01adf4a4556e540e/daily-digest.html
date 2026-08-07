@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Daily Security News Digest: Infrastructure Hardening and Agent Permissions | ShadowContext</title>
+    <style>
+      :root {
+        --paper: #05080d;
+        --panel: #0d1319;
+        --panel-soft: #091017;
+        --ink: #f1f7fa;
+        --ink-2: #c4d1d8;
+        --muted: #8496a1;
+        --line: #1d2b34;
+        --cyan: #35e6d1;
+        --violet: #8b7dff;
+        --sans: "Space Grotesk", Inter, Arial, sans-serif;
+        --mono: "DM Mono", Consolas, monospace;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: var(--sans);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        font-size: 10.5pt;
+        line-height: 1.55;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        position: relative;
+        width: 210mm;
+        min-height: 297mm;
+        padding: 18mm;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 83% 18%, rgba(139, 125, 255, 0.1), transparent 28%),
+          linear-gradient(145deg, #05080d 0%, #081017 62%, #0c101c 100%);
+      }
+
+      .page::before {
+        content: "";
+        position: absolute;
+        inset: 8mm;
+        pointer-events: none;
+        border: 0.25mm solid var(--line);
+      }
+
+      .cover {
+        display: flex;
+        flex-direction: column;
+        page-break-after: always;
+      }
+
+      .brand-row,
+      .section-head,
+      .document-footer {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 4mm;
+        font-size: 20pt;
+        font-weight: 750;
+        letter-spacing: -0.04em;
+      }
+
+      .brand em {
+        color: var(--cyan);
+        font-style: normal;
+      }
+
+      .brand-mark {
+        position: relative;
+        display: block;
+        width: 12mm;
+        height: 12mm;
+        transform: rotate(30deg);
+        border: 1mm solid var(--cyan);
+        border-radius: 1.2mm;
+      }
+
+      .brand-mark::before {
+        content: "";
+        position: absolute;
+        inset: 2.2mm;
+        border: 0.8mm solid var(--violet);
+        border-radius: 0.9mm;
+      }
+
+      .brand-mark::after {
+        content: "";
+        position: absolute;
+        inset: 4.5mm;
+        background: var(--cyan);
+        border-radius: 0.5mm;
+      }
+
+      .edition,
+      .eyebrow,
+      .topic,
+      .section-count,
+      .why span,
+      .document-footer,
+      .source-link {
+        font-family: var(--mono);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .edition,
+      .section-count,
+      .document-footer {
+        color: var(--muted);
+        font-size: 8pt;
+      }
+
+      .cover-copy {
+        position: relative;
+        z-index: 1;
+        margin: 30mm 0 0;
+      }
+
+      .eyebrow {
+        margin: 0 0 7mm;
+        color: var(--cyan);
+        font-size: 10pt;
+      }
+
+      h1 {
+        max-width: 165mm;
+        margin: 0;
+        font-size: 37pt;
+        line-height: 1.03;
+        letter-spacing: -0.05em;
+      }
+
+      .dek {
+        max-width: 155mm;
+        margin: 10mm 0 0;
+        color: var(--ink-2);
+        font-size: 16pt;
+        line-height: 1.45;
+      }
+
+      .context {
+        position: relative;
+        z-index: 1;
+        margin-top: auto;
+        padding: 9mm;
+        background: rgba(13, 19, 25, 0.94);
+        border: 0.3mm solid var(--line);
+        border-left: 1mm solid var(--violet);
+      }
+
+      .context h2,
+      .section-head h2,
+      .operating-view h2,
+      .sources h2 {
+        margin: 0;
+      }
+
+      .context h2 {
+        color: var(--violet);
+        font-family: var(--mono);
+        font-size: 9pt;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .context p {
+        margin: 4mm 0 0;
+        color: var(--ink-2);
+        font-size: 13pt;
+      }
+
+      .cover-meta {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 9mm;
+        color: var(--muted);
+        font: 8pt var(--mono);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .content {
+        padding-top: 15mm;
+        padding-bottom: 18mm;
+      }
+
+      .section-head {
+        margin-bottom: 9mm;
+        padding-bottom: 5mm;
+        border-bottom: 0.3mm solid var(--line);
+      }
+
+      .section-head h2 {
+        font-size: 23pt;
+      }
+
+      .stories {
+        position: relative;
+        z-index: 1;
+      }
+
+      .story {
+        display: grid;
+        grid-template-columns: 15mm 1fr;
+        gap: 5mm;
+        margin: 0 0 6mm;
+        padding: 7mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: rgba(13, 19, 25, 0.96);
+        border: 0.3mm solid var(--line);
+      }
+
+      .story-index {
+        color: var(--cyan);
+        font: 12pt var(--mono);
+      }
+
+      .topic {
+        margin: 0 0 2mm;
+        color: var(--cyan);
+        font-size: 7.5pt;
+      }
+
+      .story h3 {
+        margin: 0;
+        font-size: 16pt;
+        line-height: 1.18;
+        letter-spacing: -0.025em;
+      }
+
+      .summary {
+        margin: 3mm 0;
+        color: var(--ink-2);
+        font-size: 10.5pt;
+      }
+
+      .why {
+        padding-top: 3mm;
+        border-top: 0.25mm solid var(--line);
+      }
+
+      .why span {
+        color: var(--violet);
+        font-size: 7pt;
+      }
+
+      .why p {
+        display: inline;
+        margin: 0 0 0 2mm;
+        font-weight: 650;
+      }
+
+      .source-link {
+        display: inline-block;
+        margin-top: 4mm;
+        color: var(--cyan);
+        font-size: 6.8pt;
+        letter-spacing: 0.04em;
+        text-transform: none;
+      }
+
+      .operating-view,
+      .sources {
+        position: relative;
+        z-index: 1;
+        margin-top: 12mm;
+        padding: 9mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: var(--panel-soft);
+        border: 0.3mm solid var(--line);
+      }
+
+      .operating-view {
+        border-top: 1mm solid var(--cyan);
+      }
+
+      .operating-view h2,
+      .sources h2 {
+        font-size: 18pt;
+      }
+
+      .operating-view > p {
+        color: var(--ink-2);
+        font-size: 12pt;
+      }
+
+      .watch-list,
+      .source-list {
+        margin: 6mm 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .watch-list li {
+        display: grid;
+        grid-template-columns: 9mm 1fr;
+        gap: 4mm;
+        align-items: start;
+        margin: 3mm 0;
+      }
+
+      .watch-list span {
+        display: grid;
+        width: 8mm;
+        height: 8mm;
+        place-items: center;
+        color: var(--cyan);
+        border: 0.3mm solid var(--cyan);
+        font: 8pt var(--mono);
+      }
+
+      .watch-list p {
+        margin: 0;
+      }
+
+      .source-list li {
+        display: grid;
+        grid-template-columns: 10mm 1fr;
+        gap: 3mm;
+        margin: 2.5mm 0;
+        color: var(--ink-2);
+        font-size: 8.5pt;
+      }
+
+      .source-list span {
+        color: var(--violet);
+        font-family: var(--mono);
+      }
+
+      .source-list a {
+        color: var(--cyan);
+        text-decoration: underline;
+        text-decoration-color: rgba(53, 230, 209, 0.35);
+        text-underline-offset: 1mm;
+      }
+
+      .cta {
+        position: relative;
+        z-index: 1;
+        margin: 12mm 0 0;
+        padding: 7mm 9mm;
+        break-inside: avoid;
+        color: #04100f;
+        background: var(--cyan);
+      }
+
+      .cta strong {
+        display: block;
+        font-size: 14pt;
+      }
+
+      .cta span {
+        font: 9pt var(--mono);
+      }
+
+      .document-footer {
+        margin-top: 12mm;
+        padding-top: 5mm;
+        border-top: 0.3mm solid var(--line);
+      }
+
+      @media screen {
+        body {
+          width: 210mm;
+          margin: 0 auto;
+        }
+
+        .page {
+          box-shadow: 0 0 20mm rgba(0, 0, 0, 0.45);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="page cover">
+      <header class="brand-row">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Shadow<em>Context</em></span>
+        </div>
+        <span class="edition">Daily security digest</span>
+      </header>
+
+      <main class="cover-copy">
+        <p class="eyebrow">The day in context / 2026-08-06</p>
+        <h1>Daily Security News Digest: Infrastructure Hardening and Agent Permissions</h1>
+        <p class="dek">A daily briefing covering critical software fixes, network device hardening, log hygiene, and permission authorization controls.</p>
+      </main>
+
+      <aside class="context">
+        <h2>Executive summary</h2>
+        <p>Today&#39;s security updates emphasize rigorous inventory, exact build verification, and feature-level exposure checks across major networking, management, and application platforms. Defensive posture requires separating task execution from permission authorization and maintaining strict boundary controls.</p>
+      </aside>
+
+      <div class="cover-meta">
+        <span>16 briefings included</span>
+        <span>https://shadowcontext.com/</span>
+      </div>
+    </section>
+
+    <section class="page content">
+      <header class="section-head">
+        <h2>All news from the day</h2>
+        <span class="section-count">16 / 2026-08-06</span>
+      </header>
+
+      <main class="stories">
+    <article class="story">
+      <div class="story-index">01</div>
+      <div class="story-copy">
+        <p class="topic">SD-WAN Defense</p>
+        <h3>EdgeConnect Orchestrator Fixes Need Build Proof</h3>
+        <p class="summary">HPE fixed two EdgeConnect SD-WAN Orchestrator vulnerabilities. Defenders must verify specific builds rather than relying on general version numbers.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Central management plane security states influence configuration and visibility across many network paths.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/edgeconnect-orchestrator-fixes-need-build-proof/">EdgeConnect Orchestrator Fixes Need Build Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">02</div>
+      <div class="story-copy">
+        <p class="topic">IOS XE Hardening</p>
+        <h3>IOS XE Hardening Needs Release-Level Proof</h3>
+        <p class="summary">Cisco updated IOS XE across seven vulnerability classes. Defenders must map exact releases and upgrade, as no workarounds exist.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>The breadth of affected platforms requires precise inventory and controlled patching without configuration substitutes.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ios-xe-hardening-needs-release-level-proof/">IOS XE Hardening Needs Release-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">03</div>
+      <div class="story-copy">
+        <p class="topic">Catalyst SD-WAN</p>
+        <h3>Catalyst SD-WAN Hardening Needs Deployment Proof</h3>
+        <p class="summary">Cisco addressed five Catalyst SD-WAN vulnerability classes with no workarounds available, necessitating precise deployment inventory and updates.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Platform-wide advisories demand deployment-wide evidence to ensure the distributed control plane returns to its operating state.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/catalyst-sd-wan-hardening-needs-deployment-proof/">Catalyst SD-WAN Hardening Needs Deployment Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">04</div>
+      <div class="story-copy">
+        <p class="topic">IMC Security</p>
+        <h3>Cisco IMC Fixes Need Firmware Proof</h3>
+        <p class="summary">Cisco fixed two Integrated Management Controller argument-injection flaws. Defenders must map hardware modes and verify firmware evidence.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Out-of-band management controllers require separate security asset tracking and specific appliance-level firmware validation.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/cisco-imc-fixes-need-appliance-firmware-proof/">Cisco IMC Fixes Need Appliance-Level Firmware Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">05</div>
+      <div class="story-copy">
+        <p class="topic">XMCP Security</p>
+        <h3>XMCP Fix Needs Feature-Level Exposure Proof</h3>
+        <p class="summary">Cisco fixed an XMCP denial-of-service flaw in IOS and IOS XE. Defenders must verify feature exposure, restrict clients, and update.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Platform inventory starts the search, but enabled feature and reachability evidence determine actual exposure.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/xmcp-fix-needs-feature-level-proof/">XMCP Fix Needs Feature-Level Exposure Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">06</div>
+      <div class="story-copy">
+        <p class="topic">BEEP Protocol</p>
+        <h3>IOS XE BEEP Fix Needs Protocol Exposure Proof</h3>
+        <p class="summary">Cisco fixed an unauthenticated BEEP denial-of-service flaw in IOS XE. Defenders must verify protocol exposure and upgrade affected devices.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Feature-aware exposure data decides remediation priority, and post-change evidence proves availability risk was reduced.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ios-xe-beep-fix-needs-protocol-exposure-proof/">IOS XE BEEP Fix Needs Protocol-Exposure Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">07</div>
+      <div class="story-copy">
+        <p class="topic">SNMP Security</p>
+        <h3>IOS XE SNMP Fix Needs Monitoring-Path Proof</h3>
+        <p class="summary">Cisco fixed an IOS XE SNMP denial-of-service flaw. Defenders must verify exposure, update devices, and preserve monitoring coverage.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Mitigations can cause visibility gaps, requiring comprehensive evidence across the entire monitoring path.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ios-xe-snmp-fix-needs-monitoring-path-proof/">IOS XE SNMP Fix Needs Monitoring-Path Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">08</div>
+      <div class="story-copy">
+        <p class="topic">Database Defense</p>
+        <h3>MarkLogic Hadoop Fix Needs Role-and-Service Proof</h3>
+        <p class="summary">Progress published a critical MarkLogic Server vulnerability crossing into the Security database. Defenders should update and narrow roles.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>A fixed build closes the code path while role and service evidence ensures the integration boundary is controlled.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/marklogic-hadoop-fix-needs-role-proof/">MarkLogic Hadoop Fix Needs Role-and-Service Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">09</div>
+      <div class="story-copy">
+        <p class="topic">Identity Mapping</p>
+        <h3>TS Agent Fix Needs Identity-Mapping Proof</h3>
+        <p class="summary">Cisco fixed a Terminal Services Agent mapping flaw that incorrectly assigned firewall rules. Defenders must verify versions and policy outcomes.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Identity-based enforcement is a pipeline where connection mapping correctness requires direct evidence.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ts-agent-fix-needs-identity-mapping-proof/">TS Agent Fix Needs Identity-Mapping Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">10</div>
+      <div class="story-copy">
+        <p class="topic">Log Security</p>
+        <h3>SD-WAN Logs Need Credential Boundaries</h3>
+        <p class="summary">Cisco fixed an SD-WAN Manager flaw exposing credentials in logs. Defenders should update, restrict log access, and assess retained copies.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Observability data inherits the sensitivity of what software writes, requiring distinct authorization boundaries.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/sd-wan-logs-need-credential-boundaries/">SD-WAN Logs Need Credential Boundaries ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">11</div>
+      <div class="story-copy">
+        <p class="topic">RoomOS Security</p>
+        <h3>RoomOS Logs Need Diagnostic-Data Boundaries</h3>
+        <p class="summary">Cisco patched a RoomOS logging vulnerability exposing login credentials. Defenders must verify extended logging state and fixed releases.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Diagnostic modes increase detail, making logging paths a critical trust model surface.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/roomos-logs-need-diagnostic-data-boundaries/">RoomOS Logs Need Diagnostic-Data Boundaries ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">12</div>
+      <div class="story-copy">
+        <p class="topic">Web UI Security</p>
+        <h3>IOS XE Web UI Fixes Need Feature-Level Proof</h3>
+        <p class="summary">Cisco fixed two IOS XE web interface denial-of-service flaws. Defenders must verify enabled features, restrict access, and update.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Feature-level exposure provides a precise basis for triage over product names alone.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ios-xe-web-ui-fixes-need-feature-proof/">IOS XE Web UI Fixes Need Feature-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">13</div>
+      <div class="story-copy">
+        <p class="topic">IMC XSS</p>
+        <h3>Cisco IMC XSS Fix Needs Browser-Level Boundaries</h3>
+        <p class="summary">Cisco published a fix for an IMC cross-site scripting flaw. Defenders must patch firmware, restrict management access, and protect browsers.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Privileged web administration requires a dedicated browser profile to prevent mixing administrative sessions with untrusted content.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/cisco-imc-xss-fix-needs-browser-boundaries/">Cisco IMC XSS Fix Needs Browser-Level Boundaries ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">14</div>
+      <div class="story-copy">
+        <p class="topic">Plugin Security</p>
+        <h3>WPMU Dashboard Fix Needs Connection-State Proof</h3>
+        <p class="summary">CVE-2026-15459 affects unconnected WPMU DEV Dashboard sites. Defenders should verify both update and connection state.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Enrollment and connection states determine whether a management plugin is vulnerable.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/wpmu-dashboard-fix-needs-connection-state-proof/">WPMU Dashboard Fix Needs Connection-State Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">15</div>
+      <div class="story-copy">
+        <p class="topic">Privileged Access</p>
+        <h3>Wallix Fixes Put Privileged-Access Control Planes on Patch List</h3>
+        <p class="summary">CERT-FR highlighted critical Wallix Bastion and Access Manager flaws. Defenders must verify builds, API reachability, and SAML scope.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Privileged-access systems concentrate authority, requiring comprehensive build and access control evidence.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/wallix-privileged-access-fixes-need-control-plane-proof/">Wallix Fixes Put Privileged-Access Control Planes on the Patch List ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">16</div>
+      <div class="story-copy">
+        <p class="topic">AI Security</p>
+        <h3>Mobile GUI Agents Need a Separate Permission Gate</h3>
+        <p class="summary">A mobile GUI agent preprint demonstrates that multimodal models make inconsistent permission decisions, requiring separate authorization gates.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Completing a delegated task does not authorize every capability; permission judgment needs its own evaluation.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/mobile-gui-agents-need-a-separate-permission-gate/">Mobile GUI Agents Need a Separate Permission Gate ↗</a>
+      </div>
+    </article></main>
+
+      <section class="operating-view">
+        <p class="eyebrow">The operating view</p>
+        <h2>What the day means for defenders</h2>
+        <p>Maintain strict asset inventory, enforce exact build-level and feature-level verification, and treat logs and permissions as independent security boundaries. Transition from simple task completion tracking to rigorous, evidence-led operational validation.</p>
+        <ol class="watch-list"><li><span>1</span><p>Verify exact build strings rather than relying on major or minor version labels.</p></li>
+<li><span>2</span><p>Treat logging systems and diagnostic files as sensitive credential-bearing repositories.</p></li>
+<li><span>3</span><p>Isolate permission authorization from task execution layers in automation and AI agents.</p></li></ol>
+      </section>
+
+      <section class="sources">
+        <p class="eyebrow">Source index</p>
+        <h2>Every briefing in this digest</h2>
+        <ol class="source-list">
+    <li>
+      <span>01</span>
+      <a href="https://shadowcontext.com/edgeconnect-orchestrator-fixes-need-build-proof/">EdgeConnect Orchestrator Fixes Need Build Proof</a>
+    </li>
+
+    <li>
+      <span>02</span>
+      <a href="https://shadowcontext.com/ios-xe-hardening-needs-release-level-proof/">IOS XE Hardening Needs Release-Level Proof</a>
+    </li>
+
+    <li>
+      <span>03</span>
+      <a href="https://shadowcontext.com/catalyst-sd-wan-hardening-needs-deployment-proof/">Catalyst SD-WAN Hardening Needs Deployment Proof</a>
+    </li>
+
+    <li>
+      <span>04</span>
+      <a href="https://shadowcontext.com/cisco-imc-fixes-need-appliance-firmware-proof/">Cisco IMC Fixes Need Appliance-Level Firmware Proof</a>
+    </li>
+
+    <li>
+      <span>05</span>
+      <a href="https://shadowcontext.com/xmcp-fix-needs-feature-level-proof/">XMCP Fix Needs Feature-Level Exposure Proof</a>
+    </li>
+
+    <li>
+      <span>06</span>
+      <a href="https://shadowcontext.com/ios-xe-beep-fix-needs-protocol-exposure-proof/">IOS XE BEEP Fix Needs Protocol-Exposure Proof</a>
+    </li>
+
+    <li>
+      <span>07</span>
+      <a href="https://shadowcontext.com/ios-xe-snmp-fix-needs-monitoring-path-proof/">IOS XE SNMP Fix Needs Monitoring-Path Proof</a>
+    </li>
+
+    <li>
+      <span>08</span>
+      <a href="https://shadowcontext.com/marklogic-hadoop-fix-needs-role-proof/">MarkLogic Hadoop Fix Needs Role-and-Service Proof</a>
+    </li>
+
+    <li>
+      <span>09</span>
+      <a href="https://shadowcontext.com/ts-agent-fix-needs-identity-mapping-proof/">TS Agent Fix Needs Identity-Mapping Proof</a>
+    </li>
+
+    <li>
+      <span>10</span>
+      <a href="https://shadowcontext.com/sd-wan-logs-need-credential-boundaries/">SD-WAN Logs Need Credential Boundaries</a>
+    </li>
+
+    <li>
+      <span>11</span>
+      <a href="https://shadowcontext.com/roomos-logs-need-diagnostic-data-boundaries/">RoomOS Logs Need Diagnostic-Data Boundaries</a>
+    </li>
+
+    <li>
+      <span>12</span>
+      <a href="https://shadowcontext.com/ios-xe-web-ui-fixes-need-feature-proof/">IOS XE Web UI Fixes Need Feature-Level Proof</a>
+    </li>
+
+    <li>
+      <span>13</span>
+      <a href="https://shadowcontext.com/cisco-imc-xss-fix-needs-browser-boundaries/">Cisco IMC XSS Fix Needs Browser-Level Boundaries</a>
+    </li>
+
+    <li>
+      <span>14</span>
+      <a href="https://shadowcontext.com/wpmu-dashboard-fix-needs-connection-state-proof/">WPMU Dashboard Fix Needs Connection-State Proof</a>
+    </li>
+
+    <li>
+      <span>15</span>
+      <a href="https://shadowcontext.com/wallix-privileged-access-fixes-need-control-plane-proof/">Wallix Fixes Put Privileged-Access Control Planes on the Patch List</a>
+    </li>
+
+    <li>
+      <span>16</span>
+      <a href="https://shadowcontext.com/mobile-gui-agents-need-a-separate-permission-gate/">Mobile GUI Agents Need a Separate Permission Gate</a>
+    </li></ol>
+      </section>
+
+      <div class="cta">
+        <strong>Read the full analysis</strong>
+        <span>https://shadowcontext.com/</span>
+      </div>
+
+      <footer class="document-footer">
+        <span>ShadowContext</span>
+        <span>Independent defensive security intelligence</span>
+      </footer>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-08-07T07:44:16.139+04:00",
+  "digestDate": "2026-08-06",
+  "digestHash": "01adf4a4556e540ed68493fd31ac61b73d4db22a8e68dccbd55909eb92685271",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "Daily Security News Digest: Infrastructure Hardening and Agent Permissions",
+  "articleCount": 16,
+  "sourceArticles": [
+    {
+      "title": "EdgeConnect Orchestrator Fixes Need Build Proof",
+      "canonicalUrl": "https://shadowcontext.com/edgeconnect-orchestrator-fixes-need-build-proof/",
+      "publishedAt": "2026-08-06T00:11:50.000+04:00",
+      "category": "defense",
+      "sourceHash": "a4edeaf40f94ac67ec154c30b07941bdb8c80b4acade28352ae4ce72448f09eb"
+    },
+    {
+      "title": "IOS XE Hardening Needs Release-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/ios-xe-hardening-needs-release-level-proof/",
+      "publishedAt": "2026-08-06T02:09:02.000+04:00",
+      "category": "defense",
+      "sourceHash": "3447879db5dfe99c27a1dc8a84c9514c942500f0ff6146cfec5bd070a2a6f04b"
+    },
+    {
+      "title": "Catalyst SD-WAN Hardening Needs Deployment Proof",
+      "canonicalUrl": "https://shadowcontext.com/catalyst-sd-wan-hardening-needs-deployment-proof/",
+      "publishedAt": "2026-08-06T03:08:36.000+04:00",
+      "category": "defense",
+      "sourceHash": "9409069dc859dd59db41080430dd1586113d5b80cfaea08173abc38051374aac"
+    },
+    {
+      "title": "Cisco IMC Fixes Need Appliance-Level Firmware Proof",
+      "canonicalUrl": "https://shadowcontext.com/cisco-imc-fixes-need-appliance-firmware-proof/",
+      "publishedAt": "2026-08-06T04:09:15.000+04:00",
+      "category": "defense",
+      "sourceHash": "30d73baa2f419e7d762c49f45b2c76c4d65f0162015b4403592bffb7291c29e2"
+    },
+    {
+      "title": "XMCP Fix Needs Feature-Level Exposure Proof",
+      "canonicalUrl": "https://shadowcontext.com/xmcp-fix-needs-feature-level-proof/",
+      "publishedAt": "2026-08-06T05:11:54.000+04:00",
+      "category": "defense",
+      "sourceHash": "fdb9e827537e7911af3c0947871c5031104959215870ce9e7444d96a348905b7"
+    },
+    {
+      "title": "IOS XE BEEP Fix Needs Protocol-Exposure Proof",
+      "canonicalUrl": "https://shadowcontext.com/ios-xe-beep-fix-needs-protocol-exposure-proof/",
+      "publishedAt": "2026-08-06T07:10:46.000+04:00",
+      "category": "defense",
+      "sourceHash": "9311cb6ffb9dbddbef85ea215bb08f6f88e35c7d241c7f8b07385ebf600983d8"
+    },
+    {
+      "title": "IOS XE SNMP Fix Needs Monitoring-Path Proof",
+      "canonicalUrl": "https://shadowcontext.com/ios-xe-snmp-fix-needs-monitoring-path-proof/",
+      "publishedAt": "2026-08-06T08:10:06.000+04:00",
+      "category": "defense",
+      "sourceHash": "72350ed3c93ae488e9a3c1e0c691618bad05286bcead9b84a3ee52df9ba8fa4a"
+    },
+    {
+      "title": "MarkLogic Hadoop Fix Needs Role-and-Service Proof",
+      "canonicalUrl": "https://shadowcontext.com/marklogic-hadoop-fix-needs-role-proof/",
+      "publishedAt": "2026-08-06T09:11:01.000+04:00",
+      "category": "defense",
+      "sourceHash": "47a4b4852b1b3c0bfa7e4643dacd043d43e86914dd458b20a911b2aae1f3dafe"
+    },
+    {
+      "title": "TS Agent Fix Needs Identity-Mapping Proof",
+      "canonicalUrl": "https://shadowcontext.com/ts-agent-fix-needs-identity-mapping-proof/",
+      "publishedAt": "2026-08-06T13:09:37.000+04:00",
+      "category": "defense",
+      "sourceHash": "54adfee878fc6e5051bee4eb4e60160bd12fbb275612eb8be8e4271a49b5dec7"
+    },
+    {
+      "title": "SD-WAN Logs Need Credential Boundaries",
+      "canonicalUrl": "https://shadowcontext.com/sd-wan-logs-need-credential-boundaries/",
+      "publishedAt": "2026-08-06T14:10:00.000+04:00",
+      "category": "defense",
+      "sourceHash": "8c1e034f4d029ba384ecd35200617fc24e25dd12401d12e10414eb810a89efa1"
+    },
+    {
+      "title": "RoomOS Logs Need Diagnostic-Data Boundaries",
+      "canonicalUrl": "https://shadowcontext.com/roomos-logs-need-diagnostic-data-boundaries/",
+      "publishedAt": "2026-08-06T15:09:30.000+04:00",
+      "category": "defense",
+      "sourceHash": "cf2ab0d6e365f93e0e2f055dd8c611b97f13ce68367d074fd8862847cad8d63d"
+    },
+    {
+      "title": "IOS XE Web UI Fixes Need Feature-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/ios-xe-web-ui-fixes-need-feature-proof/",
+      "publishedAt": "2026-08-06T17:10:12.000+04:00",
+      "category": "defense",
+      "sourceHash": "c1b57c2b4a20085222ca1caf7720b05caef37c41e147b00de70a84847fc93997"
+    },
+    {
+      "title": "Cisco IMC XSS Fix Needs Browser-Level Boundaries",
+      "canonicalUrl": "https://shadowcontext.com/cisco-imc-xss-fix-needs-browser-boundaries/",
+      "publishedAt": "2026-08-06T18:10:25.000+04:00",
+      "category": "defense",
+      "sourceHash": "345989cec7a289719e00dc2d938af1011aa37c537ff661a75b98ed83649b7bc9"
+    },
+    {
+      "title": "WPMU Dashboard Fix Needs Connection-State Proof",
+      "canonicalUrl": "https://shadowcontext.com/wpmu-dashboard-fix-needs-connection-state-proof/",
+      "publishedAt": "2026-08-06T21:09:46.000+04:00",
+      "category": "defense",
+      "sourceHash": "f4ec71a2a5b496a452f245f2cfb3fd123594ef22a28f5d8c7d55e4ad75da70c0"
+    },
+    {
+      "title": "Wallix Fixes Put Privileged-Access Control Planes on the Patch List",
+      "canonicalUrl": "https://shadowcontext.com/wallix-privileged-access-fixes-need-control-plane-proof/",
+      "publishedAt": "2026-08-06T22:08:49.000+04:00",
+      "category": "defense",
+      "sourceHash": "0ea870b78c09d1c1b7680751c531d4440b31fc3f4fbd22f57e3721186bb70369"
+    },
+    {
+      "title": "Mobile GUI Agents Need a Separate Permission Gate",
+      "canonicalUrl": "https://shadowcontext.com/mobile-gui-agents-need-a-separate-permission-gate/",
+      "publishedAt": "2026-08-06T23:09:31.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "7870626128ff8812fd778baf366af1d88236ff4928f403340f476587ef7f5ccd"
+    }
+  ],
+  "caption": "Review today's security intelligence digest for defensive insights, operational validation practices, and platform hardening updates.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-08-06/01adf4a4556e540e/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-06/01adf4a4556e540e/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-08-06/01adf4a4556e540e/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-06/01adf4a4556e540e/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}
