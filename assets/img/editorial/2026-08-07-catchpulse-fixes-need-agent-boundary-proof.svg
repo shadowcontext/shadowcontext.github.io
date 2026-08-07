@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Protected endpoint agent communication boundary</title>
+  <desc id="desc">Abstract endpoint security core surrounded by sealed communication rings, with one amber route redirected through a protected blue boundary.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071526"/>
+      <stop offset="0.55" stop-color="#0b2740"/>
+      <stop offset="1" stop-color="#101d35"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="50%" cy="48%" r="53%">
+      <stop offset="0" stop-color="#41d7da" stop-opacity="0.24"/>
+      <stop offset="0.56" stop-color="#2b78b7" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#071526" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#79f1e5"/>
+      <stop offset="0.52" stop-color="#27a9ce"/>
+      <stop offset="1" stop-color="#3164a7"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#b9fff5" stop-opacity="0.78"/>
+      <stop offset="1" stop-color="#3a7fc0" stop-opacity="0.16"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff9b4a" stop-opacity="0"/>
+      <stop offset="0.48" stop-color="#ffb45e"/>
+      <stop offset="1" stop-color="#ffd694"/>
+    </linearGradient>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="smallGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="microgrid" width="54" height="54" patternUnits="userSpaceOnUse">
+      <path d="M54 0H0V54" fill="none" stroke="#7cdce1" stroke-opacity="0.045" stroke-width="1"/>
+      <circle cx="0" cy="0" r="1.8" fill="#a2f7ef" fill-opacity="0.09"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#microgrid)"/>
+  <ellipse cx="820" cy="438" rx="650" ry="440" fill="url(#aura)"/>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M318 230C504 54 895 20 1204 168C1426 275 1453 592 1244 740C1029 892 604 864 357 689C164 552 151 388 318 230Z" stroke="#63dfe2" stroke-opacity="0.13" stroke-width="2"/>
+    <path d="M405 273C565 130 880 103 1130 218C1315 303 1330 563 1157 682C966 813 644 786 444 654C286 550 266 397 405 273Z" stroke="#83ece6" stroke-opacity="0.20" stroke-width="3"/>
+    <path d="M500 319C625 214 863 195 1056 281C1197 344 1210 543 1074 635C930 731 683 715 526 612C405 531 393 409 500 319Z" stroke="#a8fff5" stroke-opacity="0.28" stroke-width="4"/>
+  </g>
+
+  <g opacity="0.82">
+    <path d="M292 449H470" stroke="#2e93b8" stroke-width="14" stroke-linecap="round"/>
+    <circle cx="278" cy="449" r="12" fill="#56c9d8"/>
+    <path d="M1136 358H1348" stroke="#2e93b8" stroke-width="14" stroke-linecap="round"/>
+    <circle cx="1364" cy="358" r="12" fill="#56c9d8"/>
+    <path d="M1067 620L1234 720" stroke="#2e93b8" stroke-width="14" stroke-linecap="round"/>
+    <circle cx="1248" cy="729" r="12" fill="#56c9d8"/>
+  </g>
+
+  <path d="M205 686C390 686 436 612 531 563" fill="none" stroke="url(#amber)" stroke-width="20" stroke-linecap="round" filter="url(#smallGlow)"/>
+  <path d="M520 563C554 544 576 513 586 481" fill="none" stroke="#ffd18a" stroke-width="6" stroke-linecap="round"/>
+
+  <g transform="translate(800 445)">
+    <path d="M0-214C70-164 137-150 204-144V5C204 127 128 215 0 267C-128 215-204 127-204 5V-144C-137-150-70-164 0-214Z" fill="url(#shield)" stroke="#a8fff3" stroke-opacity="0.72" stroke-width="5" filter="url(#softGlow)"/>
+    <path d="M0-168C56-130 108-118 158-112V-2C158 91 102 160 0 204C-102 160-158 91-158-2V-112C-108-118-56-130 0-168Z" fill="#092b42" fill-opacity="0.82" stroke="#58d6dc" stroke-width="3"/>
+    <circle r="108" fill="none" stroke="#79eee8" stroke-opacity="0.22" stroke-width="18"/>
+    <circle r="72" fill="url(#core)" filter="url(#smallGlow)"/>
+    <circle r="38" fill="#e5fffb" fill-opacity="0.92"/>
+    <path d="M-13-2L-13-16C-13-35 13-35 13-16V-2M-24-2H24V36H-24Z" fill="none" stroke="#0b4665" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g fill="#b7fff5">
+    <circle cx="470" cy="449" r="8" filter="url(#smallGlow)"/>
+    <circle cx="1136" cy="358" r="8" filter="url(#smallGlow)"/>
+    <circle cx="1067" cy="620" r="8" filter="url(#smallGlow)"/>
+  </g>
+  <g fill="#ffbd6e">
+    <circle cx="260" cy="686" r="7"/>
+    <circle cx="327" cy="683" r="5" fill-opacity="0.7"/>
+    <circle cx="389" cy="663" r="4" fill-opacity="0.55"/>
+  </g>
+
+  <path d="M585 475L622 501L590 532" fill="none" stroke="#ffcb82" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M601 457L645 487" stroke="#5fe1de" stroke-width="8" stroke-linecap="round"/>
+</svg>
