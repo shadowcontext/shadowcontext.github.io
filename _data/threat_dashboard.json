@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-06T01:23:45Z",
-  "generated_display": "06 Aug 2026 · 01:23 UTC",
+  "generated_at": "2026-08-07T01:20:45Z",
+  "generated_display": "07 Aug 2026 · 01:20 UTC",
   "metrics": {
     "kev_total": 1661,
-    "kev_added_30d": 30,
-    "due_next_7d": 6,
+    "kev_added_30d": 26,
+    "due_next_7d": 5,
     "ioc_total": 170,
     "ioc_total_display": "170",
     "ioc_total_exact": "170"
@@ -161,6 +161,38 @@
   ],
   "advisories": [
     {
+      "authority": "Saudi NCA / CERT",
+      "title": "F5 Alert",
+      "url": "https://nca.gov.sa/en/cert/7839/",
+      "date": "2026-08-07",
+      "severity": "High",
+      "summary": "Security alert 2026-7716. Review the official notice for affected products and remediation guidance."
+    },
+    {
+      "title": "Johnson Controls Inc. TL280",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-218-02",
+      "date": "2026-08-06",
+      "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to access sensitive information on the device. The following versions of Johnson Controls…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "title": "ABB Ability Zenon",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-218-01",
+      "date": "2026-08-06",
+      "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow attackers to bypass security, crash systems, execute unauthorized actions, or compromise data. The…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "authority": "Saudi NCA / CERT",
+      "title": "Chrome Alert",
+      "url": "https://nca.gov.sa/en/cert/7838/",
+      "date": "2026-08-06",
+      "severity": "Critical",
+      "summary": "Security alert 2026-7715. Review the official notice for affected products and remediation guidance."
+    },
+    {
       "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
       "url": "https://www.cisa.gov/news-events/alerts/2026/08/05/cisa-adds-one-known-exploited-vulnerability-catalog",
       "date": "2026-08-05",
@@ -177,42 +209,10 @@
       "summary": "Security alert 2026-7714. Review the official notice for affected products and remediation guidance."
     },
     {
-      "authority": "Saudi NCA / CERT",
-      "title": "Jenkins Alert",
-      "url": "https://nca.gov.sa/en/cert/7836/",
-      "date": "2026-08-05",
-      "severity": "Critical",
-      "summary": "Security alert 2026-7713. Review the official notice for affected products and remediation guidance."
-    },
-    {
-      "authority": "Saudi NCA / CERT",
-      "title": "ManageEngine Alert",
-      "url": "https://nca.gov.sa/en/cert/7835/",
-      "date": "2026-08-05",
-      "severity": "High",
-      "summary": "Security alert 2026-7712. Review the official notice for affected products and remediation guidance."
-    },
-    {
       "title": "Acrisure KARR BT and DR-100",
       "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-216-01",
       "date": "2026-08-04",
       "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to perform unauthorized vehicle control operations. The following versions of Acrisure…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
-      "title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
-      "url": "https://www.cisa.gov/news-events/alerts/2026/08/04/cisa-adds-three-known-exploited-vulnerabilities-catalog",
-      "date": "2026-08-04",
-      "summary": "CISA has added three new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-9198 IBM Langflow Code…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
-      "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-      "url": "https://www.cisa.gov/news-events/alerts/2026/08/03/cisa-adds-one-known-exploited-vulnerability-catalog",
-      "date": "2026-08-03",
-      "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-18577 N-able N-central…",
       "authority": "CISA",
       "severity": ""
     },
@@ -324,7 +324,7 @@
       "path": "/assets/data/daily-urls.txt"
     }
   ],
-  "ioc_sha256": "03bc78e2b689d1c89a7254eae7e4db4bb9222cc7623d7a095a4991d0c0375afe",
+  "ioc_sha256": "32c14db02b84ed7540654c8cf39968eef5e79c2915805a32fc12b462c138c2ce",
   "sources": {
     "kev": {
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
