@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Cross-modal AI safety calibration</title>
+  <desc id="desc">Abstract blue text and image streams cross a luminous calibration boundary and converge inside a protected teal model core.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071629"/>
+      <stop offset="0.5" stop-color="#0b2440"/>
+      <stop offset="1" stop-color="#102d3d"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="72%" cy="50%" r="48%">
+      <stop offset="0" stop-color="#59e1d1" stop-opacity="0.24"/>
+      <stop offset="0.55" stop-color="#218ca8" stop-opacity="0.09"/>
+      <stop offset="1" stop-color="#071629" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="textStream" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2d74d6"/>
+      <stop offset="1" stop-color="#6ed6ff"/>
+    </linearGradient>
+    <linearGradient id="imageStream" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6679e8"/>
+      <stop offset="0.62" stop-color="#ba83f3"/>
+      <stop offset="1" stop-color="#67e0d0"/>
+    </linearGradient>
+    <linearGradient id="calibration" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8ef4df" stop-opacity="0.12"/>
+      <stop offset="0.5" stop-color="#8ef4df" stop-opacity="0.88"/>
+      <stop offset="1" stop-color="#8ef4df" stop-opacity="0.12"/>
+    </linearGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2f9db1"/>
+      <stop offset="0.5" stop-color="#40d6c4"/>
+      <stop offset="1" stop-color="#167887"/>
+    </linearGradient>
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="smallGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <clipPath id="frameClip">
+      <rect x="92" y="88" width="1416" height="724" rx="58"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#halo)"/>
+  <g clip-path="url(#frameClip)">
+    <circle cx="1180" cy="450" r="314" fill="none" stroke="#4ed7c6" stroke-opacity="0.08" stroke-width="64"/>
+    <circle cx="1180" cy="450" r="232" fill="#39c5b5" opacity="0.08" filter="url(#softGlow)"/>
+    <path d="M120 236 C340 236 415 285 590 350 C744 407 870 401 1035 426" fill="none" stroke="#1f5e9f" stroke-opacity="0.18" stroke-width="82"/>
+    <path d="M120 664 C350 664 422 615 592 550 C744 492 872 499 1038 474" fill="none" stroke="#744fa5" stroke-opacity="0.17" stroke-width="82"/>
+  </g>
+
+  <rect x="92" y="88" width="1416" height="724" rx="58" fill="none" stroke="#8ad8ea" stroke-opacity="0.14" stroke-width="2"/>
+
+  <g opacity="0.95">
+    <g transform="translate(154 190)">
+      <rect width="304" height="180" rx="30" fill="#102e55" stroke="#62b9ef" stroke-opacity="0.55" stroke-width="3"/>
+      <rect x="42" y="44" width="158" height="14" rx="7" fill="#83d8ff" opacity="0.92"/>
+      <rect x="42" y="82" width="218" height="12" rx="6" fill="#4e92d7" opacity="0.78"/>
+      <rect x="42" y="116" width="184" height="12" rx="6" fill="#4e92d7" opacity="0.62"/>
+    </g>
+    <g transform="translate(154 530)">
+      <rect width="304" height="180" rx="30" fill="#24244f" stroke="#a887ea" stroke-opacity="0.6" stroke-width="3"/>
+      <path d="M38 136 L98 76 L140 114 L196 54 L266 136 Z" fill="#826cdb" opacity="0.8"/>
+      <circle cx="92" cy="58" r="19" fill="#d3b2ff" opacity="0.92"/>
+      <path d="M38 136 L120 91 L169 136 Z" fill="#55a8ce" opacity="0.55"/>
+    </g>
+  </g>
+
+  <path d="M458 280 C630 280 690 352 836 398 C910 422 967 427 1050 432" fill="none" stroke="url(#textStream)" stroke-width="24" stroke-linecap="round"/>
+  <path d="M458 620 C630 620 690 548 836 502 C910 478 967 473 1050 468" fill="none" stroke="url(#imageStream)" stroke-width="24" stroke-linecap="round"/>
+
+  <g fill="#a5e8ff">
+    <circle cx="548" cy="293" r="9"/>
+    <circle cx="628" cy="319" r="7" opacity="0.76"/>
+    <circle cx="719" cy="358" r="11" opacity="0.88"/>
+  </g>
+  <g fill="#d3a8ff">
+    <circle cx="548" cy="607" r="9"/>
+    <circle cx="628" cy="581" r="7" opacity="0.76"/>
+    <circle cx="719" cy="542" r="11" opacity="0.88"/>
+  </g>
+
+  <rect x="820" y="164" width="16" height="572" rx="8" fill="#55dfcc" opacity="0.35" filter="url(#smallGlow)"/>
+  <rect x="822" y="164" width="12" height="572" rx="6" fill="url(#calibration)"/>
+  <path d="M770 382 L828 414 L886 382 L886 518 L828 486 L770 518 Z" fill="#76ead6" opacity="0.13" stroke="#7ff0dd" stroke-opacity="0.48" stroke-width="2"/>
+
+  <g transform="translate(1044 270)">
+    <path d="M136 0 C231 0 308 77 308 172 V238 C308 333 231 410 136 410 C41 410 -36 333 -36 238 V172 C-36 77 41 0 136 0 Z" fill="#153a4d" stroke="#69e2d2" stroke-opacity="0.48" stroke-width="4"/>
+    <path d="M136 45 C205 45 261 101 261 170 V240 C261 309 205 365 136 365 C67 365 11 309 11 240 V170 C11 101 67 45 136 45 Z" fill="url(#core)" opacity="0.9"/>
+    <circle cx="136" cy="205" r="78" fill="#092733" opacity="0.58"/>
+    <path d="M91 208 L122 239 L185 169" fill="none" stroke="#b6fff2" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g fill="none" stroke="#71e5d5" stroke-opacity="0.2">
+    <path d="M1024 206 C1115 128 1271 128 1360 213" stroke-width="4"/>
+    <path d="M1024 694 C1115 772 1271 772 1360 687" stroke-width="4"/>
+  </g>
+  <circle cx="1440" cy="170" r="5" fill="#85ecdc" opacity="0.58"/>
+  <circle cx="1410" cy="744" r="8" fill="#667fcd" opacity="0.52"/>
+  <circle cx="106" cy="452" r="6" fill="#72c4eb" opacity="0.54"/>
+</svg>
