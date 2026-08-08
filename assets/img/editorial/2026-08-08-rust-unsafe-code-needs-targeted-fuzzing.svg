@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Targeted testing along an unsafe seam in software</title>
+  <desc id="desc">An abstract blue woven field is interrupted by a narrow copper seam while teal pulses converge to examine its branching paths.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071525"/>
+      <stop offset="0.55" stop-color="#0b2b43"/>
+      <stop offset="1" stop-color="#123a50"/>
+    </linearGradient>
+    <linearGradient id="seam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e9a45b"/>
+      <stop offset="0.5" stop-color="#ffcc78"/>
+      <stop offset="1" stop-color="#bd623c"/>
+    </linearGradient>
+    <radialGradient id="pulse">
+      <stop offset="0" stop-color="#82f1db" stop-opacity="0.95"/>
+      <stop offset="0.4" stop-color="#30c9c6" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#30c9c6" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="weave" width="72" height="72" patternUnits="userSpaceOnUse" patternTransform="rotate(12)">
+      <path d="M0 18H72 M0 54H72" stroke="#5c91aa" stroke-opacity="0.14" stroke-width="3"/>
+      <path d="M18 0V72 M54 0V72" stroke="#8ab2c3" stroke-opacity="0.09" stroke-width="2"/>
+    </pattern>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="26"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#weave)"/>
+  <path d="M-40 215 C230 150 410 260 635 220 S1050 120 1640 205" fill="none" stroke="#76a8bd" stroke-opacity="0.13" stroke-width="46"/>
+  <path d="M-40 680 C310 770 470 600 735 675 S1160 790 1640 665" fill="none" stroke="#4b829d" stroke-opacity="0.16" stroke-width="64"/>
+  <ellipse cx="815" cy="454" rx="410" ry="300" fill="#1ad0c4" opacity="0.07" filter="url(#soft)"/>
+  <g fill="none" stroke-linecap="round">
+    <path d="M790 -40 C720 120 845 230 765 350 C710 432 805 515 748 605 C700 680 772 770 720 940" stroke="#5e2b2d" stroke-opacity="0.45" stroke-width="62"/>
+    <path d="M790 -40 C720 120 845 230 765 350 C710 432 805 515 748 605 C700 680 772 770 720 940" stroke="url(#seam)" stroke-width="18" filter="url(#glow)"/>
+    <path d="M769 349 C868 382 898 444 970 485" stroke="#e9a45b" stroke-opacity="0.58" stroke-width="12"/>
+    <path d="M750 606 C636 625 592 683 514 726" stroke="#df8b52" stroke-opacity="0.52" stroke-width="10"/>
+  </g>
+  <g fill="none" stroke="#55e3d5" stroke-linecap="round">
+    <path d="M120 440 C330 415 505 476 714 437" stroke-opacity="0.62" stroke-width="5"/>
+    <path d="M1420 345 C1200 338 1050 400 819 401" stroke-opacity="0.56" stroke-width="5"/>
+    <path d="M1325 650 C1115 600 995 532 795 526" stroke-opacity="0.5" stroke-width="4"/>
+    <path d="M290 210 C470 270 580 325 744 344" stroke-opacity="0.44" stroke-width="4"/>
+  </g>
+  <g filter="url(#glow)">
+    <circle cx="714" cy="437" r="13" fill="#b8fff3"/>
+    <circle cx="819" cy="401" r="11" fill="#8af4e5"/>
+    <circle cx="795" cy="526" r="10" fill="#8af4e5"/>
+    <circle cx="744" cy="344" r="9" fill="#8af4e5"/>
+  </g>
+  <g opacity="0.8">
+    <circle cx="714" cy="437" r="105" fill="url(#pulse)"/>
+    <circle cx="819" cy="401" r="88" fill="url(#pulse)"/>
+    <circle cx="795" cy="526" r="78" fill="url(#pulse)"/>
+  </g>
+  <g fill="#9ad7d2" opacity="0.42">
+    <circle cx="118" cy="440" r="7"/><circle cx="286" cy="426" r="5"/><circle cx="1418" cy="345" r="7"/>
+    <circle cx="1238" cy="354" r="5"/><circle cx="1324" cy="650" r="7"/><circle cx="288" cy="210" r="6"/>
+  </g>
+</svg>
