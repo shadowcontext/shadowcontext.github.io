@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Context-aware filtering diverts a malicious instruction from an AI agent</title>
+  <desc id="desc">Abstract layered document streams pass through a luminous contextual filter. A single amber strand is diverted into a containment arc while clean blue streams reach a protected agent core.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071426"/>
+      <stop offset="0.55" stop-color="#102748"/>
+      <stop offset="1" stop-color="#09172e"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#63e6ff" stop-opacity="0.32"/>
+      <stop offset="0.55" stop-color="#2b8cff" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#2b8cff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="filter" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b9f7ff" stop-opacity="0.9"/>
+      <stop offset="0.48" stop-color="#49dce9" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#1275c7" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="clean" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#397ee8" stop-opacity="0.35"/>
+      <stop offset="0.55" stop-color="#68e6f2"/>
+      <stop offset="1" stop-color="#b7fbff"/>
+    </linearGradient>
+    <linearGradient id="threat" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffca61"/>
+      <stop offset="0.6" stop-color="#ff8e45"/>
+      <stop offset="1" stop-color="#d84a58"/>
+    </linearGradient>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <pattern id="grid" width="72" height="72" patternUnits="userSpaceOnUse">
+      <path d="M72 0H0V72" fill="none" stroke="#7ac9ef" stroke-opacity="0.055" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <ellipse cx="848" cy="448" rx="550" ry="420" fill="url(#halo)"/>
+
+  <g opacity="0.58">
+    <circle cx="212" cy="182" r="8" fill="#6edfeb"/>
+    <circle cx="273" cy="252" r="4" fill="#6edfeb"/>
+    <circle cx="188" cy="690" r="6" fill="#447fd6"/>
+    <circle cx="1394" cy="198" r="5" fill="#6edfeb"/>
+    <circle cx="1430" cy="647" r="8" fill="#447fd6"/>
+    <path d="M212 182L273 252M188 690L260 633M1394 198L1348 262M1430 647L1364 611" stroke="#63cfe7" stroke-opacity="0.35"/>
+  </g>
+
+  <!-- incoming documents and retrieved context -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M84 255C270 238 368 320 558 356" stroke="#3b78d0" stroke-opacity="0.24" stroke-width="66"/>
+    <path d="M72 255C265 241 384 326 588 371" stroke="url(#clean)" stroke-width="8"/>
+    <path d="M68 394C264 380 386 410 587 430" stroke="#55d8ef" stroke-opacity="0.8" stroke-width="7"/>
+    <path d="M76 544C280 570 390 507 589 484" stroke="#4995e7" stroke-opacity="0.75" stroke-width="8"/>
+    <path d="M108 648C292 677 408 572 590 520" stroke="#7be9f1" stroke-opacity="0.5" stroke-width="5"/>
+    <path d="M94 472C280 452 397 465 592 459" stroke="url(#threat)" stroke-width="12" filter="url(#glow)"/>
+  </g>
+
+  <!-- query/context nodes -->
+  <g transform="translate(348 172)">
+    <ellipse cx="0" cy="0" rx="126" ry="76" fill="#0c2340" stroke="#55dce9" stroke-opacity="0.55" stroke-width="2"/>
+    <circle cx="-48" cy="0" r="20" fill="#56dce8" fill-opacity="0.18" stroke="#74edf2"/>
+    <path d="M-19-25H58M-19 0H78M-19 25H42" stroke="#87ddeb" stroke-opacity="0.68" stroke-width="7" stroke-linecap="round"/>
+    <path d="M68 55C101 93 140 129 197 157" fill="none" stroke="#5eddea" stroke-opacity="0.45" stroke-width="3" stroke-dasharray="8 12"/>
+  </g>
+
+  <!-- contextual filter surface -->
+  <g transform="translate(650 108)">
+    <path d="M108 0L276 69V351C276 501 213 613 108 682C3 613-60 501-60 351V69Z" fill="url(#filter)" stroke="#9af5f7" stroke-opacity="0.8" stroke-width="3"/>
+    <path d="M108 53L224 101V345C224 452 182 537 108 594C34 537-8 452-8 345V101Z" fill="#09284a" fill-opacity="0.54" stroke="#62dae5" stroke-opacity="0.36" stroke-width="2"/>
+    <ellipse cx="108" cy="348" rx="207" ry="83" fill="none" stroke="#77e5ef" stroke-opacity="0.26" stroke-width="2"/>
+    <ellipse cx="108" cy="348" rx="159" ry="61" fill="none" stroke="#77e5ef" stroke-opacity="0.32" stroke-width="2"/>
+    <circle cx="108" cy="348" r="35" fill="#89eff4" fill-opacity="0.14" stroke="#9ff7f7" stroke-width="3" filter="url(#glow)"/>
+  </g>
+
+  <!-- clean content reaches protected core -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M926 371C1054 350 1133 342 1269 365" stroke="#77e8ef" stroke-width="8"/>
+    <path d="M928 432C1052 421 1140 418 1268 426" stroke="#4d9fe8" stroke-width="7"/>
+    <path d="M928 496C1050 511 1135 507 1270 485" stroke="#8af0f3" stroke-opacity="0.7" stroke-width="6"/>
+  </g>
+
+  <!-- detected malicious content is diverted -->
+  <path d="M891 461C1039 477 1037 642 1141 700C1238 754 1347 698 1379 616" fill="none" stroke="#ff9a49" stroke-opacity="0.16" stroke-width="42" filter="url(#soft)"/>
+  <path d="M891 461C1039 477 1037 642 1141 700C1238 754 1347 698 1379 616" fill="none" stroke="url(#threat)" stroke-width="11" stroke-linecap="round" filter="url(#glow)"/>
+  <g transform="translate(1381 584)">
+    <circle r="74" fill="#3a1730" fill-opacity="0.72" stroke="#ff9b54" stroke-opacity="0.7" stroke-width="3"/>
+    <circle r="47" fill="none" stroke="#ffb25e" stroke-opacity="0.5" stroke-width="2" stroke-dasharray="7 10"/>
+    <path d="M-22-22L22 22M22-22L-22 22" stroke="#ffc76b" stroke-width="8" stroke-linecap="round"/>
+  </g>
+
+  <!-- protected agent core -->
+  <g transform="translate(1320 426)">
+    <circle r="118" fill="#0a203d" stroke="#5bdde9" stroke-opacity="0.55" stroke-width="3"/>
+    <circle r="86" fill="#113b62" fill-opacity="0.72" stroke="#8cf1f2" stroke-opacity="0.42" stroke-width="2"/>
+    <circle r="45" fill="#69e0e9" fill-opacity="0.18" stroke="#a9faf8" stroke-width="3" filter="url(#glow)"/>
+    <circle cx="-15" cy="-5" r="7" fill="#c2ffff"/>
+    <circle cx="17" cy="-5" r="7" fill="#c2ffff"/>
+    <path d="M-18 20Q0 34 18 20" fill="none" stroke="#c2ffff" stroke-width="5" stroke-linecap="round"/>
+    <path d="M-137 0A137 137 0 0 1 0-137M137 0A137 137 0 0 1 0 137" fill="none" stroke="#5eddea" stroke-opacity="0.28" stroke-width="2" stroke-dasharray="5 12"/>
+  </g>
+
+  <path d="M104 797C416 745 572 811 846 782C1088 757 1266 798 1507 749" fill="none" stroke="#4aa5de" stroke-opacity="0.16" stroke-width="2"/>
+</svg>
