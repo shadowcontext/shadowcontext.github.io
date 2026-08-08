@@ -1,15 +1,25 @@
 {
-  "generated_at": "2026-08-07T01:20:45Z",
-  "generated_display": "07 Aug 2026 · 01:20 UTC",
+  "generated_at": "2026-08-08T01:18:45Z",
+  "generated_display": "08 Aug 2026 · 01:18 UTC",
   "metrics": {
-    "kev_total": 1661,
-    "kev_added_30d": 26,
-    "due_next_7d": 5,
+    "kev_total": 1662,
+    "kev_added_30d": 27,
+    "due_next_7d": 3,
     "ioc_total": 170,
     "ioc_total_display": "170",
     "ioc_total_exact": "170"
   },
   "vulnerabilities": [
+    {
+      "cve": "CVE-2026-8037",
+      "name": "Progress LoadMaster Command Injection Vulnerability",
+      "vendor": "Progress",
+      "product": "LoadMaster",
+      "date_added": "2026-08-07",
+      "due_date": "2026-08-10",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-8037"
+    },
     {
       "cve": "CVE-2026-63077",
       "name": "JetBrains TeamCity Deserialization of Untrusted Data Vulnerability",
@@ -79,16 +89,6 @@
       "due_date": "2026-07-30",
       "ransomware": "Unknown",
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-16812"
-    },
-    {
-      "cve": "CVE-2025-68686",
-      "name": "Fortinet FortiOS Exposure of Sensitive Information to an Unauthorized Actor Vulnerability",
-      "vendor": "Fortinet",
-      "product": "FortiOS",
-      "date_added": "2026-07-27",
-      "due_date": "2026-08-10",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2025-68686"
     }
   ],
   "platforms": [
@@ -161,20 +161,44 @@
   ],
   "advisories": [
     {
-      "authority": "Saudi NCA / CERT",
-      "title": "F5 Alert",
-      "url": "https://nca.gov.sa/en/cert/7839/",
+      "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+      "url": "https://www.cisa.gov/news-events/alerts/2026/08/07/cisa-adds-one-known-exploited-vulnerability-catalog",
       "date": "2026-08-07",
-      "severity": "High",
-      "summary": "Security alert 2026-7716. Review the official notice for affected products and remediation guidance."
-    },
-    {
-      "title": "Johnson Controls Inc. TL280",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-218-02",
-      "date": "2026-08-06",
-      "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to access sensitive information on the device. The following versions of Johnson Controls…",
+      "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-8037 Progress LoadMaster Command…",
       "authority": "CISA",
       "severity": ""
+    },
+    {
+      "title": "CPDLC over ATN-B1 Vulnerabilities",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-219-01",
+      "date": "2026-08-07",
+      "summary": "View CSAF Summary ATN-B1 CPDLC relies on legacy clear text unauthenticated radio frequency links. Research demonstrates that these characteristics allow unauthorized message…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "authority": "Saudi NCA / CERT",
+      "title": "HPE Alert",
+      "url": "https://nca.gov.sa/en/cert/7842/",
+      "date": "2026-08-07",
+      "severity": "Critical",
+      "summary": "Security alert 2026-7719. Review the official notice for affected products and remediation guidance."
+    },
+    {
+      "authority": "Saudi NCA / CERT",
+      "title": "Cisco Alert",
+      "url": "https://nca.gov.sa/en/cert/7841/",
+      "date": "2026-08-07",
+      "severity": "High",
+      "summary": "Security alert 2026-7718. Review the official notice for affected products and remediation guidance."
+    },
+    {
+      "authority": "Saudi NCA / CERT",
+      "title": "HPE Alert",
+      "url": "https://nca.gov.sa/en/cert/7840/",
+      "date": "2026-08-07",
+      "severity": "High",
+      "summary": "Security alert 2026-7717. Review the official notice for affected products and remediation guidance."
     },
     {
       "title": "ABB Ability Zenon",
@@ -185,34 +209,10 @@
       "severity": ""
     },
     {
-      "authority": "Saudi NCA / CERT",
-      "title": "Chrome Alert",
-      "url": "https://nca.gov.sa/en/cert/7838/",
+      "title": "Johnson Controls Inc. TL280",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-218-02",
       "date": "2026-08-06",
-      "severity": "Critical",
-      "summary": "Security alert 2026-7715. Review the official notice for affected products and remediation guidance."
-    },
-    {
-      "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-      "url": "https://www.cisa.gov/news-events/alerts/2026/08/05/cisa-adds-one-known-exploited-vulnerability-catalog",
-      "date": "2026-08-05",
-      "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-63077 JetBrains TeamCity…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
-      "authority": "Saudi NCA / CERT",
-      "title": "Cisco Alert",
-      "url": "https://nca.gov.sa/en/cert/7837/",
-      "date": "2026-08-05",
-      "severity": "Critical",
-      "summary": "Security alert 2026-7714. Review the official notice for affected products and remediation guidance."
-    },
-    {
-      "title": "Acrisure KARR BT and DR-100",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-216-01",
-      "date": "2026-08-04",
-      "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to perform unauthorized vehicle control operations. The following versions of Acrisure…",
+      "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to access sensitive information on the device. The following versions of Johnson Controls…",
       "authority": "CISA",
       "severity": ""
     },
@@ -324,7 +324,7 @@
       "path": "/assets/data/daily-urls.txt"
     }
   ],
-  "ioc_sha256": "32c14db02b84ed7540654c8cf39968eef5e79c2915805a32fc12b462c138c2ce",
+  "ioc_sha256": "3525ad353eb4c2f8a80b3e65457a80b73e910541763fe92ce9892416e38be391",
   "sources": {
     "kev": {
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
