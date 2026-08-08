@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Empty nonce stopped at a cryptographic validation boundary</title>
+  <desc id="desc">An abstract encrypted channel of layered blue rings flows toward a protected core, while an empty amber ring is intercepted and diverted at a luminous validation boundary.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071222"/>
+      <stop offset="0.52" stop-color="#102c4a"/>
+      <stop offset="1" stop-color="#091628"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="58%" cy="50%" r="55%">
+      <stop offset="0" stop-color="#55e3ed" stop-opacity="0.25"/>
+      <stop offset="0.48" stop-color="#2f8fd5" stop-opacity="0.09"/>
+      <stop offset="1" stop-color="#17385b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="channel" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#245b9a" stop-opacity="0.2"/>
+      <stop offset="0.48" stop-color="#47cbdc" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#b2fbf4"/>
+    </linearGradient>
+    <linearGradient id="gate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b6fbf5" stop-opacity="0.78"/>
+      <stop offset="0.5" stop-color="#4fd4dd" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#2576ba" stop-opacity="0.14"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd36b"/>
+      <stop offset="0.56" stop-color="#ff9a47"/>
+      <stop offset="1" stop-color="#dd5265"/>
+    </linearGradient>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <pattern id="mesh" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#78cce5" stroke-opacity="0.05"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#mesh)"/>
+  <ellipse cx="925" cy="450" rx="615" ry="420" fill="url(#aura)"/>
+
+  <g opacity="0.52" fill="#69dbe7">
+    <circle cx="150" cy="174" r="6"/><circle cx="251" cy="118" r="3"/><circle cx="1398" cy="161" r="5"/>
+    <circle cx="1460" cy="716" r="7"/><circle cx="205" cy="747" r="4"/><circle cx="1305" cy="792" r="3"/>
+  </g>
+  <g fill="none" stroke="#64cfe0" stroke-opacity="0.22" stroke-width="2">
+    <path d="M150 174L251 118M1398 161L1328 224M1460 716L1378 680M205 747L286 703"/>
+  </g>
+
+  <!-- protected cryptographic channel -->
+  <path d="M114 450C360 450 482 449 677 450" fill="none" stroke="#2d77b7" stroke-opacity="0.16" stroke-width="188" stroke-linecap="round"/>
+  <path d="M110 450C356 450 492 450 691 450" fill="none" stroke="url(#channel)" stroke-width="8" stroke-linecap="round"/>
+  <path d="M125 388C342 388 482 407 679 421" fill="none" stroke="#55d7e4" stroke-opacity="0.38" stroke-width="4"/>
+  <path d="M125 512C342 512 482 493 679 479" fill="none" stroke="#4a91d0" stroke-opacity="0.42" stroke-width="4"/>
+
+  <g transform="translate(235 450)" fill="none">
+    <ellipse rx="48" ry="96" stroke="#55d9e4" stroke-opacity="0.34" stroke-width="3"/>
+    <ellipse rx="22" ry="64" stroke="#8bf0ee" stroke-opacity="0.5" stroke-width="2"/>
+  </g>
+  <g transform="translate(410 450)" fill="none">
+    <ellipse rx="54" ry="108" stroke="#55d9e4" stroke-opacity="0.38" stroke-width="3"/>
+    <ellipse rx="26" ry="72" stroke="#8bf0ee" stroke-opacity="0.54" stroke-width="2"/>
+  </g>
+  <g transform="translate(582 450)" fill="none">
+    <ellipse rx="60" ry="121" stroke="#68e1e7" stroke-opacity="0.46" stroke-width="3"/>
+    <ellipse rx="29" ry="80" stroke="#a3f8f1" stroke-opacity="0.6" stroke-width="2"/>
+  </g>
+
+  <!-- validation surface -->
+  <g transform="translate(754 95)">
+    <path d="M96 0L232 55V300C232 435 183 555 96 654C9 555-40 435-40 300V55Z" fill="url(#gate)" stroke="#98f3ef" stroke-opacity="0.75" stroke-width="3"/>
+    <path d="M96 54L183 89V294C183 386 154 471 96 548C38 471 9 386 9 294V89Z" fill="#0a2c4b" fill-opacity="0.56" stroke="#5ddae1" stroke-opacity="0.4" stroke-width="2"/>
+    <ellipse cx="96" cy="355" rx="104" ry="156" fill="none" stroke="#88ecec" stroke-opacity="0.28" stroke-width="2"/>
+    <ellipse cx="96" cy="355" rx="52" ry="111" fill="none" stroke="#a4f7f0" stroke-opacity="0.5" stroke-width="3"/>
+    <circle cx="96" cy="355" r="17" fill="#c4fff7" filter="url(#glow)"/>
+  </g>
+
+  <!-- valid flow continues -->
+  <path d="M986 450C1086 450 1156 450 1251 450" fill="none" stroke="#75e9e9" stroke-width="9" stroke-linecap="round"/>
+  <path d="M994 411C1092 398 1165 402 1254 420" fill="none" stroke="#468ecc" stroke-opacity="0.46" stroke-width="4"/>
+  <path d="M994 489C1092 502 1165 498 1254 480" fill="none" stroke="#65d9e4" stroke-opacity="0.5" stroke-width="4"/>
+
+  <!-- empty nonce: a luminous ring with no interior value -->
+  <ellipse cx="576" cy="204" rx="92" ry="54" fill="#ff9d4f" fill-opacity="0.08" filter="url(#soft)"/>
+  <ellipse cx="576" cy="204" rx="64" ry="38" fill="none" stroke="url(#amber)" stroke-width="11" filter="url(#glow)"/>
+  <path d="M641 214C731 231 770 284 793 355" fill="none" stroke="url(#amber)" stroke-width="9" stroke-linecap="round" filter="url(#glow)"/>
+  <path d="M794 355C808 389 818 419 823 447" fill="none" stroke="#ffbb58" stroke-opacity="0.55" stroke-width="5" stroke-dasharray="6 12"/>
+
+  <!-- rejection arc -->
+  <path d="M817 402C727 459 704 598 789 688C868 773 1009 761 1065 675" fill="none" stroke="#f47c4e" stroke-opacity="0.12" stroke-width="58" filter="url(#soft)"/>
+  <path d="M817 402C727 459 704 598 789 688C868 773 1009 761 1065 675" fill="none" stroke="url(#amber)" stroke-width="10" stroke-linecap="round"/>
+  <g transform="translate(1074 642)">
+    <circle r="69" fill="#301729" fill-opacity="0.78" stroke="#ff9c50" stroke-opacity="0.72" stroke-width="3"/>
+    <circle r="43" fill="none" stroke="#ffc163" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="7 9"/>
+    <path d="M-20-20L20 20M20-20L-20 20" stroke="#ffd06d" stroke-width="8" stroke-linecap="round"/>
+  </g>
+
+  <!-- authenticated destination -->
+  <g transform="translate(1360 450)">
+    <circle r="128" fill="#0b2038" stroke="#56d5df" stroke-opacity="0.52" stroke-width="3"/>
+    <circle r="92" fill="#123b5b" fill-opacity="0.7" stroke="#88ece9" stroke-opacity="0.45" stroke-width="2"/>
+    <circle r="52" fill="#5ddce3" fill-opacity="0.14" stroke="#a5f8ef" stroke-width="3" filter="url(#glow)"/>
+    <path d="M-22 1L-6 18L28-23" fill="none" stroke="#c2fff6" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-151 0A151 151 0 0 1 0-151M151 0A151 151 0 0 1 0 151" fill="none" stroke="#5ed9e2" stroke-opacity="0.25" stroke-width="2" stroke-dasharray="5 12"/>
+  </g>
+
+  <path d="M88 802C383 744 579 819 820 789C1076 758 1271 813 1511 756" fill="none" stroke="#58b7db" stroke-opacity="0.14" stroke-width="2"/>
+</svg>
