@@ -161,6 +161,22 @@
       "github_run_id": "31147867332",
       "status": "published",
       "last_error": null
+    },
+    "48c4d7258c787a5b274a95a0a31296fe67ba90d1fdeb2ed860c193d7d3dad139": {
+      "title": "Defensive Security Insights: Protocol Verification, Endpoint Trust, and AI Safety",
+      "digest_date": "2026-08-08",
+      "digest_hash": "48c4d7258c787a5b274a95a0a31296fe67ba90d1fdeb2ed860c193d7d3dad139",
+      "generated_at": "2026-08-09T06:58:37.812+04:00",
+      "briefing_url": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-08/48c4d7258c787a5b/daily-digest.html",
+      "pdf_file": "assets/social/linkedin-digest/2026-08-08/48c4d7258c787a5b/daily-digest.pdf",
+      "linkedin_caption": "ShadowContext daily defensive briefing for August 8, 2026. Reviewing protocol boundaries, memory safety, and model security controls.\n\nThis edition brings together 10 ShadowContext briefings from August 8, 2026, with direct source links and operational priorities.\n\nRead the full daily briefing:\nhttps://shadowcontext.com/assets/social/linkedin-digest/2026-08-08/48c4d7258c787a5b/daily-digest.html\n\n#Cybersecurity #ThreatIntelligence #InfoSec #AISecurity",
+      "linkedin_document_urn": "urn:li:document:D4D10AQEqydI97tgCcg",
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7492066362228531200",
+      "published_at": "2026-08-09T03:56:56.955Z",
+      "github_run_id": "31293490374",
+      "status": "published",
+      "last_error": null
     }
   }
 }
