@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-08T01:18:45Z",
-  "generated_display": "08 Aug 2026 · 01:18 UTC",
+  "generated_at": "2026-08-09T01:18:45Z",
+  "generated_display": "09 Aug 2026 · 01:18 UTC",
   "metrics": {
     "kev_total": 1662,
     "kev_added_30d": 27,
-    "due_next_7d": 3,
+    "due_next_7d": 2,
     "ioc_total": 170,
     "ioc_total_display": "170",
     "ioc_total_exact": "170"
@@ -324,7 +324,7 @@
       "path": "/assets/data/daily-urls.txt"
     }
   ],
-  "ioc_sha256": "3525ad353eb4c2f8a80b3e65457a80b73e910541763fe92ce9892416e38be391",
+  "ioc_sha256": "3bf5007c7679ce02f6eeabe811742a9218d6574115eee91e8955de0c2e70675d",
   "sources": {
     "kev": {
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
