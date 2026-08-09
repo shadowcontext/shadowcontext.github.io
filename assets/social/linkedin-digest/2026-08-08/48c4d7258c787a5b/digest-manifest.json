@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-08-09T06:58:37.812+04:00",
+  "digestDate": "2026-08-08",
+  "digestHash": "48c4d7258c787a5b274a95a0a31296fe67ba90d1fdeb2ed860c193d7d3dad139",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "Defensive Security Insights: Protocol Verification, Endpoint Trust, and AI Safety",
+  "articleCount": 10,
+  "sourceArticles": [
+    {
+      "title": "Protocol Verification Needs Translation Boundaries",
+      "canonicalUrl": "https://shadowcontext.com/protocol-verification-needs-translation-boundaries/",
+      "publishedAt": "2026-08-08T00:09:47.000+04:00",
+      "category": "defense",
+      "sourceHash": "34ebf304a19d3cb8130672b3a541dd3de38c83c687c48ff205ac775bbb50ca39"
+    },
+    {
+      "title": "Prompt-Injection Filters Need Domain Calibration",
+      "canonicalUrl": "https://shadowcontext.com/prompt-injection-filters-need-domain-calibration/",
+      "publishedAt": "2026-08-08T04:10:32.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "b5bd60a833d3d2ae24c4c58bd14faf7ee0a16a3c142bef931f3c8b06c1ce98e9"
+    },
+    {
+      "title": "GCM Empty Nonces Need an API Boundary",
+      "canonicalUrl": "https://shadowcontext.com/gcm-empty-nonces-need-an-api-boundary/",
+      "publishedAt": "2026-08-08T07:10:58.000+04:00",
+      "category": "defense",
+      "sourceHash": "15dabd20a524a1b6abe1793510f76827005498fc1d16b79f72b5293aeff25538"
+    },
+    {
+      "title": "stb TrueType Flaw Needs Source-Level Inventory",
+      "canonicalUrl": "https://shadowcontext.com/stb-truetype-flaw-needs-source-level-inventory/",
+      "publishedAt": "2026-08-08T08:09:34.000+04:00",
+      "category": "defense",
+      "sourceHash": "17e33e29aa82d01ad0e4f646634ab9dc6d98955a824ee409245a08d185c85dd8"
+    },
+    {
+      "title": "Rust Memory Safety Still Needs Unsafe-Code Testing",
+      "canonicalUrl": "https://shadowcontext.com/rust-unsafe-code-needs-targeted-fuzzing/",
+      "publishedAt": "2026-08-08T09:08:32.000+04:00",
+      "category": "defense",
+      "sourceHash": "182e83b70793880c1ca4a174d454a6fc19755bf78e41578c505a1d2eb155bfdb"
+    },
+    {
+      "title": "Multimodal AI Needs Cross-Modal Safety Tests",
+      "canonicalUrl": "https://shadowcontext.com/multimodal-ai-needs-cross-modal-safety-tests/",
+      "publishedAt": "2026-08-08T11:10:26.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "fbc8006e856a556e17a28f8690b562d2fdc15a507ee12276689d68d1da644510"
+    },
+    {
+      "title": "Coding Assistants Need Conditional Behavior Tests",
+      "canonicalUrl": "https://shadowcontext.com/coding-assistants-need-conditional-behavior-tests/",
+      "publishedAt": "2026-08-08T12:10:13.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "b63167df4eb11cd96ed26bd33aecb866966f24e6c11a278a1e43bd572bb5ad3c"
+    },
+    {
+      "title": "npm Cooldowns Need State-Aware Monitoring",
+      "canonicalUrl": "https://shadowcontext.com/npm-cooldowns-need-state-aware-monitoring/",
+      "publishedAt": "2026-08-08T16:09:54.000+04:00",
+      "category": "defense",
+      "sourceHash": "4c2a87163f32ef379c3273cb361976f7247f4403372cca6a8e9ee37755b05aa2"
+    },
+    {
+      "title": "EDR Trust Needs Independent Proof",
+      "canonicalUrl": "https://shadowcontext.com/edr-trust-needs-independent-proof/",
+      "publishedAt": "2026-08-08T20:09:30.000+04:00",
+      "category": "defense",
+      "sourceHash": "d277308ee3e4f0dfe0d104dad02f014a031d279b6b488ea379eb9df19cfbb739"
+    },
+    {
+      "title": "Model Safety Scans Still Need Behavioral Proof",
+      "canonicalUrl": "https://shadowcontext.com/model-safety-scans-need-behavioral-proof/",
+      "publishedAt": "2026-08-08T23:10:35.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "49f71daa50cd9ed8d9261601e98e5e722a4e2da60ed3c5d3e3de6e6f02491cca"
+    }
+  ],
+  "caption": "ShadowContext daily defensive briefing for August 8, 2026. Reviewing protocol boundaries, memory safety, and model security controls.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-08-08/48c4d7258c787a5b/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-08/48c4d7258c787a5b/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-08-08/48c4d7258c787a5b/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-08/48c4d7258c787a5b/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}

@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Defensive Security Insights: Protocol Verification, Endpoint Trust, and AI Safety | ShadowContext</title>
+    <style>
+      :root {
+        --paper: #05080d;
+        --panel: #0d1319;
+        --panel-soft: #091017;
+        --ink: #f1f7fa;
+        --ink-2: #c4d1d8;
+        --muted: #8496a1;
+        --line: #1d2b34;
+        --cyan: #35e6d1;
+        --violet: #8b7dff;
+        --sans: "Space Grotesk", Inter, Arial, sans-serif;
+        --mono: "DM Mono", Consolas, monospace;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: var(--sans);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        font-size: 10.5pt;
+        line-height: 1.55;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        position: relative;
+        width: 210mm;
+        min-height: 297mm;
+        padding: 18mm;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 83% 18%, rgba(139, 125, 255, 0.1), transparent 28%),
+          linear-gradient(145deg, #05080d 0%, #081017 62%, #0c101c 100%);
+      }
+
+      .page::before {
+        content: "";
+        position: absolute;
+        inset: 8mm;
+        pointer-events: none;
+        border: 0.25mm solid var(--line);
+      }
+
+      .cover {
+        display: flex;
+        flex-direction: column;
+        page-break-after: always;
+      }
+
+      .brand-row,
+      .section-head,
+      .document-footer {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 4mm;
+        font-size: 20pt;
+        font-weight: 750;
+        letter-spacing: -0.04em;
+      }
+
+      .brand em {
+        color: var(--cyan);
+        font-style: normal;
+      }
+
+      .brand-mark {
+        position: relative;
+        display: block;
+        width: 12mm;
+        height: 12mm;
+        transform: rotate(30deg);
+        border: 1mm solid var(--cyan);
+        border-radius: 1.2mm;
+      }
+
+      .brand-mark::before {
+        content: "";
+        position: absolute;
+        inset: 2.2mm;
+        border: 0.8mm solid var(--violet);
+        border-radius: 0.9mm;
+      }
+
+      .brand-mark::after {
+        content: "";
+        position: absolute;
+        inset: 4.5mm;
+        background: var(--cyan);
+        border-radius: 0.5mm;
+      }
+
+      .edition,
+      .eyebrow,
+      .topic,
+      .section-count,
+      .why span,
+      .document-footer,
+      .source-link {
+        font-family: var(--mono);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .edition,
+      .section-count,
+      .document-footer {
+        color: var(--muted);
+        font-size: 8pt;
+      }
+
+      .cover-copy {
+        position: relative;
+        z-index: 1;
+        margin: 30mm 0 0;
+      }
+
+      .eyebrow {
+        margin: 0 0 7mm;
+        color: var(--cyan);
+        font-size: 10pt;
+      }
+
+      h1 {
+        max-width: 165mm;
+        margin: 0;
+        font-size: 37pt;
+        line-height: 1.03;
+        letter-spacing: -0.05em;
+      }
+
+      .dek {
+        max-width: 155mm;
+        margin: 10mm 0 0;
+        color: var(--ink-2);
+        font-size: 16pt;
+        line-height: 1.45;
+      }
+
+      .context {
+        position: relative;
+        z-index: 1;
+        margin-top: auto;
+        padding: 9mm;
+        background: rgba(13, 19, 25, 0.94);
+        border: 0.3mm solid var(--line);
+        border-left: 1mm solid var(--violet);
+      }
+
+      .context h2,
+      .section-head h2,
+      .operating-view h2,
+      .sources h2 {
+        margin: 0;
+      }
+
+      .context h2 {
+        color: var(--violet);
+        font-family: var(--mono);
+        font-size: 9pt;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .context p {
+        margin: 4mm 0 0;
+        color: var(--ink-2);
+        font-size: 13pt;
+      }
+
+      .cover-meta {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 9mm;
+        color: var(--muted);
+        font: 8pt var(--mono);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .content {
+        padding-top: 15mm;
+        padding-bottom: 18mm;
+      }
+
+      .section-head {
+        margin-bottom: 9mm;
+        padding-bottom: 5mm;
+        border-bottom: 0.3mm solid var(--line);
+      }
+
+      .section-head h2 {
+        font-size: 23pt;
+      }
+
+      .stories {
+        position: relative;
+        z-index: 1;
+      }
+
+      .story {
+        display: grid;
+        grid-template-columns: 15mm 1fr;
+        gap: 5mm;
+        margin: 0 0 6mm;
+        padding: 7mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: rgba(13, 19, 25, 0.96);
+        border: 0.3mm solid var(--line);
+      }
+
+      .story-index {
+        color: var(--cyan);
+        font: 12pt var(--mono);
+      }
+
+      .topic {
+        margin: 0 0 2mm;
+        color: var(--cyan);
+        font-size: 7.5pt;
+      }
+
+      .story h3 {
+        margin: 0;
+        font-size: 16pt;
+        line-height: 1.18;
+        letter-spacing: -0.025em;
+      }
+
+      .summary {
+        margin: 3mm 0;
+        color: var(--ink-2);
+        font-size: 10.5pt;
+      }
+
+      .why {
+        padding-top: 3mm;
+        border-top: 0.25mm solid var(--line);
+      }
+
+      .why span {
+        color: var(--violet);
+        font-size: 7pt;
+      }
+
+      .why p {
+        display: inline;
+        margin: 0 0 0 2mm;
+        font-weight: 650;
+      }
+
+      .source-link {
+        display: inline-block;
+        margin-top: 4mm;
+        color: var(--cyan);
+        font-size: 6.8pt;
+        letter-spacing: 0.04em;
+        text-transform: none;
+      }
+
+      .operating-view,
+      .sources {
+        position: relative;
+        z-index: 1;
+        margin-top: 12mm;
+        padding: 9mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: var(--panel-soft);
+        border: 0.3mm solid var(--line);
+      }
+
+      .operating-view {
+        border-top: 1mm solid var(--cyan);
+      }
+
+      .operating-view h2,
+      .sources h2 {
+        font-size: 18pt;
+      }
+
+      .operating-view > p {
+        color: var(--ink-2);
+        font-size: 12pt;
+      }
+
+      .watch-list,
+      .source-list {
+        margin: 6mm 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .watch-list li {
+        display: grid;
+        grid-template-columns: 9mm 1fr;
+        gap: 4mm;
+        align-items: start;
+        margin: 3mm 0;
+      }
+
+      .watch-list span {
+        display: grid;
+        width: 8mm;
+        height: 8mm;
+        place-items: center;
+        color: var(--cyan);
+        border: 0.3mm solid var(--cyan);
+        font: 8pt var(--mono);
+      }
+
+      .watch-list p {
+        margin: 0;
+      }
+
+      .source-list li {
+        display: grid;
+        grid-template-columns: 10mm 1fr;
+        gap: 3mm;
+        margin: 2.5mm 0;
+        color: var(--ink-2);
+        font-size: 8.5pt;
+      }
+
+      .source-list span {
+        color: var(--violet);
+        font-family: var(--mono);
+      }
+
+      .source-list a {
+        color: var(--cyan);
+        text-decoration: underline;
+        text-decoration-color: rgba(53, 230, 209, 0.35);
+        text-underline-offset: 1mm;
+      }
+
+      .cta {
+        position: relative;
+        z-index: 1;
+        margin: 12mm 0 0;
+        padding: 7mm 9mm;
+        break-inside: avoid;
+        color: #04100f;
+        background: var(--cyan);
+      }
+
+      .cta strong {
+        display: block;
+        font-size: 14pt;
+      }
+
+      .cta span {
+        font: 9pt var(--mono);
+      }
+
+      .document-footer {
+        margin-top: 12mm;
+        padding-top: 5mm;
+        border-top: 0.3mm solid var(--line);
+      }
+
+      @media screen {
+        body {
+          width: 210mm;
+          margin: 0 auto;
+        }
+
+        .page {
+          box-shadow: 0 0 20mm rgba(0, 0, 0, 0.45);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="page cover">
+      <header class="brand-row">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Shadow<em>Context</em></span>
+        </div>
+        <span class="edition">Daily security digest</span>
+      </header>
+
+      <main class="cover-copy">
+        <p class="eyebrow">The day in context / 2026-08-08</p>
+        <h1>Defensive Security Insights: Protocol Verification, Endpoint Trust, and AI Safety</h1>
+        <p class="dek">ShadowContext daily digest covering protocol verification boundaries, prompt-injection calibration, GCM edge cases, memory-safety testing, EDR assurance, and model validation.</p>
+      </main>
+
+      <aside class="context">
+        <h2>Executive summary</h2>
+        <p>Today&#39;s research highlights critical gaps across protocol translation, AI guardrails, cryptographic primitives, and EDR trust. Defenders must enforce rigorous state monitoring, input validation, and independent behavioral checks rather than relying on automated assumptions or single-layer validation.</p>
+      </aside>
+
+      <div class="cover-meta">
+        <span>10 briefings included</span>
+        <span>https://shadowcontext.com/</span>
+      </div>
+    </section>
+
+    <section class="page content">
+      <header class="section-head">
+        <h2>All news from the day</h2>
+        <span class="section-count">10 / 2026-08-08</span>
+      </header>
+
+      <main class="stories">
+    <article class="story">
+      <div class="story-index">01</div>
+      <div class="story-copy">
+        <p class="topic">Protocol Verification</p>
+        <h3>Protocol Translation Needs Explicit Semantic Boundaries</h3>
+        <p class="summary">Cross-tool model checks from Tamarin to ProVerif provide useful evidence only when verification pipelines preserve explicit semantic boundaries.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>A generated model must carry an assurance label reflecting actual translated features to prevent invalid conclusions.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/protocol-verification-needs-translation-boundaries/">Protocol Verification Needs Translation Boundaries ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">02</div>
+      <div class="story-copy">
+        <p class="topic">AI Security</p>
+        <h3>Prompt-Injection Filters Require Domain Calibration</h3>
+        <p class="summary">Context-aware detection research shows that agent defenses must balance attack resistance against clean task utility across specific domains.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Aggressive filtering can block legitimate work, making workflow-specific calibration essential for secure deployments.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/prompt-injection-filters-need-domain-calibration/">Prompt-Injection Filters Need Domain Calibration ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">03</div>
+      <div class="story-copy">
+        <p class="topic">Cryptographic Defense</p>
+        <h3>GCM Empty Nonces Require Unconditional Rejection</h3>
+        <p class="summary">A zero-length nonce edge case in specific specifications can recover authentication subkeys, making input validation vital.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Explicitly rejecting empty nonces at the input boundary prevents authentication failure in GCM deployments.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/gcm-empty-nonces-need-an-api-boundary/">GCM Empty Nonces Need an API Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">04</div>
+      <div class="story-copy">
+        <p class="topic">Dependency Security</p>
+        <h3>stb TrueType Flaw Demands Source-Level Inventory</h3>
+        <p class="summary">Single-header libraries like stbtruetype hide dependencies, requiring build-level visibility and runtime isolation for untrusted font inputs.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Hidden dependencies evade conventional package scans, leaving systems exposed to heap buffer overflows.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/stb-truetype-flaw-needs-source-level-inventory/">stb TrueType Flaw Needs Source-Level Inventory ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">05</div>
+      <div class="story-copy">
+        <p class="topic">Memory Safety</p>
+        <h3>Rust Memory Safety Requires Targeted Fuzzing</h3>
+        <p class="summary">Fuzzing efforts in Rust codebases should target raw-pointer operations and unsafe code boundaries to catch temporal memory errors.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Memory faults can manifest along safe paths, requiring whole-program coverage and persistent fuzzing budgets.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/rust-unsafe-code-needs-targeted-fuzzing/">Rust Memory Safety Still Needs Unsafe-Code Testing ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">06</div>
+      <div class="story-copy">
+        <p class="topic">AI Security</p>
+        <h3>Multimodal AI Needs Cross-Modal Safety Testing</h3>
+        <p class="summary">Multimodal models can exhibit inconsistent policy enforcement across text and image inputs, requiring paired cross-modal validation.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>A text safety report does not establish multimodal safety in customized application deployments.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/multimodal-ai-needs-cross-modal-safety-tests/">Multimodal AI Needs Cross-Modal Safety Tests ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">07</div>
+      <div class="story-copy">
+        <p class="topic">AI Security</p>
+        <h3>Coding Assistants Need Conditional Behavior Tests</h3>
+        <p class="summary">Research into instruction backdoors highlights the need to govern custom instructions as executable policy and use paired behavioral probes.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Normal clean performance can conceal conditional changes in behavior introduced by custom instructions.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/coding-assistants-need-conditional-behavior-tests/">Coding Assistants Need Conditional Behavior Tests ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">08</div>
+      <div class="story-copy">
+        <p class="topic">Configuration Management</p>
+        <h3>npm Cooldowns Need State-Aware Monitoring</h3>
+        <p class="summary">Monitoring npm release-age configurations requires periodic state snapshotting rather than relying solely on append-only log files.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Configuration drift and control removal can leave systems exposed if telemetry only tracks initial writes.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/npm-cooldowns-need-state-aware-monitoring/">npm Cooldowns Need State-Aware Monitoring ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">09</div>
+      <div class="story-copy">
+        <p class="topic">Endpoint Security</p>
+        <h3>EDR Trust Requires Independent Health Proof</h3>
+        <p class="summary">Akamai research on Windows Protected Process Light highlights that endpoint agents cannot rely solely on local status indicators.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Independent network and management telemetry ensure visibility when endpoint agents become impaired or unreachable.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/edr-trust-needs-independent-proof/">EDR Trust Needs Independent Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">10</div>
+      <div class="story-copy">
+        <p class="topic">AI Security</p>
+        <h3>Model Safety Scans Need Behavioral Validation</h3>
+        <p class="summary">Structural activation checks can accelerate intake, but safe deployment requires provenance controls and independent behavioral validation.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>A model can retain internal activation patterns while behaving unsafely under novel requests.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/model-safety-scans-need-behavioral-proof/">Model Safety Scans Still Need Behavioral Proof ↗</a>
+      </div>
+    </article></main>
+
+      <section class="operating-view">
+        <p class="eyebrow">The operating view</p>
+        <h2>What the day means for defenders</h2>
+        <p>Maintainers and defenders must verify system assumptions across boundaries. Implement strict input checks for cryptographic primitives, discover hidden source dependencies, monitor security control states, and validate AI models using paired behavioral tests rather than structural assumptions.</p>
+        <ol class="watch-list"><li><span>1</span><p>Monitor endpoint security management planes for stale agents and unverified configuration changes.</p></li>
+<li><span>2</span><p>Audit custom AI instructions and multi-modal inputs against conditional safety drift.</p></li>
+<li><span>3</span><p>Verify cryptographic libraries and dependency trees for unmanaged input edge cases.</p></li></ol>
+      </section>
+
+      <section class="sources">
+        <p class="eyebrow">Source index</p>
+        <h2>Every briefing in this digest</h2>
+        <ol class="source-list">
+    <li>
+      <span>01</span>
+      <a href="https://shadowcontext.com/protocol-verification-needs-translation-boundaries/">Protocol Verification Needs Translation Boundaries</a>
+    </li>
+
+    <li>
+      <span>02</span>
+      <a href="https://shadowcontext.com/prompt-injection-filters-need-domain-calibration/">Prompt-Injection Filters Need Domain Calibration</a>
+    </li>
+
+    <li>
+      <span>03</span>
+      <a href="https://shadowcontext.com/gcm-empty-nonces-need-an-api-boundary/">GCM Empty Nonces Need an API Boundary</a>
+    </li>
+
+    <li>
+      <span>04</span>
+      <a href="https://shadowcontext.com/stb-truetype-flaw-needs-source-level-inventory/">stb TrueType Flaw Needs Source-Level Inventory</a>
+    </li>
+
+    <li>
+      <span>05</span>
+      <a href="https://shadowcontext.com/rust-unsafe-code-needs-targeted-fuzzing/">Rust Memory Safety Still Needs Unsafe-Code Testing</a>
+    </li>
+
+    <li>
+      <span>06</span>
+      <a href="https://shadowcontext.com/multimodal-ai-needs-cross-modal-safety-tests/">Multimodal AI Needs Cross-Modal Safety Tests</a>
+    </li>
+
+    <li>
+      <span>07</span>
+      <a href="https://shadowcontext.com/coding-assistants-need-conditional-behavior-tests/">Coding Assistants Need Conditional Behavior Tests</a>
+    </li>
+
+    <li>
+      <span>08</span>
+      <a href="https://shadowcontext.com/npm-cooldowns-need-state-aware-monitoring/">npm Cooldowns Need State-Aware Monitoring</a>
+    </li>
+
+    <li>
+      <span>09</span>
+      <a href="https://shadowcontext.com/edr-trust-needs-independent-proof/">EDR Trust Needs Independent Proof</a>
+    </li>
+
+    <li>
+      <span>10</span>
+      <a href="https://shadowcontext.com/model-safety-scans-need-behavioral-proof/">Model Safety Scans Still Need Behavioral Proof</a>
+    </li></ol>
+      </section>
+
+      <div class="cta">
+        <strong>Read the full analysis</strong>
+        <span>https://shadowcontext.com/</span>
+      </div>
+
+      <footer class="document-footer">
+        <span>ShadowContext</span>
+        <span>Independent defensive security intelligence</span>
+      </footer>
+    </section>
+  </body>
+</html>
