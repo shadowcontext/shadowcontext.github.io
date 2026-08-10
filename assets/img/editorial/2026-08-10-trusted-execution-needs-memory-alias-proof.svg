@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Memory alias detection protecting a trusted processor core</title>
+  <desc id="desc">An abstract editorial scene of duplicated memory paths converging on a processor core, with a luminous detection ring intercepting the unexpected alias.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071525"/>
+      <stop offset="0.52" stop-color="#102746"/>
+      <stop offset="1" stop-color="#07121f"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="50%" cy="49%" r="52%">
+      <stop offset="0" stop-color="#42e8cf" stop-opacity=".32"/>
+      <stop offset=".55" stop-color="#2d9ed5" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#071525" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b9fff0"/>
+      <stop offset=".45" stop-color="#45dfc4"/>
+      <stop offset="1" stop-color="#1687ad"/>
+    </linearGradient>
+    <linearGradient id="alias" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffba6b" stop-opacity=".12"/>
+      <stop offset=".55" stop-color="#ff9b62" stop-opacity=".95"/>
+      <stop offset="1" stop-color="#ff6e7d" stop-opacity=".28"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="16" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <pattern id="grid" width="72" height="72" patternUnits="userSpaceOnUse">
+      <path d="M72 0H0V72" fill="none" stroke="#78b8d6" stroke-opacity=".07" stroke-width="2"/>
+      <circle cx="0" cy="0" r="3" fill="#90d8e7" fill-opacity=".13"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <ellipse cx="800" cy="445" rx="640" ry="395" fill="url(#aura)"/>
+
+  <g opacity=".65">
+    <path d="M80 216C260 216 298 334 452 334H580" fill="none" stroke="#47b9dc" stroke-width="8"/>
+    <path d="M80 684C260 684 298 566 452 566H580" fill="none" stroke="#47b9dc" stroke-width="8"/>
+    <path d="M1520 216C1340 216 1302 334 1148 334H1020" fill="none" stroke="#47b9dc" stroke-width="8"/>
+    <path d="M1520 684C1340 684 1302 566 1148 566H1020" fill="none" stroke="#47b9dc" stroke-width="8"/>
+  </g>
+
+  <g fill="#173958" stroke="#5ecbe0" stroke-width="3">
+    <rect x="105" y="164" width="190" height="104" rx="22"/>
+    <rect x="105" y="632" width="190" height="104" rx="22"/>
+    <rect x="1305" y="164" width="190" height="104" rx="22"/>
+    <rect x="1305" y="632" width="190" height="104" rx="22"/>
+  </g>
+  <g fill="#66d4e4" opacity=".5">
+    <rect x="137" y="190" width="126" height="10" rx="5"/><rect x="137" y="217" width="88" height="10" rx="5"/>
+    <rect x="137" y="658" width="126" height="10" rx="5"/><rect x="137" y="685" width="88" height="10" rx="5"/>
+    <rect x="1337" y="190" width="126" height="10" rx="5"/><rect x="1375" y="217" width="88" height="10" rx="5"/>
+    <rect x="1337" y="658" width="126" height="10" rx="5"/><rect x="1375" y="685" width="88" height="10" rx="5"/>
+  </g>
+
+  <path d="M105 216C310 216 342 450 542 450" fill="none" stroke="url(#alias)" stroke-width="15" filter="url(#glow)"/>
+  <path d="M105 684C310 684 342 450 542 450" fill="none" stroke="url(#alias)" stroke-width="15" filter="url(#glow)"/>
+
+  <circle cx="800" cy="450" r="242" fill="#081927" stroke="#51e2cb" stroke-opacity=".32" stroke-width="4"/>
+  <circle cx="800" cy="450" r="204" fill="none" stroke="#67f2d8" stroke-width="12" stroke-dasharray="310 42 92 34" filter="url(#glow)"/>
+  <circle cx="800" cy="450" r="173" fill="#0b2134" stroke="#8bffe7" stroke-opacity=".55" stroke-width="3"/>
+
+  <g transform="translate(680 330)">
+    <rect x="0" y="0" width="240" height="240" rx="44" fill="url(#core)" filter="url(#glow)"/>
+    <rect x="24" y="24" width="192" height="192" rx="30" fill="#0c2940" stroke="#c2fff2" stroke-opacity=".75" stroke-width="4"/>
+    <path d="M75 120l31 31 63-69" fill="none" stroke="#9effe9" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+    <g stroke="#5ce4cf" stroke-width="10" stroke-linecap="round">
+      <path d="M46-22v22M92-22v22M148-22v22M194-22v22M46 240v22M92 240v22M148 240v22M194 240v22"/>
+      <path d="M-22 46H0M-22 92H0M-22 148H0M-22 194H0M240 46h22M240 92h22M240 148h22M240 194h22"/>
+    </g>
+  </g>
+
+  <g filter="url(#glow)">
+    <circle cx="592" cy="450" r="19" fill="#ff9a65"/>
+    <path d="M577 435l30 30M607 435l-30 30" stroke="#fff1de" stroke-width="7" stroke-linecap="round"/>
+  </g>
+
+  <g opacity=".7" fill="#6aebd6">
+    <circle cx="800" cy="166" r="7"/><circle cx="1084" cy="450" r="7"/><circle cx="800" cy="734" r="7"/><circle cx="516" cy="450" r="7"/>
+  </g>
+  <ellipse cx="800" cy="790" rx="370" ry="35" fill="#39bfae" opacity=".12" filter="url(#soft)"/>
+</svg>
