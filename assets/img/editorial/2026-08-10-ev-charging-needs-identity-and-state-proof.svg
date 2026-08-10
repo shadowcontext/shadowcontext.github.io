@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Verified identity and physical state for electric-vehicle charging</title>
+  <desc id="desc">An abstract charging cable crosses a luminous identity shield toward a protected battery, surrounded by matched energy signals that represent independent physical-state verification.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071525"/>
+      <stop offset="0.55" stop-color="#0b2740"/>
+      <stop offset="1" stop-color="#101a31"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="48%" r="52%">
+      <stop offset="0" stop-color="#3cf0c5" stop-opacity=".25"/>
+      <stop offset=".55" stop-color="#27a8dd" stop-opacity=".10"/>
+      <stop offset="1" stop-color="#071525" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6ef5d1"/>
+      <stop offset="1" stop-color="#38a7e5"/>
+    </linearGradient>
+    <linearGradient id="energy" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#43d6ff"/>
+      <stop offset="1" stop-color="#79f2b7"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="14" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <ellipse cx="812" cy="438" rx="650" ry="390" fill="url(#halo)"/>
+  <g opacity=".32" fill="none" stroke="#5da6c7" stroke-width="2">
+    <path d="M80 234C310 124 475 165 645 262S1000 351 1524 168"/>
+    <path d="M35 706C292 596 489 631 682 724S1119 798 1561 600"/>
+    <circle cx="222" cy="236" r="8" fill="#64d4e8" stroke="none"/>
+    <circle cx="1374" cy="218" r="6" fill="#66e8c4" stroke="none"/>
+    <circle cx="1334" cy="678" r="9" fill="#64d4e8" stroke="none"/>
+  </g>
+  <g opacity=".38" filter="url(#soft)">
+    <ellipse cx="596" cy="466" rx="190" ry="230" fill="#21cfa4"/>
+    <ellipse cx="1115" cy="488" rx="230" ry="180" fill="#1b83c6"/>
+  </g>
+  <g transform="translate(590 160)">
+    <path d="M210 18L390 84v164c0 149-75 270-180 325C105 518 30 397 30 248V84z" fill="#0b263a" stroke="url(#shield)" stroke-width="13"/>
+    <path d="M210 62l137 50v133c0 114-54 211-137 264C127 456 73 359 73 245V112z" fill="#0a1e30" stroke="#7ce9d1" stroke-opacity=".28" stroke-width="3"/>
+    <circle cx="210" cy="245" r="81" fill="#0d3448" stroke="url(#shield)" stroke-width="8" filter="url(#glow)"/>
+    <circle cx="210" cy="224" r="28" fill="none" stroke="#8af6d6" stroke-width="10"/>
+    <path d="M155 314c9-44 30-66 55-66s46 22 55 66" fill="none" stroke="#8af6d6" stroke-width="11" stroke-linecap="round"/>
+  </g>
+  <g fill="none" stroke-linecap="round">
+    <path d="M-30 520C180 520 230 355 412 355h152" stroke="#07101c" stroke-width="72"/>
+    <path d="M-30 520C180 520 230 355 412 355h152" stroke="url(#energy)" stroke-width="19" filter="url(#glow)"/>
+    <path d="M1032 505h153c92 0 112 79 193 79h245" stroke="#07101c" stroke-width="72"/>
+    <path d="M1032 505h153c92 0 112 79 193 79h245" stroke="url(#energy)" stroke-width="19" filter="url(#glow)"/>
+  </g>
+  <g transform="translate(405 289)">
+    <rect x="0" y="0" width="168" height="132" rx="35" fill="#102d43" stroke="#55ddde" stroke-width="7"/>
+    <rect x="45" y="28" width="20" height="48" rx="8" fill="#8ef7da"/>
+    <rect x="103" y="28" width="20" height="48" rx="8" fill="#8ef7da"/>
+    <path d="M84 132v55" stroke="#55ddde" stroke-width="18"/>
+  </g>
+  <g transform="translate(1150 420)">
+    <rect x="0" y="0" width="284" height="225" rx="48" fill="#0a2135" stroke="#51bee9" stroke-width="8"/>
+    <rect x="284" y="75" width="31" height="75" rx="12" fill="#51bee9"/>
+    <rect x="35" y="36" width="214" height="153" rx="27" fill="#0c3143" stroke="#74ecc9" stroke-opacity=".6" stroke-width="4"/>
+    <path d="M80 128h38l19-44 35 89 25-57h31" fill="none" stroke="url(#energy)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  </g>
+  <g fill="#8cf4d3" filter="url(#glow)">
+    <circle cx="1100" cy="505" r="9"/>
+    <circle cx="1057" cy="505" r="6"/>
+    <circle cx="520" cy="355" r="7"/>
+  </g>
+  <g opacity=".7" fill="none" stroke="#70dbdf" stroke-width="4">
+    <path d="M1078 366l28 28 55-67"/>
+    <circle cx="1110" cy="364" r="71"/>
+    <path d="M368 646c82 68 170 97 265 88" stroke-dasharray="3 22" stroke-linecap="round"/>
+    <path d="M981 738c92 1 170-28 236-88" stroke-dasharray="3 22" stroke-linecap="round"/>
+  </g>
+</svg>
