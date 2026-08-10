@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-09T01:18:45Z",
-  "generated_display": "09 Aug 2026 · 01:18 UTC",
+  "generated_at": "2026-08-10T01:19:46Z",
+  "generated_display": "10 Aug 2026 · 01:19 UTC",
   "metrics": {
     "kev_total": 1662,
-    "kev_added_30d": 27,
+    "kev_added_30d": 25,
     "due_next_7d": 2,
     "ioc_total": 170,
     "ioc_total_display": "170",
@@ -161,6 +161,14 @@
   ],
   "advisories": [
     {
+      "authority": "Saudi NCA / CERT",
+      "title": "Weekly Vulnerabilities Summary 26 July - 1 August",
+      "url": "https://nca.gov.sa/en/cert/7843/",
+      "date": "2026-08-09",
+      "severity": "Critical",
+      "summary": "Security alert 2026-7720. Review the official notice for affected products and remediation guidance."
+    },
+    {
       "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
       "url": "https://www.cisa.gov/news-events/alerts/2026/08/07/cisa-adds-one-known-exploited-vulnerability-catalog",
       "date": "2026-08-07",
@@ -191,14 +199,6 @@
       "date": "2026-08-07",
       "severity": "High",
       "summary": "Security alert 2026-7718. Review the official notice for affected products and remediation guidance."
-    },
-    {
-      "authority": "Saudi NCA / CERT",
-      "title": "HPE Alert",
-      "url": "https://nca.gov.sa/en/cert/7840/",
-      "date": "2026-08-07",
-      "severity": "High",
-      "summary": "Security alert 2026-7717. Review the official notice for affected products and remediation guidance."
     },
     {
       "title": "ABB Ability Zenon",
@@ -324,7 +324,7 @@
       "path": "/assets/data/daily-urls.txt"
     }
   ],
-  "ioc_sha256": "3bf5007c7679ce02f6eeabe811742a9218d6574115eee91e8955de0c2e70675d",
+  "ioc_sha256": "4bdd276677d9026d6ce60aa0f5414405f01a1bad5f21773acb85d11a78a56b80",
   "sources": {
     "kev": {
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
