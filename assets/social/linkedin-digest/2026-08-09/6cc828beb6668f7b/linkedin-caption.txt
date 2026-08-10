@@ -1,0 +1,6 @@
+Read the complete ShadowContext defensive security brief covering today's advisories on AI Copilot workflow authorization and Bouncy Castle Java FIPS entropy controls.
+
+Read the full ShadowContext briefings:
+https://shadowcontext.com/
+
+#Cybersecurity #CyberNews #InfoSec #AISecurity

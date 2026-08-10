@@ -1,0 +1,28 @@
+{
+  "digest_title": "ShadowContext Defensive Security Brief: Cryptographic and Authorization Flaws",
+  "dek": "Recent advisories highlight unauthenticated privilege escalation in WordPress workflows and a high-severity entropy path vulnerability in Bouncy Castle Java FIPS.",
+  "overview": "Today's briefings examine critical defensive gaps in application workflows and cryptographic runtimes. Organizations must prioritize server-side authorization enforcement and verify active runtime library versions, provenance controls, and native execution paths.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "AI Copilot Flaw Enables Unauthorized WordPress Administrative Access",
+      "summary": "An unauthenticated privilege escalation vulnerability affects AI Copilot Content Generator versions through 1.5.6, exposing public workflow routes with no known patch.",
+      "why_it_matters": "Public nonces cannot substitute for server-side authorization checks, risking complete administrative account creation.",
+      "topic": "WordPress Security"
+    },
+    {
+      "source_id": "S02",
+      "headline": "Bouncy Castle Java FIPS Update Requires Runtime Provenance Verification",
+      "summary": "CVE-2026-8798 addresses a native entropy source vulnerability in Bouncy Castle Java FIPS versions prior to 2.1.3.",
+      "why_it_matters": "Defenders must verify active runtime classpath precedence and entropy paths rather than relying solely on manifest dependency updates.",
+      "topic": "Cryptographic Libraries"
+    }
+  ],
+  "operating_view": "Maintain strict boundaries between public inputs and administrative execution paths. Verify that dependency patches execute successfully in actual runtime environments, ensuring cryptographic providers and authorization controls match expected configurations without relying on unproven assumptions.",
+  "watch_items": [
+    "Verify server-side authorization enforcement on all workflow and automation plugins.",
+    "Confirm active runtime classpath versions and checksums for cryptographic providers.",
+    "Monitor official channels for patch availability and validated configuration updates."
+  ],
+  "caption_intro": "Read the complete ShadowContext defensive security brief covering today's advisories on AI Copilot workflow authorization and Bouncy Castle Java FIPS entropy controls."
+}

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-08-10T07:08:01.140+04:00",
+  "digestDate": "2026-08-09",
+  "digestHash": "6cc828beb6668f7bcd3abaf70399192e970481b9fa4e3098a498e638e7cd2766",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "ShadowContext Defensive Security Brief: Cryptographic and Authorization Flaws",
+  "articleCount": 2,
+  "sourceArticles": [
+    {
+      "title": "AI Copilot flaw makes workflow authorization a WordPress boundary",
+      "canonicalUrl": "https://shadowcontext.com/ai-copilot-workflows-need-server-side-authorization/",
+      "publishedAt": "2026-08-09T01:09:41.000+04:00",
+      "category": "defense",
+      "sourceHash": "bae8c6bb028a6bbcaca9bf76fcec4871a1c4d7a0680697dfce629479727a3f97"
+    },
+    {
+      "title": "Bouncy Castle FIPS fix needs entropy-path proof",
+      "canonicalUrl": "https://shadowcontext.com/bouncy-castle-fips-fix-needs-entropy-path-proof/",
+      "publishedAt": "2026-08-09T08:12:23.000+04:00",
+      "category": "defense",
+      "sourceHash": "0617d9e6ac9d518c0cb34edae3cbf92cd05aba03ec17c614268076724a19647e"
+    }
+  ],
+  "caption": "Read the complete ShadowContext defensive security brief covering today's advisories on AI Copilot workflow authorization and Bouncy Castle Java FIPS entropy controls.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-08-09/6cc828beb6668f7b/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-09/6cc828beb6668f7b/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-08-09/6cc828beb6668f7b/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-09/6cc828beb6668f7b/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}
