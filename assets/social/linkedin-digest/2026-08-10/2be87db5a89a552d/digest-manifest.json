@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-08-11T07:00:44.518+04:00",
+  "digestDate": "2026-08-10",
+  "digestHash": "2be87db5a89a552d6c310fe280609b093c9eb3631ccd7c9cf87d57d6dbf3477a",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "Daily Security Digest: Trust Boundaries and Verification",
+  "articleCount": 8,
+  "sourceArticles": [
+    {
+      "title": "GStreamer fixes need proof across every media-processing path",
+      "canonicalUrl": "https://shadowcontext.com/gstreamer-fixes-need-media-path-proof/",
+      "publishedAt": "2026-08-10T12:10:43.000+04:00",
+      "category": "defense",
+      "sourceHash": "c6415329a63226ee68074fd17557da4b022d6af1d43d65a9224f42dd61483ed5"
+    },
+    {
+      "title": "Encrypted messaging needs authenticity and ordering proof",
+      "canonicalUrl": "https://shadowcontext.com/encrypted-messaging-needs-authenticity-and-ordering-proof/",
+      "publishedAt": "2026-08-10T15:10:10.000+04:00",
+      "category": "defense",
+      "sourceHash": "8b90fe8ff9a5226571304bdec217005fb3e9647a51a22c20351f0f3dc8023f41"
+    },
+    {
+      "title": "EV charging needs identity and physical-state proof",
+      "canonicalUrl": "https://shadowcontext.com/ev-charging-needs-identity-and-state-proof/",
+      "publishedAt": "2026-08-10T16:09:12.000+04:00",
+      "category": "defense",
+      "sourceHash": "085e59980eeab738dade433c594b7b5c87216aa73b385ceb3adff2a0b88b881c"
+    },
+    {
+      "title": "SIM command paths need an explicit device boundary",
+      "canonicalUrl": "https://shadowcontext.com/sim-command-paths-need-an-explicit-device-boundary/",
+      "publishedAt": "2026-08-10T18:09:50.000+04:00",
+      "category": "defense",
+      "sourceHash": "ed25a06cc5e0100266c94afa0d996b6c6963547c2dac387df19042d04f5fa7a7"
+    },
+    {
+      "title": "IoT real-time channels need end-to-end security proof",
+      "canonicalUrl": "https://shadowcontext.com/iot-real-time-channels-need-end-to-end-proof/",
+      "publishedAt": "2026-08-10T19:09:30.000+04:00",
+      "category": "defense",
+      "sourceHash": "8a0ffb3a6ff110b7de736b8867e45f851799f3ff50bf781a7bb332bd7659703c"
+    },
+    {
+      "title": "Semantic bugs need invariant-level security tests",
+      "canonicalUrl": "https://shadowcontext.com/semantic-bugs-need-invariant-level-tests/",
+      "publishedAt": "2026-08-10T21:09:43.000+04:00",
+      "category": "defense",
+      "sourceHash": "2d53913ec62cc07689c63bf9ed02249dd0cff29e1ff01635d98951f443099fa1"
+    },
+    {
+      "title": "Trusted execution needs memory-alias proof",
+      "canonicalUrl": "https://shadowcontext.com/trusted-execution-needs-memory-alias-proof/",
+      "publishedAt": "2026-08-10T22:10:02.000+04:00",
+      "category": "defense",
+      "sourceHash": "64ba1203b52e904a86917a8d4102619e76688cf9ef55d010807d2d2eb2d0a4fa"
+    },
+    {
+      "title": "Agent harnesses need persistent-state controls",
+      "canonicalUrl": "https://shadowcontext.com/agent-harnesses-need-persistent-state-controls/",
+      "publishedAt": "2026-08-10T23:10:10.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "bdee0e9d01621e01a257936dea3556af9a3187fbffe6104372d497151c54df1b"
+    }
+  ],
+  "caption": "Review today's defensive cybersecurity highlights from ShadowContext covering parser fixes, messaging protocols, charging standards, SIM interfaces, real-time communications, semantic testing, trusted execution, and AI agent state.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-08-10/2be87db5a89a552d/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-10/2be87db5a89a552d/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-08-10/2be87db5a89a552d/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-10/2be87db5a89a552d/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}

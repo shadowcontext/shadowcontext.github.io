@@ -1,0 +1,70 @@
+{
+  "digest_title": "Daily Security Digest: Trust Boundaries and Verification",
+  "dek": "Defensive analysis of GStreamer, messaging, charging, SIM commands, WebRTC, invariant tests, ARM aliases, and agent state.",
+  "overview": "Today's security research highlights the need for rigorous end-to-end proof across media parsers, encrypted messaging, EV chargers, SIM interfaces, real-time IoT channels, invariant-driven testing, hardware memory mapping, and persistent AI agent state.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "GStreamer media parsing fixes demand runtime path verification",
+      "summary": "GStreamer 1.28.6 fixes heap out-of-bounds write and integer flow flaws in media parsers reachable via file previews, requiring runtime inventory validation.",
+      "why_it_matters": "Automatic media previewing turns convenience features into security-relevant execution paths across diverse backend services.",
+      "topic": "Media Parser Vulnerabilities"
+    },
+    {
+      "source_id": "S02",
+      "headline": "Session Protocol V1 research underscores authentication needs",
+      "summary": "WOOT 26 research identifies design weaknesses in Session Protocol V1, including missing mutual authentication and monotonic sequence binding.",
+      "why_it_matters": "End-to-end encryption alone does not prove key ownership, correct message ordering, or freedom from replay.",
+      "topic": "Encrypted Messaging Security"
+    },
+    {
+      "source_id": "S03",
+      "headline": "EV charging demands cryptographic identity and physical-state checks",
+      "summary": "Research on DIN 70121 reveals risks in Autocharge identifiers and battery state claims, prompting requests for separate state assurance.",
+      "why_it_matters": "Convenience features must not collapse identity, authorization, and physical truth into unverified protocol messages.",
+      "topic": "EV Charging Security"
+    },
+    {
+      "source_id": "S04",
+      "headline": "SIM command paths require explicit device-level boundary controls",
+      "summary": "CATana research found SIM-originated AT command exposure in nine of twenty-six tested devices, leading to command execution and file reading.",
+      "why_it_matters": "Mobile equipment must explicitly validate and restrict proactive commands originating from the SIM interface.",
+      "topic": "SIM AT Commands"
+    },
+    {
+      "source_id": "S05",
+      "headline": "IoT real-time communication needs end-to-end security proof",
+      "summary": "RTCInspect analysis of IoT and web platforms reveals unencrypted signaling, credential exposure, and improper key handling in real-time channels.",
+      "why_it_matters": "Media encryption cannot compensate for flaws in signaling, credential management, or certificate validation.",
+      "topic": "Real-Time IoT Security"
+    },
+    {
+      "source_id": "S06",
+      "headline": "SEMSAN introduces invariant-level security tests for semantic bugs",
+      "summary": "Ruhr University Bochum researchers present SEMSAN, using eBPF sanitizer primitives to validate filesystem, credential, and namespace invariants.",
+      "why_it_matters": "Memory-safe code can still violate policy boundaries if execution states are not explicitly checked.",
+      "topic": "Semantic Security Testing"
+    },
+    {
+      "source_id": "S07",
+      "headline": "ARM trusted execution requires physical-memory alias verification",
+      "summary": "DisARMed research demonstrates memory-aliasing attacks against ARM processors from userspace, impacting Linux kernels and TrustZone.",
+      "why_it_matters": "Software isolation relies entirely on a correct, unambiguous physical memory map beneath it.",
+      "topic": "Trusted Execution Environments"
+    },
+    {
+      "source_id": "S08",
+      "headline": "Agent harnesses require persistent-state controls and testing",
+      "summary": "HarnessSafe research evaluates five-stage persistent risk lifecycles across memory, skills, tool metadata, and shared artifacts in AI agents.",
+      "why_it_matters": "Untrusted influence can survive prompt boundaries through stored memory, skills, and derived application artifacts.",
+      "topic": "AI Agent Security"
+    }
+  ],
+  "operating_view": "Defenders must demand end-to-end proof across all communication, protocol, and storage layers. Surface-level security labels are insufficient; validation must cover signaling, identities, physical states, hardware maps, and persistent agent state.",
+  "watch_items": [
+    "Verify loaded GStreamer plugin versions across every file-ingestion and preview pipeline.",
+    "Validate physical-memory maps and early-boot detection for ARM trusted execution environments.",
+    "Inventory and test agent persistent state carriers for delayed prompt injection risks."
+  ],
+  "caption_intro": "Review today's defensive cybersecurity highlights from ShadowContext covering parser fixes, messaging protocols, charging standards, SIM interfaces, real-time communications, semantic testing, trusted execution, and AI agent state."
+}
