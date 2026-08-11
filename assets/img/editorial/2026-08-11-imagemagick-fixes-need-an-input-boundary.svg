@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Protected image-processing boundary</title>
+  <desc id="desc">An abstract image tile passes through a luminous layered chamber while fragmented input remains outside its protected boundary.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071525"/>
+      <stop offset="0.55" stop-color="#102a43"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#48d7d0" stop-opacity=".34"/>
+      <stop offset=".55" stop-color="#2d8fac" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#071525" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="frame" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#88f2e8"/>
+      <stop offset="1" stop-color="#3098c0"/>
+    </linearGradient>
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#173d5a"/>
+      <stop offset="1" stop-color="#0b243a"/>
+    </linearGradient>
+    <linearGradient id="warm" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffbd66"/>
+      <stop offset="1" stop-color="#e46f55"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="13" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+    <clipPath id="tileClip"><rect x="570" y="258" width="460" height="340" rx="34"/></clipPath>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <ellipse cx="800" cy="444" rx="610" ry="390" fill="url(#halo)"/>
+  <path d="M0 710 C280 625 416 790 690 714 C963 638 1196 602 1600 704 L1600 900 L0 900Z" fill="#081a2a" opacity=".8"/>
+  <path d="M0 754 C290 681 450 824 735 749 C1035 670 1270 679 1600 758" fill="none" stroke="#2d7893" stroke-opacity=".18" stroke-width="2"/>
+
+  <g opacity=".55" fill="none" stroke="#62cfc9">
+    <path d="M208 264 C358 192 458 244 557 331" stroke-opacity=".18" stroke-width="3"/>
+    <path d="M1041 564 C1168 659 1327 648 1440 548" stroke-opacity=".18" stroke-width="3"/>
+    <circle cx="212" cy="263" r="7" fill="#62cfc9" stroke="none"/>
+    <circle cx="1440" cy="548" r="7" fill="#62cfc9" stroke="none"/>
+  </g>
+
+  <g opacity=".7">
+    <rect x="276" y="338" width="74" height="74" rx="12" fill="#d96f58" transform="rotate(-13 313 375)"/>
+    <rect x="373" y="291" width="43" height="43" rx="8" fill="#f1ac61" transform="rotate(11 394 312)"/>
+    <rect x="387" y="436" width="58" height="58" rx="10" fill="#b84d55" transform="rotate(18 416 465)"/>
+    <path d="M292 521 l46 -19 19 46 -46 19z" fill="#e58956"/>
+    <circle cx="467" cy="386" r="18" fill="#eea45f"/>
+  </g>
+
+  <g filter="url(#soft)" opacity=".45">
+    <rect x="532" y="220" width="536" height="416" rx="70" fill="#36cfc5"/>
+  </g>
+  <rect x="510" y="198" width="580" height="460" rx="82" fill="#0b2237" stroke="#4adbd1" stroke-opacity=".3" stroke-width="3"/>
+  <rect x="535" y="225" width="530" height="406" rx="62" fill="none" stroke="#70e8df" stroke-opacity=".5" stroke-width="3"/>
+  <rect x="556" y="246" width="488" height="364" rx="46" fill="#081a2b" stroke="url(#frame)" stroke-width="5" filter="url(#glow)"/>
+
+  <g clip-path="url(#tileClip)">
+    <rect x="570" y="258" width="460" height="340" rx="34" fill="url(#tile)"/>
+    <circle cx="931" cy="343" r="50" fill="#f5c46f" opacity=".9"/>
+    <path d="M546 606 L712 411 L819 514 L902 422 L1062 607Z" fill="#28667a"/>
+    <path d="M545 607 L705 462 L799 547 L875 486 L1039 607Z" fill="#43a9a4" opacity=".92"/>
+    <path d="M576 305 H762" stroke="#a5fff3" stroke-opacity=".28" stroke-width="12" stroke-linecap="round"/>
+    <path d="M576 329 H684" stroke="#a5fff3" stroke-opacity=".17" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <rect x="570" y="258" width="460" height="340" rx="34" fill="none" stroke="#a1fff2" stroke-opacity=".65" stroke-width="3"/>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M470 448 H544" stroke="#f19b60" stroke-width="7" stroke-dasharray="8 17"/>
+    <path d="M1058 448 H1175" stroke="#77e7dc" stroke-width="7" stroke-dasharray="8 17"/>
+    <path d="M1188 448 C1268 448 1324 402 1360 337" stroke="#77e7dc" stroke-opacity=".36" stroke-width="4"/>
+  </g>
+
+  <g opacity=".75">
+    <circle cx="1196" cy="448" r="13" fill="#7ceae0"/>
+    <circle cx="1244" cy="430" r="9" fill="#56c8ca"/>
+    <circle cx="1283" cy="401" r="7" fill="#399bb0"/>
+  </g>
+
+  <path d="M800 176 C924 176 1092 240 1092 389 V521 C1092 636 979 714 800 764 C621 714 508 636 508 521 V389 C508 240 676 176 800 176Z" fill="none" stroke="#8bf5e9" stroke-opacity=".18" stroke-width="3"/>
+  <path d="M800 198 C907 198 1068 255 1068 394" fill="none" stroke="#f4bc71" stroke-opacity=".25" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="1068" cy="394" r="8" fill="url(#warm)"/>
+
+  <g fill="#9df8ed" opacity=".28">
+    <circle cx="630" cy="157" r="4"/>
+    <circle cx="1146" cy="264" r="5"/>
+    <circle cx="479" cy="648" r="4"/>
+    <circle cx="1248" cy="644" r="3"/>
+    <circle cx="1364" cy="308" r="4"/>
+  </g>
+</svg>
