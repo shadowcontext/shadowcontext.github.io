@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Model artifact crossing a guarded parser boundary</title>
+  <desc id="desc">A faceted crystalline model artifact approaches a luminous aperture surrounded by layered validation rings, while fragmented data streams are contained outside the protected core.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071426"/>
+      <stop offset="0.52" stop-color="#10243b"/>
+      <stop offset="1" stop-color="#061018"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="55%" cy="50%" r="47%">
+      <stop offset="0" stop-color="#62e7d6" stop-opacity=".32"/>
+      <stop offset=".46" stop-color="#2b91b4" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#081522" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="artifact" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c8fff3"/>
+      <stop offset=".42" stop-color="#42d6ce"/>
+      <stop offset="1" stop-color="#17658d"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#61ead8" stop-opacity=".18"/>
+      <stop offset=".55" stop-color="#8bf8e6" stop-opacity=".95"/>
+      <stop offset="1" stop-color="#3c82bc" stop-opacity=".2"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="14" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0H0V60" fill="none" stroke="#8bc3d5" stroke-opacity=".055" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <ellipse cx="920" cy="448" rx="690" ry="420" fill="url(#halo)"/>
+
+  <g opacity=".5" fill="none" stroke-linecap="round">
+    <path d="M80 235 C270 210 347 309 506 312" stroke="#36a9c9" stroke-width="5"/>
+    <path d="M28 450 C244 450 314 412 500 414" stroke="#68ead7" stroke-width="7"/>
+    <path d="M112 674 C283 624 365 567 507 574" stroke="#397da8" stroke-width="5"/>
+    <path d="M129 298 L231 298 L262 266 L363 266" stroke="#b1fff0" stroke-opacity=".42" stroke-width="2"/>
+    <path d="M72 522 L201 522 L242 553 L391 553" stroke="#b1fff0" stroke-opacity=".34" stroke-width="2"/>
+  </g>
+  <g fill="#91f5e3">
+    <circle cx="207" cy="450" r="8"/><circle cx="350" cy="412" r="6"/><circle cx="273" cy="297" r="5"/>
+    <circle cx="366" cy="574" r="7"/><circle cx="143" cy="674" r="5"/>
+  </g>
+
+  <g transform="translate(490 450)">
+    <path d="M-126-114 L-30-157 L91-103 L141 6 L79 119 L-46 151 L-143 64 Z" fill="url(#artifact)" stroke="#b6fff1" stroke-width="4"/>
+    <path d="M-126-114 L-21-37 L-30-157 Z M-21-37 L91-103 L-30-157 Z M-21-37 L141 6 L91-103 Z" fill="#e1fff8" fill-opacity=".22"/>
+    <path d="M-143 64 L-21-37 L79 119 L-46 151 Z" fill="#063958" fill-opacity=".58"/>
+    <path d="M-21-37 L141 6 L79 119 Z" fill="#0e6f8e" fill-opacity=".52"/>
+    <g fill="#062438" opacity=".74">
+      <circle cx="-58" cy="-74" r="11"/><circle cx="38" cy="-77" r="8"/><circle cx="73" cy="17" r="12"/>
+      <circle cx="9" cy="61" r="9"/><circle cx="-74" cy="62" r="7"/>
+    </g>
+    <g stroke="#d5fff7" stroke-width="4" opacity=".75">
+      <path d="M-58-74 L-21-37 L38-77 M-21-37 L73 17 L9 61 L-74 62 L-21-37" fill="none"/>
+    </g>
+  </g>
+
+  <g transform="translate(905 450)" fill="none">
+    <ellipse rx="228" ry="345" stroke="#1c5571" stroke-width="48" opacity=".65"/>
+    <ellipse rx="184" ry="303" stroke="url(#shield)" stroke-width="16" filter="url(#glow)"/>
+    <ellipse rx="139" ry="251" stroke="#a2fff0" stroke-width="5" stroke-dasharray="24 18" opacity=".85"/>
+    <ellipse rx="98" ry="199" stroke="#4b9db8" stroke-width="3" stroke-dasharray="8 18"/>
+    <path d="M0-348 V-292 M0 292 V348 M-230 0 H-184 M184 0 H230" stroke="#b8fff2" stroke-width="10" stroke-linecap="round"/>
+  </g>
+
+  <g opacity=".85">
+    <path d="M745 327 l31-19 25 25-36 27z M752 514 l38 10-7 35-43-17z M718 428 l35-12 16 25-39 17z" fill="#ffb86a"/>
+    <path d="M780 280 l20-31 23 14-19 35z M778 615 l25-34 22 17-27 35z" fill="#ff756f"/>
+    <circle cx="785" cy="385" r="9" fill="#ffd592"/>
+  </g>
+  <g filter="url(#soft)" opacity=".6">
+    <path d="M795 190 C865 150 928 157 991 188" stroke="#63e6d5" stroke-width="9" fill="none"/>
+    <path d="M795 710 C865 752 930 747 994 715" stroke="#3b90b6" stroke-width="9" fill="none"/>
+  </g>
+
+  <g transform="translate(1240 450)">
+    <ellipse rx="168" ry="258" fill="#081b29" stroke="#2d6683" stroke-width="3"/>
+    <ellipse rx="116" ry="194" fill="#0b2b3d" stroke="#58cbbd" stroke-width="3" opacity=".9"/>
+    <path d="M-55-95 L40-117 L83-36 L60 74 L-34 108 L-82 24 Z" fill="#123f52" stroke="#88ebdd" stroke-width="4"/>
+    <path d="M-55-95 L5-21 L40-117 M5-21 L83-36 M5-21 L60 74 M5-21 L-34 108 M5-21 L-82 24" stroke="#65cfc3" stroke-width="3" fill="none" opacity=".75"/>
+    <circle cx="5" cy="-21" r="15" fill="#b9fff2" filter="url(#glow)"/>
+  </g>
+
+  <g fill="#9cf4e5" opacity=".7">
+    <circle cx="1090" cy="231" r="4"/><circle cx="1128" cy="706" r="5"/><circle cx="1420" cy="305" r="4"/>
+    <circle cx="1434" cy="612" r="6"/><circle cx="1018" cy="772" r="3"/>
+  </g>
+</svg>
