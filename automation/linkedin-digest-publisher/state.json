@@ -193,6 +193,22 @@
       "github_run_id": "31354695901",
       "status": "published",
       "last_error": null
+    },
+    "2be87db5a89a552d6c310fe280609b093c9eb3631ccd7c9cf87d57d6dbf3477a": {
+      "title": "Daily Security Digest: Trust Boundaries and Verification",
+      "digest_date": "2026-08-10",
+      "digest_hash": "2be87db5a89a552d6c310fe280609b093c9eb3631ccd7c9cf87d57d6dbf3477a",
+      "generated_at": "2026-08-11T07:00:44.518+04:00",
+      "briefing_url": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-10/2be87db5a89a552d/daily-digest.html",
+      "pdf_file": "assets/social/linkedin-digest/2026-08-10/2be87db5a89a552d/daily-digest.pdf",
+      "linkedin_caption": "Review today's defensive cybersecurity highlights from ShadowContext covering parser fixes, messaging protocols, charging standards, SIM interfaces, real-time communications, semantic testing, trusted execution, and AI agent state.\n\nThis edition brings together 8 ShadowContext briefings from August 10, 2026, with direct source links and operational priorities.\n\nRead the full daily briefing:\nhttps://shadowcontext.com/assets/social/linkedin-digest/2026-08-10/2be87db5a89a552d/daily-digest.html\n\n#Cybersecurity #ThreatIntelligence #InfoSec #AISecurity",
+      "linkedin_document_urn": "urn:li:document:D5610AQH9s20Dsn6URA",
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7492791584309018625",
+      "published_at": "2026-08-11T03:58:43.343Z",
+      "github_run_id": "31457011390",
+      "status": "published",
+      "last_error": null
     }
   }
 }
