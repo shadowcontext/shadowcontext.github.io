@@ -1,28 +1,28 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-10T01:19:46Z",
-  "generated_display": "10 Aug 2026 · 01:19 UTC",
-  "ioc_total": 170,
-  "ioc_total_display": "170",
-  "ioc_total_exact": "170",
-  "ioc_sha256": "4bdd276677d9026d6ce60aa0f5414405f01a1bad5f21773acb85d11a78a56b80",
+  "generated_at": "2026-08-11T01:24:46Z",
+  "generated_display": "11 Aug 2026 · 01:24 UTC",
+  "ioc_total": 197,
+  "ioc_total_display": "197",
+  "ioc_total_exact": "197",
+  "ioc_sha256": "1f9dbc206d2e282230b5cdd638d91dd3a4add7f33572ebed8ca83c194e8cfcfc",
   "feeds": {
     "file_hashes": {
-      "count": 49,
-      "count_display": "49",
-      "count_exact": "49",
+      "count": 55,
+      "count_display": "55",
+      "count_exact": "55",
       "path": "/assets/data/daily-file-hashes.txt"
     },
     "ip_addresses": {
-      "count": 101,
-      "count_display": "101",
-      "count_exact": "101",
+      "count": 118,
+      "count_display": "118",
+      "count_exact": "118",
       "path": "/assets/data/daily-ip-addresses.txt"
     },
     "domains": {
-      "count": 19,
-      "count_display": "19",
-      "count_exact": "19",
+      "count": 23,
+      "count_display": "23",
+      "count_exact": "23",
       "path": "/assets/data/daily-domains.txt"
     },
     "urls": {

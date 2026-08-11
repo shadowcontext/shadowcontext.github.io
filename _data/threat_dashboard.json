@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-08-10T01:19:46Z",
-  "generated_display": "10 Aug 2026 · 01:19 UTC",
+  "generated_at": "2026-08-11T01:24:46Z",
+  "generated_display": "11 Aug 2026 · 01:24 UTC",
   "metrics": {
     "kev_total": 1662,
     "kev_added_30d": 25,
-    "due_next_7d": 2,
-    "ioc_total": 170,
-    "ioc_total_display": "170",
-    "ioc_total_exact": "170"
+    "due_next_7d": 0,
+    "ioc_total": 197,
+    "ioc_total_display": "197",
+    "ioc_total_exact": "197"
   },
   "vulnerabilities": [
     {
@@ -131,6 +131,13 @@
   ],
   "actors": [
     {
+      "name": "#StopRansomware: Gunra Ransomware",
+      "aliases": "CISA AA26-222A · actor-focused advisory",
+      "focus": "Advisory at a Glance Title #StopRansomware: Gunra Ransomware Original Publication August 10, 2026 Executive Summary Gunra is a…",
+      "date": "2026-08-10",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-222a"
+    },
+    {
       "name": "Russian FSB Center 16",
       "aliases": "Berserk Bear · Energetic Bear · Static Tundra",
       "focus": "Edge routers, SNMP exposure, and critical infrastructure networks.",
@@ -150,16 +157,33 @@
       "focus": "Internet-exposed operational technology and programmable logic controllers.",
       "date": "2026-04-07",
       "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-097a"
-    },
-    {
-      "name": "PRC global espionage cluster",
-      "aliases": "Salt Typhoon-associated activity",
-      "focus": "Provider networks, routing infrastructure, and long-term access for intelligence collection.",
-      "date": "2025-08-27",
-      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-239a"
     }
   ],
   "advisories": [
+    {
+      "authority": "Saudi NCA / CERT",
+      "title": "TP-Link Alert",
+      "url": "https://nca.gov.sa/en/cert/7845/",
+      "date": "2026-08-11",
+      "severity": "High",
+      "summary": "Security alert 2026-7722. Review the official notice for affected products and remediation guidance."
+    },
+    {
+      "authority": "Saudi NCA / CERT",
+      "title": "Google Alert",
+      "url": "https://nca.gov.sa/en/cert/7844/",
+      "date": "2026-08-11",
+      "severity": "Critical",
+      "summary": "Security alert 2026-7721. Review the official notice for affected products and remediation guidance."
+    },
+    {
+      "title": "#StopRansomware: Gunra Ransomware",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-222a",
+      "date": "2026-08-10",
+      "summary": "Advisory at a Glance Title #StopRansomware: Gunra Ransomware Original Publication August 10, 2026 Executive Summary Gunra is a ransomware-as-a-service (RaaS) used by affiliates…",
+      "authority": "CISA",
+      "severity": ""
+    },
     {
       "authority": "Saudi NCA / CERT",
       "title": "Weekly Vulnerabilities Summary 26 July - 1 August",
@@ -185,30 +209,6 @@
       "severity": ""
     },
     {
-      "authority": "Saudi NCA / CERT",
-      "title": "HPE Alert",
-      "url": "https://nca.gov.sa/en/cert/7842/",
-      "date": "2026-08-07",
-      "severity": "Critical",
-      "summary": "Security alert 2026-7719. Review the official notice for affected products and remediation guidance."
-    },
-    {
-      "authority": "Saudi NCA / CERT",
-      "title": "Cisco Alert",
-      "url": "https://nca.gov.sa/en/cert/7841/",
-      "date": "2026-08-07",
-      "severity": "High",
-      "summary": "Security alert 2026-7718. Review the official notice for affected products and remediation guidance."
-    },
-    {
-      "title": "ABB Ability Zenon",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-218-01",
-      "date": "2026-08-06",
-      "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow attackers to bypass security, crash systems, execute unauthorized actions, or compromise data. The…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
       "title": "Johnson Controls Inc. TL280",
       "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-218-02",
       "date": "2026-08-06",
@@ -226,26 +226,26 @@
     }
   ],
   "ioc_counts": {
-    "domain": 19,
-    "ipv4": 99,
+    "domain": 23,
+    "ipv4": 116,
     "ipv6": 2,
-    "md5": 9,
-    "sha1": 8,
-    "sha256": 32,
+    "md5": 10,
+    "sha1": 9,
+    "sha256": 36,
     "url": 1
   },
   "ioc_count_summary": [
     {
       "type": "domain",
-      "count": 19,
-      "display": "19",
-      "exact": "19"
+      "count": 23,
+      "display": "23",
+      "exact": "23"
     },
     {
       "type": "ipv4",
-      "count": 99,
-      "display": "99",
-      "exact": "99"
+      "count": 116,
+      "display": "116",
+      "exact": "116"
     },
     {
       "type": "ipv6",
@@ -255,21 +255,21 @@
     },
     {
       "type": "md5",
+      "count": 10,
+      "display": "10",
+      "exact": "10"
+    },
+    {
+      "type": "sha1",
       "count": 9,
       "display": "9",
       "exact": "9"
     },
     {
-      "type": "sha1",
-      "count": 8,
-      "display": "8",
-      "exact": "8"
-    },
-    {
       "type": "sha256",
-      "count": 32,
-      "display": "32",
-      "exact": "32"
+      "count": 36,
+      "display": "36",
+      "exact": "36"
     },
     {
       "type": "url",
@@ -282,34 +282,34 @@
     {
       "key": "file_hashes",
       "label": "File hash feed",
-      "count": 49,
-      "count_display": "49",
-      "count_exact": "49",
-      "added_today": 0,
-      "added_today_display": "0",
-      "added_today_exact": "0",
+      "count": 55,
+      "count_display": "55",
+      "count_exact": "55",
+      "added_today": 6,
+      "added_today_display": "6",
+      "added_today_exact": "6",
       "path": "/assets/data/daily-file-hashes.txt"
     },
     {
       "key": "ip_addresses",
       "label": "IP address feed",
-      "count": 101,
-      "count_display": "101",
-      "count_exact": "101",
-      "added_today": 0,
-      "added_today_display": "0",
-      "added_today_exact": "0",
+      "count": 118,
+      "count_display": "118",
+      "count_exact": "118",
+      "added_today": 17,
+      "added_today_display": "17",
+      "added_today_exact": "17",
       "path": "/assets/data/daily-ip-addresses.txt"
     },
     {
       "key": "domains",
       "label": "Domain feed",
-      "count": 19,
-      "count_display": "19",
-      "count_exact": "19",
-      "added_today": 0,
-      "added_today_display": "0",
-      "added_today_exact": "0",
+      "count": 23,
+      "count_display": "23",
+      "count_exact": "23",
+      "added_today": 4,
+      "added_today_display": "4",
+      "added_today_exact": "4",
       "path": "/assets/data/daily-domains.txt"
     },
     {
@@ -324,7 +324,7 @@
       "path": "/assets/data/daily-urls.txt"
     }
   ],
-  "ioc_sha256": "4bdd276677d9026d6ce60aa0f5414405f01a1bad5f21773acb85d11a78a56b80",
+  "ioc_sha256": "1f9dbc206d2e282230b5cdd638d91dd3a4add7f33572ebed8ca83c194e8cfcfc",
   "sources": {
     "kev": {
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
@@ -339,6 +339,11 @@
         "url": "https://www.cisa.gov/sites/default/files/2023-12/aa23-347a-russian-foreign-intelligence-service-svr-exploiting-jetbrains-teamcity-cve-globally.json",
         "advisory": "CISA AA23-347A",
         "source": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a"
+      },
+      {
+        "url": "https://www.cisa.gov/sites/default/files/2026-08/AA26-222A-stix.json",
+        "advisory": "CISA AA26-222A",
+        "source": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-222a"
       },
       {
         "url": "https://www.cisa.gov/sites/default/files/2026-07/AA26-204A.stix_.json",
@@ -374,7 +379,7 @@
     },
     {
       "name": "CISA STIX",
-      "coverage": "TLP:CLEAR indicators from 3 advisories",
+      "coverage": "TLP:CLEAR indicators from 4 advisories",
       "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-239a",
       "status": "online"
     }
