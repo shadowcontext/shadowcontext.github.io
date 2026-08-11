@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Guarded paths between tuning utilities and the system kernel</title>
+  <desc id="desc">Abstract editorial artwork showing a cool blue utility layer separated from a warm kernel core by guarded rings, controlled paths, and floating endpoint components.</desc>
+  <defs>
+    <linearGradient id="bg" x1="120" y1="80" x2="1460" y2="820" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071323"/>
+      <stop offset="0.52" stop-color="#102A3E"/>
+      <stop offset="1" stop-color="#071018"/>
+    </linearGradient>
+    <radialGradient id="core" cx="0" cy="0" r="1" gradientTransform="translate(800 470) rotate(90) scale(235)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD184"/>
+      <stop offset="0.38" stop-color="#F49B5B"/>
+      <stop offset="0.72" stop-color="#8D3C48"/>
+      <stop offset="1" stop-color="#172C42" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#D8F5FF" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#6DC7DB" stop-opacity="0.04"/>
+    </linearGradient>
+    <linearGradient id="guard" x1="520" y1="250" x2="1080" y2="710" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#75E2E2"/>
+      <stop offset="0.48" stop-color="#B9F2D0"/>
+      <stop offset="1" stop-color="#E7B66A"/>
+    </linearGradient>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#02070B" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <path d="M0 163C228 90 391 124 559 205C745 294 923 250 1100 160C1287 65 1458 86 1600 134V0H0V163Z" fill="#0F3851" fill-opacity="0.48"/>
+  <path d="M0 756C221 680 386 687 578 768C786 856 1004 850 1192 757C1361 674 1490 683 1600 731V900H0V756Z" fill="#071B28"/>
+  <circle cx="800" cy="470" r="286" fill="url(#core)" opacity="0.86" filter="url(#blur)"/>
+
+  <g opacity="0.42" stroke="#7CCEDB" stroke-width="2">
+    <path d="M84 272C282 246 393 274 526 356"/>
+    <path d="M1516 272C1318 246 1207 274 1074 356"/>
+    <path d="M118 655C296 684 414 651 535 580"/>
+    <path d="M1482 655C1304 684 1186 651 1065 580"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <circle cx="800" cy="470" r="252" fill="#0B1D2B" stroke="#31566A" stroke-width="3"/>
+    <circle cx="800" cy="470" r="210" fill="none" stroke="url(#guard)" stroke-width="18" stroke-dasharray="250 48 105 37" stroke-linecap="round"/>
+    <circle cx="800" cy="470" r="164" fill="#102335" stroke="#E7B66A" stroke-opacity="0.55" stroke-width="2"/>
+    <circle cx="800" cy="470" r="118" fill="url(#core)" stroke="#FFD99A" stroke-width="3"/>
+    <path d="M800 390L858 423V490C858 540 826 570 800 581C774 570 742 540 742 490V423L800 390Z" fill="#112D3C" fill-opacity="0.9" stroke="#C7F3DB" stroke-width="5"/>
+    <path d="M775 484L794 503L830 460" fill="none" stroke="#C7F3DB" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g fill="url(#glass)" stroke="#75CAD8" stroke-width="2" filter="url(#shadow)">
+    <rect x="174" y="244" width="285" height="148" rx="32"/>
+    <rect x="1141" y="244" width="285" height="148" rx="32"/>
+    <rect x="174" y="548" width="285" height="148" rx="32"/>
+    <rect x="1141" y="548" width="285" height="148" rx="32"/>
+  </g>
+
+  <g fill="none" stroke="#A9E6E8" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M235 323H284L306 285L344 355L369 323H400"/>
+    <path d="M1202 323H1243V285H1318V360H1365"/>
+    <path d="M235 622H286L315 582L349 663L377 622H400"/>
+    <path d="M1206 622H1253L1278 593L1305 650L1332 622H1365"/>
+  </g>
+
+  <g fill="#C9F3F1">
+    <circle cx="459" cy="318" r="8"/>
+    <circle cx="1141" cy="318" r="8"/>
+    <circle cx="459" cy="622" r="8"/>
+    <circle cx="1141" cy="622" r="8"/>
+  </g>
+
+  <g fill="none" stroke="url(#guard)" stroke-width="8" stroke-linecap="round">
+    <path d="M459 318C558 323 600 342 638 380"/>
+    <path d="M1141 318C1042 323 1000 342 962 380"/>
+    <path d="M459 622C558 617 600 598 638 560"/>
+    <path d="M1141 622C1042 617 1000 598 962 560"/>
+  </g>
+
+  <g fill="#0A1722" stroke="#D7F4DC" stroke-width="3">
+    <rect x="621" y="355" width="38" height="50" rx="11" transform="rotate(-44 640 380)"/>
+    <rect x="941" y="355" width="38" height="50" rx="11" transform="rotate(44 960 380)"/>
+    <rect x="621" y="535" width="38" height="50" rx="11" transform="rotate(44 640 560)"/>
+    <rect x="941" y="535" width="38" height="50" rx="11" transform="rotate(-44 960 560)"/>
+  </g>
+
+  <g opacity="0.72" fill="#74D9DE">
+    <circle cx="120" cy="455" r="5"/><circle cx="1480" cy="455" r="5"/>
+    <circle cx="535" cy="130" r="4"/><circle cx="1065" cy="130" r="4"/>
+    <circle cx="535" cy="786" r="4"/><circle cx="1065" cy="786" r="4"/>
+  </g>
+</svg>
