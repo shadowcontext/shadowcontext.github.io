@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Layered service verification around a protected system core</title>
+  <desc id="desc">An abstract editorial illustration of concentric service paths, a secured home-record shape, and protected process nodes, representing verification of systemd package and service boundaries.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07162b"/>
+      <stop offset="0.55" stop-color="#102b4b"/>
+      <stop offset="1" stop-color="#0c1628"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="48%" r="58%">
+      <stop offset="0" stop-color="#31d6c4" stop-opacity="0.24"/>
+      <stop offset="0.52" stop-color="#4b7bec" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#07162b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5ce1d0"/>
+      <stop offset="1" stop-color="#5b7cfa"/>
+    </linearGradient>
+    <linearGradient id="warm" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffc66d"/>
+      <stop offset="1" stop-color="#f98d71"/>
+    </linearGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#020914" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#halo)"/>
+  <circle cx="800" cy="445" r="310" fill="none" stroke="#6c8fb7" stroke-opacity="0.16" stroke-width="2"/>
+  <circle cx="800" cy="445" r="245" fill="none" stroke="#62d6cd" stroke-opacity="0.22" stroke-width="3" stroke-dasharray="7 18"/>
+  <circle cx="800" cy="445" r="177" fill="#091b31" stroke="#8ab5d8" stroke-opacity="0.24" stroke-width="2" filter="url(#shadow)"/>
+
+  <path d="M358 244 C470 104 620 88 731 166" fill="none" stroke="#4e77b5" stroke-opacity="0.25" stroke-width="26" stroke-linecap="round"/>
+  <path d="M1243 641 C1138 784 968 816 856 737" fill="none" stroke="#2fc6b7" stroke-opacity="0.18" stroke-width="32" stroke-linecap="round"/>
+  <path d="M327 635 C455 792 599 817 711 750" fill="none" stroke="#f6a865" stroke-opacity="0.12" stroke-width="18" stroke-linecap="round"/>
+
+  <g fill="#64dacd" filter="url(#soft)" opacity="0.18">
+    <circle cx="493" cy="286" r="54"/>
+    <circle cx="1118" cy="295" r="50"/>
+    <circle cx="1082" cy="652" r="46"/>
+  </g>
+
+  <g stroke="#8ab5d8" stroke-opacity="0.35" stroke-width="3" fill="#102a46">
+    <circle cx="493" cy="286" r="19"/>
+    <circle cx="1118" cy="295" r="19"/>
+    <circle cx="1082" cy="652" r="19"/>
+    <circle cx="505" cy="648" r="19"/>
+  </g>
+  <g fill="url(#warm)">
+    <circle cx="493" cy="286" r="7"/>
+    <circle cx="1118" cy="295" r="7"/>
+    <circle cx="1082" cy="652" r="7"/>
+    <circle cx="505" cy="648" r="7"/>
+  </g>
+
+  <g fill="none" stroke="#78a2c9" stroke-opacity="0.28" stroke-width="3">
+    <path d="M510 300 C595 365 620 391 643 422"/>
+    <path d="M1100 309 C1015 369 987 396 957 425"/>
+    <path d="M1065 638 C991 585 978 551 957 514"/>
+    <path d="M522 635 C600 581 623 548 643 510"/>
+  </g>
+
+  <g transform="translate(800 444)" filter="url(#shadow)">
+    <path d="M-99 -17 L0 -101 L99 -17 V105 H-99 Z" fill="url(#core)"/>
+    <path d="M-57 8 L0 -41 L57 8 V77 H18 V24 H-18 V77 H-57 Z" fill="#0b2039" fill-opacity="0.9"/>
+    <circle cx="0" cy="24" r="11" fill="#ffd17f"/>
+    <path d="M0 35 V54" stroke="#ffd17f" stroke-width="8" stroke-linecap="round"/>
+  </g>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M755 315 A138 138 0 0 1 903 363" stroke="#68ded0" stroke-width="8"/>
+    <path d="M933 519 A138 138 0 0 1 785 582" stroke="#6688ff" stroke-width="8"/>
+    <path d="M675 508 A138 138 0 0 1 675 383" stroke="#ffc06e" stroke-width="8"/>
+  </g>
+
+  <g fill="#d7ebff" fill-opacity="0.72">
+    <circle cx="755" cy="315" r="6"/>
+    <circle cx="903" cy="363" r="6"/>
+    <circle cx="933" cy="519" r="6"/>
+    <circle cx="785" cy="582" r="6"/>
+    <circle cx="675" cy="508" r="6"/>
+    <circle cx="675" cy="383" r="6"/>
+  </g>
+
+  <path d="M135 757 C390 690 525 735 702 798 C883 863 1097 813 1462 690" fill="none" stroke="#8ab5d8" stroke-opacity="0.1" stroke-width="2"/>
+  <path d="M155 778 C401 723 542 764 707 820 C907 888 1122 824 1443 723" fill="none" stroke="#62d6cd" stroke-opacity="0.12" stroke-width="2"/>
+</svg>
