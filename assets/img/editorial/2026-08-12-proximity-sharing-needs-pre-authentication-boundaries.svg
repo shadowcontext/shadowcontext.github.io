@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Guarded proximity-sharing boundary</title>
+  <desc id="desc">Abstract nearby devices exchange layered wireless signals through a luminous authentication boundary.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071827"/>
+      <stop offset="0.55" stop-color="#0b3144"/>
+      <stop offset="1" stop-color="#10283c"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#4de3cb" stop-opacity="0.42"/>
+      <stop offset="0.48" stop-color="#29a8c7" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#071827" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#79f2dd"/>
+      <stop offset="0.5" stop-color="#36c9c8"/>
+      <stop offset="1" stop-color="#237da6"/>
+    </linearGradient>
+    <linearGradient id="device" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#173f59"/>
+      <stop offset="1" stop-color="#0a2133"/>
+    </linearGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="800" cy="450" r="440" fill="url(#glow)"/>
+  <g fill="none" stroke-linecap="round">
+    <path d="M330 450 C500 235 650 235 760 396" stroke="#2b8aaa" stroke-width="10" opacity="0.28"/>
+    <path d="M330 450 C510 330 650 330 760 421" stroke="#4bcabf" stroke-width="7" opacity="0.48"/>
+    <path d="M1270 450 C1100 235 950 235 840 396" stroke="#2b8aaa" stroke-width="10" opacity="0.28"/>
+    <path d="M1270 450 C1090 330 950 330 840 421" stroke="#4bcabf" stroke-width="7" opacity="0.48"/>
+  </g>
+  <ellipse cx="800" cy="450" rx="125" ry="285" fill="#4de3cb" opacity="0.12" filter="url(#soft)"/>
+  <g opacity="0.92">
+    <rect x="765" y="150" width="70" height="600" rx="35" fill="url(#gate)"/>
+    <rect x="786" y="185" width="28" height="530" rx="14" fill="#d4fff7" opacity="0.75"/>
+    <circle cx="800" cy="450" r="75" fill="#0a2738" stroke="#9affea" stroke-width="12"/>
+    <circle cx="800" cy="450" r="30" fill="#71ead7"/>
+  </g>
+  <g>
+    <rect x="205" y="250" width="260" height="400" rx="42" fill="url(#device)" stroke="#347c98" stroke-width="5"/>
+    <rect x="237" y="292" width="196" height="300" rx="22" fill="#0c2c3e" stroke="#27677f" stroke-width="3"/>
+    <circle cx="335" cy="620" r="12" fill="#50d7c7"/>
+    <rect x="1135" y="250" width="260" height="400" rx="42" fill="url(#device)" stroke="#347c98" stroke-width="5"/>
+    <rect x="1167" y="292" width="196" height="300" rx="22" fill="#0c2c3e" stroke="#27677f" stroke-width="3"/>
+    <circle cx="1265" cy="620" r="12" fill="#50d7c7"/>
+  </g>
+  <g fill="#65e5d3">
+    <circle cx="535" cy="355" r="10" opacity="0.45"/>
+    <circle cx="600" cy="385" r="14" opacity="0.65"/>
+    <circle cx="670" cy="418" r="18" opacity="0.85"/>
+    <circle cx="1065" cy="355" r="10" opacity="0.45"/>
+    <circle cx="1000" cy="385" r="14" opacity="0.65"/>
+    <circle cx="930" cy="418" r="18" opacity="0.85"/>
+  </g>
+  <g fill="none" stroke="#4b9ab0" opacity="0.2">
+    <circle cx="335" cy="450" r="250" stroke-width="3"/>
+    <circle cx="1265" cy="450" r="250" stroke-width="3"/>
+  </g>
+  <path d="M0 748 C320 680 570 820 800 755 C1030 690 1270 805 1600 724 L1600 900 L0 900Z" fill="#07141f" opacity="0.72"/>
+</svg>
