@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Tenant boundary protecting a multicluster control token</title>
+  <desc id="desc">Abstract editorial artwork showing a luminous cluster control core holding a protected token while a tenant path is stopped at layered namespace boundaries.</desc>
+  <defs>
+    <linearGradient id="background" x1="120" y1="80" x2="1460" y2="830" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07182D"/>
+      <stop offset="0.52" stop-color="#0B2941"/>
+      <stop offset="1" stop-color="#071322"/>
+    </linearGradient>
+    <radialGradient id="coreGlow" cx="0" cy="0" r="1" gradientTransform="translate(1050 450) rotate(90) scale(300)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#57E0D1" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#57E0D1" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="boundary" x1="695" y1="205" x2="1050" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7EE6F2"/>
+      <stop offset="0.55" stop-color="#45B9CF"/>
+      <stop offset="1" stop-color="#27728D"/>
+    </linearGradient>
+    <linearGradient id="tenantPath" x1="160" y1="450" x2="790" y2="450" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F0A45D" stop-opacity="0.2"/>
+      <stop offset="0.72" stop-color="#F0A45D"/>
+      <stop offset="1" stop-color="#FFD098"/>
+    </linearGradient>
+    <linearGradient id="token" x1="980" y1="360" x2="1130" y2="535" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D9FFF7"/>
+      <stop offset="1" stop-color="#4ECFC2"/>
+    </linearGradient>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="smallGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#7BD5E5" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <ellipse cx="1050" cy="450" rx="350" ry="350" fill="url(#coreGlow)"/>
+
+  <g opacity="0.42" fill="none" stroke="#6CBED0" stroke-width="2">
+    <path d="M1110 126C1325 146 1450 265 1475 430"/>
+    <path d="M1110 774C1325 754 1450 635 1475 470"/>
+    <circle cx="1478" cy="450" r="10" fill="#6CBED0" stroke="none"/>
+    <circle cx="1390" cy="235" r="7" fill="#6CBED0" stroke="none"/>
+    <circle cx="1390" cy="665" r="7" fill="#6CBED0" stroke="none"/>
+  </g>
+
+  <g opacity="0.36">
+    <circle cx="240" cy="290" r="34" fill="#D88E52"/>
+    <circle cx="270" cy="610" r="25" fill="#D88E52"/>
+    <circle cx="410" cy="450" r="42" fill="#F0A45D"/>
+    <path d="M265 310L385 425M290 590L385 475" stroke="#F0A45D" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <path d="M430 450C555 450 630 450 735 450" fill="none" stroke="url(#tenantPath)" stroke-width="30" stroke-linecap="round" opacity="0.26" filter="url(#softGlow)"/>
+  <path d="M430 450C555 450 630 450 735 450" fill="none" stroke="url(#tenantPath)" stroke-width="8" stroke-linecap="round"/>
+  <path d="M695 420L742 450L695 480" fill="none" stroke="#FFD098" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g fill="none" stroke="url(#boundary)" stroke-linecap="round">
+    <path d="M835 190C745 260 710 350 710 450C710 550 745 640 835 710" stroke-width="18" opacity="0.42"/>
+    <path d="M910 230C838 286 808 360 808 450C808 540 838 614 910 670" stroke-width="12" opacity="0.72"/>
+    <path d="M972 275C925 321 906 380 906 450C906 520 925 579 972 625" stroke-width="7"/>
+  </g>
+  <circle cx="808" cy="450" r="25" fill="#7EE6F2" opacity="0.24" filter="url(#smallGlow)"/>
+  <circle cx="808" cy="450" r="12" fill="#D8FBFF"/>
+
+  <g>
+    <path d="M1050 285L1214 378V566L1050 659L886 566V378L1050 285Z" fill="#0D3147" stroke="#65D6D2" stroke-width="4"/>
+    <path d="M1050 325L1178 398V546L1050 619L922 546V398L1050 325Z" fill="#0A2237" stroke="#3C8FA4" stroke-width="3"/>
+    <circle cx="1050" cy="472" r="118" fill="#173E52" stroke="#4CB8C1" stroke-width="3"/>
+    <circle cx="1050" cy="472" r="86" fill="#071B2B" stroke="#72E2D7" stroke-width="4"/>
+  </g>
+
+  <g fill="#83DCE0">
+    <circle cx="1050" cy="285" r="13"/>
+    <circle cx="1214" cy="378" r="13"/>
+    <circle cx="1214" cy="566" r="13"/>
+    <circle cx="1050" cy="659" r="13"/>
+    <circle cx="886" cy="566" r="13"/>
+    <circle cx="886" cy="378" r="13"/>
+  </g>
+
+  <g filter="url(#smallGlow)" opacity="0.55">
+    <circle cx="1050" cy="445" r="52" fill="#5DE0D0"/>
+  </g>
+  <g fill="url(#token)">
+    <circle cx="1050" cy="432" r="34"/>
+    <path d="M1030 457H1070L1083 543L1050 569L1017 543L1030 457Z"/>
+  </g>
+  <circle cx="1050" cy="432" r="13" fill="#0B2C3D"/>
+
+  <g opacity="0.3" fill="#58B9C8">
+    <circle cx="1328" cy="375" r="18"/>
+    <circle cx="1365" cy="450" r="28"/>
+    <circle cx="1328" cy="525" r="18"/>
+    <path d="M1216 415L1310 382M1218 450H1337M1216 489L1310 518" stroke="#58B9C8" stroke-width="4"/>
+  </g>
+
+  <rect x="78" y="72" width="1444" height="756" rx="42" fill="none" stroke="#A4E8EF" stroke-opacity="0.12" stroke-width="2"/>
+</svg>
