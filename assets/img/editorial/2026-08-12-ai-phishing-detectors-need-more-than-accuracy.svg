@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Layered evaluation of AI phishing website detection</title>
+  <desc id="desc">Abstract browser-page tiles move through layered cyan and amber detection fields, with deceptive and benign patterns separating along different paths.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071424"/>
+      <stop offset="0.48" stop-color="#102b3b"/>
+      <stop offset="1" stop-color="#130f24"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="52%" cy="47%" r="54%">
+      <stop offset="0" stop-color="#54e6d5" stop-opacity="0.2"/>
+      <stop offset="0.55" stop-color="#3987bf" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#071424" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b5fff0"/>
+      <stop offset="1" stop-color="#38bfd1"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd479"/>
+      <stop offset="1" stop-color="#f56f70"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b9fff2" stop-opacity="0.2"/>
+      <stop offset="0.5" stop-color="#5fc9d5" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#8d79dc" stop-opacity="0.18"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#halo)"/>
+
+  <g fill="none" stroke="#71bfd0" stroke-opacity="0.16">
+    <path d="M37 205 C333 70 623 124 827 245 S1250 420 1570 258"/>
+    <path d="M25 708 C330 835 606 758 824 645 S1252 472 1580 641"/>
+    <ellipse cx="812" cy="450" rx="528" ry="335" stroke-dasharray="5 25"/>
+  </g>
+
+  <g transform="translate(88 170)" stroke-width="3">
+    <g transform="rotate(-7 150 105)">
+      <rect x="0" y="0" width="300" height="210" rx="20" fill="#132f43" stroke="#6e9bad"/>
+      <path d="M0 44 H300" stroke="#6e9bad"/>
+      <circle cx="25" cy="22" r="6" fill="#54d5cc" stroke="none"/>
+      <circle cx="47" cy="22" r="6" fill="#8ba8b8" stroke="none"/>
+      <path d="M35 85 H228 M35 116 H265 M35 147 H188" stroke="#9dc8d3" stroke-opacity="0.58" stroke-linecap="round"/>
+      <rect x="207" y="137" width="57" height="36" rx="8" fill="#3bc5cc" fill-opacity="0.18" stroke="#57d9d2"/>
+    </g>
+    <g transform="translate(28 290) rotate(5 150 105)">
+      <rect x="0" y="0" width="300" height="210" rx="20" fill="#162b43" stroke="#7b91aa"/>
+      <path d="M0 44 H300" stroke="#7b91aa"/>
+      <circle cx="25" cy="22" r="6" fill="#f6b66e" stroke="none"/>
+      <circle cx="47" cy="22" r="6" fill="#8ba8b8" stroke="none"/>
+      <path d="M35 83 H246 M35 114 H172 M35 145 H252" stroke="#a5bbca" stroke-opacity="0.55" stroke-linecap="round"/>
+      <path d="M217 82 C250 93 255 124 234 143 C210 164 175 144 179 114 C182 94 197 84 217 82 Z" fill="#f27d76" fill-opacity="0.16" stroke="#f5a06f"/>
+    </g>
+  </g>
+
+  <g>
+    <path d="M491 117 L643 170 L610 781 L457 731 Z" fill="url(#glass)" stroke="#57d9d0" stroke-opacity="0.58" stroke-width="4"/>
+    <path d="M712 145 L855 183 L840 748 L696 712 Z" fill="url(#glass)" stroke="#6ccfdb" stroke-opacity="0.6" stroke-width="4"/>
+    <path d="M928 184 L1059 208 L1062 708 L929 685 Z" fill="url(#glass)" stroke="#9a8ce8" stroke-opacity="0.6" stroke-width="4"/>
+    <g fill="none" stroke="#c1fff2" stroke-opacity="0.28" stroke-width="3">
+      <path d="M480 301 L628 337 M474 440 L620 464 M468 578 L614 588"/>
+      <path d="M705 318 L849 345 M701 447 L846 463 M699 578 L843 580"/>
+      <path d="M928 334 L1060 349 M929 449 L1061 454 M930 568 L1062 563"/>
+    </g>
+  </g>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M379 270 C539 285 657 349 782 395 C903 440 1022 445 1150 390" stroke="url(#cyan)" stroke-width="10"/>
+    <path d="M388 554 C543 543 666 505 786 474 C911 442 1023 459 1147 514" stroke="url(#amber)" stroke-width="10"/>
+    <path d="M375 401 C526 398 646 413 775 432 C918 453 1026 452 1153 447" stroke="#a6d7df" stroke-opacity="0.55" stroke-width="7"/>
+  </g>
+
+  <g transform="translate(1250 446)">
+    <circle r="196" fill="#4bd9d2" opacity="0.12" filter="url(#glow)"/>
+    <circle r="162" fill="#102d43" stroke="#65dcd3" stroke-opacity="0.5" stroke-width="7"/>
+    <circle r="127" fill="none" stroke="#a5f5e8" stroke-opacity="0.38" stroke-width="3" stroke-dasharray="7 17"/>
+    <path d="M-89 -44 C-36 -105 49 -99 94 -31 C124 15 104 78 54 106 C2 136 -67 105 -101 53 C-121 22 -114 -13 -89 -44 Z" fill="#49cfca" fill-opacity="0.13" stroke="#b9fff2" stroke-width="4"/>
+    <circle cx="-49" cy="-30" r="13" fill="#c8fff4"/>
+    <circle cx="48" cy="-35" r="13" fill="#ffd17d"/>
+    <circle cx="8" cy="57" r="13" fill="#c8fff4"/>
+    <path d="M-37 -23 L0 45 M38 -25 L14 45 M-34 -34 L35 -37" fill="none" stroke="#6ee0d6" stroke-width="8" stroke-linecap="round"/>
+  </g>
+
+  <g>
+    <circle cx="1147" cy="390" r="17" fill="#baffef" opacity="0.3" filter="url(#soft)"/>
+    <circle cx="1147" cy="390" r="8" fill="#c9fff4"/>
+    <circle cx="1147" cy="514" r="18" fill="#ff9b70" opacity="0.35" filter="url(#soft)"/>
+    <path d="M1136 502 L1158 506 L1154 528 L1132 523 Z" fill="#422137" stroke="#ffc377" stroke-width="3"/>
+  </g>
+
+  <g fill="#d1fff5" opacity="0.76">
+    <circle cx="545" cy="228" r="5"/><circle cx="764" cy="270" r="6"/><circle cx="985" cy="305" r="5"/>
+    <circle cx="538" cy="648" r="6"/><circle cx="769" cy="625" r="5"/><circle cx="995" cy="595" r="6"/>
+  </g>
+</svg>
