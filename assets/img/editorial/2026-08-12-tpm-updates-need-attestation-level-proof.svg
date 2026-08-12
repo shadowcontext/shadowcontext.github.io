@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Firmware-aware verification around a hardware trust core</title>
+  <desc id="desc">An abstract dark-blue hardware core is protected by layered firmware rings while a separate amber orbit verifies its state.</desc>
+  <defs>
+    <linearGradient id="bg" x1="120" y1="80" x2="1480" y2="820" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071426"/>
+      <stop offset="0.52" stop-color="#0B2941"/>
+      <stop offset="1" stop-color="#10233B"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0" cy="0" r="1" gradientTransform="translate(806 452) rotate(90) scale(350 520)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#33D6D1" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#33D6D1" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="core" x1="635" y1="286" x2="956" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2AD6CF"/>
+      <stop offset="0.5" stop-color="#177FA3"/>
+      <stop offset="1" stop-color="#173E6D"/>
+    </linearGradient>
+    <linearGradient id="orbit" x1="384" y1="704" x2="1260" y2="196" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F2A74B" stop-opacity="0.12"/>
+      <stop offset="0.45" stop-color="#FFC56B"/>
+      <stop offset="1" stop-color="#F2A74B" stop-opacity="0.18"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#8ADDD8" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <ellipse cx="806" cy="452" rx="520" ry="350" fill="url(#halo)"/>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M392 341C510 139 857 79 1121 208C1325 307 1342 574 1161 717C957 878 590 809 433 611" stroke="#56D9D4" stroke-opacity="0.16" stroke-width="3"/>
+    <path d="M480 276C636 126 930 135 1110 277C1271 404 1233 622 1062 720C848 843 559 701 482 526" stroke="#67E0DA" stroke-opacity="0.24" stroke-width="4"/>
+    <ellipse cx="802" cy="452" rx="376" ry="287" stroke="#3BC6C5" stroke-opacity="0.28" stroke-width="6" stroke-dasharray="4 22"/>
+    <ellipse cx="802" cy="452" rx="312" ry="236" stroke="#83E8E2" stroke-opacity="0.30" stroke-width="2"/>
+  </g>
+
+  <g opacity="0.72" stroke="#54D8D3" stroke-width="7" stroke-linecap="round">
+    <path d="M628 326H552M628 390H524M628 454H504M628 518H524M628 582H552"/>
+    <path d="M976 326H1052M976 390H1080M976 454H1100M976 518H1080M976 582H1052"/>
+    <path d="M674 278V214M738 278V186M802 278V170M866 278V186M930 278V214"/>
+    <path d="M674 626V690M738 626V718M802 626V734M866 626V718M930 626V690"/>
+  </g>
+
+  <rect x="620" y="270" width="364" height="364" rx="86" fill="#081D32" stroke="#74E2DC" stroke-opacity="0.48" stroke-width="5"/>
+  <rect x="650" y="300" width="304" height="304" rx="66" fill="url(#core)"/>
+  <path d="M802 342L900 386V459C900 524 860 569 802 590C744 569 704 524 704 459V386L802 342Z" fill="#071B31" fill-opacity="0.78" stroke="#B1F5EF" stroke-opacity="0.72" stroke-width="4"/>
+  <circle cx="802" cy="454" r="62" fill="none" stroke="#71E2DC" stroke-width="14" stroke-opacity="0.82"/>
+  <circle cx="802" cy="454" r="26" fill="#B6F8F1"/>
+  <path d="M802 428V378M802 530V480M776 454H726M878 454H828" stroke="#B6F8F1" stroke-width="9" stroke-linecap="round"/>
+
+  <path d="M354 640C520 818 959 835 1240 600C1434 437 1304 211 1122 174" fill="none" stroke="#F4A947" stroke-opacity="0.15" stroke-width="34" filter="url(#glow)"/>
+  <path d="M354 640C520 818 959 835 1240 600C1434 437 1304 211 1122 174" fill="none" stroke="url(#orbit)" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="354" cy="640" r="18" fill="#FFC66D"/>
+  <circle cx="1122" cy="174" r="18" fill="#FFC66D"/>
+  <g transform="translate(1250 569)">
+    <circle r="70" fill="#0B2237" stroke="#FFC66D" stroke-width="6"/>
+    <circle r="48" fill="none" stroke="#FFC66D" stroke-opacity="0.35" stroke-width="3"/>
+    <path d="M-29 2L-8 24L34-25" fill="none" stroke="#FFE0A3" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g fill="#83E8E2">
+    <circle cx="425" cy="254" r="6" opacity="0.55"/>
+    <circle cx="1175" cy="300" r="7" opacity="0.48"/>
+    <circle cx="470" cy="610" r="5" opacity="0.42"/>
+    <circle cx="1054" cy="704" r="6" opacity="0.44"/>
+  </g>
+</svg>
