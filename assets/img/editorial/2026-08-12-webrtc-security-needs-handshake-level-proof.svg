@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Verified handshake boundary for encrypted WebRTC media</title>
+  <desc id="desc">Abstract cyan and violet media streams pass through paired cryptographic arcs and converge on a protected central connection.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071528"/>
+      <stop offset="0.55" stop-color="#102447"/>
+      <stop offset="1" stop-color="#170f38"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="48%" r="48%">
+      <stop offset="0" stop-color="#37e6d2" stop-opacity=".22"/>
+      <stop offset=".55" stop-color="#7069ff" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#071528" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="streamA" x1="0" x2="1">
+      <stop offset="0" stop-color="#159ac5" stop-opacity=".25"/>
+      <stop offset=".72" stop-color="#52f2df"/>
+      <stop offset="1" stop-color="#d8fff8"/>
+    </linearGradient>
+    <linearGradient id="streamB" x1="1" x2="0">
+      <stop offset="0" stop-color="#8448d8" stop-opacity=".22"/>
+      <stop offset=".72" stop-color="#9f80ff"/>
+      <stop offset="1" stop-color="#f0eaff"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a9fff3" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#5a5eea" stop-opacity=".08"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="13" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grain" width="90" height="90" patternUnits="userSpaceOnUse">
+      <circle cx="14" cy="19" r="1" fill="#c8e8ff" opacity=".12"/>
+      <circle cx="67" cy="54" r="1.2" fill="#b89cff" opacity=".10"/>
+      <circle cx="34" cy="78" r=".8" fill="#78f9e6" opacity=".10"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#halo)"/>
+  <rect width="1600" height="900" fill="url(#grain)"/>
+  <path d="M0 274 C250 244 370 321 548 379 C647 411 697 420 773 432" fill="none" stroke="url(#streamA)" stroke-width="58" opacity=".17"/>
+  <path d="M0 306 C250 278 374 345 548 396 C647 425 702 432 779 440" fill="none" stroke="url(#streamA)" stroke-width="5"/>
+  <path d="M1600 596 C1362 625 1221 548 1050 493 C956 463 899 454 822 447" fill="none" stroke="url(#streamB)" stroke-width="58" opacity=".17"/>
+  <path d="M1600 566 C1362 592 1226 526 1050 475 C958 448 904 442 826 441" fill="none" stroke="url(#streamB)" stroke-width="5"/>
+  <g opacity=".5" fill="none" stroke-linecap="round">
+    <path d="M53 238 C245 226 403 278 569 351" stroke="#49d9d1" stroke-width="2"/>
+    <path d="M44 353 C248 323 398 370 573 411" stroke="#49d9d1" stroke-width="2"/>
+    <path d="M1550 650 C1358 665 1200 611 1034 537" stroke="#997cff" stroke-width="2"/>
+    <path d="M1556 535 C1350 568 1202 519 1028 478" stroke="#997cff" stroke-width="2"/>
+  </g>
+  <g transform="translate(800 442)">
+    <circle r="218" fill="none" stroke="#80a8ff" stroke-opacity=".1" stroke-width="2"/>
+    <circle r="176" fill="none" stroke="#74e6db" stroke-opacity=".16" stroke-width="2" stroke-dasharray="4 18"/>
+    <path d="M-124-88 A152 152 0 0 1 124-88" fill="none" stroke="#57ead8" stroke-width="14" stroke-linecap="round" filter="url(#glow)"/>
+    <path d="M124 88 A152 152 0 0 1-124 88" fill="none" stroke="#9075ff" stroke-width="14" stroke-linecap="round" filter="url(#glow)"/>
+    <path d="M0-116 C59-83 103-76 103-76 V2 C103 74 60 122 0 146 C-60 122-103 74-103 2 V-76 C-103-76-59-83 0-116Z" fill="url(#shield)" stroke="#c1fff6" stroke-width="3"/>
+    <circle cy="2" r="38" fill="#071a31" stroke="#d9fffa" stroke-width="5"/>
+    <path d="M-17 1 L-2 17 L25-17" fill="none" stroke="#67f3df" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+    <circle cx="-134" cy="-84" r="9" fill="#d9fffa"/>
+    <circle cx="134" cy="84" r="9" fill="#eee8ff"/>
+  </g>
+  <g fill="#d8fff8" opacity=".85">
+    <circle cx="214" cy="284" r="6"/><circle cx="352" cy="321" r="4"/><circle cx="491" cy="369" r="7"/>
+  </g>
+  <g fill="#eee8ff" opacity=".85">
+    <circle cx="1387" cy="582" r="6"/><circle cx="1249" cy="550" r="4"/><circle cx="1110" cy="504" r="7"/>
+  </g>
+  <path d="M800 220 V154 M800 730 V664" stroke="#8eafe8" stroke-width="2" opacity=".32"/>
+  <circle cx="800" cy="140" r="7" fill="#57ead8" opacity=".65"/>
+  <circle cx="800" cy="744" r="7" fill="#9075ff" opacity=".65"/>
+</svg>
