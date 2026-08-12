@@ -1,0 +1,154 @@
+{
+  "digest_title": "ShadowContext Daily Security Digest: Resilient Controls and Architectural Boundaries",
+  "dek": "Independent defensive review of August 11, 2026 covering phishing kit reuse, AI agent trust, embedded systems, and critical component supply chains.",
+  "overview": "Today's research highlights structural vulnerabilities and defensive controls across phishing kits, AI reasoning pipelines, mobile basebands, and self-hosted infrastructure. Defenders must shift from single-artifact alerts to holistic evidence chains that enforce least privilege, authenticate source provenance, and protect runtime boundaries.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "Phishing Kit Component Reuse Enables Scalable Cluster Defense",
+      "summary": "Analysis of 1,300 phishing kits shows extensive code and infrastructure reuse. Defenders can cluster alerts by shared fingerprints rather than inspecting isolated URLs.",
+      "why_it_matters": "Cluster-level controls connect related phishing campaigns despite domain or branding changes.",
+      "topic": "Threat Intelligence"
+    },
+    {
+      "source_id": "S02",
+      "headline": "RAG Poisoning and the Limits of Output Confidence",
+      "summary": "Poisoned context in retrieval-augmented generation models can increase output confidence. Document-level attention concentration and attention collapse offer a complementary detection layer.",
+      "why_it_matters": "Output confidence alone cannot establish context integrity or prove retrieved evidence is trustworthy.",
+      "topic": "AI Security"
+    },
+    {
+      "source_id": "S03",
+      "headline": "Linked-Page Prompt Injection Defeats Local Agent Checks",
+      "summary": "Computer-use agents can be manipulated when hostile instructions are split across linked pages. Cumulative state checking and provenance tracking are required.",
+      "why_it_matters": "Permission to consult external sources must not become permission to obey them blindly.",
+      "topic": "AI Security"
+    },
+    {
+      "source_id": "S04",
+      "headline": "Cellular Baseband Security Demands Complete System Fidelity",
+      "summary": "Testing 5G basebands requires reproducing stateful interactions with the application processor, SIM, and cryptographic hardware. Host-side integrity checks need hardware roots of trust.",
+      "why_it_matters": "Assurance fails when a firmware integrity check is enforced by the layer it must distrust.",
+      "topic": "Device Defense"
+    },
+    {
+      "source_id": "S05",
+      "headline": "LoRA Adapters Require Runtime Backdoor Monitoring and Controls",
+      "summary": "Third-party adapters can carry dormant behaviors activated by specific inputs. Monitoring down-projection activations on a clean baseline detects anomalous spikes.",
+      "why_it_matters": "Compact adapters must be governed like executable dependencies with strict provenance and runtime oversight.",
+      "topic": "AI Security"
+    },
+    {
+      "source_id": "S06",
+      "headline": "Dokploy Command Injection Flaw Requires Running-Version Proof",
+      "summary": "CVE-2026-72902 reveals command injection in Dokploy before version 0.29.13 via repository-path handling. Operators must verify live container images and harden host boundaries.",
+      "why_it_matters": "A weakness in a deployment control plane can cross a much larger boundary than standard application bugs.",
+      "topic": "Platform Defense"
+    },
+    {
+      "source_id": "S07",
+      "headline": "Surfpool Scanning Makes Localhost Boundaries a Deployment Priority",
+      "summary": "Scanning for Solana JSON-RPC endpoints highlights that internal testing services can be exposed publicly through reverse proxies and container routing.",
+      "why_it_matters": "A process listening on loopback can still be published externally via improper infrastructure routing rules.",
+      "topic": "Threat Intelligence"
+    },
+    {
+      "source_id": "S08",
+      "headline": "Robotic Firmware Benefits from Operating Mode Least Privilege",
+      "summary": "RVDebloater research shows that robotic vehicle firmware can restrict unneeded functions at runtime based on the current mission mode.",
+      "why_it_matters": "Embedded attack surfaces should follow operational needs by closing dormant paths during active states.",
+      "topic": "Device Defense"
+    },
+    {
+      "source_id": "S09",
+      "headline": "Bluetooth Host-Stack Testing Requires Configuration and State Coverage",
+      "summary": "FuzzBT research on Linux and Zephyr host stacks identified 18 bugs across nine CVEs, proving that testing must cover build configurations and protocol transitions.",
+      "why_it_matters": "Kernel host stacks interpret controller events in a privileged state and need comprehensive configuration-aware coverage.",
+      "topic": "Device Defense"
+    },
+    {
+      "source_id": "S10",
+      "headline": "Agent Skill Security Demands Chain-Level Review and Lineage",
+      "summary": "Isolated skill scanners miss risks when malicious intents are split across multiple extensions. Chain-level evaluation prevents multi-step composition attacks.",
+      "why_it_matters": "Modular safety in agent ecosystems does not guarantee system safety when extensions are combined.",
+      "topic": "AI Security"
+    },
+    {
+      "source_id": "S11",
+      "headline": "AI Vulnerability Validation Requires Patched Counterfactuals",
+      "summary": "Automated vulnerability tools can produce false success markers. Verifying results requires testing against patched builds and matched benign inputs.",
+      "why_it_matters": "Generic crashes or self-reported markers are ambiguous without causal proof from negative controls.",
+      "topic": "AI Security"
+    },
+    {
+      "source_id": "S12",
+      "headline": "AI Cyber Defense Programs Need Operational Guardrails and Boundaries",
+      "summary": "California's AI Cyber Defense Program highlights the need for explicit data scoping, tenant separation, and human oversight in automated security infrastructure.",
+      "why_it_matters": "Faster analytical support must not remove local human control from critical infrastructure operations.",
+      "topic": "Defense Operations"
+    },
+    {
+      "source_id": "S13",
+      "headline": "Grafana MCP Follow-Up Highlights Network Egress as a Boundary",
+      "summary": "CVE-2026-19516 demonstrates that fixing token exfiltration in mcp-grafana did not restrict outbound destinations, leaving server-side request forgery risks.",
+      "why_it_matters": "Credential protection cannot substitute for network egress control in agent-facing tools.",
+      "topic": "AI Security"
+    },
+    {
+      "source_id": "S14",
+      "headline": "SAP ABAP Tools Fix Requires Authorization-Path Verification",
+      "summary": "CVE-2026-58243 exposes missing authorization checks in SAP ABAP Development Tools. Teams must apply Security Note 3772411 and test restricted accounts.",
+      "why_it_matters": "Development tool access must not automatically grant unintended database operation permissions.",
+      "topic": "Platform Defense"
+    },
+    {
+      "source_id": "S15",
+      "headline": "WildFly Deployer Role Demands Artifact Trust Boundaries",
+      "summary": "CVE-2026-24330 shows that authenticated deployer accounts can import malicious archives. Organizations must separate identity from artifact provenance checks.",
+      "why_it_matters": "Possession of deployment credentials must not automatically convert untrusted archives into trusted code.",
+      "topic": "Platform Defense"
+    },
+    {
+      "source_id": "S16",
+      "headline": "ImageMagick Fixes Require Comprehensive Input and Parser Isolation",
+      "summary": "Ubuntu USN-8592-1 addresses four ImageMagick flaws affecting memory allocation and encoders. Defenders must inventory all media-processing pipelines.",
+      "why_it_matters": "Uploaded media is active input to complex parsers that require strict isolation and resource ceilings.",
+      "topic": "Platform Defense"
+    },
+    {
+      "source_id": "S17",
+      "headline": "ASUS Tuning Utilities Require Driver-Level Fleet Inventories",
+      "summary": "CVE-2026-8917 affects ASUS tuning components, allowing potential privilege escalation. Windows defenders must inventory drivers, services, and hidden utilities.",
+      "why_it_matters": "Convenience software installed for hardware tuning can leave privileged memory interfaces exposed long-term.",
+      "topic": "Platform Defense"
+    },
+    {
+      "source_id": "S18",
+      "headline": "Systemd Fixes Require Validated Service-State Exposure",
+      "summary": "Ubuntu USN-8626-1 resolves three systemd flaws affecting authentication and process termination. Fleet owners must verify both package versions and active service states.",
+      "why_it_matters": "Package installation alone does not prove a vulnerable service is active or exposed on a host.",
+      "topic": "Platform Defense"
+    },
+    {
+      "source_id": "S19",
+      "headline": "Encrypted AI Reasoning Traces Require Strict Context Binding",
+      "summary": "Research shows encrypted LLM reasoning blocks can be replayed across sessions and models if insufficiently bound to authenticated context and identity.",
+      "why_it_matters": "Authenticated ciphertext can become a transferable capability if identity and sequencing are missing.",
+      "topic": "AI Security"
+    },
+    {
+      "source_id": "S20",
+      "headline": "AI Code Review Demands Internal Activation Signal Triage",
+      "summary": "Activation probes can distinguish vulnerable code from fixes even when model text verdicts fail. Review pipelines should treat internal activations as risk indicators.",
+      "why_it_matters": "A model's final prose verdict is an interface output that can hide its underlying security judgment.",
+      "topic": "AI Security"
+    }
+  ],
+  "operating_view": "Security architectures must enforce least privilege across all components, treating code components, agents, adapters, and deployment paths as active security boundaries. Defensible operations rely on continuous asset inventory, rigorous negative testing, and isolation of untrusted inputs.",
+  "watch_items": [
+    "Monitor multi-step prompt injection patterns and verify runtime state boundaries in AI agents.",
+    "Validate running versions and component-level integrity checks across self-hosted and embedded platforms.",
+    "Enforce egress controls and strict identity bindings on all model extension tools and APIs."
+  ],
+  "caption_intro": "Read the complete independent daily briefing on ShadowContext for August 11, 2026, featuring defensive insights and research breakdowns."
+}

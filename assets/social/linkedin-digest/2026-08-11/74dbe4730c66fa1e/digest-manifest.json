@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-08-12T07:19:32.791+04:00",
+  "digestDate": "2026-08-11",
+  "digestHash": "74dbe4730c66fa1e10357fca075e285763c3111a4fcf4ac03b631050eb4a418e",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "ShadowContext Daily Security Digest: Resilient Controls and Architectural Boundaries",
+  "articleCount": 20,
+  "sourceArticles": [
+    {
+      "title": "Phishkit reuse makes clustered defense practical",
+      "canonicalUrl": "https://shadowcontext.com/phishkit-reuse-makes-clustered-defense-practical/",
+      "publishedAt": "2026-08-11T00:09:48.000+04:00",
+      "category": "threat-intelligence",
+      "sourceHash": "96897b09171f46c1595238d80a48908799104514ed21d26b363c5be45e919eca"
+    },
+    {
+      "title": "RAG confidence needs source-level telemetry",
+      "canonicalUrl": "https://shadowcontext.com/rag-confidence-needs-source-level-telemetry/",
+      "publishedAt": "2026-08-11T01:10:03.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "b47d8cc62fcf886481db40901e0d546fba8bc1ff4fba25fd0edfbffaac978977"
+    },
+    {
+      "title": "Linked-Page Prompt Injection Defeats Local Agent Checks",
+      "canonicalUrl": "https://shadowcontext.com/multi-step-injection-needs-trajectory-controls/",
+      "publishedAt": "2026-08-11T02:10:14.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "3f43ccc15a9cdb6cf2eb28024e22248cf44ee50930fbabb6ba153d8d159e8415"
+    },
+    {
+      "title": "Baseband Security Tests Need the Whole System in the Loop",
+      "canonicalUrl": "https://shadowcontext.com/baseband-tests-need-peer-level-fidelity/",
+      "publishedAt": "2026-08-11T03:10:03.000+04:00",
+      "category": "defense",
+      "sourceHash": "4bf06bd9382560ba2675c2bd1350129b689995d12a4bf63bebbe7a72b9d3f38e"
+    },
+    {
+      "title": "LoRA Adapters Need Their Own Runtime Backdoor Controls",
+      "canonicalUrl": "https://shadowcontext.com/lora-adapters-need-runtime-backdoor-controls/",
+      "publishedAt": "2026-08-11T04:08:59.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "21b68986392ee44866d8ca49639e016ebd1e1a1f88f89eaad265802feddc41e1"
+    },
+    {
+      "title": "Dokploy Fix Needs Proof at the Host Boundary",
+      "canonicalUrl": "https://shadowcontext.com/dokploy-fix-needs-host-boundary-proof/",
+      "publishedAt": "2026-08-11T05:12:03.000+04:00",
+      "category": "defense",
+      "sourceHash": "fb0425204ce93ec862d614925674beeb18aafdae498a3803c289aafc0c862936"
+    },
+    {
+      "title": "Surfpool Scanning Makes the Localhost Boundary a Deployment Check",
+      "canonicalUrl": "https://shadowcontext.com/surfpool-scanning-needs-a-localhost-boundary/",
+      "publishedAt": "2026-08-11T06:08:48.000+04:00",
+      "category": "threat-intelligence",
+      "sourceHash": "4e53984f909a4550f36099919ca9cda050ad980bce6579f81ecd3143210f8f4d"
+    },
+    {
+      "title": "Robotic Firmware Needs Mode-Level Least Privilege",
+      "canonicalUrl": "https://shadowcontext.com/robotic-firmware-needs-mode-level-least-privilege/",
+      "publishedAt": "2026-08-11T07:09:18.000+04:00",
+      "category": "defense",
+      "sourceHash": "06238dcbf3b10e70755ab4baa4a197c579872112e5b4d4dc38aada0f1ca6e963"
+    },
+    {
+      "title": "Bluetooth Host Testing Needs Whole-State Coverage",
+      "canonicalUrl": "https://shadowcontext.com/bluetooth-host-testing-needs-whole-state-coverage/",
+      "publishedAt": "2026-08-11T08:11:19.000+04:00",
+      "category": "defense",
+      "sourceHash": "bb9d360fc30c0655ea6d3238d4eb88cbd752bea225a4b028caee8dec8ff17a38"
+    },
+    {
+      "title": "Agent Skill Security Needs Chain-Level Review",
+      "canonicalUrl": "https://shadowcontext.com/agent-skill-security-needs-chain-level-review/",
+      "publishedAt": "2026-08-11T09:09:26.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "43664601daed847363f4b8b78d9ffa9a3ee8d3bbe9ef109dcf632f17c2079cab"
+    },
+    {
+      "title": "AI Vulnerability Validation Needs Patched Counterfactuals",
+      "canonicalUrl": "https://shadowcontext.com/vulnerability-validation-needs-patched-counterfactuals/",
+      "publishedAt": "2026-08-11T10:09:15.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "631433061d069d946ba55e28c24faf706ebcc462bf6143479f9c1c24ff167808"
+    },
+    {
+      "title": "AI Cyber Defense Needs Operational Guardrails",
+      "canonicalUrl": "https://shadowcontext.com/ai-cyber-defense-needs-operational-guardrails/",
+      "publishedAt": "2026-08-11T11:09:21.000+04:00",
+      "category": "defense",
+      "sourceHash": "454c5f2ebcbc930f63636d68d21f67d25f9721c643d58ce9127a0556af3240ca"
+    },
+    {
+      "title": "Grafana MCP Follow-Up Makes Egress the Security Boundary",
+      "canonicalUrl": "https://shadowcontext.com/grafana-mcp-fix-needs-egress-boundary/",
+      "publishedAt": "2026-08-11T12:11:40.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "9899b92d155a3618813154d21125f60b9de7f42c7a8679c8e04228f7b4606ebe"
+    },
+    {
+      "title": "SAP ABAP Tools Fix Needs Authorization-Path Proof",
+      "canonicalUrl": "https://shadowcontext.com/sap-abap-tools-fix-needs-authorization-path-proof/",
+      "publishedAt": "2026-08-11T13:10:02.000+04:00",
+      "category": "defense",
+      "sourceHash": "7f370198e9a65eaa16e7505c9f75be6fe5f5c40a5e28fd7ad96118fb96483d31"
+    },
+    {
+      "title": "WildFly Deployer Role Needs an Artifact Trust Boundary",
+      "canonicalUrl": "https://shadowcontext.com/wildfly-deployer-role-needs-artifact-boundaries/",
+      "publishedAt": "2026-08-11T16:09:20.000+04:00",
+      "category": "defense",
+      "sourceHash": "f8ed09ea3aec89668f07524531120d94c23b1aa7397d5f889dcaeb4ee59ef02d"
+    },
+    {
+      "title": "ImageMagick Fixes Put Image Processing Behind a Trust Boundary",
+      "canonicalUrl": "https://shadowcontext.com/imagemagick-fixes-need-an-input-boundary/",
+      "publishedAt": "2026-08-11T17:09:20.000+04:00",
+      "category": "defense",
+      "sourceHash": "c6cf78643652f8c1004d32c977454b9450a308cf7a00ff69fd58b7e8f68a9338"
+    },
+    {
+      "title": "ASUS Tuning Tools Need Driver-Level Inventory",
+      "canonicalUrl": "https://shadowcontext.com/asus-tuning-tools-need-driver-level-inventory/",
+      "publishedAt": "2026-08-11T18:11:44.000+04:00",
+      "category": "defense",
+      "sourceHash": "3311b11435ff987a52c2b719d0484c710cdd6e9547a1513f980be8dac9fddc07"
+    },
+    {
+      "title": "Systemd Fixes Need Service-Level Verification",
+      "canonicalUrl": "https://shadowcontext.com/systemd-fixes-need-service-level-verification/",
+      "publishedAt": "2026-08-11T19:09:49.000+04:00",
+      "category": "defense",
+      "sourceHash": "a92e17fbca2298e38cd75c9c43e5ae6bd157793f3e0a720747a07c750264c154"
+    },
+    {
+      "title": "Encrypted AI Reasoning Needs Context, Not Just Ciphertext",
+      "canonicalUrl": "https://shadowcontext.com/encrypted-ai-reasoning-needs-context-binding/",
+      "publishedAt": "2026-08-11T20:11:29.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "d56614e5b7b3e3c5213c47da91b529b82a982eda27e52411ff85473d3f4119f2"
+    },
+    {
+      "title": "AI Code Review Needs More Than a Written Verdict",
+      "canonicalUrl": "https://shadowcontext.com/code-review-needs-internal-signal/",
+      "publishedAt": "2026-08-11T23:11:47.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "2afd7d6213587daffada049366d12322f6535939d91219165701fb2ff8dec843"
+    }
+  ],
+  "caption": "Read the complete independent daily briefing on ShadowContext for August 11, 2026, featuring defensive insights and research breakdowns.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-08-11/74dbe4730c66fa1e/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-11/74dbe4730c66fa1e/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-08-11/74dbe4730c66fa1e/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-11/74dbe4730c66fa1e/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}

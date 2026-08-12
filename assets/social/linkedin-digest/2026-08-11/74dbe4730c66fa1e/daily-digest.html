@@ -1,0 +1,850 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ShadowContext Daily Security Digest: Resilient Controls and Architectural Boundaries | ShadowContext</title>
+    <style>
+      :root {
+        --paper: #05080d;
+        --panel: #0d1319;
+        --panel-soft: #091017;
+        --ink: #f1f7fa;
+        --ink-2: #c4d1d8;
+        --muted: #8496a1;
+        --line: #1d2b34;
+        --cyan: #35e6d1;
+        --violet: #8b7dff;
+        --sans: "Space Grotesk", Inter, Arial, sans-serif;
+        --mono: "DM Mono", Consolas, monospace;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: var(--sans);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        font-size: 10.5pt;
+        line-height: 1.55;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        position: relative;
+        width: 210mm;
+        min-height: 297mm;
+        padding: 18mm;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 83% 18%, rgba(139, 125, 255, 0.1), transparent 28%),
+          linear-gradient(145deg, #05080d 0%, #081017 62%, #0c101c 100%);
+      }
+
+      .page::before {
+        content: "";
+        position: absolute;
+        inset: 8mm;
+        pointer-events: none;
+        border: 0.25mm solid var(--line);
+      }
+
+      .cover {
+        display: flex;
+        flex-direction: column;
+        page-break-after: always;
+      }
+
+      .brand-row,
+      .section-head,
+      .document-footer {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 4mm;
+        font-size: 20pt;
+        font-weight: 750;
+        letter-spacing: -0.04em;
+      }
+
+      .brand em {
+        color: var(--cyan);
+        font-style: normal;
+      }
+
+      .brand-mark {
+        position: relative;
+        display: block;
+        width: 12mm;
+        height: 12mm;
+        transform: rotate(30deg);
+        border: 1mm solid var(--cyan);
+        border-radius: 1.2mm;
+      }
+
+      .brand-mark::before {
+        content: "";
+        position: absolute;
+        inset: 2.2mm;
+        border: 0.8mm solid var(--violet);
+        border-radius: 0.9mm;
+      }
+
+      .brand-mark::after {
+        content: "";
+        position: absolute;
+        inset: 4.5mm;
+        background: var(--cyan);
+        border-radius: 0.5mm;
+      }
+
+      .edition,
+      .eyebrow,
+      .topic,
+      .section-count,
+      .why span,
+      .document-footer,
+      .source-link {
+        font-family: var(--mono);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .edition,
+      .section-count,
+      .document-footer {
+        color: var(--muted);
+        font-size: 8pt;
+      }
+
+      .cover-copy {
+        position: relative;
+        z-index: 1;
+        margin: 30mm 0 0;
+      }
+
+      .eyebrow {
+        margin: 0 0 7mm;
+        color: var(--cyan);
+        font-size: 10pt;
+      }
+
+      h1 {
+        max-width: 165mm;
+        margin: 0;
+        font-size: 37pt;
+        line-height: 1.03;
+        letter-spacing: -0.05em;
+      }
+
+      .dek {
+        max-width: 155mm;
+        margin: 10mm 0 0;
+        color: var(--ink-2);
+        font-size: 16pt;
+        line-height: 1.45;
+      }
+
+      .context {
+        position: relative;
+        z-index: 1;
+        margin-top: auto;
+        padding: 9mm;
+        background: rgba(13, 19, 25, 0.94);
+        border: 0.3mm solid var(--line);
+        border-left: 1mm solid var(--violet);
+      }
+
+      .context h2,
+      .section-head h2,
+      .operating-view h2,
+      .sources h2 {
+        margin: 0;
+      }
+
+      .context h2 {
+        color: var(--violet);
+        font-family: var(--mono);
+        font-size: 9pt;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .context p {
+        margin: 4mm 0 0;
+        color: var(--ink-2);
+        font-size: 13pt;
+      }
+
+      .cover-meta {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 9mm;
+        color: var(--muted);
+        font: 8pt var(--mono);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .content {
+        padding-top: 15mm;
+        padding-bottom: 18mm;
+      }
+
+      .section-head {
+        margin-bottom: 9mm;
+        padding-bottom: 5mm;
+        border-bottom: 0.3mm solid var(--line);
+      }
+
+      .section-head h2 {
+        font-size: 23pt;
+      }
+
+      .stories {
+        position: relative;
+        z-index: 1;
+      }
+
+      .story {
+        display: grid;
+        grid-template-columns: 15mm 1fr;
+        gap: 5mm;
+        margin: 0 0 6mm;
+        padding: 7mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: rgba(13, 19, 25, 0.96);
+        border: 0.3mm solid var(--line);
+      }
+
+      .story-index {
+        color: var(--cyan);
+        font: 12pt var(--mono);
+      }
+
+      .topic {
+        margin: 0 0 2mm;
+        color: var(--cyan);
+        font-size: 7.5pt;
+      }
+
+      .story h3 {
+        margin: 0;
+        font-size: 16pt;
+        line-height: 1.18;
+        letter-spacing: -0.025em;
+      }
+
+      .summary {
+        margin: 3mm 0;
+        color: var(--ink-2);
+        font-size: 10.5pt;
+      }
+
+      .why {
+        padding-top: 3mm;
+        border-top: 0.25mm solid var(--line);
+      }
+
+      .why span {
+        color: var(--violet);
+        font-size: 7pt;
+      }
+
+      .why p {
+        display: inline;
+        margin: 0 0 0 2mm;
+        font-weight: 650;
+      }
+
+      .source-link {
+        display: inline-block;
+        margin-top: 4mm;
+        color: var(--cyan);
+        font-size: 6.8pt;
+        letter-spacing: 0.04em;
+        text-transform: none;
+      }
+
+      .operating-view,
+      .sources {
+        position: relative;
+        z-index: 1;
+        margin-top: 12mm;
+        padding: 9mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: var(--panel-soft);
+        border: 0.3mm solid var(--line);
+      }
+
+      .operating-view {
+        border-top: 1mm solid var(--cyan);
+      }
+
+      .operating-view h2,
+      .sources h2 {
+        font-size: 18pt;
+      }
+
+      .operating-view > p {
+        color: var(--ink-2);
+        font-size: 12pt;
+      }
+
+      .watch-list,
+      .source-list {
+        margin: 6mm 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .watch-list li {
+        display: grid;
+        grid-template-columns: 9mm 1fr;
+        gap: 4mm;
+        align-items: start;
+        margin: 3mm 0;
+      }
+
+      .watch-list span {
+        display: grid;
+        width: 8mm;
+        height: 8mm;
+        place-items: center;
+        color: var(--cyan);
+        border: 0.3mm solid var(--cyan);
+        font: 8pt var(--mono);
+      }
+
+      .watch-list p {
+        margin: 0;
+      }
+
+      .source-list li {
+        display: grid;
+        grid-template-columns: 10mm 1fr;
+        gap: 3mm;
+        margin: 2.5mm 0;
+        color: var(--ink-2);
+        font-size: 8.5pt;
+      }
+
+      .source-list span {
+        color: var(--violet);
+        font-family: var(--mono);
+      }
+
+      .source-list a {
+        color: var(--cyan);
+        text-decoration: underline;
+        text-decoration-color: rgba(53, 230, 209, 0.35);
+        text-underline-offset: 1mm;
+      }
+
+      .cta {
+        position: relative;
+        z-index: 1;
+        margin: 12mm 0 0;
+        padding: 7mm 9mm;
+        break-inside: avoid;
+        color: #04100f;
+        background: var(--cyan);
+      }
+
+      .cta strong {
+        display: block;
+        font-size: 14pt;
+      }
+
+      .cta span {
+        font: 9pt var(--mono);
+      }
+
+      .document-footer {
+        margin-top: 12mm;
+        padding-top: 5mm;
+        border-top: 0.3mm solid var(--line);
+      }
+
+      @media screen {
+        body {
+          width: 210mm;
+          margin: 0 auto;
+        }
+
+        .page {
+          box-shadow: 0 0 20mm rgba(0, 0, 0, 0.45);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="page cover">
+      <header class="brand-row">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Shadow<em>Context</em></span>
+        </div>
+        <span class="edition">Daily security digest</span>
+      </header>
+
+      <main class="cover-copy">
+        <p class="eyebrow">The day in context / 2026-08-11</p>
+        <h1>ShadowContext Daily Security Digest: Resilient Controls and Architectural Boundaries</h1>
+        <p class="dek">Independent defensive review of August 11, 2026 covering phishing kit reuse, AI agent trust, embedded systems, and critical component supply chains.</p>
+      </main>
+
+      <aside class="context">
+        <h2>Executive summary</h2>
+        <p>Today&#39;s research highlights structural vulnerabilities and defensive controls across phishing kits, AI reasoning pipelines, mobile basebands, and self-hosted infrastructure. Defenders must shift from single-artifact alerts to holistic evidence chains that enforce least privilege, authenticate source provenance, and protect runtime boundaries.</p>
+      </aside>
+
+      <div class="cover-meta">
+        <span>20 briefings included</span>
+        <span>https://shadowcontext.com/</span>
+      </div>
+    </section>
+
+    <section class="page content">
+      <header class="section-head">
+        <h2>All news from the day</h2>
+        <span class="section-count">20 / 2026-08-11</span>
+      </header>
+
+      <main class="stories">
+    <article class="story">
+      <div class="story-index">01</div>
+      <div class="story-copy">
+        <p class="topic">Threat Intelligence</p>
+        <h3>Phishing Kit Component Reuse Enables Scalable Cluster Defense</h3>
+        <p class="summary">Analysis of 1,300 phishing kits shows extensive code and infrastructure reuse. Defenders can cluster alerts by shared fingerprints rather than inspecting isolated URLs.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Cluster-level controls connect related phishing campaigns despite domain or branding changes.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/phishkit-reuse-makes-clustered-defense-practical/">Phishkit reuse makes clustered defense practical ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">02</div>
+      <div class="story-copy">
+        <p class="topic">AI Security</p>
+        <h3>RAG Poisoning and the Limits of Output Confidence</h3>
+        <p class="summary">Poisoned context in retrieval-augmented generation models can increase output confidence. Document-level attention concentration and attention collapse offer a complementary detection layer.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Output confidence alone cannot establish context integrity or prove retrieved evidence is trustworthy.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/rag-confidence-needs-source-level-telemetry/">RAG confidence needs source-level telemetry ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">03</div>
+      <div class="story-copy">
+        <p class="topic">AI Security</p>
+        <h3>Linked-Page Prompt Injection Defeats Local Agent Checks</h3>
+        <p class="summary">Computer-use agents can be manipulated when hostile instructions are split across linked pages. Cumulative state checking and provenance tracking are required.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Permission to consult external sources must not become permission to obey them blindly.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/multi-step-injection-needs-trajectory-controls/">Linked-Page Prompt Injection Defeats Local Agent Checks ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">04</div>
+      <div class="story-copy">
+        <p class="topic">Device Defense</p>
+        <h3>Cellular Baseband Security Demands Complete System Fidelity</h3>
+        <p class="summary">Testing 5G basebands requires reproducing stateful interactions with the application processor, SIM, and cryptographic hardware. Host-side integrity checks need hardware roots of trust.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Assurance fails when a firmware integrity check is enforced by the layer it must distrust.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/baseband-tests-need-peer-level-fidelity/">Baseband Security Tests Need the Whole System in the Loop ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">05</div>
+      <div class="story-copy">
+        <p class="topic">AI Security</p>
+        <h3>LoRA Adapters Require Runtime Backdoor Monitoring and Controls</h3>
+        <p class="summary">Third-party adapters can carry dormant behaviors activated by specific inputs. Monitoring down-projection activations on a clean baseline detects anomalous spikes.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Compact adapters must be governed like executable dependencies with strict provenance and runtime oversight.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/lora-adapters-need-runtime-backdoor-controls/">LoRA Adapters Need Their Own Runtime Backdoor Controls ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">06</div>
+      <div class="story-copy">
+        <p class="topic">Platform Defense</p>
+        <h3>Dokploy Command Injection Flaw Requires Running-Version Proof</h3>
+        <p class="summary">CVE-2026-72902 reveals command injection in Dokploy before version 0.29.13 via repository-path handling. Operators must verify live container images and harden host boundaries.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>A weakness in a deployment control plane can cross a much larger boundary than standard application bugs.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/dokploy-fix-needs-host-boundary-proof/">Dokploy Fix Needs Proof at the Host Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">07</div>
+      <div class="story-copy">
+        <p class="topic">Threat Intelligence</p>
+        <h3>Surfpool Scanning Makes Localhost Boundaries a Deployment Priority</h3>
+        <p class="summary">Scanning for Solana JSON-RPC endpoints highlights that internal testing services can be exposed publicly through reverse proxies and container routing.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>A process listening on loopback can still be published externally via improper infrastructure routing rules.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/surfpool-scanning-needs-a-localhost-boundary/">Surfpool Scanning Makes the Localhost Boundary a Deployment Check ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">08</div>
+      <div class="story-copy">
+        <p class="topic">Device Defense</p>
+        <h3>Robotic Firmware Benefits from Operating Mode Least Privilege</h3>
+        <p class="summary">RVDebloater research shows that robotic vehicle firmware can restrict unneeded functions at runtime based on the current mission mode.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Embedded attack surfaces should follow operational needs by closing dormant paths during active states.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/robotic-firmware-needs-mode-level-least-privilege/">Robotic Firmware Needs Mode-Level Least Privilege ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">09</div>
+      <div class="story-copy">
+        <p class="topic">Device Defense</p>
+        <h3>Bluetooth Host-Stack Testing Requires Configuration and State Coverage</h3>
+        <p class="summary">FuzzBT research on Linux and Zephyr host stacks identified 18 bugs across nine CVEs, proving that testing must cover build configurations and protocol transitions.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Kernel host stacks interpret controller events in a privileged state and need comprehensive configuration-aware coverage.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/bluetooth-host-testing-needs-whole-state-coverage/">Bluetooth Host Testing Needs Whole-State Coverage ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">10</div>
+      <div class="story-copy">
+        <p class="topic">AI Security</p>
+        <h3>Agent Skill Security Demands Chain-Level Review and Lineage</h3>
+        <p class="summary">Isolated skill scanners miss risks when malicious intents are split across multiple extensions. Chain-level evaluation prevents multi-step composition attacks.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Modular safety in agent ecosystems does not guarantee system safety when extensions are combined.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/agent-skill-security-needs-chain-level-review/">Agent Skill Security Needs Chain-Level Review ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">11</div>
+      <div class="story-copy">
+        <p class="topic">AI Security</p>
+        <h3>AI Vulnerability Validation Requires Patched Counterfactuals</h3>
+        <p class="summary">Automated vulnerability tools can produce false success markers. Verifying results requires testing against patched builds and matched benign inputs.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Generic crashes or self-reported markers are ambiguous without causal proof from negative controls.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/vulnerability-validation-needs-patched-counterfactuals/">AI Vulnerability Validation Needs Patched Counterfactuals ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">12</div>
+      <div class="story-copy">
+        <p class="topic">Defense Operations</p>
+        <h3>AI Cyber Defense Programs Need Operational Guardrails and Boundaries</h3>
+        <p class="summary">California&#39;s AI Cyber Defense Program highlights the need for explicit data scoping, tenant separation, and human oversight in automated security infrastructure.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Faster analytical support must not remove local human control from critical infrastructure operations.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ai-cyber-defense-needs-operational-guardrails/">AI Cyber Defense Needs Operational Guardrails ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">13</div>
+      <div class="story-copy">
+        <p class="topic">AI Security</p>
+        <h3>Grafana MCP Follow-Up Highlights Network Egress as a Boundary</h3>
+        <p class="summary">CVE-2026-19516 demonstrates that fixing token exfiltration in mcp-grafana did not restrict outbound destinations, leaving server-side request forgery risks.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Credential protection cannot substitute for network egress control in agent-facing tools.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/grafana-mcp-fix-needs-egress-boundary/">Grafana MCP Follow-Up Makes Egress the Security Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">14</div>
+      <div class="story-copy">
+        <p class="topic">Platform Defense</p>
+        <h3>SAP ABAP Tools Fix Requires Authorization-Path Verification</h3>
+        <p class="summary">CVE-2026-58243 exposes missing authorization checks in SAP ABAP Development Tools. Teams must apply Security Note 3772411 and test restricted accounts.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Development tool access must not automatically grant unintended database operation permissions.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/sap-abap-tools-fix-needs-authorization-path-proof/">SAP ABAP Tools Fix Needs Authorization-Path Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">15</div>
+      <div class="story-copy">
+        <p class="topic">Platform Defense</p>
+        <h3>WildFly Deployer Role Demands Artifact Trust Boundaries</h3>
+        <p class="summary">CVE-2026-24330 shows that authenticated deployer accounts can import malicious archives. Organizations must separate identity from artifact provenance checks.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Possession of deployment credentials must not automatically convert untrusted archives into trusted code.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/wildfly-deployer-role-needs-artifact-boundaries/">WildFly Deployer Role Needs an Artifact Trust Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">16</div>
+      <div class="story-copy">
+        <p class="topic">Platform Defense</p>
+        <h3>ImageMagick Fixes Require Comprehensive Input and Parser Isolation</h3>
+        <p class="summary">Ubuntu USN-8592-1 addresses four ImageMagick flaws affecting memory allocation and encoders. Defenders must inventory all media-processing pipelines.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Uploaded media is active input to complex parsers that require strict isolation and resource ceilings.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/imagemagick-fixes-need-an-input-boundary/">ImageMagick Fixes Put Image Processing Behind a Trust Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">17</div>
+      <div class="story-copy">
+        <p class="topic">Platform Defense</p>
+        <h3>ASUS Tuning Utilities Require Driver-Level Fleet Inventories</h3>
+        <p class="summary">CVE-2026-8917 affects ASUS tuning components, allowing potential privilege escalation. Windows defenders must inventory drivers, services, and hidden utilities.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Convenience software installed for hardware tuning can leave privileged memory interfaces exposed long-term.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/asus-tuning-tools-need-driver-level-inventory/">ASUS Tuning Tools Need Driver-Level Inventory ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">18</div>
+      <div class="story-copy">
+        <p class="topic">Platform Defense</p>
+        <h3>Systemd Fixes Require Validated Service-State Exposure</h3>
+        <p class="summary">Ubuntu USN-8626-1 resolves three systemd flaws affecting authentication and process termination. Fleet owners must verify both package versions and active service states.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Package installation alone does not prove a vulnerable service is active or exposed on a host.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/systemd-fixes-need-service-level-verification/">Systemd Fixes Need Service-Level Verification ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">19</div>
+      <div class="story-copy">
+        <p class="topic">AI Security</p>
+        <h3>Encrypted AI Reasoning Traces Require Strict Context Binding</h3>
+        <p class="summary">Research shows encrypted LLM reasoning blocks can be replayed across sessions and models if insufficiently bound to authenticated context and identity.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Authenticated ciphertext can become a transferable capability if identity and sequencing are missing.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/encrypted-ai-reasoning-needs-context-binding/">Encrypted AI Reasoning Needs Context, Not Just Ciphertext ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">20</div>
+      <div class="story-copy">
+        <p class="topic">AI Security</p>
+        <h3>AI Code Review Demands Internal Activation Signal Triage</h3>
+        <p class="summary">Activation probes can distinguish vulnerable code from fixes even when model text verdicts fail. Review pipelines should treat internal activations as risk indicators.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>A model&#39;s final prose verdict is an interface output that can hide its underlying security judgment.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/code-review-needs-internal-signal/">AI Code Review Needs More Than a Written Verdict ↗</a>
+      </div>
+    </article></main>
+
+      <section class="operating-view">
+        <p class="eyebrow">The operating view</p>
+        <h2>What the day means for defenders</h2>
+        <p>Security architectures must enforce least privilege across all components, treating code components, agents, adapters, and deployment paths as active security boundaries. Defensible operations rely on continuous asset inventory, rigorous negative testing, and isolation of untrusted inputs.</p>
+        <ol class="watch-list"><li><span>1</span><p>Monitor multi-step prompt injection patterns and verify runtime state boundaries in AI agents.</p></li>
+<li><span>2</span><p>Validate running versions and component-level integrity checks across self-hosted and embedded platforms.</p></li>
+<li><span>3</span><p>Enforce egress controls and strict identity bindings on all model extension tools and APIs.</p></li></ol>
+      </section>
+
+      <section class="sources">
+        <p class="eyebrow">Source index</p>
+        <h2>Every briefing in this digest</h2>
+        <ol class="source-list">
+    <li>
+      <span>01</span>
+      <a href="https://shadowcontext.com/phishkit-reuse-makes-clustered-defense-practical/">Phishkit reuse makes clustered defense practical</a>
+    </li>
+
+    <li>
+      <span>02</span>
+      <a href="https://shadowcontext.com/rag-confidence-needs-source-level-telemetry/">RAG confidence needs source-level telemetry</a>
+    </li>
+
+    <li>
+      <span>03</span>
+      <a href="https://shadowcontext.com/multi-step-injection-needs-trajectory-controls/">Linked-Page Prompt Injection Defeats Local Agent Checks</a>
+    </li>
+
+    <li>
+      <span>04</span>
+      <a href="https://shadowcontext.com/baseband-tests-need-peer-level-fidelity/">Baseband Security Tests Need the Whole System in the Loop</a>
+    </li>
+
+    <li>
+      <span>05</span>
+      <a href="https://shadowcontext.com/lora-adapters-need-runtime-backdoor-controls/">LoRA Adapters Need Their Own Runtime Backdoor Controls</a>
+    </li>
+
+    <li>
+      <span>06</span>
+      <a href="https://shadowcontext.com/dokploy-fix-needs-host-boundary-proof/">Dokploy Fix Needs Proof at the Host Boundary</a>
+    </li>
+
+    <li>
+      <span>07</span>
+      <a href="https://shadowcontext.com/surfpool-scanning-needs-a-localhost-boundary/">Surfpool Scanning Makes the Localhost Boundary a Deployment Check</a>
+    </li>
+
+    <li>
+      <span>08</span>
+      <a href="https://shadowcontext.com/robotic-firmware-needs-mode-level-least-privilege/">Robotic Firmware Needs Mode-Level Least Privilege</a>
+    </li>
+
+    <li>
+      <span>09</span>
+      <a href="https://shadowcontext.com/bluetooth-host-testing-needs-whole-state-coverage/">Bluetooth Host Testing Needs Whole-State Coverage</a>
+    </li>
+
+    <li>
+      <span>10</span>
+      <a href="https://shadowcontext.com/agent-skill-security-needs-chain-level-review/">Agent Skill Security Needs Chain-Level Review</a>
+    </li>
+
+    <li>
+      <span>11</span>
+      <a href="https://shadowcontext.com/vulnerability-validation-needs-patched-counterfactuals/">AI Vulnerability Validation Needs Patched Counterfactuals</a>
+    </li>
+
+    <li>
+      <span>12</span>
+      <a href="https://shadowcontext.com/ai-cyber-defense-needs-operational-guardrails/">AI Cyber Defense Needs Operational Guardrails</a>
+    </li>
+
+    <li>
+      <span>13</span>
+      <a href="https://shadowcontext.com/grafana-mcp-fix-needs-egress-boundary/">Grafana MCP Follow-Up Makes Egress the Security Boundary</a>
+    </li>
+
+    <li>
+      <span>14</span>
+      <a href="https://shadowcontext.com/sap-abap-tools-fix-needs-authorization-path-proof/">SAP ABAP Tools Fix Needs Authorization-Path Proof</a>
+    </li>
+
+    <li>
+      <span>15</span>
+      <a href="https://shadowcontext.com/wildfly-deployer-role-needs-artifact-boundaries/">WildFly Deployer Role Needs an Artifact Trust Boundary</a>
+    </li>
+
+    <li>
+      <span>16</span>
+      <a href="https://shadowcontext.com/imagemagick-fixes-need-an-input-boundary/">ImageMagick Fixes Put Image Processing Behind a Trust Boundary</a>
+    </li>
+
+    <li>
+      <span>17</span>
+      <a href="https://shadowcontext.com/asus-tuning-tools-need-driver-level-inventory/">ASUS Tuning Tools Need Driver-Level Inventory</a>
+    </li>
+
+    <li>
+      <span>18</span>
+      <a href="https://shadowcontext.com/systemd-fixes-need-service-level-verification/">Systemd Fixes Need Service-Level Verification</a>
+    </li>
+
+    <li>
+      <span>19</span>
+      <a href="https://shadowcontext.com/encrypted-ai-reasoning-needs-context-binding/">Encrypted AI Reasoning Needs Context, Not Just Ciphertext</a>
+    </li>
+
+    <li>
+      <span>20</span>
+      <a href="https://shadowcontext.com/code-review-needs-internal-signal/">AI Code Review Needs More Than a Written Verdict</a>
+    </li></ol>
+      </section>
+
+      <div class="cta">
+        <strong>Read the full analysis</strong>
+        <span>https://shadowcontext.com/</span>
+      </div>
+
+      <footer class="document-footer">
+        <span>ShadowContext</span>
+        <span>Independent defensive security intelligence</span>
+      </footer>
+    </section>
+  </body>
+</html>
