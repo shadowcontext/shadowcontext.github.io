@@ -1,15 +1,45 @@
 {
-  "generated_at": "2026-08-11T01:24:46Z",
-  "generated_display": "11 Aug 2026 · 01:24 UTC",
+  "generated_at": "2026-08-12T01:24:45Z",
+  "generated_display": "12 Aug 2026 · 01:24 UTC",
   "metrics": {
-    "kev_total": 1662,
-    "kev_added_30d": 25,
-    "due_next_7d": 0,
+    "kev_total": 1665,
+    "kev_added_30d": 28,
+    "due_next_7d": 2,
     "ioc_total": 197,
     "ioc_total_display": "197",
     "ioc_total_exact": "197"
   },
   "vulnerabilities": [
+    {
+      "cve": "CVE-2026-72898",
+      "name": "Metabase SQL Injection Vulnerability",
+      "vendor": "Metabase",
+      "product": "Metabase",
+      "date_added": "2026-08-11",
+      "due_date": "2026-08-14",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-72898"
+    },
+    {
+      "cve": "CVE-2026-68820",
+      "name": "Microsoft Windows Ancillary Function Driver for WinSock Use-After-Free Vulnerability",
+      "vendor": "Microsoft",
+      "product": "Windows Ancillary Function Driver for WinSock ",
+      "date_added": "2026-08-11",
+      "due_date": "2026-08-25",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-68820"
+    },
+    {
+      "cve": "CVE-2026-20349",
+      "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) and Secure Firewall Threat Defense (FTD) Heap Inspection Vulnerability",
+      "vendor": "Cisco",
+      "product": "Secure Firewall Adaptive Security Appliance (ASA) and Secure Firewall Threat Defense (FTD) ",
+      "date_added": "2026-08-11",
+      "due_date": "2026-08-14",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-20349"
+    },
     {
       "cve": "CVE-2026-8037",
       "name": "Progress LoadMaster Command Injection Vulnerability",
@@ -59,56 +89,26 @@
       "due_date": "2026-08-07",
       "ransomware": "Unknown",
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-18556"
-    },
-    {
-      "cve": "CVE-2026-18577",
-      "name": "N-able N-central Authentication Bypass Using an Alternate Path or Channel Vulnerability",
-      "vendor": "N-able",
-      "product": "N-central",
-      "date_added": "2026-08-03",
-      "due_date": "2026-08-06",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-18577"
-    },
-    {
-      "cve": "CVE-2026-20316",
-      "name": "Cisco Secure Firewall Management Center Use of Hard-coded Password Vulnerability",
-      "vendor": "Cisco",
-      "product": "Secure Firewall Management Center (FMC)",
-      "date_added": "2026-07-29",
-      "due_date": "2026-08-01",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-20316"
-    },
-    {
-      "cve": "CVE-2026-16812",
-      "name": "Arista VeloCloud Orchestrator On-Prem OS Command Injection Vulnerability",
-      "vendor": "Arista",
-      "product": "VeloCloud Orchestrator",
-      "date_added": "2026-07-27",
-      "due_date": "2026-07-30",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-16812"
     }
   ],
   "platforms": [
     {
       "vendor": "Microsoft",
       "product": "Windows",
-      "count": 44,
+      "count": 45,
       "percent": 100
     },
     {
       "vendor": "Cisco",
       "product": "Catalyst SD-WAN Manager",
-      "count": 17,
-      "percent": 39
+      "count": 18,
+      "percent": 40
     },
     {
       "vendor": "Apple",
       "product": "Multiple Products",
       "count": 10,
-      "percent": 23
+      "percent": 22
     },
     {
       "vendor": "Fortinet",
@@ -126,7 +126,7 @@
       "vendor": "Oracle",
       "product": "E-Business Suite",
       "count": 6,
-      "percent": 14
+      "percent": 13
     }
   ],
   "actors": [
@@ -162,19 +162,43 @@
   "advisories": [
     {
       "authority": "Saudi NCA / CERT",
-      "title": "TP-Link Alert",
-      "url": "https://nca.gov.sa/en/cert/7845/",
-      "date": "2026-08-11",
+      "title": "Lenovo Alert",
+      "url": "https://nca.gov.sa/en/cert/7862/",
+      "date": "2026-08-12",
       "severity": "High",
-      "summary": "Security alert 2026-7722. Review the official notice for affected products and remediation guidance."
+      "summary": "Security alert 2026-7738. Review the official notice for affected products and remediation guidance."
     },
     {
       "authority": "Saudi NCA / CERT",
-      "title": "Google Alert",
-      "url": "https://nca.gov.sa/en/cert/7844/",
+      "title": "Chrome Alert",
+      "url": "https://nca.gov.sa/en/cert/7861/",
+      "date": "2026-08-12",
+      "severity": "High",
+      "summary": "Security alert 2026-7737. Review the official notice for affected products and remediation guidance."
+    },
+    {
+      "title": "Johnson Controls C-CURE 9000 and Victor application server (Update A)",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-204-01",
       "date": "2026-08-11",
-      "severity": "Critical",
-      "summary": "Security alert 2026-7721. Review the official notice for affected products and remediation guidance."
+      "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker with network access to achieve remote code execution. The following versions of Johnson…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
+      "url": "https://www.cisa.gov/news-events/alerts/2026/08/11/cisa-adds-three-known-exploited-vulnerabilities-catalog",
+      "date": "2026-08-11",
+      "summary": "CISA has added three new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-20349 Cisco Secure Firewall…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "authority": "Saudi NCA / CERT",
+      "title": "Lenovo Alert",
+      "url": "https://nca.gov.sa/en/cert/7860/",
+      "date": "2026-08-11",
+      "severity": "High",
+      "summary": "Security alert 2026-7736. Review the official notice for affected products and remediation guidance."
     },
     {
       "title": "#StopRansomware: Gunra Ransomware",
@@ -185,34 +209,10 @@
       "severity": ""
     },
     {
-      "authority": "Saudi NCA / CERT",
-      "title": "Weekly Vulnerabilities Summary 26 July - 1 August",
-      "url": "https://nca.gov.sa/en/cert/7843/",
-      "date": "2026-08-09",
-      "severity": "Critical",
-      "summary": "Security alert 2026-7720. Review the official notice for affected products and remediation guidance."
-    },
-    {
-      "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-      "url": "https://www.cisa.gov/news-events/alerts/2026/08/07/cisa-adds-one-known-exploited-vulnerability-catalog",
-      "date": "2026-08-07",
-      "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-8037 Progress LoadMaster Command…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
       "title": "CPDLC over ATN-B1 Vulnerabilities",
       "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-219-01",
       "date": "2026-08-07",
       "summary": "View CSAF Summary ATN-B1 CPDLC relies on legacy clear text unauthenticated radio frequency links. Research demonstrates that these characteristics allow unauthorized message…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
-      "title": "Johnson Controls Inc. TL280",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-218-02",
-      "date": "2026-08-06",
-      "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to access sensitive information on the device. The following versions of Johnson Controls…",
       "authority": "CISA",
       "severity": ""
     },
@@ -285,9 +285,9 @@
       "count": 55,
       "count_display": "55",
       "count_exact": "55",
-      "added_today": 6,
-      "added_today_display": "6",
-      "added_today_exact": "6",
+      "added_today": 0,
+      "added_today_display": "0",
+      "added_today_exact": "0",
       "path": "/assets/data/daily-file-hashes.txt"
     },
     {
@@ -296,9 +296,9 @@
       "count": 118,
       "count_display": "118",
       "count_exact": "118",
-      "added_today": 17,
-      "added_today_display": "17",
-      "added_today_exact": "17",
+      "added_today": 0,
+      "added_today_display": "0",
+      "added_today_exact": "0",
       "path": "/assets/data/daily-ip-addresses.txt"
     },
     {
@@ -307,9 +307,9 @@
       "count": 23,
       "count_display": "23",
       "count_exact": "23",
-      "added_today": 4,
-      "added_today_display": "4",
-      "added_today_exact": "4",
+      "added_today": 0,
+      "added_today_display": "0",
+      "added_today_exact": "0",
       "path": "/assets/data/daily-domains.txt"
     },
     {
@@ -324,7 +324,7 @@
       "path": "/assets/data/daily-urls.txt"
     }
   ],
-  "ioc_sha256": "1f9dbc206d2e282230b5cdd638d91dd3a4add7f33572ebed8ca83c194e8cfcfc",
+  "ioc_sha256": "1384fc18d5f4c154ab4e477588e63d0eac079865456a231ec947dc4d085ee155",
   "sources": {
     "kev": {
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
