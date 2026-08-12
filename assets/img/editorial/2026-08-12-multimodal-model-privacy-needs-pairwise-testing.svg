@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Pairwise privacy testing for multimodal AI</title>
+  <desc id="desc">Abstract paired image and text tiles pass through layered privacy rings into a guarded multimodal model lattice.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07142d"/>
+      <stop offset="0.55" stop-color="#102958"/>
+      <stop offset="1" stop-color="#081a31"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="52%" cy="48%" r="54%">
+      <stop offset="0" stop-color="#55e6d0" stop-opacity="0.24"/>
+      <stop offset="0.55" stop-color="#548eff" stop-opacity="0.09"/>
+      <stop offset="1" stop-color="#07142d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#7af7dd"/>
+      <stop offset="1" stop-color="#2f96ff"/>
+    </linearGradient>
+    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#c092ff"/>
+      <stop offset="1" stop-color="#5f73ff"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+    <clipPath id="tileA"><rect x="180" y="285" width="260" height="190" rx="28"/></clipPath>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#halo)"/>
+  <circle cx="790" cy="438" r="305" fill="none" stroke="#7debdc" stroke-opacity="0.08" stroke-width="2"/>
+  <circle cx="790" cy="438" r="248" fill="none" stroke="#8ca5ff" stroke-opacity="0.11" stroke-width="2" stroke-dasharray="5 18"/>
+  <path d="M70 690 C360 570 470 735 720 615 S1160 470 1530 575" fill="none" stroke="#58b7ff" stroke-opacity="0.08" stroke-width="70" filter="url(#soft)"/>
+
+  <g opacity="0.24" stroke="#8bb5dc" stroke-width="1">
+    <path d="M0 720L420 530M35 820L520 600M1090 255L1600 70M1150 350L1600 210"/>
+    <path d="M225 110L365 215L530 120M1080 690L1275 770L1470 650"/>
+  </g>
+
+  <g filter="url(#glow)">
+    <ellipse cx="800" cy="450" rx="202" ry="318" fill="#0b1d3b" fill-opacity="0.56" stroke="url(#cyan)" stroke-width="6"/>
+    <ellipse cx="800" cy="450" rx="145" ry="265" fill="none" stroke="#8d9dff" stroke-opacity="0.7" stroke-width="3"/>
+    <ellipse cx="800" cy="450" rx="92" ry="205" fill="#102c52" fill-opacity="0.78" stroke="#74f1d9" stroke-opacity="0.9" stroke-width="2"/>
+  </g>
+
+  <g clip-path="url(#tileA)">
+    <rect x="180" y="285" width="260" height="190" fill="#132e5d"/>
+    <circle cx="250" cy="342" r="31" fill="#88f4d7" opacity="0.9"/>
+    <path d="M160 485L278 374L350 433L402 383L480 475V500H160Z" fill="url(#cyan)" opacity="0.68"/>
+    <path d="M185 457L292 398L343 444L395 415L449 470" fill="none" stroke="#d3fff7" stroke-opacity="0.5" stroke-width="5"/>
+  </g>
+  <rect x="180" y="285" width="260" height="190" rx="28" fill="none" stroke="#70ead7" stroke-width="3"/>
+
+  <g>
+    <rect x="180" y="525" width="260" height="128" rx="28" fill="#111f48" stroke="#8d9cff" stroke-width="3"/>
+    <rect x="222" y="560" width="170" height="10" rx="5" fill="#c5ccff" opacity="0.86"/>
+    <rect x="222" y="585" width="126" height="9" rx="4.5" fill="#7ee8dc" opacity="0.66"/>
+    <rect x="222" y="610" width="150" height="9" rx="4.5" fill="#768ee2" opacity="0.68"/>
+  </g>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M445 380C565 380 588 402 652 420" stroke="#65e8d2" stroke-width="5"/>
+    <path d="M445 585C556 585 588 522 651 491" stroke="#919fff" stroke-width="5"/>
+    <path d="M456 399C545 430 576 445 648 447" stroke="#65e8d2" stroke-opacity="0.26" stroke-width="2" stroke-dasharray="6 13"/>
+    <path d="M455 565C546 541 582 489 648 472" stroke="#a98cff" stroke-opacity="0.3" stroke-width="2" stroke-dasharray="6 13"/>
+  </g>
+
+  <g>
+    <circle cx="800" cy="330" r="15" fill="#79efdc"/>
+    <circle cx="758" cy="395" r="12" fill="#7cbcf8"/>
+    <circle cx="842" cy="395" r="12" fill="#ae91ff"/>
+    <circle cx="800" cy="462" r="19" fill="#d3fff6"/>
+    <circle cx="758" cy="530" r="12" fill="#ae91ff"/>
+    <circle cx="842" cy="530" r="12" fill="#70d9ef"/>
+    <circle cx="800" cy="595" r="15" fill="#8da1ff"/>
+    <g stroke="#a9dce7" stroke-opacity="0.65" stroke-width="3">
+      <path d="M800 330L758 395L800 462L842 395L800 330M758 395L842 395M800 462L758 530L800 595L842 530L800 462M758 530L842 530"/>
+    </g>
+  </g>
+
+  <g>
+    <path d="M948 408C1020 392 1065 368 1142 333" fill="none" stroke="#72ead7" stroke-width="5"/>
+    <path d="M948 489C1025 506 1077 544 1145 580" fill="none" stroke="#929fff" stroke-width="5"/>
+    <rect x="1145" y="250" width="265" height="168" rx="30" fill="#102b53" stroke="#70e5d5" stroke-width="3"/>
+    <path d="M1192 367C1224 316 1260 342 1280 295C1300 342 1340 316 1364 367" fill="none" stroke="url(#cyan)" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="1280" cy="332" r="14" fill="#d5fff5"/>
+    <rect x="1145" y="500" width="265" height="150" rx="30" fill="#121f48" stroke="#938fff" stroke-width="3"/>
+    <path d="M1190 575H1365" stroke="#aeb8ff" stroke-width="10" stroke-linecap="round" opacity="0.85"/>
+    <path d="M1190 607H1318" stroke="#73dfd8" stroke-width="9" stroke-linecap="round" opacity="0.62"/>
+    <circle cx="1380" cy="575" r="10" fill="#80efd9"/>
+  </g>
+
+  <g filter="url(#glow)">
+    <path d="M1016 660C963 690 900 707 800 710C700 707 637 690 584 660" fill="none" stroke="#76ead9" stroke-opacity="0.55" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="800" cy="710" r="9" fill="#c9fff4"/>
+  </g>
+</svg>
