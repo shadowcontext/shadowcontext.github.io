@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-08-13T07:23:25.358+04:00",
+  "digestDate": "2026-08-12",
+  "digestHash": "d65d2ad489302e733083e3f5c87421f728586b93ed9f99466ab3aba546a110d4",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "Daily Defensive Cybersecurity Briefing: Verified Updates and Trust Boundaries",
+  "articleCount": 22,
+  "sourceArticles": [
+    {
+      "title": "Windows AFD Fix Needs Reboot-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/windows-afd-fix-needs-reboot-level-proof/",
+      "publishedAt": "2026-08-12T00:09:34.000+04:00",
+      "category": "defense",
+      "sourceHash": "2845dc7817a1d5e94b4b7a29ce302e20f616cbcfc7bfb1ab589086ef61c43be8"
+    },
+    {
+      "title": "Ubuntu Yelp Fix Reinforces Sandbox Boundaries",
+      "canonicalUrl": "https://shadowcontext.com/yelp-fix-reinforces-sandbox-boundaries/",
+      "publishedAt": "2026-08-12T01:09:07.000+04:00",
+      "category": "defense",
+      "sourceHash": "a4201f6b09360b3b373874373518c195b17186238800fdae11d6e5dad1e7293d"
+    },
+    {
+      "title": "Local AI Model Files Need a Parser Trust Boundary",
+      "canonicalUrl": "https://shadowcontext.com/local-ai-model-files-need-a-parser-boundary/",
+      "publishedAt": "2026-08-12T02:10:46.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "32bf9064dec654f4827627ef24ab840b839aeee64491319a1b7b0c09bc590d25"
+    },
+    {
+      "title": "Zoom Annotation Fixes Need Client-Version Proof",
+      "canonicalUrl": "https://shadowcontext.com/zoom-annotation-fixes-need-client-version-proof/",
+      "publishedAt": "2026-08-12T03:09:56.000+04:00",
+      "category": "defense",
+      "sourceHash": "f120341877a35a3bb446f7c65605cee995280aed5c2889f1912781e4ed7134c5"
+    },
+    {
+      "title": "Proximity Sharing Needs Pre-Authentication Boundaries",
+      "canonicalUrl": "https://shadowcontext.com/proximity-sharing-needs-pre-authentication-boundaries/",
+      "publishedAt": "2026-08-12T04:09:08.000+04:00",
+      "category": "defense",
+      "sourceHash": "195e0742cfe18a7c24cf95890753ef41c2ccb065fd6a4fc46bc26dfe5dd454bd"
+    },
+    {
+      "title": "Multimodal Model Privacy Needs Pairwise Testing",
+      "canonicalUrl": "https://shadowcontext.com/multimodal-model-privacy-needs-pairwise-testing/",
+      "publishedAt": "2026-08-12T05:09:26.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "f9cffe4f702496e43817e66836954e9c84e05f90aaed365ff9162524f2c18c66"
+    },
+    {
+      "title": "Axis OS Fixes Need Device-Level Version Proof",
+      "canonicalUrl": "https://shadowcontext.com/axis-os-fixes-need-device-level-version-proof/",
+      "publishedAt": "2026-08-12T06:10:03.000+04:00",
+      "category": "defense",
+      "sourceHash": "a118825b707674128b311b49e61d620c6070aa2265098eb544e9fb1154fa9931"
+    },
+    {
+      "title": "TPM Updates Need Attestation-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/tpm-updates-need-attestation-level-proof/",
+      "publishedAt": "2026-08-12T07:09:50.000+04:00",
+      "category": "defense",
+      "sourceHash": "d8ff263125c4b4377f1a16172465719520ee89c47b6f4de73698b2ddbaaf9564"
+    },
+    {
+      "title": "Local Research Agents Need Network Privacy Controls",
+      "canonicalUrl": "https://shadowcontext.com/local-research-agents-need-network-privacy-controls/",
+      "publishedAt": "2026-08-12T08:08:25.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "1bf7ad79d856a00cb12722ddce3aefc9e250a2615ac45cb138a5dcbe54f616b5"
+    },
+    {
+      "title": "Security Logs Must Stay Untrusted Inside AI Analysis",
+      "canonicalUrl": "https://shadowcontext.com/security-logs-must-stay-untrusted-in-ai-analysis/",
+      "publishedAt": "2026-08-12T10:10:47.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "4815b58754b707413dce589d849c7dc3e89d8800d2790bc241dc9b2876bec6f2"
+    },
+    {
+      "title": "WebRTC Security Needs Handshake-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/webrtc-security-needs-handshake-level-proof/",
+      "publishedAt": "2026-08-12T11:14:15.000+04:00",
+      "category": "defense",
+      "sourceHash": "a16f0354f37db21b0df26e847e3562c7d4beaac94178d9568a5e3a7858f25724"
+    },
+    {
+      "title": "RHACM Controller Flaw Needs Stronger Tenant Boundaries",
+      "canonicalUrl": "https://shadowcontext.com/rhacm-controller-flaw-needs-tenant-boundaries/",
+      "publishedAt": "2026-08-12T12:10:32.000+04:00",
+      "category": "defense",
+      "sourceHash": "769807ab3b3b81c6d330c9049ae3e0515d816299dbff69f6a51d5b0af0ac060c"
+    },
+    {
+      "title": "UAE AI Research Exposes a Missing Retrieval Trust Boundary",
+      "canonicalUrl": "https://shadowcontext.com/uae-ai-retrieval-needs-a-trust-boundary/",
+      "publishedAt": "2026-08-12T13:09:41.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "b89c3ea8b1ac21cadaa30a29839ddd59c7bbef75d5565848b0a489b9073364d3"
+    },
+    {
+      "title": "Docker Copy Fix Needs Destination-Boundary Proof",
+      "canonicalUrl": "https://shadowcontext.com/docker-copy-fix-needs-destination-boundary-proof/",
+      "publishedAt": "2026-08-12T14:11:20.000+04:00",
+      "category": "defense",
+      "sourceHash": "0e54b6736bcd13efba31cc7f7abcae399f28e9bd4147b814feeb8970ab858303"
+    },
+    {
+      "title": "Snowflake Python API Fix Needs Authorization Boundaries",
+      "canonicalUrl": "https://shadowcontext.com/snowflake-python-api-fix-needs-authorization-boundaries/",
+      "publishedAt": "2026-08-12T15:10:26.000+04:00",
+      "category": "defense",
+      "sourceHash": "5379e049a504742a4bbfd41b639527cabdf55c92adf0a86c5dc51d68d0296e25"
+    },
+    {
+      "title": "MCP Gateways Need Proof of Both User and Agent Identity",
+      "canonicalUrl": "https://shadowcontext.com/mcp-gateways-need-dual-identity-proof/",
+      "publishedAt": "2026-08-12T16:09:43.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "db854556656904278c7d278c7c547ed4339c107eedb187397355089a594f589d"
+    },
+    {
+      "title": "AI Phishing Detectors Need More Than Accuracy",
+      "canonicalUrl": "https://shadowcontext.com/ai-phishing-detectors-need-more-than-accuracy/",
+      "publishedAt": "2026-08-12T17:09:50.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "0acda4fa538e16f37efcf14483f22902d695a3aa06405f672fb2bf2e3ee9b5dc"
+    },
+    {
+      "title": "Exploited Cisco VPN DoS Demands Availability Proof",
+      "canonicalUrl": "https://shadowcontext.com/cisco-vpn-dos-needs-availability-proof/",
+      "publishedAt": "2026-08-12T18:09:27.000+04:00",
+      "category": "defense",
+      "sourceHash": "78301503cd53782d6efc20b69f24c84df4779a2f2455b0a45cb9f0be9064f52d"
+    },
+    {
+      "title": "WooCommerce Subscriptions Fix Needs HPOS-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/woocommerce-subscriptions-fix-needs-hpos-proof/",
+      "publishedAt": "2026-08-12T19:10:35.000+04:00",
+      "category": "defense",
+      "sourceHash": "37f8c6ae039d5bee1b11099a0d24bc11fb0be9ec188479176af3465103fa2fa8"
+    },
+    {
+      "title": "SeaweedFS Fix Needs gRPC Authentication Proof",
+      "canonicalUrl": "https://shadowcontext.com/seaweedfs-fix-needs-grpc-authentication-proof/",
+      "publishedAt": "2026-08-12T21:10:31.000+04:00",
+      "category": "defense",
+      "sourceHash": "0f85fd2eac05fc1ad7f0a32460dd87d01bf81c3f6012207826f16b57cddb38cc"
+    },
+    {
+      "title": "Content Credentials Need a Hardened Verification Path",
+      "canonicalUrl": "https://shadowcontext.com/content-credentials-need-a-hardened-verification-path/",
+      "publishedAt": "2026-08-12T22:10:32.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "2afcc42138daa6a4de4b5a2bcf09a24c7746e1b5977962dd066988420b572af2"
+    },
+    {
+      "title": "Passkey Recovery Needs a Complete Credential Review",
+      "canonicalUrl": "https://shadowcontext.com/passkey-recovery-needs-complete-credential-review/",
+      "publishedAt": "2026-08-12T23:12:44.000+04:00",
+      "category": "defense",
+      "sourceHash": "5c458195d37efad20a4b1bad2c5e44c3fe358c2f4f1e6a6e19b9ea71da662eb0"
+    }
+  ],
+  "caption": "Review today's independent ShadowContext defensive brief to protect your infrastructure with verified updates and trust boundaries.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-08-12/d65d2ad489302e73/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-12/d65d2ad489302e73/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-08-12/d65d2ad489302e73/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-12/d65d2ad489302e73/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}

@@ -1,0 +1,888 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Daily Defensive Cybersecurity Briefing: Verified Updates and Trust Boundaries | ShadowContext</title>
+    <style>
+      :root {
+        --paper: #05080d;
+        --panel: #0d1319;
+        --panel-soft: #091017;
+        --ink: #f1f7fa;
+        --ink-2: #c4d1d8;
+        --muted: #8496a1;
+        --line: #1d2b34;
+        --cyan: #35e6d1;
+        --violet: #8b7dff;
+        --sans: "Space Grotesk", Inter, Arial, sans-serif;
+        --mono: "DM Mono", Consolas, monospace;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: var(--sans);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        font-size: 10.5pt;
+        line-height: 1.55;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        position: relative;
+        width: 210mm;
+        min-height: 297mm;
+        padding: 18mm;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 83% 18%, rgba(139, 125, 255, 0.1), transparent 28%),
+          linear-gradient(145deg, #05080d 0%, #081017 62%, #0c101c 100%);
+      }
+
+      .page::before {
+        content: "";
+        position: absolute;
+        inset: 8mm;
+        pointer-events: none;
+        border: 0.25mm solid var(--line);
+      }
+
+      .cover {
+        display: flex;
+        flex-direction: column;
+        page-break-after: always;
+      }
+
+      .brand-row,
+      .section-head,
+      .document-footer {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 4mm;
+        font-size: 20pt;
+        font-weight: 750;
+        letter-spacing: -0.04em;
+      }
+
+      .brand em {
+        color: var(--cyan);
+        font-style: normal;
+      }
+
+      .brand-mark {
+        position: relative;
+        display: block;
+        width: 12mm;
+        height: 12mm;
+        transform: rotate(30deg);
+        border: 1mm solid var(--cyan);
+        border-radius: 1.2mm;
+      }
+
+      .brand-mark::before {
+        content: "";
+        position: absolute;
+        inset: 2.2mm;
+        border: 0.8mm solid var(--violet);
+        border-radius: 0.9mm;
+      }
+
+      .brand-mark::after {
+        content: "";
+        position: absolute;
+        inset: 4.5mm;
+        background: var(--cyan);
+        border-radius: 0.5mm;
+      }
+
+      .edition,
+      .eyebrow,
+      .topic,
+      .section-count,
+      .why span,
+      .document-footer,
+      .source-link {
+        font-family: var(--mono);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .edition,
+      .section-count,
+      .document-footer {
+        color: var(--muted);
+        font-size: 8pt;
+      }
+
+      .cover-copy {
+        position: relative;
+        z-index: 1;
+        margin: 30mm 0 0;
+      }
+
+      .eyebrow {
+        margin: 0 0 7mm;
+        color: var(--cyan);
+        font-size: 10pt;
+      }
+
+      h1 {
+        max-width: 165mm;
+        margin: 0;
+        font-size: 37pt;
+        line-height: 1.03;
+        letter-spacing: -0.05em;
+      }
+
+      .dek {
+        max-width: 155mm;
+        margin: 10mm 0 0;
+        color: var(--ink-2);
+        font-size: 16pt;
+        line-height: 1.45;
+      }
+
+      .context {
+        position: relative;
+        z-index: 1;
+        margin-top: auto;
+        padding: 9mm;
+        background: rgba(13, 19, 25, 0.94);
+        border: 0.3mm solid var(--line);
+        border-left: 1mm solid var(--violet);
+      }
+
+      .context h2,
+      .section-head h2,
+      .operating-view h2,
+      .sources h2 {
+        margin: 0;
+      }
+
+      .context h2 {
+        color: var(--violet);
+        font-family: var(--mono);
+        font-size: 9pt;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .context p {
+        margin: 4mm 0 0;
+        color: var(--ink-2);
+        font-size: 13pt;
+      }
+
+      .cover-meta {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 9mm;
+        color: var(--muted);
+        font: 8pt var(--mono);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .content {
+        padding-top: 15mm;
+        padding-bottom: 18mm;
+      }
+
+      .section-head {
+        margin-bottom: 9mm;
+        padding-bottom: 5mm;
+        border-bottom: 0.3mm solid var(--line);
+      }
+
+      .section-head h2 {
+        font-size: 23pt;
+      }
+
+      .stories {
+        position: relative;
+        z-index: 1;
+      }
+
+      .story {
+        display: grid;
+        grid-template-columns: 15mm 1fr;
+        gap: 5mm;
+        margin: 0 0 6mm;
+        padding: 7mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: rgba(13, 19, 25, 0.96);
+        border: 0.3mm solid var(--line);
+      }
+
+      .story-index {
+        color: var(--cyan);
+        font: 12pt var(--mono);
+      }
+
+      .topic {
+        margin: 0 0 2mm;
+        color: var(--cyan);
+        font-size: 7.5pt;
+      }
+
+      .story h3 {
+        margin: 0;
+        font-size: 16pt;
+        line-height: 1.18;
+        letter-spacing: -0.025em;
+      }
+
+      .summary {
+        margin: 3mm 0;
+        color: var(--ink-2);
+        font-size: 10.5pt;
+      }
+
+      .why {
+        padding-top: 3mm;
+        border-top: 0.25mm solid var(--line);
+      }
+
+      .why span {
+        color: var(--violet);
+        font-size: 7pt;
+      }
+
+      .why p {
+        display: inline;
+        margin: 0 0 0 2mm;
+        font-weight: 650;
+      }
+
+      .source-link {
+        display: inline-block;
+        margin-top: 4mm;
+        color: var(--cyan);
+        font-size: 6.8pt;
+        letter-spacing: 0.04em;
+        text-transform: none;
+      }
+
+      .operating-view,
+      .sources {
+        position: relative;
+        z-index: 1;
+        margin-top: 12mm;
+        padding: 9mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: var(--panel-soft);
+        border: 0.3mm solid var(--line);
+      }
+
+      .operating-view {
+        border-top: 1mm solid var(--cyan);
+      }
+
+      .operating-view h2,
+      .sources h2 {
+        font-size: 18pt;
+      }
+
+      .operating-view > p {
+        color: var(--ink-2);
+        font-size: 12pt;
+      }
+
+      .watch-list,
+      .source-list {
+        margin: 6mm 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .watch-list li {
+        display: grid;
+        grid-template-columns: 9mm 1fr;
+        gap: 4mm;
+        align-items: start;
+        margin: 3mm 0;
+      }
+
+      .watch-list span {
+        display: grid;
+        width: 8mm;
+        height: 8mm;
+        place-items: center;
+        color: var(--cyan);
+        border: 0.3mm solid var(--cyan);
+        font: 8pt var(--mono);
+      }
+
+      .watch-list p {
+        margin: 0;
+      }
+
+      .source-list li {
+        display: grid;
+        grid-template-columns: 10mm 1fr;
+        gap: 3mm;
+        margin: 2.5mm 0;
+        color: var(--ink-2);
+        font-size: 8.5pt;
+      }
+
+      .source-list span {
+        color: var(--violet);
+        font-family: var(--mono);
+      }
+
+      .source-list a {
+        color: var(--cyan);
+        text-decoration: underline;
+        text-decoration-color: rgba(53, 230, 209, 0.35);
+        text-underline-offset: 1mm;
+      }
+
+      .cta {
+        position: relative;
+        z-index: 1;
+        margin: 12mm 0 0;
+        padding: 7mm 9mm;
+        break-inside: avoid;
+        color: #04100f;
+        background: var(--cyan);
+      }
+
+      .cta strong {
+        display: block;
+        font-size: 14pt;
+      }
+
+      .cta span {
+        font: 9pt var(--mono);
+      }
+
+      .document-footer {
+        margin-top: 12mm;
+        padding-top: 5mm;
+        border-top: 0.3mm solid var(--line);
+      }
+
+      @media screen {
+        body {
+          width: 210mm;
+          margin: 0 auto;
+        }
+
+        .page {
+          box-shadow: 0 0 20mm rgba(0, 0, 0, 0.45);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="page cover">
+      <header class="brand-row">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Shadow<em>Context</em></span>
+        </div>
+        <span class="edition">Daily security digest</span>
+      </header>
+
+      <main class="cover-copy">
+        <p class="eyebrow">The day in context / 2026-08-12</p>
+        <h1>Daily Defensive Cybersecurity Briefing: Verified Updates and Trust Boundaries</h1>
+        <p class="dek">ShadowContext security digest covering confirmed vulnerabilities, SDK patches, AI trust boundaries, and verification-led defensive controls.</p>
+      </main>
+
+      <aside class="context">
+        <h2>Executive summary</h2>
+        <p>Today&#39;s releases highlight that delivery is not protection. Across Windows, Ubuntu, Zoom, Proximity sharing, Axis, TPM, Docker, Snowflake, and Cisco, deployment requires exact post-update version proof.</p>
+      </aside>
+
+      <div class="cover-meta">
+        <span>22 briefings included</span>
+        <span>https://shadowcontext.com/</span>
+      </div>
+    </section>
+
+    <section class="page content">
+      <header class="section-head">
+        <h2>All news from the day</h2>
+        <span class="section-count">22 / 2026-08-12</span>
+      </header>
+
+      <main class="stories">
+    <article class="story">
+      <div class="story-index">01</div>
+      <div class="story-copy">
+        <p class="topic">Windows Security</p>
+        <h3>Windows AFD Fix Needs Reboot-Level Proof</h3>
+        <p class="summary">Microsoft fixes CVE-2026-68820, an exploited AFD elevation-of-privilege flaw, requiring verified post-restart build state on supported endpoints.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>When exploitation is confirmed, deployment is activity; verified running-system state is the actual security outcome.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/windows-afd-fix-needs-reboot-level-proof/">Windows AFD Fix Needs Reboot-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">02</div>
+      <div class="story-copy">
+        <p class="topic">Linux Security</p>
+        <h3>Ubuntu Yelp Fix Reinforces Sandbox Boundaries</h3>
+        <p class="summary">Ubuntu fixes CVE-2026-13601 in Yelp, addressing boundary weaknesses where helper applications process crafted help content from sandboxed apps.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Desktop sandboxes rely on trusted host handlers; helper applications require the same security review.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/yelp-fix-reinforces-sandbox-boundaries/">Ubuntu Yelp Fix Reinforces Sandbox Boundaries ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">03</div>
+      <div class="story-copy">
+        <p class="topic">AI Security</p>
+        <h3>Local AI Model Files Need a Parser Trust Boundary</h3>
+        <p class="summary">USENIX research defines LIMA vulnerabilities where untrusted local model files exploit loading parsers before inference begins.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Model-loading parsers are exposed input boundaries requiring isolated staging and strict validation controls.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/local-ai-model-files-need-a-parser-boundary/">Local AI Model Files Need a Parser Trust Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">04</div>
+      <div class="story-copy">
+        <p class="topic">Application Security</p>
+        <h3>Zoom Annotation Fixes Need Client-Version Proof</h3>
+        <p class="summary">Zoom patches three annotation flaws, including remote code execution risks, across Workplace, VDI, Rooms, and Meeting SDK.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Collaboration sessions process untrusted structured input, making product-specific client version proof essential.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/zoom-annotation-fixes-need-client-version-proof/">Zoom Annotation Fixes Need Client-Version Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">05</div>
+      <div class="story-copy">
+        <p class="topic">Mobile Security</p>
+        <h3>Proximity Sharing Needs Pre-Authentication Boundaries</h3>
+        <p class="summary">Research identifies six AirDrop and Quick Share findings where protocol stacks process wireless input before user consent.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Proximity changes reach, not trust; unauthenticated inputs must not reach privileged message handlers early.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/proximity-sharing-needs-pre-authentication-boundaries/">Proximity Sharing Needs Pre-Authentication Boundaries ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">06</div>
+      <div class="story-copy">
+        <p class="topic">AI Privacy</p>
+        <h3>Multimodal Model Privacy Needs Pairwise Testing</h3>
+        <p class="summary">WOOT research shows membership-inference attack risks in vision-language models depend heavily on exact architectures and datasets.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Multimodal privacy cannot be assumed from benchmarks and must be tested per model-data-task combination.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/multimodal-model-privacy-needs-pairwise-testing/">Multimodal Model Privacy Needs Pairwise Testing ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">07</div>
+      <div class="story-copy">
+        <p class="topic">Edge Security</p>
+        <h3>Axis OS Fixes Need Device-Level Version Proof</h3>
+        <p class="summary">Axis addresses five firmware CVEs, requiring exact device inventory and post-update verification across network edge assets.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Console completion metrics are insufficient; defenders must verify the post-update build on every edge device.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/axis-os-fixes-need-device-level-version-proof/">Axis OS Fixes Need Device-Level Version Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">08</div>
+      <div class="story-copy">
+        <p class="topic">Hardware Security</p>
+        <h3>TPM Updates Need Attestation-Level Proof</h3>
+        <p class="summary">CERT/CC discloses two TPM 2.0 reference code flaws, requiring platform-specific firmware mapping and attestation verification.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>When attestation components are affected, verifiers must prove which hardware and firmware are active.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/tpm-updates-need-attestation-level-proof/">TPM Updates Need Attestation-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">09</div>
+      <div class="story-copy">
+        <p class="topic">AI Privacy</p>
+        <h3>Local Research Agents Need Network Privacy Controls</h3>
+        <p class="summary">USENIX research reveals that network traffic metadata from local research agents can leak prompt and user-trait details.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Local model inference does not guarantee network privacy; complete research paths require metadata monitoring.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/local-research-agents-need-network-privacy-controls/">Local Research Agents Need Network Privacy Controls ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">10</div>
+      <div class="story-copy">
+        <p class="topic">AI Security</p>
+        <h3>Security Logs Must Stay Untrusted Inside AI Analysis</h3>
+        <p class="summary">USENIX research demonstrates passive prompt injection through stored log fields in LLM-assisted SOC workflows.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Security logs are evidence, not instructions; LLMs require strict input schemas and output validation.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/security-logs-must-stay-untrusted-in-ai-analysis/">Security Logs Must Stay Untrusted Inside AI Analysis ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">11</div>
+      <div class="story-copy">
+        <p class="topic">Network Security</p>
+        <h3>WebRTC Security Needs Handshake-Level Proof</h3>
+        <p class="summary">USENIX research uncovers WebRTC authentication bypasses in server implementations failing to verify certificate possession.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Encrypted media requires end-to-end handshake validation to prove signaling identity matches the session.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/webrtc-security-needs-handshake-level-proof/">WebRTC Security Needs Handshake-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">12</div>
+      <div class="story-copy">
+        <p class="topic">Kubernetes Security</p>
+        <h3>RHACM Controller Flaw Needs Stronger Tenant Boundaries</h3>
+        <p class="summary">Red Hat rates CVE-2026-70398 Critical, where a tenant can manipulate the GitOpsCluster controller to expose sensitive tokens.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Controllers act with elevated authority; tenancy boundaries must prevent users from redirecting reconcilers.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/rhacm-controller-flaw-needs-tenant-boundaries/">RHACM Controller Flaw Needs Stronger Tenant Boundaries ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">13</div>
+      <div class="story-copy">
+        <p class="topic">AI Security</p>
+        <h3>UAE AI Research Exposes a Missing Retrieval Trust Boundary</h3>
+        <p class="summary">MBZUAI research shows indirect prompt injections can survive retrieval steps in RAG and agentic AI systems.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Relevance is not authorization; retrieved content must remain untrusted from search through downstream action.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/uae-ai-retrieval-needs-a-trust-boundary/">UAE AI Research Exposes a Missing Retrieval Trust Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">14</div>
+      <div class="story-copy">
+        <p class="topic">Container Security</p>
+        <h3>Docker Copy Fix Needs Destination-Boundary Proof</h3>
+        <p class="summary">Docker Desktop 4.86.0 fixes CVE-2026-17106, a destination-escape flaw affecting container copy operations.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Container file movement crosses isolation domains and requires version-level proof across all instances.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/docker-copy-fix-needs-destination-boundary-proof/">Docker Copy Fix Needs Destination-Boundary Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">15</div>
+      <div class="story-copy">
+        <p class="topic">Cloud Security</p>
+        <h3>Snowflake Python API Fix Needs Authorization Boundaries</h3>
+        <p class="summary">Snowflake addresses input validation flaws in snowflake.core before 1.13.0 to prevent confused-deputy escalation.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>SDK upgrades fix request construction, but applications must independently enforce least-privilege resource authorization.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/snowflake-python-api-fix-needs-authorization-boundaries/">Snowflake Python API Fix Needs Authorization Boundaries ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">16</div>
+      <div class="story-copy">
+        <p class="topic">AI Governance</p>
+        <h3>MCP Gateways Need Proof of Both User and Agent Identity</h3>
+        <p class="summary">New Model Context Protocol research emphasizes separating user, agent, and service-account identities at gateways.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Centralized gateways must preserve dual-identity traceability to prevent automated tools from exceeding user permissions.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/mcp-gateways-need-dual-identity-proof/">MCP Gateways Need Proof of Both User and Agent Identity ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">17</div>
+      <div class="story-copy">
+        <p class="topic">Threat Detection</p>
+        <h3>AI Phishing Detectors Need More Than Accuracy</h3>
+        <p class="summary">USENIX evaluation framework PHILTER finds reviewed AI phishing detectors lack complete functionality and security coverage.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Accuracy alone is insufficient; defenders must test detectors against false positives, drift, and privacy risks.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ai-phishing-detectors-need-more-than-accuracy/">AI Phishing Detectors Need More Than Accuracy ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">18</div>
+      <div class="story-copy">
+        <p class="topic">Network Security</p>
+        <h3>Exploited Cisco VPN DoS Demands Availability Proof</h3>
+        <p class="summary">Cisco patches an exploited DoS flaw in ASA and FTD SSL VPN services, requiring fixed code and failover proof.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Perimeter availability requires verification; exposed remote access nodes must be updated immediately.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/cisco-vpn-dos-needs-availability-proof/">Exploited Cisco VPN DoS Demands Availability Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">19</div>
+      <div class="story-copy">
+        <p class="topic">Web Security</p>
+        <h3>WooCommerce Subscriptions Fix Needs HPOS-Level Proof</h3>
+        <p class="summary">CVE-2026-18391 reveals an unauthenticated object-injection vulnerability when HPOS is enabled in WooCommerce Subscriptions.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Plugin updates require configuration-aware inventory tracking across all production and staging storefronts.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/woocommerce-subscriptions-fix-needs-hpos-proof/">WooCommerce Subscriptions Fix Needs HPOS-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">20</div>
+      <div class="story-copy">
+        <p class="topic">Storage Security</p>
+        <h3>SeaweedFS Fix Needs gRPC Authentication Proof</h3>
+        <p class="summary">SeaweedFS versions before 4.24 register unauthenticated gRPC identity services when filer signing keys are unset.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Storage control planes require fail-closed authentication to prevent internal RPC exposure.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/seaweedfs-fix-needs-grpc-authentication-proof/">SeaweedFS Fix Needs gRPC Authentication Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">21</div>
+      <div class="story-copy">
+        <p class="topic">Media Security</p>
+        <h3>Content Credentials Need a Hardened Verification Path</h3>
+        <p class="summary">Adobe patches 15 vulnerabilities across Content Credentials SDKs, including critical denial-of-service and path-traversal flaws.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Provenance verification code processes hostile input and requires patched, isolated runtime dependencies.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/content-credentials-need-a-hardened-verification-path/">Content Credentials Need a Hardened Verification Path ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">22</div>
+      <div class="story-copy">
+        <p class="topic">Identity Security</p>
+        <h3>Passkey Recovery Needs a Complete Credential Review</h3>
+        <p class="summary">USENIX research demonstrates passkey recovery gaps where unrevoked credentials preserve adversary access after password resets.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Account recovery must reconcile credentials, sessions, and recovery channels rather than finishing prematurely.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/passkey-recovery-needs-complete-credential-review/">Passkey Recovery Needs a Complete Credential Review ↗</a>
+      </div>
+    </article></main>
+
+      <section class="operating-view">
+        <p class="eyebrow">The operating view</p>
+        <h2>What the day means for defenders</h2>
+        <p>Defenders must treat delivery as an intermediate step. True security outcomes require verifying post-update versions, enforcing strict trust boundaries across parsers and AI pipelines, and confirming operational state across every managed asset.</p>
+        <ol class="watch-list"><li><span>1</span><p>Verify exact post-update versions and runtime building states across all patched endpoints and edge assets.</p></li>
+<li><span>2</span><p>Enforce strict input boundaries and dual-identity tracing for all AI retrieval and agentic workflows.</p></li>
+<li><span>3</span><p>Reconcile comprehensive credentials, active sessions, and recovery channels during all account recovery workflows.</p></li></ol>
+      </section>
+
+      <section class="sources">
+        <p class="eyebrow">Source index</p>
+        <h2>Every briefing in this digest</h2>
+        <ol class="source-list">
+    <li>
+      <span>01</span>
+      <a href="https://shadowcontext.com/windows-afd-fix-needs-reboot-level-proof/">Windows AFD Fix Needs Reboot-Level Proof</a>
+    </li>
+
+    <li>
+      <span>02</span>
+      <a href="https://shadowcontext.com/yelp-fix-reinforces-sandbox-boundaries/">Ubuntu Yelp Fix Reinforces Sandbox Boundaries</a>
+    </li>
+
+    <li>
+      <span>03</span>
+      <a href="https://shadowcontext.com/local-ai-model-files-need-a-parser-boundary/">Local AI Model Files Need a Parser Trust Boundary</a>
+    </li>
+
+    <li>
+      <span>04</span>
+      <a href="https://shadowcontext.com/zoom-annotation-fixes-need-client-version-proof/">Zoom Annotation Fixes Need Client-Version Proof</a>
+    </li>
+
+    <li>
+      <span>05</span>
+      <a href="https://shadowcontext.com/proximity-sharing-needs-pre-authentication-boundaries/">Proximity Sharing Needs Pre-Authentication Boundaries</a>
+    </li>
+
+    <li>
+      <span>06</span>
+      <a href="https://shadowcontext.com/multimodal-model-privacy-needs-pairwise-testing/">Multimodal Model Privacy Needs Pairwise Testing</a>
+    </li>
+
+    <li>
+      <span>07</span>
+      <a href="https://shadowcontext.com/axis-os-fixes-need-device-level-version-proof/">Axis OS Fixes Need Device-Level Version Proof</a>
+    </li>
+
+    <li>
+      <span>08</span>
+      <a href="https://shadowcontext.com/tpm-updates-need-attestation-level-proof/">TPM Updates Need Attestation-Level Proof</a>
+    </li>
+
+    <li>
+      <span>09</span>
+      <a href="https://shadowcontext.com/local-research-agents-need-network-privacy-controls/">Local Research Agents Need Network Privacy Controls</a>
+    </li>
+
+    <li>
+      <span>10</span>
+      <a href="https://shadowcontext.com/security-logs-must-stay-untrusted-in-ai-analysis/">Security Logs Must Stay Untrusted Inside AI Analysis</a>
+    </li>
+
+    <li>
+      <span>11</span>
+      <a href="https://shadowcontext.com/webrtc-security-needs-handshake-level-proof/">WebRTC Security Needs Handshake-Level Proof</a>
+    </li>
+
+    <li>
+      <span>12</span>
+      <a href="https://shadowcontext.com/rhacm-controller-flaw-needs-tenant-boundaries/">RHACM Controller Flaw Needs Stronger Tenant Boundaries</a>
+    </li>
+
+    <li>
+      <span>13</span>
+      <a href="https://shadowcontext.com/uae-ai-retrieval-needs-a-trust-boundary/">UAE AI Research Exposes a Missing Retrieval Trust Boundary</a>
+    </li>
+
+    <li>
+      <span>14</span>
+      <a href="https://shadowcontext.com/docker-copy-fix-needs-destination-boundary-proof/">Docker Copy Fix Needs Destination-Boundary Proof</a>
+    </li>
+
+    <li>
+      <span>15</span>
+      <a href="https://shadowcontext.com/snowflake-python-api-fix-needs-authorization-boundaries/">Snowflake Python API Fix Needs Authorization Boundaries</a>
+    </li>
+
+    <li>
+      <span>16</span>
+      <a href="https://shadowcontext.com/mcp-gateways-need-dual-identity-proof/">MCP Gateways Need Proof of Both User and Agent Identity</a>
+    </li>
+
+    <li>
+      <span>17</span>
+      <a href="https://shadowcontext.com/ai-phishing-detectors-need-more-than-accuracy/">AI Phishing Detectors Need More Than Accuracy</a>
+    </li>
+
+    <li>
+      <span>18</span>
+      <a href="https://shadowcontext.com/cisco-vpn-dos-needs-availability-proof/">Exploited Cisco VPN DoS Demands Availability Proof</a>
+    </li>
+
+    <li>
+      <span>19</span>
+      <a href="https://shadowcontext.com/woocommerce-subscriptions-fix-needs-hpos-proof/">WooCommerce Subscriptions Fix Needs HPOS-Level Proof</a>
+    </li>
+
+    <li>
+      <span>20</span>
+      <a href="https://shadowcontext.com/seaweedfs-fix-needs-grpc-authentication-proof/">SeaweedFS Fix Needs gRPC Authentication Proof</a>
+    </li>
+
+    <li>
+      <span>21</span>
+      <a href="https://shadowcontext.com/content-credentials-need-a-hardened-verification-path/">Content Credentials Need a Hardened Verification Path</a>
+    </li>
+
+    <li>
+      <span>22</span>
+      <a href="https://shadowcontext.com/passkey-recovery-needs-complete-credential-review/">Passkey Recovery Needs a Complete Credential Review</a>
+    </li></ol>
+      </section>
+
+      <div class="cta">
+        <strong>Read the full analysis</strong>
+        <span>https://shadowcontext.com/</span>
+      </div>
+
+      <footer class="document-footer">
+        <span>ShadowContext</span>
+        <span>Independent defensive security intelligence</span>
+      </footer>
+    </section>
+  </body>
+</html>

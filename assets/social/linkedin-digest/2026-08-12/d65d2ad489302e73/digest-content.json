@@ -1,0 +1,168 @@
+{
+  "digest_title": "Daily Defensive Cybersecurity Briefing: Verified Updates and Trust Boundaries",
+  "dek": "ShadowContext security digest covering confirmed vulnerabilities, SDK patches, AI trust boundaries, and verification-led defensive controls.",
+  "overview": "Today's releases highlight that delivery is not protection. Across Windows, Ubuntu, Zoom, Proximity sharing, Axis, TPM, Docker, Snowflake, and Cisco, deployment requires exact post-update version proof.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "Windows AFD Fix Needs Reboot-Level Proof",
+      "summary": "Microsoft fixes CVE-2026-68820, an exploited AFD elevation-of-privilege flaw, requiring verified post-restart build state on supported endpoints.",
+      "why_it_matters": "When exploitation is confirmed, deployment is activity; verified running-system state is the actual security outcome.",
+      "topic": "Windows Security"
+    },
+    {
+      "source_id": "S02",
+      "headline": "Ubuntu Yelp Fix Reinforces Sandbox Boundaries",
+      "summary": "Ubuntu fixes CVE-2026-13601 in Yelp, addressing boundary weaknesses where helper applications process crafted help content from sandboxed apps.",
+      "why_it_matters": "Desktop sandboxes rely on trusted host handlers; helper applications require the same security review.",
+      "topic": "Linux Security"
+    },
+    {
+      "source_id": "S03",
+      "headline": "Local AI Model Files Need a Parser Trust Boundary",
+      "summary": "USENIX research defines LIMA vulnerabilities where untrusted local model files exploit loading parsers before inference begins.",
+      "why_it_matters": "Model-loading parsers are exposed input boundaries requiring isolated staging and strict validation controls.",
+      "topic": "AI Security"
+    },
+    {
+      "source_id": "S04",
+      "headline": "Zoom Annotation Fixes Need Client-Version Proof",
+      "summary": "Zoom patches three annotation flaws, including remote code execution risks, across Workplace, VDI, Rooms, and Meeting SDK.",
+      "why_it_matters": "Collaboration sessions process untrusted structured input, making product-specific client version proof essential.",
+      "topic": "Application Security"
+    },
+    {
+      "source_id": "S05",
+      "headline": "Proximity Sharing Needs Pre-Authentication Boundaries",
+      "summary": "Research identifies six AirDrop and Quick Share findings where protocol stacks process wireless input before user consent.",
+      "why_it_matters": "Proximity changes reach, not trust; unauthenticated inputs must not reach privileged message handlers early.",
+      "topic": "Mobile Security"
+    },
+    {
+      "source_id": "S06",
+      "headline": "Multimodal Model Privacy Needs Pairwise Testing",
+      "summary": "WOOT research shows membership-inference attack risks in vision-language models depend heavily on exact architectures and datasets.",
+      "why_it_matters": "Multimodal privacy cannot be assumed from benchmarks and must be tested per model-data-task combination.",
+      "topic": "AI Privacy"
+    },
+    {
+      "source_id": "S07",
+      "headline": "Axis OS Fixes Need Device-Level Version Proof",
+      "summary": "Axis addresses five firmware CVEs, requiring exact device inventory and post-update verification across network edge assets.",
+      "why_it_matters": "Console completion metrics are insufficient; defenders must verify the post-update build on every edge device.",
+      "topic": "Edge Security"
+    },
+    {
+      "source_id": "S08",
+      "headline": "TPM Updates Need Attestation-Level Proof",
+      "summary": "CERT/CC discloses two TPM 2.0 reference code flaws, requiring platform-specific firmware mapping and attestation verification.",
+      "why_it_matters": "When attestation components are affected, verifiers must prove which hardware and firmware are active.",
+      "topic": "Hardware Security"
+    },
+    {
+      "source_id": "S09",
+      "headline": "Local Research Agents Need Network Privacy Controls",
+      "summary": "USENIX research reveals that network traffic metadata from local research agents can leak prompt and user-trait details.",
+      "why_it_matters": "Local model inference does not guarantee network privacy; complete research paths require metadata monitoring.",
+      "topic": "AI Privacy"
+    },
+    {
+      "source_id": "S10",
+      "headline": "Security Logs Must Stay Untrusted Inside AI Analysis",
+      "summary": "USENIX research demonstrates passive prompt injection through stored log fields in LLM-assisted SOC workflows.",
+      "why_it_matters": "Security logs are evidence, not instructions; LLMs require strict input schemas and output validation.",
+      "topic": "AI Security"
+    },
+    {
+      "source_id": "S11",
+      "headline": "WebRTC Security Needs Handshake-Level Proof",
+      "summary": "USENIX research uncovers WebRTC authentication bypasses in server implementations failing to verify certificate possession.",
+      "why_it_matters": "Encrypted media requires end-to-end handshake validation to prove signaling identity matches the session.",
+      "topic": "Network Security"
+    },
+    {
+      "source_id": "S12",
+      "headline": "RHACM Controller Flaw Needs Stronger Tenant Boundaries",
+      "summary": "Red Hat rates CVE-2026-70398 Critical, where a tenant can manipulate the GitOpsCluster controller to expose sensitive tokens.",
+      "why_it_matters": "Controllers act with elevated authority; tenancy boundaries must prevent users from redirecting reconcilers.",
+      "topic": "Kubernetes Security"
+    },
+    {
+      "source_id": "S13",
+      "headline": "UAE AI Research Exposes a Missing Retrieval Trust Boundary",
+      "summary": "MBZUAI research shows indirect prompt injections can survive retrieval steps in RAG and agentic AI systems.",
+      "why_it_matters": "Relevance is not authorization; retrieved content must remain untrusted from search through downstream action.",
+      "topic": "AI Security"
+    },
+    {
+      "source_id": "S14",
+      "headline": "Docker Copy Fix Needs Destination-Boundary Proof",
+      "summary": "Docker Desktop 4.86.0 fixes CVE-2026-17106, a destination-escape flaw affecting container copy operations.",
+      "why_it_matters": "Container file movement crosses isolation domains and requires version-level proof across all instances.",
+      "topic": "Container Security"
+    },
+    {
+      "source_id": "S15",
+      "headline": "Snowflake Python API Fix Needs Authorization Boundaries",
+      "summary": "Snowflake addresses input validation flaws in snowflake.core before 1.13.0 to prevent confused-deputy escalation.",
+      "why_it_matters": "SDK upgrades fix request construction, but applications must independently enforce least-privilege resource authorization.",
+      "topic": "Cloud Security"
+    },
+    {
+      "source_id": "S16",
+      "headline": "MCP Gateways Need Proof of Both User and Agent Identity",
+      "summary": "New Model Context Protocol research emphasizes separating user, agent, and service-account identities at gateways.",
+      "why_it_matters": "Centralized gateways must preserve dual-identity traceability to prevent automated tools from exceeding user permissions.",
+      "topic": "AI Governance"
+    },
+    {
+      "source_id": "S17",
+      "headline": "AI Phishing Detectors Need More Than Accuracy",
+      "summary": "USENIX evaluation framework PHILTER finds reviewed AI phishing detectors lack complete functionality and security coverage.",
+      "why_it_matters": "Accuracy alone is insufficient; defenders must test detectors against false positives, drift, and privacy risks.",
+      "topic": "Threat Detection"
+    },
+    {
+      "source_id": "S18",
+      "headline": "Exploited Cisco VPN DoS Demands Availability Proof",
+      "summary": "Cisco patches an exploited DoS flaw in ASA and FTD SSL VPN services, requiring fixed code and failover proof.",
+      "why_it_matters": "Perimeter availability requires verification; exposed remote access nodes must be updated immediately.",
+      "topic": "Network Security"
+    },
+    {
+      "source_id": "S19",
+      "headline": "WooCommerce Subscriptions Fix Needs HPOS-Level Proof",
+      "summary": "CVE-2026-18391 reveals an unauthenticated object-injection vulnerability when HPOS is enabled in WooCommerce Subscriptions.",
+      "why_it_matters": "Plugin updates require configuration-aware inventory tracking across all production and staging storefronts.",
+      "topic": "Web Security"
+    },
+    {
+      "source_id": "S20",
+      "headline": "SeaweedFS Fix Needs gRPC Authentication Proof",
+      "summary": "SeaweedFS versions before 4.24 register unauthenticated gRPC identity services when filer signing keys are unset.",
+      "why_it_matters": "Storage control planes require fail-closed authentication to prevent internal RPC exposure.",
+      "topic": "Storage Security"
+    },
+    {
+      "source_id": "S21",
+      "headline": "Content Credentials Need a Hardened Verification Path",
+      "summary": "Adobe patches 15 vulnerabilities across Content Credentials SDKs, including critical denial-of-service and path-traversal flaws.",
+      "why_it_matters": "Provenance verification code processes hostile input and requires patched, isolated runtime dependencies.",
+      "topic": "Media Security"
+    },
+    {
+      "source_id": "S22",
+      "headline": "Passkey Recovery Needs a Complete Credential Review",
+      "summary": "USENIX research demonstrates passkey recovery gaps where unrevoked credentials preserve adversary access after password resets.",
+      "why_it_matters": "Account recovery must reconcile credentials, sessions, and recovery channels rather than finishing prematurely.",
+      "topic": "Identity Security"
+    }
+  ],
+  "operating_view": "Defenders must treat delivery as an intermediate step. True security outcomes require verifying post-update versions, enforcing strict trust boundaries across parsers and AI pipelines, and confirming operational state across every managed asset.",
+  "watch_items": [
+    "Verify exact post-update versions and runtime building states across all patched endpoints and edge assets.",
+    "Enforce strict input boundaries and dual-identity tracing for all AI retrieval and agentic workflows.",
+    "Reconcile comprehensive credentials, active sessions, and recovery channels during all account recovery workflows."
+  ],
+  "caption_intro": "Review today's independent ShadowContext defensive brief to protect your infrastructure with verified updates and trust boundaries."
+}
