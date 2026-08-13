@@ -225,6 +225,22 @@
       "github_run_id": "31562927106",
       "status": "published",
       "last_error": null
+    },
+    "d65d2ad489302e733083e3f5c87421f728586b93ed9f99466ab3aba546a110d4": {
+      "title": "Daily Defensive Cybersecurity Briefing: Verified Updates and Trust Boundaries",
+      "digest_date": "2026-08-12",
+      "digest_hash": "d65d2ad489302e733083e3f5c87421f728586b93ed9f99466ab3aba546a110d4",
+      "generated_at": "2026-08-13T07:23:25.358+04:00",
+      "briefing_url": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-12/d65d2ad489302e73/daily-digest.html",
+      "pdf_file": "assets/social/linkedin-digest/2026-08-12/d65d2ad489302e73/daily-digest.pdf",
+      "linkedin_caption": "Review today's independent ShadowContext defensive brief to protect your infrastructure with verified updates and trust boundaries.\n\nThis edition brings together 22 ShadowContext briefings from August 12, 2026, with direct source links and operational priorities.\n\nRead the full daily briefing:\nhttps://shadowcontext.com/assets/social/linkedin-digest/2026-08-12/d65d2ad489302e73/daily-digest.html\n\n#Cybersecurity #ThreatIntelligence #InfoSec #AISecurity",
+      "linkedin_document_urn": "urn:li:document:D4D10AQGcdEhiGIL4wg",
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7493522726473703424",
+      "published_at": "2026-08-13T04:24:01.213Z",
+      "github_run_id": "31666884075",
+      "status": "published",
+      "last_error": null
     }
   }
 }
