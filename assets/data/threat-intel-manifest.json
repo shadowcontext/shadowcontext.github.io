@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-12T01:24:45Z",
-  "generated_display": "12 Aug 2026 · 01:24 UTC",
+  "generated_at": "2026-08-13T01:18:46Z",
+  "generated_display": "13 Aug 2026 · 01:18 UTC",
   "ioc_total": 197,
   "ioc_total_display": "197",
   "ioc_total_exact": "197",
-  "ioc_sha256": "1384fc18d5f4c154ab4e477588e63d0eac079865456a231ec947dc4d085ee155",
+  "ioc_sha256": "c0e0e71a492b0a5e1697e8c6e8f8d1f23ea67bfbe2b03aea3bc490fb37ac05ba",
   "feeds": {
     "file_hashes": {
       "count": 55,
