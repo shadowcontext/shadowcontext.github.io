@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Agent trajectory contained by resource budgets</title>
+  <desc id="desc">An abstract teal agent route crosses a guarded boundary toward a clear destination while amber detour loops are contained by luminous budget rings.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071a2a"/>
+      <stop offset="0.55" stop-color="#0b3140"/>
+      <stop offset="1" stop-color="#111d35"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#54e6d0" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#54e6d0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="route" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#49c9c6"/>
+      <stop offset="1" stop-color="#b6fff0"/>
+    </linearGradient>
+    <linearGradient id="detour" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffbd55"/>
+      <stop offset="1" stop-color="#f06e52"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+    <pattern id="grid" width="72" height="72" patternUnits="userSpaceOnUse">
+      <path d="M72 0H0V72" fill="none" stroke="#9bded7" stroke-opacity="0.055" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <ellipse cx="800" cy="450" rx="660" ry="390" fill="url(#halo)" filter="url(#soft)"/>
+
+  <g opacity="0.42" fill="none" stroke="#77c9c7" stroke-width="2">
+    <path d="M130 180C390 40 590 110 760 230"/>
+    <path d="M1470 720C1220 850 1000 790 865 670"/>
+    <circle cx="210" cy="155" r="10" fill="#77c9c7"/>
+    <circle cx="1390" cy="746" r="10" fill="#77c9c7"/>
+  </g>
+
+  <g transform="translate(800 450)">
+    <circle r="247" fill="#071b2b" fill-opacity="0.72" stroke="#6fe4d6" stroke-opacity="0.25" stroke-width="2"/>
+    <circle r="202" fill="none" stroke="#69e6d1" stroke-opacity="0.72" stroke-width="5" stroke-dasharray="12 18"/>
+    <circle r="158" fill="none" stroke="#c3fff1" stroke-opacity="0.25" stroke-width="2"/>
+    <path d="M-8-119L100-76V18c0 74-43 124-108 154-65-30-108-80-108-154v-94z" fill="#0d4050" stroke="#8ff2de" stroke-width="5" filter="url(#glow)"/>
+    <path d="M-67 14l40 40 86-94" fill="none" stroke="#d6fff5" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <path d="M105 510C280 510 350 450 500 450H610" fill="none" stroke="url(#route)" stroke-width="18" stroke-linecap="round" filter="url(#glow)"/>
+  <path d="M990 450h125c132 0 188-60 380-60" fill="none" stroke="url(#route)" stroke-width="18" stroke-linecap="round" filter="url(#glow)"/>
+
+  <g fill="#baffef" stroke="#0b2b38" stroke-width="8">
+    <circle cx="170" cy="510" r="31"/>
+    <circle cx="382" cy="467" r="25"/>
+    <circle cx="1218" cy="423" r="25"/>
+    <circle cx="1450" cy="390" r="38"/>
+  </g>
+
+  <path d="M510 450C455 300 545 208 675 258C745 285 756 346 690 382" fill="none" stroke="url(#detour)" stroke-width="13" stroke-linecap="round" stroke-dasharray="24 18"/>
+  <path d="M1090 450C1165 300 1082 205 950 262C888 290 872 349 925 388" fill="none" stroke="url(#detour)" stroke-width="13" stroke-linecap="round" stroke-dasharray="24 18"/>
+  <g fill="#ffb655" stroke="#412739" stroke-width="7">
+    <circle cx="522" cy="315" r="24"/>
+    <circle cx="621" cy="244" r="24"/>
+    <circle cx="1077" cy="309" r="24"/>
+    <circle cx="978" cy="244" r="24"/>
+  </g>
+
+  <g fill="none" stroke="#ffe09a" stroke-width="5" opacity="0.9">
+    <path d="M444 207a190 190 0 0 1 282 2"/>
+    <path d="M875 209a190 190 0 0 1 282-2"/>
+  </g>
+  <g fill="#ffe09a">
+    <path d="M709 183l35 27-42 13z"/>
+    <path d="M1140 181l35 27-42 13z"/>
+  </g>
+
+  <g opacity="0.6">
+    <circle cx="800" cy="450" r="305" fill="none" stroke="#54e6d0" stroke-width="2"/>
+    <circle cx="800" cy="450" r="330" fill="none" stroke="#54e6d0" stroke-opacity="0.25" stroke-width="1" stroke-dasharray="6 16"/>
+  </g>
+</svg>
