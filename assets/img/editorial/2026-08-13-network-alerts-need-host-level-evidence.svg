@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Network evidence converging into a host-level alert</title>
+  <desc id="desc">Abstract teal network flows converge into time-bounded host profiles while amber evidence points form one traceable alert.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071522"/>
+      <stop offset="0.55" stop-color="#0b303d"/>
+      <stop offset="1" stop-color="#171a30"/>
+    </linearGradient>
+    <linearGradient id="stream" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#257f93"/>
+      <stop offset="1" stop-color="#86f0dc"/>
+    </linearGradient>
+    <radialGradient id="halo">
+      <stop offset="0" stop-color="#5de3d1" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#5de3d1" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="42"/>
+    </filter>
+    <pattern id="grid" width="72" height="72" patternUnits="userSpaceOnUse">
+      <path d="M72 0H0V72" fill="none" stroke="#a6ece4" stroke-opacity="0.045"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <ellipse cx="850" cy="450" rx="630" ry="390" fill="url(#halo)" filter="url(#soft)"/>
+
+  <g fill="none" stroke="url(#stream)" stroke-width="9" stroke-linecap="round" opacity="0.82">
+    <path d="M90 170C340 170 390 294 625 340"/>
+    <path d="M90 310C315 310 420 355 625 390"/>
+    <path d="M90 450H625"/>
+    <path d="M90 590C315 590 420 545 625 510"/>
+    <path d="M90 730C340 730 390 606 625 560"/>
+  </g>
+
+  <g fill="#a8ffef" stroke="#082733" stroke-width="7">
+    <circle cx="170" cy="170" r="25"/><circle cx="335" cy="215" r="19"/>
+    <circle cx="205" cy="310" r="21"/><circle cx="415" cy="355" r="25"/>
+    <circle cx="145" cy="450" r="21"/><circle cx="365" cy="450" r="24"/>
+    <circle cx="205" cy="590" r="21"/><circle cx="415" cy="545" r="25"/>
+    <circle cx="170" cy="730" r="25"/><circle cx="335" cy="685" r="19"/>
+  </g>
+
+  <g transform="translate(800 450)">
+    <circle r="260" fill="#092430" fill-opacity="0.86" stroke="#70e8d7" stroke-opacity="0.3" stroke-width="3"/>
+    <circle r="214" fill="none" stroke="#6de9d5" stroke-width="6" stroke-dasharray="18 18"/>
+    <circle r="164" fill="#0c3440" stroke="#a5fbea" stroke-opacity="0.5" stroke-width="3"/>
+    <g fill="#ffb44f" stroke="#44293a" stroke-width="7" filter="url(#glow)">
+      <circle cx="-78" cy="-68" r="25"/>
+      <circle cx="25" cy="-93" r="20"/>
+      <circle cx="92" cy="-18" r="27"/>
+      <circle cx="43" cy="75" r="23"/>
+      <circle cx="-70" cy="70" r="20"/>
+    </g>
+    <g fill="none" stroke="#ffd486" stroke-width="5" opacity="0.78">
+      <path d="M-78-68L25-93 92-18 43 75-70 70z"/>
+      <path d="M-78-68L43 75M25-93L-70 70"/>
+    </g>
+  </g>
+
+  <path d="M1060 450h160" fill="none" stroke="#8af2df" stroke-width="16" stroke-linecap="round" filter="url(#glow)"/>
+  <g transform="translate(1335 450)" filter="url(#glow)">
+    <path d="M0-128L110-78v80c0 91-42 151-110 191C-68 153-110 93-110-2v-76z" fill="#0d3e49" stroke="#8ef2df" stroke-width="7"/>
+    <path d="M-48 11l34 34 67-76" fill="none" stroke="#d1fff5" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g opacity="0.48" fill="none" stroke="#6ddbd0" stroke-width="2">
+    <path d="M112 108C385 22 550 75 670 170"/>
+    <path d="M1485 762C1260 854 1100 805 1005 725"/>
+    <circle cx="112" cy="108" r="9" fill="#6ddbd0"/>
+    <circle cx="1485" cy="762" r="9" fill="#6ddbd0"/>
+  </g>
+</svg>
