@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Layered endpoint control boundary</title>
+  <desc id="desc">An abstract blue endpoint shield made of nested translucent glass layers, with a flowing amber path stopped at a luminous inner boundary.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071525"/>
+      <stop offset="0.52" stop-color="#0a2940"/>
+      <stop offset="1" stop-color="#07121f"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="48%" r="56%">
+      <stop offset="0" stop-color="#35d6e8" stop-opacity="0.24"/>
+      <stop offset="0.52" stop-color="#157a9e" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#071525" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9be9f2" stop-opacity="0.32"/>
+      <stop offset="0.48" stop-color="#1c8db1" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#09233c" stop-opacity="0.48"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a9f7ff"/>
+      <stop offset="0.55" stop-color="#34bcd4"/>
+      <stop offset="1" stop-color="#117094"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f5a83b" stop-opacity="0"/>
+      <stop offset="0.48" stop-color="#ffc95c"/>
+      <stop offset="1" stop-color="#fff0b0"/>
+    </linearGradient>
+    <filter id="blur24" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="shieldClip">
+      <path d="M800 150 C970 213 1095 218 1218 239 V455 C1218 634 1046 747 800 810 C554 747 382 634 382 455 V239 C505 218 630 213 800 150Z"/>
+    </clipPath>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <ellipse cx="800" cy="440" rx="640" ry="430" fill="url(#halo)"/>
+  <g opacity="0.48" fill="none" stroke="#55bad1" stroke-width="2">
+    <path d="M85 694 C310 565 448 609 590 503"/>
+    <path d="M1515 221 C1280 318 1175 285 1038 385"/>
+    <path d="M157 198 C333 257 403 227 520 315"/>
+  </g>
+  <g fill="#8ae5ef">
+    <circle cx="154" cy="661" r="4" opacity="0.55"/><circle cx="294" cy="599" r="3" opacity="0.38"/>
+    <circle cx="1398" cy="266" r="4" opacity="0.48"/><circle cx="1281" cy="304" r="3" opacity="0.35"/>
+    <circle cx="266" cy="235" r="3" opacity="0.45"/><circle cx="1351" cy="669" r="3" opacity="0.42"/>
+  </g>
+  <path d="M800 150 C970 213 1095 218 1218 239 V455 C1218 634 1046 747 800 810 C554 747 382 634 382 455 V239 C505 218 630 213 800 150Z" fill="#08324c" opacity="0.28" filter="url(#blur24)"/>
+  <path d="M800 150 C970 213 1095 218 1218 239 V455 C1218 634 1046 747 800 810 C554 747 382 634 382 455 V239 C505 218 630 213 800 150Z" fill="url(#glass)" stroke="url(#edge)" stroke-width="7"/>
+  <path d="M800 217 C930 264 1039 274 1139 291 V452 C1139 584 1006 677 800 736 C594 677 461 584 461 452 V291 C561 274 670 264 800 217Z" fill="#0b3851" fill-opacity="0.42" stroke="#56c9dc" stroke-opacity="0.72" stroke-width="4"/>
+  <path d="M800 283 C900 319 976 326 1059 341 V448 C1059 533 971 606 800 662 C629 606 541 533 541 448 V341 C624 326 700 319 800 283Z" fill="#081f35" fill-opacity="0.72" stroke="#a2edf4" stroke-width="5"/>
+  <g clip-path="url(#shieldClip)">
+    <path d="M146 490 C341 428 489 513 622 472 C695 449 724 412 765 403" fill="none" stroke="#f2a43a" stroke-opacity="0.18" stroke-width="38" filter="url(#blur24)"/>
+    <path d="M108 489 C330 423 486 505 619 466 C690 445 719 412 765 402" fill="none" stroke="url(#amber)" stroke-width="12" stroke-linecap="round" filter="url(#glow)"/>
+    <circle cx="768" cy="401" r="18" fill="#fff1b2" filter="url(#glow)"/>
+    <path d="M786 342 V482" stroke="#b9fbff" stroke-width="8" stroke-linecap="round" filter="url(#glow)"/>
+    <path d="M814 342 V482" stroke="#39c7dc" stroke-opacity="0.45" stroke-width="3" stroke-linecap="round"/>
+    <path d="M455 273 C625 350 977 208 1147 310" fill="none" stroke="#d3fbff" stroke-opacity="0.12" stroke-width="34"/>
+  </g>
+  <g opacity="0.7">
+    <path d="M800 150 C970 213 1095 218 1218 239" fill="none" stroke="#d0fbff" stroke-width="3"/>
+    <path d="M382 455 C382 634 554 747 800 810" fill="none" stroke="#1c91b2" stroke-width="3"/>
+  </g>
+  <ellipse cx="800" cy="829" rx="310" ry="28" fill="#020a12" opacity="0.45" filter="url(#blur24)"/>
+</svg>
