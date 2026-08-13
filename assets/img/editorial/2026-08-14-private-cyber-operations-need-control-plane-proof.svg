@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Supervised cyber activity passing through a layered control gateway</title>
+  <desc id="desc">An abstract field of luminous signals is constrained by nested dark-blue boundaries and a central amber authorization aperture, evoking oversight, scope, and stop controls.</desc>
+  <defs>
+    <linearGradient id="background" x1="120" y1="80" x2="1470" y2="840" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071426"/>
+      <stop offset="0.52" stop-color="#0B2740"/>
+      <stop offset="1" stop-color="#10192D"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="0" cy="0" r="1" gradientTransform="translate(800 450) rotate(90) scale(370 600)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3BE0D0" stop-opacity="0.24"/>
+      <stop offset="0.55" stop-color="#196C89" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#071426" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gate" x1="595" y1="220" x2="1010" y2="680" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#64F1DB"/>
+      <stop offset="0.48" stop-color="#2AB7C9"/>
+      <stop offset="1" stop-color="#147093"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="710" y1="350" x2="900" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFE29A"/>
+      <stop offset="0.5" stop-color="#F7AA4A"/>
+      <stop offset="1" stop-color="#D87335"/>
+    </linearGradient>
+    <linearGradient id="stream" x1="90" y1="450" x2="1510" y2="450" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#59EBD9" stop-opacity="0"/>
+      <stop offset="0.18" stop-color="#59EBD9" stop-opacity="0.7"/>
+      <stop offset="0.47" stop-color="#B7FFF4"/>
+      <stop offset="0.53" stop-color="#FFD18A"/>
+      <stop offset="0.82" stop-color="#F1A34A" stop-opacity="0.66"/>
+      <stop offset="1" stop-color="#F1A34A" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="smallGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+    <clipPath id="innerWindow">
+      <path d="M800 326C868 326 923 381 923 449C923 517 868 572 800 572C732 572 677 517 677 449C677 381 732 326 800 326Z"/>
+    </clipPath>
+  </defs>
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#aura)"/>
+  <g opacity="0.2" fill="none" stroke="#78B9CA" stroke-width="2">
+    <path d="M85 181C311 74 504 108 631 227"/>
+    <path d="M1517 704C1281 821 1090 786 968 677"/>
+    <path d="M196 742C341 825 498 793 596 684"/>
+    <path d="M1402 153C1253 74 1094 112 1002 216"/>
+  </g>
+  <g fill="#68DCCF" opacity="0.42">
+    <circle cx="170" cy="207" r="4"/><circle cx="285" cy="151" r="6"/><circle cx="417" cy="144" r="3"/>
+    <circle cx="1182" cy="151" r="4"/><circle cx="1310" cy="183" r="6"/><circle cx="1434" cy="713" r="4"/>
+    <circle cx="1277" cy="767" r="3"/><circle cx="346" cy="771" r="5"/><circle cx="145" cy="668" r="3"/>
+  </g>
+  <ellipse cx="800" cy="450" rx="530" ry="176" fill="#32C8C0" opacity="0.09" filter="url(#softGlow)"/>
+  <path d="M800 118C1019 118 1196 266 1196 449C1196 632 1019 780 800 780C581 780 404 632 404 449C404 266 581 118 800 118Z" fill="#0B1D31" fill-opacity="0.82" stroke="#1B5770" stroke-width="4"/>
+  <path d="M800 173C978 173 1122 296 1122 449C1122 602 978 725 800 725C622 725 478 602 478 449C478 296 622 173 800 173Z" fill="#102A40" stroke="#2A7C8D" stroke-width="3"/>
+  <path d="M800 226C938 226 1050 326 1050 449C1050 572 938 672 800 672C662 672 550 572 550 449C550 326 662 226 800 226Z" fill="#0A1C31" stroke="url(#gate)" stroke-width="8"/>
+  <g fill="none" stroke-linecap="round">
+    <path d="M92 408C236 408 292 355 415 355C516 355 568 414 677 414" stroke="url(#stream)" stroke-width="9"/>
+    <path d="M99 478C251 478 322 523 438 523C533 523 588 479 677 479" stroke="url(#stream)" stroke-width="5" opacity="0.82"/>
+    <path d="M1508 402C1360 402 1304 349 1184 349C1084 349 1032 412 923 412" stroke="url(#stream)" stroke-width="6" opacity="0.72"/>
+    <path d="M1500 492C1350 492 1282 541 1170 541C1066 541 1010 480 923 480" stroke="url(#stream)" stroke-width="10"/>
+  </g>
+  <g opacity="0.9">
+    <circle cx="347" cy="358" r="8" fill="#80F7E4" filter="url(#smallGlow)"/><circle cx="347" cy="358" r="4" fill="#D2FFF8"/>
+    <circle cx="505" cy="514" r="7" fill="#61E6D8" filter="url(#smallGlow)"/><circle cx="505" cy="514" r="3" fill="#D2FFF8"/>
+    <circle cx="1253" cy="356" r="7" fill="#F6B75C" filter="url(#smallGlow)"/><circle cx="1253" cy="356" r="3" fill="#FFF0C4"/>
+    <circle cx="1102" cy="527" r="8" fill="#F6A64A" filter="url(#smallGlow)"/><circle cx="1102" cy="527" r="4" fill="#FFF0C4"/>
+  </g>
+  <path d="M800 326C868 326 923 381 923 449C923 517 868 572 800 572C732 572 677 517 677 449C677 381 732 326 800 326Z" fill="#071624" stroke="url(#amber)" stroke-width="9"/>
+  <g clip-path="url(#innerWindow)">
+    <path d="M610 445C692 400 738 505 806 452C872 400 916 480 990 438" fill="none" stroke="url(#stream)" stroke-width="24" filter="url(#smallGlow)" opacity="0.56"/>
+    <path d="M610 445C692 400 738 505 806 452C872 400 916 480 990 438" fill="none" stroke="#E8FFF9" stroke-width="5"/>
+  </g>
+  <path d="M800 365L858 389V438C858 485 833 516 800 535C767 516 742 485 742 438V389L800 365Z" fill="url(#amber)" fill-opacity="0.2" stroke="url(#amber)" stroke-width="5"/>
+  <path d="M779 445L794 460L826 425" fill="none" stroke="#FFE8AD" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#78E5D8">
+    <circle cx="800" cy="227" r="7"/><circle cx="550" cy="449" r="7"/><circle cx="800" cy="672" r="7"/><circle cx="1050" cy="449" r="7"/>
+  </g>
+  <g fill="#F2AD53">
+    <circle cx="800" cy="326" r="6"/><circle cx="677" cy="449" r="6"/><circle cx="800" cy="572" r="6"/><circle cx="923" cy="449" r="6"/>
+  </g>
+</svg>
