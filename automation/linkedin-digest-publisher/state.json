@@ -241,6 +241,22 @@
       "github_run_id": "31666884075",
       "status": "published",
       "last_error": null
+    },
+    "4df60adbfa092858cbff9a3d6bb04ac938a2150144ba3a0590d6e2c132814763": {
+      "title": "Daily Defensive Security Digest: Vulnerabilities, Identity, and Runtime Proof",
+      "digest_date": "2026-08-13",
+      "digest_hash": "4df60adbfa092858cbff9a3d6bb04ac938a2150144ba3a0590d6e2c132814763",
+      "generated_at": "2026-08-14T07:20:25.514+04:00",
+      "briefing_url": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-13/4df60adbfa092858/daily-digest.html",
+      "pdf_file": "assets/social/linkedin-digest/2026-08-13/4df60adbfa092858/daily-digest.pdf",
+      "linkedin_caption": "ShadowContext daily defensive brief covering independent threat research, vulnerability disclosures, and architectural security controls.\n\nThis edition brings together 15 ShadowContext briefings from August 13, 2026, with direct source links and operational priorities.\n\nRead the full daily briefing:\nhttps://shadowcontext.com/assets/social/linkedin-digest/2026-08-13/4df60adbfa092858/daily-digest.html\n\n#Cybersecurity #ThreatIntelligence #InfoSec #AISecurity",
+      "linkedin_document_urn": "urn:li:document:D4D10AQFiZg_kDl9_2g",
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7493884389609799680",
+      "published_at": "2026-08-14T04:21:08.445Z",
+      "github_run_id": "31769588273",
+      "status": "published",
+      "last_error": null
     }
   }
 }
