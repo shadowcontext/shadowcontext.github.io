@@ -1,0 +1,119 @@
+{
+  "digest_title": "Daily Defensive Security Digest: Vulnerabilities, Identity, and Runtime Proof",
+  "dek": "Defensive analysis of 15 security advisories and research publications emphasizing component inventory, runtime verification, and trust boundaries.",
+  "overview": "Today's releases highlight critical exposures across industrial IoT, client applications, AI agents, and core infrastructure. Defenders must move beyond simple product presence, establishing rigorous component inventories, strict trust boundaries, and runtime evidence to verify full remediation.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "Siemens Fixes Industrial Node-RED Missing Authentication",
+      "summary": "Siemens released version 4.3.4.1 for SIMATIC IoT2050 Advanced devices running Industrial OS to fix CVE-2026-58115, a missing authentication flaw in the Node-RED HTTP interface.",
+      "why_it_matters": "Unauthenticated remote attackers could create malicious flows and execute arbitrary code with maximum privileges.",
+      "topic": "Industrial IoT Security"
+    },
+    {
+      "source_id": "S02",
+      "headline": "Palo Alto Networks Updates GlobalProtect Client Advisories",
+      "summary": "Palo Alto Networks published three GlobalProtect app advisories addressing buffer overflows, SAML pre-logon issues, and local privilege escalation.",
+      "why_it_matters": "Defenders must map endpoint platforms and feature states to verify fixes rather than relying on product-level updates.",
+      "topic": "Endpoint Security"
+    },
+    {
+      "source_id": "S03",
+      "headline": "USENIX Research Mapped DNS Self-Amplification Scale",
+      "summary": "USENIX research revealed that recursive resolvers can generate disproportionate internal work from small requests, prompting vendor security patches.",
+      "why_it_matters": "Work amplification can overwhelm recursive services and authoritative infrastructure without requiring source-address spoofing.",
+      "topic": "DNS Security"
+    },
+    {
+      "source_id": "S04",
+      "headline": "PeerTube 8.2.4 Patches ActivityPub Identity Rebinding",
+      "summary": "PeerTube version 8.2.4 addresses a critical unauthenticated ActivityPub actor URL and key-rebinding flaw enabling playlist takeover.",
+      "why_it_matters": "Federated systems must cryptographically bind remote signing keys to authorized objects across updates.",
+      "topic": "Federation Security"
+    },
+    {
+      "source_id": "S05",
+      "headline": "Research Highlights Agent Skill Convergent Detour Hijacking",
+      "summary": "New research introduces convergent detour hijacking, showing how skill-based agents can reach correct final answers via manipulated execution routes.",
+      "why_it_matters": "Successful detours bypass output-only quality checks while significantly increasing token use and skill invocations.",
+      "topic": "AI Security"
+    },
+    {
+      "source_id": "S06",
+      "headline": "Prompty Renderer Fix Addresses Template Code Execution",
+      "summary": "The Prompty project released fixes for CVE-2026-73299, a critical Nunjucks renderer vulnerability in @prompty/core allowing template execution.",
+      "why_it_matters": "Untrusted prompt templates can traverse constructor properties and execute arbitrary JavaScript within host processes.",
+      "topic": "AI Security"
+    },
+    {
+      "source_id": "S07",
+      "headline": "Ubuntu Issues Fix for Follow-Redirects Authentication Leak",
+      "summary": "Ubuntu published updates for node-follow-redirects addressing CVE-2026-40895, a flaw where custom authentication headers crossed domain boundaries.",
+      "why_it_matters": "Automatic redirects can forward sensitive custom headers to unintended destinations, exposing application credentials.",
+      "topic": "Dependency Security"
+    },
+    {
+      "source_id": "S08",
+      "headline": "Semaphore UI Patch Fixes Repository Command Injection",
+      "summary": "Semaphore UI version 2.18.20 addresses CVE-2026-73294, an OS command injection vulnerability in repository giturl handling.",
+      "why_it_matters": "Project managers can turn repository input into server-side command execution via Git argument handling.",
+      "topic": "Automation Security"
+    },
+    {
+      "source_id": "S09",
+      "headline": "Prowler App Fixes Kubeconfig Command Execution Risk",
+      "summary": "Prowler App version 5.36.0 resolves CVE-2026-73263 by rejecting legacy kubeconfig files containing command-bearing authentication forms.",
+      "why_it_matters": "Untrusted provider onboarding could trigger local process creation before connecting to Kubernetes clusters.",
+      "topic": "Cloud Security"
+    },
+    {
+      "source_id": "S10",
+      "headline": "Slips Evaluates Behavioral Evidence Aggregation for Networks",
+      "summary": "Research comparing Slips and Suricata demonstrates the effectiveness of aggregating host-level network evidence over time.",
+      "why_it_matters": "Accumulating weak signals with traceable flow references reduces false positives and improves host visibility.",
+      "topic": "Network Detection"
+    },
+    {
+      "source_id": "S11",
+      "headline": "Windows Defender Bypass Reported While Microsoft Investigates",
+      "summary": "A published proof of concept claims to bypass Microsoft's fix for the RoguePlanet privilege escalation vulnerability in Windows Defender.",
+      "why_it_matters": "Security engines represent privileged boundaries, requiring layered application control while vendor investigations continue.",
+      "topic": "Endpoint Security"
+    },
+    {
+      "source_id": "S12",
+      "headline": "USENIX Research Evaluates Perceptual Hash Collisions",
+      "summary": "KU Leuven researchers at USENIX demonstrated natural and near collisions in Apple NeuralHash and Microsoft PhotoDNA.",
+      "why_it_matters": "Scaling perceptual hashing increases false positives, requiring independent decision layers for high-consequence workflows.",
+      "topic": "Applied Cryptography"
+    },
+    {
+      "source_id": "S13",
+      "headline": "Research Warns of Android Loopback Privacy Risks",
+      "summary": "USENIX-awarded research showed that Android loopback traffic allowed web scripts to connect browsing activity with native app identifiers.",
+      "why_it_matters": "Localhost must be treated as a sensitive cross-context boundary rather than trusted transport plumbing.",
+      "topic": "Mobile Security"
+    },
+    {
+      "source_id": "S14",
+      "headline": "BACnet Secure Connect Research Identifies Cuckoo Attacks",
+      "summary": "USENIX research revealed that BACnet/SC lacks cryptographic binding between authenticated connections and logical identifiers.",
+      "why_it_matters": "Attackers can progressively displace legitimate device connection states and intercept building automation traffic.",
+      "topic": "ICS Security"
+    },
+    {
+      "source_id": "S15",
+      "headline": "WordPress 7.0.4 Fixes Author File Upload Vulnerability",
+      "summary": "WordPress 7.0.4 addresses CVE-2026-65640, a high-severity remote code execution flaw involving Imagick and Ghostscript.",
+      "why_it_matters": "Author-level users with upload rights can achieve remote code execution when specific native processing delegates are present.",
+      "topic": "Web Security"
+    }
+  ],
+  "operating_view": "Maintain rigorous visibility into deployment footprints by combining asset inventories with active runtime verification. Prioritize fixes based on feature state and architecture rather than basic version strings, ensuring trust boundaries remain intact.",
+  "watch_items": [
+    "Monitor official vendor advisories for updates on unresolved claims and estimated patch delivery dates.",
+    "Verify runtime dependency builds and active container images rather than relying solely on static manifest configurations.",
+    "Enforce strict behavioral and resource budgets on automated agents, templates, and extension hooks."
+  ],
+  "caption_intro": "ShadowContext daily defensive brief covering independent threat research, vulnerability disclosures, and architectural security controls."
+}

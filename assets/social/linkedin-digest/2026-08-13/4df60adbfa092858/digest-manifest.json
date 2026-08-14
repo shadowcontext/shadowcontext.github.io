@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-08-14T07:20:25.514+04:00",
+  "digestDate": "2026-08-13",
+  "digestHash": "4df60adbfa092858cbff9a3d6bb04ac938a2150144ba3a0590d6e2c132814763",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "Daily Defensive Security Digest: Vulnerabilities, Identity, and Runtime Proof",
+  "articleCount": 15,
+  "sourceArticles": [
+    {
+      "title": "Industrial Node-RED Needs Authentication Proof",
+      "canonicalUrl": "https://shadowcontext.com/industrial-node-red-needs-authentication-proof/",
+      "publishedAt": "2026-08-13T00:09:07.000+04:00",
+      "category": "defense",
+      "sourceHash": "b1c6f4ba086d0cdc11c4671094c0592d46a2ae9dae9bc2f1c45786670d7fa3b1"
+    },
+    {
+      "title": "GlobalProtect Fixes Need Platform-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/globalprotect-fixes-need-platform-level-proof/",
+      "publishedAt": "2026-08-13T01:11:33.000+04:00",
+      "category": "defense",
+      "sourceHash": "ca748217ef5095c6d6c139a44080d08e8c763a0eb74c8010a105ac3974afe395"
+    },
+    {
+      "title": "DNS Self-Amplification Needs Work Budgets",
+      "canonicalUrl": "https://shadowcontext.com/dns-self-amplification-needs-work-budgets/",
+      "publishedAt": "2026-08-13T02:11:45.000+04:00",
+      "category": "defense",
+      "sourceHash": "85b0dd9f04bdf96c91cd172c8559d6969f16924f6ec713f6528e434a50b0046c"
+    },
+    {
+      "title": "PeerTube Fix Needs Federation Identity Proof",
+      "canonicalUrl": "https://shadowcontext.com/peertube-fix-needs-federation-identity-proof/",
+      "publishedAt": "2026-08-13T05:10:58.000+04:00",
+      "category": "defense",
+      "sourceHash": "dccd4eaddc3fb325250f1c8250cc9022720e2cd6cc5b48c0a2d63c4cc4881e7a"
+    },
+    {
+      "title": "Agent Skills Need Trajectory Budgets, Not Just Correct Answers",
+      "canonicalUrl": "https://shadowcontext.com/agent-skills-need-trajectory-budgets/",
+      "publishedAt": "2026-08-13T06:08:58.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "f18e9bcdccdc5609748b9b6038206a37f583c9599e3d835836edfe0790bd1650"
+    },
+    {
+      "title": "Prompty Fix Makes Prompt Files a Code Boundary",
+      "canonicalUrl": "https://shadowcontext.com/prompty-fix-makes-prompt-files-a-code-boundary/",
+      "publishedAt": "2026-08-13T08:09:43.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "2281d4242812949d7e85709a2b081659d16d42733a385e9bc1af5212877b5df7"
+    },
+    {
+      "title": "Redirect Fix Keeps Authentication Headers on Trusted Hosts",
+      "canonicalUrl": "https://shadowcontext.com/redirect-fix-keeps-auth-headers-on-trusted-hosts/",
+      "publishedAt": "2026-08-13T10:10:41.000+04:00",
+      "category": "defense",
+      "sourceHash": "45dcaa69a17e44e1095a2db6ebaec0a797c7b7ef3ef5419586151dde225eb039"
+    },
+    {
+      "title": "Semaphore Repository Input Needs a Command Boundary",
+      "canonicalUrl": "https://shadowcontext.com/semaphore-repository-input-needs-command-boundaries/",
+      "publishedAt": "2026-08-13T11:09:54.000+04:00",
+      "category": "defense",
+      "sourceHash": "2513c5542cadb999f9f8a84723185c80bcadd60832a348d4b573812f58cf1931"
+    },
+    {
+      "title": "Prowler Kubeconfig Fix Requires Command-Free Validation",
+      "canonicalUrl": "https://shadowcontext.com/prowler-kubeconfigs-need-command-free-validation/",
+      "publishedAt": "2026-08-13T12:09:52.000+04:00",
+      "category": "defense",
+      "sourceHash": "91129da8cfe61f1c3d4553ac53db839dab931eaaf9cacedc181398c785c708bb"
+    },
+    {
+      "title": "Network Alerts Need Host-Level Evidence, Not Isolated Signals",
+      "canonicalUrl": "https://shadowcontext.com/network-alerts-need-host-level-evidence/",
+      "publishedAt": "2026-08-13T14:11:01.000+04:00",
+      "category": "defense",
+      "sourceHash": "fd8da1b0a202535b39a66decf6a87de781799c343e2a5a1d3bfb7cb5c33d04b7"
+    },
+    {
+      "title": "ShieldBreak Needs Layered Endpoint Controls While Microsoft Investigates",
+      "canonicalUrl": "https://shadowcontext.com/shieldbreak-needs-layered-endpoint-controls/",
+      "publishedAt": "2026-08-13T18:09:58.000+04:00",
+      "category": "defense",
+      "sourceHash": "fd9a6fc8eb35e75fa3edd75e7abfb7609388b32f2f8bc568d55018ac588fbe43"
+    },
+    {
+      "title": "Perceptual Hash Matches Need Independent Verification",
+      "canonicalUrl": "https://shadowcontext.com/perceptual-hashes-need-independent-verification/",
+      "publishedAt": "2026-08-13T20:09:27.000+04:00",
+      "category": "defense",
+      "sourceHash": "1c59cddd4658ae0ee84a735094f4a5cf853d0c850add9588cdd5ae118df47c5f"
+    },
+    {
+      "title": "Loopback Traffic Needs a Mobile Privacy Boundary",
+      "canonicalUrl": "https://shadowcontext.com/loopback-traffic-needs-a-mobile-privacy-boundary/",
+      "publishedAt": "2026-08-13T21:10:02.000+04:00",
+      "category": "defense",
+      "sourceHash": "cb11a31fb0106b3a5bb719cef60c5bda91b0fa08b4662f25cd02510bacbc3587"
+    },
+    {
+      "title": "BACnet Secure Connect Needs Identity Binding",
+      "canonicalUrl": "https://shadowcontext.com/bacnet-secure-connect-needs-identity-binding/",
+      "publishedAt": "2026-08-13T22:10:58.000+04:00",
+      "category": "defense",
+      "sourceHash": "aadb051cf760aef93f29f3ce1cd7a96014cac7c81438905406470726c9c10b47"
+    },
+    {
+      "title": "WordPress Upload Fix Needs a Media-Processing Boundary",
+      "canonicalUrl": "https://shadowcontext.com/wordpress-upload-fix-needs-processing-boundaries/",
+      "publishedAt": "2026-08-13T23:08:55.000+04:00",
+      "category": "defense",
+      "sourceHash": "2391d60682892d91406dd80cbe6eb003ab12c560befb2bc6d51584eb5d8b74bb"
+    }
+  ],
+  "caption": "ShadowContext daily defensive brief covering independent threat research, vulnerability disclosures, and architectural security controls.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-08-13/4df60adbfa092858/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-13/4df60adbfa092858/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-08-13/4df60adbfa092858/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-13/4df60adbfa092858/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}
