@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-13T01:18:46Z",
-  "generated_display": "13 Aug 2026 · 01:18 UTC",
+  "generated_at": "2026-08-14T01:25:46Z",
+  "generated_display": "14 Aug 2026 · 01:25 UTC",
   "metrics": {
     "kev_total": 1665,
-    "kev_added_30d": 27,
+    "kev_added_30d": 23,
     "due_next_7d": 2,
     "ioc_total": 197,
     "ioc_total_display": "197",
@@ -161,60 +161,60 @@
   ],
   "advisories": [
     {
+      "title": "Siemens Parasolid",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-10",
+      "date": "2026-08-13",
+      "summary": "View CSAF Summary Parasolid is affected by an out of bounds read vulnerability that could be triggered when the application reads files in X_T format. This could allow an…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "title": "Siemens License Server (SLS)",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-07",
+      "date": "2026-08-13",
+      "summary": "View CSAF Summary Siemens License Server is affected by multiple vulnerabilities which could allow an attacker to elevate its privileges and read arbitrary files on the system.…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "title": "Siemens Desigo DXR and PXC Controllers",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-08",
+      "date": "2026-08-13",
+      "summary": "View CSAF Summary A vulnerability in Desigo DXR and PXC controllers has been identified that could allow an attacker to cause denial of service conditions by sending malformed…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "title": "Johnson Controls Inc. Airwall",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-03",
+      "date": "2026-08-13",
+      "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to decrypt sensitive data, bypass authentication controls, gaining unauthorized access…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
       "authority": "Saudi NCA / CERT",
       "title": "F5 Alert",
-      "url": "https://nca.gov.sa/en/cert/7869/",
-      "date": "2026-08-12",
+      "url": "https://nca.gov.sa/en/cert/7873/",
+      "date": "2026-08-13",
       "severity": "High",
-      "summary": "Security alert 2026-7745. Review the official notice for affected products and remediation guidance."
+      "summary": "Security alert 2026-7749. Review the official notice for affected products and remediation guidance."
     },
     {
       "authority": "Saudi NCA / CERT",
       "title": "F5 Alert",
-      "url": "https://nca.gov.sa/en/cert/7868/",
-      "date": "2026-08-12",
+      "url": "https://nca.gov.sa/en/cert/7872/",
+      "date": "2026-08-13",
       "severity": "High",
-      "summary": "Security alert 2026-7744. Review the official notice for affected products and remediation guidance."
+      "summary": "Security alert 2026-7748. Review the official notice for affected products and remediation guidance."
     },
     {
       "authority": "Saudi NCA / CERT",
-      "title": "Paloalto Alert",
-      "url": "https://nca.gov.sa/en/cert/7867/",
-      "date": "2026-08-12",
+      "title": "ManageEngine Alert",
+      "url": "https://nca.gov.sa/en/cert/7871/",
+      "date": "2026-08-13",
       "severity": "High",
-      "summary": "Security alert 2026-7743. Review the official notice for affected products and remediation guidance."
-    },
-    {
-      "title": "Johnson Controls C-CURE 9000 and Victor application server (Update A)",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-204-01",
-      "date": "2026-08-11",
-      "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker with network access to achieve remote code execution. The following versions of Johnson…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
-      "title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
-      "url": "https://www.cisa.gov/news-events/alerts/2026/08/11/cisa-adds-three-known-exploited-vulnerabilities-catalog",
-      "date": "2026-08-11",
-      "summary": "CISA has added three new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-20349 Cisco Secure Firewall…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
-      "title": "#StopRansomware: Gunra Ransomware",
-      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-222a",
-      "date": "2026-08-10",
-      "summary": "Advisory at a Glance Title #StopRansomware: Gunra Ransomware Original Publication August 10, 2026 Executive Summary Gunra is a ransomware-as-a-service (RaaS) used by affiliates…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
-      "title": "CPDLC over ATN-B1 Vulnerabilities",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-219-01",
-      "date": "2026-08-07",
-      "summary": "View CSAF Summary ATN-B1 CPDLC relies on legacy clear text unauthenticated radio frequency links. Research demonstrates that these characteristics allow unauthorized message…",
-      "authority": "CISA",
-      "severity": ""
+      "summary": "Security alert 2026-7747. Review the official notice for affected products and remediation guidance."
     },
     {
       "title": "How to secure your online meetings",
@@ -324,7 +324,7 @@
       "path": "/assets/data/daily-urls.txt"
     }
   ],
-  "ioc_sha256": "c0e0e71a492b0a5e1697e8c6e8f8d1f23ea67bfbe2b03aea3bc490fb37ac05ba",
+  "ioc_sha256": "75f30f0cd1eed512e21a6fc10b7ecf6aff3b515d7e128e7593572cd62906c33c",
   "sources": {
     "kev": {
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
