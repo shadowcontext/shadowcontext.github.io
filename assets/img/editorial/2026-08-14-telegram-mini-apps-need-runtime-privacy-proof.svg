@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Runtime data crossing a privacy boundary</title>
+  <desc id="desc">An abstract mobile app window emits small data particles through a translucent boundary toward several external network nodes.</desc>
+  <defs>
+    <linearGradient id="background" x1="130" y1="80" x2="1460" y2="850" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#081A2C"/>
+      <stop offset="0.5" stop-color="#102B43"/>
+      <stop offset="1" stop-color="#071622"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="0" cy="0" r="1" gradientTransform="translate(810 445) rotate(90) scale(410 680)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2CC9C4" stop-opacity="0.23"/>
+      <stop offset="1" stop-color="#2CC9C4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="screen" x1="365" y1="170" x2="845" y2="740" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#183D58" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#0A2034" stop-opacity="0.98"/>
+    </linearGradient>
+    <linearGradient id="veil" x1="840" y1="110" x2="1035" y2="795" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8CF2E8" stop-opacity="0.48"/>
+      <stop offset="0.5" stop-color="#5CCBDF" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#B99AFF" stop-opacity="0.38"/>
+    </linearGradient>
+    <linearGradient id="stream" x1="690" y1="450" x2="1310" y2="450" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#87F4E6"/>
+      <stop offset="0.55" stop-color="#67CAE8"/>
+      <stop offset="1" stop-color="#B99AFF"/>
+    </linearGradient>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#020A10" flood-opacity="0.65"/>
+    </filter>
+    <clipPath id="screenClip">
+      <rect x="350" y="145" width="500" height="610" rx="68"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#aura)"/>
+  <circle cx="1315" cy="180" r="180" fill="#8C6DDB" opacity="0.06"/>
+  <circle cx="180" cy="720" r="240" fill="#21C3B7" opacity="0.05"/>
+
+  <g opacity="0.22" fill="none" stroke="#7CB5C8" stroke-width="2">
+    <path d="M95 160C245 85 335 105 455 55"/>
+    <path d="M1230 820C1375 750 1470 765 1550 685"/>
+    <path d="M1190 90C1305 120 1430 95 1540 145"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="320" y="110" width="560" height="680" rx="88" fill="#07131F" stroke="#5B8DA3" stroke-opacity="0.56" stroke-width="3"/>
+    <rect x="350" y="145" width="500" height="610" rx="68" fill="url(#screen)"/>
+    <path d="M516 132H684" stroke="#75A1B3" stroke-opacity="0.5" stroke-width="10" stroke-linecap="round"/>
+  </g>
+
+  <g clip-path="url(#screenClip)">
+    <circle cx="582" cy="430" r="240" fill="#3FD5C8" opacity="0.07"/>
+    <path d="M430 310C506 245 665 235 770 310" stroke="#70D9D3" stroke-opacity="0.28" stroke-width="14" stroke-linecap="round"/>
+    <path d="M430 360C535 315 680 320 783 390" stroke="#70D9D3" stroke-opacity="0.18" stroke-width="10" stroke-linecap="round"/>
+    <rect x="422" y="475" width="356" height="128" rx="34" fill="#183F58" stroke="#6CCBC8" stroke-opacity="0.32" stroke-width="2"/>
+    <circle cx="478" cy="539" r="22" fill="#76E3D6" opacity="0.68"/>
+    <rect x="525" y="514" width="190" height="16" rx="8" fill="#A6CDD5" opacity="0.42"/>
+    <rect x="525" y="548" width="132" height="13" rx="6.5" fill="#A6CDD5" opacity="0.22"/>
+    <path d="M585 650H720" stroke="#5AA7B6" stroke-opacity="0.3" stroke-width="12" stroke-linecap="round"/>
+  </g>
+
+  <path d="M910 92C864 240 873 356 906 451C941 552 934 681 884 810L1040 810C1085 674 1088 558 1048 449C1009 342 1014 223 1065 92Z" fill="url(#veil)" stroke="#A0F3EB" stroke-opacity="0.5" stroke-width="3"/>
+  <path d="M968 112C925 258 936 355 965 449C1000 563 988 681 947 786" fill="none" stroke="#D1FFFA" stroke-opacity="0.35" stroke-width="5" stroke-linecap="round"/>
+
+  <g fill="none" stroke="url(#stream)" stroke-width="5" stroke-linecap="round" opacity="0.8">
+    <path d="M710 360C855 355 923 332 1044 283C1125 251 1194 238 1288 250"/>
+    <path d="M690 447C845 447 923 447 1042 447C1137 447 1197 410 1325 402"/>
+    <path d="M715 535C842 544 916 566 1028 618C1110 657 1193 668 1285 646"/>
+  </g>
+
+  <g fill="#8EF4E8">
+    <circle cx="756" cy="355" r="8"/><circle cx="812" cy="350" r="6"/><circle cx="862" cy="340" r="9"/>
+    <circle cx="744" cy="447" r="7"/><circle cx="811" cy="447" r="10"/><circle cx="866" cy="447" r="6"/>
+    <circle cx="764" cy="543" r="9"/><circle cx="822" cy="555" r="6"/><circle cx="874" cy="570" r="8"/>
+  </g>
+  <g fill="#B99AFF">
+    <circle cx="1094" cy="269" r="8"/><circle cx="1172" cy="250" r="6"/>
+    <circle cx="1100" cy="442" r="7"/><circle cx="1190" cy="418" r="9"/>
+    <circle cx="1085" cy="642" r="8"/><circle cx="1170" cy="665" r="6"/>
+  </g>
+
+  <g filter="url(#softGlow)" opacity="0.32" fill="#A995FF">
+    <circle cx="1320" cy="250" r="52"/><circle cx="1360" cy="400" r="64"/><circle cx="1318" cy="650" r="54"/>
+  </g>
+  <g fill="#10273A" stroke-width="5">
+    <circle cx="1320" cy="250" r="38" stroke="#9C8AF0"/>
+    <circle cx="1360" cy="400" r="46" stroke="#72CFE3"/>
+    <circle cx="1318" cy="650" r="40" stroke="#B99AFF"/>
+  </g>
+  <g fill="#B8A4FF">
+    <circle cx="1320" cy="250" r="10"/><circle cx="1360" cy="400" r="12"/><circle cx="1318" cy="650" r="10"/>
+  </g>
+
+  <g opacity="0.5" fill="#9BD3DA">
+    <circle cx="112" cy="418" r="4"/><circle cx="173" cy="348" r="7"/><circle cx="225" cy="454" r="5"/>
+    <circle cx="1460" cy="535" r="5"/><circle cx="1500" cy="600" r="8"/><circle cx="1438" cy="680" r="4"/>
+  </g>
+</svg>
