@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Layered policy enforcement around an AI core</title>
+  <desc id="desc">An abstract luminous AI core passes through rigid concentric gates representing deterministic controls, surrounded by a softer atmospheric field representing model judgment.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071427"/>
+      <stop offset="0.52" stop-color="#102643"/>
+      <stop offset="1" stop-color="#07101f"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="48%" r="52%">
+      <stop offset="0" stop-color="#5ee7ff" stop-opacity="0.45"/>
+      <stop offset="0.45" stop-color="#6477ff" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#071427" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d9fbff"/>
+      <stop offset="0.38" stop-color="#55e7f2"/>
+      <stop offset="1" stop-color="#6674ff"/>
+    </linearGradient>
+    <linearGradient id="gate" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#33d6cb" stop-opacity="0.3"/>
+      <stop offset="0.5" stop-color="#c9fbff" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#7383ff" stop-opacity="0.32"/>
+    </linearGradient>
+    <filter id="blur40" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="14" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="mesh" width="64" height="64" patternUnits="userSpaceOnUse" patternTransform="rotate(30)">
+      <path d="M0 0H64M0 32H64" stroke="#8beaf1" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#mesh)"/>
+  <ellipse cx="800" cy="440" rx="670" ry="410" fill="url(#halo)"/>
+  <path d="M250 630C430 510 515 690 680 577S930 405 1080 488s190 118 310 24" fill="none" stroke="#43ded2" stroke-opacity="0.11" stroke-width="64" filter="url(#blur40)"/>
+  <path d="M230 270C430 380 535 220 710 330s280 156 420 54 200-98 280-50" fill="none" stroke="#7a71ff" stroke-opacity="0.12" stroke-width="72" filter="url(#blur40)"/>
+
+  <g transform="translate(800 450)">
+    <circle r="336" fill="none" stroke="#8e7dff" stroke-opacity="0.16" stroke-width="58" stroke-dasharray="2 22"/>
+    <circle r="286" fill="#102946" fill-opacity="0.35" stroke="url(#gate)" stroke-width="3"/>
+    <path d="M-203-202L-246-135M203-202l43 67M286 0h-78M203 202l-43-67M-203 202l43-67M-286 0h78" stroke="#a5f8f3" stroke-opacity="0.78" stroke-width="12" stroke-linecap="round"/>
+
+    <circle r="215" fill="#0a1a31" fill-opacity="0.58" stroke="#4de2db" stroke-opacity="0.78" stroke-width="4"/>
+    <path d="M-152-152l38 38M152-152l-38 38M152 152l-38-38M-152 152l38-38" stroke="#a8fff8" stroke-opacity="0.75" stroke-width="10" stroke-linecap="square"/>
+
+    <circle r="148" fill="#101d3f" stroke="#7c8cff" stroke-opacity="0.8" stroke-width="3"/>
+    <g fill="none" stroke="#97f5f4" stroke-linecap="round">
+      <path d="M-78-32C-46-80 40-85 78-34" stroke-opacity="0.42" stroke-width="8"/>
+      <path d="M-82 34C-35 80 42 81 83 29" stroke-opacity="0.42" stroke-width="8"/>
+      <path d="M-44-83C-3-45 2 41-42 83" stroke-opacity="0.3" stroke-width="6"/>
+      <path d="M47-81C9-43 5 37 46 78" stroke-opacity="0.3" stroke-width="6"/>
+    </g>
+    <circle r="76" fill="url(#core)" filter="url(#glow)"/>
+    <path d="M-30-18l29-24 32 22-7 38-38 20-28-26z" fill="#071a36" fill-opacity="0.72" stroke="#ecffff" stroke-opacity="0.72" stroke-width="2"/>
+  </g>
+
+  <g fill="#b5fbf7">
+    <circle cx="378" cy="298" r="5" opacity="0.7"/>
+    <circle cx="1250" cy="300" r="4" opacity="0.55"/>
+    <circle cx="1328" cy="617" r="6" opacity="0.48"/>
+    <circle cx="292" cy="612" r="4" opacity="0.6"/>
+  </g>
+  <g stroke="#75e7e2" stroke-opacity="0.28" fill="none" stroke-width="2">
+    <path d="M378 298h88l52 52"/>
+    <path d="M1250 300h-92l-47 47"/>
+    <path d="M1328 617h-105l-54-54"/>
+    <path d="M292 612h101l51-50"/>
+  </g>
+</svg>
