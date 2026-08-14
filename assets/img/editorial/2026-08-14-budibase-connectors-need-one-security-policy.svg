@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Low-code connector security boundary</title>
+  <desc id="desc">Abstract editorial artwork showing a low-code connector hub, a sealed credential capsule, and a network path constrained by a luminous security boundary.</desc>
+  <defs>
+    <linearGradient id="bg-budibase" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07131f"/>
+      <stop offset="0.55" stop-color="#10283b"/>
+      <stop offset="1" stop-color="#080d18"/>
+    </linearGradient>
+    <linearGradient id="boundary-budibase" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#40d7c7"/>
+      <stop offset="0.5" stop-color="#9af3da"/>
+      <stop offset="1" stop-color="#48aef0"/>
+    </linearGradient>
+    <linearGradient id="capsule-budibase" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffc96b"/>
+      <stop offset="1" stop-color="#e56b7f"/>
+    </linearGradient>
+    <radialGradient id="hub-budibase" cx="38%" cy="30%" r="72%">
+      <stop offset="0" stop-color="#d9fff7"/>
+      <stop offset="0.38" stop-color="#62dec9"/>
+      <stop offset="1" stop-color="#167d92"/>
+    </radialGradient>
+    <filter id="glow-budibase" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="13" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft-budibase" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="55"/>
+    </filter>
+    <pattern id="mesh-budibase" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#bcebf1" stroke-opacity="0.045" stroke-width="1"/>
+      <circle cx="0" cy="0" r="2" fill="#bcebf1" fill-opacity="0.11"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg-budibase)"/>
+  <circle cx="250" cy="160" r="300" fill="#1c7997" opacity="0.14" filter="url(#soft-budibase)"/>
+  <circle cx="1370" cy="730" r="330" fill="#8c426e" opacity="0.12" filter="url(#soft-budibase)"/>
+  <rect width="1600" height="900" fill="url(#mesh-budibase)"/>
+
+  <path d="M140 450C140 250 290 135 490 135H1110C1310 135 1460 250 1460 450S1310 765 1110 765H490C290 765 140 650 140 450Z" fill="#0d2030" fill-opacity="0.58" stroke="#5ce0d3" stroke-opacity="0.14" stroke-width="3"/>
+  <path d="M205 450C205 286 330 205 500 205H1100C1270 205 1395 286 1395 450S1270 695 1100 695H500C330 695 205 614 205 450Z" fill="none" stroke="url(#boundary-budibase)" stroke-width="8" filter="url(#glow-budibase)"/>
+  <path d="M237 450C237 311 348 237 510 237" fill="none" stroke="#ddfff7" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round"/>
+
+  <g opacity="0.75">
+    <path d="M345 315C470 315 510 370 640 418" fill="none" stroke="#5bcfd0" stroke-width="5" stroke-linecap="round"/>
+    <path d="M345 585C470 585 510 525 640 482" fill="none" stroke="#5bcfd0" stroke-width="5" stroke-linecap="round"/>
+    <path d="M955 420C1070 370 1110 305 1255 305" fill="none" stroke="#77dfe1" stroke-width="5" stroke-linecap="round"/>
+    <path d="M955 480C1070 525 1120 595 1255 595" fill="none" stroke="#77dfe1" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <g>
+    <circle cx="305" cy="315" r="42" fill="#112e42" stroke="#53d7d3" stroke-width="4"/>
+    <circle cx="305" cy="585" r="42" fill="#112e42" stroke="#53d7d3" stroke-width="4"/>
+    <circle cx="1295" cy="305" r="42" fill="#112e42" stroke="#62c9e4" stroke-width="4"/>
+    <circle cx="1295" cy="595" r="42" fill="#112e42" stroke="#62c9e4" stroke-width="4"/>
+    <circle cx="305" cy="315" r="10" fill="#7df2dc"/>
+    <circle cx="305" cy="585" r="10" fill="#7df2dc"/>
+    <circle cx="1295" cy="305" r="10" fill="#83dff3"/>
+    <circle cx="1295" cy="595" r="10" fill="#83dff3"/>
+  </g>
+
+  <g filter="url(#glow-budibase)">
+    <circle cx="800" cy="450" r="128" fill="#46d7c3" opacity="0.1"/>
+    <circle cx="800" cy="450" r="91" fill="url(#hub-budibase)"/>
+    <circle cx="800" cy="450" r="106" fill="none" stroke="#a4f7e5" stroke-opacity="0.68" stroke-width="4"/>
+  </g>
+  <g fill="#083244" opacity="0.88">
+    <circle cx="774" cy="423" r="13"/>
+    <circle cx="829" cy="416" r="13"/>
+    <circle cx="808" cy="474" r="13"/>
+    <path d="M786 426L816 419M781 435L801 463M824 429L812 461" stroke="#083244" stroke-width="8" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(500 450)">
+    <rect x="-92" y="-47" width="184" height="94" rx="47" fill="#0b1825" stroke="url(#capsule-budibase)" stroke-width="5"/>
+    <circle cx="-45" cy="0" r="24" fill="url(#capsule-budibase)"/>
+    <path d="M-18 0H48M28 0V20M48 0V13" fill="none" stroke="#ffd99b" stroke-width="10" stroke-linecap="round"/>
+    <rect x="-106" y="-61" width="212" height="122" rx="61" fill="none" stroke="#ffbd76" stroke-opacity="0.2" stroke-width="16" filter="url(#glow-budibase)"/>
+  </g>
+
+  <g transform="translate(1100 450)">
+    <path d="M-105 0H-38" fill="none" stroke="#81dded" stroke-width="8" stroke-linecap="round"/>
+    <path d="M38 0H108" fill="none" stroke="#81dded" stroke-width="8" stroke-linecap="round"/>
+    <path d="M0-66C43-52 62-32 62 4C62 49 31 77 0 94C-31 77-62 49-62 4C-62-32-43-52 0-66Z" fill="#0d2736" stroke="#79ebdc" stroke-width="5"/>
+    <path d="M-25 8L-6 27L30-18" fill="none" stroke="#d9fff6" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="0" cy="7" r="92" fill="none" stroke="#4dd9ca" stroke-opacity="0.16" stroke-width="18" filter="url(#glow-budibase)"/>
+  </g>
+
+  <path d="M1320 450C1370 450 1395 420 1395 373" fill="none" stroke="#ec8a9f" stroke-width="5" stroke-linecap="round" stroke-dasharray="3 15"/>
+  <circle cx="1395" cy="356" r="12" fill="#ed8ca1" opacity="0.9"/>
+  <ellipse cx="800" cy="818" rx="430" ry="28" fill="#4bd9c9" opacity="0.08" filter="url(#soft-budibase)"/>
+</svg>
