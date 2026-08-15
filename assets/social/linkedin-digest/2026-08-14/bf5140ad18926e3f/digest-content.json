@@ -1,0 +1,98 @@
+{
+  "digest_title": "Daily Security News Digest: Control-Plane Defenses and Runtime Boundaries",
+  "dek": "Defensive security analysis covering critical vulnerabilities, supply chain controls, and runtime boundaries across operational platforms and AI architectures.",
+  "overview": "Today's analysis addresses critical security updates, control-plane isolation, and verification gaps across open-source tools, cloud operators, and agent systems. Defenders must prioritize runtime proofs, patch validation, and comprehensive boundary enforcement to maintain integrity across complex modern deployments.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "Private Cyber Operations Need Written Control-Plane Proof",
+      "summary": "A new US cyber-operations policy requires explicit control structures, written scopes, continuous guardrails, and tested stop controls for participating private companies.",
+      "why_it_matters": "Authorization must be a verifiable object binding time, targets, and kill paths together.",
+      "topic": "Cyber Operations"
+    },
+    {
+      "source_id": "S02",
+      "headline": "Agent Privacy Requires Causal Isolation Architecture",
+      "summary": "USENIX Security research proposes splitting agent powers across typed boundaries with an independent release decision to contain untrusted inputs.",
+      "why_it_matters": "Separating retrieval from communication prevents a single prompt failure from exposing confidential secrets.",
+      "topic": "AI Security"
+    },
+    {
+      "source_id": "S03",
+      "headline": "Vault Secrets Operator Fix Removes File Path Trust",
+      "summary": "HashiCorp fixed CVE-2026-8715 in version 1.5.0 by replacing a controller-side file path with a Kubernetes Secret reference.",
+      "why_it_matters": "Namespaced resources must not choose arbitrary files from a more privileged controller.",
+      "topic": "Secret Management"
+    },
+    {
+      "source_id": "S04",
+      "headline": "GenAI Policy Needs Layered Enforcement Tiers",
+      "summary": "Enterprise AI governance requires deterministic controls for hard boundaries and bounded model judgment where rules demand interpretation.",
+      "why_it_matters": "Probabilistic model decisions cannot safely enforce hard security guarantees alone.",
+      "topic": "AI Governance"
+    },
+    {
+      "source_id": "S05",
+      "headline": "Ubuntu Axios Fixes Demand Request Boundary Proof",
+      "summary": "Ubuntu fixed five Axios HTTP client vulnerabilities across LTS releases, highlighting the need for package inventory and outbound proxy controls.",
+      "why_it_matters": "Outbound requests are security decisions requiring validation of destination and transport paths.",
+      "topic": "Supply Chain"
+    },
+    {
+      "source_id": "S06",
+      "headline": "Velocity.js Fix Requires Complete Evaluator Path Proof",
+      "summary": "Velocity.js 2.1.7 addresses CVE-2026-73649, closing a remote code execution path missed by earlier prototype-pollution property-read protections.",
+      "why_it_matters": "Security controls must cover every route that can reach a dangerous runtime capability.",
+      "topic": "Template Engine"
+    },
+    {
+      "source_id": "S07",
+      "headline": "Trigger.dev Fix Needs Cross Project Boundaries",
+      "summary": "CVE-2026-73656 addresses an unscoped deployment lookup in Trigger.dev, fixed in 4.5.6, where authenticated requests crossed project boundaries.",
+      "why_it_matters": "Tenant identity must remain an invariant across every state-changing workflow step.",
+      "topic": "Workflow Security"
+    },
+    {
+      "source_id": "S08",
+      "headline": "Budibase Connectors Require Unified Security Policy",
+      "summary": "Budibase version 3.40.0 fixes CVE-2026-72857 and CVE-2026-72855, resolving credential masking gaps and DNS rebinding bypasses.",
+      "why_it_matters": "Central security controls must apply consistently across every datasource connector and transport.",
+      "topic": "Low Code"
+    },
+    {
+      "source_id": "S09",
+      "headline": "WishList Member Registration Needs Identity Binding",
+      "summary": "CVE-2026-12949 affects WishList Member through 3.34.1, exposing an unauthenticated workflow vulnerability that permits account overwrites.",
+      "why_it_matters": "Registration state cannot replace fresh authentication proof when merging user accounts.",
+      "topic": "Access Control"
+    },
+    {
+      "source_id": "S10",
+      "headline": "Go Security Release Requires Build and Runtime Proof",
+      "summary": "Go 1.26.6 and 1.25.13 address ten vulnerabilities, requiring toolchain updates, rebuilt artifacts, and binary verification.",
+      "why_it_matters": "Patching builders is insufficient without verifying the exact executable serving production traffic.",
+      "topic": "Language Runtime"
+    },
+    {
+      "source_id": "S11",
+      "headline": "Argo Workflows Fix Requires Nested Policy Proof",
+      "summary": "Argo Workflows versions 3.7.15 and 4.0.6 fix CVE-2026-54526, where nested pod specs bypassed top-level allow-list validations.",
+      "why_it_matters": "Security validation must walk the entire configuration tree down to effective workloads.",
+      "topic": "Kubernetes Security"
+    },
+    {
+      "source_id": "S12",
+      "headline": "Telegram Mini Apps Need Runtime Privacy Proof",
+      "summary": "Research shows many Telegram Mini Apps contact undisclosed third parties during initial load, diverging from stated privacy policies.",
+      "why_it_matters": "Runtime traffic observation is necessary because stated policies do not prove actual behavior.",
+      "topic": "Application Privacy"
+    }
+  ],
+  "operating_view": "Treat configuration parameters, dependency trees, and policy statements as untrusted inputs until verified at runtime. Prioritize comprehensive path testing, strict tenant isolation, and immutable audit logs across all deployments.",
+  "watch_items": [
+    "Verify running binary versions and control-plane object scopes following recent platform patch releases.",
+    "Audit agentic workflows and low-code connectors for missing causal isolation and credential masking.",
+    "Monitor outbound network egress and proxy configurations for unvalidated request paths."
+  ],
+  "caption_intro": "Read the complete ShadowContext daily defensive security digest for August 14, 2026, featuring detailed analysis of critical patches, control-plane architectures, and runtime privacy proofs across modern enterprise environments."
+}

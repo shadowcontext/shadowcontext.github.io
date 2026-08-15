@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-08-15T06:10:03.266+04:00",
+  "digestDate": "2026-08-14",
+  "digestHash": "bf5140ad18926e3fb78bcb01f7800186c6ce28cf03a6c7c884a4c324114a4a76",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "Daily Security News Digest: Control-Plane Defenses and Runtime Boundaries",
+  "articleCount": 12,
+  "sourceArticles": [
+    {
+      "title": "Private Cyber Operations Need Control-Plane Proof",
+      "canonicalUrl": "https://shadowcontext.com/private-cyber-operations-need-control-plane-proof/",
+      "publishedAt": "2026-08-14T00:10:14.000+04:00",
+      "category": "defense",
+      "sourceHash": "5923efd6efcf1c2ab06b94325110b670f79c8af652b1e4e11ff657bead24d73d"
+    },
+    {
+      "title": "Agent Privacy Needs Causal Isolation, Not Prompt-Level Trust",
+      "canonicalUrl": "https://shadowcontext.com/agent-privacy-needs-causal-isolation/",
+      "publishedAt": "2026-08-14T03:09:42.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "45b95c1a63ccf53c39cb4e5ab351bb17c0212b4a32d45b762f6cb3bfa9b86575"
+    },
+    {
+      "title": "Vault Secrets Operator Fix Removes File-Path Trust",
+      "canonicalUrl": "https://shadowcontext.com/vault-secrets-operator-fix-removes-file-path-trust/",
+      "publishedAt": "2026-08-14T05:09:07.000+04:00",
+      "category": "defense",
+      "sourceHash": "f4a6b2a88365e860c97c6421c63b92ce513507c6c8b414998c2ea5c05a5f5435"
+    },
+    {
+      "title": "GenAI Policy Needs Enforcement Tiers, Not One Guardrail",
+      "canonicalUrl": "https://shadowcontext.com/genai-policy-needs-enforcement-tiers/",
+      "publishedAt": "2026-08-14T06:08:49.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "9c21047739cffc56f9c7254d09792caea01b4fd6367d2c166964c223c0d25987"
+    },
+    {
+      "title": "Ubuntu Axios Fixes Need Request-Boundary Proof",
+      "canonicalUrl": "https://shadowcontext.com/ubuntu-axios-fixes-need-request-boundary-proof/",
+      "publishedAt": "2026-08-14T07:11:00.000+04:00",
+      "category": "defense",
+      "sourceHash": "bc52993a888b21dcf88779c8ad911e768d96f6c411f29e8631d8a89b84ef7353"
+    },
+    {
+      "title": "Velocity.js Fix Needs Proof Across Every Evaluator Path",
+      "canonicalUrl": "https://shadowcontext.com/velocityjs-fix-needs-evaluator-path-proof/",
+      "publishedAt": "2026-08-14T08:08:42.000+04:00",
+      "category": "defense",
+      "sourceHash": "a2ec2ada239d3b39f0780dbf7da446942910ba4630bfeccfc884e603602a75ad"
+    },
+    {
+      "title": "Trigger.dev Fix Needs Cross-Project Boundaries",
+      "canonicalUrl": "https://shadowcontext.com/triggerdev-fix-needs-cross-project-boundaries/",
+      "publishedAt": "2026-08-14T10:09:48.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "30aef6972296d4b636b0720ec2461940373dc7fe16850205adc8acf36a319ba1"
+    },
+    {
+      "title": "Budibase Connectors Need One Security Policy",
+      "canonicalUrl": "https://shadowcontext.com/budibase-connectors-need-one-security-policy/",
+      "publishedAt": "2026-08-14T11:11:57.000+04:00",
+      "category": "defense",
+      "sourceHash": "9cd5c25af9ff65570d6752d60cad1b7f44b789fd36fe0150b182bc3727c7902c"
+    },
+    {
+      "title": "WishList Member Registration Needs Identity Binding",
+      "canonicalUrl": "https://shadowcontext.com/wishlist-member-registration-needs-identity-binding/",
+      "publishedAt": "2026-08-14T13:12:13.000+04:00",
+      "category": "defense",
+      "sourceHash": "bf31d32165c302e87af73a1e5bb33b82d0c62319ff3760f973486a4c700de57e"
+    },
+    {
+      "title": "Go Security Release Needs Build and Runtime Proof",
+      "canonicalUrl": "https://shadowcontext.com/go-security-release-needs-build-and-runtime-proof/",
+      "publishedAt": "2026-08-14T15:10:08.000+04:00",
+      "category": "defense",
+      "sourceHash": "fd1084a1882bb93477abdff49a256a3e61655ab68b32004e9b6b09595b342224"
+    },
+    {
+      "title": "Argo Workflows Fix Needs Nested Policy Proof",
+      "canonicalUrl": "https://shadowcontext.com/argo-workflows-fix-needs-nested-policy-proof/",
+      "publishedAt": "2026-08-14T18:09:38.000+04:00",
+      "category": "defense",
+      "sourceHash": "d399e87731f341fbb0a9183526e061059a611df7f9f987be9c73f7cf3677e15a"
+    },
+    {
+      "title": "Telegram Mini Apps Need Runtime Privacy Proof",
+      "canonicalUrl": "https://shadowcontext.com/telegram-mini-apps-need-runtime-privacy-proof/",
+      "publishedAt": "2026-08-14T19:09:44.000+04:00",
+      "category": "defense",
+      "sourceHash": "8d9051717f65114c1d4c7cf004b95be9b10687f0c8ae0d0b3d83b79f8fd96a1c"
+    }
+  ],
+  "caption": "Read the complete ShadowContext daily defensive security digest for August 14, 2026, featuring detailed analysis of critical patches, control-plane architectures, and runtime privacy proofs across modern enterprise environments.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-08-14/bf5140ad18926e3f/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-14/bf5140ad18926e3f/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-08-14/bf5140ad18926e3f/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-14/bf5140ad18926e3f/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}
