@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">AIOps telemetry trust boundary</title>
+  <desc id="desc">Abstract cyan, amber, and magenta telemetry streams pass through a luminous filtering membrane before reaching a protected blue AI operations core.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071424"/>
+      <stop offset="0.55" stop-color="#0b1d36"/>
+      <stop offset="1" stop-color="#11152f"/>
+    </linearGradient>
+    <radialGradient id="core" cx="45%" cy="40%" r="65%">
+      <stop offset="0" stop-color="#d6fbff"/>
+      <stop offset="0.2" stop-color="#59d9f5"/>
+      <stop offset="0.62" stop-color="#2078d8"/>
+      <stop offset="1" stop-color="#173562"/>
+    </radialGradient>
+    <linearGradient id="membrane" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4ce4ed" stop-opacity="0.08"/>
+      <stop offset="0.5" stop-color="#9ef7ff" stop-opacity="0.82"/>
+      <stop offset="1" stop-color="#4ce4ed" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="cyanFlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#24d7e8" stop-opacity="0"/>
+      <stop offset="0.35" stop-color="#24d7e8"/>
+      <stop offset="1" stop-color="#a6f8ff"/>
+    </linearGradient>
+    <linearGradient id="amberFlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffb74a" stop-opacity="0"/>
+      <stop offset="0.35" stop-color="#ffb74a"/>
+      <stop offset="1" stop-color="#ffe19a"/>
+    </linearGradient>
+    <linearGradient id="magentaFlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ec5cae" stop-opacity="0"/>
+      <stop offset="0.35" stop-color="#ec5cae"/>
+      <stop offset="1" stop-color="#ffc0e3"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#7ddfee" stroke-opacity="0.055" stroke-width="1"/>
+    </pattern>
+    <clipPath id="rightSide"><rect x="820" y="0" width="780" height="900"/></clipPath>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <ellipse cx="1180" cy="460" rx="420" ry="330" fill="#167fc7" opacity="0.10" filter="url(#soft)"/>
+  <ellipse cx="410" cy="450" rx="430" ry="300" fill="#9f276f" opacity="0.08" filter="url(#soft)"/>
+
+  <g opacity="0.3">
+    <circle cx="126" cy="182" r="4" fill="#4de4ee"/>
+    <circle cx="242" cy="742" r="5" fill="#ffbd58"/>
+    <circle cx="342" cy="274" r="3" fill="#f46ab6"/>
+    <circle cx="507" cy="650" r="4" fill="#4de4ee"/>
+    <path d="M90 144L255 202L392 156" fill="none" stroke="#47dce7" stroke-width="1"/>
+    <path d="M120 738L290 654L470 708" fill="none" stroke="#f6b956" stroke-width="1"/>
+  </g>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M-80 220C170 198 270 316 495 299S690 246 811 322" stroke="url(#cyanFlow)" stroke-width="15" opacity="0.72" filter="url(#glow)"/>
+    <path d="M-60 431C164 368 326 501 514 459S676 389 810 427" stroke="url(#amberFlow)" stroke-width="13" opacity="0.76" filter="url(#glow)"/>
+    <path d="M-90 690C160 728 308 576 522 610S690 642 812 552" stroke="url(#magentaFlow)" stroke-width="14" opacity="0.72" filter="url(#glow)"/>
+    <path d="M60 292C250 315 360 223 566 333S698 370 810 370" stroke="#5ce5ee" stroke-width="3" opacity="0.55"/>
+    <path d="M30 570C214 548 346 658 542 532S700 485 810 488" stroke="#ffce72" stroke-width="3" opacity="0.5"/>
+  </g>
+
+  <g opacity="0.9">
+    <rect x="716" y="83" width="140" height="734" rx="70" fill="url(#membrane)" filter="url(#glow)"/>
+    <rect x="772" y="105" width="20" height="690" rx="10" fill="#c8fcff" opacity="0.64"/>
+    <circle cx="782" cy="240" r="12" fill="#071c32" stroke="#c7fbff" stroke-width="3"/>
+    <circle cx="782" cy="450" r="12" fill="#071c32" stroke="#c7fbff" stroke-width="3"/>
+    <circle cx="782" cy="658" r="12" fill="#071c32" stroke="#c7fbff" stroke-width="3"/>
+  </g>
+
+  <g clip-path="url(#rightSide)" fill="none" stroke-linecap="round">
+    <path d="M791 322C925 342 990 391 1080 420" stroke="#9af5fc" stroke-width="8" opacity="0.66"/>
+    <path d="M791 427C918 430 1002 438 1080 447" stroke="#b4f7fd" stroke-width="8" opacity="0.66"/>
+    <path d="M791 552C912 530 994 493 1080 472" stroke="#a5f6fc" stroke-width="8" opacity="0.66"/>
+  </g>
+
+  <g transform="translate(1190 450)">
+    <circle r="224" fill="#0b182c" stroke="#4bdcec" stroke-opacity="0.26" stroke-width="2"/>
+    <circle r="174" fill="none" stroke="#59dff0" stroke-opacity="0.38" stroke-width="3" stroke-dasharray="3 16"/>
+    <path d="M0-130L113-65V65L0 130L-113 65V-65Z" fill="url(#core)" stroke="#b4f9ff" stroke-width="4" filter="url(#glow)"/>
+    <path d="M0-82L71-41V41L0 82L-71 41V-41Z" fill="#0a2d52" opacity="0.76"/>
+    <circle r="39" fill="#d7fbff" opacity="0.96"/>
+    <circle r="13" fill="#1e79d4"/>
+    <g fill="#7aebf5">
+      <circle cx="0" cy="-174" r="7"/><circle cx="151" cy="-87" r="7"/>
+      <circle cx="151" cy="87" r="7"/><circle cx="0" cy="174" r="7"/>
+      <circle cx="-151" cy="87" r="7"/><circle cx="-151" cy="-87" r="7"/>
+    </g>
+  </g>
+
+  <g fill="#d6fbff" opacity="0.7">
+    <circle cx="893" cy="339" r="5"/><circle cx="950" cy="376" r="4"/>
+    <circle cx="904" cy="431" r="5"/><circle cx="965" cy="439" r="4"/>
+    <circle cx="892" cy="531" r="5"/><circle cx="956" cy="503" r="4"/>
+  </g>
+
+  <path d="M90 810H1510" stroke="#8beaf2" stroke-opacity="0.16"/>
+</svg>
