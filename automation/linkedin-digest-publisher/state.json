@@ -257,6 +257,22 @@
       "github_run_id": "31769588273",
       "status": "published",
       "last_error": null
+    },
+    "bf5140ad18926e3fb78bcb01f7800186c6ce28cf03a6c7c884a4c324114a4a76": {
+      "title": "Daily Security News Digest: Control-Plane Defenses and Runtime Boundaries",
+      "digest_date": "2026-08-14",
+      "digest_hash": "bf5140ad18926e3fb78bcb01f7800186c6ce28cf03a6c7c884a4c324114a4a76",
+      "generated_at": "2026-08-15T06:10:03.266+04:00",
+      "briefing_url": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-14/bf5140ad18926e3f/daily-digest.html",
+      "pdf_file": "assets/social/linkedin-digest/2026-08-14/bf5140ad18926e3f/daily-digest.pdf",
+      "linkedin_caption": "Read the complete ShadowContext daily defensive security digest for August 14, 2026, featuring detailed analysis of critical patches, control-plane architectures, and runtime privacy proofs across modern enterprise environments.\n\nThis edition brings together 12 ShadowContext briefings from August 14, 2026, with direct source links and operational priorities.\n\nRead the full daily briefing:\nhttps://shadowcontext.com/assets/social/linkedin-digest/2026-08-14/bf5140ad18926e3f/daily-digest.html\n\n#Cybersecurity #ThreatIntelligence #InfoSec #AISecurity",
+      "linkedin_document_urn": "urn:li:document:D4D10AQGhBwLhnx4HRg",
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7494228941709197313",
+      "published_at": "2026-08-15T03:10:16.034Z",
+      "github_run_id": "31861100687",
+      "status": "published",
+      "last_error": null
     }
   }
 }
