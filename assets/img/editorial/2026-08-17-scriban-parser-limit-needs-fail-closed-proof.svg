@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Template recursion stopped at a fail-closed boundary</title>
+  <desc id="desc">Layered teal and amber template ribbons curl inward from the left and are halted by a luminous vertical boundary protecting a calm blue application core.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="0.55" stop-color="#102946"/>
+      <stop offset="1" stop-color="#071522"/>
+    </linearGradient>
+    <radialGradient id="core" cx="50%" cy="50%" r="55%">
+      <stop offset="0" stop-color="#bceeff" stop-opacity="0.95"/>
+      <stop offset="0.45" stop-color="#38a6c8" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#0a3a59" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ribbonA" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#13c6b0" stop-opacity="0.25"/>
+      <stop offset="0.75" stop-color="#4de0c4"/>
+      <stop offset="1" stop-color="#ffe08a"/>
+    </linearGradient>
+    <linearGradient id="ribbonB" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2576aa" stop-opacity="0.2"/>
+      <stop offset="0.7" stop-color="#64b9d8"/>
+      <stop offset="1" stop-color="#f3b958"/>
+    </linearGradient>
+    <linearGradient id="gate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff3b0" stop-opacity="0"/>
+      <stop offset="0.18" stop-color="#fff3b0"/>
+      <stop offset="0.5" stop-color="#f7c65a"/>
+      <stop offset="0.82" stop-color="#fff3b0"/>
+      <stop offset="1" stop-color="#fff3b0" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-30%" width="260%" height="160%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" fill="none" stroke="#8fd6ea" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <ellipse cx="1260" cy="450" rx="310" ry="310" fill="url(#core)" filter="url(#soft)"/>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M-60 148 C220 100 460 180 530 340 C590 476 482 628 326 560 C180 496 218 300 392 314 C548 326 640 444 708 444" stroke="url(#ribbonA)" stroke-width="34"/>
+    <path d="M-80 734 C214 802 482 742 548 596 C608 462 518 306 370 352 C222 398 250 584 412 594 C570 604 646 482 708 472" stroke="url(#ribbonB)" stroke-width="25"/>
+    <path d="M-20 286 C244 246 460 282 502 406 C544 528 434 610 338 532 C252 462 318 368 424 390 C540 414 614 458 708 458" stroke="url(#ribbonB)" stroke-width="18" opacity="0.9"/>
+    <path d="M-20 620 C260 660 444 616 492 514 C540 412 450 322 354 380 C272 430 336 520 442 500 C558 478 622 452 708 452" stroke="url(#ribbonA)" stroke-width="14" opacity="0.85"/>
+  </g>
+
+  <g opacity="0.72" fill="#7ad8da">
+    <circle cx="186" cy="200" r="5"/><circle cx="280" cy="681" r="4"/><circle cx="438" cy="238" r="6"/>
+    <circle cx="525" cy="642" r="5"/><circle cx="606" cy="347" r="4"/>
+  </g>
+
+  <rect x="742" y="110" width="10" height="680" rx="5" fill="url(#gate)" filter="url(#glow)"/>
+  <path d="M700 422 L746 450 L700 478" fill="#f6ca64" opacity="0.95"/>
+  <path d="M784 450 C890 330 1002 274 1120 294 C1240 314 1334 382 1396 450 C1334 518 1240 586 1120 606 C1002 626 890 570 784 450Z" fill="#0c314e" stroke="#67c8df" stroke-opacity="0.55" stroke-width="3"/>
+  <ellipse cx="1160" cy="450" rx="182" ry="132" fill="#123f5d" stroke="#83dff0" stroke-opacity="0.65" stroke-width="3"/>
+  <ellipse cx="1160" cy="450" rx="104" ry="76" fill="#1a7088" stroke="#c7f3fa" stroke-opacity="0.8" stroke-width="4"/>
+  <circle cx="1160" cy="450" r="32" fill="#d6f8ff" filter="url(#glow)"/>
+  <g fill="none" stroke="#7bcde0" stroke-opacity="0.35" stroke-width="3">
+    <path d="M824 342 C936 222 1130 172 1316 238"/>
+    <path d="M824 558 C936 678 1130 728 1316 662"/>
+  </g>
+</svg>
