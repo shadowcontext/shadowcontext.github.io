@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Guarded content import transaction</title>
+  <desc id="desc">Abstract editorial artwork showing an archive capsule held outside a luminous guarded chamber while layered site-content panels remain protected inside.</desc>
+  <defs>
+    <linearGradient id="bg" x1="110" y1="70" x2="1490" y2="840" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071425"/>
+      <stop offset="0.5" stop-color="#102C43"/>
+      <stop offset="1" stop-color="#07131F"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="0" cy="0" r="1" gradientTransform="translate(1010 447) rotate(90) scale(420 530)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38D8C3" stop-opacity="0.28"/>
+      <stop offset="0.55" stop-color="#287E96" stop-opacity="0.11"/>
+      <stop offset="1" stop-color="#07131F" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="capsule" x1="250" y1="310" x2="680" y2="610" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F3B96B"/>
+      <stop offset="0.48" stop-color="#D77B45"/>
+      <stop offset="1" stop-color="#7F3E45"/>
+    </linearGradient>
+    <linearGradient id="capsuleTop" x1="310" y1="315" x2="640" y2="470" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFE1A1"/>
+      <stop offset="1" stop-color="#E58A51"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="790" y1="145" x2="1300" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8CF4E0" stop-opacity="0.34"/>
+      <stop offset="0.48" stop-color="#2CB7B1" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#167493" stop-opacity="0.25"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#4A9FBA"/>
+      <stop offset="1" stop-color="#193E61"/>
+    </linearGradient>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="32"/>
+    </filter>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="12" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="chamberClip"><rect x="795" y="122" width="596" height="656" rx="86"/></clipPath>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <ellipse cx="1000" cy="450" rx="565" ry="430" fill="url(#aura)"/>
+  <g fill="none" stroke="#57B6C7" stroke-opacity="0.18" stroke-width="2">
+    <path d="M58 186C337 292 481 197 733 311"/>
+    <path d="M44 718C317 592 548 716 762 588"/>
+    <path d="M1283 172C1390 234 1470 224 1560 161"/>
+    <path d="M1301 729C1410 666 1495 676 1572 741"/>
+  </g>
+  <g opacity="0.28" filter="url(#blur)" fill="#EF8D50">
+    <ellipse cx="470" cy="466" rx="245" ry="174"/>
+  </g>
+  <g transform="rotate(-7 465 455)">
+    <path d="M249 357C249 318 281 286 320 286H604C643 286 675 318 675 357V552C675 591 643 623 604 623H320C281 623 249 591 249 552V357Z" fill="url(#capsule)" stroke="#FFC787" stroke-opacity="0.6" stroke-width="4"/>
+    <path d="M249 370C249 324 282 286 322 286H602C642 286 675 324 675 370V407H249V370Z" fill="url(#capsuleTop)"/>
+    <path d="M313 468H611M313 510H552" stroke="#4C2940" stroke-opacity="0.48" stroke-width="18" stroke-linecap="round"/>
+    <circle cx="590" cy="345" r="22" fill="#542D44" opacity="0.72"/>
+    <path d="M281 407H644" stroke="#FFE4B4" stroke-opacity="0.42" stroke-width="4"/>
+  </g>
+  <g filter="url(#glow)">
+    <path d="M748 234V671" stroke="#68E4D2" stroke-width="18" stroke-linecap="round"/>
+    <circle cx="748" cy="452" r="48" fill="#0B2434" stroke="#87F1DE" stroke-width="10"/>
+    <path d="M728 453L742 468L771 432" fill="none" stroke="#B8FFE9" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g clip-path="url(#chamberClip)">
+    <rect x="795" y="122" width="596" height="656" rx="86" fill="url(#glass)" stroke="#73D7D0" stroke-opacity="0.55" stroke-width="4"/>
+    <g opacity="0.24" filter="url(#blur)" fill="#35D9C0">
+      <circle cx="1080" cy="450" r="194"/>
+    </g>
+    <g stroke="#8BD9D8" stroke-opacity="0.48" stroke-width="3">
+      <g transform="translate(876 240) rotate(-4)">
+        <rect width="354" height="132" rx="25" fill="url(#panel)"/>
+        <circle cx="55" cy="52" r="20" fill="#6ED8D2" stroke="none"/>
+        <path d="M95 48H294M95 82H244" stroke="#B4EAE6" stroke-width="12" stroke-linecap="round" opacity="0.55"/>
+      </g>
+      <g transform="translate(940 403) rotate(3)">
+        <rect width="370" height="142" rx="26" fill="url(#panel)"/>
+        <path d="M48 42H315M48 77H270M48 111H215" stroke="#B4EAE6" stroke-width="12" stroke-linecap="round" opacity="0.5"/>
+      </g>
+      <g transform="translate(856 590) rotate(-2)">
+        <rect width="326" height="120" rx="24" fill="url(#panel)"/>
+        <rect x="42" y="34" width="72" height="52" rx="12" fill="#66CFC8" stroke="none" opacity="0.72"/>
+        <path d="M142 43H274M142 76H244" stroke="#B4EAE6" stroke-width="11" stroke-linecap="round" opacity="0.52"/>
+      </g>
+    </g>
+  </g>
+  <rect x="795" y="122" width="596" height="656" rx="86" fill="none" stroke="#82E4D7" stroke-opacity="0.5" stroke-width="4"/>
+  <g fill="#9DEADD">
+    <circle cx="1468" cy="281" r="7" opacity="0.55"/>
+    <circle cx="1439" cy="319" r="4" opacity="0.42"/>
+    <circle cx="1502" cy="347" r="5" opacity="0.36"/>
+    <circle cx="188" cy="681" r="6" opacity="0.35"/>
+    <circle cx="132" cy="639" r="4" opacity="0.46"/>
+  </g>
+</svg>
