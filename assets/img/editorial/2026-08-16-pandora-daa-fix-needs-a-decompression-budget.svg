@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Bounded archive decompression inside an isolated chamber</title>
+  <desc id="desc">Abstract compressed archive fragments expand toward a luminous aperture that confines their growth inside an isolated processing chamber.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#081528"/>
+      <stop offset="0.52" stop-color="#102447"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#67f4d4" stop-opacity="0.46"/>
+      <stop offset="0.48" stop-color="#29bfc6" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#29bfc6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="aperture" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d5fff4"/>
+      <stop offset="0.42" stop-color="#5ef0cf"/>
+      <stop offset="1" stop-color="#1598bb"/>
+    </linearGradient>
+    <linearGradient id="crystal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b8fff1"/>
+      <stop offset="0.5" stop-color="#48d9d4"/>
+      <stop offset="1" stop-color="#17699a"/>
+    </linearGradient>
+    <linearGradient id="warm" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffc971"/>
+      <stop offset="1" stop-color="#e35f7a"/>
+    </linearGradient>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#020814" flood-opacity="0.72"/>
+    </filter>
+    <clipPath id="chamberClip">
+      <rect x="900" y="170" width="430" height="560" rx="110"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <circle cx="1088" cy="450" r="430" fill="url(#halo)"/>
+  <path d="M0 690 C260 595 455 770 720 680 C965 596 1195 710 1600 582 L1600 900 L0 900 Z" fill="#0a1b32" opacity="0.82"/>
+  <path d="M0 734 C300 650 450 805 745 728 C1010 658 1230 760 1600 646" fill="none" stroke="#17375b" stroke-width="3" opacity="0.62"/>
+
+  <g opacity="0.28" fill="none" stroke="#57b9cf" stroke-width="2">
+    <circle cx="112" cy="156" r="9"/><circle cx="216" cy="262" r="5"/><circle cx="1450" cy="174" r="8"/>
+    <path d="M126 156 H290 L350 218"/><path d="M1360 174 H1450"/><path d="M216 267 V348 H302"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="870" y="140" width="490" height="620" rx="132" fill="#0b1d37" stroke="#2d6885" stroke-width="4"/>
+    <rect x="900" y="170" width="430" height="560" rx="110" fill="#0e2946" stroke="#4ab4bb" stroke-width="2"/>
+    <g clip-path="url(#chamberClip)">
+      <ellipse cx="1115" cy="470" rx="310" ry="235" fill="url(#halo)" opacity="0.72"/>
+      <path d="M930 648 C1000 576 1037 620 1091 542 C1140 472 1190 490 1300 344" fill="none" stroke="#49d6cb" stroke-width="16" stroke-linecap="round" opacity="0.17"/>
+      <g fill="url(#crystal)" opacity="0.92">
+        <path d="M1002 562 l66 -94 82 42 -25 112 -97 8z"/>
+        <path d="M1137 421 l72 -118 79 87 -30 104 -92 14z"/>
+        <path d="M1018 340 l43 -72 65 38 -12 89 -78 15z"/>
+      </g>
+      <g fill="none" stroke="#d6fff5" stroke-width="3" opacity="0.52">
+        <path d="M1002 562 l123 60 25 -112 -82 -42z"/><path d="M1137 421 l121 73 30 -104 -79 -87z"/>
+      </g>
+      <g fill="#8dfae3" opacity="0.74">
+        <circle cx="1238" cy="596" r="10"/><circle cx="980" cy="470" r="7"/><circle cx="1190" cy="246" r="6"/>
+      </g>
+    </g>
+  </g>
+
+  <g filter="url(#softGlow)">
+    <ellipse cx="870" cy="450" rx="38" ry="184" fill="#4ce6d1" opacity="0.25"/>
+    <ellipse cx="870" cy="450" rx="19" ry="166" fill="url(#aperture)"/>
+  </g>
+  <path d="M870 278 C820 300 820 600 870 622" fill="none" stroke="#cafff3" stroke-width="5" opacity="0.78"/>
+
+  <g filter="url(#shadow)">
+    <path d="M230 346 l152 -84 156 72 5 181 -157 92 -157 -82z" fill="#132b50" stroke="#416f9b" stroke-width="4"/>
+    <path d="M230 346 l156 80 152 -92 -156 -72z" fill="#1b4268"/>
+    <path d="M386 426 v181 l157 -92 -5 -181z" fill="#0c203e"/>
+    <path d="M229 525 l157 82 V426 l-156 -80z" fill="#102849"/>
+    <path d="M320 334 l64 -36 67 31 -65 39z" fill="url(#warm)" opacity="0.88"/>
+  </g>
+
+  <g stroke-linecap="round">
+    <path d="M550 450 C650 450 721 450 832 450" fill="none" stroke="#255e7d" stroke-width="34" opacity="0.34"/>
+    <path d="M550 450 C650 450 721 450 832 450" fill="none" stroke="#63e6d3" stroke-width="7" stroke-dasharray="3 24" opacity="0.78"/>
+  </g>
+
+  <g fill="url(#warm)" opacity="0.9">
+    <path d="M594 414 l42 -30 36 34 -29 47 -49 -11z"/>
+    <path d="M688 469 l35 -26 31 27 -20 43 -43 -4z"/>
+    <path d="M776 401 l24 -17 21 20 -15 30 -30 -3z"/>
+  </g>
+  <g fill="url(#crystal)" opacity="0.86">
+    <path d="M608 505 l31 -22 30 23 -17 40 -39 -5z"/>
+    <path d="M738 372 l27 -19 24 23 -16 33 -33 -4z"/>
+  </g>
+
+  <g fill="none" stroke="#78e9dc" opacity="0.34">
+    <rect x="1440" y="290" width="54" height="320" rx="27" stroke-width="3"/>
+    <rect x="1454" y="416" width="26" height="180" rx="13" fill="#50ddc8" stroke="none"/>
+    <circle cx="1467" cy="397" r="12" fill="#ffc971" stroke="none"/>
+  </g>
+</svg>
