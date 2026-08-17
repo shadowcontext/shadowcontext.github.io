@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Contained browser automation boundary</title>
+  <desc id="desc">An abstract luminous browser prism sits inside layered blue and amber containment shells while an incoming command ribbon stops at the outer boundary.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071526"/>
+      <stop offset="0.55" stop-color="#0a2340"/>
+      <stop offset="1" stop-color="#111c32"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="48%" r="52%">
+      <stop offset="0" stop-color="#55d6e8" stop-opacity="0.3"/>
+      <stop offset="0.62" stop-color="#3184b6" stop-opacity="0.09"/>
+      <stop offset="1" stop-color="#071526" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shell" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8ff2ef" stop-opacity="0.72"/>
+      <stop offset="0.5" stop-color="#3da6d0" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#d39b4a" stop-opacity="0.62"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d8ffff" stop-opacity="0.7"/>
+      <stop offset="0.4" stop-color="#48b9d2" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#112c4b" stop-opacity="0.72"/>
+    </linearGradient>
+    <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#d8873b" stop-opacity="0"/>
+      <stop offset="0.45" stop-color="#f0ad53" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#ffd98d"/>
+    </linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="22"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <ellipse cx="850" cy="450" rx="620" ry="390" fill="url(#halo)"/>
+  <g opacity="0.18" fill="none" stroke="#81c7de" stroke-width="2">
+    <path d="M90 170C310 70 470 90 625 195"/>
+    <path d="M1030 690C1240 805 1405 790 1530 660"/>
+    <path d="M110 730C315 840 500 810 650 704"/>
+  </g>
+  <g filter="url(#blur)" opacity="0.45">
+    <ellipse cx="830" cy="748" rx="360" ry="52" fill="#1bb5cf"/>
+    <ellipse cx="1260" cy="450" rx="150" ry="95" fill="#d18b3e"/>
+  </g>
+  <g fill="none" stroke-linejoin="round">
+    <path d="M800 112 1172 286 1128 666 800 796 472 666 428 286Z" stroke="url(#shell)" stroke-width="8" opacity="0.48"/>
+    <path d="M800 166 1114 313 1078 626 800 736 522 626 486 313Z" stroke="#59c8de" stroke-width="3" opacity="0.55"/>
+    <path d="M800 217 1052 335 1023 587 800 675 577 587 548 335Z" stroke="#e0a452" stroke-width="5" opacity="0.58"/>
+  </g>
+  <g opacity="0.4" stroke="#69c9db" stroke-width="2">
+    <path d="M428 286 548 335M1172 286 1052 335M472 666 577 587M1128 666 1023 587"/>
+    <path d="M800 112V217M800 796V675"/>
+  </g>
+  <g transform="translate(625 315)" filter="url(#glow)">
+    <path d="M42 0H308c23 0 42 19 42 42v238c0 23-19 42-42 42H42c-23 0-42-19-42-42V42C0 19 19 0 42 0Z" fill="url(#glass)" stroke="#a9f4f0" stroke-width="4"/>
+    <path d="M0 70H350" stroke="#8fe5e8" stroke-width="4" opacity="0.72"/>
+    <circle cx="35" cy="36" r="9" fill="#e4b067"/>
+    <circle cx="68" cy="36" r="9" fill="#64cadb"/>
+    <circle cx="101" cy="36" r="9" fill="#b9edef" opacity="0.72"/>
+    <path d="M93 136 175 101l82 35v85l-82 36-82-36Z" fill="#0b2945" fill-opacity="0.75" stroke="#75d7df" stroke-width="3"/>
+    <path d="m135 174 27 26 56-61" fill="none" stroke="#f0b35f" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g filter="url(#glow)">
+    <path d="M70 450C235 450 300 377 438 377" fill="none" stroke="url(#ribbon)" stroke-width="24" stroke-linecap="round"/>
+    <path d="M188 506C286 506 342 455 429 455" fill="none" stroke="#edaa54" stroke-width="5" stroke-linecap="round" opacity="0.72"/>
+    <circle cx="444" cy="377" r="24" fill="#071526" stroke="#ffd283" stroke-width="8"/>
+    <path d="M444 347v60" stroke="#fff0c5" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g fill="#8adce4">
+    <circle cx="1218" cy="254" r="6" opacity="0.65"/>
+    <circle cx="1284" cy="305" r="11" opacity="0.38"/>
+    <circle cx="1328" cy="635" r="7" opacity="0.52"/>
+    <circle cx="338" cy="688" r="9" opacity="0.34"/>
+  </g>
+</svg>
