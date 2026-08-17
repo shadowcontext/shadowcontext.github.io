@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Unsupported wireless device isolated for replacement</title>
+  <desc id="desc">An abstract editorial scene showing an older wireless access point contained behind a segmented boundary while clean signal paths flow toward a protected replacement device.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#081426"/>
+      <stop offset="0.55" stop-color="#102d43"/>
+      <stop offset="1" stop-color="#0c1d31"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="72%" cy="44%" r="52%">
+      <stop offset="0" stop-color="#4be0c1" stop-opacity="0.23"/>
+      <stop offset="1" stop-color="#4be0c1" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="boundary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffb66d" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#e76f65" stop-opacity="0.35"/>
+    </linearGradient>
+    <linearGradient id="device" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#dde8ee"/>
+      <stop offset="1" stop-color="#8ea7b4"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#020812" flood-opacity="0.55"/>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <circle cx="1280" cy="178" r="150" fill="#48d6bd" opacity="0.05"/>
+  <circle cx="1280" cy="178" r="102" fill="none" stroke="#69ead0" stroke-width="2" opacity="0.13"/>
+  <path d="M0 710 C310 610 485 780 760 672 S1238 570 1600 684 V900 H0Z" fill="#07111f" opacity="0.82"/>
+
+  <!-- Containment chamber for the unsupported device -->
+  <g filter="url(#shadow)">
+    <path d="M175 235 L640 173 L708 690 L238 748Z" fill="#101d2d" stroke="url(#boundary)" stroke-width="7"/>
+    <path d="M203 269 L609 216 L664 650 L267 700Z" fill="#da765f" opacity="0.08"/>
+    <path d="M225 309 L625 258 M238 407 L638 356 M251 505 L651 454 M264 603 L664 552" fill="none" stroke="#f19a6e" stroke-width="3" opacity="0.18"/>
+    <path d="M298 249 L356 703 M408 234 L466 689 M518 219 L576 675" fill="none" stroke="#f19a6e" stroke-width="3" opacity="0.14"/>
+  </g>
+
+  <!-- Older five-role network appliance, visually muted -->
+  <g transform="translate(300 388) rotate(-7 170 110)" filter="url(#shadow)">
+    <path d="M62 72 L42 -45" stroke="#7e94a0" stroke-width="13" stroke-linecap="round"/>
+    <path d="M278 72 L303 -45" stroke="#7e94a0" stroke-width="13" stroke-linecap="round"/>
+    <rect x="18" y="62" width="318" height="169" rx="38" fill="url(#device)"/>
+    <rect x="42" y="91" width="270" height="91" rx="24" fill="#3a5260"/>
+    <circle cx="85" cy="203" r="7" fill="#f19a6e"/>
+    <circle cx="112" cy="203" r="7" fill="#536d79"/>
+    <circle cx="139" cy="203" r="7" fill="#536d79"/>
+    <path d="M163 124 h28 M177 110 v28" stroke="#efb07e" stroke-width="7" stroke-linecap="round" opacity="0.85"/>
+    <path d="M219 105 l31 36 M250 105 l-31 36" stroke="#efb07e" stroke-width="7" stroke-linecap="round" opacity="0.85"/>
+  </g>
+
+  <!-- Severed legacy signal -->
+  <path d="M398 315 C428 276 484 268 521 298" fill="none" stroke="#ee9a72" stroke-width="11" stroke-linecap="round" opacity="0.7"/>
+  <path d="M365 274 C426 199 528 191 590 246" fill="none" stroke="#ee9a72" stroke-width="8" stroke-linecap="round" opacity="0.42"/>
+  <path d="M483 254 l38 38 M521 254 l-38 38" stroke="#ffd0a4" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- Controlled transition path -->
+  <path d="M711 475 C806 425 855 393 948 412" fill="none" stroke="#52dfc1" stroke-width="7" stroke-linecap="round" stroke-dasharray="2 28" opacity="0.7"/>
+  <path d="M817 382 l61 25 -48 45" fill="none" stroke="#58e4c6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+
+  <!-- Supported replacement protected by a shield-shaped field -->
+  <path d="M1156 177 C1260 224 1359 226 1445 188 V425 C1445 578 1341 690 1167 751 C991 687 902 580 902 425 V188 C990 225 1077 221 1156 177Z" fill="#48d6bd" opacity="0.08" stroke="#60e2c8" stroke-width="4"/>
+  <path d="M1158 240 C1236 273 1309 276 1376 249 V423 C1376 534 1302 614 1166 665 C1037 615 973 535 973 423 V249 C1038 276 1102 273 1158 240Z" fill="#0b2835" stroke="#5adfc4" stroke-width="5"/>
+  <g transform="translate(1018 390)" filter="url(#shadow)">
+    <path d="M52 50 L40 -55" stroke="#79d9ca" stroke-width="12" stroke-linecap="round"/>
+    <path d="M244 50 L258 -55" stroke="#79d9ca" stroke-width="12" stroke-linecap="round"/>
+    <rect x="12" y="42" width="278" height="138" rx="36" fill="#d8f1ec"/>
+    <rect x="39" y="70" width="224" height="62" rx="20" fill="#1c5a61"/>
+    <circle cx="75" cy="153" r="7" fill="#58e4c6"/>
+    <circle cx="102" cy="153" r="7" fill="#58e4c6" opacity="0.7"/>
+    <path d="M133 101 l18 18 42 -43" fill="none" stroke="#88f0da" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Clean wireless arcs -->
+  <path d="M1060 338 C1113 285 1200 281 1256 328" fill="none" stroke="#67e7cd" stroke-width="11" stroke-linecap="round" opacity="0.84"/>
+  <path d="M1015 293 C1105 201 1248 196 1341 278" fill="none" stroke="#67e7cd" stroke-width="8" stroke-linecap="round" opacity="0.5"/>
+  <circle cx="1159" cy="354" r="12" fill="#82f2da"/>
+
+  <ellipse cx="1130" cy="735" rx="315" ry="55" fill="#48d6bd" opacity="0.08" filter="url(#soft)"/>
+</svg>
