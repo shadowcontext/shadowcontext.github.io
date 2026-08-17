@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Destination authorization boundary for router-attached storage</title>
+  <desc id="desc">Abstract editorial artwork showing a router gateway between a public teal folder and protected amber storage, with a transfer arc stopped at the destination boundary.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071525"/>
+      <stop offset="0.55" stop-color="#10283a"/>
+      <stop offset="1" stop-color="#161c32"/>
+    </linearGradient>
+    <radialGradient id="tealGlow" cx="0.23" cy="0.48" r="0.48">
+      <stop offset="0" stop-color="#27d3c2" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#27d3c2" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="amberGlow" cx="0.8" cy="0.52" r="0.44">
+      <stop offset="0" stop-color="#ffb84d" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#ffb84d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="publicFolder" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#36ddcc"/>
+      <stop offset="1" stop-color="#158e9e"/>
+    </linearGradient>
+    <linearGradient id="privateFolder" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd07a"/>
+      <stop offset="1" stop-color="#c7792c"/>
+    </linearGradient>
+    <linearGradient id="gateway" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d9e8f1"/>
+      <stop offset="1" stop-color="#7893a6"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="24" stdDeviation="26" flood-color="#000814" flood-opacity="0.55"/>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <pattern id="grain" width="44" height="44" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="8" r="1.2" fill="#b9d4df" opacity="0.08"/>
+      <circle cx="28" cy="31" r="0.9" fill="#ffffff" opacity="0.06"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#tealGlow)"/>
+  <rect width="1600" height="900" fill="url(#amberGlow)"/>
+  <path d="M0 760 C290 650 510 820 800 704 S1320 604 1600 716 V900 H0Z" fill="#06101d" opacity="0.66"/>
+  <path d="M0 170 C330 74 546 204 812 124 S1320 90 1600 174" fill="none" stroke="#7fb3c8" stroke-width="2" opacity="0.12"/>
+  <rect width="1600" height="900" fill="url(#grain)"/>
+
+  <g opacity="0.32">
+    <circle cx="255" cy="257" r="5" fill="#39d9ca"/>
+    <circle cx="337" cy="191" r="3" fill="#39d9ca"/>
+    <circle cx="1328" cy="242" r="5" fill="#ffbe59"/>
+    <circle cx="1234" cy="174" r="3" fill="#ffbe59"/>
+    <path d="M255 257 L337 191" stroke="#39d9ca" stroke-width="2"/>
+    <path d="M1234 174 L1328 242" stroke="#ffbe59" stroke-width="2"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <path d="M190 373 Q190 338 225 338 H384 L432 385 H585 Q620 385 620 420 V650 Q620 685 585 685 H225 Q190 685 190 650Z" fill="#0b2431" stroke="#48e5d4" stroke-width="6"/>
+    <path d="M215 420 Q215 397 238 397 H576 Q599 397 599 420 V641 Q599 662 576 662 H238 Q215 662 215 641Z" fill="url(#publicFolder)" opacity="0.9"/>
+    <path d="M225 338 H384 L432 385 H225 Q190 385 190 420 V373 Q190 338 225 338Z" fill="#3de1d0" opacity="0.72"/>
+    <circle cx="287" cy="531" r="52" fill="#092833" opacity="0.5"/>
+    <path d="M265 533 h44 M287 511 v44" stroke="#bffcf5" stroke-width="12" stroke-linecap="round" opacity="0.9"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <path d="M1015 373 Q1015 338 1050 338 H1209 L1257 385 H1410 Q1445 385 1445 420 V650 Q1445 685 1410 685 H1050 Q1015 685 1015 650Z" fill="#2a1e20" stroke="#ffc467" stroke-width="6"/>
+    <path d="M1040 420 Q1040 397 1063 397 H1401 Q1424 397 1424 420 V641 Q1424 662 1401 662 H1063 Q1040 662 1040 641Z" fill="url(#privateFolder)" opacity="0.9"/>
+    <path d="M1050 338 H1209 L1257 385 H1050 Q1015 385 1015 420 V373 Q1015 338 1050 338Z" fill="#ffd27c" opacity="0.72"/>
+    <path d="M1215 514 v-23 a30 30 0 0 1 60 0 v23" fill="none" stroke="#4b2c28" stroke-width="15" stroke-linecap="round"/>
+    <rect x="1192" y="510" width="106" height="92" rx="20" fill="#4b2c28" opacity="0.88"/>
+    <circle cx="1245" cy="551" r="11" fill="#ffd98f"/>
+    <path d="M1245 560 v18" stroke="#ffd98f" stroke-width="9" stroke-linecap="round"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="688" y="333" width="224" height="294" rx="48" fill="#091725" stroke="#a8c2d0" stroke-width="5"/>
+    <rect x="715" y="361" width="170" height="202" rx="30" fill="url(#gateway)" opacity="0.94"/>
+    <path d="M752 425 Q800 386 848 425" fill="none" stroke="#143045" stroke-width="12" stroke-linecap="round"/>
+    <path d="M770 449 Q800 425 830 449" fill="none" stroke="#143045" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="800" cy="476" r="10" fill="#143045"/>
+    <rect x="743" y="522" width="114" height="13" rx="6.5" fill="#143045" opacity="0.72"/>
+    <circle cx="754" cy="590" r="9" fill="#3de1d0"/>
+    <circle cx="800" cy="590" r="9" fill="#89a6b7"/>
+    <circle cx="846" cy="590" r="9" fill="#ffbd5c"/>
+  </g>
+
+  <path d="M561 464 C654 270 925 268 1040 442" fill="none" stroke="#5fe9dc" stroke-width="16" stroke-linecap="round" opacity="0.92"/>
+  <path d="M561 464 C654 270 925 268 1040 442" fill="none" stroke="#d7ffff" stroke-width="4" stroke-linecap="round" stroke-dasharray="12 28" opacity="0.72"/>
+  <path d="M1016 421 L1050 447 L1015 467" fill="none" stroke="#5fe9dc" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)">
+    <path d="M951 250 L1008 283 V350 C1008 409 970 452 951 462 C932 452 894 409 894 350 V283Z" fill="#111b2a" stroke="#ffbd5c" stroke-width="7"/>
+    <path d="M929 351 l17 17 34-42" fill="none" stroke="#ffcf7d" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <path d="M800 662 V766" stroke="#7693a6" stroke-width="5" stroke-linecap="round" opacity="0.55"/>
+  <path d="M745 766 H855" stroke="#7693a6" stroke-width="5" stroke-linecap="round" opacity="0.55"/>
+  <ellipse cx="800" cy="776" rx="164" ry="28" fill="#020a13" opacity="0.55" filter="url(#soft)"/>
+</svg>
