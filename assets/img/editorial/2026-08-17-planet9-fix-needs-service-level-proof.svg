@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Privileged background service removed after a verified update</title>
+  <desc id="desc">An abstract Windows endpoint contains a layered access boundary while an elevated service core dissolves into verified update particles.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071323"/>
+      <stop offset="0.55" stop-color="#132945"/>
+      <stop offset="1" stop-color="#081827"/>
+    </linearGradient>
+    <radialGradient id="ambient" cx="68%" cy="42%" r="58%">
+      <stop offset="0" stop-color="#4cd8c3" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#4cd8c3" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="endpoint" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d6e5ed"/>
+      <stop offset="1" stop-color="#7894a5"/>
+    </linearGradient>
+    <linearGradient id="boundary" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6ce7d0"/>
+      <stop offset="1" stop-color="#2c8f9a"/>
+    </linearGradient>
+    <linearGradient id="privilege" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffc47e"/>
+      <stop offset="1" stop-color="#e26f73"/>
+    </linearGradient>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="190%">
+      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#020711" flood-opacity="0.6"/>
+    </filter>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="15"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#ambient)"/>
+  <path d="M0 720 C280 610 490 790 768 684 C1050 578 1285 625 1600 714 V900 H0Z" fill="#050d19" opacity="0.78"/>
+  <circle cx="1278" cy="185" r="132" fill="#55dbc6" opacity="0.05"/>
+  <circle cx="1278" cy="185" r="88" fill="none" stroke="#65e6d0" stroke-width="2" opacity="0.13"/>
+
+  <!-- Managed endpoint shell -->
+  <g filter="url(#shadow)">
+    <rect x="185" y="184" width="980" height="548" rx="58" fill="url(#endpoint)"/>
+    <rect x="221" y="220" width="908" height="456" rx="35" fill="#0b1c30"/>
+    <rect x="566" y="732" width="218" height="44" rx="12" fill="#607d8e"/>
+    <path d="M478 798 H874" stroke="#a8bbc5" stroke-width="26" stroke-linecap="round"/>
+  </g>
+
+  <!-- Layered permission boundary -->
+  <path d="M432 294 C533 330 630 329 716 289 V466 C716 586 629 648 572 674 C514 648 426 586 426 466 V289Z" fill="#163c4b" stroke="url(#boundary)" stroke-width="7"/>
+  <path d="M486 350 C548 372 607 371 661 347 V465 C661 535 613 580 572 602 C529 579 481 535 481 465 V347Z" fill="#0c2437" stroke="#58d6c2" stroke-width="4" opacity="0.95"/>
+  <circle cx="572" cy="455" r="72" fill="#57dec7" opacity="0.08"/>
+  <path d="M539 456 l24 25 48 -59" fill="none" stroke="#78edd7" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Low-privileged context stopped at the boundary -->
+  <circle cx="320" cy="472" r="40" fill="#8ba5b4"/>
+  <path d="M269 568 C276 515 300 496 320 496 C341 496 365 515 371 568Z" fill="#678493"/>
+  <path d="M373 472 H426" stroke="#ef9677" stroke-width="9" stroke-linecap="round" stroke-dasharray="3 18"/>
+  <path d="M400 448 L426 472 L400 496" fill="none" stroke="#ef9677" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Elevated service core being removed -->
+  <g filter="url(#shadow)">
+    <path d="M865 337 L941 381 V470 L865 514 L789 470 V381Z" fill="url(#privilege)" opacity="0.92"/>
+    <circle cx="865" cy="425" r="28" fill="#17283a"/>
+    <path d="M865 397 V453 M837 425 H893" stroke="#ffd7a5" stroke-width="9" stroke-linecap="round"/>
+  </g>
+  <path d="M758 425 C718 424 694 435 664 458" fill="none" stroke="#ee9275" stroke-width="7" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- Update sweep removes the privileged component -->
+  <path d="M802 255 C952 205 1115 257 1210 390 C1272 476 1276 576 1236 654" fill="none" stroke="#58e2cb" stroke-width="8" stroke-linecap="round" stroke-dasharray="2 28" opacity="0.72"/>
+  <path d="M1191 633 L1236 654 L1252 606" fill="none" stroke="#6cebd4" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="975" cy="351" r="18" fill="#ef9977" opacity="0.74"/>
+  <circle cx="1024" cy="380" r="14" fill="#ef9977" opacity="0.58"/>
+  <circle cx="1068" cy="417" r="11" fill="#ef9977" opacity="0.42"/>
+  <circle cx="1104" cy="457" r="8" fill="#ef9977" opacity="0.3"/>
+  <path d="M946 331 l58 58 M1004 331 l-58 58" stroke="#ffd2a2" stroke-width="9" stroke-linecap="round" opacity="0.8"/>
+
+  <!-- Verified fleet state -->
+  <g transform="translate(1260 295)">
+    <rect width="190" height="112" rx="28" fill="#102e3c" stroke="#55dbc5" stroke-width="4"/>
+    <path d="M55 57 l25 24 54 -59" fill="none" stroke="#71ead4" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(1260 456)" opacity="0.82">
+    <rect width="190" height="112" rx="28" fill="#102e3c" stroke="#55dbc5" stroke-width="4"/>
+    <path d="M55 57 l25 24 54 -59" fill="none" stroke="#71ead4" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(1260 617)" opacity="0.64">
+    <rect width="190" height="112" rx="28" fill="#102e3c" stroke="#55dbc5" stroke-width="4"/>
+    <path d="M55 57 l25 24 54 -59" fill="none" stroke="#71ead4" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <ellipse cx="825" cy="802" rx="520" ry="48" fill="#4fd8c2" opacity="0.07" filter="url(#glow)"/>
+</svg>
