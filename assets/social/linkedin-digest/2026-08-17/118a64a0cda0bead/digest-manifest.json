@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-08-18T06:11:22.756+04:00",
+  "digestDate": "2026-08-17",
+  "digestHash": "118a64a0cda0bead24f6e4d9280c1d7c976e31f53f06f1167ab05efb53ed3b24",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "Daily Security Digest: Verifying Defensive Boundaries and Fixes",
+  "articleCount": 11,
+  "sourceArticles": [
+    {
+      "title": "Scriban Parser Limit Needs Fail-Closed Proof",
+      "canonicalUrl": "https://shadowcontext.com/scriban-parser-limit-needs-fail-closed-proof/",
+      "publishedAt": "2026-08-17T01:10:31.000+04:00",
+      "category": "defense",
+      "sourceHash": "a6c76a5b9263ac410463918b16ba691c1fe4f3679f5e7c67a08f30d30d2f043f"
+    },
+    {
+      "title": "MCP Pagination Tools Need Destination Boundaries",
+      "canonicalUrl": "https://shadowcontext.com/mcp-pagination-needs-destination-boundaries/",
+      "publishedAt": "2026-08-17T02:10:38.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "2105a2b255594b6a3f28fd26fbafb0354833d7d3aa66ccaafbd707c744ab6534"
+    },
+    {
+      "title": "SiYuan API Token Fix Needs Authentication-Path Proof",
+      "canonicalUrl": "https://shadowcontext.com/siyuan-api-token-fix-needs-authentication-path-proof/",
+      "publishedAt": "2026-08-17T04:08:55.000+04:00",
+      "category": "defense",
+      "sourceHash": "e168f67cf7c5c4f57eefb022fb0573d89ef3cbe8705e3b72e552ecfc23b8ab9c"
+    },
+    {
+      "title": "Scriban Property Writes Need Behavior-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/scriban-property-writes-need-behavior-level-proof/",
+      "publishedAt": "2026-08-17T05:09:37.000+04:00",
+      "category": "defense",
+      "sourceHash": "a2b5064325119daaf55a34785c8fc23478de541c5bd8045e082080bba473e138"
+    },
+    {
+      "title": "Browser MCP Code Execution Needs an OS-Level Boundary",
+      "canonicalUrl": "https://shadowcontext.com/browser-mcp-needs-an-os-level-boundary/",
+      "publishedAt": "2026-08-17T07:09:55.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "462dabab9633ec1f2c5f81f3cdf8b4ff6f2e117a2d28662469a38d41fb2e7bcf"
+    },
+    {
+      "title": "New Edimax Flaws Make Replacement the Security Fix",
+      "canonicalUrl": "https://shadowcontext.com/edimax-flaws-make-replacement-the-security-fix/",
+      "publishedAt": "2026-08-17T08:09:09.000+04:00",
+      "category": "defense",
+      "sourceHash": "8c9c7275724c29720e60f79497a40aea75d86406b911d793a1aff407fc42e406"
+    },
+    {
+      "title": "Automad Password-Reset Fix Needs Response-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/password-reset-fix-needs-response-level-proof/",
+      "publishedAt": "2026-08-17T10:10:07.000+04:00",
+      "category": "defense",
+      "sourceHash": "7a0f00b7ff05bed4e36555a825416ed48ff4f6f666fad9954f35f0a6aefe2167"
+    },
+    {
+      "title": "GL.iNet WebDAV Flaw Exposes a Destination-Authorization Gap",
+      "canonicalUrl": "https://shadowcontext.com/glinet-webdav-needs-destination-authorization/",
+      "publishedAt": "2026-08-17T11:11:02.000+04:00",
+      "category": "defense",
+      "sourceHash": "122c92fedf3fabf352288111eb86387a1802a837d2f2d072383e4b52a6dece5e"
+    },
+    {
+      "title": "Assimp Parser Fix Needs Asset-Pipeline Isolation",
+      "canonicalUrl": "https://shadowcontext.com/assimp-fix-needs-asset-pipeline-isolation/",
+      "publishedAt": "2026-08-17T13:10:33.000+04:00",
+      "category": "defense",
+      "sourceHash": "24cc074dd3f00dfec6bbb7b095df92c6f38460b3f454423e354a11738600c513"
+    },
+    {
+      "title": "Huawei's August fixes need device-family proof",
+      "canonicalUrl": "https://shadowcontext.com/huawei-august-fixes-need-device-family-proof/",
+      "publishedAt": "2026-08-17T16:10:25.000+04:00",
+      "category": "defense",
+      "sourceHash": "a715492a5177797e54541748aa7f0ed47eae62c047fde1bee4244e745f677f0f"
+    },
+    {
+      "title": "Planet9 Fix Needs Service-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/planet9-fix-needs-service-level-proof/",
+      "publishedAt": "2026-08-17T19:09:10.000+04:00",
+      "category": "defense",
+      "sourceHash": "d467e797788590d337f38df1134f22c4db2bddebfc64ac2281ce8b783e577b60"
+    }
+  ],
+  "caption": "ShadowContext brings you today's essential defensive intelligence, focusing on verifiable controls, boundary enforcement, and artifact-level remediation.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-08-17/118a64a0cda0bead/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-17/118a64a0cda0bead/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-08-17/118a64a0cda0bead/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-17/118a64a0cda0bead/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}

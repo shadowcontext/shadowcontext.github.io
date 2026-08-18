@@ -1,0 +1,91 @@
+{
+  "digest_title": "Daily Security Digest: Verifying Defensive Boundaries and Fixes",
+  "dek": "A comprehensive review of recent vulnerability disclosures, emphasizing behavior-level verification, containment, and asset lifecycle management across software and hardware deployments.",
+  "overview": "Today's disclosures span template engines, MCP tools, authentication paths, network hardware, and operating system modules. Across these cases, static version checks are insufficient. Defenders must verify runtime behavior, enforce strict boundary controls, and confirm complete remediation.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "Scriban Parser Depth Limit Requires Fail-Closed Verification",
+      "summary": "CVE-2026-74783 reveals that Scriban versions 6.6.0 through 7.2.0 continue parsing after detecting excessive expression depth, risking stack overflow. Version 7.2.1 is the corrected release.",
+      "why_it_matters": "Configuration limits that only log warnings fail to contain execution, risking availability through process termination.",
+      "topic": "Template Parser Limit"
+    },
+    {
+      "source_id": "S02",
+      "headline": "MCP Pagination Tools Require Strict Destination Allowlisting",
+      "summary": "CVE-2026-19956 addresses a server-side request forgery flaw in the Facebook Ads MCP server, where arbitrary URLs were accepted without destination host validation.",
+      "why_it_matters": "Agent tools with unconstrained network capabilities can become routes from model inputs to unintended internal services.",
+      "topic": "MCP Request Forgery"
+    },
+    {
+      "source_id": "S03",
+      "headline": "SiYuan API Token Fix Needs Unified Authentication Paths",
+      "summary": "CVE-2026-73056 identifies that SiYuan kernels before 3.7.4 lack required authentication throttling on API-token evaluation paths compared to interactive logins.",
+      "why_it_matters": "Unthrottled programmatic entry points bypass protections applied to visible login pages, enabling credential guessing.",
+      "topic": "Authentication Path Consistency"
+    },
+    {
+      "source_id": "S04",
+      "headline": "Scriban Property Access Controls Need Behavioral Testing",
+      "summary": "CVE-2026-73061 describes an access-control flaw in Scriban versions before 7.2.2 where template code could write to properties bypassing intended setter visibility.",
+      "why_it_matters": "Templates interacting directly with live Common Language Runtime objects risk unintended mutation of protected state.",
+      "topic": "Template Access Control"
+    },
+    {
+      "source_id": "S05",
+      "headline": "Browser MCP Execution Demands Operating System Isolation",
+      "summary": "CVE-2026-19958 covers code injection risks in pptr-mcp versions 0.2.0 through 0.2.7, where free-form JavaScript evaluation lacks a secure sandbox.",
+      "why_it_matters": "Node.js execution contexts do not provide OS-level isolation against hostile inputs processed by browser automation tools.",
+      "topic": "Browser MCP Security"
+    },
+    {
+      "source_id": "S06",
+      "headline": "Unsupported Edimax EW-7478APC Devices Require Replacement",
+      "summary": "VulDB published CVE-2026-19960 and CVE-2026-19961 for command injection and buffer overflow flaws in the discontinued Edimax EW-7478APC.",
+      "why_it_matters": "Unsupported network appliances with remote vulnerabilities cannot receive vendor patches and must be isolated or replaced.",
+      "topic": "End of Life"
+    },
+    {
+      "source_id": "S07",
+      "headline": "Automad Password Recovery Requires Response Discrepancy Testing",
+      "summary": "CVE-2026-19965 addresses an observable response discrepancy in Automad versions 2.0.0-beta.0 through 2.0.0-beta.32 that allowed account discovery.",
+      "why_it_matters": "Recovery flows leaking valid account status provide signals that improve the precision of external targeting attacks.",
+      "topic": "Password Reset Discrepancy"
+    },
+    {
+      "source_id": "S08",
+      "headline": "GL.iNet WebDAV Flaws Demand Complete Operation Authorization",
+      "summary": "CVE-2026-19979 highlights a WebDAV vulnerability in multiple GL.iNet router models where COPY and MOVE destinations bypass authorization checks.",
+      "why_it_matters": "Checking only the starting point of file operations allows permitted public locations to overwrite protected files.",
+      "topic": "WebDAV Authorization Gap"
+    },
+    {
+      "source_id": "S09",
+      "headline": "Assimp Parser Memory Safety Demands Asset Pipeline Isolation",
+      "summary": "CVE-2026-19999 describes an out-of-bounds read vulnerability in Assimp's MDL7 bone-transformation parser, corrected in commit 50d7679.",
+      "why_it_matters": "Complex file parsers process untrusted data deeply within applications, requiring sandboxed conversion pipelines.",
+      "topic": "Memory Safety Parser"
+    },
+    {
+      "source_id": "S10",
+      "headline": "Huawei August Disclosures Require Device-Family Update Proof",
+      "summary": "Huawei published vulnerability records for HarmonyOS and EMUI components covering permission controls, clipboard modules, and image codecs.",
+      "why_it_matters": "Generic update policies are insufficient without verifying that applicable security builds reach every managed device class.",
+      "topic": "Device Family Proof"
+    },
+    {
+      "source_id": "S11",
+      "headline": "Acer Planet9 Update Requires Service-Level Verification",
+      "summary": "CVE-2026-50602 identifies excessive permissions in Acer Planet9's background service executable, prompting Acer to remove the service entirely.",
+      "why_it_matters": "Vulnerable background services running with SYSTEM privileges provide local users a path to arbitrary code execution.",
+      "topic": "Privilege Boundary"
+    }
+  ],
+  "operating_view": "Defenders must move beyond version strings and static configurations. True security proof requires verifying end-to-end fail-closed behavior, complete destination allowlists, uniform authentication paths, and actual service removal on every managed asset.",
+  "watch_items": [
+    "Verify that template parsers and file importers terminate execution cleanly on malformed inputs.",
+    "Audit agentic tool definitions for unconstrained network and filesystem capabilities.",
+    "Confirm hardware lifecycle status to ensure unsupported appliances are isolated or replaced."
+  ],
+  "caption_intro": "ShadowContext brings you today's essential defensive intelligence, focusing on verifiable controls, boundary enforcement, and artifact-level remediation."
+}

@@ -1,0 +1,679 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Daily Security Digest: Verifying Defensive Boundaries and Fixes | ShadowContext</title>
+    <style>
+      :root {
+        --paper: #05080d;
+        --panel: #0d1319;
+        --panel-soft: #091017;
+        --ink: #f1f7fa;
+        --ink-2: #c4d1d8;
+        --muted: #8496a1;
+        --line: #1d2b34;
+        --cyan: #35e6d1;
+        --violet: #8b7dff;
+        --sans: "Space Grotesk", Inter, Arial, sans-serif;
+        --mono: "DM Mono", Consolas, monospace;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: var(--sans);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        font-size: 10.5pt;
+        line-height: 1.55;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        position: relative;
+        width: 210mm;
+        min-height: 297mm;
+        padding: 18mm;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 83% 18%, rgba(139, 125, 255, 0.1), transparent 28%),
+          linear-gradient(145deg, #05080d 0%, #081017 62%, #0c101c 100%);
+      }
+
+      .page::before {
+        content: "";
+        position: absolute;
+        inset: 8mm;
+        pointer-events: none;
+        border: 0.25mm solid var(--line);
+      }
+
+      .cover {
+        display: flex;
+        flex-direction: column;
+        page-break-after: always;
+      }
+
+      .brand-row,
+      .section-head,
+      .document-footer {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 4mm;
+        font-size: 20pt;
+        font-weight: 750;
+        letter-spacing: -0.04em;
+      }
+
+      .brand em {
+        color: var(--cyan);
+        font-style: normal;
+      }
+
+      .brand-mark {
+        position: relative;
+        display: block;
+        width: 12mm;
+        height: 12mm;
+        transform: rotate(30deg);
+        border: 1mm solid var(--cyan);
+        border-radius: 1.2mm;
+      }
+
+      .brand-mark::before {
+        content: "";
+        position: absolute;
+        inset: 2.2mm;
+        border: 0.8mm solid var(--violet);
+        border-radius: 0.9mm;
+      }
+
+      .brand-mark::after {
+        content: "";
+        position: absolute;
+        inset: 4.5mm;
+        background: var(--cyan);
+        border-radius: 0.5mm;
+      }
+
+      .edition,
+      .eyebrow,
+      .topic,
+      .section-count,
+      .why span,
+      .document-footer,
+      .source-link {
+        font-family: var(--mono);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .edition,
+      .section-count,
+      .document-footer {
+        color: var(--muted);
+        font-size: 8pt;
+      }
+
+      .cover-copy {
+        position: relative;
+        z-index: 1;
+        margin: 30mm 0 0;
+      }
+
+      .eyebrow {
+        margin: 0 0 7mm;
+        color: var(--cyan);
+        font-size: 10pt;
+      }
+
+      h1 {
+        max-width: 165mm;
+        margin: 0;
+        font-size: 37pt;
+        line-height: 1.03;
+        letter-spacing: -0.05em;
+      }
+
+      .dek {
+        max-width: 155mm;
+        margin: 10mm 0 0;
+        color: var(--ink-2);
+        font-size: 16pt;
+        line-height: 1.45;
+      }
+
+      .context {
+        position: relative;
+        z-index: 1;
+        margin-top: auto;
+        padding: 9mm;
+        background: rgba(13, 19, 25, 0.94);
+        border: 0.3mm solid var(--line);
+        border-left: 1mm solid var(--violet);
+      }
+
+      .context h2,
+      .section-head h2,
+      .operating-view h2,
+      .sources h2 {
+        margin: 0;
+      }
+
+      .context h2 {
+        color: var(--violet);
+        font-family: var(--mono);
+        font-size: 9pt;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .context p {
+        margin: 4mm 0 0;
+        color: var(--ink-2);
+        font-size: 13pt;
+      }
+
+      .cover-meta {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 9mm;
+        color: var(--muted);
+        font: 8pt var(--mono);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .content {
+        padding-top: 15mm;
+        padding-bottom: 18mm;
+      }
+
+      .section-head {
+        margin-bottom: 9mm;
+        padding-bottom: 5mm;
+        border-bottom: 0.3mm solid var(--line);
+      }
+
+      .section-head h2 {
+        font-size: 23pt;
+      }
+
+      .stories {
+        position: relative;
+        z-index: 1;
+      }
+
+      .story {
+        display: grid;
+        grid-template-columns: 15mm 1fr;
+        gap: 5mm;
+        margin: 0 0 6mm;
+        padding: 7mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: rgba(13, 19, 25, 0.96);
+        border: 0.3mm solid var(--line);
+      }
+
+      .story-index {
+        color: var(--cyan);
+        font: 12pt var(--mono);
+      }
+
+      .topic {
+        margin: 0 0 2mm;
+        color: var(--cyan);
+        font-size: 7.5pt;
+      }
+
+      .story h3 {
+        margin: 0;
+        font-size: 16pt;
+        line-height: 1.18;
+        letter-spacing: -0.025em;
+      }
+
+      .summary {
+        margin: 3mm 0;
+        color: var(--ink-2);
+        font-size: 10.5pt;
+      }
+
+      .why {
+        padding-top: 3mm;
+        border-top: 0.25mm solid var(--line);
+      }
+
+      .why span {
+        color: var(--violet);
+        font-size: 7pt;
+      }
+
+      .why p {
+        display: inline;
+        margin: 0 0 0 2mm;
+        font-weight: 650;
+      }
+
+      .source-link {
+        display: inline-block;
+        margin-top: 4mm;
+        color: var(--cyan);
+        font-size: 6.8pt;
+        letter-spacing: 0.04em;
+        text-transform: none;
+      }
+
+      .operating-view,
+      .sources {
+        position: relative;
+        z-index: 1;
+        margin-top: 12mm;
+        padding: 9mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: var(--panel-soft);
+        border: 0.3mm solid var(--line);
+      }
+
+      .operating-view {
+        border-top: 1mm solid var(--cyan);
+      }
+
+      .operating-view h2,
+      .sources h2 {
+        font-size: 18pt;
+      }
+
+      .operating-view > p {
+        color: var(--ink-2);
+        font-size: 12pt;
+      }
+
+      .watch-list,
+      .source-list {
+        margin: 6mm 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .watch-list li {
+        display: grid;
+        grid-template-columns: 9mm 1fr;
+        gap: 4mm;
+        align-items: start;
+        margin: 3mm 0;
+      }
+
+      .watch-list span {
+        display: grid;
+        width: 8mm;
+        height: 8mm;
+        place-items: center;
+        color: var(--cyan);
+        border: 0.3mm solid var(--cyan);
+        font: 8pt var(--mono);
+      }
+
+      .watch-list p {
+        margin: 0;
+      }
+
+      .source-list li {
+        display: grid;
+        grid-template-columns: 10mm 1fr;
+        gap: 3mm;
+        margin: 2.5mm 0;
+        color: var(--ink-2);
+        font-size: 8.5pt;
+      }
+
+      .source-list span {
+        color: var(--violet);
+        font-family: var(--mono);
+      }
+
+      .source-list a {
+        color: var(--cyan);
+        text-decoration: underline;
+        text-decoration-color: rgba(53, 230, 209, 0.35);
+        text-underline-offset: 1mm;
+      }
+
+      .cta {
+        position: relative;
+        z-index: 1;
+        margin: 12mm 0 0;
+        padding: 7mm 9mm;
+        break-inside: avoid;
+        color: #04100f;
+        background: var(--cyan);
+      }
+
+      .cta strong {
+        display: block;
+        font-size: 14pt;
+      }
+
+      .cta span {
+        font: 9pt var(--mono);
+      }
+
+      .document-footer {
+        margin-top: 12mm;
+        padding-top: 5mm;
+        border-top: 0.3mm solid var(--line);
+      }
+
+      @media screen {
+        body {
+          width: 210mm;
+          margin: 0 auto;
+        }
+
+        .page {
+          box-shadow: 0 0 20mm rgba(0, 0, 0, 0.45);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="page cover">
+      <header class="brand-row">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Shadow<em>Context</em></span>
+        </div>
+        <span class="edition">Daily security digest</span>
+      </header>
+
+      <main class="cover-copy">
+        <p class="eyebrow">The day in context / 2026-08-17</p>
+        <h1>Daily Security Digest: Verifying Defensive Boundaries and Fixes</h1>
+        <p class="dek">A comprehensive review of recent vulnerability disclosures, emphasizing behavior-level verification, containment, and asset lifecycle management across software and hardware deployments.</p>
+      </main>
+
+      <aside class="context">
+        <h2>Executive summary</h2>
+        <p>Today&#39;s disclosures span template engines, MCP tools, authentication paths, network hardware, and operating system modules. Across these cases, static version checks are insufficient. Defenders must verify runtime behavior, enforce strict boundary controls, and confirm complete remediation.</p>
+      </aside>
+
+      <div class="cover-meta">
+        <span>11 briefings included</span>
+        <span>https://shadowcontext.com/</span>
+      </div>
+    </section>
+
+    <section class="page content">
+      <header class="section-head">
+        <h2>All news from the day</h2>
+        <span class="section-count">11 / 2026-08-17</span>
+      </header>
+
+      <main class="stories">
+    <article class="story">
+      <div class="story-index">01</div>
+      <div class="story-copy">
+        <p class="topic">Template Parser Limit</p>
+        <h3>Scriban Parser Depth Limit Requires Fail-Closed Verification</h3>
+        <p class="summary">CVE-2026-74783 reveals that Scriban versions 6.6.0 through 7.2.0 continue parsing after detecting excessive expression depth, risking stack overflow. Version 7.2.1 is the corrected release.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Configuration limits that only log warnings fail to contain execution, risking availability through process termination.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/scriban-parser-limit-needs-fail-closed-proof/">Scriban Parser Limit Needs Fail-Closed Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">02</div>
+      <div class="story-copy">
+        <p class="topic">MCP Request Forgery</p>
+        <h3>MCP Pagination Tools Require Strict Destination Allowlisting</h3>
+        <p class="summary">CVE-2026-19956 addresses a server-side request forgery flaw in the Facebook Ads MCP server, where arbitrary URLs were accepted without destination host validation.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Agent tools with unconstrained network capabilities can become routes from model inputs to unintended internal services.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/mcp-pagination-needs-destination-boundaries/">MCP Pagination Tools Need Destination Boundaries ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">03</div>
+      <div class="story-copy">
+        <p class="topic">Authentication Path Consistency</p>
+        <h3>SiYuan API Token Fix Needs Unified Authentication Paths</h3>
+        <p class="summary">CVE-2026-73056 identifies that SiYuan kernels before 3.7.4 lack required authentication throttling on API-token evaluation paths compared to interactive logins.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Unthrottled programmatic entry points bypass protections applied to visible login pages, enabling credential guessing.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/siyuan-api-token-fix-needs-authentication-path-proof/">SiYuan API Token Fix Needs Authentication-Path Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">04</div>
+      <div class="story-copy">
+        <p class="topic">Template Access Control</p>
+        <h3>Scriban Property Access Controls Need Behavioral Testing</h3>
+        <p class="summary">CVE-2026-73061 describes an access-control flaw in Scriban versions before 7.2.2 where template code could write to properties bypassing intended setter visibility.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Templates interacting directly with live Common Language Runtime objects risk unintended mutation of protected state.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/scriban-property-writes-need-behavior-level-proof/">Scriban Property Writes Need Behavior-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">05</div>
+      <div class="story-copy">
+        <p class="topic">Browser MCP Security</p>
+        <h3>Browser MCP Execution Demands Operating System Isolation</h3>
+        <p class="summary">CVE-2026-19958 covers code injection risks in pptr-mcp versions 0.2.0 through 0.2.7, where free-form JavaScript evaluation lacks a secure sandbox.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Node.js execution contexts do not provide OS-level isolation against hostile inputs processed by browser automation tools.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/browser-mcp-needs-an-os-level-boundary/">Browser MCP Code Execution Needs an OS-Level Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">06</div>
+      <div class="story-copy">
+        <p class="topic">End of Life</p>
+        <h3>Unsupported Edimax EW-7478APC Devices Require Replacement</h3>
+        <p class="summary">VulDB published CVE-2026-19960 and CVE-2026-19961 for command injection and buffer overflow flaws in the discontinued Edimax EW-7478APC.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Unsupported network appliances with remote vulnerabilities cannot receive vendor patches and must be isolated or replaced.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/edimax-flaws-make-replacement-the-security-fix/">New Edimax Flaws Make Replacement the Security Fix ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">07</div>
+      <div class="story-copy">
+        <p class="topic">Password Reset Discrepancy</p>
+        <h3>Automad Password Recovery Requires Response Discrepancy Testing</h3>
+        <p class="summary">CVE-2026-19965 addresses an observable response discrepancy in Automad versions 2.0.0-beta.0 through 2.0.0-beta.32 that allowed account discovery.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Recovery flows leaking valid account status provide signals that improve the precision of external targeting attacks.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/password-reset-fix-needs-response-level-proof/">Automad Password-Reset Fix Needs Response-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">08</div>
+      <div class="story-copy">
+        <p class="topic">WebDAV Authorization Gap</p>
+        <h3>GL.iNet WebDAV Flaws Demand Complete Operation Authorization</h3>
+        <p class="summary">CVE-2026-19979 highlights a WebDAV vulnerability in multiple GL.iNet router models where COPY and MOVE destinations bypass authorization checks.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Checking only the starting point of file operations allows permitted public locations to overwrite protected files.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/glinet-webdav-needs-destination-authorization/">GL.iNet WebDAV Flaw Exposes a Destination-Authorization Gap ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">09</div>
+      <div class="story-copy">
+        <p class="topic">Memory Safety Parser</p>
+        <h3>Assimp Parser Memory Safety Demands Asset Pipeline Isolation</h3>
+        <p class="summary">CVE-2026-19999 describes an out-of-bounds read vulnerability in Assimp&#39;s MDL7 bone-transformation parser, corrected in commit 50d7679.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Complex file parsers process untrusted data deeply within applications, requiring sandboxed conversion pipelines.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/assimp-fix-needs-asset-pipeline-isolation/">Assimp Parser Fix Needs Asset-Pipeline Isolation ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">10</div>
+      <div class="story-copy">
+        <p class="topic">Device Family Proof</p>
+        <h3>Huawei August Disclosures Require Device-Family Update Proof</h3>
+        <p class="summary">Huawei published vulnerability records for HarmonyOS and EMUI components covering permission controls, clipboard modules, and image codecs.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Generic update policies are insufficient without verifying that applicable security builds reach every managed device class.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/huawei-august-fixes-need-device-family-proof/">Huawei&#39;s August fixes need device-family proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">11</div>
+      <div class="story-copy">
+        <p class="topic">Privilege Boundary</p>
+        <h3>Acer Planet9 Update Requires Service-Level Verification</h3>
+        <p class="summary">CVE-2026-50602 identifies excessive permissions in Acer Planet9&#39;s background service executable, prompting Acer to remove the service entirely.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Vulnerable background services running with SYSTEM privileges provide local users a path to arbitrary code execution.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/planet9-fix-needs-service-level-proof/">Planet9 Fix Needs Service-Level Proof ↗</a>
+      </div>
+    </article></main>
+
+      <section class="operating-view">
+        <p class="eyebrow">The operating view</p>
+        <h2>What the day means for defenders</h2>
+        <p>Defenders must move beyond version strings and static configurations. True security proof requires verifying end-to-end fail-closed behavior, complete destination allowlists, uniform authentication paths, and actual service removal on every managed asset.</p>
+        <ol class="watch-list"><li><span>1</span><p>Verify that template parsers and file importers terminate execution cleanly on malformed inputs.</p></li>
+<li><span>2</span><p>Audit agentic tool definitions for unconstrained network and filesystem capabilities.</p></li>
+<li><span>3</span><p>Confirm hardware lifecycle status to ensure unsupported appliances are isolated or replaced.</p></li></ol>
+      </section>
+
+      <section class="sources">
+        <p class="eyebrow">Source index</p>
+        <h2>Every briefing in this digest</h2>
+        <ol class="source-list">
+    <li>
+      <span>01</span>
+      <a href="https://shadowcontext.com/scriban-parser-limit-needs-fail-closed-proof/">Scriban Parser Limit Needs Fail-Closed Proof</a>
+    </li>
+
+    <li>
+      <span>02</span>
+      <a href="https://shadowcontext.com/mcp-pagination-needs-destination-boundaries/">MCP Pagination Tools Need Destination Boundaries</a>
+    </li>
+
+    <li>
+      <span>03</span>
+      <a href="https://shadowcontext.com/siyuan-api-token-fix-needs-authentication-path-proof/">SiYuan API Token Fix Needs Authentication-Path Proof</a>
+    </li>
+
+    <li>
+      <span>04</span>
+      <a href="https://shadowcontext.com/scriban-property-writes-need-behavior-level-proof/">Scriban Property Writes Need Behavior-Level Proof</a>
+    </li>
+
+    <li>
+      <span>05</span>
+      <a href="https://shadowcontext.com/browser-mcp-needs-an-os-level-boundary/">Browser MCP Code Execution Needs an OS-Level Boundary</a>
+    </li>
+
+    <li>
+      <span>06</span>
+      <a href="https://shadowcontext.com/edimax-flaws-make-replacement-the-security-fix/">New Edimax Flaws Make Replacement the Security Fix</a>
+    </li>
+
+    <li>
+      <span>07</span>
+      <a href="https://shadowcontext.com/password-reset-fix-needs-response-level-proof/">Automad Password-Reset Fix Needs Response-Level Proof</a>
+    </li>
+
+    <li>
+      <span>08</span>
+      <a href="https://shadowcontext.com/glinet-webdav-needs-destination-authorization/">GL.iNet WebDAV Flaw Exposes a Destination-Authorization Gap</a>
+    </li>
+
+    <li>
+      <span>09</span>
+      <a href="https://shadowcontext.com/assimp-fix-needs-asset-pipeline-isolation/">Assimp Parser Fix Needs Asset-Pipeline Isolation</a>
+    </li>
+
+    <li>
+      <span>10</span>
+      <a href="https://shadowcontext.com/huawei-august-fixes-need-device-family-proof/">Huawei&#39;s August fixes need device-family proof</a>
+    </li>
+
+    <li>
+      <span>11</span>
+      <a href="https://shadowcontext.com/planet9-fix-needs-service-level-proof/">Planet9 Fix Needs Service-Level Proof</a>
+    </li></ol>
+      </section>
+
+      <div class="cta">
+        <strong>Read the full analysis</strong>
+        <span>https://shadowcontext.com/</span>
+      </div>
+
+      <footer class="document-footer">
+        <span>ShadowContext</span>
+        <span>Independent defensive security intelligence</span>
+      </footer>
+    </section>
+  </body>
+</html>
