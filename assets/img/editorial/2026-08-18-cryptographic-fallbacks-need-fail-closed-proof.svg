@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Cryptographic verification gate blocking a weak fallback</title>
+  <desc id="desc">An abstract encrypted data stream passes toward a luminous verification gate, while a dim alternate route terminates behind a sealed barrier.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071527"/>
+      <stop offset="0.52" stop-color="#102b45"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#55e6d3" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#55e6d3" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="stream" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2382b8" stop-opacity=".15"/>
+      <stop offset=".55" stop-color="#48c7d7"/>
+      <stop offset="1" stop-color="#8ff5d5"/>
+    </linearGradient>
+    <linearGradient id="gate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c2fff0"/>
+      <stop offset=".5" stop-color="#37d7c1"/>
+      <stop offset="1" stop-color="#1588a4"/>
+    </linearGradient>
+    <linearGradient id="blocked" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffbb6e"/>
+      <stop offset="1" stop-color="#de5368"/>
+    </linearGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="26"/>
+    </filter>
+    <filter id="shine" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="950" cy="420" r="410" fill="url(#glow)" filter="url(#soft)"/>
+  <g opacity=".2" fill="none" stroke="#7cc9dc" stroke-width="2">
+    <path d="M80 170 C360 70 540 210 760 130 S1200 80 1510 170"/>
+    <path d="M30 735 C310 620 510 790 760 700 S1190 640 1570 735"/>
+    <circle cx="1360" cy="250" r="120"/>
+    <circle cx="1360" cy="250" r="170"/>
+  </g>
+  <g fill="#65bfd2" opacity=".28">
+    <circle cx="145" cy="310" r="7"/><circle cx="226" cy="252" r="5"/><circle cx="302" cy="340" r="9"/>
+    <circle cx="192" cy="584" r="8"/><circle cx="345" cy="635" r="5"/><circle cx="1280" cy="690" r="7"/>
+  </g>
+  <g fill="none" stroke-linecap="round">
+    <path d="M90 405 C330 405 420 350 610 388 C720 410 770 434 878 434" stroke="#173f60" stroke-width="104" opacity=".75"/>
+    <path d="M90 405 C330 405 420 350 610 388 C720 410 770 434 878 434" stroke="url(#stream)" stroke-width="30" filter="url(#shine)"/>
+    <path d="M250 475 C470 475 580 500 715 568 C785 604 829 628 895 628" stroke="#17344b" stroke-width="72" opacity=".8"/>
+    <path d="M250 475 C470 475 580 500 715 568 C785 604 829 628 895 628" stroke="url(#blocked)" stroke-opacity=".58" stroke-width="20"/>
+  </g>
+  <g transform="translate(875 225)">
+    <rect x="0" y="0" width="180" height="420" rx="90" fill="#09223a" stroke="url(#gate)" stroke-width="12" filter="url(#shine)"/>
+    <rect x="52" y="70" width="76" height="196" rx="38" fill="#0b3850" stroke="#8ef3dc" stroke-width="7"/>
+    <circle cx="90" cy="168" r="24" fill="#a3ffe7"/>
+    <path d="M90 190 V226" stroke="#a3ffe7" stroke-width="16" stroke-linecap="round"/>
+    <path d="M47 324 L78 354 L137 294" fill="none" stroke="#9cffe4" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(840 574)">
+    <rect x="0" y="0" width="220" height="110" rx="32" fill="#151f31" stroke="#f37a76" stroke-width="7"/>
+    <path d="M50 28 L170 82 M170 28 L50 82" stroke="#ff9a85" stroke-width="17" stroke-linecap="round"/>
+  </g>
+  <g opacity=".88" fill="none" stroke="#83e7df" stroke-width="4">
+    <path d="M1080 355 C1200 285 1305 310 1435 250"/>
+    <path d="M1080 445 C1220 445 1315 488 1470 430"/>
+    <path d="M1080 535 C1195 610 1320 594 1465 655"/>
+  </g>
+  <g fill="#b8fff0">
+    <circle cx="1435" cy="250" r="12"/><circle cx="1470" cy="430" r="12"/><circle cx="1465" cy="655" r="12"/>
+  </g>
+</svg>
