@@ -1,15 +1,25 @@
 {
-  "generated_at": "2026-08-17T01:23:45Z",
-  "generated_display": "17 Aug 2026 · 01:23 UTC",
+  "generated_at": "2026-08-18T06:35:54Z",
+  "generated_display": "18 Aug 2026 · 06:35 UTC",
   "metrics": {
-    "kev_total": 1665,
-    "kev_added_30d": 18,
-    "due_next_7d": 0,
+    "kev_total": 1666,
+    "kev_added_30d": 19,
+    "due_next_7d": 2,
     "ioc_total": 197,
     "ioc_total_display": "197",
     "ioc_total_exact": "197"
   },
   "vulnerabilities": [
+    {
+      "cve": "CVE-2025-62593",
+      "name": "Ray-Project Ray Code Injection Vulnerability",
+      "vendor": "Ray-Project",
+      "product": "Ray",
+      "date_added": "2026-08-17",
+      "due_date": "2026-08-20",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2025-62593"
+    },
     {
       "cve": "CVE-2026-72898",
       "name": "Metabase SQL Injection Vulnerability",
@@ -79,16 +89,6 @@
       "due_date": "2026-08-07",
       "ransomware": "Unknown",
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-34486"
-    },
-    {
-      "cve": "CVE-2026-18556",
-      "name": "N-able N-central Authentication Bypass Using an Alternate Path or Channel Vulnerability",
-      "vendor": "N-able",
-      "product": "N-central",
-      "date_added": "2026-08-04",
-      "due_date": "2026-08-07",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-18556"
     }
   ],
   "platforms": [
@@ -161,6 +161,30 @@
   ],
   "advisories": [
     {
+      "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+      "url": "https://www.cisa.gov/news-events/alerts/2026/08/17/cisa-adds-one-known-exploited-vulnerability-catalog",
+      "date": "2026-08-17",
+      "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2025-62593 Ray-Project Ray Code…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "authority": "Saudi NCA / CERT",
+      "title": "HP Alert",
+      "url": "https://nca.gov.sa/en/cert/7875/",
+      "date": "2026-08-17",
+      "severity": "High",
+      "summary": "Security alert 2026-7751. Review the official notice for affected products and remediation guidance."
+    },
+    {
+      "authority": "Saudi NCA / CERT",
+      "title": "Apple Alert",
+      "url": "https://nca.gov.sa/en/cert/7874/",
+      "date": "2026-08-17",
+      "severity": "High",
+      "summary": "Security alert 2026-7750. Review the official notice for affected products and remediation guidance."
+    },
+    {
       "title": "Siemens Parasolid",
       "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-10",
       "date": "2026-08-13",
@@ -185,36 +209,12 @@
       "severity": ""
     },
     {
-      "title": "Johnson Controls Inc. Airwall",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-03",
-      "date": "2026-08-13",
-      "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to decrypt sensitive data, bypass authentication controls, gaining unauthorized access…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
       "authority": "Saudi NCA / CERT",
       "title": "F5 Alert",
       "url": "https://nca.gov.sa/en/cert/7873/",
       "date": "2026-08-13",
       "severity": "High",
       "summary": "Security alert 2026-7749. Review the official notice for affected products and remediation guidance."
-    },
-    {
-      "authority": "Saudi NCA / CERT",
-      "title": "F5 Alert",
-      "url": "https://nca.gov.sa/en/cert/7872/",
-      "date": "2026-08-13",
-      "severity": "High",
-      "summary": "Security alert 2026-7748. Review the official notice for affected products and remediation guidance."
-    },
-    {
-      "authority": "Saudi NCA / CERT",
-      "title": "ManageEngine Alert",
-      "url": "https://nca.gov.sa/en/cert/7871/",
-      "date": "2026-08-13",
-      "severity": "High",
-      "summary": "Security alert 2026-7747. Review the official notice for affected products and remediation guidance."
     },
     {
       "title": "How to secure your online meetings",
@@ -324,7 +324,7 @@
       "path": "/assets/data/daily-urls.txt"
     }
   ],
-  "ioc_sha256": "6dcea6597e334c45a388a929a03104e94040321b9287f4b6324c5a25067cd453",
+  "ioc_sha256": "d07c404d74c6c1c48f4b2a1c5673c1832447587dc6627242ea6a0d86080cc86a",
   "sources": {
     "kev": {
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
