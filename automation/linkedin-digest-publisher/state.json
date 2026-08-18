@@ -273,6 +273,22 @@
       "github_run_id": "31861100687",
       "status": "published",
       "last_error": null
+    },
+    "118a64a0cda0bead24f6e4d9280c1d7c976e31f53f06f1167ab05efb53ed3b24": {
+      "title": "Daily Security Digest: Verifying Defensive Boundaries and Fixes",
+      "digest_date": "2026-08-17",
+      "digest_hash": "118a64a0cda0bead24f6e4d9280c1d7c976e31f53f06f1167ab05efb53ed3b24",
+      "generated_at": "2026-08-18T06:11:22.756+04:00",
+      "briefing_url": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-17/118a64a0cda0bead/daily-digest.html",
+      "pdf_file": "assets/social/linkedin-digest/2026-08-17/118a64a0cda0bead/daily-digest.pdf",
+      "linkedin_caption": "ShadowContext brings you today's essential defensive intelligence, focusing on verifiable controls, boundary enforcement, and artifact-level remediation.\n\nThis edition brings together 11 ShadowContext briefings from August 17, 2026, with direct source links and operational priorities.\n\nRead the full daily briefing:\nhttps://shadowcontext.com/assets/social/linkedin-digest/2026-08-17/118a64a0cda0bead/daily-digest.html\n\n#Cybersecurity #ThreatIntelligence #InfoSec #AISecurity",
+      "linkedin_document_urn": "urn:li:document:D4D10AQG_l1u0bXHIkQ",
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7495317157996769280",
+      "published_at": "2026-08-18T03:14:26.998Z",
+      "github_run_id": "32094750095",
+      "status": "published",
+      "last_error": null
     }
   }
 }
