@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Guarded upload boundary for public web forms</title>
+  <desc id="desc">Abstract public form cards approach a luminous validation portal, which diverts an unsafe file while a safe file enters isolated storage.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07182b"/>
+      <stop offset="0.55" stop-color="#0b2940"/>
+      <stop offset="1" stop-color="#102235"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#54e6d3" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#54e6d3" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="portal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8ff4e5"/>
+      <stop offset="1" stop-color="#1ba9b9"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef9fb" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#9dc8d3" stop-opacity="0.72"/>
+    </linearGradient>
+    <linearGradient id="vault" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#143f57"/>
+      <stop offset="1" stop-color="#081b2d"/>
+    </linearGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#020914" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="820" cy="438" r="390" fill="url(#glow)"/>
+  <path d="M0 700 C300 610 490 760 790 675 S1260 560 1600 660 V900 H0Z" fill="#071522" opacity="0.78"/>
+  <g opacity="0.16" fill="none" stroke="#7bd8df" stroke-width="2">
+    <path d="M85 166 C330 80 505 125 683 245"/>
+    <path d="M950 130 C1200 74 1435 190 1550 330"/>
+    <path d="M1085 746 C1300 690 1480 728 1588 812"/>
+  </g>
+
+  <g transform="translate(170 234) rotate(-7 240 190)" filter="url(#shadow)">
+    <rect width="480" height="370" rx="34" fill="url(#card)"/>
+    <rect x="48" y="55" width="250" height="24" rx="12" fill="#37657b" opacity="0.7"/>
+    <rect x="48" y="110" width="382" height="62" rx="16" fill="#ffffff" opacity="0.5"/>
+    <rect x="48" y="197" width="382" height="62" rx="16" fill="#ffffff" opacity="0.5"/>
+    <rect x="48" y="284" width="180" height="42" rx="21" fill="#1ba9b9" opacity="0.9"/>
+    <circle cx="395" cy="305" r="20" fill="#d2f5f2"/>
+  </g>
+
+  <g transform="translate(600 178)" filter="url(#shadow)">
+    <ellipse cx="210" cy="272" rx="240" ry="310" fill="#43dcc9" opacity="0.12" filter="url(#soft)"/>
+    <path d="M70 60 Q70 15 115 15 H305 Q350 15 350 60 V485 Q350 530 305 530 H115 Q70 530 70 485Z" fill="#071a29" stroke="url(#portal)" stroke-width="18"/>
+    <path d="M115 82 H305 V463 H115Z" fill="#0c3044"/>
+    <path d="M150 174 L210 128 L270 174 V265 C270 325 236 365 210 378 C184 365 150 325 150 265Z" fill="url(#portal)" opacity="0.92"/>
+    <path d="M181 249 L203 271 L245 219" fill="none" stroke="#e8fffc" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="210" cy="430" r="13" fill="#8ff4e5"/>
+  </g>
+
+  <g transform="translate(460 350) rotate(9)" filter="url(#shadow)">
+    <path d="M0 0 H104 L151 47 V188 H0Z" fill="#ec6a6a"/>
+    <path d="M104 0 V47 H151" fill="#ffb0a6"/>
+    <circle cx="75" cy="110" r="32" fill="#702f43" opacity="0.8"/>
+    <path d="M59 94 L91 126 M91 94 L59 126" stroke="#ffd8ce" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  <path d="M560 540 C520 625 555 690 665 722" fill="none" stroke="#ef6c70" stroke-width="11" stroke-linecap="round" opacity="0.82"/>
+  <path d="M642 707 L670 724 L637 736" fill="none" stroke="#ef6c70" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g transform="translate(1004 330)" filter="url(#shadow)">
+    <path d="M0 0 H90 L130 40 V162 H0Z" fill="#78e9dc"/>
+    <path d="M90 0 V40 H130" fill="#d9fffa"/>
+    <path d="M30 93 L52 115 L98 68" fill="none" stroke="#0b5966" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <path d="M950 418 C980 410 1000 405 1025 405" fill="none" stroke="#8ff4e5" stroke-width="9" stroke-linecap="round" stroke-dasharray="3 24"/>
+
+  <g transform="translate(1170 235)" filter="url(#shadow)">
+    <path d="M0 85 L180 0 L360 85 L180 172Z" fill="#1d6373"/>
+    <path d="M0 85 V390 L180 480 V172Z" fill="#0c3145"/>
+    <path d="M360 85 V390 L180 480 V172Z" fill="url(#vault)"/>
+    <path d="M86 128 L180 84 L274 128 L180 174Z" fill="#071825" stroke="#52dbc9" stroke-width="7"/>
+    <path d="M86 128 V202 L180 249 V174Z" fill="#124354"/>
+    <path d="M274 128 V202 L180 249 V174Z" fill="#0b293c"/>
+    <circle cx="180" cy="344" r="45" fill="#0a2435" stroke="#53dfce" stroke-width="9"/>
+    <circle cx="180" cy="344" r="11" fill="#8ff4e5"/>
+    <path d="M180 355 V389" stroke="#8ff4e5" stroke-width="10" stroke-linecap="round"/>
+  </g>
+
+  <g opacity="0.48" fill="#8ff4e5">
+    <circle cx="1110" cy="185" r="5"/><circle cx="1142" cy="160" r="3"/><circle cx="1082" cy="214" r="3"/>
+    <circle cx="770" cy="102" r="4"/><circle cx="815" cy="82" r="3"/><circle cx="855" cy="112" r="5"/>
+  </g>
+</svg>
