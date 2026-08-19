@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-08-19T06:13:54.462+04:00",
+  "digestDate": "2026-08-18",
+  "digestHash": "b58ae4aa27a5ed2ff71b44cc5a8bdb82145c1dd326c88f59bc2b1212421e42e4",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "ShadowContext Security Digest: Fail-Closed Boundaries and Authorization",
+  "articleCount": 5,
+  "sourceArticles": [
+    {
+      "title": "MemOS Authentication Needs Fail-Closed Proof",
+      "canonicalUrl": "https://shadowcontext.com/memos-authentication-needs-fail-closed-proof/",
+      "publishedAt": "2026-08-18T11:10:05.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "51f4e40ceb7df5f87bda687ed90189dde30bbe0220414577d1b5409c7be45dfc"
+    },
+    {
+      "title": "Ray Exploitation Needs a Browser-Resistant Boundary",
+      "canonicalUrl": "https://shadowcontext.com/ray-exploitation-needs-a-browser-resistant-boundary/",
+      "publishedAt": "2026-08-18T12:09:29.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "6eb8e3cee1dc09d619961aecb03329c28a91d5c56851e99e5b6deafb69146149"
+    },
+    {
+      "title": "Cryptographic Fallbacks Need Fail-Closed Proof",
+      "canonicalUrl": "https://shadowcontext.com/cryptographic-fallbacks-need-fail-closed-proof/",
+      "publishedAt": "2026-08-18T13:11:03.000+04:00",
+      "category": "defense",
+      "sourceHash": "3ea447c31699d97e98e67caa1715762f7617bcaa3dffa9cfd15d0c4147d90133"
+    },
+    {
+      "title": "Forminator Fix Needs Upload-Boundary Proof",
+      "canonicalUrl": "https://shadowcontext.com/forminator-fix-needs-upload-boundary-proof/",
+      "publishedAt": "2026-08-18T15:09:15.000+04:00",
+      "category": "defense",
+      "sourceHash": "83528be9b8a17a9228230084c469a24b73a3ed7f549c7325a87d67a37f3882f6"
+    },
+    {
+      "title": "GitLab Public Projects Need Mutation Boundaries",
+      "canonicalUrl": "https://shadowcontext.com/gitlab-public-projects-need-mutation-boundaries/",
+      "publishedAt": "2026-08-18T16:09:59.000+04:00",
+      "category": "defense",
+      "sourceHash": "aee5d569d578a89bdc19aeda136cfca685de40df545edce97167ef758ad7ff4e"
+    }
+  ],
+  "caption": "Review the full ShadowContext defensive security brief covering critical infrastructure updates, vulnerability validations, and operational recommendations.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-08-18/b58ae4aa27a5ed2f/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-18/b58ae4aa27a5ed2f/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-08-18/b58ae4aa27a5ed2f/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-18/b58ae4aa27a5ed2f/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}
