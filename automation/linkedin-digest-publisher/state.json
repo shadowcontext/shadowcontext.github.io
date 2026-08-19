@@ -289,6 +289,22 @@
       "github_run_id": "32094750095",
       "status": "published",
       "last_error": null
+    },
+    "b58ae4aa27a5ed2ff71b44cc5a8bdb82145c1dd326c88f59bc2b1212421e42e4": {
+      "title": "ShadowContext Security Digest: Fail-Closed Boundaries and Authorization",
+      "digest_date": "2026-08-18",
+      "digest_hash": "b58ae4aa27a5ed2ff71b44cc5a8bdb82145c1dd326c88f59bc2b1212421e42e4",
+      "generated_at": "2026-08-19T06:13:54.462+04:00",
+      "briefing_url": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-18/b58ae4aa27a5ed2f/daily-digest.html",
+      "pdf_file": "assets/social/linkedin-digest/2026-08-18/b58ae4aa27a5ed2f/daily-digest.pdf",
+      "linkedin_caption": "Review the full ShadowContext defensive security brief covering critical infrastructure updates, vulnerability validations, and operational recommendations.\n\nThis edition brings together 5 ShadowContext briefings from August 18, 2026, with direct source links and operational priorities.\n\nRead the full daily briefing:\nhttps://shadowcontext.com/assets/social/linkedin-digest/2026-08-18/b58ae4aa27a5ed2f/daily-digest.html\n\n#Cybersecurity #ThreatIntelligence #InfoSec #AISecurity",
+      "linkedin_document_urn": "urn:li:document:D4D10AQHmD4_VDTbATA",
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7495681773285253120",
+      "published_at": "2026-08-19T03:23:18.065Z",
+      "github_run_id": "32211944584",
+      "status": "published",
+      "last_error": null
     }
   }
 }
