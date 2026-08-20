@@ -305,6 +305,22 @@
       "github_run_id": "32211944584",
       "status": "published",
       "last_error": null
+    },
+    "fb5c0eaa2730fe264e8dfa44775fa4f9b16a2a467b521487c7e27031abb2e12b": {
+      "title": "Daily Cybersecurity Digest: Release Proof and Identity Integrity",
+      "digest_date": "2026-08-19",
+      "digest_hash": "fb5c0eaa2730fe264e8dfa44775fa4f9b16a2a467b521487c7e27031abb2e12b",
+      "generated_at": "2026-08-20T06:13:11.985+04:00",
+      "briefing_url": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-19/fb5c0eaa2730fe26/daily-digest.html",
+      "pdf_file": "assets/social/linkedin-digest/2026-08-19/fb5c0eaa2730fe26/daily-digest.pdf",
+      "linkedin_caption": "Read the complete ShadowContext security briefing for detailed technical context and operational recommendations.\n\nThis edition brings together 3 ShadowContext briefings from August 19, 2026, with direct source links and operational priorities.\n\nRead the full daily briefing:\nhttps://shadowcontext.com/assets/social/linkedin-digest/2026-08-19/fb5c0eaa2730fe26/daily-digest.html\n\n#Cybersecurity #ThreatIntelligence #InfoSec #SecurityOperations",
+      "linkedin_document_urn": "urn:li:document:D4D10AQFlIBWfvJmwbA",
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7496044141294817280",
+      "published_at": "2026-08-20T03:23:13.326Z",
+      "github_run_id": "32328027750",
+      "status": "published",
+      "last_error": null
     }
   }
 }
