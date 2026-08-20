@@ -1,0 +1,35 @@
+{
+  "digest_title": "Daily Cybersecurity Digest: Release Proof and Identity Integrity",
+  "dek": "August 19 security updates highlight the critical need to verify version lanes, authorization context propagation, and peer certificate validation.",
+  "overview": "Today's advisories emphasize that deployment and configuration must be verified at runtime. Firefox, ArcadeDB, and Armeria updates illustrate that software distribution, asynchronous execution, and transport encryption require end-to-end proof rather than assumptions.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "Firefox Updates Fix High-Impact Flaws Across Release Lanes",
+      "summary": "Mozilla released Firefox 154 and three ESR updates fixing high-impact defects across browser boundaries, requiring strict release-lane verification.",
+      "why_it_matters": "Managed fleets use multiple supported tracks, so tracking product name alone risks leaving stale builds running.",
+      "topic": "Browser Security"
+    },
+    {
+      "source_id": "S02",
+      "headline": "ArcadeDB Fixes Identity Loss Across Asynchronous Execution Paths",
+      "summary": "Version 26.8.1 fixes critical authorization flaws where authenticated principals were dropped during asynchronous and gRPC transaction handoffs.",
+      "why_it_matters": "Applications must ensure user identity survives execution handoffs instead of defaulting to internal trust.",
+      "topic": "Authorization Context"
+    },
+    {
+      "source_id": "S03",
+      "headline": "Armeria xDS TLS Fixes Missing Peer Identity Proof",
+      "summary": "Armeria version 1.41.0 resolves a critical flaw in armeria-xds where TLS could be established without certificate or hostname validation.",
+      "why_it_matters": "Encrypted connections can provide false security if peer identity is not actively verified.",
+      "topic": "Transport Security"
+    }
+  ],
+  "operating_view": "Defenders must validate runtime execution states. Confirm active versions across all release lanes, ensure authorization context survives thread transitions, and verify that encrypted channels strictly enforce peer certificate validation.",
+  "watch_items": [
+    "Verify Firefox endpoint versions match their intended release lanes rather than relying on successful update jobs.",
+    "Test asynchronous and transactional interfaces to ensure authenticated user identity remains attached through execution handoffs.",
+    "Audit xDS-managed TLS connections to confirm strict peer certificate and hostname validation are enforced."
+  ],
+  "caption_intro": "Read the complete ShadowContext security briefing for detailed technical context and operational recommendations."
+}

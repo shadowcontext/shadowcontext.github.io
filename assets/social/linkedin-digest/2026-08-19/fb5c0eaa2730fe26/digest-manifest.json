@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-08-20T06:13:11.985+04:00",
+  "digestDate": "2026-08-19",
+  "digestHash": "fb5c0eaa2730fe264e8dfa44775fa4f9b16a2a467b521487c7e27031abb2e12b",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "Daily Cybersecurity Digest: Release Proof and Identity Integrity",
+  "articleCount": 3,
+  "sourceArticles": [
+    {
+      "title": "Firefox Fixes Need Release-Lane Proof",
+      "canonicalUrl": "https://shadowcontext.com/firefox-fixes-need-release-lane-proof/",
+      "publishedAt": "2026-08-19T11:09:49.000+04:00",
+      "category": "defense",
+      "sourceHash": "53d0496afe342065d48693cb31809c0a44dff565f5780836d188ab4b74ea050c"
+    },
+    {
+      "title": "ArcadeDB Fix Shows Why Identity Must Follow Every Execution Path",
+      "canonicalUrl": "https://shadowcontext.com/arcadedb-identity-must-follow-execution-paths/",
+      "publishedAt": "2026-08-19T14:09:05.000+04:00",
+      "category": "defense",
+      "sourceHash": "32dd018f3fa956ad1894563a9ffaff1dabb771a5cf39163b45601e6940b5478c"
+    },
+    {
+      "title": "Armeria xDS TLS Needs Peer-Identity Proof",
+      "canonicalUrl": "https://shadowcontext.com/armeria-xds-tls-needs-peer-proof/",
+      "publishedAt": "2026-08-19T16:10:51.000+04:00",
+      "category": "defense",
+      "sourceHash": "c6ca01d190a96d5e23c374b7aa591e194c182668b0d74dd3da883aca1725acf2"
+    }
+  ],
+  "caption": "Read the complete ShadowContext security briefing for detailed technical context and operational recommendations.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-08-19/fb5c0eaa2730fe26/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-19/fb5c0eaa2730fe26/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-08-19/fb5c0eaa2730fe26/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-19/fb5c0eaa2730fe26/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}
