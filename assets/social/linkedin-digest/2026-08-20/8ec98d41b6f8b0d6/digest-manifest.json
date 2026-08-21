@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-08-21T06:19:26.289+04:00",
+  "digestDate": "2026-08-20",
+  "digestHash": "8ec98d41b6f8b0d656f2d27b6e89cdde261b679cdbaa79318b87d1a7a3f5bfd7",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "Cisco Crosswork Fix Requires Release-Level Deployment Verification",
+  "articleCount": 1,
+  "sourceArticles": [
+    {
+      "title": "Cisco Crosswork Fix Needs Release-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/crosswork-fix-needs-release-level-proof/",
+      "publishedAt": "2026-08-20T10:11:09.000+04:00",
+      "category": "defense",
+      "sourceHash": "a9667dbefa7c89eaa87602fe6bc6b4def4bd0366dd53c3e48888267867e3db72"
+    }
+  ],
+  "caption": "Read the complete analysis on Cisco Crosswork hardening, patch verification, and vulnerability triage.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-08-20/8ec98d41b6f8b0d6/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-20/8ec98d41b6f8b0d6/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-08-20/8ec98d41b6f8b0d6/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-20/8ec98d41b6f8b0d6/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}

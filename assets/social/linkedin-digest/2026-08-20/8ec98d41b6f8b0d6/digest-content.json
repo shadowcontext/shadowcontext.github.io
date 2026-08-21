@@ -1,0 +1,21 @@
+{
+  "digest_title": "Cisco Crosswork Fix Requires Release-Level Deployment Verification",
+  "dek": "Cisco addresses four critical vulnerabilities in Crosswork Planning without workarounds.",
+  "overview": "Cisco released a critical security hardening update for Crosswork Planning covering four CVE records with no known malicious use or workarounds available.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "Cisco Crosswork Hardening Release Fixes Critical Vulnerabilities",
+      "summary": "Cisco published a critical security hardening release for Crosswork Planning fixing four vulnerability classes without workarounds or malicious use.",
+      "why_it_matters": "Defenders must verify actual running software versions to ensure complete risk closure.",
+      "topic": "Vulnerability Management"
+    }
+  ],
+  "operating_view": "Maintain rigorous inventory tracking and rely on release-level validation rather than incomplete dashboard metrics.",
+  "watch_items": [
+    "Verify running software release levels across all Crosswork Planning instances.",
+    "Restrict management access to dedicated administrative networks during upgrade preparations.",
+    "Monitor administrative activity and database errors around the management plane."
+  ],
+  "caption_intro": "Read the complete analysis on Cisco Crosswork hardening, patch verification, and vulnerability triage."
+}
