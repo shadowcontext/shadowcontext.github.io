@@ -1,0 +1,6 @@
+Review the full analysis of Canonical Kubernetes 1.36 upgrade requirements and operational verifications.
+
+Read the full ShadowContext briefings:
+https://shadowcontext.com/
+
+#Cybersecurity #CyberNews #InfoSec #AISecurity

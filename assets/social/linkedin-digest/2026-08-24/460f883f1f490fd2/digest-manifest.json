@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-08-25T06:14:15.811+04:00",
+  "digestDate": "2026-08-24",
+  "digestHash": "460f883f1f490fd2a9bdb1f8a3b112cfa89e4239047b1e941fdd553b7b81cea6",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "Canonical Kubernetes 1.36 Release Requires Live Network Path Verification",
+  "articleCount": 1,
+  "sourceArticles": [
+    {
+      "title": "Canonical Kubernetes Upgrades Need Network-Path Proof",
+      "canonicalUrl": "https://shadowcontext.com/canonical-kubernetes-upgrade-needs-network-path-proof/",
+      "publishedAt": "2026-08-24T13:09:37.000+04:00",
+      "category": "defense",
+      "sourceHash": "11b362287ece2fbbd82c7c7a5fe13d50e4db00d5cf7b6b94fb3c366d603177fb"
+    }
+  ],
+  "caption": "Review the full analysis of Canonical Kubernetes 1.36 upgrade requirements and operational verifications.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-08-24/460f883f1f490fd2/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-24/460f883f1f490fd2/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-08-24/460f883f1f490fd2/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-24/460f883f1f490fd2/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}

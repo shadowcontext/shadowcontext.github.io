@@ -1,0 +1,21 @@
+{
+  "digest_title": "Canonical Kubernetes 1.36 Release Requires Live Network Path Verification",
+  "dek": "Canonical Kubernetes 1.36 introduces routing changes and removes k8s-dqlite, requiring defenders to verify live network paths and datastore readiness.",
+  "overview": "Canonical Kubernetes 1.36 changes service routing, component versions, and datastore support. Defenders must verify live paths and inventory states rather than relying on version checks.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "Canonical Kubernetes 1.36 Upgrade Changes Routing and Datastore",
+      "summary": "Canonical Kubernetes 1.36 removes kube-proxy on new clusters using Cilium, deprecates specific settings, and makes etcd the only supported built-in datastore.",
+      "why_it_matters": "Identical versions can have different packet paths and failure modes, making verification essential.",
+      "topic": "Kubernetes Upgrades"
+    }
+  ],
+  "operating_view": "Operators must confirm current datastore backends before upgrading and test representative service flows, ingress policies, and telemetry coverage after deployment.",
+  "watch_items": [
+    "Verify live network paths and effective routing states after upgrades.",
+    "Confirm datastore backends before initiating cluster upgrades.",
+    "Test telemetry coverage and policy enforcement post-upgrade."
+  ],
+  "caption_intro": "Review the full analysis of Canonical Kubernetes 1.36 upgrade requirements and operational verifications."
+}
