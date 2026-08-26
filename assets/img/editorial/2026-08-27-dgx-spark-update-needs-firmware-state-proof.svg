@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Firmware state verification for an AI compute module</title>
+  <desc id="desc">An abstract dark compute module with layered firmware blocks passes through a cyan verification ring toward a protected green running state.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071426"/>
+      <stop offset="0.52" stop-color="#10294a"/>
+      <stop offset="1" stop-color="#071b24"/>
+    </linearGradient>
+    <linearGradient id="board" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a3f67"/>
+      <stop offset="1" stop-color="#0b2039"/>
+    </linearGradient>
+    <linearGradient id="verified" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3ce5ff"/>
+      <stop offset="1" stop-color="#64f3b5"/>
+    </linearGradient>
+    <radialGradient id="halo">
+      <stop offset="0" stop-color="#4eeac6" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#4eeac6" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" fill="none" stroke="#7fd7e8" stroke-opacity="0.07"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <ellipse cx="1115" cy="446" rx="440" ry="370" fill="url(#halo)"/>
+
+  <g fill="none" stroke="#7bc9df" stroke-opacity="0.22" stroke-width="3">
+    <path d="M0 190h280l78 78h175"/>
+    <path d="M0 710h245l112-112h172"/>
+    <path d="M1600 170h-214l-80 80h-150"/>
+    <path d="M1600 735h-260l-82-82h-120"/>
+  </g>
+  <g fill="#65dcf2" fill-opacity="0.5">
+    <circle cx="279" cy="190" r="7"/><circle cx="357" cy="268" r="7"/>
+    <circle cx="245" cy="710" r="7"/><circle cx="1352" cy="170" r="7"/>
+    <circle cx="1339" cy="735" r="7"/><circle cx="1258" cy="653" r="7"/>
+  </g>
+
+  <g transform="translate(220 190)">
+    <path d="M90 90h510l105 105v350L600 650H90L0 560V180z" fill="url(#board)" stroke="#76cce2" stroke-opacity="0.65" stroke-width="5"/>
+    <path d="M90 90v470l90 90M90 560h510V90" fill="none" stroke="#96e7f2" stroke-opacity="0.27" stroke-width="4"/>
+    <g fill="#0b182b" stroke="#55cde8" stroke-width="4">
+      <rect x="185" y="182" width="330" height="94" rx="18"/>
+      <rect x="185" y="306" width="330" height="94" rx="18"/>
+      <rect x="185" y="430" width="330" height="94" rx="18"/>
+    </g>
+    <g fill="#5edbf0">
+      <circle cx="225" cy="229" r="12"/><circle cx="225" cy="353" r="12"/><circle cx="225" cy="477" r="12"/>
+    </g>
+    <g stroke="#87dbea" stroke-linecap="round" stroke-width="8" opacity="0.72">
+      <path d="M267 229h194"/><path d="M267 353h194"/><path d="M267 477h194"/>
+    </g>
+    <g stroke="#5bcbdc" stroke-width="5" opacity="0.55">
+      <path d="M0 270h-56M0 330h-56M0 390h-56M705 270h58M705 330h58M705 390h58"/>
+    </g>
+  </g>
+
+  <g transform="translate(940 450)">
+    <circle r="236" fill="#061a27" fill-opacity="0.52" stroke="#48dcf2" stroke-opacity="0.25" stroke-width="18"/>
+    <circle r="190" fill="none" stroke="url(#verified)" stroke-width="25" stroke-dasharray="940 254" stroke-linecap="round" transform="rotate(-44)" filter="url(#glow)"/>
+    <circle r="126" fill="#0d3140" stroke="#62efb7" stroke-width="5"/>
+    <path d="M-60 3l42 43L72-55" fill="none" stroke="#72f3b9" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  </g>
+
+  <g transform="translate(1250 332)" fill="none" stroke="#75efbc" stroke-width="5" opacity="0.78">
+    <path d="M0 0h128v238H0z"/>
+    <path d="M24 44h80M24 82h80M24 120h52"/>
+    <circle cx="64" cy="188" r="25"/>
+    <path d="M51 188l10 10 20-23" stroke-width="7"/>
+  </g>
+  <path d="M1118 450h132" stroke="#6df1bd" stroke-width="7" stroke-linecap="round" stroke-dasharray="14 18" opacity="0.7"/>
+</svg>
