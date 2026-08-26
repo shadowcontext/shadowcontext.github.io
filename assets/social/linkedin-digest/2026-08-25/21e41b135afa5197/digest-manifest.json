@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-08-26T06:20:50.972+04:00",
+  "digestDate": "2026-08-25",
+  "digestHash": "21e41b135afa519784632d8f29882cae20d8cd0fb7d657c346378814db8e166a",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "Daily Security Digest: Updates, Hardware Assurance, and Controls",
+  "articleCount": 8,
+  "sourceArticles": [
+    {
+      "title": "Ansible Update Puts Control-Plane Inputs Under Review",
+      "canonicalUrl": "https://shadowcontext.com/ansible-update-needs-control-plane-input-proof/",
+      "publishedAt": "2026-08-25T07:09:58.000+04:00",
+      "category": "defense",
+      "sourceHash": "27f7a661c9b1e7712da1ecbc20a49cf248c2bd33024c593283a1dc04f2054e79"
+    },
+    {
+      "title": "Plesk Extension Fixes Need Tenant-Boundary Proof",
+      "canonicalUrl": "https://shadowcontext.com/plesk-extension-fixes-need-tenant-boundary-proof/",
+      "publishedAt": "2026-08-25T17:09:33.000+04:00",
+      "category": "defense",
+      "sourceHash": "eea49b2e45778bc504ad11999bac0d0c4272edbf4cfa69ccb9e6cb45e500cd36"
+    },
+    {
+      "title": "Furuno AIS Warning Makes Vessel Network Boundaries the Fix",
+      "canonicalUrl": "https://shadowcontext.com/furuno-ais-needs-vessel-network-boundaries/",
+      "publishedAt": "2026-08-25T18:10:09.000+04:00",
+      "category": "defense",
+      "sourceHash": "702eb03c80c49a426e290fc64e05a33a34d07de7463fbe84347c07c116b404f0"
+    },
+    {
+      "title": "OpenSSL Security Releases Need Loaded-Library Proof",
+      "canonicalUrl": "https://shadowcontext.com/openssl-security-releases-need-loaded-library-proof/",
+      "publishedAt": "2026-08-25T19:11:36.000+04:00",
+      "category": "defense",
+      "sourceHash": "3cad4a264ca713e4c0e74c70aa8ca7f4285586084c6514eae3e74a5502faf79b"
+    },
+    {
+      "title": "ASIC Assurance Needs Evidence Across the Entire Design Lifecycle",
+      "canonicalUrl": "https://shadowcontext.com/asic-assurance-needs-lifecycle-evidence/",
+      "publishedAt": "2026-08-25T20:10:01.000+04:00",
+      "category": "defense",
+      "sourceHash": "699966fea1443f2d35caa049cd67e2e96cc23bf91b0d59c7644a784467c46c33"
+    },
+    {
+      "title": "DrayTek Switch Fixes Need Firmware-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/draytek-switch-fixes-need-firmware-level-proof/",
+      "publishedAt": "2026-08-25T21:08:35.000+04:00",
+      "category": "defense",
+      "sourceHash": "f499d50496b7a662c39e9a4a9a6f6e004f7e68ee7ca7b55201c410d0aecbbd73"
+    },
+    {
+      "title": "UAE Biometric Scam Warning Makes the Official Counter a Security Boundary",
+      "canonicalUrl": "https://shadowcontext.com/uae-biometric-scams-demand-official-counter-verification/",
+      "publishedAt": "2026-08-25T22:08:54.000+04:00",
+      "category": "defense",
+      "sourceHash": "f788cb84c7646868d011327c6778540bbe951ee1b8394847a7d6d1dec151fa2c"
+    },
+    {
+      "title": "Kaltura Warning Makes Endpoint Isolation the Immediate Control",
+      "canonicalUrl": "https://shadowcontext.com/kaltura-endpoint-isolation-needs-immediate-proof/",
+      "publishedAt": "2026-08-25T23:10:17.000+04:00",
+      "category": "defense",
+      "sourceHash": "c8f50524a02243a615337d5bb4eca19e6944f819a83cd93df098ee973ef3b2ec"
+    }
+  ],
+  "caption": "Read the complete ShadowContext daily defense brief for comprehensive analysis and operational guidance.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-08-25/21e41b135afa5197/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-25/21e41b135afa5197/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-08-25/21e41b135afa5197/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-25/21e41b135afa5197/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}

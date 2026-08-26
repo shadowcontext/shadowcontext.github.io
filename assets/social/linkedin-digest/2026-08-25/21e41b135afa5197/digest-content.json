@@ -1,0 +1,70 @@
+{
+  "digest_title": "Daily Security Digest: Updates, Hardware Assurance, and Controls",
+  "dek": "ShadowContext daily briefing covering Ansible, Plesk, Furuno, OpenSSL, NSA ASIC guidance, DrayTek, UAE biometric risks, and Kaltura vulnerabilities.",
+  "overview": "Today's defense digest spans infrastructure updates, hardware lifecycle assurance, and urgent boundary verification across eight distinct security notices.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "Ansible Automation Platform Update Addresses Multiple Trust Boundaries",
+      "summary": "Red Hat issued a security update for Ansible Automation Platform 2.6 addressing multiple webhook, notification, archive, and dependency flaws.",
+      "why_it_matters": "Privileged automation interpreters require proven trust paths, not just package installations.",
+      "topic": "Ansible security updates"
+    },
+    {
+      "source_id": "S02",
+      "headline": "Plesk Fixes Local Privilege Escalation in Migrator and Site Import",
+      "summary": "Plesk fixed CVE-2026-65647 in Migrator and Site Import extensions, requiring version checks and tenant-boundary confirmation.",
+      "why_it_matters": "Tenant isolation on shared servers depends on keeping privileged migration extensions updated.",
+      "topic": "Plesk extension fixes"
+    },
+    {
+      "source_id": "S03",
+      "headline": "Furuno AIS Warning Requires Vessel Network Isolation",
+      "summary": "Furuno warned that discontinued FA-50 transponders contain unpatched authentication flaws requiring network isolation or hardware replacement.",
+      "why_it_matters": "Unsupported operational technology turns network design into the primary security update.",
+      "topic": "Furuno AIS security"
+    },
+    {
+      "source_id": "S04",
+      "headline": "OpenSSL Releases Security Updates Across Five Branch Series",
+      "summary": "OpenSSL published security updates for five maintained branches; teams must verify loaded libraries and restart dependent services.",
+      "why_it_matters": "A package on disk does not prove running applications use the corrected library.",
+      "topic": "OpenSSL security releases"
+    },
+    {
+      "source_id": "S05",
+      "headline": "NSA Report Maps ASIC Threats Across Design Lifecycle",
+      "summary": "NSA published technical reports mapping 18 hardware threats, showing assurance evidence must follow custom chips throughout production.",
+      "why_it_matters": "Silicon remediation is costly, making lifecycle provenance essential for custom hardware.",
+      "topic": "ASIC hardware assurance"
+    },
+    {
+      "source_id": "S06",
+      "headline": "DrayTek Releases VigorSwitch Firmware Updates for 29 Vulnerabilities",
+      "summary": "DrayTek issued firmware updates for selected VigorSwitch models to resolve 29 vulnerabilities, requiring exact model mapping.",
+      "why_it_matters": "Precise model inventory and management path control are necessary to complete firmware remediation.",
+      "topic": "DrayTek switch firmware"
+    },
+    {
+      "source_id": "S07",
+      "headline": "UAE Biometric Scam Warning Highlights Official Counter Boundaries",
+      "summary": "An Indian Embassy advisory warned nationals in the UAE about fraudulent biometric collection agents, stressing official counter verification.",
+      "why_it_matters": "Identity proofing fails when unauthorized intermediaries collect biometrics outside official facilities.",
+      "topic": "Biometric scam warnings"
+    },
+    {
+      "source_id": "S08",
+      "headline": "CERT/CC Warns of Kaltura HTML5 Player Vulnerabilities",
+      "summary": "CERT/CC highlighted unauthenticated execution and file-read vulnerabilities in Kaltura HTML5 player libraries, urging endpoint isolation.",
+      "why_it_matters": "Endpoint isolation and strict destination controls mitigate exposure while vendor patches remain unavailable.",
+      "topic": "Kaltura player vulnerabilities"
+    }
+  ],
+  "operating_view": "Defenders must maintain rigorous asset visibility, verify running runtime states over static package files, and enforce strict boundary controls when vendor patches are unavailable.",
+  "watch_items": [
+    "Verify exact package and extension versions across all managed infrastructure servers.",
+    "Ensure network isolation and management plane restrictions for legacy operational hardware.",
+    "Check loaded library provenance and service restart status following cryptographic updates."
+  ],
+  "caption_intro": "Read the complete ShadowContext daily defense brief for comprehensive analysis and operational guidance."
+}
