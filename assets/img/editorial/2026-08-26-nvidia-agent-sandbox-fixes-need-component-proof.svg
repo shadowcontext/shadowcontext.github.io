@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Layered agent sandbox with sealed security boundaries</title>
+  <desc id="desc">Abstract editorial illustration of a luminous protected core enclosed by layered translucent shells, with small gaps visibly sealed by bright boundary markers.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071526"/>
+      <stop offset="0.55" stop-color="#102844"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="48%" r="54%">
+      <stop offset="0" stop-color="#70f2d0" stop-opacity="0.34"/>
+      <stop offset="0.46" stop-color="#42a9d5" stop-opacity="0.13"/>
+      <stop offset="1" stop-color="#071526" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shell" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#92f7dc" stop-opacity="0.82"/>
+      <stop offset="0.5" stop-color="#49b9da" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#7a74d9" stop-opacity="0.72"/>
+    </linearGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#d9fff4"/>
+      <stop offset="0.5" stop-color="#71edcf"/>
+      <stop offset="1" stop-color="#2ea9c5"/>
+    </linearGradient>
+    <linearGradient id="seal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd79c"/>
+      <stop offset="1" stop-color="#ff7b73"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+    <pattern id="grain" width="64" height="64" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="14" r="1.2" fill="#d8f8ff" opacity="0.12"/>
+      <circle cx="42" cy="36" r="0.9" fill="#d8f8ff" opacity="0.1"/>
+      <circle cx="57" cy="9" r="0.7" fill="#d8f8ff" opacity="0.08"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grain)"/>
+  <ellipse cx="800" cy="445" rx="650" ry="390" fill="url(#halo)"/>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M382 252 Q800 40 1218 252 Q1374 444 1218 648 Q800 852 382 648 Q226 444 382 252Z" stroke="#344f79" stroke-width="3" opacity="0.45"/>
+    <path d="M443 292 Q800 111 1157 292 Q1287 447 1157 608 Q800 783 443 608 Q313 447 443 292Z" stroke="url(#shell)" stroke-width="18" opacity="0.42"/>
+    <path d="M516 332 Q800 189 1084 332 Q1186 447 1084 568 Q800 705 516 568 Q414 447 516 332Z" stroke="url(#shell)" stroke-width="23" opacity="0.62"/>
+    <path d="M596 367 Q800 264 1004 367 Q1075 449 1004 533 Q800 634 596 533 Q525 449 596 367Z" stroke="url(#shell)" stroke-width="28" opacity="0.88"/>
+  </g>
+
+  <g opacity="0.65">
+    <ellipse cx="448" cy="268" rx="70" ry="20" fill="#4dd0cf" filter="url(#soft)"/>
+    <ellipse cx="1160" cy="613" rx="82" ry="24" fill="#716bd5" filter="url(#soft)"/>
+  </g>
+
+  <g filter="url(#glow)">
+    <path d="M800 319 L921 389 L921 511 L800 581 L679 511 L679 389Z" fill="url(#core)" opacity="0.96"/>
+    <path d="M800 353 L887 403 L887 497 L800 547 L713 497 L713 403Z" fill="#0d2941" opacity="0.78"/>
+    <circle cx="800" cy="450" r="49" fill="#bffff0"/>
+    <circle cx="800" cy="450" r="22" fill="#ffffff"/>
+  </g>
+
+  <g fill="url(#seal)" filter="url(#glow)">
+    <path d="M1111 278 l34 -19 l27 15 l-35 23Z"/>
+    <path d="M455 582 l37 20 l-5 31 l-42 -22Z"/>
+    <path d="M1221 442 l43 -2 l12 30 l-47 3Z"/>
+  </g>
+  <g fill="#ffe6bd">
+    <circle cx="1150" cy="276" r="5"/>
+    <circle cx="472" cy="607" r="5"/>
+    <circle cx="1248" cy="456" r="5"/>
+  </g>
+
+  <g fill="#8ce8de" opacity="0.55">
+    <circle cx="280" cy="342" r="5"/>
+    <circle cx="324" cy="665" r="3"/>
+    <circle cx="1311" cy="312" r="4"/>
+    <circle cx="1282" cy="664" r="6"/>
+    <circle cx="1050" cy="145" r="3"/>
+    <circle cx="563" cy="742" r="4"/>
+  </g>
+</svg>
