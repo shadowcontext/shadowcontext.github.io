@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Verified Java runtime restart</title>
+  <desc id="desc">Abstract editorial artwork showing layered runtime streams passing through a guarded restart gate and emerging as a verified green service state.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071427"/>
+      <stop offset="0.58" stop-color="#102545"/>
+      <stop offset="1" stop-color="#071b22"/>
+    </linearGradient>
+    <linearGradient id="flow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5b6f91"/>
+      <stop offset="0.48" stop-color="#58a6c7"/>
+      <stop offset="1" stop-color="#5de2ad"/>
+    </linearGradient>
+    <linearGradient id="gate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d8f8ff" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#62c9db" stop-opacity="0.38"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#59e0ac" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#59e0ac" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#020711" flood-opacity="0.62"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1260" cy="450" r="360" fill="url(#glow)" filter="url(#soft)"/>
+  <g opacity="0.12" stroke="#9fd8e5" fill="none">
+    <path d="M80 160H1520M80 280H1520M80 400H1520M80 520H1520M80 640H1520M80 760H1520"/>
+    <path d="M240 80V820M480 80V820M720 80V820M960 80V820M1200 80V820M1440 80V820"/>
+  </g>
+  <g filter="url(#shadow)">
+    <path d="M130 286 C330 210 480 230 665 326 L665 424 C482 338 329 326 130 396 Z" fill="#344b72" opacity="0.9"/>
+    <path d="M130 412 C330 338 480 352 665 418 L665 516 C478 458 322 452 130 526 Z" fill="#476985" opacity="0.92"/>
+    <path d="M130 538 C326 470 490 478 665 510 L665 608 C474 582 320 584 130 656 Z" fill="#4d8196" opacity="0.92"/>
+    <path d="M935 326 C1100 236 1280 222 1470 278 L1470 388 C1284 342 1108 356 935 438 Z" fill="#3a9e88" opacity="0.94"/>
+    <path d="M935 418 C1110 358 1282 350 1470 402 L1470 512 C1280 468 1108 478 935 530 Z" fill="#43b893" opacity="0.94"/>
+    <path d="M935 510 C1114 480 1288 474 1470 530 L1470 640 C1282 592 1106 602 935 622 Z" fill="#56d7a7" opacity="0.96"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="665" y="166" width="270" height="568" rx="46" fill="#0b1830" stroke="url(#gate)" stroke-width="8"/>
+    <rect x="710" y="214" width="180" height="472" rx="32" fill="#132943" stroke="#85dbea" stroke-opacity="0.45" stroke-width="3"/>
+    <path d="M800 284 C850 324 864 376 844 426 C827 469 786 490 767 535 C750 575 768 610 800 632 C846 600 868 560 852 514 C837 471 794 451 780 410 C763 361 777 320 800 284Z" fill="url(#flow)" opacity="0.96"/>
+    <circle cx="800" cy="452" r="65" fill="#0d2238" stroke="#b5f5eb" stroke-width="6"/>
+    <path d="M770 453 l21 21 43-51" fill="none" stroke="#71e5b6" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g fill="none" stroke="url(#flow)" stroke-width="7" stroke-linecap="round" opacity="0.9">
+    <path d="M564 244 C620 240 638 258 665 286"/>
+    <path d="M935 270 C968 242 1000 232 1050 236"/>
+    <path d="M550 696 C610 706 640 686 665 654"/>
+    <path d="M935 666 C978 700 1022 704 1078 690"/>
+  </g>
+  <g fill="#b7f5e1">
+    <circle cx="1118" cy="260" r="9"/><circle cx="1180" cy="244" r="6"/><circle cx="1242" cy="270" r="8"/>
+    <circle cx="1128" cy="666" r="7"/><circle cx="1200" cy="684" r="10"/><circle cx="1276" cy="658" r="6"/>
+  </g>
+  <g opacity="0.55" fill="#9db4cf">
+    <circle cx="322" cy="270" r="8"/><circle cx="390" cy="294" r="5"/><circle cx="464" cy="282" r="7"/>
+    <circle cx="304" cy="664" r="6"/><circle cx="378" cy="638" r="9"/><circle cx="452" cy="660" r="5"/>
+  </g>
+  <rect x="92" y="84" width="1416" height="732" rx="54" fill="none" stroke="#bdeef5" stroke-opacity="0.18" stroke-width="2"/>
+</svg>
