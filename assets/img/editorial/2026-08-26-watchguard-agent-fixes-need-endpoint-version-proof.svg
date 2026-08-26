@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Verified security-agent update across an endpoint fleet</title>
+  <desc id="desc">An abstract fleet of blue endpoint tiles surrounds a teal security ring while an amber update wave reaches and illuminates every device.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#061725"/>
+      <stop offset="0.55" stop-color="#0a2940"/>
+      <stop offset="1" stop-color="#07131e"/>
+    </linearGradient>
+    <radialGradient id="field" cx="50%" cy="48%" r="58%">
+      <stop offset="0" stop-color="#2bd6c5" stop-opacity="0.22"/>
+      <stop offset="0.58" stop-color="#168ca7" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#061725" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="core" x1="0.12" y1="0" x2="0.88" y2="1">
+      <stop offset="0" stop-color="#75f0dc"/>
+      <stop offset="1" stop-color="#138ea3"/>
+    </linearGradient>
+    <linearGradient id="update" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff9f43"/>
+      <stop offset="0.5" stop-color="#ffd46d"/>
+      <stop offset="1" stop-color="#fff0a8"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="13" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#02070c" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#field)"/>
+  <g fill="none" stroke="#64d9d0" stroke-opacity="0.1" stroke-width="2">
+    <path d="M84 194C338 82 541 126 800 223C1059 126 1262 82 1516 194"/>
+    <path d="M64 708C330 812 560 772 800 678C1040 772 1270 812 1536 708"/>
+    <ellipse cx="800" cy="450" rx="590" ry="330" stroke-dasharray="10 22"/>
+    <ellipse cx="800" cy="450" rx="455" ry="254"/>
+  </g>
+  <g fill="none" stroke="#2aa5b4" stroke-opacity="0.34" stroke-width="5">
+    <path d="M800 450L345 250M800 450L337 455M800 450L355 660M800 450L1255 250M800 450L1263 455M800 450L1245 660"/>
+  </g>
+  <g filter="url(#shadow)">
+    <g transform="translate(260 188)">
+      <rect width="170" height="124" rx="24" fill="#0d3850" stroke="#3bb7c3" stroke-width="4"/>
+      <rect x="25" y="24" width="120" height="70" rx="12" fill="#0a2233" stroke="#6bd9d3" stroke-opacity="0.55" stroke-width="3"/>
+      <circle cx="85" cy="109" r="6" fill="#ffcf67"/>
+    </g>
+    <g transform="translate(245 393)">
+      <rect width="184" height="124" rx="24" fill="#0d3850" stroke="#3bb7c3" stroke-width="4"/>
+      <rect x="27" y="24" width="130" height="70" rx="12" fill="#0a2233" stroke="#6bd9d3" stroke-opacity="0.55" stroke-width="3"/>
+      <circle cx="92" cy="109" r="6" fill="#ffcf67"/>
+    </g>
+    <g transform="translate(270 598)">
+      <rect width="170" height="124" rx="24" fill="#0d3850" stroke="#3bb7c3" stroke-width="4"/>
+      <rect x="25" y="24" width="120" height="70" rx="12" fill="#0a2233" stroke="#6bd9d3" stroke-opacity="0.55" stroke-width="3"/>
+      <circle cx="85" cy="109" r="6" fill="#ffcf67"/>
+    </g>
+    <g transform="translate(1170 188)">
+      <rect width="170" height="124" rx="24" fill="#0d3850" stroke="#3bb7c3" stroke-width="4"/>
+      <rect x="25" y="24" width="120" height="70" rx="12" fill="#0a2233" stroke="#6bd9d3" stroke-opacity="0.55" stroke-width="3"/>
+      <circle cx="85" cy="109" r="6" fill="#ffcf67"/>
+    </g>
+    <g transform="translate(1171 393)">
+      <rect width="184" height="124" rx="24" fill="#0d3850" stroke="#3bb7c3" stroke-width="4"/>
+      <rect x="27" y="24" width="130" height="70" rx="12" fill="#0a2233" stroke="#6bd9d3" stroke-opacity="0.55" stroke-width="3"/>
+      <circle cx="92" cy="109" r="6" fill="#ffcf67"/>
+    </g>
+    <g transform="translate(1160 598)">
+      <rect width="170" height="124" rx="24" fill="#0d3850" stroke="#3bb7c3" stroke-width="4"/>
+      <rect x="25" y="24" width="120" height="70" rx="12" fill="#0a2233" stroke="#6bd9d3" stroke-opacity="0.55" stroke-width="3"/>
+      <circle cx="85" cy="109" r="6" fill="#ffcf67"/>
+    </g>
+  </g>
+  <g transform="translate(800 450)" filter="url(#shadow)">
+    <circle r="206" fill="#071c2a" stroke="#17677b" stroke-width="12"/>
+    <circle r="168" fill="none" stroke="url(#core)" stroke-width="24"/>
+    <circle r="126" fill="#0b3041" stroke="#70e7da" stroke-opacity="0.48" stroke-width="4"/>
+    <path d="M0-88L78-57V-5C78 45 47 78 0 96C-47 78-78 45-78-5V-57Z" fill="url(#core)"/>
+    <path d="M-34 0L-8 27L42-31" fill="none" stroke="#062431" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g fill="none" stroke="url(#update)" stroke-width="11" stroke-linecap="round" filter="url(#glow)">
+    <path d="M800 115C1050 115 1115 250 1255 250"/>
+    <path d="M800 115C550 115 485 250 345 250"/>
+    <path d="M800 785C1050 785 1110 660 1245 660"/>
+    <path d="M800 785C550 785 490 660 355 660"/>
+    <path d="M1008 450H1263M592 450H337"/>
+  </g>
+  <g fill="#fff1ab" stroke="#ffb64e" stroke-width="5">
+    <circle cx="345" cy="250" r="14"/><circle cx="337" cy="450" r="14"/><circle cx="355" cy="660" r="14"/>
+    <circle cx="1255" cy="250" r="14"/><circle cx="1263" cy="450" r="14"/><circle cx="1245" cy="660" r="14"/>
+  </g>
+  <g fill="#6ce4d6" opacity="0.34">
+    <circle cx="122" cy="130" r="5"/><circle cx="187" cy="762" r="4"/><circle cx="1471" cy="159" r="4"/>
+    <circle cx="1434" cy="754" r="6"/><circle cx="1035" cy="91" r="3"/><circle cx="570" cy="818" r="4"/>
+  </g>
+</svg>
