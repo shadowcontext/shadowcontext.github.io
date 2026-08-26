@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Passkey protected by recovery and session controls</title>
+  <desc id="desc">An abstract cyan passkey is bound to a luminous portal while an amber recovery path and a flowing session ribbon pass through layered protective shields.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06141f"/>
+      <stop offset="0.5" stop-color="#0a2732"/>
+      <stop offset="1" stop-color="#07111c"/>
+    </linearGradient>
+    <radialGradient id="cyanGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#62f5df" stop-opacity="0.65"/>
+      <stop offset="1" stop-color="#20bfd3" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="amberGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffc56d" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#ff885e" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="keyMetal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c4fff2"/>
+      <stop offset="0.45" stop-color="#55e5dc"/>
+      <stop offset="1" stop-color="#159ab8"/>
+    </linearGradient>
+    <linearGradient id="portalGlass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8cf7ec" stop-opacity="0.23"/>
+      <stop offset="1" stop-color="#1b819d" stop-opacity="0.05"/>
+    </linearGradient>
+    <filter id="blur40" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#00070d" flood-opacity="0.72"/>
+    </filter>
+    <pattern id="grain" width="70" height="70" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="13" r="1" fill="#d5fff8" opacity="0.06"/>
+      <circle cx="44" cy="26" r="1.2" fill="#d5fff8" opacity="0.04"/>
+      <circle cx="25" cy="58" r="0.8" fill="#d5fff8" opacity="0.05"/>
+      <circle cx="63" cy="51" r="0.9" fill="#d5fff8" opacity="0.035"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#grain)"/>
+  <ellipse cx="780" cy="420" rx="420" ry="370" fill="url(#cyanGlow)" filter="url(#blur40)"/>
+  <ellipse cx="1270" cy="560" rx="300" ry="260" fill="url(#amberGlow)" filter="url(#blur40)"/>
+
+  <path d="M0 730 C286 662 483 760 758 711 C1015 665 1254 688 1600 614 L1600 900 L0 900 Z" fill="#041018" opacity="0.94"/>
+  <path d="M0 746 C291 676 494 775 767 726 C1040 677 1281 700 1600 632" fill="none" stroke="#6fe8e0" stroke-opacity="0.16" stroke-width="3"/>
+
+  <g opacity="0.38" fill="none" stroke="#5dd8df">
+    <ellipse cx="758" cy="417" rx="405" ry="294" stroke-width="2"/>
+    <ellipse cx="758" cy="417" rx="330" ry="238" stroke-width="2" stroke-dasharray="8 22"/>
+    <ellipse cx="758" cy="417" rx="252" ry="182" stroke-width="3" stroke-opacity="0.5"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <path d="M612 680 V292 Q612 221 683 221 H850 Q921 221 921 292 V680 Z" fill="#0b202b" stroke="#68e8df" stroke-opacity="0.75" stroke-width="4"/>
+    <path d="M654 680 V310 Q654 265 699 265 H834 Q879 265 879 310 V680 Z" fill="url(#portalGlass)" stroke="#a0fff0" stroke-opacity="0.38" stroke-width="3"/>
+    <path d="M700 680 V355 Q700 316 739 316 H794 Q833 316 833 355 V680 Z" fill="#071721" stroke="#5de1dc" stroke-opacity="0.48" stroke-width="3"/>
+  </g>
+
+  <g filter="url(#shadow)" transform="rotate(-13 690 420)">
+    <circle cx="570" cy="420" r="98" fill="#0a2530" stroke="url(#keyMetal)" stroke-width="24"/>
+    <circle cx="570" cy="420" r="36" fill="#07141e" stroke="#b7fff1" stroke-opacity="0.7" stroke-width="6"/>
+    <path d="M662 420 H1000 V482 H936 V542 H864 V482 H662 Z" fill="url(#keyMetal)"/>
+    <path d="M680 438 H968" fill="none" stroke="#d1fff4" stroke-opacity="0.55" stroke-width="8" stroke-linecap="round"/>
+  </g>
+
+  <path d="M1070 706 C1113 640 1082 565 1141 507 C1201 448 1325 491 1363 421 C1397 358 1349 299 1299 260" fill="none" stroke="#ffb868" stroke-opacity="0.25" stroke-width="42" stroke-linecap="round"/>
+  <path d="M1070 706 C1113 640 1082 565 1141 507 C1201 448 1325 491 1363 421 C1397 358 1349 299 1299 260" fill="none" stroke="#ffc77a" stroke-width="8" stroke-linecap="round" stroke-dasharray="18 20"/>
+  <circle cx="1299" cy="260" r="22" fill="#ffc77a"/>
+  <circle cx="1299" cy="260" r="48" fill="none" stroke="#ffbd70" stroke-opacity="0.35" stroke-width="4"/>
+
+  <path d="M884 380 C1011 322 1080 355 1169 383 C1264 413 1352 378 1486 306" fill="none" stroke="#71eee4" stroke-opacity="0.14" stroke-width="58" stroke-linecap="round"/>
+  <path d="M884 380 C1011 322 1080 355 1169 383 C1264 413 1352 378 1486 306" fill="none" stroke="#78f5e8" stroke-opacity="0.72" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="1486" cy="306" r="12" fill="#a8fff1"/>
+
+  <g fill="#102f3a" stroke="#65e8df" stroke-linejoin="round">
+    <path d="M1059 299 L1128 336 V412 C1128 486 1096 537 1059 559 C1022 537 990 486 990 412 V336 Z" fill-opacity="0.84" stroke-width="4"/>
+    <path d="M1059 348 V494 M1028 420 H1090" fill="none" stroke-opacity="0.3" stroke-width="3"/>
+    <path d="M1302 500 L1371 537 V613 C1371 687 1339 738 1302 760 C1265 738 1233 687 1233 613 V537 Z" fill-opacity="0.78" stroke-width="4"/>
+    <path d="M1302 550 V696 M1271 622 H1333" fill="none" stroke-opacity="0.3" stroke-width="3"/>
+  </g>
+
+  <g fill="#8df8ea">
+    <circle cx="306" cy="250" r="5" opacity="0.48"/>
+    <circle cx="390" cy="161" r="8" opacity="0.32"/>
+    <circle cx="1475" cy="553" r="6" opacity="0.4"/>
+    <circle cx="1451" cy="672" r="4" opacity="0.3"/>
+    <circle cx="211" cy="563" r="7" opacity="0.3"/>
+  </g>
+</svg>
