@@ -1,142 +1,135 @@
 {
-  "generated_at": "2026-08-18T06:35:54Z",
-  "generated_display": "18 Aug 2026 · 06:35 UTC",
+  "generated_at": "2026-08-26T01:19:09Z",
+  "generated_display": "26 Aug 2026 · 01:19 UTC",
   "metrics": {
-    "kev_total": 1666,
-    "kev_added_30d": 19,
-    "due_next_7d": 2,
+    "kev_total": 1676,
+    "kev_added_30d": 23,
+    "due_next_7d": 3,
     "ioc_total": 197,
     "ioc_total_display": "197",
     "ioc_total_exact": "197"
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2025-62593",
-      "name": "Ray-Project Ray Code Injection Vulnerability",
-      "vendor": "Ray-Project",
-      "product": "Ray",
-      "date_added": "2026-08-17",
-      "due_date": "2026-08-20",
+      "cve": "CVE-2026-60004",
+      "name": "Gitea Code Injection Vulnerability",
+      "vendor": "Gitea",
+      "product": "Gitea",
+      "date_added": "2026-08-25",
+      "due_date": "2026-08-28",
       "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2025-62593"
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-60004"
     },
     {
-      "cve": "CVE-2026-72898",
-      "name": "Metabase SQL Injection Vulnerability",
-      "vendor": "Metabase",
-      "product": "Metabase",
-      "date_added": "2026-08-11",
-      "due_date": "2026-08-14",
+      "cve": "CVE-2026-21962",
+      "name": "Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in Improper Access Control Vulnerability",
+      "vendor": "Oracle",
+      "product": "HTTP Server and Oracle Weblogic Server Proxy Plug-in",
+      "date_added": "2026-08-24",
+      "due_date": "2026-08-27",
       "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-72898"
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-21962"
     },
     {
-      "cve": "CVE-2026-68820",
-      "name": "Microsoft Windows Ancillary Function Driver for WinSock Use-After-Free Vulnerability",
-      "vendor": "Microsoft",
-      "product": "Windows Ancillary Function Driver for WinSock ",
-      "date_added": "2026-08-11",
-      "due_date": "2026-08-25",
+      "cve": "CVE-2026-73570",
+      "name": "Zimbra Collaboration Suite (ZCS) OS Command Injection Vulnerability",
+      "vendor": "Synacor",
+      "product": "Zimbra Collaboration Suite (ZCS)",
+      "date_added": "2026-08-21",
+      "due_date": "2026-08-24",
       "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-68820"
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-73570"
     },
     {
-      "cve": "CVE-2026-20349",
-      "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) and Secure Firewall Threat Defense (FTD) Heap Inspection Vulnerability",
-      "vendor": "Cisco",
-      "product": "Secure Firewall Adaptive Security Appliance (ASA) and Secure Firewall Threat Defense (FTD) ",
-      "date_added": "2026-08-11",
-      "due_date": "2026-08-14",
+      "cve": "CVE-2026-72530",
+      "name": "TrueConf Server Code Injection Vulnerability",
+      "vendor": "TrueConf",
+      "product": "Server",
+      "date_added": "2026-08-20",
+      "due_date": "2026-09-03",
       "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-20349"
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-72530"
     },
     {
-      "cve": "CVE-2026-8037",
-      "name": "Progress LoadMaster Command Injection Vulnerability",
-      "vendor": "Progress",
-      "product": "LoadMaster",
-      "date_added": "2026-08-07",
-      "due_date": "2026-08-10",
+      "cve": "CVE-2026-72529",
+      "name": "TrueConf Server Missing Authentication for Critical Function Vulnerability",
+      "vendor": "TrueConf",
+      "product": "Server",
+      "date_added": "2026-08-20",
+      "due_date": "2026-08-23",
       "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-8037"
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-72529"
     },
     {
-      "cve": "CVE-2026-63077",
-      "name": "JetBrains TeamCity Deserialization of Untrusted Data Vulnerability",
-      "vendor": "JetBrains",
-      "product": "TeamCity",
-      "date_added": "2026-08-05",
-      "due_date": "2026-08-08",
+      "cve": "CVE-2026-64849",
+      "name": "MLflow Server-Side Request Forgery Vulnerability",
+      "vendor": "MLflow",
+      "product": "MLflow",
+      "date_added": "2026-08-19",
+      "due_date": "2026-09-02",
       "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-63077"
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-64849"
     },
     {
-      "cve": "CVE-2026-9198",
-      "name": "IBM Langflow Code Injection Vulnerability",
-      "vendor": "IBM",
-      "product": "Langflow",
-      "date_added": "2026-08-04",
-      "due_date": "2026-08-07",
+      "cve": "CVE-2026-65400",
+      "name": "Apple macOS Improper Authentication Vulnerability",
+      "vendor": "Apple",
+      "product": "macOS",
+      "date_added": "2026-08-18",
+      "due_date": "2026-08-21",
       "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-9198"
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-65400"
     },
     {
-      "cve": "CVE-2026-34486",
-      "name": "Apache Tomcat Missing Encryption of Sensitive Data Vulnerability",
-      "vendor": "Apache",
-      "product": "Tomcat",
-      "date_added": "2026-08-04",
-      "due_date": "2026-08-07",
+      "cve": "CVE-2026-59310",
+      "name": "Broadcom VMware vCenter Path Traversal Vulnerability",
+      "vendor": "Broadcom",
+      "product": "VMware vCenter",
+      "date_added": "2026-08-18",
+      "due_date": "2026-08-21",
       "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-34486"
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-59310"
     }
   ],
   "platforms": [
     {
       "vendor": "Microsoft",
       "product": "Windows",
-      "count": 43,
+      "count": 45,
       "percent": 100
     },
     {
       "vendor": "Cisco",
       "product": "Catalyst SD-WAN Manager",
       "count": 18,
-      "percent": 42
+      "percent": 40
     },
     {
       "vendor": "Apple",
       "product": "Multiple Products",
       "count": 10,
-      "percent": 23
+      "percent": 22
     },
     {
       "vendor": "Fortinet",
       "product": "FortiSandbox",
       "count": 9,
-      "percent": 21
+      "percent": 20
     },
     {
       "vendor": "Google",
       "product": "Chromium V8",
       "count": 8,
-      "percent": 19
+      "percent": 18
     },
     {
       "vendor": "Oracle",
       "product": "E-Business Suite",
-      "count": 6,
-      "percent": 14
+      "count": 7,
+      "percent": 16
     }
   ],
   "actors": [
-    {
-      "name": "#StopRansomware: Gunra Ransomware",
-      "aliases": "CISA AA26-222A · actor-focused advisory",
-      "focus": "Advisory at a Glance Title #StopRansomware: Gunra Ransomware Original Publication August 10, 2026 Executive Summary Gunra is a…",
-      "date": "2026-08-10",
-      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-222a"
-    },
     {
       "name": "Russian FSB Center 16",
       "aliases": "Berserk Bear · Energetic Bear · Static Tundra",
@@ -157,64 +150,71 @@
       "focus": "Internet-exposed operational technology and programmable logic controllers.",
       "date": "2026-04-07",
       "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-097a"
+    },
+    {
+      "name": "PRC global espionage cluster",
+      "aliases": "Salt Typhoon-associated activity",
+      "focus": "Provider networks, routing infrastructure, and long-term access for intelligence collection.",
+      "date": "2025-08-27",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-239a"
     }
   ],
   "advisories": [
     {
+      "title": "Ebyte NE2-D11",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-237-06",
+      "date": "2026-08-25",
+      "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to gain unauthorized administrative access, disclose sensitive information, modify…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "title": "A Tale of Two SOCs: Insights From Two Red Team Assessments",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a",
+      "date": "2026-08-25",
+      "summary": "Advisory at a Glance Title A Tale of Two SOCs: Insights From Two Red Team Assessments Original Publication August 25, 2026 Executive Summary The Cybersecurity and Infrastructure…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "title": "Rently Smart Home",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-237-01",
+      "date": "2026-08-25",
+      "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to access sensitive information and override user permissions. The following versions of…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
       "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-      "url": "https://www.cisa.gov/news-events/alerts/2026/08/17/cisa-adds-one-known-exploited-vulnerability-catalog",
-      "date": "2026-08-17",
-      "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2025-62593 Ray-Project Ray Code…",
+      "url": "https://www.cisa.gov/news-events/alerts/2026/08/25/cisa-adds-one-known-exploited-vulnerability-catalog",
+      "date": "2026-08-25",
+      "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-60004 Gitea Code Injection…",
       "authority": "CISA",
       "severity": ""
     },
     {
       "authority": "Saudi NCA / CERT",
-      "title": "HP Alert",
-      "url": "https://nca.gov.sa/en/cert/7875/",
-      "date": "2026-08-17",
+      "title": "SonicWall Alert",
+      "url": "https://nca.gov.sa/en/cert/7905/",
+      "date": "2026-08-25",
       "severity": "High",
-      "summary": "Security alert 2026-7751. Review the official notice for affected products and remediation guidance."
+      "summary": "Security alert 2026-7781. Review the official notice for affected products and remediation guidance."
     },
     {
       "authority": "Saudi NCA / CERT",
-      "title": "Apple Alert",
-      "url": "https://nca.gov.sa/en/cert/7874/",
-      "date": "2026-08-17",
-      "severity": "High",
-      "summary": "Security alert 2026-7750. Review the official notice for affected products and remediation guidance."
-    },
-    {
-      "title": "Siemens Parasolid",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-10",
-      "date": "2026-08-13",
-      "summary": "View CSAF Summary Parasolid is affected by an out of bounds read vulnerability that could be triggered when the application reads files in X_T format. This could allow an…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
-      "title": "Siemens License Server (SLS)",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-07",
-      "date": "2026-08-13",
-      "summary": "View CSAF Summary Siemens License Server is affected by multiple vulnerabilities which could allow an attacker to elevate its privileges and read arbitrary files on the system.…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
-      "title": "Siemens Desigo DXR and PXC Controllers",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-08",
-      "date": "2026-08-13",
-      "summary": "View CSAF Summary A vulnerability in Desigo DXR and PXC controllers has been identified that could allow an attacker to cause denial of service conditions by sending malformed…",
-      "authority": "CISA",
-      "severity": ""
+      "title": "NVIDIA Alert",
+      "url": "https://nca.gov.sa/en/cert/7904/",
+      "date": "2026-08-25",
+      "severity": "Critical",
+      "summary": "Security alert 2026-7780. Review the official notice for affected products and remediation guidance."
     },
     {
       "authority": "Saudi NCA / CERT",
-      "title": "F5 Alert",
-      "url": "https://nca.gov.sa/en/cert/7873/",
-      "date": "2026-08-13",
-      "severity": "High",
-      "summary": "Security alert 2026-7749. Review the official notice for affected products and remediation guidance."
+      "title": "Adobe Alert",
+      "url": "https://nca.gov.sa/en/cert/7903/",
+      "date": "2026-08-25",
+      "severity": "Critical",
+      "summary": "Security alert 2026-7779. Review the official notice for affected products and remediation guidance."
     },
     {
       "title": "How to secure your online meetings",
@@ -324,7 +324,7 @@
       "path": "/assets/data/daily-urls.txt"
     }
   ],
-  "ioc_sha256": "d07c404d74c6c1c48f4b2a1c5673c1832447587dc6627242ea6a0d86080cc86a",
+  "ioc_sha256": "3dc5d20f51c5dc974fd9c70c8330b10a733fb387b5744d6c5b8a3ff2583c29cb",
   "sources": {
     "kev": {
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
