@@ -353,6 +353,22 @@
       "github_run_id": "32805034966",
       "status": "published",
       "last_error": null
+    },
+    "21e41b135afa519784632d8f29882cae20d8cd0fb7d657c346378814db8e166a": {
+      "title": "Daily Security Digest: Updates, Hardware Assurance, and Controls",
+      "digest_date": "2026-08-25",
+      "digest_hash": "21e41b135afa519784632d8f29882cae20d8cd0fb7d657c346378814db8e166a",
+      "generated_at": "2026-08-26T06:20:50.972+04:00",
+      "briefing_url": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-25/21e41b135afa5197/daily-digest.html",
+      "pdf_file": "assets/social/linkedin-digest/2026-08-25/21e41b135afa5197/daily-digest.pdf",
+      "linkedin_caption": "Read the complete ShadowContext daily defense brief for comprehensive analysis and operational guidance.\n\nThis edition brings together 8 ShadowContext briefings from August 25, 2026, with direct source links and operational priorities.\n\nRead the full daily briefing:\nhttps://shadowcontext.com/assets/social/linkedin-digest/2026-08-25/21e41b135afa5197/daily-digest.html\n\n#Cybersecurity #ThreatIntelligence #InfoSec #SecurityOperations",
+      "linkedin_document_urn": "urn:li:document:D4D10AQGT-R2chxEuRg",
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7498220363491803136",
+      "published_at": "2026-08-26T03:30:45.157Z",
+      "github_run_id": "32926714744",
+      "status": "published",
+      "last_error": null
     }
   }
 }
