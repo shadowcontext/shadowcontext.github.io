@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Guarded Android intent paths entering a mobile application</title>
+  <desc id="desc">An abstract smartphone receives luminous cross-app data paths through a shield-like validation boundary before they reach a protected application core.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071226"/>
+      <stop offset="0.55" stop-color="#10264a"/>
+      <stop offset="1" stop-color="#071a2c"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="55%" cy="46%" r="48%">
+      <stop offset="0" stop-color="#47e6d2" stop-opacity="0.22"/>
+      <stop offset="0.5" stop-color="#3b82f6" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#071226" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="phone" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#18365d"/>
+      <stop offset="1" stop-color="#0a172b"/>
+    </linearGradient>
+    <linearGradient id="gate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8cf8e4"/>
+      <stop offset="1" stop-color="#24a9c4"/>
+    </linearGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d8fff7"/>
+      <stop offset="0.45" stop-color="#54e2d0"/>
+      <stop offset="1" stop-color="#2189bd"/>
+    </linearGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#8bb8dc" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#halo)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <circle cx="1050" cy="410" r="265" fill="#1ad8c3" opacity="0.07" filter="url(#soft)"/>
+  <circle cx="420" cy="450" r="300" fill="#3b82f6" opacity="0.08" filter="url(#soft)"/>
+
+  <g opacity="0.95">
+    <rect x="170" y="200" width="150" height="150" rx="34" fill="#142e52" stroke="#6ba8d6" stroke-opacity="0.45" stroke-width="3"/>
+    <circle cx="245" cy="275" r="33" fill="none" stroke="#70aee8" stroke-width="9"/>
+    <path d="M225 275h40M245 255v40" stroke="#70aee8" stroke-width="7" stroke-linecap="round"/>
+    <rect x="110" y="590" width="150" height="150" rx="34" fill="#142e52" stroke="#7a96d8" stroke-opacity="0.42" stroke-width="3"/>
+    <path d="M145 665c24-42 86-42 110 0-24 42-86 42-110 0Z" fill="none" stroke="#859ce2" stroke-width="8"/>
+    <circle cx="200" cy="665" r="16" fill="#859ce2"/>
+    <rect x="320" y="390" width="150" height="150" rx="34" fill="#142e52" stroke="#54c8d3" stroke-opacity="0.46" stroke-width="3"/>
+    <path d="M360 485l35-55 35 55Z" fill="none" stroke="#63d5d5" stroke-width="8" stroke-linejoin="round"/>
+    <circle cx="395" cy="475" r="8" fill="#63d5d5"/>
+  </g>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M320 275C480 275 510 360 650 380" stroke="#70aee8" stroke-opacity="0.6" stroke-width="7"/>
+    <path d="M260 665C440 665 510 545 650 520" stroke="#859ce2" stroke-opacity="0.58" stroke-width="7"/>
+    <path d="M470 465H650" stroke="#63d5d5" stroke-opacity="0.68" stroke-width="7"/>
+    <path d="M335 275C490 285 515 364 642 382" stroke="#b6e5ff" stroke-opacity="0.65" stroke-width="2" stroke-dasharray="5 18"/>
+    <path d="M275 660C450 650 520 548 642 520" stroke="#c7d4ff" stroke-opacity="0.58" stroke-width="2" stroke-dasharray="5 18"/>
+  </g>
+
+  <g transform="translate(610 235)">
+    <path d="M135 0C184 35 224 49 270 59v174c0 105-57 184-135 222C57 417 0 338 0 233V59C46 49 86 35 135 0Z" fill="#0b2038" stroke="url(#gate)" stroke-width="10" filter="url(#glow)"/>
+    <path d="M135 38c34 23 64 35 96 44v146c0 78-39 139-96 172-57-33-96-94-96-172V82c32-9 62-21 96-44Z" fill="#123151" stroke="#7ef1df" stroke-opacity="0.45" stroke-width="3"/>
+    <path d="M89 222l32 32 65-82" fill="none" stroke="#9bfae9" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g transform="translate(940 125)">
+    <rect x="0" y="0" width="420" height="650" rx="68" fill="#07111f" stroke="#6da6cf" stroke-opacity="0.55" stroke-width="5"/>
+    <rect x="22" y="22" width="376" height="606" rx="49" fill="url(#phone)" stroke="#4c739b" stroke-opacity="0.42" stroke-width="2"/>
+    <rect x="150" y="36" width="120" height="13" rx="7" fill="#7a9bb8" opacity="0.45"/>
+    <circle cx="210" cy="576" r="20" fill="none" stroke="#7194b5" stroke-opacity="0.55" stroke-width="4"/>
+
+    <g transform="translate(94 150)">
+      <rect width="232" height="270" rx="48" fill="#102c48" stroke="#4edbc9" stroke-opacity="0.5" stroke-width="4"/>
+      <circle cx="116" cy="112" r="66" fill="url(#core)" opacity="0.18" filter="url(#glow)"/>
+      <circle cx="116" cy="112" r="49" fill="none" stroke="url(#core)" stroke-width="12"/>
+      <path d="M116 78v68M82 112h68" stroke="#a7fff0" stroke-width="10" stroke-linecap="round"/>
+      <path d="M64 212h104" stroke="#56caba" stroke-opacity="0.55" stroke-width="8" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <g fill="none" stroke-linecap="round" filter="url(#glow)">
+    <path d="M880 450h74" stroke="#8cf8e4" stroke-width="10"/>
+    <path d="M925 424l29 26-29 26" stroke="#8cf8e4" stroke-width="10" stroke-linejoin="round"/>
+  </g>
+
+  <g opacity="0.55">
+    <circle cx="540" cy="160" r="7" fill="#75d6ee"/>
+    <circle cx="460" cy="735" r="5" fill="#7d91e8"/>
+    <circle cx="1390" cy="250" r="6" fill="#54d8c8"/>
+    <circle cx="1440" cy="620" r="4" fill="#7db1db"/>
+    <path d="M124 130h170M1370 736h120" stroke="#7fb2da" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>
