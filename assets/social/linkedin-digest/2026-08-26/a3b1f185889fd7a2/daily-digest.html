@@ -1,0 +1,812 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Defensive Brief: Runtime Authority, Patch Proof, and Boundaries | ShadowContext</title>
+    <style>
+      :root {
+        --paper: #05080d;
+        --panel: #0d1319;
+        --panel-soft: #091017;
+        --ink: #f1f7fa;
+        --ink-2: #c4d1d8;
+        --muted: #8496a1;
+        --line: #1d2b34;
+        --cyan: #35e6d1;
+        --violet: #8b7dff;
+        --sans: "Space Grotesk", Inter, Arial, sans-serif;
+        --mono: "DM Mono", Consolas, monospace;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: var(--sans);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        font-size: 10.5pt;
+        line-height: 1.55;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        position: relative;
+        width: 210mm;
+        min-height: 297mm;
+        padding: 18mm;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 83% 18%, rgba(139, 125, 255, 0.1), transparent 28%),
+          linear-gradient(145deg, #05080d 0%, #081017 62%, #0c101c 100%);
+      }
+
+      .page::before {
+        content: "";
+        position: absolute;
+        inset: 8mm;
+        pointer-events: none;
+        border: 0.25mm solid var(--line);
+      }
+
+      .cover {
+        display: flex;
+        flex-direction: column;
+        page-break-after: always;
+      }
+
+      .brand-row,
+      .section-head,
+      .document-footer {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 4mm;
+        font-size: 20pt;
+        font-weight: 750;
+        letter-spacing: -0.04em;
+      }
+
+      .brand em {
+        color: var(--cyan);
+        font-style: normal;
+      }
+
+      .brand-mark {
+        position: relative;
+        display: block;
+        width: 12mm;
+        height: 12mm;
+        transform: rotate(30deg);
+        border: 1mm solid var(--cyan);
+        border-radius: 1.2mm;
+      }
+
+      .brand-mark::before {
+        content: "";
+        position: absolute;
+        inset: 2.2mm;
+        border: 0.8mm solid var(--violet);
+        border-radius: 0.9mm;
+      }
+
+      .brand-mark::after {
+        content: "";
+        position: absolute;
+        inset: 4.5mm;
+        background: var(--cyan);
+        border-radius: 0.5mm;
+      }
+
+      .edition,
+      .eyebrow,
+      .topic,
+      .section-count,
+      .why span,
+      .document-footer,
+      .source-link {
+        font-family: var(--mono);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .edition,
+      .section-count,
+      .document-footer {
+        color: var(--muted);
+        font-size: 8pt;
+      }
+
+      .cover-copy {
+        position: relative;
+        z-index: 1;
+        margin: 30mm 0 0;
+      }
+
+      .eyebrow {
+        margin: 0 0 7mm;
+        color: var(--cyan);
+        font-size: 10pt;
+      }
+
+      h1 {
+        max-width: 165mm;
+        margin: 0;
+        font-size: 37pt;
+        line-height: 1.03;
+        letter-spacing: -0.05em;
+      }
+
+      .dek {
+        max-width: 155mm;
+        margin: 10mm 0 0;
+        color: var(--ink-2);
+        font-size: 16pt;
+        line-height: 1.45;
+      }
+
+      .context {
+        position: relative;
+        z-index: 1;
+        margin-top: auto;
+        padding: 9mm;
+        background: rgba(13, 19, 25, 0.94);
+        border: 0.3mm solid var(--line);
+        border-left: 1mm solid var(--violet);
+      }
+
+      .context h2,
+      .section-head h2,
+      .operating-view h2,
+      .sources h2 {
+        margin: 0;
+      }
+
+      .context h2 {
+        color: var(--violet);
+        font-family: var(--mono);
+        font-size: 9pt;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .context p {
+        margin: 4mm 0 0;
+        color: var(--ink-2);
+        font-size: 13pt;
+      }
+
+      .cover-meta {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 9mm;
+        color: var(--muted);
+        font: 8pt var(--mono);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .content {
+        padding-top: 15mm;
+        padding-bottom: 18mm;
+      }
+
+      .section-head {
+        margin-bottom: 9mm;
+        padding-bottom: 5mm;
+        border-bottom: 0.3mm solid var(--line);
+      }
+
+      .section-head h2 {
+        font-size: 23pt;
+      }
+
+      .stories {
+        position: relative;
+        z-index: 1;
+      }
+
+      .story {
+        display: grid;
+        grid-template-columns: 15mm 1fr;
+        gap: 5mm;
+        margin: 0 0 6mm;
+        padding: 7mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: rgba(13, 19, 25, 0.96);
+        border: 0.3mm solid var(--line);
+      }
+
+      .story-index {
+        color: var(--cyan);
+        font: 12pt var(--mono);
+      }
+
+      .topic {
+        margin: 0 0 2mm;
+        color: var(--cyan);
+        font-size: 7.5pt;
+      }
+
+      .story h3 {
+        margin: 0;
+        font-size: 16pt;
+        line-height: 1.18;
+        letter-spacing: -0.025em;
+      }
+
+      .summary {
+        margin: 3mm 0;
+        color: var(--ink-2);
+        font-size: 10.5pt;
+      }
+
+      .why {
+        padding-top: 3mm;
+        border-top: 0.25mm solid var(--line);
+      }
+
+      .why span {
+        color: var(--violet);
+        font-size: 7pt;
+      }
+
+      .why p {
+        display: inline;
+        margin: 0 0 0 2mm;
+        font-weight: 650;
+      }
+
+      .source-link {
+        display: inline-block;
+        margin-top: 4mm;
+        color: var(--cyan);
+        font-size: 6.8pt;
+        letter-spacing: 0.04em;
+        text-transform: none;
+      }
+
+      .operating-view,
+      .sources {
+        position: relative;
+        z-index: 1;
+        margin-top: 12mm;
+        padding: 9mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: var(--panel-soft);
+        border: 0.3mm solid var(--line);
+      }
+
+      .operating-view {
+        border-top: 1mm solid var(--cyan);
+      }
+
+      .operating-view h2,
+      .sources h2 {
+        font-size: 18pt;
+      }
+
+      .operating-view > p {
+        color: var(--ink-2);
+        font-size: 12pt;
+      }
+
+      .watch-list,
+      .source-list {
+        margin: 6mm 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .watch-list li {
+        display: grid;
+        grid-template-columns: 9mm 1fr;
+        gap: 4mm;
+        align-items: start;
+        margin: 3mm 0;
+      }
+
+      .watch-list span {
+        display: grid;
+        width: 8mm;
+        height: 8mm;
+        place-items: center;
+        color: var(--cyan);
+        border: 0.3mm solid var(--cyan);
+        font: 8pt var(--mono);
+      }
+
+      .watch-list p {
+        margin: 0;
+      }
+
+      .source-list li {
+        display: grid;
+        grid-template-columns: 10mm 1fr;
+        gap: 3mm;
+        margin: 2.5mm 0;
+        color: var(--ink-2);
+        font-size: 8.5pt;
+      }
+
+      .source-list span {
+        color: var(--violet);
+        font-family: var(--mono);
+      }
+
+      .source-list a {
+        color: var(--cyan);
+        text-decoration: underline;
+        text-decoration-color: rgba(53, 230, 209, 0.35);
+        text-underline-offset: 1mm;
+      }
+
+      .cta {
+        position: relative;
+        z-index: 1;
+        margin: 12mm 0 0;
+        padding: 7mm 9mm;
+        break-inside: avoid;
+        color: #04100f;
+        background: var(--cyan);
+      }
+
+      .cta strong {
+        display: block;
+        font-size: 14pt;
+      }
+
+      .cta span {
+        font: 9pt var(--mono);
+      }
+
+      .document-footer {
+        margin-top: 12mm;
+        padding-top: 5mm;
+        border-top: 0.3mm solid var(--line);
+      }
+
+      @media screen {
+        body {
+          width: 210mm;
+          margin: 0 auto;
+        }
+
+        .page {
+          box-shadow: 0 0 20mm rgba(0, 0, 0, 0.45);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="page cover">
+      <header class="brand-row">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Shadow<em>Context</em></span>
+        </div>
+        <span class="edition">Daily security digest</span>
+      </header>
+
+      <main class="cover-copy">
+        <p class="eyebrow">The day in context / 2026-08-26</p>
+        <h1>Defensive Brief: Runtime Authority, Patch Proof, and Boundaries</h1>
+        <p class="dek">ShadowContext daily defense digest covering critical vulnerability fixes, operational authority, endpoint proof, and boundary controls across infrastructure, cloud, AI, and identity systems.</p>
+      </main>
+
+      <aside class="context">
+        <h2>Executive summary</h2>
+        <p>Defenders must move beyond basic asset inventory by proving runtime execution, verified application versions, and rigorous cross-channel and cross-platform controls across all monitored environments.</p>
+      </aside>
+
+      <div class="cover-meta">
+        <span>18 briefings included</span>
+        <span>https://shadowcontext.com/</span>
+      </div>
+    </section>
+
+    <section class="page content">
+      <header class="section-head">
+        <h2>All news from the day</h2>
+        <span class="section-count">18 / 2026-08-26</span>
+      </header>
+
+      <main class="stories">
+    <article class="story">
+      <div class="story-index">01</div>
+      <div class="story-copy">
+        <p class="topic">SOC Readiness</p>
+        <h3>SOC Readiness Requires Operational Authority</h3>
+        <p class="summary">CISA assessments show that tuned detections, empowered analysts, and rehearsed cloud containment must operate as an integrated system.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>More telemetry is insufficient without pre-authorized responses and clear escalation authority.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/soc-readiness-needs-operational-authority/">SOC Readiness Needs Operational Authority, Not Just More Alerts ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">02</div>
+      <div class="story-copy">
+        <p class="topic">Proxy Vulnerability</p>
+        <h3>Oracle Proxy Flaw Demands Edge Inventory</h3>
+        <p class="summary">CVE-2026-21962 exploitation makes auditing and patching Oracle HTTP Server and WebLogic proxy plug-ins urgent.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Split ownership across middleware and web teams requires thorough discovery before patching.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/oracle-proxy-flaw-needs-edge-inventory/">Exploited Oracle Proxy Flaw Makes Edge Inventory Urgent ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">03</div>
+      <div class="story-copy">
+        <p class="topic">Phishing Defense</p>
+        <h3>Phone-Led Phishing Makes Callbacks a Boundary</h3>
+        <p class="summary">Debt-relief campaigns use phone calls to bypass email links, requiring independent callback verification and cross-channel reporting.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Treating a phone number as safe introduces visibility gaps and bypasses conventional email controls.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/phone-led-phishing-needs-callback-verification/">Phone-Led Phishing Makes the Callback a Security Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">04</div>
+      <div class="story-copy">
+        <p class="topic">Data Boundaries</p>
+        <h3>TranslatePress Flaw Exposes Reset Links</h3>
+        <p class="summary">CVE-2026-19632 allows unauthenticated retrieval of password-reset URLs through translated content, requiring translation updates and storage boundaries.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Secret-bearing tokens must be strictly classified and excluded from caching and localization pipelines.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/translatepress-reset-secrets-need-storage-boundaries/">TranslatePress Flaw Makes Reset Links a Data-Handling Problem ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">05</div>
+      <div class="story-copy">
+        <p class="topic">Model Security</p>
+        <h3>NLTK 3.10.3 Makes Model Artifacts a Priority</h3>
+        <p class="summary">NLTK updates address unsafe pickle loading and Java option validation, requiring version enforcement and artifact origin control.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Model files and runtime wrappers must be treated as supply-chain execution inputs.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/nltk-upgrade-needs-artifact-boundary-proof/">NLTK 3.10.3 Turns Model Artifacts Into a Patch Priority ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">06</div>
+      <div class="story-copy">
+        <p class="topic">Network Security</p>
+        <h3>Arista OpenSSH Flaws Require Inbound and Outbound Controls</h3>
+        <p class="summary">Arista&#39;s advisory covers four OpenSSH issues, requiring software updates, inbound source filtering, and strict outbound session constraints.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>SSH risk involves both servers accepting connections and client devices connecting outward.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/arista-openssh-controls-need-both-directions/">Arista OpenSSH Exposure Runs in Both Directions ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">07</div>
+      <div class="story-copy">
+        <p class="topic">AI Threat Intelligence</p>
+        <h3>AI Malware Demands Telemetry Context</h3>
+        <p class="summary">Unit 42 research shows AI samples mostly reside in repositories, highlighting the need for behavioral detection and provenance checks.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Merging research sandboxes with production telemetry creates false urgency and distorts priorities.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ai-malware-needs-telemetry-context/">AI Malware Needs Telemetry Context, Not a New Detection Category ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">08</div>
+      <div class="story-copy">
+        <p class="topic">Browser Patching</p>
+        <h3>Chrome 152 Requires Running-Version Proof</h3>
+        <p class="summary">Google&#39;s Chrome 152 fixes 327 security issues, requiring defenders to verify that active browser processes have restarted.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Automatic updates and installed packages do not prove running processes have crossed the version boundary.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/chrome-update-needs-running-version-proof/">Chrome 152 Update Needs Running-Version Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">09</div>
+      <div class="story-copy">
+        <p class="topic">Endpoint Privilege</p>
+        <h3>macOS Privilege Management Needs Enforcement Proof</h3>
+        <p class="summary">Admin By Request vulnerabilities highlight the need to verify local trust decisions, agent versions, and elevation cleanup.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Least privilege requires verifiable state, not just an installed management console or policy intent.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/macos-privilege-management-needs-enforcement-path-proof/">macOS privilege management needs enforcement-path proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">10</div>
+      <div class="story-copy">
+        <p class="topic">Identity Verification</p>
+        <h3>Alluxio S3 Proxy Needs Verified Identity</h3>
+        <p class="summary">CVE-2026-79787 exposes authentication flaws in Alluxio&#39;s S3 proxy default configuration, requiring signature enforcement checks.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Credential fields must be cryptographically verified rather than trusted based on header shape alone.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/alluxio-s3-proxy-needs-verified-identity/">Alluxio S3 Proxy Needs Proof Behind Every Claimed Identity ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">11</div>
+      <div class="story-copy">
+        <p class="topic">Mobile Security</p>
+        <h3>Myna Point Flaw Makes Intents a Boundary</h3>
+        <p class="summary">An Android custom URL scheme vulnerability requires app updates and rigorous input validation for all incoming intents.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>A valid mobile navigation destination does not make incoming intent parameters safe to execute.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/myna-point-intents-need-input-boundaries/">Myna Point Flaw Makes Android Intents a Trust Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">12</div>
+      <div class="story-copy">
+        <p class="topic">Authentication</p>
+        <h3>Passkeys Require Recovery and Session Controls</h3>
+        <p class="summary">CSA guidance emphasizes that passkey rollouts need secure recovery paths, strong session controls, and fallback elimination.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Phishing-resistant logins do not protect against session theft, malware, or weak account recovery.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/passkeys-need-recovery-and-session-controls/">Passkeys Need Recovery and Session Controls ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">13</div>
+      <div class="story-copy">
+        <p class="topic">AI Attestation</p>
+        <h3>TRACE Attestation Needs Verifier-Side Proof</h3>
+        <p class="summary">TII&#39;s role in the TRACE specification establishes a framework for AI attestation, requiring independent verifier-side validation.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Runtime records must be checked for cryptographic freshness, hardware profiles, and revocation status.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/uae-trace-ai-attestation-needs-verifier-proof/">UAE&#39;s TRACE Role Makes AI Attestation a Verifier-Side Control ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">14</div>
+      <div class="story-copy">
+        <p class="topic">Device Security</p>
+        <h3>UniFi Protect Fix Closes Command Injection</h3>
+        <p class="summary">Ubiquiti&#39;s advisory fixes critical input validation flaws in UniFi Protect, requiring version 7.2.105 and reachability limits.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Application access routes must be constrained to prevent command execution on underlying hosts.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/unifi-protect-fix-needs-host-boundary-proof/">UniFi Protect Fix Closes Two Command-Injection Paths ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">15</div>
+      <div class="story-copy">
+        <p class="topic">Agent Security</p>
+        <h3>WatchGuard Agent Fixes Need Fleet-Level Proof</h3>
+        <p class="summary">WatchGuard Agent vulnerabilities allow unauthenticated code execution, requiring updates and version verification across Windows fleets.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Endpoint agents occupy trusted positions, making fleet-wide inventory and runtime verification critical.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/watchguard-agent-fixes-need-endpoint-version-proof/">WatchGuard Agent Fixes Need Endpoint-Level Version Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">16</div>
+      <div class="story-copy">
+        <p class="topic">Agent Sandboxing</p>
+        <h3>NVIDIA Agent Sandbox Fixes Need Component Proof</h3>
+        <p class="summary">NVIDIA fixes critical NemoClaw and OpenShell flaws, requiring precise component version and commit verification.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Sandboxed AI agent platforms require component-level tracking to ensure security boundaries hold.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/nvidia-agent-sandbox-fixes-need-component-proof/">NVIDIA Agent Sandbox Fixes Need Component-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">17</div>
+      <div class="story-copy">
+        <p class="topic">Java Patching</p>
+        <h3>Ubuntu OpenJDK Update Needs Runtime Restarts</h3>
+        <p class="summary">Ubuntu OpenJDK 25 security updates fix multiple components, requiring package installation and live JVM process restarts.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Long-lived Java applications continue running vulnerable code until processes are explicitly restarted.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ubuntu-openjdk-update-needs-runtime-restart-proof/">Ubuntu OpenJDK Update Needs Runtime Restart Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">18</div>
+      <div class="story-copy">
+        <p class="topic">Application Server</p>
+        <h3>Tomcat Constraint Bypass Makes Order a Control</h3>
+        <p class="summary">CVE-2026-65182 causes improper authorization under specific path constraint orderings, requiring Tomcat upgrades and route testing.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Security policies must be validated at the route level to ensure declaration order does not weaken protection.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/tomcat-constraint-bypass-needs-route-order-proof/">Tomcat Constraint Bypass Makes Route Order a Security Control ↗</a>
+      </div>
+    </article></main>
+
+      <section class="operating-view">
+        <p class="eyebrow">The operating view</p>
+        <h2>What the day means for defenders</h2>
+        <p>Treat patches, agent deployments, and configurations as ongoing operational workflows. Verify running processes, constrain reachable network paths, and validate that security controls maintain their integrity across all system boundaries.</p>
+        <ol class="watch-list"><li><span>1</span><p>Verify running process versions and active JVM runtimes rather than relying solely on package inventory reports.</p></li>
+<li><span>2</span><p>Enforce strict input validation, cryptographic verification, and credential separation across identity and proxy layers.</p></li>
+<li><span>3</span><p>Monitor endpoint agent compliance and ensure session revocation mechanisms function as tested during operational reviews.</p></li></ol>
+      </section>
+
+      <section class="sources">
+        <p class="eyebrow">Source index</p>
+        <h2>Every briefing in this digest</h2>
+        <ol class="source-list">
+    <li>
+      <span>01</span>
+      <a href="https://shadowcontext.com/soc-readiness-needs-operational-authority/">SOC Readiness Needs Operational Authority, Not Just More Alerts</a>
+    </li>
+
+    <li>
+      <span>02</span>
+      <a href="https://shadowcontext.com/oracle-proxy-flaw-needs-edge-inventory/">Exploited Oracle Proxy Flaw Makes Edge Inventory Urgent</a>
+    </li>
+
+    <li>
+      <span>03</span>
+      <a href="https://shadowcontext.com/phone-led-phishing-needs-callback-verification/">Phone-Led Phishing Makes the Callback a Security Boundary</a>
+    </li>
+
+    <li>
+      <span>04</span>
+      <a href="https://shadowcontext.com/translatepress-reset-secrets-need-storage-boundaries/">TranslatePress Flaw Makes Reset Links a Data-Handling Problem</a>
+    </li>
+
+    <li>
+      <span>05</span>
+      <a href="https://shadowcontext.com/nltk-upgrade-needs-artifact-boundary-proof/">NLTK 3.10.3 Turns Model Artifacts Into a Patch Priority</a>
+    </li>
+
+    <li>
+      <span>06</span>
+      <a href="https://shadowcontext.com/arista-openssh-controls-need-both-directions/">Arista OpenSSH Exposure Runs in Both Directions</a>
+    </li>
+
+    <li>
+      <span>07</span>
+      <a href="https://shadowcontext.com/ai-malware-needs-telemetry-context/">AI Malware Needs Telemetry Context, Not a New Detection Category</a>
+    </li>
+
+    <li>
+      <span>08</span>
+      <a href="https://shadowcontext.com/chrome-update-needs-running-version-proof/">Chrome 152 Update Needs Running-Version Proof</a>
+    </li>
+
+    <li>
+      <span>09</span>
+      <a href="https://shadowcontext.com/macos-privilege-management-needs-enforcement-path-proof/">macOS privilege management needs enforcement-path proof</a>
+    </li>
+
+    <li>
+      <span>10</span>
+      <a href="https://shadowcontext.com/alluxio-s3-proxy-needs-verified-identity/">Alluxio S3 Proxy Needs Proof Behind Every Claimed Identity</a>
+    </li>
+
+    <li>
+      <span>11</span>
+      <a href="https://shadowcontext.com/myna-point-intents-need-input-boundaries/">Myna Point Flaw Makes Android Intents a Trust Boundary</a>
+    </li>
+
+    <li>
+      <span>12</span>
+      <a href="https://shadowcontext.com/passkeys-need-recovery-and-session-controls/">Passkeys Need Recovery and Session Controls</a>
+    </li>
+
+    <li>
+      <span>13</span>
+      <a href="https://shadowcontext.com/uae-trace-ai-attestation-needs-verifier-proof/">UAE&#39;s TRACE Role Makes AI Attestation a Verifier-Side Control</a>
+    </li>
+
+    <li>
+      <span>14</span>
+      <a href="https://shadowcontext.com/unifi-protect-fix-needs-host-boundary-proof/">UniFi Protect Fix Closes Two Command-Injection Paths</a>
+    </li>
+
+    <li>
+      <span>15</span>
+      <a href="https://shadowcontext.com/watchguard-agent-fixes-need-endpoint-version-proof/">WatchGuard Agent Fixes Need Endpoint-Level Version Proof</a>
+    </li>
+
+    <li>
+      <span>16</span>
+      <a href="https://shadowcontext.com/nvidia-agent-sandbox-fixes-need-component-proof/">NVIDIA Agent Sandbox Fixes Need Component-Level Proof</a>
+    </li>
+
+    <li>
+      <span>17</span>
+      <a href="https://shadowcontext.com/ubuntu-openjdk-update-needs-runtime-restart-proof/">Ubuntu OpenJDK Update Needs Runtime Restart Proof</a>
+    </li>
+
+    <li>
+      <span>18</span>
+      <a href="https://shadowcontext.com/tomcat-constraint-bypass-needs-route-order-proof/">Tomcat Constraint Bypass Makes Route Order a Security Control</a>
+    </li></ol>
+      </section>
+
+      <div class="cta">
+        <strong>Read the full analysis</strong>
+        <span>https://shadowcontext.com/</span>
+      </div>
+
+      <footer class="document-footer">
+        <span>ShadowContext</span>
+        <span>Independent defensive security intelligence</span>
+      </footer>
+    </section>
+  </body>
+</html>

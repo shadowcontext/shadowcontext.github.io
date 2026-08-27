@@ -1,0 +1,140 @@
+{
+  "digest_title": "Defensive Brief: Runtime Authority, Patch Proof, and Boundaries",
+  "dek": "ShadowContext daily defense digest covering critical vulnerability fixes, operational authority, endpoint proof, and boundary controls across infrastructure, cloud, AI, and identity systems.",
+  "overview": "Defenders must move beyond basic asset inventory by proving runtime execution, verified application versions, and rigorous cross-channel and cross-platform controls across all monitored environments.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "SOC Readiness Requires Operational Authority",
+      "summary": "CISA assessments show that tuned detections, empowered analysts, and rehearsed cloud containment must operate as an integrated system.",
+      "why_it_matters": "More telemetry is insufficient without pre-authorized responses and clear escalation authority.",
+      "topic": "SOC Readiness"
+    },
+    {
+      "source_id": "S02",
+      "headline": "Oracle Proxy Flaw Demands Edge Inventory",
+      "summary": "CVE-2026-21962 exploitation makes auditing and patching Oracle HTTP Server and WebLogic proxy plug-ins urgent.",
+      "why_it_matters": "Split ownership across middleware and web teams requires thorough discovery before patching.",
+      "topic": "Proxy Vulnerability"
+    },
+    {
+      "source_id": "S03",
+      "headline": "Phone-Led Phishing Makes Callbacks a Boundary",
+      "summary": "Debt-relief campaigns use phone calls to bypass email links, requiring independent callback verification and cross-channel reporting.",
+      "why_it_matters": "Treating a phone number as safe introduces visibility gaps and bypasses conventional email controls.",
+      "topic": "Phishing Defense"
+    },
+    {
+      "source_id": "S04",
+      "headline": "TranslatePress Flaw Exposes Reset Links",
+      "summary": "CVE-2026-19632 allows unauthenticated retrieval of password-reset URLs through translated content, requiring translation updates and storage boundaries.",
+      "why_it_matters": "Secret-bearing tokens must be strictly classified and excluded from caching and localization pipelines.",
+      "topic": "Data Boundaries"
+    },
+    {
+      "source_id": "S05",
+      "headline": "NLTK 3.10.3 Makes Model Artifacts a Priority",
+      "summary": "NLTK updates address unsafe pickle loading and Java option validation, requiring version enforcement and artifact origin control.",
+      "why_it_matters": "Model files and runtime wrappers must be treated as supply-chain execution inputs.",
+      "topic": "Model Security"
+    },
+    {
+      "source_id": "S06",
+      "headline": "Arista OpenSSH Flaws Require Inbound and Outbound Controls",
+      "summary": "Arista's advisory covers four OpenSSH issues, requiring software updates, inbound source filtering, and strict outbound session constraints.",
+      "why_it_matters": "SSH risk involves both servers accepting connections and client devices connecting outward.",
+      "topic": "Network Security"
+    },
+    {
+      "source_id": "S07",
+      "headline": "AI Malware Demands Telemetry Context",
+      "summary": "Unit 42 research shows AI samples mostly reside in repositories, highlighting the need for behavioral detection and provenance checks.",
+      "why_it_matters": "Merging research sandboxes with production telemetry creates false urgency and distorts priorities.",
+      "topic": "AI Threat Intelligence"
+    },
+    {
+      "source_id": "S08",
+      "headline": "Chrome 152 Requires Running-Version Proof",
+      "summary": "Google's Chrome 152 fixes 327 security issues, requiring defenders to verify that active browser processes have restarted.",
+      "why_it_matters": "Automatic updates and installed packages do not prove running processes have crossed the version boundary.",
+      "topic": "Browser Patching"
+    },
+    {
+      "source_id": "S09",
+      "headline": "macOS Privilege Management Needs Enforcement Proof",
+      "summary": "Admin By Request vulnerabilities highlight the need to verify local trust decisions, agent versions, and elevation cleanup.",
+      "why_it_matters": "Least privilege requires verifiable state, not just an installed management console or policy intent.",
+      "topic": "Endpoint Privilege"
+    },
+    {
+      "source_id": "S10",
+      "headline": "Alluxio S3 Proxy Needs Verified Identity",
+      "summary": "CVE-2026-79787 exposes authentication flaws in Alluxio's S3 proxy default configuration, requiring signature enforcement checks.",
+      "why_it_matters": "Credential fields must be cryptographically verified rather than trusted based on header shape alone.",
+      "topic": "Identity Verification"
+    },
+    {
+      "source_id": "S11",
+      "headline": "Myna Point Flaw Makes Intents a Boundary",
+      "summary": "An Android custom URL scheme vulnerability requires app updates and rigorous input validation for all incoming intents.",
+      "why_it_matters": "A valid mobile navigation destination does not make incoming intent parameters safe to execute.",
+      "topic": "Mobile Security"
+    },
+    {
+      "source_id": "S12",
+      "headline": "Passkeys Require Recovery and Session Controls",
+      "summary": "CSA guidance emphasizes that passkey rollouts need secure recovery paths, strong session controls, and fallback elimination.",
+      "why_it_matters": "Phishing-resistant logins do not protect against session theft, malware, or weak account recovery.",
+      "topic": "Authentication"
+    },
+    {
+      "source_id": "S13",
+      "headline": "TRACE Attestation Needs Verifier-Side Proof",
+      "summary": "TII's role in the TRACE specification establishes a framework for AI attestation, requiring independent verifier-side validation.",
+      "why_it_matters": "Runtime records must be checked for cryptographic freshness, hardware profiles, and revocation status.",
+      "topic": "AI Attestation"
+    },
+    {
+      "source_id": "S14",
+      "headline": "UniFi Protect Fix Closes Command Injection",
+      "summary": "Ubiquiti's advisory fixes critical input validation flaws in UniFi Protect, requiring version 7.2.105 and reachability limits.",
+      "why_it_matters": "Application access routes must be constrained to prevent command execution on underlying hosts.",
+      "topic": "Device Security"
+    },
+    {
+      "source_id": "S15",
+      "headline": "WatchGuard Agent Fixes Need Fleet-Level Proof",
+      "summary": "WatchGuard Agent vulnerabilities allow unauthenticated code execution, requiring updates and version verification across Windows fleets.",
+      "why_it_matters": "Endpoint agents occupy trusted positions, making fleet-wide inventory and runtime verification critical.",
+      "topic": "Agent Security"
+    },
+    {
+      "source_id": "S16",
+      "headline": "NVIDIA Agent Sandbox Fixes Need Component Proof",
+      "summary": "NVIDIA fixes critical NemoClaw and OpenShell flaws, requiring precise component version and commit verification.",
+      "why_it_matters": "Sandboxed AI agent platforms require component-level tracking to ensure security boundaries hold.",
+      "topic": "Agent Sandboxing"
+    },
+    {
+      "source_id": "S17",
+      "headline": "Ubuntu OpenJDK Update Needs Runtime Restarts",
+      "summary": "Ubuntu OpenJDK 25 security updates fix multiple components, requiring package installation and live JVM process restarts.",
+      "why_it_matters": "Long-lived Java applications continue running vulnerable code until processes are explicitly restarted.",
+      "topic": "Java Patching"
+    },
+    {
+      "source_id": "S18",
+      "headline": "Tomcat Constraint Bypass Makes Order a Control",
+      "summary": "CVE-2026-65182 causes improper authorization under specific path constraint orderings, requiring Tomcat upgrades and route testing.",
+      "why_it_matters": "Security policies must be validated at the route level to ensure declaration order does not weaken protection.",
+      "topic": "Application Server"
+    }
+  ],
+  "operating_view": "Treat patches, agent deployments, and configurations as ongoing operational workflows. Verify running processes, constrain reachable network paths, and validate that security controls maintain their integrity across all system boundaries.",
+  "watch_items": [
+    "Verify running process versions and active JVM runtimes rather than relying solely on package inventory reports.",
+    "Enforce strict input validation, cryptographic verification, and credential separation across identity and proxy layers.",
+    "Monitor endpoint agent compliance and ensure session revocation mechanisms function as tested during operational reviews."
+  ],
+  "caption_intro": "Explore today's essential defensive cybersecurity updates, focusing on runtime verification, operational authority, and strict boundary controls across enterprise architectures."
+}

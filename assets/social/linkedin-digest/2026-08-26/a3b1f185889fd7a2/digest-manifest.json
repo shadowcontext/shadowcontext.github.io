@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-08-27T14:48:26.095+04:00",
+  "digestDate": "2026-08-26",
+  "digestHash": "a3b1f185889fd7a23fc05df5c743aae10aaa306d05a02134b21525ba64f16a37",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "Defensive Brief: Runtime Authority, Patch Proof, and Boundaries",
+  "articleCount": 18,
+  "sourceArticles": [
+    {
+      "title": "SOC Readiness Needs Operational Authority, Not Just More Alerts",
+      "canonicalUrl": "https://shadowcontext.com/soc-readiness-needs-operational-authority/",
+      "publishedAt": "2026-08-26T01:09:41.000+04:00",
+      "category": "defense",
+      "sourceHash": "3221cd371e16e95502d38c1bc16185d3e412d532decf200c92d83ea5fd9b202b"
+    },
+    {
+      "title": "Exploited Oracle Proxy Flaw Makes Edge Inventory Urgent",
+      "canonicalUrl": "https://shadowcontext.com/oracle-proxy-flaw-needs-edge-inventory/",
+      "publishedAt": "2026-08-26T03:09:17.000+04:00",
+      "category": "defense",
+      "sourceHash": "0df3e9c1b31f7adffaa30e1a84354754cdb229ad8aa3243b5b65f277fd7a8c01"
+    },
+    {
+      "title": "Phone-Led Phishing Makes the Callback a Security Boundary",
+      "canonicalUrl": "https://shadowcontext.com/phone-led-phishing-needs-callback-verification/",
+      "publishedAt": "2026-08-26T04:09:57.000+04:00",
+      "category": "threat-intelligence",
+      "sourceHash": "3294951ef88f304c03a86b0194cc01827fa19e79742b320f91b45292580876ca"
+    },
+    {
+      "title": "TranslatePress Flaw Makes Reset Links a Data-Handling Problem",
+      "canonicalUrl": "https://shadowcontext.com/translatepress-reset-secrets-need-storage-boundaries/",
+      "publishedAt": "2026-08-26T06:10:38.000+04:00",
+      "category": "defense",
+      "sourceHash": "96aceb7f78ec9c2be4bb87c4025ef9f3e3bb332856dbe009c0542906fa2dc210"
+    },
+    {
+      "title": "NLTK 3.10.3 Turns Model Artifacts Into a Patch Priority",
+      "canonicalUrl": "https://shadowcontext.com/nltk-upgrade-needs-artifact-boundary-proof/",
+      "publishedAt": "2026-08-26T07:10:30.000+04:00",
+      "category": "defense",
+      "sourceHash": "35d9e178543b7924632428cc83082ddcd1aa599feb35ba1aaa7e52698bfd0ea5"
+    },
+    {
+      "title": "Arista OpenSSH Exposure Runs in Both Directions",
+      "canonicalUrl": "https://shadowcontext.com/arista-openssh-controls-need-both-directions/",
+      "publishedAt": "2026-08-26T08:09:14.000+04:00",
+      "category": "defense",
+      "sourceHash": "f2798c478cbc7b0cc83171a1f396b54b05447c53732ba63103e0c1768172f1fa"
+    },
+    {
+      "title": "AI Malware Needs Telemetry Context, Not a New Detection Category",
+      "canonicalUrl": "https://shadowcontext.com/ai-malware-needs-telemetry-context/",
+      "publishedAt": "2026-08-26T09:09:21.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "5cf8d786a7ef685860b382fcf20f19cf448f854c2dab179b7b21c6b06755f6f8"
+    },
+    {
+      "title": "Chrome 152 Update Needs Running-Version Proof",
+      "canonicalUrl": "https://shadowcontext.com/chrome-update-needs-running-version-proof/",
+      "publishedAt": "2026-08-26T12:09:24.000+04:00",
+      "category": "defense",
+      "sourceHash": "f8732195e2a9a41ae2ce9a41b8089a7074c20f94875073374163ef1507b0df41"
+    },
+    {
+      "title": "macOS privilege management needs enforcement-path proof",
+      "canonicalUrl": "https://shadowcontext.com/macos-privilege-management-needs-enforcement-path-proof/",
+      "publishedAt": "2026-08-26T13:10:43.000+04:00",
+      "category": "defense",
+      "sourceHash": "fe393e559830584f506d6f05a33af86942b46bcbd5094d2b5a4adc0c00782e1a"
+    },
+    {
+      "title": "Alluxio S3 Proxy Needs Proof Behind Every Claimed Identity",
+      "canonicalUrl": "https://shadowcontext.com/alluxio-s3-proxy-needs-verified-identity/",
+      "publishedAt": "2026-08-26T14:08:46.000+04:00",
+      "category": "defense",
+      "sourceHash": "d1c420a2c5711f38451a84323fb5d46e0cec458f2c673c2a78fc138b4de609dc"
+    },
+    {
+      "title": "Myna Point Flaw Makes Android Intents a Trust Boundary",
+      "canonicalUrl": "https://shadowcontext.com/myna-point-intents-need-input-boundaries/",
+      "publishedAt": "2026-08-26T15:10:23.000+04:00",
+      "category": "defense",
+      "sourceHash": "75fd74845f2ea673da856f4ee6455a0f5f3d85529baa066dc9f46baf3a10ab58"
+    },
+    {
+      "title": "Passkeys Need Recovery and Session Controls",
+      "canonicalUrl": "https://shadowcontext.com/passkeys-need-recovery-and-session-controls/",
+      "publishedAt": "2026-08-26T17:09:18.000+04:00",
+      "category": "defense",
+      "sourceHash": "1d6f8b0b87835ff2ee8a93b3f1ff976a8b46faa2b2f5ee1cee302e48707de6c4"
+    },
+    {
+      "title": "UAE's TRACE Role Makes AI Attestation a Verifier-Side Control",
+      "canonicalUrl": "https://shadowcontext.com/uae-trace-ai-attestation-needs-verifier-proof/",
+      "publishedAt": "2026-08-26T18:09:57.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "96a89bec27b5668299bac7a813c0edcc9a93d3437b66f9315fa262966a7c976d"
+    },
+    {
+      "title": "UniFi Protect Fix Closes Two Command-Injection Paths",
+      "canonicalUrl": "https://shadowcontext.com/unifi-protect-fix-needs-host-boundary-proof/",
+      "publishedAt": "2026-08-26T19:08:58.000+04:00",
+      "category": "defense",
+      "sourceHash": "b4ea62cc368e10bd273e10f57260701de045e3a69f4a714f7d312bafe255bc68"
+    },
+    {
+      "title": "WatchGuard Agent Fixes Need Endpoint-Level Version Proof",
+      "canonicalUrl": "https://shadowcontext.com/watchguard-agent-fixes-need-endpoint-version-proof/",
+      "publishedAt": "2026-08-26T20:09:27.000+04:00",
+      "category": "defense",
+      "sourceHash": "64ad895c50c33b01ea1748076c068e90d92768d630957a57b1db41a39d9db361"
+    },
+    {
+      "title": "NVIDIA Agent Sandbox Fixes Need Component-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/nvidia-agent-sandbox-fixes-need-component-proof/",
+      "publishedAt": "2026-08-26T21:09:32.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "8b3e6c291b7f5630b0aa69ca0d5772638a69e2edec4625d96f6d132e3ff2b661"
+    },
+    {
+      "title": "Ubuntu OpenJDK Update Needs Runtime Restart Proof",
+      "canonicalUrl": "https://shadowcontext.com/ubuntu-openjdk-update-needs-runtime-restart-proof/",
+      "publishedAt": "2026-08-26T22:09:06.000+04:00",
+      "category": "defense",
+      "sourceHash": "b5ed78ba0de7edb22dd6ec68a71e0c39bc405adb32eb24094675034426d30236"
+    },
+    {
+      "title": "Tomcat Constraint Bypass Makes Route Order a Security Control",
+      "canonicalUrl": "https://shadowcontext.com/tomcat-constraint-bypass-needs-route-order-proof/",
+      "publishedAt": "2026-08-26T23:10:20.000+04:00",
+      "category": "defense",
+      "sourceHash": "71add3977c9869d14e41cc81f7cacafe13cf17e49d24e657db775d7bf0c0615a"
+    }
+  ],
+  "caption": "Explore today's essential defensive cybersecurity updates, focusing on runtime verification, operational authority, and strict boundary controls across enterprise architectures.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-08-26/a3b1f185889fd7a2/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-26/a3b1f185889fd7a2/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-08-26/a3b1f185889fd7a2/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-26/a3b1f185889fd7a2/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}
