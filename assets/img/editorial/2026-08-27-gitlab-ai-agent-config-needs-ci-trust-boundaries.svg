@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Verified boundary for AI agent configuration in a CI environment</title>
+  <desc id="desc">An abstract violet configuration shard approaches a luminous verification boundary, beyond which layered compute forms remain protected in a deep blue CI corridor.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07152b"/>
+      <stop offset="0.52" stop-color="#102852"/>
+      <stop offset="1" stop-color="#07101f"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="50%" cy="50%" r="55%">
+      <stop offset="0" stop-color="#4fe5d1" stop-opacity=".38"/>
+      <stop offset=".55" stop-color="#397ddf" stop-opacity=".13"/>
+      <stop offset="1" stop-color="#10233e" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b9fff3"/>
+      <stop offset=".45" stop-color="#47e2ce"/>
+      <stop offset="1" stop-color="#287ec9"/>
+    </linearGradient>
+    <linearGradient id="shard" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#dc9bff"/>
+      <stop offset=".5" stop-color="#8857e9"/>
+      <stop offset="1" stop-color="#48288d"/>
+    </linearGradient>
+    <linearGradient id="compute" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3176bd"/>
+      <stop offset="1" stop-color="#15365e"/>
+    </linearGradient>
+    <filter id="blur40" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="12" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="corridor"><path d="M120 130H1480V770H120Z"/></clipPath>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <ellipse cx="850" cy="455" rx="610" ry="370" fill="url(#aura)"/>
+  <g clip-path="url(#corridor)" opacity=".72">
+    <path d="M0 720L720 505L1600 650V900H0Z" fill="#07162a"/>
+    <path d="M0 145L720 395L1600 230V0H0Z" fill="#132b4e"/>
+    <g fill="none" stroke="#5285b6" stroke-opacity=".18" stroke-width="2">
+      <path d="M80 732L722 505L1515 650"/>
+      <path d="M94 789L722 532L1515 714"/>
+      <path d="M92 169L722 395L1510 240"/>
+      <path d="M92 112L722 365L1510 178"/>
+    </g>
+  </g>
+  <ellipse cx="798" cy="456" rx="148" ry="298" fill="#3be1cf" opacity=".12" filter="url(#blur40)"/>
+  <g opacity=".34" fill="none" stroke="#8fbde3" stroke-width="3">
+    <path d="M170 455H470"/>
+    <path d="M1130 455H1440"/>
+    <circle cx="218" cy="455" r="7" fill="#9d6bea" stroke="none"/>
+    <circle cx="1382" cy="455" r="7" fill="#4fe5d1" stroke="none"/>
+  </g>
+  <g transform="translate(385 455)" filter="url(#glow)">
+    <path d="M-116-92L18-128L121-28L68 109L-76 126L-139 18Z" fill="url(#shard)"/>
+    <path d="M-116-92L68 109M18-128L-76 126M121-28L-139 18" fill="none" stroke="#f1d8ff" stroke-opacity=".42" stroke-width="4"/>
+    <circle cx="0" cy="0" r="24" fill="#f2dcff" opacity=".72"/>
+  </g>
+  <g filter="url(#glow)">
+    <path d="M800 172C710 227 668 306 668 406V505C668 611 717 683 800 730C883 683 932 611 932 505V406C932 306 890 227 800 172Z" fill="#0e3456" stroke="url(#gate)" stroke-width="10"/>
+    <path d="M800 236C747 278 722 334 722 411V496C722 571 748 622 800 659C852 622 878 571 878 496V411C878 334 853 278 800 236Z" fill="#0b203a" stroke="#8df8e7" stroke-opacity=".55" stroke-width="3"/>
+    <path d="M762 447L790 476L845 412" fill="none" stroke="#b9fff3" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(1110 310)">
+    <path d="M0 68L138 0L276 68L138 136Z" fill="#3e80bf" opacity=".9"/>
+    <path d="M0 68V180L138 248V136Z" fill="#14365f"/>
+    <path d="M276 68V180L138 248V136Z" fill="url(#compute)"/>
+    <path d="M28 172L138 226L248 172" fill="none" stroke="#5be5d3" stroke-opacity=".55" stroke-width="4"/>
+    <path d="M39 85L138 37L237 85L138 132Z" fill="none" stroke="#b6e8ff" stroke-opacity=".5" stroke-width="3"/>
+  </g>
+  <g fill="#73eddc">
+    <circle cx="989" cy="294" r="5" opacity=".55"/>
+    <circle cx="1030" cy="612" r="4" opacity=".38"/>
+    <circle cx="585" cy="256" r="5" opacity=".4"/>
+    <circle cx="588" cy="652" r="4" opacity=".5"/>
+  </g>
+  <rect x="70" y="70" width="1460" height="760" rx="38" fill="none" stroke="#8bc7e8" stroke-opacity=".14" stroke-width="2"/>
+</svg>
