@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Application latch protects a hardware signer's trusted display</title>
+  <desc id="desc">An abstract hardware signer presents a luminous approved state while a circular application-layer latch blocks a conflicting transaction state below it.</desc>
+  <defs>
+    <linearGradient id="bg" x1="160" y1="40" x2="1450" y2="850" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#081126"/>
+      <stop offset="0.55" stop-color="#14264A"/>
+      <stop offset="1" stop-color="#090E20"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0" cy="0" r="1" gradientTransform="translate(800 430) rotate(90) scale(430 650)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#35D9D0" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#35D9D0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="device" x1="560" y1="160" x2="1040" y2="748" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#263E67"/>
+      <stop offset="1" stop-color="#101A35"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="648" y1="254" x2="952" y2="540" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#143F58"/>
+      <stop offset="1" stop-color="#0B243D"/>
+    </linearGradient>
+    <linearGradient id="trusted" x1="650" y1="300" x2="950" y2="530" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8BFFF0"/>
+      <stop offset="1" stop-color="#32BCD8"/>
+    </linearGradient>
+    <linearGradient id="blocked" x1="650" y1="670" x2="980" y2="810" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF7EAC"/>
+      <stop offset="1" stop-color="#9A4DD2"/>
+    </linearGradient>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="200%">
+      <feDropShadow dx="0" dy="28" stdDeviation="30" flood-color="#01040D" flood-opacity="0.7"/>
+    </filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="13" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <ellipse cx="800" cy="430" rx="650" ry="430" fill="url(#halo)"/>
+  <g opacity="0.24" fill="none" stroke="#76A8CE" stroke-width="3">
+    <path d="M0 205H278L370 297"/>
+    <path d="M1600 180H1322L1234 268"/>
+    <path d="M0 710H290L382 618"/>
+    <path d="M1600 742H1306L1218 654"/>
+    <circle cx="370" cy="297" r="7" fill="#76A8CE"/>
+    <circle cx="1234" cy="268" r="7" fill="#76A8CE"/>
+    <circle cx="382" cy="618" r="7" fill="#76A8CE"/>
+    <circle cx="1218" cy="654" r="7" fill="#76A8CE"/>
+  </g>
+  <g opacity="0.45" stroke="#426890" stroke-width="3">
+    <path d="M340 448H478"/><path d="M1122 448H1260"/>
+    <circle cx="322" cy="448" r="10" fill="#52D8D4"/>
+    <circle cx="1278" cy="448" r="10" fill="#52D8D4"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="525" y="112" width="550" height="650" rx="88" fill="url(#device)" stroke="#507DA6" stroke-width="4"/>
+    <rect x="596" y="201" width="408" height="386" rx="42" fill="#07162C" stroke="#365D82" stroke-width="4"/>
+    <rect x="625" y="230" width="350" height="328" rx="28" fill="url(#screen)"/>
+    <circle cx="800" cy="676" r="34" fill="#0B1530" stroke="#6A8BAE" stroke-width="4"/>
+    <path d="M785 676H815" stroke="#76DCD9" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g filter="url(#glow)">
+    <path d="M700 306H900" stroke="url(#trusted)" stroke-width="22" stroke-linecap="round"/>
+    <path d="M700 359H842" stroke="#72E9E2" stroke-opacity="0.7" stroke-width="15" stroke-linecap="round"/>
+    <path d="M700 411H876" stroke="#72E9E2" stroke-opacity="0.48" stroke-width="15" stroke-linecap="round"/>
+    <circle cx="800" cy="491" r="37" fill="#153E52" stroke="#84FFF0" stroke-width="6"/>
+    <path d="M783 492L796 505L820 477" fill="none" stroke="#A4FFF4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g>
+    <path d="M510 600C430 650 414 757 476 824" fill="none" stroke="#EF6DA7" stroke-opacity="0.6" stroke-width="8" stroke-linecap="round" stroke-dasharray="18 22"/>
+    <path d="M1090 600C1170 650 1186 757 1124 824" fill="none" stroke="#EF6DA7" stroke-opacity="0.6" stroke-width="8" stroke-linecap="round" stroke-dasharray="18 22"/>
+    <rect x="555" y="749" width="490" height="92" rx="28" fill="#211934" stroke="url(#blocked)" stroke-width="5"/>
+    <path d="M614 779H816" stroke="#FF8BB4" stroke-width="16" stroke-linecap="round"/>
+    <path d="M614 812H754" stroke="#BF70D9" stroke-width="12" stroke-linecap="round"/>
+    <path d="M904 775L966 837M966 775L904 837" stroke="#FF9DBE" stroke-width="13" stroke-linecap="round"/>
+  </g>
+  <g filter="url(#glow)">
+    <circle cx="800" cy="646" r="112" fill="#0C1831" fill-opacity="0.92" stroke="#58E4DD" stroke-width="10"/>
+    <path d="M745 647V615C745 545 855 545 855 615V647" fill="none" stroke="#8DFFF2" stroke-width="17" stroke-linecap="round"/>
+    <rect x="724" y="629" width="152" height="104" rx="28" fill="#174657" stroke="#8DFFF2" stroke-width="7"/>
+    <circle cx="800" cy="675" r="15" fill="#B1FFF7"/>
+    <path d="M800 688V710" stroke="#B1FFF7" stroke-width="9" stroke-linecap="round"/>
+  </g>
+  <path d="M474 848C622 874 978 874 1126 848" fill="none" stroke="#4D83A8" stroke-opacity="0.42" stroke-width="4" stroke-linecap="round"/>
+</svg>
