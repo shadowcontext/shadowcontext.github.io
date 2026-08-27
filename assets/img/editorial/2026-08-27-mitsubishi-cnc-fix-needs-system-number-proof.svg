@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Protected CNC control with a newly repaired software segment</title>
+  <desc id="desc">Abstract metallic spindle rings sit behind a segmented blue protective arc. One green illuminated segment closes a gap while amber network signals stop outside the boundary.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071425"/>
+      <stop offset="0.58" stop-color="#0c2940"/>
+      <stop offset="1" stop-color="#07111c"/>
+    </linearGradient>
+    <radialGradient id="machine" cx="45%" cy="38%" r="65%">
+      <stop offset="0" stop-color="#8ad6df"/>
+      <stop offset="0.28" stop-color="#39758a"/>
+      <stop offset="0.72" stop-color="#17384e"/>
+      <stop offset="1" stop-color="#0a1b2b"/>
+    </radialGradient>
+    <linearGradient id="steel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c0e3e7"/>
+      <stop offset="0.22" stop-color="#52798b"/>
+      <stop offset="0.55" stop-color="#173246"/>
+      <stop offset="0.8" stop-color="#70aab3"/>
+      <stop offset="1" stop-color="#142a3a"/>
+    </linearGradient>
+    <linearGradient id="barrier" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2b6f9b"/>
+      <stop offset="0.5" stop-color="#63bfd0"/>
+      <stop offset="1" stop-color="#215979"/>
+    </linearGradient>
+    <linearGradient id="repair" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b9f297"/>
+      <stop offset="0.5" stop-color="#4fd39c"/>
+      <stop offset="1" stop-color="#159076"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="38"/>
+    </filter>
+    <clipPath id="floor"><path d="M0 580 Q800 470 1600 570 V900 H0Z"/></clipPath>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g opacity="0.34" clip-path="url(#floor)" stroke="#2e7890" stroke-width="2" fill="none">
+    <path d="M-100 735 Q800 565 1700 730"/>
+    <path d="M-100 805 Q800 620 1700 798"/>
+    <path d="M-50 875 Q800 680 1650 870"/>
+    <path d="M260 525 L80 900"/><path d="M520 500 L440 900"/><path d="M800 485 V900"/><path d="M1080 500 L1160 900"/><path d="M1340 525 L1520 900"/>
+  </g>
+  <ellipse cx="770" cy="770" rx="570" ry="105" fill="#12384b" opacity="0.5" filter="url(#soft)"/>
+
+  <g transform="translate(690 445)">
+    <circle r="252" fill="#07131f" stroke="#1c526b" stroke-width="7"/>
+    <circle r="214" fill="url(#machine)" stroke="#76b7c0" stroke-width="4"/>
+    <circle r="163" fill="#0a1a29" stroke="url(#steel)" stroke-width="42"/>
+    <circle r="91" fill="#07131d" stroke="#44788a" stroke-width="8"/>
+    <circle r="32" fill="#6cb7bd" opacity="0.8"/>
+    <g fill="#0c2433" stroke="#5a8996" stroke-width="3">
+      <path d="M-19-205 L19-205 L31-164 L-31-164Z"/><path d="M-19 205 L19 205 L31 164 L-31 164Z"/>
+      <path d="M-205-19 L-205 19 L-164 31 L-164-31Z"/><path d="M205-19 L205 19 L164 31 L164-31Z"/>
+      <path d="M-159-132 L-132-159 L-95-138 L-138-95Z"/><path d="M159 132 L132 159 L95 138 L138 95Z"/>
+      <path d="M159-132 L132-159 L95-138 L138-95Z"/><path d="M-159 132 L-132 159 L-95 138 L-138 95Z"/>
+    </g>
+  </g>
+
+  <g fill="none" stroke="url(#barrier)" stroke-width="40" stroke-linecap="round">
+    <path d="M365 670 A405 405 0 0 1 326 382"/>
+    <path d="M353 319 A405 405 0 0 1 559 99"/>
+    <path d="M628 70 A405 405 0 0 1 931 91"/>
+    <path d="M999 124 A405 405 0 0 1 1100 225"/>
+    <path d="M1164 320 A405 405 0 0 1 1089 675"/>
+  </g>
+  <path d="M1118 267 A405 405 0 0 1 1154 344" fill="none" stroke="#53d5a0" stroke-width="54" stroke-linecap="round" opacity="0.32" filter="url(#glow)"/>
+  <path d="M1118 267 A405 405 0 0 1 1154 344" fill="none" stroke="url(#repair)" stroke-width="40" stroke-linecap="round"/>
+  <circle cx="1118" cy="267" r="10" fill="#d7ffd6"/>
+  <circle cx="1154" cy="344" r="10" fill="#d7ffd6"/>
+
+  <g stroke="#eeb35c" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.9">
+    <path d="M1508 202 C1392 216 1309 244 1213 286"/>
+    <path d="M1532 356 C1415 349 1331 344 1227 333"/>
+    <path d="M1488 510 C1381 475 1300 423 1211 377"/>
+  </g>
+  <g fill="#ffd27c" filter="url(#glow)">
+    <circle cx="1488" cy="204" r="9"/><circle cx="1376" cy="231" r="7"/><circle cx="1280" cy="262" r="6"/>
+    <circle cx="1510" cy="355" r="9"/><circle cx="1398" cy="349" r="7"/><circle cx="1305" cy="342" r="6"/>
+    <circle cx="1471" cy="504" r="9"/><circle cx="1368" cy="459" r="7"/><circle cx="1285" cy="414" r="6"/>
+  </g>
+  <g fill="#eef9f7" opacity="0.72">
+    <circle cx="217" cy="179" r="3"/><circle cx="286" cy="118" r="2"/><circle cx="1243" cy="135" r="3"/><circle cx="1321" cy="625" r="2"/><circle cx="198" cy="567" r="2"/>
+  </g>
+</svg>
