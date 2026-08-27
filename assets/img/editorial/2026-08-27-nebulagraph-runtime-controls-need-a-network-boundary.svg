@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Graph database runtime protected by layered network boundaries</title>
+  <desc id="desc">An abstract editorial scene of a faceted graph database core enclosed by luminous boundary arcs, with loose configuration fragments held outside.</desc>
+  <defs>
+    <linearGradient id="background" x1="110" y1="70" x2="1490" y2="840" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071323"/>
+      <stop offset="0.5" stop-color="#102C45"/>
+      <stop offset="1" stop-color="#07111E"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="0" cy="0" r="1" gradientTransform="translate(800 455) rotate(90) scale(420 620)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2C9BB5" stop-opacity="0.33"/>
+      <stop offset="1" stop-color="#2C9BB5" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="core" x1="610" y1="288" x2="970" y2="658" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#61F2D4"/>
+      <stop offset="0.48" stop-color="#24AFC4"/>
+      <stop offset="1" stop-color="#3457A8"/>
+    </linearGradient>
+    <linearGradient id="boundary" x1="366" y1="160" x2="1236" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9AFFF0"/>
+      <stop offset="0.55" stop-color="#47C9DF"/>
+      <stop offset="1" stop-color="#6586EE"/>
+    </linearGradient>
+    <linearGradient id="warning" x1="220" y1="275" x2="1370" y2="670" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFCF78"/>
+      <stop offset="1" stop-color="#EF765D"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="13" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="190%">
+      <feDropShadow dx="0" dy="28" stdDeviation="30" flood-color="#02060D" flood-opacity="0.7"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <ellipse cx="800" cy="455" rx="650" ry="420" fill="url(#aura)"/>
+  <g opacity="0.18" fill="none" stroke="#80BDD0" stroke-width="2">
+    <path d="M0 180C210 165 252 278 388 278"/>
+    <path d="M1600 174C1398 168 1354 276 1214 276"/>
+    <path d="M0 726C210 735 260 624 390 624"/>
+    <path d="M1600 728C1394 738 1352 626 1210 626"/>
+  </g>
+  <g fill="none" stroke-linecap="round">
+    <path d="M423 693C270 547 279 324 441 191" stroke="#294B65" stroke-width="42" opacity="0.9"/>
+    <path d="M1177 693C1330 547 1321 324 1159 191" stroke="#294B65" stroke-width="42" opacity="0.9"/>
+    <path d="M439 680C304 546 313 338 457 207" stroke="url(#boundary)" stroke-width="10" filter="url(#glow)"/>
+    <path d="M1161 680C1296 546 1287 338 1143 207" stroke="url(#boundary)" stroke-width="10" filter="url(#glow)"/>
+    <path d="M515 748C672 823 930 823 1085 748" stroke="#4E83A0" stroke-width="8" opacity="0.7"/>
+    <path d="M527 727C681 795 919 795 1073 727" stroke="#79E4DE" stroke-width="4" opacity="0.85"/>
+  </g>
+  <g filter="url(#shadow)">
+    <path d="M800 238L1000 354V586L800 702L600 586V354L800 238Z" fill="#0C2238" stroke="#356B88" stroke-width="5"/>
+    <path d="M800 288L951 375V550L800 638L649 550V375L800 288Z" fill="url(#core)" opacity="0.92"/>
+    <path d="M800 288V463L951 375M800 463L649 375M800 463V638M800 463L951 550M800 463L649 550" fill="none" stroke="#D0FFF7" stroke-opacity="0.42" stroke-width="4"/>
+  </g>
+  <g fill="#D9FFF7" stroke="#14384C" stroke-width="7">
+    <circle cx="800" cy="288" r="19"/>
+    <circle cx="951" cy="375" r="19"/>
+    <circle cx="951" cy="550" r="19"/>
+    <circle cx="800" cy="638" r="19"/>
+    <circle cx="649" cy="550" r="19"/>
+    <circle cx="649" cy="375" r="19"/>
+    <circle cx="800" cy="463" r="25" fill="#FFDA8A"/>
+  </g>
+  <g filter="url(#glow)">
+    <path d="M800 340L872 366V431C872 482 842 522 800 541C758 522 728 482 728 431V366L800 340Z" fill="#112D43" stroke="#B5FFF1" stroke-width="7"/>
+    <path d="M767 430L791 454L836 402" fill="none" stroke="#7AFADE" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g opacity="0.96">
+    <path d="M238 331L345 304L394 354L365 423L256 440L207 385Z" fill="#152B3D" stroke="url(#warning)" stroke-width="5"/>
+    <path d="M250 361L339 338M244 388L354 359M270 411L340 393" stroke="#FFC77B" stroke-width="10" stroke-linecap="round" opacity="0.78"/>
+    <path d="M1362 344L1255 314L1205 366L1237 435L1347 449L1394 392Z" fill="#152B3D" stroke="url(#warning)" stroke-width="5"/>
+    <path d="M1350 374L1260 348M1355 402L1245 370M1328 424L1257 404" stroke="#FFC77B" stroke-width="10" stroke-linecap="round" opacity="0.78"/>
+    <path d="M312 564L401 535L446 579L424 646L331 665L282 618Z" fill="#152B3D" stroke="#EF8A65" stroke-width="5"/>
+    <path d="M326 593L403 568M326 622L396 600" stroke="#F6B078" stroke-width="10" stroke-linecap="round" opacity="0.72"/>
+    <path d="M1287 570L1197 540L1152 584L1176 652L1270 670L1318 623Z" fill="#152B3D" stroke="#EF8A65" stroke-width="5"/>
+    <path d="M1272 599L1194 574M1271 628L1200 606" stroke="#F6B078" stroke-width="10" stroke-linecap="round" opacity="0.72"/>
+  </g>
+  <g fill="#83F4E4" opacity="0.9">
+    <circle cx="445" cy="207" r="9"/>
+    <circle cx="1155" cy="207" r="9"/>
+    <circle cx="440" cy="681" r="9"/>
+    <circle cx="1160" cy="681" r="9"/>
+  </g>
+</svg>
