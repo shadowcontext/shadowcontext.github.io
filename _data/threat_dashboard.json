@@ -1,15 +1,75 @@
 {
-  "generated_at": "2026-08-26T01:19:09Z",
-  "generated_display": "26 Aug 2026 · 01:19 UTC",
+  "generated_at": "2026-08-27T01:22:09Z",
+  "generated_display": "27 Aug 2026 · 01:22 UTC",
   "metrics": {
-    "kev_total": 1676,
-    "kev_added_30d": 23,
-    "due_next_7d": 3,
+    "kev_total": 1682,
+    "kev_added_30d": 27,
+    "due_next_7d": 6,
     "ioc_total": 197,
     "ioc_total_display": "197",
     "ioc_total_exact": "197"
   },
   "vulnerabilities": [
+    {
+      "cve": "CVE-2026-8452",
+      "name": "Citrix NetScaler ADC and NetScaler Gateway Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
+      "vendor": "Citrix",
+      "product": "NetScaler ADC and NetScaler Gateway",
+      "date_added": "2026-08-26",
+      "due_date": "2026-08-29",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-8452"
+    },
+    {
+      "cve": "CVE-2022-0995",
+      "name": "Linux Kernel Out-of-Bounds Write Vulnerability",
+      "vendor": "Linux",
+      "product": "Kernel",
+      "date_added": "2026-08-26",
+      "due_date": "2026-09-09",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2022-0995"
+    },
+    {
+      "cve": "CVE-2021-23758",
+      "name": "Ajax.NET Professional Deserialization of Untrusted Data Vulnerability",
+      "vendor": "Ajax.NET Professional",
+      "product": "Ajax.NET Professional",
+      "date_added": "2026-08-26",
+      "due_date": "2026-09-09",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2021-23758"
+    },
+    {
+      "cve": "CVE-2019-1068",
+      "name": "Microsoft SQL Server Remote Code Execution Vulnerability",
+      "vendor": "Microsoft",
+      "product": "SQL Server",
+      "date_added": "2026-08-26",
+      "due_date": "2026-08-29",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2019-1068"
+    },
+    {
+      "cve": "CVE-2015-5287",
+      "name": "Red Hat Automatic Bug Reporting Tool Privilege Escalation Vulnerability",
+      "vendor": "Red Hat",
+      "product": "Automatic Bug Reporting Tool",
+      "date_added": "2026-08-26",
+      "due_date": "2026-09-09",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2015-5287"
+    },
+    {
+      "cve": "CVE-2015-3246",
+      "name": "Red Hat Libuser Race Condition Vulnerability",
+      "vendor": "Red Hat",
+      "product": "Libuser",
+      "date_added": "2026-08-26",
+      "due_date": "2026-09-09",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2015-3246"
+    },
     {
       "cve": "CVE-2026-60004",
       "name": "Gitea Code Injection Vulnerability",
@@ -29,80 +89,20 @@
       "due_date": "2026-08-27",
       "ransomware": "Unknown",
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-21962"
-    },
-    {
-      "cve": "CVE-2026-73570",
-      "name": "Zimbra Collaboration Suite (ZCS) OS Command Injection Vulnerability",
-      "vendor": "Synacor",
-      "product": "Zimbra Collaboration Suite (ZCS)",
-      "date_added": "2026-08-21",
-      "due_date": "2026-08-24",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-73570"
-    },
-    {
-      "cve": "CVE-2026-72530",
-      "name": "TrueConf Server Code Injection Vulnerability",
-      "vendor": "TrueConf",
-      "product": "Server",
-      "date_added": "2026-08-20",
-      "due_date": "2026-09-03",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-72530"
-    },
-    {
-      "cve": "CVE-2026-72529",
-      "name": "TrueConf Server Missing Authentication for Critical Function Vulnerability",
-      "vendor": "TrueConf",
-      "product": "Server",
-      "date_added": "2026-08-20",
-      "due_date": "2026-08-23",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-72529"
-    },
-    {
-      "cve": "CVE-2026-64849",
-      "name": "MLflow Server-Side Request Forgery Vulnerability",
-      "vendor": "MLflow",
-      "product": "MLflow",
-      "date_added": "2026-08-19",
-      "due_date": "2026-09-02",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-64849"
-    },
-    {
-      "cve": "CVE-2026-65400",
-      "name": "Apple macOS Improper Authentication Vulnerability",
-      "vendor": "Apple",
-      "product": "macOS",
-      "date_added": "2026-08-18",
-      "due_date": "2026-08-21",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-65400"
-    },
-    {
-      "cve": "CVE-2026-59310",
-      "name": "Broadcom VMware vCenter Path Traversal Vulnerability",
-      "vendor": "Broadcom",
-      "product": "VMware vCenter",
-      "date_added": "2026-08-18",
-      "due_date": "2026-08-21",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-59310"
     }
   ],
   "platforms": [
     {
       "vendor": "Microsoft",
       "product": "Windows",
-      "count": 45,
+      "count": 46,
       "percent": 100
     },
     {
       "vendor": "Cisco",
       "product": "Catalyst SD-WAN Manager",
       "count": 18,
-      "percent": 40
+      "percent": 39
     },
     {
       "vendor": "Apple",
@@ -120,13 +120,13 @@
       "vendor": "Google",
       "product": "Chromium V8",
       "count": 8,
-      "percent": 18
+      "percent": 17
     },
     {
       "vendor": "Oracle",
       "product": "E-Business Suite",
       "count": 7,
-      "percent": 16
+      "percent": 15
     }
   ],
   "actors": [
@@ -161,18 +161,42 @@
   ],
   "advisories": [
     {
-      "title": "Ebyte NE2-D11",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-237-06",
-      "date": "2026-08-25",
-      "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to gain unauthorized administrative access, disclose sensitive information, modify…",
+      "title": "CISA Adds Six Known Exploited Vulnerabilities to Catalog",
+      "url": "https://www.cisa.gov/news-events/alerts/2026/08/26/cisa-adds-six-known-exploited-vulnerabilities-catalog",
+      "date": "2026-08-26",
+      "summary": "CISA has added six new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2015-3246 Red Hat Libuser Race…",
       "authority": "CISA",
       "severity": ""
     },
     {
-      "title": "A Tale of Two SOCs: Insights From Two Red Team Assessments",
-      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a",
+      "authority": "Saudi NCA / CERT",
+      "title": "TP-Link Alert",
+      "url": "https://nca.gov.sa/en/cert/7908/",
+      "date": "2026-08-26",
+      "severity": "High",
+      "summary": "Security alert 2026-7784. Review the official notice for affected products and remediation guidance."
+    },
+    {
+      "authority": "Saudi NCA / CERT",
+      "title": "TP-Link Alert",
+      "url": "https://nca.gov.sa/en/cert/7907/",
+      "date": "2026-08-26",
+      "severity": "High",
+      "summary": "Security alert 2026-7783. Review the official notice for affected products and remediation guidance."
+    },
+    {
+      "authority": "Saudi NCA / CERT",
+      "title": "TeamViewer Alert",
+      "url": "https://nca.gov.sa/en/cert/7906/",
+      "date": "2026-08-26",
+      "severity": "High",
+      "summary": "Security alert 2026-7782. Review the official notice for affected products and remediation guidance."
+    },
+    {
+      "title": "PayRange API",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-237-04",
       "date": "2026-08-25",
-      "summary": "Advisory at a Glance Title A Tale of Two SOCs: Insights From Two Red Team Assessments Original Publication August 25, 2026 Executive Summary The Cybersecurity and Infrastructure…",
+      "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow a remote, authenticated or unauthenticated attacker to disclose sensitive information, arbitrarily…",
       "authority": "CISA",
       "severity": ""
     },
@@ -185,36 +209,12 @@
       "severity": ""
     },
     {
-      "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-      "url": "https://www.cisa.gov/news-events/alerts/2026/08/25/cisa-adds-one-known-exploited-vulnerability-catalog",
+      "title": "A Tale of Two SOCs: Insights From Two Red Team Assessments",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a",
       "date": "2026-08-25",
-      "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-60004 Gitea Code Injection…",
+      "summary": "Advisory at a Glance Title A Tale of Two SOCs: Insights From Two Red Team Assessments Original Publication August 25, 2026 Executive Summary The Cybersecurity and Infrastructure…",
       "authority": "CISA",
       "severity": ""
-    },
-    {
-      "authority": "Saudi NCA / CERT",
-      "title": "SonicWall Alert",
-      "url": "https://nca.gov.sa/en/cert/7905/",
-      "date": "2026-08-25",
-      "severity": "High",
-      "summary": "Security alert 2026-7781. Review the official notice for affected products and remediation guidance."
-    },
-    {
-      "authority": "Saudi NCA / CERT",
-      "title": "NVIDIA Alert",
-      "url": "https://nca.gov.sa/en/cert/7904/",
-      "date": "2026-08-25",
-      "severity": "Critical",
-      "summary": "Security alert 2026-7780. Review the official notice for affected products and remediation guidance."
-    },
-    {
-      "authority": "Saudi NCA / CERT",
-      "title": "Adobe Alert",
-      "url": "https://nca.gov.sa/en/cert/7903/",
-      "date": "2026-08-25",
-      "severity": "Critical",
-      "summary": "Security alert 2026-7779. Review the official notice for affected products and remediation guidance."
     },
     {
       "title": "How to secure your online meetings",
@@ -324,7 +324,7 @@
       "path": "/assets/data/daily-urls.txt"
     }
   ],
-  "ioc_sha256": "3dc5d20f51c5dc974fd9c70c8330b10a733fb387b5744d6c5b8a3ff2583c29cb",
+  "ioc_sha256": "2b01ced64d75a6e8e2a115745b7de1796912670788abb0ba5b64e72f6c006b53",
   "sources": {
     "kev": {
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
