@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Protected engineering file workflow</title>
+  <desc id="desc">Abstract engineering waveform passing through layered file panels into a protected workstation boundary.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#081525"/>
+      <stop offset="0.55" stop-color="#10253b"/>
+      <stop offset="1" stop-color="#07101c"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#244765" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#10283f" stop-opacity="0.72"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#54e1c1"/>
+      <stop offset="0.5" stop-color="#1e91c5"/>
+      <stop offset="1" stop-color="#214d91"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8de6ff" stop-opacity="0.25"/>
+      <stop offset="0.48" stop-color="#6cf5d0"/>
+      <stop offset="1" stop-color="#74a9ff"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#54e1c1" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#54e1c1" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="waveGlow" x="-20%" y="-100%" width="140%" height="300%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" fill="none" stroke="#9bc9df" stroke-opacity="0.055"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <ellipse cx="1160" cy="430" rx="450" ry="390" fill="url(#glow)" filter="url(#soft)"/>
+  <circle cx="131" cy="151" r="4" fill="#75d8ec" opacity="0.55"/>
+  <circle cx="1427" cy="728" r="5" fill="#6cf5d0" opacity="0.5"/>
+  <circle cx="1480" cy="163" r="3" fill="#8eaefe" opacity="0.65"/>
+
+  <g transform="translate(185 205)">
+    <g transform="translate(80 55) rotate(-5 270 235)" opacity="0.34">
+      <rect width="500" height="455" rx="34" fill="#16334c" stroke="#77b6d1" stroke-opacity="0.45" stroke-width="3"/>
+      <path d="M50 96H375M50 142H310M50 188H408" stroke="#82c6de" stroke-opacity="0.24" stroke-width="13" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(34 24) rotate(-2 270 235)" opacity="0.62">
+      <rect width="500" height="455" rx="34" fill="#193a54" stroke="#88cae1" stroke-opacity="0.55" stroke-width="3"/>
+      <path d="M52 102H388M52 150H290M52 198H422" stroke="#9ad9e9" stroke-opacity="0.3" stroke-width="13" stroke-linecap="round"/>
+    </g>
+    <g>
+      <rect width="500" height="455" rx="34" fill="url(#panel)" stroke="#9cd8e9" stroke-opacity="0.7" stroke-width="3"/>
+      <path d="M348 0v92h152" fill="#315e78" opacity="0.75"/>
+      <path d="M348 0l152 92" stroke="#9cd8e9" stroke-opacity="0.38" stroke-width="3"/>
+      <path d="M56 112H327M56 165H265M56 218H388" stroke="#b2deea" stroke-opacity="0.38" stroke-width="14" stroke-linecap="round"/>
+      <g fill="none" stroke="#65e5d0" stroke-width="6" opacity="0.85">
+        <path d="M60 326h62l28-70 48 150 46-122 34 67h59l31-45h72"/>
+      </g>
+      <circle cx="150" cy="256" r="8" fill="#65e5d0"/>
+      <circle cx="198" cy="406" r="8" fill="#65e5d0"/>
+      <circle cx="244" cy="284" r="8" fill="#65e5d0"/>
+    </g>
+  </g>
+
+  <path d="M640 530c78 0 80-86 142-86s70 108 132 108c58 0 82-160 145-160 56 0 82 76 137 76h188" fill="none" stroke="url(#wave)" stroke-width="10" stroke-linecap="round" filter="url(#waveGlow)"/>
+  <path d="M648 602h126M690 630h164" stroke="#78adc6" stroke-opacity="0.18" stroke-width="5" stroke-linecap="round"/>
+
+  <g transform="translate(1050 164)">
+    <path d="M250 22c78 58 156 76 225 87v190c0 167-89 292-225 356C114 591 25 466 25 299V109C94 98 172 80 250 22Z" fill="#071725" stroke="#83e8d3" stroke-opacity="0.42" stroke-width="14"/>
+    <path d="M250 54c67 48 133 65 192 76v170c0 141-73 248-192 308C131 548 58 441 58 300V130c59-11 125-28 192-76Z" fill="url(#shield)" opacity="0.9"/>
+    <path d="M250 102c51 36 102 50 147 59v137c0 107-51 189-147 242-96-53-147-135-147-242V161c45-9 96-23 147-59Z" fill="#0b2335" opacity="0.88"/>
+    <path d="M146 316h63l32-83 48 164 38-109 30 65h44" fill="none" stroke="#81f0d6" stroke-width="12" stroke-linejoin="round" stroke-linecap="round" filter="url(#waveGlow)"/>
+    <circle cx="241" cy="233" r="11" fill="#81f0d6"/>
+    <circle cx="289" cy="397" r="11" fill="#81f0d6"/>
+  </g>
+  <path d="M915 190v520" stroke="#81d9d0" stroke-opacity="0.16" stroke-width="2" stroke-dasharray="9 18"/>
+  <circle cx="915" cy="444" r="24" fill="#0c2435" stroke="#6cf5d0" stroke-width="4"/>
+  <circle cx="915" cy="444" r="7" fill="#6cf5d0"/>
+</svg>
