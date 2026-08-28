@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Signing key closes a pre-signed link path at a protected file boundary</title>
+  <desc id="desc">Abstract editorial artwork showing luminous file tiles behind a curved access boundary while a sealed cryptographic key closes an incoming link path.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071524"/>
+      <stop offset="0.55" stop-color="#122c43"/>
+      <stop offset="1" stop-color="#081b2e"/>
+    </linearGradient>
+    <radialGradient id="halo">
+      <stop offset="0" stop-color="#58e5d0" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#58e5d0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="boundary" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#67f4dd"/>
+      <stop offset="1" stop-color="#478cff"/>
+    </linearGradient>
+    <linearGradient id="file" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dbffff"/>
+      <stop offset="1" stop-color="#70bfce"/>
+    </linearGradient>
+    <linearGradient id="key" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd879"/>
+      <stop offset="1" stop-color="#ef8f5f"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#020913" flood-opacity="0.62"/>
+    </filter>
+    <clipPath id="vaultClip">
+      <path d="M414 176h772c62 0 112 50 112 112v330c0 62-50 112-112 112H414c-62 0-112-50-112-112V288c0-62 50-112 112-112z"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="820" cy="448" r="560" fill="url(#halo)"/>
+  <path d="M35 735c236-105 386 55 596-29s376-124 570-23 278 50 384-27" fill="none" stroke="#214861" stroke-width="3" opacity="0.7"/>
+  <path d="M48 212c232 90 386-59 590 7s393 112 590 7 269-72 349-35" fill="none" stroke="#183d56" stroke-width="2" opacity="0.75"/>
+
+  <g filter="url(#shadow)">
+    <path d="M414 136h772c84 0 152 68 152 152v330c0 84-68 152-152 152H414c-84 0-152-68-152-152V288c0-84 68-152 152-152z" fill="#0b2237" stroke="url(#boundary)" stroke-width="10"/>
+    <path d="M414 176h772c62 0 112 50 112 112v330c0 62-50 112-112 112H414c-62 0-112-50-112-112V288c0-62 50-112 112-112z" fill="#102d44" stroke="#7ef9e5" stroke-opacity="0.24" stroke-width="3"/>
+  </g>
+
+  <g clip-path="url(#vaultClip)">
+    <circle cx="795" cy="454" r="286" fill="none" stroke="#5de9d5" stroke-width="34" opacity="0.08"/>
+    <circle cx="795" cy="454" r="248" fill="none" stroke="#5de9d5" stroke-width="3" opacity="0.24" stroke-dasharray="10 18"/>
+    <path d="M332 602c204-105 335-24 472-109s289-99 472-7" fill="none" stroke="#4d91b5" stroke-width="4" opacity="0.26"/>
+
+    <g transform="translate(485 322)" filter="url(#shadow)">
+      <path d="M0 18c0-10 8-18 18-18h160l60 60v184c0 10-8 18-18 18H18c-10 0-18-8-18-18z" fill="url(#file)"/>
+      <path d="M178 0v60h60" fill="#4c98aa"/>
+      <path d="M45 114h148M45 153h148M45 192h96" stroke="#174c63" stroke-width="12" stroke-linecap="round" opacity="0.62"/>
+    </g>
+    <g transform="translate(783 384) scale(.82)" filter="url(#shadow)">
+      <path d="M0 18c0-10 8-18 18-18h160l60 60v184c0 10-8 18-18 18H18c-10 0-18-8-18-18z" fill="#9fe4e6"/>
+      <path d="M178 0v60h60" fill="#438b9e"/>
+      <path d="M45 114h148M45 153h148M45 192h96" stroke="#174c63" stroke-width="12" stroke-linecap="round" opacity="0.58"/>
+    </g>
+    <g transform="translate(992 285) scale(.72)" filter="url(#shadow)">
+      <path d="M0 18c0-10 8-18 18-18h160l60 60v184c0 10-8 18-18 18H18c-10 0-18-8-18-18z" fill="#b8f1ec"/>
+      <path d="M178 0v60h60" fill="#4b93a4"/>
+      <path d="M45 114h148M45 153h148M45 192h96" stroke="#174c63" stroke-width="12" stroke-linecap="round" opacity="0.55"/>
+    </g>
+  </g>
+
+  <path d="M76 438c150-91 282-87 400-18 86 50 149 46 217 8" fill="none" stroke="#ffbd69" stroke-width="25" stroke-linecap="round" opacity="0.15" filter="url(#glow)"/>
+  <path d="M76 438c150-91 282-87 400-18 86 50 149 46 217 8" fill="none" stroke="url(#key)" stroke-width="8" stroke-linecap="round" stroke-dasharray="24 22"/>
+  <circle cx="82" cy="435" r="22" fill="none" stroke="#ffd479" stroke-width="8"/>
+  <path d="m675 411 26 18-27 17" fill="none" stroke="#ffb565" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g transform="translate(726 337)" filter="url(#shadow)">
+    <circle cx="74" cy="74" r="68" fill="#0c263b" stroke="url(#key)" stroke-width="11"/>
+    <circle cx="74" cy="74" r="24" fill="none" stroke="#ffe1a0" stroke-width="10"/>
+    <path d="M74 98v139h48v-31h39v-39h-39v-30H74" fill="url(#key)"/>
+    <path d="M74 102v129" stroke="#fff1c5" stroke-width="5" opacity="0.55"/>
+  </g>
+
+  <path d="M866 433c111 31 219 25 328-25 91-42 184-42 316 22" fill="none" stroke="#64ead7" stroke-width="5" stroke-linecap="round" opacity="0.7"/>
+  <path d="M870 456c121 40 238 35 348-19" fill="none" stroke="#4f91ff" stroke-width="3" stroke-linecap="round" opacity="0.46"/>
+  <circle cx="1450" cy="412" r="8" fill="#6cf2dd"/>
+  <circle cx="1365" cy="690" r="12" fill="#4b8dff" opacity="0.7"/>
+  <circle cx="225" cy="674" r="7" fill="#ffbd69" opacity="0.75"/>
+</svg>
