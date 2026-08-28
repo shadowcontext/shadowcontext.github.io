@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Layered control-plane trust boundaries</title>
+  <desc id="desc">An abstract blue control plane sits within layered luminous boundaries while four amber paths stop at its protected perimeter.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071426"/>
+      <stop offset="0.52" stop-color="#102b48"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="48%" r="52%">
+      <stop offset="0" stop-color="#38c5e8" stop-opacity="0.34"/>
+      <stop offset="0.55" stop-color="#176a99" stop-opacity="0.13"/>
+      <stop offset="1" stop-color="#071426" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#76e4ff"/>
+      <stop offset="0.45" stop-color="#218fbe"/>
+      <stop offset="1" stop-color="#0b416a"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff8a3d" stop-opacity="0"/>
+      <stop offset="0.55" stop-color="#ff9f43" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#ffd166"/>
+    </linearGradient>
+    <filter id="blur24" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="frame"><rect x="54" y="54" width="1492" height="792" rx="44"/></clipPath>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g clip-path="url(#frame)">
+    <circle cx="800" cy="442" r="590" fill="url(#halo)"/>
+    <circle cx="220" cy="110" r="250" fill="#12688f" opacity="0.13" filter="url(#blur24)"/>
+    <circle cx="1420" cy="790" r="290" fill="#3657a8" opacity="0.12" filter="url(#blur24)"/>
+
+    <g fill="none" stroke="#74dff4" opacity="0.12">
+      <ellipse cx="800" cy="450" rx="560" ry="330" stroke-width="2"/>
+      <ellipse cx="800" cy="450" rx="480" ry="276" stroke-width="2"/>
+      <ellipse cx="800" cy="450" rx="395" ry="220" stroke-width="3"/>
+    </g>
+
+    <g fill="none" stroke="url(#amber)" stroke-linecap="round">
+      <path d="M60 205 C270 250 385 332 515 388" stroke-width="8"/>
+      <path d="M102 704 C284 650 407 568 520 510" stroke-width="8"/>
+      <path d="M1540 190 C1336 242 1212 320 1085 386" stroke-width="8"/>
+      <path d="M1540 720 C1345 654 1222 567 1082 512" stroke-width="8"/>
+    </g>
+
+    <g fill="#ffd166" filter="url(#glow)">
+      <circle cx="520" cy="390" r="10"/>
+      <circle cx="524" cy="508" r="10"/>
+      <circle cx="1080" cy="389" r="10"/>
+      <circle cx="1078" cy="510" r="10"/>
+    </g>
+
+    <g fill="none" stroke="#63d7ed">
+      <ellipse cx="800" cy="450" rx="285" ry="162" stroke-width="7" opacity="0.9"/>
+      <ellipse cx="800" cy="450" rx="254" ry="137" stroke-width="2" opacity="0.5"/>
+    </g>
+
+    <g opacity="0.78" fill="#2ab0d0">
+      <circle cx="600" cy="348" r="15"/>
+      <circle cx="1000" cy="348" r="15"/>
+      <circle cx="600" cy="552" r="15"/>
+      <circle cx="1000" cy="552" r="15"/>
+    </g>
+    <g stroke="#62d9ee" stroke-width="4" opacity="0.5">
+      <path d="M615 355 L690 402"/>
+      <path d="M985 355 L910 402"/>
+      <path d="M615 545 L690 498"/>
+      <path d="M985 545 L910 498"/>
+    </g>
+
+    <path d="M800 320 L930 370 L912 493 C901 565 854 619 800 648 C746 619 699 565 688 493 L670 370 Z" fill="#071b31" stroke="#8aeaff" stroke-width="7" filter="url(#glow)"/>
+    <path d="M800 349 L898 387 L884 484 C876 538 843 579 800 605 C757 579 724 538 716 484 L702 387 Z" fill="url(#core)" opacity="0.94"/>
+    <path d="M758 463 L789 494 L850 425" fill="none" stroke="#e7fbff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <g fill="#d8f8ff" opacity="0.7">
+      <circle cx="800" cy="250" r="7"/>
+      <circle cx="800" cy="690" r="7"/>
+      <circle cx="450" cy="450" r="7"/>
+      <circle cx="1150" cy="450" r="7"/>
+    </g>
+  </g>
+  <rect x="54" y="54" width="1492" height="792" rx="44" fill="none" stroke="#8feaff" stroke-opacity="0.18" stroke-width="2"/>
+</svg>
