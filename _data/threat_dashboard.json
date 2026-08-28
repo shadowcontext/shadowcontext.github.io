@@ -1,15 +1,45 @@
 {
-  "generated_at": "2026-08-27T01:22:09Z",
-  "generated_display": "27 Aug 2026 · 01:22 UTC",
+  "generated_at": "2026-08-28T01:24:09Z",
+  "generated_display": "28 Aug 2026 · 01:24 UTC",
   "metrics": {
-    "kev_total": 1682,
-    "kev_added_30d": 27,
-    "due_next_7d": 6,
+    "kev_total": 1685,
+    "kev_added_30d": 30,
+    "due_next_7d": 7,
     "ioc_total": 197,
     "ioc_total_display": "197",
     "ioc_total_exact": "197"
   },
   "vulnerabilities": [
+    {
+      "cve": "CVE-2026-66384",
+      "name": "JFrog Artifactory Improper Limitation of a Pathname to a Restricted Directory Vulnerability",
+      "vendor": "JFrog",
+      "product": "Artifactory",
+      "date_added": "2026-08-27",
+      "due_date": "2026-09-10",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-66384"
+    },
+    {
+      "cve": "CVE-2026-53362",
+      "name": "Linux Kernel Unspecified Vulnerability",
+      "vendor": "Linux",
+      "product": "Kernel",
+      "date_added": "2026-08-27",
+      "due_date": "2026-08-30",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-53362"
+    },
+    {
+      "cve": "CVE-2023-49105",
+      "name": "ownCloud Improper Authentication Vulnerability",
+      "vendor": "ownCloud",
+      "product": "ownCloud",
+      "date_added": "2026-08-27",
+      "due_date": "2026-08-30",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2023-49105"
+    },
     {
       "cve": "CVE-2026-8452",
       "name": "Citrix NetScaler ADC and NetScaler Gateway Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
@@ -59,36 +89,6 @@
       "due_date": "2026-09-09",
       "ransomware": "Unknown",
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2015-5287"
-    },
-    {
-      "cve": "CVE-2015-3246",
-      "name": "Red Hat Libuser Race Condition Vulnerability",
-      "vendor": "Red Hat",
-      "product": "Libuser",
-      "date_added": "2026-08-26",
-      "due_date": "2026-09-09",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2015-3246"
-    },
-    {
-      "cve": "CVE-2026-60004",
-      "name": "Gitea Code Injection Vulnerability",
-      "vendor": "Gitea",
-      "product": "Gitea",
-      "date_added": "2026-08-25",
-      "due_date": "2026-08-28",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-60004"
-    },
-    {
-      "cve": "CVE-2026-21962",
-      "name": "Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in Improper Access Control Vulnerability",
-      "vendor": "Oracle",
-      "product": "HTTP Server and Oracle Weblogic Server Proxy Plug-in",
-      "date_added": "2026-08-24",
-      "due_date": "2026-08-27",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-21962"
     }
   ],
   "platforms": [
@@ -123,8 +123,8 @@
       "percent": 17
     },
     {
-      "vendor": "Oracle",
-      "product": "E-Business Suite",
+      "vendor": "Linux",
+      "product": "Kernel",
       "count": 7,
       "percent": 15
     }
@@ -161,10 +161,42 @@
   ],
   "advisories": [
     {
-      "title": "CISA Adds Six Known Exploited Vulnerabilities to Catalog",
-      "url": "https://www.cisa.gov/news-events/alerts/2026/08/26/cisa-adds-six-known-exploited-vulnerabilities-catalog",
-      "date": "2026-08-26",
-      "summary": "CISA has added six new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2015-3246 Red Hat Libuser Race…",
+      "authority": "Saudi NCA / CERT",
+      "title": "Chrome Alert",
+      "url": "https://nca.gov.sa/en/cert/7909/",
+      "date": "2026-08-28",
+      "severity": "High",
+      "summary": "Security alert 2026-7785. Review the official notice for affected products and remediation guidance."
+    },
+    {
+      "title": "Rockwell Automation OTTO Fleet Manager",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-239-03",
+      "date": "2026-08-27",
+      "summary": "View CSAF Summary Successful exploitation of this vulnerability could reduce the computational cost required for an attacker to perform offline brute-force attacks against stored…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "title": "Xiiaozet LK100W",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-239-01",
+      "date": "2026-08-27",
+      "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to take control over the device. The following versions of Xiiaozet LK100W are…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "title": "Mitsubishi Electric CNC Series (Update A)",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-078-05",
+      "date": "2026-08-27",
+      "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow a remote attacker to cause an out-of-bounds read, resulting in a denial-of-service condition in the…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "title": "Mitsubishi Electric Multiple FA Products (Update D)",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-128-03",
+      "date": "2026-08-27",
+      "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow a remote attacker to cause a denial-of-service (DoS) condition, a timeout error, or a communication…",
       "authority": "CISA",
       "severity": ""
     },
@@ -183,38 +215,6 @@
       "date": "2026-08-26",
       "severity": "High",
       "summary": "Security alert 2026-7783. Review the official notice for affected products and remediation guidance."
-    },
-    {
-      "authority": "Saudi NCA / CERT",
-      "title": "TeamViewer Alert",
-      "url": "https://nca.gov.sa/en/cert/7906/",
-      "date": "2026-08-26",
-      "severity": "High",
-      "summary": "Security alert 2026-7782. Review the official notice for affected products and remediation guidance."
-    },
-    {
-      "title": "PayRange API",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-237-04",
-      "date": "2026-08-25",
-      "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow a remote, authenticated or unauthenticated attacker to disclose sensitive information, arbitrarily…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
-      "title": "Rently Smart Home",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-237-01",
-      "date": "2026-08-25",
-      "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to access sensitive information and override user permissions. The following versions of…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
-      "title": "A Tale of Two SOCs: Insights From Two Red Team Assessments",
-      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a",
-      "date": "2026-08-25",
-      "summary": "Advisory at a Glance Title A Tale of Two SOCs: Insights From Two Red Team Assessments Original Publication August 25, 2026 Executive Summary The Cybersecurity and Infrastructure…",
-      "authority": "CISA",
-      "severity": ""
     },
     {
       "title": "How to secure your online meetings",
@@ -324,7 +324,7 @@
       "path": "/assets/data/daily-urls.txt"
     }
   ],
-  "ioc_sha256": "2b01ced64d75a6e8e2a115745b7de1796912670788abb0ba5b64e72f6c006b53",
+  "ioc_sha256": "c9aee26d4233c733ac3adc039a40d3515812155c374d13598099204ffc9c8712",
   "sources": {
     "kev": {
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
