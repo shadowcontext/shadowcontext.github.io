@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">AI model scanner decision coverage</title>
+  <desc id="desc">Abstract layered model artifact crossed by teal scanning beams, with an amber arc completing a gap left by one fading scan.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071923"/>
+      <stop offset="0.55" stop-color="#0b2a35"/>
+      <stop offset="1" stop-color="#102e3a"/>
+    </linearGradient>
+    <linearGradient id="slab" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#214d59"/>
+      <stop offset="1" stop-color="#102d39"/>
+    </linearGradient>
+    <linearGradient id="scan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#72f1de" stop-opacity="0"/>
+      <stop offset="0.48" stop-color="#72f1de" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#72f1de" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd27a"/>
+      <stop offset="1" stop-color="#ee8b46"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#62e9d5" stop-opacity="0.23"/>
+      <stop offset="1" stop-color="#62e9d5" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="smallGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="780" cy="450" r="480" fill="url(#glow)"/>
+  <path d="M0 728 C260 644 418 705 650 653 S1096 583 1600 690 L1600 900 L0 900Z" fill="#06141d" opacity="0.68"/>
+  <path d="M83 196 C315 115 469 145 627 239" fill="none" stroke="#24505b" stroke-width="2" opacity="0.5"/>
+  <path d="M1045 154 C1264 90 1429 181 1560 302" fill="none" stroke="#24505b" stroke-width="2" opacity="0.45"/>
+
+  <g transform="translate(800 455)">
+    <ellipse cx="0" cy="238" rx="420" ry="86" fill="#031019" opacity="0.55" filter="url(#soft)"/>
+    <path d="M-365 95 L-92 -83 L368 46 L92 228Z" fill="#091f2b" stroke="#2b5863" stroke-width="3"/>
+    <path d="M-365 37 L-92 -141 L368 -12 L92 170Z" fill="url(#slab)" stroke="#39707a" stroke-width="3"/>
+    <path d="M-365 -22 L-92 -200 L368 -71 L92 111Z" fill="#173d49" stroke="#51a79f" stroke-width="3"/>
+    <path d="M-92 -200 L368 -71 L92 111 L-365 -22Z" fill="url(#slab)" opacity="0.76"/>
+    <path d="M-216 -14 L-64 -111 L174 -44 L21 55Z" fill="#0a2632" stroke="#62d6c7" stroke-width="4"/>
+    <path d="M-151 -17 L-49 -82 L107 -38 L4 29Z" fill="#2b6870" opacity="0.72"/>
+    <circle cx="-38" cy="-29" r="13" fill="#84f4df" filter="url(#smallGlow)"/>
+    <circle cx="44" cy="-16" r="9" fill="#58c9bd"/>
+    <circle cx="-4" cy="18" r="7" fill="#58c9bd"/>
+    <path d="M-38 -29 L44 -16 L-4 18 Z" fill="none" stroke="#77e7d5" stroke-width="3" opacity="0.78"/>
+  </g>
+
+  <g opacity="0.9">
+    <path d="M190 222 L1242 518" stroke="url(#scan)" stroke-width="18"/>
+    <path d="M250 305 L1165 563" stroke="url(#scan)" stroke-width="6"/>
+    <path d="M300 154 L1310 438" stroke="url(#scan)" stroke-width="3" opacity="0.68"/>
+    <path d="M343 402 L884 554" stroke="url(#scan)" stroke-width="9" opacity="0.7"/>
+  </g>
+
+  <path d="M1017 240 C1267 306 1390 493 1328 671 C1293 769 1205 817 1090 825" fill="none" stroke="#402c28" stroke-width="34" opacity="0.55"/>
+  <path d="M1017 240 C1267 306 1390 493 1328 671 C1293 769 1205 817 1090 825" fill="none" stroke="url(#amber)" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="1017" cy="240" r="19" fill="#ffd27a" filter="url(#smallGlow)"/>
+  <circle cx="1090" cy="825" r="19" fill="#ee8b46" filter="url(#smallGlow)"/>
+  <path d="M1285 552 L1344 587 L1282 618" fill="none" stroke="#ffd27a" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g fill="#66ddcd">
+    <circle cx="244" cy="678" r="5"/><circle cx="302" cy="708" r="3"/><circle cx="1375" cy="286" r="4"/><circle cx="1431" cy="332" r="3"/>
+  </g>
+</svg>
