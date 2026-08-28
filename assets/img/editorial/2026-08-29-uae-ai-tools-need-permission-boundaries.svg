@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">AI tool separated from device sensors by a permission boundary</title>
+  <desc id="desc">An abstract mobile device contains a luminous AI core behind a protective gate, with camera and microphone sensors held outside until permission is granted.</desc>
+  <defs>
+    <linearGradient id="background" x1="120" y1="55" x2="1480" y2="845" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071529"/>
+      <stop offset="0.52" stop-color="#103B4B"/>
+      <stop offset="1" stop-color="#07131F"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="0" cy="0" r="1" gradientTransform="translate(790 450) rotate(90) scale(410 650)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5BE7C4" stop-opacity="0.27"/>
+      <stop offset="1" stop-color="#5BE7C4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="device" x1="520" y1="105" x2="1030" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#173D58"/>
+      <stop offset="1" stop-color="#091B2E"/>
+    </linearGradient>
+    <linearGradient id="gate" x1="910" y1="170" x2="1130" y2="735" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#91FFE1"/>
+      <stop offset="1" stop-color="#38BBD2"/>
+    </linearGradient>
+    <linearGradient id="sensor" x1="1170" y1="275" x2="1450" y2="650" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFB06B"/>
+      <stop offset="1" stop-color="#E85F8A"/>
+    </linearGradient>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="200%">
+      <feDropShadow dx="0" dy="26" stdDeviation="28" flood-color="#010710" flood-opacity="0.72"/>
+    </filter>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="13" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <ellipse cx="790" cy="450" rx="680" ry="410" fill="url(#aura)"/>
+  <g fill="none" stroke="#71B7C6" stroke-width="3" opacity="0.2">
+    <path d="M0 170H270L365 265"/>
+    <path d="M0 730H278L372 636"/>
+    <path d="M1600 145H1375L1288 232"/>
+    <path d="M1600 760H1390L1298 668"/>
+    <circle cx="365" cy="265" r="7" fill="#71B7C6"/>
+    <circle cx="372" cy="636" r="7" fill="#71B7C6"/>
+    <circle cx="1288" cy="232" r="7" fill="#71B7C6"/>
+    <circle cx="1298" cy="668" r="7" fill="#71B7C6"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="420" y="92" width="610" height="716" rx="88" fill="url(#device)" stroke="#4D8296" stroke-width="6"/>
+    <rect x="465" y="145" width="520" height="610" rx="54" fill="#0A2435" stroke="#2D6272" stroke-width="4"/>
+    <path d="M650 119H800" stroke="#6EA0AD" stroke-width="12" stroke-linecap="round" opacity="0.7"/>
+    <circle cx="725" cy="779" r="12" fill="#75A9B5" opacity="0.65"/>
+  </g>
+  <g opacity="0.33" fill="none" stroke="#55C9C1" stroke-width="3">
+    <circle cx="707" cy="451" r="225" stroke-dasharray="7 19"/>
+    <circle cx="707" cy="451" r="178" stroke-dasharray="3 15"/>
+  </g>
+  <g filter="url(#glow)">
+    <path d="M707 285L832 357V502L707 574L582 502V357Z" fill="#123F4C" stroke="#72F0D2" stroke-width="9"/>
+    <circle cx="707" cy="430" r="78" fill="#62DFC2" opacity="0.2"/>
+    <path d="M653 432C671 388 743 379 769 422C796 466 755 513 708 501C663 490 633 476 653 432Z" fill="none" stroke="#D2FFF2" stroke-width="13" stroke-linecap="round"/>
+    <circle cx="679" cy="430" r="9" fill="#E4FFF8"/>
+    <circle cx="735" cy="430" r="9" fill="#E4FFF8"/>
+    <path d="M682 467C699 478 718 478 735 467" fill="none" stroke="#E4FFF8" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <path d="M866 450H1230" stroke="#366D79" stroke-width="18" stroke-linecap="round" opacity="0.6"/>
+  <path d="M866 450H1230" stroke="#8AEAD2" stroke-width="4" stroke-linecap="round" stroke-dasharray="18 18" opacity="0.72"/>
+  <g filter="url(#glow)">
+    <path d="M982 195V705" stroke="url(#gate)" stroke-width="22" stroke-linecap="round"/>
+    <path d="M982 195H1052M982 705H1052" stroke="url(#gate)" stroke-width="22" stroke-linecap="round"/>
+    <circle cx="982" cy="450" r="67" fill="#0C3142" stroke="#86F8DB" stroke-width="8"/>
+    <path d="M951 452L975 476L1018 422" fill="none" stroke="#D8FFF4" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g filter="url(#shadow)">
+    <circle cx="1282" cy="341" r="100" fill="#2B2035" stroke="url(#sensor)" stroke-width="7"/>
+    <circle cx="1282" cy="341" r="52" fill="#0A1828" stroke="#FF9D79" stroke-width="10"/>
+    <circle cx="1282" cy="341" r="22" fill="#F07583"/>
+    <path d="M1222 532V581C1222 615 1249 642 1283 642C1317 642 1344 615 1344 581V532" fill="none" stroke="url(#sensor)" stroke-width="18" stroke-linecap="round"/>
+    <rect x="1247" y="493" width="72" height="118" rx="36" fill="#2B2035" stroke="#F77C83" stroke-width="8"/>
+    <path d="M1283 642V689M1239 689H1327" stroke="#F18A7E" stroke-width="15" stroke-linecap="round"/>
+  </g>
+  <g fill="#F78483" opacity="0.9">
+    <circle cx="1100" cy="320" r="8"/>
+    <circle cx="1135" cy="294" r="6"/>
+    <circle cx="1097" cy="583" r="7"/>
+    <circle cx="1134" cy="610" r="5"/>
+  </g>
+  <path d="M1075 240C1154 181 1292 179 1390 238M1075 661C1150 724 1288 731 1391 669" fill="none" stroke="#D96584" stroke-width="4" stroke-dasharray="12 19" opacity="0.45"/>
+</svg>
