@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-28T01:24:09Z",
-  "generated_display": "28 Aug 2026 · 01:24 UTC",
+  "generated_at": "2026-08-29T01:18:09Z",
+  "generated_display": "29 Aug 2026 · 01:18 UTC",
   "metrics": {
     "kev_total": 1685,
-    "kev_added_30d": 30,
-    "due_next_7d": 7,
+    "kev_added_30d": 29,
+    "due_next_7d": 6,
     "ioc_total": 197,
     "ioc_total_display": "197",
     "ioc_total_exact": "197"
@@ -162,6 +162,14 @@
   "advisories": [
     {
       "authority": "Saudi NCA / CERT",
+      "title": "TP-Link Alert",
+      "url": "https://nca.gov.sa/en/cert/7910/",
+      "date": "2026-08-29",
+      "severity": "High",
+      "summary": "Security alert 2026-7786. Review the official notice for affected products and remediation guidance."
+    },
+    {
+      "authority": "Saudi NCA / CERT",
       "title": "Chrome Alert",
       "url": "https://nca.gov.sa/en/cert/7909/",
       "date": "2026-08-28",
@@ -207,14 +215,6 @@
       "date": "2026-08-26",
       "severity": "High",
       "summary": "Security alert 2026-7784. Review the official notice for affected products and remediation guidance."
-    },
-    {
-      "authority": "Saudi NCA / CERT",
-      "title": "TP-Link Alert",
-      "url": "https://nca.gov.sa/en/cert/7907/",
-      "date": "2026-08-26",
-      "severity": "High",
-      "summary": "Security alert 2026-7783. Review the official notice for affected products and remediation guidance."
     },
     {
       "title": "How to secure your online meetings",
@@ -324,7 +324,7 @@
       "path": "/assets/data/daily-urls.txt"
     }
   ],
-  "ioc_sha256": "c9aee26d4233c733ac3adc039a40d3515812155c374d13598099204ffc9c8712",
+  "ioc_sha256": "5afc426c15435441d0630bdff8f0902d09e53188fe96141609a0b9cdc7921b0b",
   "sources": {
     "kev": {
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
