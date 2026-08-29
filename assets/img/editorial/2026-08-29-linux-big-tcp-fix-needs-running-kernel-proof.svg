@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Guarded kernel boundary shaping oversized network currents</title>
+  <desc id="desc">Abstract luminous blue and teal network currents narrow through a protected kernel-like aperture, while oversized waves are redirected into orderly streams.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#061426"/>
+      <stop offset="0.52" stop-color="#0b2742"/>
+      <stop offset="1" stop-color="#07111d"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="52%" cy="49%" r="51%">
+      <stop offset="0" stop-color="#4ce8df" stop-opacity="0.28"/>
+      <stop offset="0.48" stop-color="#298fc7" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#102f52" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="flow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2366be"/>
+      <stop offset="0.48" stop-color="#64e8e2"/>
+      <stop offset="1" stop-color="#2587ce"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8bfff0"/>
+      <stop offset="0.4" stop-color="#37cfd2"/>
+      <stop offset="1" stop-color="#176eb2"/>
+    </linearGradient>
+    <filter id="glow" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="16" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+    <pattern id="grain" width="72" height="72" patternUnits="userSpaceOnUse">
+      <circle cx="9" cy="18" r="1" fill="#a8e9ff" opacity="0.1"/>
+      <circle cx="51" cy="43" r="1.2" fill="#6effdc" opacity="0.08"/>
+      <circle cx="30" cy="66" r="0.7" fill="#ffffff" opacity="0.08"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#grain)"/>
+  <ellipse cx="830" cy="445" rx="700" ry="420" fill="url(#aura)"/>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M-80 220 C220 160 420 185 565 296 C652 363 705 390 760 404" stroke="#1f76c6" stroke-width="72" opacity="0.17" filter="url(#soft)"/>
+    <path d="M-80 220 C220 160 420 185 565 296 C652 363 705 390 760 404" stroke="url(#flow)" stroke-width="25" opacity="0.7"/>
+    <path d="M-70 413 C260 378 420 330 570 379 C660 408 710 425 765 430" stroke="#72f4e5" stroke-width="13" opacity="0.75"/>
+    <path d="M-70 684 C250 735 420 680 572 565 C658 500 710 470 765 456" stroke="#2a79c8" stroke-width="54" opacity="0.22" filter="url(#soft)"/>
+    <path d="M-70 684 C250 735 420 680 572 565 C658 500 710 470 765 456" stroke="url(#flow)" stroke-width="20" opacity="0.65"/>
+  </g>
+
+  <g transform="translate(830 445)">
+    <circle r="294" fill="none" stroke="#1e568d" stroke-width="2" opacity="0.55"/>
+    <circle r="253" fill="#09243c" stroke="#277fb2" stroke-width="9" opacity="0.96"/>
+    <circle r="220" fill="none" stroke="#63e5e0" stroke-width="3" stroke-dasharray="8 19" opacity="0.46"/>
+    <path d="M-80 -239 C-21 -260 22 -260 81 -239 L64 -128 C51 -56 50 56 64 128 L81 239 C22 260 -21 260 -80 239 L-63 128 C-49 56 -49 -56 -63 -128 Z" fill="url(#shield)" opacity="0.92" filter="url(#glow)"/>
+    <path d="M-43 -218 C-12 -226 12 -226 43 -218 L30 -118 C21 -51 21 51 30 118 L43 218 C12 226 -12 226 -43 218 L-30 118 C-21 51 -21 -51 -30 -118 Z" fill="#071d31" opacity="0.96"/>
+    <circle r="74" fill="#3ce0d8" opacity="0.2"/>
+    <circle r="43" fill="#8affeb" opacity="0.88" filter="url(#glow)"/>
+    <circle r="16" fill="#092841"/>
+  </g>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M872 390 C1040 325 1212 240 1665 260" stroke="#5ce3df" stroke-width="9" opacity="0.62"/>
+    <path d="M873 424 C1090 397 1285 380 1665 390" stroke="#2e91d1" stroke-width="14" opacity="0.58"/>
+    <path d="M873 456 C1090 482 1290 512 1665 495" stroke="#72f3e5" stroke-width="8" opacity="0.68"/>
+    <path d="M872 493 C1045 566 1225 653 1665 633" stroke="#286fc1" stroke-width="16" opacity="0.55"/>
+  </g>
+
+  <g fill="#82f7e8">
+    <circle cx="1108" cy="301" r="6" opacity="0.75"/>
+    <circle cx="1295" cy="386" r="5" opacity="0.62"/>
+    <circle cx="1168" cy="505" r="7" opacity="0.68"/>
+    <circle cx="1390" cy="625" r="5" opacity="0.58"/>
+  </g>
+  <ellipse cx="830" cy="790" rx="310" ry="35" fill="#238eb4" opacity="0.1" filter="url(#soft)"/>
+</svg>
