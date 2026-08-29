@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">NUMail service boundary protection</title>
+  <desc id="desc">An abstract mail envelope sits within layered blue service boundaries while a red command path is stopped at the outer edge.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07182f"/>
+      <stop offset="0.55" stop-color="#0b3151"/>
+      <stop offset="1" stop-color="#0c5362"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="46%" r="58%">
+      <stop offset="0" stop-color="#4ee0d1" stop-opacity="0.28"/>
+      <stop offset="0.7" stop-color="#1d91ad" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#07182f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="envelope" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e9fbff"/>
+      <stop offset="1" stop-color="#86d8e2"/>
+    </linearGradient>
+    <linearGradient id="barrier" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#68f0dc"/>
+      <stop offset="1" stop-color="#17a9bf"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <pattern id="grain" width="44" height="44" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="5" r="1.2" fill="#c9f9ff" opacity="0.12"/>
+      <circle cx="31" cy="26" r="0.9" fill="#c9f9ff" opacity="0.08"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grain)"/>
+  <ellipse cx="835" cy="450" rx="650" ry="390" fill="url(#glow)"/>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M370 196 C545 72 1007 66 1219 213 C1391 333 1393 596 1215 711 C1009 844 571 836 380 708 C191 581 189 326 370 196Z" stroke="#217a99" stroke-width="5" opacity="0.48"/>
+    <path d="M455 255 C600 155 973 153 1136 264 C1269 355 1270 551 1134 641 C969 750 616 746 464 645 C313 545 309 357 455 255Z" stroke="#35bfd0" stroke-width="8" opacity="0.66"/>
+    <path d="M543 316 C661 241 936 242 1057 322 C1157 388 1156 518 1054 583 C930 662 673 660 553 582 C438 508 435 385 543 316Z" stroke="url(#barrier)" stroke-width="13" opacity="0.92"/>
+  </g>
+
+  <g opacity="0.42" fill="#63d8e1">
+    <circle cx="316" cy="283" r="9"/><circle cx="1264" cy="275" r="7"/>
+    <circle cx="1281" cy="650" r="10"/><circle cx="356" cy="672" r="7"/>
+    <path d="M272 458h48M1280 444h58M789 115v43M815 742v43" stroke="#63d8e1" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(570 322)">
+    <rect x="0" y="0" width="470" height="272" rx="30" fill="#061b30" stroke="#b8f5f1" stroke-width="8"/>
+    <path d="M18 27 L235 173 L452 27" fill="none" stroke="url(#envelope)" stroke-width="25" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M22 247 L169 116 M448 247 L301 116" fill="none" stroke="#72cbd8" stroke-width="18" stroke-linecap="round"/>
+    <path d="M28 250 L179 119 Q235 79 291 119 L442 250" fill="none" stroke="#d9faff" stroke-width="9" opacity="0.78"/>
+  </g>
+
+  <g>
+    <path d="M72 452 C174 452 209 452 288 452 C348 452 390 452 446 452" fill="none" stroke="#ff5f68" stroke-width="18" stroke-linecap="round"/>
+    <path d="M90 408 L137 452 L90 496 M188 408 L235 452 L188 496" fill="none" stroke="#ff9a83" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="464" cy="452" r="54" fill="#09243a" stroke="#ff6b72" stroke-width="12"/>
+    <path d="M432 420 L496 484 M496 420 L432 484" stroke="#ff777d" stroke-width="14" stroke-linecap="round"/>
+    <ellipse cx="459" cy="452" rx="82" ry="82" fill="#ff5260" opacity="0.12" filter="url(#soft)"/>
+  </g>
+
+  <g opacity="0.76">
+    <path d="M1115 376h144M1115 418h98M1115 460h166M1115 502h118" stroke="#7fe4df" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="1297" cy="376" r="8" fill="#a9fff1"/>
+    <circle cx="1247" cy="418" r="8" fill="#a9fff1"/>
+    <circle cx="1315" cy="460" r="8" fill="#a9fff1"/>
+    <circle cx="1267" cy="502" r="8" fill="#a9fff1"/>
+  </g>
+
+  <path d="M147 765 C432 694 580 800 803 750 C1037 697 1190 775 1456 705" fill="none" stroke="#46b8c6" stroke-width="3" opacity="0.26"/>
+</svg>
