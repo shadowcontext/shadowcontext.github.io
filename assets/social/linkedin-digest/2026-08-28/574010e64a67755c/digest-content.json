@@ -1,0 +1,154 @@
+{
+  "digest_title": "Daily Security News Digest: Vulnerability Fixes And AI Defenses",
+  "dek": "ShadowContext daily defense briefing on critical vulnerabilities, software patch requirements, and AI security boundary controls.",
+  "overview": "Defenders must verify fixed versions, runtime boundaries, and secure configurations across infrastructure, enterprise applications, and industrial engineering tools.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "Verify UAE Job Scams Out of Band",
+      "summary": "Dubai Police warns of job and visa scams, advising independent verification through official UAE services before sending money.",
+      "why_it_matters": "Independent checks break fraudulent pressure loops by verifying records directly.",
+      "topic": "Fraud Defense"
+    },
+    {
+      "source_id": "S02",
+      "headline": "Traefik Fixes Require Explicit Entry Point Settings",
+      "summary": "Traefik 2.11.56 and 3.7.12 fix proxy routing, header aliasing, and timeout flaws, but header controls need manual configuration.",
+      "why_it_matters": "Upgrading alone does not apply the new header alias mitigation without manual configuration.",
+      "topic": "Proxy Security"
+    },
+    {
+      "source_id": "S03",
+      "headline": "Tine Fixes Require Strict Document Rendering Boundaries",
+      "summary": "Tine Groupware fixes critical export template execution and browser preview flaws, requiring updates and strict rendering boundaries.",
+      "why_it_matters": "User files must remain untrusted wherever applications interpret or display them.",
+      "topic": "Collaboration Security"
+    },
+    {
+      "source_id": "S04",
+      "headline": "CISA Adds Artifactory Flaw to KEV Catalog",
+      "summary": "CISA added an Artifactory pathname limitation flaw to KEV, making version verification and repository permission reviews urgent.",
+      "why_it_matters": "Known exploitation turns ordinary patch queues into verifiable remediation deadlines.",
+      "topic": "Supply Chain"
+    },
+    {
+      "source_id": "S05",
+      "headline": "WatchGuard Fixes Critical Pre-Authentication Fireware Flaws",
+      "summary": "WatchGuard fixed three critical Fireware flaws in the iked process, requiring operators to map appliances to fixed releases.",
+      "why_it_matters": "Pre-authentication edge vulnerabilities require exact device-level version proof after rollout.",
+      "topic": "Edge Security"
+    },
+    {
+      "source_id": "S06",
+      "headline": "CISA Adds ownCloud Bypass to KEV",
+      "summary": "CISA added an ownCloud authentication bypass to KEV, demanding server version audits and verification of signing-key handling.",
+      "why_it_matters": "Older disclosed flaws under active exploitation require immediate scope and version proof.",
+      "topic": "File Sharing"
+    },
+    {
+      "source_id": "S07",
+      "headline": "CISA Warns of ASE2000 Vulnerabilities",
+      "summary": "CISA's ASE2000 advisory calls for version 2.38, protected configuration files, segmented hosts, and verified TLS peer validation.",
+      "why_it_matters": "Engineering tools cross security zones and require strict workstation-level configuration controls.",
+      "topic": "OT Security"
+    },
+    {
+      "source_id": "S08",
+      "headline": "Redis TLS Fix Needs Runtime and Network Proof",
+      "summary": "CVE-2026-81934 affects Redis TLS handling, requiring configuration checks, network restriction, updates, and running binary verification.",
+      "why_it_matters": "TLS configuration is a necessary condition for this critical memory safety flaw.",
+      "topic": "Database Security"
+    },
+    {
+      "source_id": "S09",
+      "headline": "Ubuntu Fixes openCryptoki Token Boundary Flaws",
+      "summary": "Ubuntu fixed two openCryptoki flaws, requiring package updates, token-group membership audits, and workload library verification.",
+      "why_it_matters": "Cryptographic workloads must be proven to load corrected library versions.",
+      "topic": "Cryptographic Tokens"
+    },
+    {
+      "source_id": "S10",
+      "headline": "cPanel Domain-Parking Fix Requires Tenant Boundary Proof",
+      "summary": "CVE-2026-65643 lets eligible cPanel users create arbitrary server files, making exact build verification urgent across hosting fleets.",
+      "why_it_matters": "Hosting features must be assessed by the backend privilege level they invoke.",
+      "topic": "Hosting Security"
+    },
+    {
+      "source_id": "S11",
+      "headline": "UI-TARS MCP Flaw Makes Local Binding Crucial",
+      "summary": "CVE-2026-81735 exposed UI-TARS MCP tools beyond the host; defenders must verify fixed commit lineage and listener scope.",
+      "why_it_matters": "Version strings alone cannot prove remediation without commit provenance and listener validation.",
+      "topic": "AI Security"
+    },
+    {
+      "source_id": "S12",
+      "headline": "SharePoint Exploitation Demands Farm-Level Version Proof",
+      "summary": "CSA reports active SharePoint exploitation, requiring farm-level updates and node verification for edition-specific builds.",
+      "why_it_matters": "Active exploitation alerts require node-level version proof across every farm member.",
+      "topic": "Enterprise Server"
+    },
+    {
+      "source_id": "S13",
+      "headline": "Rancher Fixes Four Control-Plane Trust Failures",
+      "summary": "Four Rancher flaws crossed user, replica, cluster, and RBAC boundaries, making topology-aware patch verification essential.",
+      "why_it_matters": "Authorization must be tested against the specific deployment topology.",
+      "topic": "Kubernetes"
+    },
+    {
+      "source_id": "S14",
+      "headline": "AI Agent Monitoring Needs Full-Session Evidence",
+      "summary": "New observations show why AI agent monitoring must join prompts, tools, identities, policy decisions, and downstream effects.",
+      "why_it_matters": "Connected session traces are required to reconstruct causality during investigations.",
+      "topic": "AI Monitoring"
+    },
+    {
+      "source_id": "S15",
+      "headline": "ServiceNow Fixes Require Instance-Level Patch Proof",
+      "summary": "Three unauthenticated ServiceNow AI Platform flaws demand instance-level verification across hosted, partner, and self-hosted environments.",
+      "why_it_matters": "Cloud platforms require verified runtime proof across distinct hosting models.",
+      "topic": "Cloud Platforms"
+    },
+    {
+      "source_id": "S16",
+      "headline": "Rancher Identity-Rebind Fix Needs Two-Layer Proof",
+      "summary": "CVE-2026-71403 shows why Rancher upgrades must verify identity fields are immutable through every control-plane write path.",
+      "why_it_matters": "Identity immutability must survive every write path to control-plane objects.",
+      "topic": "Identity Security"
+    },
+    {
+      "source_id": "S17",
+      "headline": "Loops and Logic Disclosure Needs Patch Status Gate",
+      "summary": "CVE-2026-82123 affects Loops and Logic without a named fixed version, requiring containment and verified remediation status.",
+      "why_it_matters": "Disclosures without fixed versions require strict containment and runtime monitoring.",
+      "topic": "WordPress Security"
+    },
+    {
+      "source_id": "S18",
+      "headline": "AI Model Scanner Scores Need Coverage Tests",
+      "summary": "Research on AI model scanners makes decision coverage, failure handling, and alert semantics part of supply-chain assurance.",
+      "why_it_matters": "Incomplete scanner decisions must not be converted to clean results.",
+      "topic": "Model Security"
+    },
+    {
+      "source_id": "S19",
+      "headline": "AI Defense Pledge Needs Measurable Delivery",
+      "summary": "An industry call for AI-enabled cyber defense emphasizes verified fixes, critical infrastructure support, and accountable automation.",
+      "why_it_matters": "Security progress requires verified protection rather than mere tool availability.",
+      "topic": "Cyber Defense"
+    },
+    {
+      "source_id": "S20",
+      "headline": "LabVIEW Fixes Need File Trust Boundaries",
+      "summary": "New LabVIEW advisories show why defenders should patch engineering endpoints and treat VI files as untrusted inputs.",
+      "why_it_matters": "Parser risk follows engineering files into the workstation environment.",
+      "topic": "Industrial Software"
+    }
+  ],
+  "operating_view": "Treat vulnerability disclosures and active exploitation alerts as operational triggers for comprehensive asset inventories, exact version verification, and strict boundary enforcement across all enterprise, cloud, and engineering environments.",
+  "watch_items": [
+    "Verify node-level software builds across SharePoint and Rancher fleets rather than relying on aggregate environment labels.",
+    "Enforce strict provenance and listener scoping for AI Model Context Protocol servers and model intake scanners.",
+    "Validate out-of-band controls for industrial engineering tools and third-party file rendering components."
+  ],
+  "caption_intro": "ShadowContext daily security digest covering verified fixes, trust boundaries, and operational intelligence for defensive engineering teams."
+}

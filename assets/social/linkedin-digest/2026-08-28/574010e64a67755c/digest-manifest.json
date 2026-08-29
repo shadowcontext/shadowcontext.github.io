@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-08-29T11:34:23.390+04:00",
+  "digestDate": "2026-08-28",
+  "digestHash": "574010e64a67755ca7bab1d5f25ad872b8232b1dddca1716860a8bd53ae05e47",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "Daily Security News Digest: Vulnerability Fixes And AI Defenses",
+  "articleCount": 20,
+  "sourceArticles": [
+    {
+      "title": "UAE Job Scams Demand Verification Outside the Message",
+      "canonicalUrl": "https://shadowcontext.com/uae-job-scams-demand-official-verification/",
+      "publishedAt": "2026-08-28T00:09:18.000+04:00",
+      "category": "defense",
+      "sourceHash": "af3ef9d4bf8d75a9896e871ade00372c63c270c34a97aee8e4e5599d9bae426f"
+    },
+    {
+      "title": "Traefik Fixes Need Policy-Path Proof",
+      "canonicalUrl": "https://shadowcontext.com/traefik-fixes-need-policy-path-proof/",
+      "publishedAt": "2026-08-28T01:09:14.000+04:00",
+      "category": "defense",
+      "sourceHash": "f30f45b2f5ccf341d3fbc07540fb403ca2a3e1932c18ec2eab2e72ac6356574d"
+    },
+    {
+      "title": "Tine Fixes Need Document-Rendering Boundaries",
+      "canonicalUrl": "https://shadowcontext.com/tine-fixes-need-document-rendering-boundaries/",
+      "publishedAt": "2026-08-28T02:09:25.000+04:00",
+      "category": "defense",
+      "sourceHash": "d49a75254116f68cbab38b9a4af4fb23135a4d32b73e69e456bb5681775e5835"
+    },
+    {
+      "title": "Artifactory KEV Makes Cache-Boundary Proof Urgent",
+      "canonicalUrl": "https://shadowcontext.com/artifactory-kev-needs-cache-boundary-proof/",
+      "publishedAt": "2026-08-28T03:09:40.000+04:00",
+      "category": "defense",
+      "sourceHash": "10983de219df40aef37569e579d4b945ac9247f2a7f78c0b8453ed2d8a00ec6e"
+    },
+    {
+      "title": "Fireware Fixes Need Device-Level Version Proof",
+      "canonicalUrl": "https://shadowcontext.com/fireware-fixes-need-device-level-version-proof/",
+      "publishedAt": "2026-08-28T04:08:20.000+04:00",
+      "category": "defense",
+      "sourceHash": "c8433e06a37af28eb19407d9f9fc0777fd435846fb2474b4ccf560e4663b73cc"
+    },
+    {
+      "title": "ownCloud KEV Demands Version and Signing-Key Proof",
+      "canonicalUrl": "https://shadowcontext.com/owncloud-kev-needs-version-and-key-proof/",
+      "publishedAt": "2026-08-28T05:09:52.000+04:00",
+      "category": "defense",
+      "sourceHash": "b47e777237c62d610db3e83303c1447d0b773a7bea60e7b3ba2e3c31f2558faa"
+    },
+    {
+      "title": "ASE2000 Fix Needs Engineering-Host and TLS Proof",
+      "canonicalUrl": "https://shadowcontext.com/ase2000-fix-needs-engineering-host-proof/",
+      "publishedAt": "2026-08-28T07:11:10.000+04:00",
+      "category": "defense",
+      "sourceHash": "e94c8cafa0e60464eeefea34c6678f94dce30fd9c7463887fb8e76e5eb99697d"
+    },
+    {
+      "title": "Redis TLS Fix Needs Runtime and Network Proof",
+      "canonicalUrl": "https://shadowcontext.com/redis-tls-fix-needs-runtime-and-network-proof/",
+      "publishedAt": "2026-08-28T08:09:32.000+04:00",
+      "category": "defense",
+      "sourceHash": "881be259a120314e8543d2cfdded85f3e1cb103ee7dbea17a17e1a26bd8f0dea"
+    },
+    {
+      "title": "openCryptoki Fixes Need Token-Boundary Proof",
+      "canonicalUrl": "https://shadowcontext.com/opencryptoki-fixes-need-token-boundary-proof/",
+      "publishedAt": "2026-08-28T09:08:01.000+04:00",
+      "category": "defense",
+      "sourceHash": "d0db4c2b148b7e38c5b675ffd54e1faec4b28b6814857256871331543721d5b2"
+    },
+    {
+      "title": "cPanel Domain-Parking Fix Needs Tenant-to-Root Boundary Proof",
+      "canonicalUrl": "https://shadowcontext.com/cpanel-domain-parking-fix-needs-boundary-proof/",
+      "publishedAt": "2026-08-28T10:12:30.000+04:00",
+      "category": "defense",
+      "sourceHash": "d7ad4dbe85f1c36a3a91d73a11801f88fe2ae618ddfcd69000ad8ce3e5d36a7a"
+    },
+    {
+      "title": "UI-TARS MCP Flaw Makes Local Binding a Security Boundary",
+      "canonicalUrl": "https://shadowcontext.com/ui-tars-mcp-needs-local-boundary-proof/",
+      "publishedAt": "2026-08-28T11:09:40.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "15dc090abcadc5914c6897249b8c94d9287fed45aa9c3e608b19e0209db2129b"
+    },
+    {
+      "title": "SharePoint Exploitation Demands Farm-Level Version Proof",
+      "canonicalUrl": "https://shadowcontext.com/sharepoint-exploitation-needs-farm-level-version-proof/",
+      "publishedAt": "2026-08-28T12:09:34.000+04:00",
+      "category": "defense",
+      "sourceHash": "dbb19d1f7c04a467f7e47f4487b1609e2c7e41a9cfddbff0359577eebf4d14f8"
+    },
+    {
+      "title": "Rancher Fixes Four Control-Plane Trust Failures",
+      "canonicalUrl": "https://shadowcontext.com/rancher-fixes-control-plane-trust-boundaries/",
+      "publishedAt": "2026-08-28T13:10:25.000+04:00",
+      "category": "defense",
+      "sourceHash": "7fdf8c4a7706e8d64697d16394f89d355c43b4989e5ece732c0bcfc17d9fa958"
+    },
+    {
+      "title": "AI Agent Monitoring Needs Full-Session Evidence",
+      "canonicalUrl": "https://shadowcontext.com/ai-agent-monitoring-needs-session-evidence/",
+      "publishedAt": "2026-08-28T14:08:53.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "6a1a286274e7e083f62e4bf30b4e8732938e6dcce01284f61370c1f0c82aa6fe"
+    },
+    {
+      "title": "ServiceNow Fixes Need Instance-Level Patch Proof",
+      "canonicalUrl": "https://shadowcontext.com/servicenow-fixes-need-instance-level-proof/",
+      "publishedAt": "2026-08-28T16:09:22.000+04:00",
+      "category": "defense",
+      "sourceHash": "192e3cb387f56b04b16222aae1c6052965b29673be719443831828b95112f85d"
+    },
+    {
+      "title": "Rancher Identity-Rebind Fix Needs Two-Layer Proof",
+      "canonicalUrl": "https://shadowcontext.com/rancher-identity-rebind-needs-two-layer-proof/",
+      "publishedAt": "2026-08-28T18:09:49.000+04:00",
+      "category": "defense",
+      "sourceHash": "3c1d78489834dc0015917d78968404a8ec371c6589c9feeeffa3462fbe345a57"
+    },
+    {
+      "title": "Loops & Logic Disclosure Needs a Patch-Status Gate",
+      "canonicalUrl": "https://shadowcontext.com/loops-logic-xss-needs-patch-status-gate/",
+      "publishedAt": "2026-08-28T19:09:44.000+04:00",
+      "category": "defense",
+      "sourceHash": "1707fd32dca3bc101ce59bdf0f096e19c69678aaed6e5d15fb27e2b9f824e679"
+    },
+    {
+      "title": "AI Model Scanner Scores Need a Coverage Test",
+      "canonicalUrl": "https://shadowcontext.com/ai-model-scanners-need-decision-coverage/",
+      "publishedAt": "2026-08-28T21:08:25.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "e2ef6f1a3fad06cdf62dbccc12b058ac31c021009c8881b17e7aa643abfd0236"
+    },
+    {
+      "title": "AI Cyber-Defense Pledge Needs Measurable Delivery",
+      "canonicalUrl": "https://shadowcontext.com/ai-cyber-defense-needs-measurable-delivery/",
+      "publishedAt": "2026-08-28T22:08:08.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "623a0046dba5fdc64b2b456eb05db0af33e390d2ebe34294c645cb593c9deca5"
+    },
+    {
+      "title": "LabVIEW Fixes Need a File-Trust Boundary",
+      "canonicalUrl": "https://shadowcontext.com/labview-fixes-need-file-trust-boundaries/",
+      "publishedAt": "2026-08-28T23:09:48.000+04:00",
+      "category": "defense",
+      "sourceHash": "e7ede39f18c4d4661f38f26a4ebfc93c87909abb798ac8fff4da593d37edda9c"
+    }
+  ],
+  "caption": "ShadowContext daily security digest covering verified fixes, trust boundaries, and operational intelligence for defensive engineering teams.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-08-28/574010e64a67755c/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-28/574010e64a67755c/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-08-28/574010e64a67755c/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-28/574010e64a67755c/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}
