@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Checkout identity gate enforcing allowed account roles</title>
+  <desc id="desc">An abstract editorial scene of checkout tiles moving toward a layered blue identity gate, where an amber elevated-role token is held apart for verification.</desc>
+  <defs>
+    <linearGradient id="bg" x1="120" y1="70" x2="1480" y2="830" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07152f"/>
+      <stop offset="0.52" stop-color="#11295a"/>
+      <stop offset="1" stop-color="#09152d"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0" cy="0" r="1" gradientTransform="translate(815 442) rotate(90) scale(410 585)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#235da9" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#235da9" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gate" x1="690" y1="170" x2="930" y2="735" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#56e7f2"/>
+      <stop offset="0.5" stop-color="#328ddf"/>
+      <stop offset="1" stop-color="#826ee8"/>
+    </linearGradient>
+    <linearGradient id="tile" x1="250" y1="250" x2="610" y2="650" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2d75bd"/>
+      <stop offset="1" stop-color="#162f68"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="1080" y1="315" x2="1315" y2="590" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffd66b"/>
+      <stop offset="1" stop-color="#ee784c"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" fill="none" stroke="#7ac9e8" stroke-opacity="0.07" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" rx="36" fill="url(#bg)"/>
+  <rect width="1600" height="900" rx="36" fill="url(#halo)"/>
+  <rect x="38" y="38" width="1524" height="824" rx="28" fill="url(#grid)" stroke="#83d9ef" stroke-opacity="0.14"/>
+
+  <ellipse cx="805" cy="755" rx="585" ry="58" fill="#020918" fill-opacity="0.58" filter="url(#soft)"/>
+  <path d="M205 695C405 626 555 589 706 558" fill="none" stroke="#397fca" stroke-opacity="0.28" stroke-width="10" stroke-linecap="round"/>
+  <path d="M890 558C1086 588 1254 628 1410 695" fill="none" stroke="#397fca" stroke-opacity="0.2" stroke-width="10" stroke-linecap="round"/>
+
+  <g opacity="0.96">
+    <g transform="translate(190 236) rotate(-7 165 115)">
+      <rect width="330" height="230" rx="32" fill="url(#tile)" stroke="#76d8ef" stroke-opacity="0.48" stroke-width="3"/>
+      <rect x="31" y="34" width="116" height="18" rx="9" fill="#9ceaf4" fill-opacity="0.65"/>
+      <rect x="31" y="72" width="232" height="12" rx="6" fill="#9ceaf4" fill-opacity="0.23"/>
+      <rect x="31" y="101" width="190" height="12" rx="6" fill="#9ceaf4" fill-opacity="0.16"/>
+      <circle cx="273" cy="171" r="27" fill="#48d2df" fill-opacity="0.2" stroke="#75eff2" stroke-width="3"/>
+      <path d="M260 171l9 9 18-21" fill="none" stroke="#8ff7f4" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <g transform="translate(360 485) rotate(5 132 92)">
+      <rect width="264" height="184" rx="28" fill="#173d7c" stroke="#638edc" stroke-opacity="0.58" stroke-width="3"/>
+      <circle cx="57" cy="67" r="25" fill="#7d8ee8" fill-opacity="0.4"/>
+      <path d="M93 55h114M93 81h78" stroke="#a8c9f3" stroke-opacity="0.5" stroke-width="12" stroke-linecap="round"/>
+      <rect x="38" y="128" width="188" height="15" rx="7.5" fill="#3fc1db" fill-opacity="0.32"/>
+    </g>
+  </g>
+
+  <g filter="url(#glow)">
+    <path d="M742 187C742 159 765 136 793 136h27c28 0 51 23 51 51v93h-47v-78c0-13-10-23-23-23h-1c-13 0-23 10-23 23v78h-35v-93z" fill="none" stroke="#5debf0" stroke-opacity="0.75" stroke-width="12"/>
+    <path d="M681 275h250v389c0 51-41 92-92 92h-66c-51 0-92-41-92-92V275z" fill="#102e65" stroke="url(#gate)" stroke-width="10"/>
+    <path d="M727 327h158v275c0 43-35 78-78 78h-2c-43 0-78-35-78-78V327z" fill="#071a3b" stroke="#63e4ef" stroke-opacity="0.7" stroke-width="4"/>
+    <circle cx="806" cy="454" r="58" fill="#173f7c" stroke="#73edf0" stroke-width="6"/>
+    <path d="M777 455l20 20 40-48" fill="none" stroke="#8cf7ed" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M806 513v84" stroke="#68dce9" stroke-width="13" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(1061 290)">
+    <circle cx="136" cy="154" r="132" fill="#d87546" fill-opacity="0.1" stroke="#f8a553" stroke-opacity="0.32" stroke-width="3" stroke-dasharray="10 14"/>
+    <path d="M136 44l24 58 63-7-48 42 20 61-59-32-59 32 20-61-48-42 63 7 24-58z" fill="url(#amber)" filter="url(#glow)"/>
+    <circle cx="136" cy="154" r="41" fill="#10254d" stroke="#ffe091" stroke-width="5"/>
+    <path d="M112 154h48M136 130v48" stroke="#ffe9ad" stroke-width="8" stroke-linecap="round"/>
+  </g>
+
+  <path d="M951 444h92" stroke="#ffbd67" stroke-width="8" stroke-linecap="round" stroke-dasharray="2 22"/>
+  <path d="M945 391v106" stroke="#ffcc73" stroke-width="10" stroke-linecap="round" filter="url(#glow)"/>
+  <circle cx="945" cy="373" r="8" fill="#ffe49e"/>
+  <circle cx="945" cy="515" r="8" fill="#ffe49e"/>
+
+  <g opacity="0.72">
+    <circle cx="255" cy="175" r="7" fill="#62e9ee"/>
+    <circle cx="1330" cy="199" r="5" fill="#857cf0"/>
+    <circle cx="1421" cy="603" r="8" fill="#4fc5e2"/>
+    <path d="M124 570h118M1300 701h159" stroke="#6ed8ec" stroke-opacity="0.28" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>
