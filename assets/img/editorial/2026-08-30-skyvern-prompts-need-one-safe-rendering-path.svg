@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">One safe rendering path for AI workflow prompts</title>
+  <desc id="desc">Abstract violet prompt ribbons pass once through a luminous cyan safety boundary while a second looping interpretation path dissolves into particles above.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#090b21"/>
+      <stop offset="0.52" stop-color="#18133d"/>
+      <stop offset="1" stop-color="#062b38"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="52%" cy="52%" r="52%">
+      <stop offset="0" stop-color="#61f0e6" stop-opacity="0.32"/>
+      <stop offset="0.42" stop-color="#7768ec" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#0a0d28" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8a61ff" stop-opacity="0"/>
+      <stop offset="0.3" stop-color="#a77cff"/>
+      <stop offset="0.72" stop-color="#d6baff"/>
+      <stop offset="1" stop-color="#78f4e8"/>
+    </linearGradient>
+    <linearGradient id="boundary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d5fffb"/>
+      <stop offset="0.48" stop-color="#56e4dc"/>
+      <stop offset="1" stop-color="#6087f5"/>
+    </linearGradient>
+    <linearGradient id="fadeLoop" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#b18aff" stop-opacity="0.7"/>
+      <stop offset="0.58" stop-color="#a482ff" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#a482ff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <pattern id="grain" width="74" height="74" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="16" r="1" fill="#ffffff" opacity="0.055"/>
+      <circle cx="48" cy="34" r="0.8" fill="#8cf8ef" opacity="0.07"/>
+      <circle cx="29" cy="63" r="0.7" fill="#c1a8ff" opacity="0.06"/>
+    </pattern>
+    <clipPath id="safeSide"><rect x="790" y="0" width="810" height="900"/></clipPath>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#grain)"/>
+  <ellipse cx="820" cy="475" rx="570" ry="420" fill="url(#aura)"/>
+
+  <g opacity="0.3" fill="none" stroke-linecap="round">
+    <path d="M-40 735 C310 670 500 760 790 710 C1070 662 1270 580 1640 620" stroke="#52dcd8" stroke-width="2"/>
+    <path d="M-50 212 C290 272 482 164 763 214" stroke="#8e6cf7" stroke-width="2"/>
+    <path d="M1000 190 C1210 130 1395 195 1610 142" stroke="#5ee8df" stroke-width="1.5" stroke-dasharray="4 18"/>
+  </g>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M-100 455 C190 330 404 625 755 455" stroke="url(#ribbon)" stroke-width="62" opacity="0.18" filter="url(#soft)"/>
+    <path d="M-100 455 C190 330 404 625 755 455" stroke="url(#ribbon)" stroke-width="18" opacity="0.95"/>
+    <path d="M-70 545 C248 435 416 680 754 515" stroke="url(#ribbon)" stroke-width="34" opacity="0.12" filter="url(#soft)"/>
+    <path d="M-70 545 C248 435 416 680 754 515" stroke="url(#ribbon)" stroke-width="8" opacity="0.68"/>
+  </g>
+
+  <g filter="url(#glow)">
+    <path d="M800 230 C873 267 917 276 954 287 V468 C954 594 892 681 800 723 C708 681 646 594 646 468 V287 C683 276 727 267 800 230Z" fill="#56e5dc" opacity="0.14"/>
+    <path d="M800 263 C854 290 894 302 923 311 V467 C923 565 876 637 800 678 C724 637 677 565 677 467 V311 C706 302 746 290 800 263Z" fill="#0b1c35" stroke="url(#boundary)" stroke-width="7"/>
+    <path d="M712 455 C751 435 779 427 800 427 C821 427 849 435 888 455" fill="none" stroke="#c8fffa" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="800" cy="427" r="17" fill="#d9fffb"/>
+    <path d="M800 445 V555" stroke="#6debe1" stroke-width="7" stroke-linecap="round"/>
+    <path d="M759 555 H841" stroke="#7dddf0" stroke-width="7" stroke-linecap="round"/>
+  </g>
+
+  <g clip-path="url(#safeSide)" fill="none" stroke-linecap="round">
+    <path d="M802 455 C1030 347 1195 393 1645 325" stroke="#6ff0e5" stroke-width="48" opacity="0.13" filter="url(#soft)"/>
+    <path d="M802 455 C1030 347 1195 393 1645 325" stroke="#8bf7ed" stroke-width="13" opacity="0.9"/>
+    <path d="M802 515 C1065 606 1260 486 1650 545" stroke="#62cfe8" stroke-width="30" opacity="0.11" filter="url(#soft)"/>
+    <path d="M802 515 C1065 606 1260 486 1650 545" stroke="#74dfe9" stroke-width="7" opacity="0.62"/>
+  </g>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M500 382 C469 177 698 105 876 168 C1026 221 1006 339 919 366" stroke="url(#fadeLoop)" stroke-width="11" stroke-dasharray="1 2" opacity="0.68"/>
+    <path d="M919 366 C1002 338 1066 287 1112 211" stroke="#9c7dfb" stroke-width="6" stroke-dasharray="2 22" opacity="0.34"/>
+  </g>
+
+  <g fill="#b9a0ff">
+    <circle cx="1046" cy="276" r="6" opacity="0.42"/>
+    <circle cx="1091" cy="230" r="4" opacity="0.34"/>
+    <circle cx="1134" cy="191" r="3" opacity="0.25"/>
+    <circle cx="1173" cy="164" r="2" opacity="0.18"/>
+  </g>
+
+  <g opacity="0.74">
+    <circle cx="238" cy="405" r="10" fill="#a87eff"/>
+    <circle cx="366" cy="517" r="7" fill="#d1b5ff"/>
+    <circle cx="1184" cy="389" r="9" fill="#83f4e9"/>
+    <circle cx="1362" cy="528" r="6" fill="#71dce8"/>
+  </g>
+
+  <ellipse cx="800" cy="475" rx="355" ry="319" fill="none" stroke="#8c79ef" stroke-width="1.5" stroke-dasharray="7 22" opacity="0.28"/>
+</svg>
