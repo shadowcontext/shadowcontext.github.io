@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Approval boundary protecting a self-hosted workflow runner</title>
+  <desc id="desc">Abstract branching workflow lanes converge toward a bright authorization barrier before an isolated runner core.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071326"/>
+      <stop offset="0.55" stop-color="#10213a"/>
+      <stop offset="1" stop-color="#09101d"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#53e1c1" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#53e1c1" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="lane" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6f73ff" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#8d7cff" stop-opacity=".9"/>
+    </linearGradient>
+    <linearGradient id="gate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff3aa"/>
+      <stop offset=".48" stop-color="#f1b84b"/>
+      <stop offset="1" stop-color="#c26c26"/>
+    </linearGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#72f0d2"/>
+      <stop offset="1" stop-color="#148e91"/>
+    </linearGradient>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse">
+      <path d="M56 0H0V56" fill="none" stroke="#8db4d8" stroke-opacity=".08" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <ellipse cx="1220" cy="450" rx="360" ry="330" fill="url(#halo)"/>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M90 230 C330 230 380 390 650 390 S820 390 930 390" stroke="url(#lane)" stroke-width="34"/>
+    <path d="M90 450 C350 450 430 450 650 450 S820 450 930 450" stroke="url(#lane)" stroke-width="34"/>
+    <path d="M90 670 C330 670 380 510 650 510 S820 510 930 510" stroke="url(#lane)" stroke-width="34"/>
+    <path d="M120 230 C350 230 415 404 660 404" stroke="#a5a8ff" stroke-opacity=".36" stroke-width="3"/>
+    <path d="M120 450 H660" stroke="#a5a8ff" stroke-opacity=".36" stroke-width="3"/>
+    <path d="M120 670 C350 670 415 496 660 496" stroke="#a5a8ff" stroke-opacity=".36" stroke-width="3"/>
+  </g>
+
+  <g fill="#8e91ff">
+    <circle cx="130" cy="230" r="16"/><circle cx="130" cy="450" r="16"/><circle cx="130" cy="670" r="16"/>
+    <circle cx="410" cy="321" r="10" opacity=".7"/><circle cx="450" cy="450" r="10" opacity=".7"/><circle cx="410" cy="579" r="10" opacity=".7"/>
+  </g>
+
+  <g filter="url(#glow)">
+    <rect x="900" y="168" width="34" height="564" rx="17" fill="url(#gate)"/>
+    <circle cx="917" cy="450" r="62" fill="#111d2d" stroke="#ffd66a" stroke-width="16"/>
+    <path d="M890 450l18 18 39-46" fill="none" stroke="#fff3b0" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <path d="M960 450H1094" stroke="#5ee5c7" stroke-width="22" stroke-linecap="round" opacity=".78"/>
+  <g transform="translate(1110 290)">
+    <path d="M160 0l160 92v184l-160 92L0 276V92z" fill="#0a1725" stroke="#60e6c8" stroke-width="8"/>
+    <path d="M160 0v184L0 92M160 184l160-92M160 184v184" fill="none" stroke="#60e6c8" stroke-width="5" opacity=".55"/>
+    <path d="M160 70l100 57v114l-100 57-100-57V127z" fill="url(#core)" opacity=".94"/>
+    <circle cx="160" cy="184" r="35" fill="#d9fff7" opacity=".9"/>
+  </g>
+
+  <g fill="none" stroke="#e9c15e" stroke-width="4" opacity=".45">
+    <circle cx="917" cy="450" r="102"/><circle cx="917" cy="450" r="130" stroke-dasharray="8 18"/>
+  </g>
+  <g fill="#a5a8ff" opacity=".22">
+    <path d="M620 350l22-13 22 13v26l-22 13-22-13z"/>
+    <path d="M718 437l22-13 22 13v26l-22 13-22-13z"/>
+    <path d="M790 500l22-13 22 13v26l-22 13-22-13z"/>
+  </g>
+</svg>
