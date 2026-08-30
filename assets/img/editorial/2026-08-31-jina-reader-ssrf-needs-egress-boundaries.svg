@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">URL stream diverted from a protected internal cloud</title>
+  <desc id="desc">Abstract editorial artwork showing a luminous external request path bending around a guarded cloud network, representing SSRF containment through egress boundaries.</desc>
+  <defs>
+    <linearGradient id="bg" x1="120" y1="40" x2="1480" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071A2C"/>
+      <stop offset="0.52" stop-color="#0B2940"/>
+      <stop offset="1" stop-color="#111B39"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0" cy="0" r="1" gradientTransform="translate(1120 450) rotate(90) scale(370 430)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#20D7C4" stop-opacity=".24"/>
+      <stop offset="1" stop-color="#20D7C4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="stream" x1="130" y1="255" x2="1058" y2="569" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6F7BFF"/>
+      <stop offset=".48" stop-color="#33C8FF"/>
+      <stop offset="1" stop-color="#35F2C2"/>
+    </linearGradient>
+    <linearGradient id="barrier" x1="806" y1="198" x2="914" y2="716" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFB45C"/>
+      <stop offset="1" stop-color="#FF6B7A"/>
+    </linearGradient>
+    <linearGradient id="cloud" x1="1040" y1="330" x2="1370" y2="640" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#45E0D0" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#5872FF" stop-opacity=".16"/>
+    </linearGradient>
+    <filter id="blur40" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="11" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" fill="none" stroke="#A5D7F3" stroke-opacity=".055"/>
+    </pattern>
+    <clipPath id="cloudClip">
+      <path d="M1081 632c-75 0-135-51-135-116 0-57 46-105 108-114 28-82 108-140 202-140 111 0 202 80 213 181 54 17 92 63 92 117 0 68-61 123-137 123h-343z"/>
+    </clipPath>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <ellipse cx="1120" cy="450" rx="430" ry="370" fill="url(#halo)"/>
+  <circle cx="246" cy="222" r="118" fill="#596DFF" opacity=".12" filter="url(#blur40)"/>
+  <circle cx="571" cy="692" r="146" fill="#21BEDA" opacity=".1" filter="url(#blur40)"/>
+
+  <g opacity=".9">
+    <rect x="108" y="178" width="438" height="278" rx="34" fill="#0D2942" stroke="#7DB7E1" stroke-opacity=".38" stroke-width="2"/>
+    <path d="M109 247h436" stroke="#7DB7E1" stroke-opacity=".28" stroke-width="2"/>
+    <circle cx="150" cy="213" r="9" fill="#FF7784"/>
+    <circle cx="180" cy="213" r="9" fill="#F7C761"/>
+    <circle cx="210" cy="213" r="9" fill="#4DE0B0"/>
+    <rect x="151" y="291" width="302" height="22" rx="11" fill="#A7D3F0" opacity=".18"/>
+    <rect x="151" y="340" width="224" height="14" rx="7" fill="#A7D3F0" opacity=".12"/>
+    <rect x="151" y="376" width="270" height="14" rx="7" fill="#A7D3F0" opacity=".09"/>
+  </g>
+
+  <path d="M394 318C562 318 612 380 744 406c71 14 115 5 160-10" fill="none" stroke="#092338" stroke-width="74" stroke-linecap="round" opacity=".8"/>
+  <path d="M394 318C562 318 612 380 744 406c71 14 115 5 160-10" fill="none" stroke="url(#stream)" stroke-width="19" stroke-linecap="round" filter="url(#glow)"/>
+  <path d="M424 318l-20-13v26zM544 335l-21-15-1 29zM659 377l-22-14 1 29zM780 409l-22-12 3 28z" fill="#D9FFFF" opacity=".8"/>
+
+  <path d="M889 170c53 76 77 166 71 270-7 125-50 226-127 303" fill="none" stroke="#4A142A" stroke-opacity=".55" stroke-width="82" stroke-linecap="round"/>
+  <path d="M889 170c53 76 77 166 71 270-7 125-50 226-127 303" fill="none" stroke="url(#barrier)" stroke-width="14" stroke-linecap="round" filter="url(#glow)"/>
+  <path d="M852 229l72-25M886 317l69-15M895 411l64-3M889 507l62 10M861 604l63 26M821 692l57 36" stroke="#FFD0A0" stroke-opacity=".72" stroke-width="4" stroke-linecap="round"/>
+
+  <path d="M903 398c-45 33-70 81-61 132 13 77 103 121 189 86" fill="none" stroke="url(#stream)" stroke-width="19" stroke-linecap="round" filter="url(#glow)"/>
+  <path d="M1029 616l-36-5 23-28z" fill="#35F2C2"/>
+
+  <path d="M1081 632c-75 0-135-51-135-116 0-57 46-105 108-114 28-82 108-140 202-140 111 0 202 80 213 181 54 17 92 63 92 117 0 68-61 123-137 123h-343z" fill="url(#cloud)" stroke="#75EDE1" stroke-opacity=".63" stroke-width="3"/>
+  <g clip-path="url(#cloudClip)" opacity=".72">
+    <path d="M1010 588l115-96 108 61 132-126 137 94" fill="none" stroke="#77E6DE" stroke-width="3"/>
+    <path d="M1125 492v-88M1233 553V374M1365 427v166" stroke="#77E6DE" stroke-opacity=".65" stroke-width="3"/>
+    <circle cx="1125" cy="492" r="15" fill="#0B2940" stroke="#7CF9E9" stroke-width="4"/>
+    <circle cx="1233" cy="553" r="15" fill="#0B2940" stroke="#7CF9E9" stroke-width="4"/>
+    <circle cx="1365" cy="427" r="15" fill="#0B2940" stroke="#7CF9E9" stroke-width="4"/>
+    <circle cx="1125" cy="404" r="10" fill="#7CF9E9"/>
+    <circle cx="1233" cy="374" r="10" fill="#7CF9E9"/>
+    <circle cx="1365" cy="593" r="10" fill="#7CF9E9"/>
+  </g>
+
+  <g transform="translate(1185 442)" filter="url(#glow)">
+    <path d="M65 0l65 23v55c0 47-27 87-65 104C27 165 0 125 0 78V23L65 0z" fill="#0A2B3F" stroke="#7CF9E9" stroke-width="5"/>
+    <path d="M36 88l20 20 41-49" fill="none" stroke="#7CF9E9" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <circle cx="704" cy="715" r="5" fill="#52D9FF"/>
+  <circle cx="753" cy="750" r="3" fill="#52D9FF" opacity=".65"/>
+  <circle cx="1501" cy="197" r="5" fill="#6FF4D8" opacity=".7"/>
+  <circle cx="1430" cy="139" r="3" fill="#6FF4D8" opacity=".5"/>
+</svg>
