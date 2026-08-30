@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Verified signature within an encrypted identity token</title>
+  <desc id="desc">Abstract nested blue token layers surround a luminous verified core while an amber gap is closed by a protective signature arc.</desc>
+  <defs>
+    <linearGradient id="bg" x1="120" y1="70" x2="1450" y2="840" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07162E"/>
+      <stop offset="0.5" stop-color="#10295A"/>
+      <stop offset="1" stop-color="#071329"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0" cy="0" r="1" gradientTransform="translate(800 448) rotate(90) scale(430 590)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#35D7E8" stop-opacity="0.28"/>
+      <stop offset="0.55" stop-color="#386DDE" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#07162E" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="outer" x1="390" y1="240" x2="1210" y2="690" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5E8CFF" stop-opacity="0.62"/>
+      <stop offset="0.5" stop-color="#37D7E7" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#566DE5" stop-opacity="0.55"/>
+    </linearGradient>
+    <linearGradient id="inner" x1="610" y1="315" x2="1010" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B7F7FF"/>
+      <stop offset="0.48" stop-color="#3DD6E8"/>
+      <stop offset="1" stop-color="#5680FF"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="980" y1="250" x2="1240" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD67A"/>
+      <stop offset="1" stop-color="#FF8C4B"/>
+    </linearGradient>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="26"/>
+    </filter>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="12" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grain" width="70" height="70" patternUnits="userSpaceOnUse">
+      <circle cx="7" cy="11" r="1.5" fill="#BEEBFF" opacity="0.16"/>
+      <circle cx="51" cy="34" r="1" fill="#6C9DFF" opacity="0.13"/>
+      <circle cx="27" cy="61" r="1.2" fill="#8EDBEA" opacity="0.12"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#halo)"/>
+  <ellipse cx="800" cy="474" rx="440" ry="300" fill="#2A7CDD" opacity="0.12" filter="url(#blur)"/>
+  <path d="M277 282C403 158 601 102 800 129c199-27 397 29 523 153 79 77 128 176 138 286-96 111-216 190-361 236-94 30-194 46-300 48-106-2-206-18-300-48-145-46-265-125-361-236 10-110 59-209 138-286Z" fill="none" stroke="#5D86E8" stroke-width="2" opacity="0.22"/>
+  <g opacity="0.7">
+    <path d="M354 450c0-130 105-235 235-235h422c130 0 235 105 235 235S1141 685 1011 685H589c-130 0-235-105-235-235Z" fill="url(#outer)" stroke="#78B8FF" stroke-width="3"/>
+    <path d="M430 450c0-93 75-168 168-168h404c93 0 168 75 168 168s-75 168-168 168H598c-93 0-168-75-168-168Z" fill="#0A234D" fill-opacity="0.78" stroke="#43CBDF" stroke-width="3"/>
+  </g>
+  <path d="M573 450c0-75 61-136 136-136h182c75 0 136 61 136 136s-61 136-136 136H709c-75 0-136-61-136-136Z" fill="#071933" stroke="url(#inner)" stroke-width="9"/>
+  <path d="M701 452c0-55 44-99 99-99s99 44 99 99-44 99-99 99-99-44-99-99Z" fill="#12346B" stroke="#8DF4FF" stroke-width="5" filter="url(#glow)"/>
+  <path d="M760 453l27 27 58-67" fill="none" stroke="#D8FCFF" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  <path d="M1063 318c73 41 122 115 132 198" fill="none" stroke="#071933" stroke-width="32" stroke-linecap="round"/>
+  <path d="M1063 318c73 41 122 115 132 198" fill="none" stroke="url(#amber)" stroke-width="11" stroke-linecap="round" filter="url(#glow)"/>
+  <circle cx="1062" cy="318" r="15" fill="#FFD87D"/>
+  <circle cx="1195" cy="516" r="15" fill="#FF9852"/>
+  <g fill="#8DEEFF">
+    <circle cx="483" cy="367" r="5" opacity="0.75"/>
+    <circle cx="1114" cy="614" r="4" opacity="0.6"/>
+    <circle cx="404" cy="517" r="3" opacity="0.55"/>
+    <circle cx="1213" cy="389" r="3" opacity="0.7"/>
+  </g>
+  <path d="M338 735c296 70 628 70 924 0" fill="none" stroke="#65A9F4" stroke-width="2" opacity="0.24"/>
+  <rect width="1600" height="900" fill="url(#grain)"/>
+</svg>
