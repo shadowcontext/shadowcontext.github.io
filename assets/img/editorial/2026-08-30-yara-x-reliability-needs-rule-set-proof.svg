@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Rule-set reliability under a scanning field</title>
+  <desc id="desc">An abstract blue scanning field filters layered file forms through a stable central aperture while amber rule fragments move into a visible review channel.</desc>
+  <defs>
+    <linearGradient id="bg" x1="120" y1="70" x2="1470" y2="850" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#07182d"/>
+      <stop offset="0.52" stop-color="#0b3150"/>
+      <stop offset="1" stop-color="#061522"/>
+    </linearGradient>
+    <radialGradient id="field" cx="0.5" cy="0.48" r="0.56">
+      <stop offset="0" stop-color="#66e6ff" stop-opacity="0.32"/>
+      <stop offset="0.55" stop-color="#238bb5" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#071827" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#44c9ef" stop-opacity="0"/>
+      <stop offset="0.45" stop-color="#87efff" stop-opacity="0.78"/>
+      <stop offset="1" stop-color="#44c9ef" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c5f7ff" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#39a8d0" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd67d"/>
+      <stop offset="1" stop-color="#e58b35"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+    <pattern id="grid" width="72" height="72" patternUnits="userSpaceOnUse">
+      <path d="M72 0H0V72" fill="none" stroke="#64cce7" stroke-opacity="0.065" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" rx="34" fill="url(#bg)"/>
+  <rect x="36" y="36" width="1528" height="828" rx="28" fill="url(#grid)"/>
+  <ellipse cx="800" cy="430" rx="690" ry="410" fill="url(#field)"/>
+
+  <g opacity="0.76">
+    <path d="M95 252C310 151 472 152 661 240" fill="none" stroke="#2b7897" stroke-width="2"/>
+    <path d="M1538 648C1318 751 1130 740 951 656" fill="none" stroke="#2b7897" stroke-width="2"/>
+    <circle cx="122" cy="244" r="6" fill="#6edff3"/>
+    <circle cx="1496" cy="665" r="6" fill="#6edff3"/>
+  </g>
+
+  <g transform="translate(150 260)">
+    <path d="M0 62L105 0H272L377 62V222L272 284H105L0 222Z" fill="#0e4362" stroke="#4fc3e4" stroke-opacity="0.62" stroke-width="3"/>
+    <path d="M32 79L119 28H258L345 79V205L258 256H119L32 205Z" fill="#0b273c" stroke="#58d8ef" stroke-opacity="0.28" stroke-width="2"/>
+    <path d="M91 87H278M72 134H298M72 181H298" stroke="#77d7e9" stroke-opacity="0.42" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="305" cy="88" r="12" fill="#74e2f4" opacity="0.74"/>
+  </g>
+
+  <path d="M470 450H714" stroke="url(#beam)" stroke-width="54" filter="url(#soft)"/>
+  <path d="M470 450H714" stroke="#89edff" stroke-opacity="0.74" stroke-width="4"/>
+  <g fill="#86e8f9" opacity="0.68">
+    <circle cx="530" cy="450" r="7"/><circle cx="594" cy="450" r="5"/><circle cx="652" cy="450" r="8"/>
+  </g>
+
+  <g filter="url(#glow)">
+    <circle cx="800" cy="450" r="151" fill="#0b2940" stroke="#72e7fa" stroke-opacity="0.86" stroke-width="7"/>
+    <circle cx="800" cy="450" r="116" fill="url(#glass)" stroke="#a4f3ff" stroke-opacity="0.52" stroke-width="2"/>
+    <path d="M800 360L878 405V495L800 540L722 495V405Z" fill="#0a2032" stroke="#94efff" stroke-width="4"/>
+    <path d="M760 438L790 468L846 408" fill="none" stroke="#83ebd2" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <path d="M886 450H1168" stroke="url(#beam)" stroke-width="54" filter="url(#soft)"/>
+  <path d="M886 450H1168" stroke="#89edff" stroke-opacity="0.74" stroke-width="4"/>
+  <g transform="translate(1170 290)">
+    <path d="M0 58L98 0H250L348 58V242L250 300H98L0 242Z" fill="#0c3d5a" stroke="#62d2e9" stroke-opacity="0.68" stroke-width="3"/>
+    <path d="M34 79L112 33H236L314 79V221L236 267H112L34 221Z" fill="#0a263a"/>
+    <g fill="#70daed" opacity="0.7">
+      <rect x="77" y="83" width="194" height="18" rx="9"/>
+      <rect x="77" y="129" width="157" height="18" rx="9"/>
+      <rect x="77" y="175" width="210" height="18" rx="9"/>
+      <rect x="77" y="221" width="128" height="18" rx="9"/>
+    </g>
+  </g>
+
+  <g>
+    <path d="M720 560C667 623 642 676 623 770" fill="none" stroke="#f1aa52" stroke-opacity="0.55" stroke-width="4" stroke-dasharray="10 13"/>
+    <path d="M610 660L644 639L675 668L648 704L608 689Z" fill="url(#amber)" opacity="0.96"/>
+    <path d="M560 727L590 706L619 728L607 765L568 770L548 746Z" fill="#f0b45e" opacity="0.78"/>
+    <path d="M686 725L711 706L743 720L750 751L721 774L688 758Z" fill="#d9843b" opacity="0.68"/>
+    <circle cx="628" cy="737" r="82" fill="none" stroke="#f0ad59" stroke-opacity="0.24" stroke-width="2"/>
+    <circle cx="628" cy="737" r="108" fill="none" stroke="#f0ad59" stroke-opacity="0.12" stroke-width="2"/>
+  </g>
+
+  <g fill="none" stroke="#78dff0" stroke-linecap="round">
+    <path d="M308 704H448" stroke-opacity="0.28" stroke-width="3"/>
+    <path d="M1152 184H1318" stroke-opacity="0.28" stroke-width="3"/>
+    <path d="M340 734H412" stroke-opacity="0.18" stroke-width="3"/>
+    <path d="M1200 214H1286" stroke-opacity="0.18" stroke-width="3"/>
+  </g>
+  <rect x="36" y="36" width="1528" height="828" rx="28" fill="none" stroke="#8cecff" stroke-opacity="0.13" stroke-width="2"/>
+</svg>
