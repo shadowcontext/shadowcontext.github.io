@@ -1,0 +1,154 @@
+{
+  "digest_title": "Daily Security Digest: Strengthening Boundaries Across Infrastructure and Tools",
+  "dek": "A comprehensive review of today's vulnerability advisories and defensive guidance spanning archive handlers, frameworks, device permissions, and enterprise platforms.",
+  "overview": "Today's advisories highlight critical boundary failures across development tools, frameworks, and enterprise platforms. Defenders must prioritize asset-specific verification, runtime checks, and strict trust policies rather than relying on binary updates alone.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "Aqua Archive Fix Needs Destination Boundary Enforcement",
+      "summary": "CVE-2026-55569 affects Aqua before 2.60.1, involving an archive handler that created symlinks without verifying targets remained inside the extraction destination.",
+      "why_it_matters": "Unvalidated archive extraction allows writes beyond approved roots, risking user-level code execution on developer workstations.",
+      "topic": "Supply Chain Security"
+    },
+    {
+      "source_id": "S02",
+      "headline": "SvelteKit Fixes Need Feature Aware Version Proof",
+      "summary": "Six SvelteKit CVEs cover request cross-talk and remote-form availability risks, requiring defenders to map features, versions, and runtime limits.",
+      "why_it_matters": "A lockfile match is insufficient because vulnerabilities like query batching and CPU exhaustion depend on active features.",
+      "topic": "Framework Security"
+    },
+    {
+      "source_id": "S03",
+      "headline": "UAE AI Tool Warning Makes Permissions a Boundary",
+      "summary": "The UAE Cybersecurity Council warned residents to verify unfamiliar AI tools and examine requests for device and camera access.",
+      "why_it_matters": "An AI label does not justify trust, and permission prompts are critical security decisions rather than setup formalities.",
+      "topic": "AI Security"
+    },
+    {
+      "source_id": "S04",
+      "headline": "GiveWP Fix Shows Deserialization Needs Layered Defenses",
+      "summary": "GiveWP 4.16.7.2 fixes CVE-2026-82222, a PHP object-injection vulnerability linked to remote code execution in donation workflows.",
+      "why_it_matters": "Stored application data must not become trusted merely because it passes through a database persistence layer.",
+      "topic": "Application Defense"
+    },
+    {
+      "source_id": "S05",
+      "headline": "Argo Rollouts Dashboard Needs Runtime Boundaries",
+      "summary": "CVE-2026-82277 affects Argo Rollouts through 1.10.0, exposing rollout-changing operations without authentication while listening on all interfaces.",
+      "why_it_matters": "Unauthenticated dashboard access allows attackers to act with the Kubernetes privileges held by the launching process.",
+      "topic": "Container Security"
+    },
+    {
+      "source_id": "S06",
+      "headline": "Redpanda Admin API Needs Explicit Authentication Boundary",
+      "summary": "CVE-2026-82266 affects Redpanda through 26.2.2 where the Admin API listens on all interfaces without required authentication.",
+      "why_it_matters": "Default configurations can grant superuser authority to any network-reachable host, disrupting cluster operations.",
+      "topic": "Infrastructure Defense"
+    },
+    {
+      "source_id": "S07",
+      "headline": "MariaDB TLS Must Verify Identity Before Credentials",
+      "summary": "CVE-2026-55215 affects MariaDB Connector for Node.js where fingerprint validation occurs after database passwords cross the wire.",
+      "why_it_matters": "Encryption protects against passive observation, but failing to verify server identity first exposes credentials to active interceptors.",
+      "topic": "Transport Security"
+    },
+    {
+      "source_id": "S08",
+      "headline": "Patient Portal Phishing Needs Out of Band Verification",
+      "summary": "Scammers are impersonating MyChart via emails and text messages offering fake Medicare rewards to harvest patient credentials.",
+      "why_it_matters": "Trusted brand names and urgency bypass doubt; users must verify sensitive actions through independently opened official apps.",
+      "topic": "Threat Intelligence"
+    },
+    {
+      "source_id": "S09",
+      "headline": "Artifactory Fix Needs Proof Anonymous Users Stay Out",
+      "summary": "CVE-2026-82329 describes a critical improper-authentication weakness in Artifactory default configurations allowing administrative access.",
+      "why_it_matters": "Repositories sit between upstream sources and production delivery, making administrative compromise a supply chain risk.",
+      "topic": "Repository Security"
+    },
+    {
+      "source_id": "S10",
+      "headline": "Dovecot 2.4.5 Needs Feature Level Proof",
+      "summary": "Dovecot and Pigeonhole 2.4.5 fixes security issues spanning mail parsing, authentication, IMAP, Sieve, and resource consumption.",
+      "why_it_matters": "Defenders must verify active features and runtime builds because configuration-dependent fixes require explicit enablement.",
+      "topic": "Mail Security"
+    },
+    {
+      "source_id": "S11",
+      "headline": "NUMail Fix Needs Service Level Version Proof",
+      "summary": "TWCERT/CC noted CVE-2026-82082 affects NUMail, allowing unauthenticated remote command execution, and is fixed in patch 202602162.",
+      "why_it_matters": "Critical server vulnerabilities require verifying the running service build rather than assuming patch success from installers.",
+      "topic": "Server Security"
+    },
+    {
+      "source_id": "S12",
+      "headline": "Edge 152 Cuts Off Scam Notification Persistence",
+      "summary": "Microsoft Edge 152 automatically unsubscribes users from notifications sent by sites SmartScreen blocks as malicious.",
+      "why_it_matters": "Browser notification grants provide persistent authority that must be automatically revoked upon threat detection.",
+      "topic": "Browser Security"
+    },
+    {
+      "source_id": "S13",
+      "headline": "WooCommerce Payment Flaw Demands Independent Verification",
+      "summary": "CVE-2026-16947 impacts Total processing card payments for WooCommerce through version 7.3 via server-side request forgery.",
+      "why_it_matters": "Unvalidated requests can expose gateway credentials and forge paid orders without authentic processor confirmation.",
+      "topic": "Payment Security"
+    },
+    {
+      "source_id": "S14",
+      "headline": "RestrictedPython Fix Needs Layered Sandbox Boundaries",
+      "summary": "CVE-2026-55830 affects RestrictedPython through 8.2, where positional-only argument handling allowed guard hook bypasses.",
+      "why_it_matters": "Language-level restrictions cannot carry the full isolation burden when accepting untrusted code execution.",
+      "topic": "Sandbox Security"
+    },
+    {
+      "source_id": "S15",
+      "headline": "Rank Math Fix Needs Capability Boundaries",
+      "summary": "Rank Math SEO before 1.0.277 failed to confirm users requesting automated SEO fixes held required WordPress capabilities.",
+      "why_it_matters": "Editors could modify site-wide core settings normally reserved for administrators due to unverified automation endpoints.",
+      "topic": "CMS Security"
+    },
+    {
+      "source_id": "S16",
+      "headline": "Linux BIG TCP Fix Needs Running Kernel Proof",
+      "summary": "CVE-2026-80725 concerns older stable kernels validating packets incorrectly before Generic Receive Offload combines them.",
+      "why_it_matters": "Kernel memory safety depends on active updates, reboots, and limiting raw packet privileges for workloads.",
+      "topic": "Kernel Security"
+    },
+    {
+      "source_id": "S17",
+      "headline": "Qubes Microcode Fix Needs Restart and Measurement Proof",
+      "summary": "Qubes OS published QSB-117 for Intel processor vulnerabilities, requiring the microcodectl update and dom0 restart.",
+      "why_it_matters": "Receiving a package is not the same as running corrected microcode, and measured boot values require resealing.",
+      "topic": "Virtualization Security"
+    },
+    {
+      "source_id": "S18",
+      "headline": "Linux Virtio Fragment Fix Needs Host Level Proof",
+      "summary": "Linux fixed CVE-2026-80590, a host-panic flaw reachable through tap-backed virtual networking and malicious fragment injection.",
+      "why_it_matters": "Virtual devices act as isolation boundaries, and host kernels must be updated to prevent guest-to-host denial of service.",
+      "topic": "Virtualization Security"
+    },
+    {
+      "source_id": "S19",
+      "headline": "Heimdall Proxy Fix Puts Boundaries Around Scanners",
+      "summary": "CVE-2026-82477 in MITRE SAF Heimdall allows server-side request forgery via the Tenable proxy endpoint.",
+      "why_it_matters": "Security consoles with network visibility must validate client-supplied destinations to prevent internal network access.",
+      "topic": "Tool Security"
+    },
+    {
+      "source_id": "S20",
+      "headline": "Langflow Fixes Need One Policy Path",
+      "summary": "Langflow 1.11.2 fixes five path, authentication, authorization, session, and SSRF flaws affecting earlier releases.",
+      "why_it_matters": "Workflow platforms must enforce unified policy paths rather than letting separate routes make independent access decisions.",
+      "topic": "AI Platform Security"
+    }
+  ],
+  "operating_view": "Defenders must shift focus from passive installation reports to active runtime proof. Verify running package versions, validate network egress boundaries, ensure proper service restarts, and test that authentication checks reliably enforce least privilege.",
+  "watch_items": [
+    "Verify running kernel builds and active microcode states after maintenance windows.",
+    "Enforce strict destination allowlists on administrative integration proxies.",
+    "Audit experimental features and user roles for unintended privilege escalation."
+  ],
+  "caption_intro": "ShadowContext daily briefing covers critical infrastructure updates, vulnerability advisories, and actionable defensive controls for August 29, 2026."
+}

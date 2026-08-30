@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-08-30T10:07:31.632+04:00",
+  "digestDate": "2026-08-29",
+  "digestHash": "899b9324ca4b9522cbe86fc84579c8237864839c6bcce77d3c6e58b873e8a825",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "Daily Security Digest: Strengthening Boundaries Across Infrastructure and Tools",
+  "articleCount": 20,
+  "sourceArticles": [
+    {
+      "title": "Aqua Archive Fix Needs a Destination Boundary",
+      "canonicalUrl": "https://shadowcontext.com/aqua-archives-need-destination-boundaries/",
+      "publishedAt": "2026-08-29T01:09:34.000+04:00",
+      "category": "defense",
+      "sourceHash": "93ff4b1a596eaa87e0ec81e6a683b54196eb21122ccb437f9580107818a54719"
+    },
+    {
+      "title": "SvelteKit Fixes Need Feature-Aware Version Proof",
+      "canonicalUrl": "https://shadowcontext.com/sveltekit-fixes-need-feature-aware-proof/",
+      "publishedAt": "2026-08-29T02:10:44.000+04:00",
+      "category": "defense",
+      "sourceHash": "fa0acc24a75949a2d9d0bb4a8cea52da09f75b8be4ecff1beb92d8012e277d39"
+    },
+    {
+      "title": "UAE AI Tool Warning Makes Device Permissions a Security Boundary",
+      "canonicalUrl": "https://shadowcontext.com/uae-ai-tools-need-permission-boundaries/",
+      "publishedAt": "2026-08-29T03:09:48.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "0a75a085ce0df2e86d77d6dff2f9e08aec71d9fc236f40f8f5d9eeead8a27a87"
+    },
+    {
+      "title": "GiveWP Fix Shows Why Deserialization Needs Layered Defenses",
+      "canonicalUrl": "https://shadowcontext.com/givewp-fix-needs-layered-deserialization-defense/",
+      "publishedAt": "2026-08-29T04:08:55.000+04:00",
+      "category": "defense",
+      "sourceHash": "83c2381e58718d94a7aefc6acbaa6a29377dff038a047b5aa241dd7a7d5834cf"
+    },
+    {
+      "title": "Argo Rollouts Dashboard Needs Runtime Boundaries",
+      "canonicalUrl": "https://shadowcontext.com/argo-rollouts-dashboard-needs-runtime-boundaries/",
+      "publishedAt": "2026-08-29T05:09:25.000+04:00",
+      "category": "defense",
+      "sourceHash": "3344babd7910066e90361b4c8c548cb20fb41449870432e2e57a364e0851fcff"
+    },
+    {
+      "title": "Redpanda Admin API Needs an Explicit Authentication Boundary",
+      "canonicalUrl": "https://shadowcontext.com/redpanda-admin-api-needs-authentication-boundary/",
+      "publishedAt": "2026-08-29T06:09:10.000+04:00",
+      "category": "defense",
+      "sourceHash": "7081d8675f503ff93308f86e3259fb4ae78f80f654dea01ba6ba546a942449d7"
+    },
+    {
+      "title": "MariaDB TLS Must Verify Identity Before Sending Credentials",
+      "canonicalUrl": "https://shadowcontext.com/mariadb-tls-needs-identity-before-credentials/",
+      "publishedAt": "2026-08-29T07:09:55.000+04:00",
+      "category": "defense",
+      "sourceHash": "ed0d5b48ac1f38ce41660176835ba716bf954b59e399e1eaef4fb10bf9c76828"
+    },
+    {
+      "title": "Patient-Portal Phishing Needs Out-of-Band Verification",
+      "canonicalUrl": "https://shadowcontext.com/patient-portal-phishing-needs-out-of-band-verification/",
+      "publishedAt": "2026-08-29T08:10:05.000+04:00",
+      "category": "threat-intelligence",
+      "sourceHash": "e39d6902142734d02cd7649f5e6c01e46e070c2e7da0c91b2642934a129611b2"
+    },
+    {
+      "title": "Artifactory Fix Needs Proof That Anonymous Users Stay Outside Admin",
+      "canonicalUrl": "https://shadowcontext.com/artifactory-authentication-needs-admin-boundary-proof/",
+      "publishedAt": "2026-08-29T09:09:28.000+04:00",
+      "category": "defense",
+      "sourceHash": "d54fcd56b2b355478e1317cb2462bc6634a1c3e991802fe9f3eb401717336d0a"
+    },
+    {
+      "title": "Dovecot 2.4.5 needs feature-level proof",
+      "canonicalUrl": "https://shadowcontext.com/dovecot-2-4-5-needs-feature-level-proof/",
+      "publishedAt": "2026-08-29T10:08:21.000+04:00",
+      "category": "defense",
+      "sourceHash": "14399981305cbefce0e51cdc9108ae0a3333f3008f68293eeb5e74e0686365c2"
+    },
+    {
+      "title": "NUMail Fix Needs Service-Level Version Proof",
+      "canonicalUrl": "https://shadowcontext.com/numail-fix-needs-service-boundary-proof/",
+      "publishedAt": "2026-08-29T12:08:01.000+04:00",
+      "category": "defense",
+      "sourceHash": "f0acb414e8917395ca2523adcb704e6b3a25f5a9c914aab462d64ac2a5ced1b3"
+    },
+    {
+      "title": "Edge 152 Cuts Off Scam Notification Persistence",
+      "canonicalUrl": "https://shadowcontext.com/edge-scam-notifications-need-permission-review/",
+      "publishedAt": "2026-08-29T13:10:24.000+04:00",
+      "category": "defense",
+      "sourceHash": "53620dac07c266bc76251f14dffbbdecdda1b79779fcc1f3b6e9456d6eaba847"
+    },
+    {
+      "title": "WooCommerce Payment Flaw Demands Independent Verification",
+      "canonicalUrl": "https://shadowcontext.com/woocommerce-payment-plugin-needs-verification-boundaries/",
+      "publishedAt": "2026-08-29T14:09:27.000+04:00",
+      "category": "defense",
+      "sourceHash": "af13a56078659db5d261719022f64e999dc8277056c7a31cb77e816e9a917c67"
+    },
+    {
+      "title": "RestrictedPython Fix Needs Layered Sandbox Boundaries",
+      "canonicalUrl": "https://shadowcontext.com/restrictedpython-fix-needs-layered-sandbox-boundaries/",
+      "publishedAt": "2026-08-29T15:09:49.000+04:00",
+      "category": "defense",
+      "sourceHash": "fd53df54d29546778ec809494cae1983038984c5672387ef4b38f8716841ff21"
+    },
+    {
+      "title": "Rank Math Fix Needs Capability Boundaries, Not Just Logged-In Checks",
+      "canonicalUrl": "https://shadowcontext.com/rank-math-fix-needs-capability-boundaries/",
+      "publishedAt": "2026-08-29T16:09:25.000+04:00",
+      "category": "defense",
+      "sourceHash": "a6f90bb238d05884ab84b2f4520198e8de14e2716da7910e9c005d61caef7e16"
+    },
+    {
+      "title": "Linux BIG TCP Fix Needs Running-Kernel Proof",
+      "canonicalUrl": "https://shadowcontext.com/linux-big-tcp-fix-needs-running-kernel-proof/",
+      "publishedAt": "2026-08-29T17:09:11.000+04:00",
+      "category": "defense",
+      "sourceHash": "84f15975d1e9b5df7ac939881ff985be9ccaa947cf9986668872b8b4aa590b67"
+    },
+    {
+      "title": "Qubes Microcode Fix Needs Restart and Measurement Proof",
+      "canonicalUrl": "https://shadowcontext.com/qubes-microcode-fix-needs-restart-proof/",
+      "publishedAt": "2026-08-29T20:09:12.000+04:00",
+      "category": "defense",
+      "sourceHash": "fad6a467894ef2d3540bd9727ae8dfbe3cbd91e87a5e7e77626607bc859fa4e0"
+    },
+    {
+      "title": "Linux Virtio Fragment Fix Needs Host-Level Version Proof",
+      "canonicalUrl": "https://shadowcontext.com/linux-virtio-fragments-need-host-version-proof/",
+      "publishedAt": "2026-08-29T21:10:56.000+04:00",
+      "category": "defense",
+      "sourceHash": "5888180437df863ec273601afbdc9d891d8561d3a5c381222eb54b66e80eea2b"
+    },
+    {
+      "title": "Heimdall Proxy Fix Puts a Boundary Around Internal Scanners",
+      "canonicalUrl": "https://shadowcontext.com/heimdall-proxy-needs-destination-boundaries/",
+      "publishedAt": "2026-08-29T22:09:30.000+04:00",
+      "category": "defense",
+      "sourceHash": "bf11bb1435696966b72c6fa4be80b50d5cf122ec1a038aca0c26cdd5ef985ff3"
+    },
+    {
+      "title": "Langflow Fixes Need One Policy Path",
+      "canonicalUrl": "https://shadowcontext.com/langflow-fixes-need-one-policy-path/",
+      "publishedAt": "2026-08-29T23:09:54.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "11f278e86a6e1da2ea73116baf96decd016ef511e3c0eccbba93559328b3971b"
+    }
+  ],
+  "caption": "ShadowContext daily briefing covers critical infrastructure updates, vulnerability advisories, and actionable defensive controls for August 29, 2026.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-08-29/899b9324ca4b9522/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-29/899b9324ca4b9522/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-08-29/899b9324ca4b9522/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-29/899b9324ca4b9522/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}
