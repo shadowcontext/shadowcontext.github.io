@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Protected electronic book rendering boundary</title>
+  <desc id="desc">An abstract open book rests inside a luminous shield while a framed page element is stopped at the shield boundary.</desc>
+  <defs>
+    <linearGradient id="bg" x1="120" y1="60" x2="1480" y2="840" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071A2D"/>
+      <stop offset="0.52" stop-color="#102A43"/>
+      <stop offset="1" stop-color="#07131F"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0" cy="0" r="1" gradientTransform="translate(802 443) rotate(90) scale(420 610)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4BE1C3" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#4BE1C3" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shield" x1="610" y1="205" x2="1005" y2="735" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7EF2D8" stop-opacity="0.88"/>
+      <stop offset="1" stop-color="#2A9DDB" stop-opacity="0.36"/>
+    </linearGradient>
+    <linearGradient id="pageLeft" x1="460" y1="493" x2="792" y2="696" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EAF7F5"/>
+      <stop offset="1" stop-color="#91C9D2"/>
+    </linearGradient>
+    <linearGradient id="pageRight" x1="1140" y1="493" x2="807" y2="696" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DFF4F2"/>
+      <stop offset="1" stop-color="#75BACA"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#020A12" flood-opacity="0.7"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#halo)"/>
+  <g opacity="0.34" fill="none" stroke="#4A7792" stroke-width="2">
+    <path d="M90 166C299 67 453 106 578 191"/>
+    <path d="M1510 730C1291 831 1152 794 1019 716"/>
+    <circle cx="235" cy="693" r="98"/>
+    <circle cx="1360" cy="203" r="66"/>
+  </g>
+  <g filter="url(#glow)">
+    <path d="M800 145L1082 252V451C1082 620 976 735 800 789C624 735 518 620 518 451V252L800 145Z" fill="#0B3148" fill-opacity="0.72" stroke="url(#shield)" stroke-width="10"/>
+    <path d="M800 184L1043 276V449C1043 591 956 688 800 741C644 688 557 591 557 449V276L800 184Z" fill="none" stroke="#73E8D0" stroke-opacity="0.32" stroke-width="3"/>
+  </g>
+  <g filter="url(#shadow)">
+    <path d="M798 510C713 460 600 446 427 480V692C594 658 702 672 798 733V510Z" fill="url(#pageLeft)" stroke="#BDE5E5" stroke-width="5"/>
+    <path d="M802 510C887 460 1000 446 1173 480V692C1006 658 898 672 802 733V510Z" fill="url(#pageRight)" stroke="#BDE5E5" stroke-width="5"/>
+    <path d="M800 513V733" stroke="#356B82" stroke-width="8"/>
+    <path d="M469 527C591 510 682 522 752 557M469 576C594 560 681 575 750 608M469 626C579 613 670 626 740 660" fill="none" stroke="#3A748B" stroke-opacity="0.58" stroke-width="12" stroke-linecap="round"/>
+    <path d="M1131 527C1009 510 918 522 848 557M1131 626C1021 613 930 626 860 660" fill="none" stroke="#3A748B" stroke-opacity="0.58" stroke-width="12" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(950 548) rotate(-5)">
+    <rect x="0" y="0" width="220" height="118" rx="18" fill="#10283B" stroke="#FFB65C" stroke-width="7"/>
+    <rect x="25" y="25" width="170" height="68" rx="9" fill="#173F55"/>
+    <path d="M38 80L86 46L121 70L151 47L184 77" fill="none" stroke="#FFCE88" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <path d="M1080 515C1115 503 1142 502 1174 508" fill="none" stroke="#FFB65C" stroke-width="8" stroke-linecap="round"/>
+  <path d="M1083 481L1114 512L1085 544" fill="none" stroke="#FFB65C" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="800" cy="302" r="58" fill="#0B2538" stroke="#70E7D0" stroke-width="8"/>
+  <path d="M770 302L792 324L833 278" fill="none" stroke="#70E7D0" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
