@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Passkey aligned to its owning account</title>
+  <desc id="desc">Abstract cyan passkey orbit aligns with one luminous account core while a separate amber identity sphere remains outside the trust boundary.</desc>
+  <defs>
+    <linearGradient id="bg" x1="120" y1="70" x2="1490" y2="830" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071426"/>
+      <stop offset="0.52" stop-color="#102B50"/>
+      <stop offset="1" stop-color="#08172D"/>
+    </linearGradient>
+    <radialGradient id="core" cx="0" cy="0" r="1" gradientTransform="translate(704 450) rotate(90) scale(184)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E7FDFF"/>
+      <stop offset="0.2" stop-color="#61EBF3"/>
+      <stop offset="0.62" stop-color="#207BBD"/>
+      <stop offset="1" stop-color="#102B50" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="363" y1="230" x2="1052" y2="682" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7BF6F4"/>
+      <stop offset="0.5" stop-color="#328CE1"/>
+      <stop offset="1" stop-color="#82E9FF"/>
+    </linearGradient>
+    <radialGradient id="other" cx="0" cy="0" r="1" gradientTransform="translate(1210 456) rotate(90) scale(102)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFE6A1"/>
+      <stop offset="0.42" stop-color="#FFAB55"/>
+      <stop offset="1" stop-color="#CB5B3D"/>
+    </radialGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="18" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="38"/>
+    </filter>
+    <pattern id="grain" width="76" height="76" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="13" r="1.4" fill="#B8F8FF" opacity="0.12"/>
+      <circle cx="54" cy="39" r="1" fill="#70AFFF" opacity="0.13"/>
+      <circle cx="31" cy="66" r="1.2" fill="#A8EAF4" opacity="0.09"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <ellipse cx="760" cy="458" rx="535" ry="322" fill="#247ED0" opacity="0.12" filter="url(#soft)"/>
+  <path d="M223 450c105-204 286-318 511-318 226 0 407 114 512 318-105 204-286 318-512 318-225 0-406-114-511-318Z" fill="#0C2140" fill-opacity="0.66" stroke="#477FB2" stroke-width="2" opacity="0.88"/>
+  <ellipse cx="704" cy="450" rx="361" ry="247" fill="none" stroke="url(#ring)" stroke-width="10" opacity="0.84"/>
+  <ellipse cx="704" cy="450" rx="286" ry="193" fill="none" stroke="#73DCEB" stroke-width="2" stroke-dasharray="10 18" opacity="0.42"/>
+  <circle cx="704" cy="450" r="190" fill="url(#core)" opacity="0.88" filter="url(#glow)"/>
+  <circle cx="704" cy="450" r="108" fill="#0B2344" stroke="#C8FCFF" stroke-width="5"/>
+  <circle cx="704" cy="414" r="30" fill="#BDFBFF"/>
+  <path d="M641 504c13-43 39-65 63-65s50 22 63 65" fill="none" stroke="#BDFBFF" stroke-width="24" stroke-linecap="round"/>
+  <g transform="translate(448 278) rotate(-18)" filter="url(#glow)">
+    <circle cx="0" cy="0" r="45" fill="none" stroke="#8AF7F5" stroke-width="15"/>
+    <path d="M42 0h118m-27 0v34m-42-34v25" fill="none" stroke="#8AF7F5" stroke-width="15" stroke-linecap="round"/>
+  </g>
+  <path d="M1040 263c73 42 127 108 158 184" fill="none" stroke="#5F8AA9" stroke-width="3" stroke-dasharray="8 18" opacity="0.45"/>
+  <path d="M1035 638c74-37 130-98 164-171" fill="none" stroke="#5F8AA9" stroke-width="3" stroke-dasharray="8 18" opacity="0.45"/>
+  <circle cx="1210" cy="456" r="101" fill="url(#other)" opacity="0.94"/>
+  <circle cx="1210" cy="425" r="21" fill="#FFF0C2" opacity="0.9"/>
+  <path d="M1166 497c9-31 27-47 44-47s35 16 44 47" fill="none" stroke="#FFF0C2" stroke-width="18" stroke-linecap="round" opacity="0.9"/>
+  <path d="M1087 331c-40 65-62 139-65 222" fill="none" stroke="#FFB867" stroke-width="7" stroke-linecap="round" opacity="0.75"/>
+  <circle cx="1023" cy="554" r="10" fill="#FFCB79"/>
+  <g fill="#94F4F6">
+    <circle cx="357" cy="571" r="5" opacity="0.6"/>
+    <circle cx="920" cy="234" r="4" opacity="0.55"/>
+    <circle cx="895" cy="680" r="3" opacity="0.55"/>
+  </g>
+  <path d="M292 766c317 72 699 72 1016 0" fill="none" stroke="#5188B9" stroke-width="2" opacity="0.2"/>
+  <rect width="1600" height="900" fill="url(#grain)"/>
+</svg>
