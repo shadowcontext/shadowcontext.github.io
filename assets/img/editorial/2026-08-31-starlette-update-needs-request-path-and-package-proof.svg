@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Guarded request paths converging on a secured framework package</title>
+  <desc id="desc">Polished abstract editorial artwork with three luminous request streams passing through distinct protective layers before reaching a faceted package core.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071827"/>
+      <stop offset="0.55" stop-color="#0b2740"/>
+      <stop offset="1" stop-color="#07131f"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="68%" cy="50%" r="52%">
+      <stop offset="0" stop-color="#3fd4c7" stop-opacity="0.22"/>
+      <stop offset="0.55" stop-color="#2789b5" stop-opacity="0.09"/>
+      <stop offset="1" stop-color="#07131f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="flowA" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4b8fb8" stop-opacity="0.15"/>
+      <stop offset="0.5" stop-color="#59d7ca"/>
+      <stop offset="1" stop-color="#b7f1d5"/>
+    </linearGradient>
+    <linearGradient id="flowB" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4674b4" stop-opacity="0.12"/>
+      <stop offset="0.55" stop-color="#77a8ef"/>
+      <stop offset="1" stop-color="#9fe6ee"/>
+    </linearGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b6f7db"/>
+      <stop offset="0.48" stop-color="#47cfc4"/>
+      <stop offset="1" stop-color="#247fa9"/>
+    </linearGradient>
+    <linearGradient id="facet" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e0fff0" stop-opacity="0.82"/>
+      <stop offset="1" stop-color="#65a9d2" stop-opacity="0.18"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="34"/>
+    </filter>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" fill="none" stroke="#8fc9de" stroke-opacity="0.055" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#halo)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <ellipse cx="1100" cy="470" rx="390" ry="300" fill="#2ed0bd" opacity="0.08" filter="url(#soft)"/>
+  <circle cx="154" cy="146" r="118" fill="#417bac" opacity="0.08" filter="url(#soft)"/>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M-40 222 C250 222 300 320 545 320 S755 398 884 425" stroke="#152f45" stroke-width="74" opacity="0.75"/>
+    <path d="M-40 450 C260 450 350 450 565 450 S760 450 884 450" stroke="#152f45" stroke-width="74" opacity="0.75"/>
+    <path d="M-40 678 C250 678 300 580 545 580 S755 502 884 475" stroke="#152f45" stroke-width="74" opacity="0.75"/>
+    <path d="M-40 222 C250 222 300 320 545 320 S755 398 884 425" stroke="url(#flowA)" stroke-width="8"/>
+    <path d="M-40 450 C260 450 350 450 565 450 S760 450 884 450" stroke="url(#flowB)" stroke-width="8"/>
+    <path d="M-40 678 C250 678 300 580 545 580 S755 502 884 475" stroke="url(#flowA)" stroke-width="8"/>
+  </g>
+
+  <g transform="translate(500 450)">
+    <path d="M0-190 L112-126 L112 18 C112 116 52 176 0 205 C-52 176-112 116-112 18 L-112-126Z" fill="#0d2e45" stroke="#70d9d0" stroke-width="3" opacity="0.96"/>
+    <path d="M0-158 L82-111 L82 12 C82 84 40 132 0 159 C-40 132-82 84-82 12 L-82-111Z" fill="#17435a" opacity="0.78"/>
+    <path d="M-45 3 L-10 38 L56-38" fill="none" stroke="#b7f1d5" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  </g>
+
+  <g opacity="0.95">
+    <circle cx="250" cy="222" r="11" fill="#7ce2d3" filter="url(#glow)"/>
+    <circle cx="326" cy="450" r="11" fill="#8fbff5" filter="url(#glow)"/>
+    <circle cx="250" cy="678" r="11" fill="#7ce2d3" filter="url(#glow)"/>
+    <circle cx="680" cy="357" r="8" fill="#b7f1d5"/>
+    <circle cx="720" cy="450" r="8" fill="#a5d2ff"/>
+    <circle cx="680" cy="543" r="8" fill="#b7f1d5"/>
+  </g>
+
+  <g transform="translate(1110 450)" filter="url(#glow)">
+    <path d="M0-188 L190-80 L190 92 L0 202 L-190 92 L-190-80Z" fill="#0a1f31" stroke="#4bcfc3" stroke-width="5"/>
+    <path d="M0-188 L190-80 L0 27 L-190-80Z" fill="url(#facet)"/>
+    <path d="M-190-80 L0 27 L0 202 L-190 92Z" fill="#238aab" opacity="0.68"/>
+    <path d="M190-80 L0 27 L0 202 L190 92Z" fill="url(#core)" opacity="0.82"/>
+    <path d="M0-188 V27 M-190-80 L0 27 L190-80 M0 27 V202" fill="none" stroke="#d2ffec" stroke-opacity="0.54" stroke-width="3"/>
+  </g>
+
+  <g fill="none" stroke="#83dcd7" stroke-width="2" opacity="0.36">
+    <path d="M1320 270 C1420 315 1468 382 1498 450"/>
+    <path d="M1320 630 C1420 585 1468 518 1498 450"/>
+    <circle cx="1498" cy="450" r="14"/>
+  </g>
+  <g fill="#b7f1d5">
+    <circle cx="1413" cy="323" r="4" opacity="0.7"/>
+    <circle cx="1456" cy="377" r="4" opacity="0.5"/>
+    <circle cx="1413" cy="577" r="4" opacity="0.7"/>
+    <circle cx="1456" cy="523" r="4" opacity="0.5"/>
+  </g>
+</svg>
