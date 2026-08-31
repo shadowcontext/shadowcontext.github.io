@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Contained malformed branch at an abstract API gateway</title>
+  <desc id="desc">A violet field of connected nodes converges on a layered gateway, while one irregular branch is redirected into a protective teal ring.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#120f2d"/>
+      <stop offset="0.52" stop-color="#292056"/>
+      <stop offset="1" stop-color="#0d3140"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#9f7aea" stop-opacity=".54"/>
+      <stop offset="1" stop-color="#9f7aea" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gate" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b79cff"/>
+      <stop offset="1" stop-color="#5eead4"/>
+    </linearGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#070615" flood-opacity=".55"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <ellipse cx="795" cy="455" rx="560" ry="390" fill="url(#glow)"/>
+  <g opacity=".16" fill="none" stroke="#c4b5fd" stroke-width="2">
+    <path d="M60 170C330 95 490 165 650 325S980 660 1540 610"/>
+    <path d="M80 730C315 595 435 620 605 515S1040 260 1530 300"/>
+    <path d="M260 40C370 235 360 490 230 860"/>
+    <path d="M1320 30C1185 245 1220 575 1385 870"/>
+  </g>
+  <g stroke="#8b7bc4" stroke-width="5" stroke-linecap="round" opacity=".8">
+    <path d="M110 270L310 335L500 300L650 410"/>
+    <path d="M105 585L300 525L470 575L650 485"/>
+    <path d="M300 335L300 525"/>
+  </g>
+  <g fill="#d8ccff" stroke="#332968" stroke-width="8">
+    <circle cx="110" cy="270" r="20"/>
+    <circle cx="310" cy="335" r="28"/>
+    <circle cx="500" cy="300" r="20"/>
+    <circle cx="105" cy="585" r="20"/>
+    <circle cx="300" cy="525" r="28"/>
+    <circle cx="470" cy="575" r="20"/>
+  </g>
+  <g filter="url(#shadow)">
+    <path d="M690 205L910 205L1015 315L1015 585L910 695L690 695L585 585L585 315Z" fill="#17143a" stroke="url(#gate)" stroke-width="12"/>
+    <path d="M725 285L875 285L935 345L935 555L875 615L725 615L665 555L665 345Z" fill="#251d50" stroke="#7867bc" stroke-width="5"/>
+    <circle cx="800" cy="450" r="92" fill="#111933" stroke="#b79cff" stroke-width="10"/>
+    <circle cx="800" cy="450" r="48" fill="#5eead4" opacity=".92"/>
+    <circle cx="800" cy="450" r="17" fill="#e7fffb"/>
+  </g>
+  <g stroke="#70e6d3" stroke-width="8" stroke-linecap="round" fill="none">
+    <path d="M1015 450C1125 450 1170 385 1265 385"/>
+    <path d="M1265 385L1330 340L1385 420L1320 485L1240 445Z" stroke="#f2a4cf"/>
+    <path d="M1190 520C1265 600 1380 603 1460 535"/>
+  </g>
+  <circle cx="1325" cy="417" r="150" fill="none" stroke="#5eead4" stroke-width="14"/>
+  <circle cx="1325" cy="417" r="118" fill="#0b3340" opacity=".62"/>
+  <path d="M1225 522C1270 575 1373 579 1428 516" fill="none" stroke="#5eead4" stroke-width="11" stroke-linecap="round"/>
+  <g fill="#5eead4" opacity=".8">
+    <circle cx="1460" cy="535" r="16"/>
+    <circle cx="1190" cy="520" r="12"/>
+  </g>
+  <g fill="#b79cff" opacity=".3" filter="url(#soft)">
+    <circle cx="245" cy="175" r="46"/>
+    <circle cx="1110" cy="180" r="55"/>
+    <circle cx="465" cy="735" r="60"/>
+  </g>
+</svg>
