@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Authorization rings protecting an API communications core</title>
+  <desc id="desc">An abstract editorial illustration of teal data pathways crossing separate read and write permission rings around a protected communications core.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071827"/>
+      <stop offset="0.55" stop-color="#0b2940"/>
+      <stop offset="1" stop-color="#101d34"/>
+    </linearGradient>
+    <radialGradient id="core" cx="50%" cy="46%" r="58%">
+      <stop offset="0" stop-color="#d7fff2"/>
+      <stop offset="0.26" stop-color="#55e6c1"/>
+      <stop offset="0.7" stop-color="#0aa6a6"/>
+      <stop offset="1" stop-color="#09647f"/>
+    </radialGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffb55e" stop-opacity="0.2"/>
+      <stop offset="0.5" stop-color="#ffd38a"/>
+      <stop offset="1" stop-color="#ff9d4d" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="teal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#28d9ca" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#8ffff0"/>
+      <stop offset="1" stop-color="#28d9ca" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <path d="M0 710 C250 620 390 760 640 682 S1070 555 1600 670 V900 H0Z" fill="#0b2033" opacity="0.9"/>
+  <path d="M0 154 C310 255 490 78 785 182 S1260 288 1600 120" fill="none" stroke="#2cc7bd" stroke-opacity="0.09" stroke-width="120"/>
+  <g fill="none" stroke-linecap="round">
+    <path d="M80 282 C310 282 355 410 558 410" stroke="url(#teal)" stroke-width="12"/>
+    <path d="M40 448 C280 448 345 448 558 448" stroke="url(#teal)" stroke-width="7"/>
+    <path d="M82 612 C310 612 355 490 558 490" stroke="url(#teal)" stroke-width="12"/>
+    <path d="M1042 410 C1225 410 1300 285 1560 285" stroke="url(#teal)" stroke-width="12"/>
+    <path d="M1042 448 C1270 448 1360 448 1600 448" stroke="url(#teal)" stroke-width="7"/>
+    <path d="M1042 490 C1225 490 1300 612 1560 612" stroke="url(#teal)" stroke-width="12"/>
+  </g>
+  <g fill="#7ef6df">
+    <circle cx="186" cy="304" r="9"/><circle cx="296" cy="363" r="6"/><circle cx="185" cy="448" r="8"/><circle cx="316" cy="448" r="5"/><circle cx="196" cy="590" r="9"/><circle cx="302" cy="538" r="6"/>
+    <circle cx="1414" cy="304" r="9"/><circle cx="1304" cy="363" r="6"/><circle cx="1415" cy="448" r="8"/><circle cx="1284" cy="448" r="5"/><circle cx="1404" cy="590" r="9"/><circle cx="1298" cy="538" r="6"/>
+  </g>
+  <circle cx="800" cy="450" r="290" fill="#1cd6c0" opacity="0.09" filter="url(#glow)"/>
+  <circle cx="800" cy="450" r="278" fill="none" stroke="#49dbc8" stroke-width="2" stroke-dasharray="3 22" opacity="0.5"/>
+  <circle cx="800" cy="450" r="235" fill="none" stroke="url(#amber)" stroke-width="26" stroke-dasharray="520 170" transform="rotate(-28 800 450)"/>
+  <circle cx="800" cy="450" r="188" fill="none" stroke="#4ce3cf" stroke-width="18" stroke-dasharray="380 105" transform="rotate(42 800 450)" opacity="0.9"/>
+  <circle cx="800" cy="450" r="142" fill="#071b2a" stroke="#9fffe7" stroke-width="3"/>
+  <circle cx="800" cy="450" r="110" fill="url(#core)" opacity="0.95"/>
+  <circle cx="800" cy="450" r="82" fill="#082436" opacity="0.62"/>
+  <path d="M749 451 C749 405 772 378 800 378 C828 378 851 405 851 451" fill="none" stroke="#d9fff4" stroke-width="15" stroke-linecap="round"/>
+  <rect x="728" y="440" width="144" height="102" rx="32" fill="#d9fff4"/>
+  <circle cx="800" cy="479" r="14" fill="#087f8d"/>
+  <path d="M800 492 V515" stroke="#087f8d" stroke-width="12" stroke-linecap="round"/>
+  <g fill="#ffd28a" opacity="0.9">
+    <circle cx="635" cy="280" r="8"/><circle cx="965" cy="620" r="8"/>
+  </g>
+  <path d="M527 710 C690 658 905 665 1077 710" fill="none" stroke="#8ef8df" stroke-width="3" opacity="0.23" filter="url(#soft)"/>
+</svg>
