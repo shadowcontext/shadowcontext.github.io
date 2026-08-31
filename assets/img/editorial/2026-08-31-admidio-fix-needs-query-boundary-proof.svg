@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Guarded query boundary protecting membership records</title>
+  <desc id="desc">An abstract editorial scene where flowing membership records pass through a luminous shield-like gateway before reaching a segmented database.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07172d"/>
+      <stop offset="0.52" stop-color="#102f4b"/>
+      <stop offset="1" stop-color="#07121f"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="46%" r="54%">
+      <stop offset="0" stop-color="#44e0c1" stop-opacity=".27"/>
+      <stop offset=".58" stop-color="#237ba4" stop-opacity=".1"/>
+      <stop offset="1" stop-color="#07172d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#74f4d5"/>
+      <stop offset="1" stop-color="#1b9ab9"/>
+    </linearGradient>
+    <linearGradient id="record" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8da8d4" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#c5daf4" stop-opacity=".8"/>
+    </linearGradient>
+    <linearGradient id="data" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4d7cab"/>
+      <stop offset="1" stop-color="#183657"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="16" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <clipPath id="dbClip"><rect x="1110" y="226" width="316" height="448" rx="34"/></clipPath>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#halo)"/>
+  <g opacity=".13" fill="none" stroke="#91b8da" stroke-width="2">
+    <path d="M0 146H470C545 146 555 225 630 225H970C1050 225 1060 142 1140 142H1600"/>
+    <path d="M0 754H460C540 754 560 670 640 670H955C1035 670 1050 760 1135 760H1600"/>
+    <circle cx="190" cy="146" r="7" fill="#91b8da"/><circle cx="1390" cy="760" r="7" fill="#91b8da"/>
+  </g>
+  <ellipse cx="795" cy="454" rx="245" ry="295" fill="#2bd7bc" opacity=".08" filter="url(#soft)"/>
+  <g transform="translate(125 258)">
+    <rect x="0" y="0" width="355" height="98" rx="28" fill="url(#record)" stroke="#a7c6e6" stroke-opacity=".36"/>
+    <circle cx="55" cy="49" r="24" fill="#82a7d1" opacity=".72"/>
+    <path d="M35 78c6-17 34-17 40 0" fill="#aec8e2" opacity=".65"/>
+    <rect x="110" y="27" width="186" height="12" rx="6" fill="#c7daec" opacity=".64"/>
+    <rect x="110" y="58" width="132" height="10" rx="5" fill="#779cc2" opacity=".72"/>
+    <rect x="38" y="154" width="355" height="98" rx="28" fill="url(#record)" stroke="#a7c6e6" stroke-opacity=".3"/>
+    <circle cx="93" cy="203" r="24" fill="#82a7d1" opacity=".55"/>
+    <path d="M73 232c6-17 34-17 40 0" fill="#aec8e2" opacity=".5"/>
+    <rect x="148" y="181" width="186" height="12" rx="6" fill="#c7daec" opacity=".55"/>
+    <rect x="148" y="212" width="148" height="10" rx="5" fill="#779cc2" opacity=".65"/>
+    <rect x="2" y="308" width="355" height="98" rx="28" fill="url(#record)" stroke="#a7c6e6" stroke-opacity=".24"/>
+    <circle cx="57" cy="357" r="24" fill="#82a7d1" opacity=".42"/>
+    <path d="M37 386c6-17 34-17 40 0" fill="#aec8e2" opacity=".4"/>
+    <rect x="112" y="335" width="186" height="12" rx="6" fill="#c7daec" opacity=".45"/>
+    <rect x="112" y="366" width="118" height="10" rx="5" fill="#779cc2" opacity=".58"/>
+  </g>
+  <g fill="none" stroke-linecap="round">
+    <path d="M500 307C610 307 630 355 690 389" stroke="#7ba5c9" stroke-width="7" opacity=".4"/>
+    <path d="M535 461H685" stroke="#7ba5c9" stroke-width="7" opacity=".5"/>
+    <path d="M500 615C610 615 628 560 690 526" stroke="#7ba5c9" stroke-width="7" opacity=".35"/>
+  </g>
+  <g filter="url(#glow)">
+    <path d="M798 184c70 51 135 66 194 78v178c0 151-81 244-194 290-113-46-194-139-194-290V262c59-12 124-27 194-78Z" fill="#0d3047" stroke="url(#gate)" stroke-width="12"/>
+    <path d="M742 445l38 39 78-91" fill="none" stroke="#8effdc" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g opacity=".75" fill="none" stroke="#66e3cb" stroke-width="8" stroke-linecap="round">
+    <path d="M991 365c59 0 67-54 119-54"/>
+    <path d="M995 450h115"/>
+    <path d="M985 538c63 0 72 56 125 56"/>
+  </g>
+  <g>
+    <rect x="1110" y="226" width="316" height="448" rx="34" fill="#0a2035" stroke="#72a9ca" stroke-width="3"/>
+    <g clip-path="url(#dbClip)">
+      <ellipse cx="1268" cy="279" rx="158" ry="53" fill="#5f94bd"/>
+      <rect x="1110" y="279" width="316" height="110" fill="url(#data)"/>
+      <ellipse cx="1268" cy="389" rx="158" ry="53" fill="#284f72" stroke="#78a8c8" stroke-opacity=".55" stroke-width="3"/>
+      <rect x="1110" y="389" width="316" height="110" fill="url(#data)"/>
+      <ellipse cx="1268" cy="499" rx="158" ry="53" fill="#284f72" stroke="#78a8c8" stroke-opacity=".55" stroke-width="3"/>
+      <rect x="1110" y="499" width="316" height="110" fill="url(#data)"/>
+      <ellipse cx="1268" cy="609" rx="158" ry="53" fill="#1a3a5a" stroke="#78a8c8" stroke-opacity=".65" stroke-width="3"/>
+    </g>
+    <g fill="#b8d5e8" opacity=".72">
+      <circle cx="1208" cy="279" r="7"/><circle cx="1240" cy="270" r="7"/><circle cx="1274" cy="286" r="7"/><circle cx="1310" cy="270" r="7"/><circle cx="1340" cy="286" r="7"/>
+    </g>
+  </g>
+  <g fill="#72f0d2" opacity=".8">
+    <circle cx="1048" cy="365" r="8"/><circle cx="1048" cy="450" r="8"/><circle cx="1048" cy="538" r="8"/>
+  </g>
+  <path d="M208 770C470 820 626 783 798 730c184 56 351 83 594 38" fill="none" stroke="#2d6a89" stroke-width="3" opacity=".42"/>
+</svg>
