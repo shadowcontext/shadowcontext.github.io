@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Continuous review of browser extension trust</title>
+  <desc id="desc">An abstract browser window contains a flowing chain of extension tiles passing through luminous inspection rings toward a protective shield, while one altered tile is isolated in a warning field.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#081528"/>
+      <stop offset="0.52" stop-color="#102948"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#35d9c5" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#35d9c5" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d9f6ff" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#8db5d9" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#72e6d3"/>
+      <stop offset="1" stop-color="#2e8fba"/>
+    </linearGradient>
+    <linearGradient id="alert" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffb16d"/>
+      <stop offset="1" stop-color="#e44d73"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c5fff4"/>
+      <stop offset="0.5" stop-color="#42d7bd"/>
+      <stop offset="1" stop-color="#247eb2"/>
+    </linearGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#020811" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1170" cy="450" r="390" fill="url(#glow)"/>
+  <circle cx="330" cy="690" r="250" fill="#527bd8" opacity="0.08" filter="url(#soft)"/>
+
+  <g opacity="0.12" fill="none" stroke="#9bc9e8" stroke-width="2">
+    <path d="M70 185 C320 70 515 105 700 210 S1080 315 1530 125"/>
+    <path d="M35 755 C310 610 535 675 760 765 S1220 820 1580 635"/>
+    <circle cx="1390" cy="735" r="92"/>
+    <circle cx="1390" cy="735" r="132"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="140" y="120" width="1320" height="660" rx="42" fill="url(#glass)" stroke="#b9e5f5" stroke-opacity="0.28" stroke-width="3"/>
+    <path d="M140 220 H1460" stroke="#b9e5f5" stroke-opacity="0.22" stroke-width="3"/>
+    <circle cx="200" cy="170" r="12" fill="#ff7d85" opacity="0.75"/>
+    <circle cx="240" cy="170" r="12" fill="#ffc66b" opacity="0.75"/>
+    <circle cx="280" cy="170" r="12" fill="#5ce0b8" opacity="0.75"/>
+    <rect x="350" y="148" width="820" height="44" rx="22" fill="#071627" opacity="0.65" stroke="#98cbe1" stroke-opacity="0.18"/>
+  </g>
+
+  <path d="M250 500 C480 500 520 390 740 420 C930 445 1040 555 1280 470" fill="none" stroke="#50dac8" stroke-opacity="0.24" stroke-width="16" stroke-linecap="round"/>
+  <path d="M250 500 C480 500 520 390 740 420 C930 445 1040 555 1280 470" fill="none" stroke="#b9fff2" stroke-opacity="0.65" stroke-width="3" stroke-linecap="round" stroke-dasharray="10 22"/>
+
+  <g fill="none" stroke-linecap="round">
+    <ellipse cx="760" cy="440" rx="122" ry="210" stroke="#4fe0cb" stroke-opacity="0.18" stroke-width="28"/>
+    <ellipse cx="760" cy="440" rx="92" ry="176" stroke="#b4fff4" stroke-opacity="0.65" stroke-width="4"/>
+    <ellipse cx="760" cy="440" rx="58" ry="142" stroke="#61d8ec" stroke-opacity="0.45" stroke-width="3"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <g transform="translate(260 435) rotate(-6)">
+      <rect x="-58" y="-58" width="116" height="116" rx="26" fill="url(#tile)"/>
+      <circle cx="0" cy="0" r="23" fill="#d8fff7" opacity="0.74"/>
+      <path d="M-21 0 H21 M0 -21 V21" stroke="#176b86" stroke-width="8" stroke-linecap="round" opacity="0.7"/>
+    </g>
+    <g transform="translate(455 455) rotate(5)">
+      <rect x="-58" y="-58" width="116" height="116" rx="26" fill="url(#tile)"/>
+      <circle cx="0" cy="0" r="25" fill="none" stroke="#dcfff8" stroke-width="8" opacity="0.78"/>
+    </g>
+    <g transform="translate(635 420) rotate(-4)">
+      <rect x="-58" y="-58" width="116" height="116" rx="26" fill="url(#tile)"/>
+      <path d="M-24 18 L-4 -20 L27 20" fill="none" stroke="#e1fff9" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" opacity="0.78"/>
+    </g>
+    <g transform="translate(880 470) rotate(8)">
+      <rect x="-58" y="-58" width="116" height="116" rx="26" fill="url(#tile)"/>
+      <path d="M-25 -18 H25 M-25 0 H15 M-25 18 H23" stroke="#e0fff8" stroke-width="8" stroke-linecap="round" opacity="0.78"/>
+    </g>
+  </g>
+
+  <g transform="translate(740 665) rotate(-12)" filter="url(#shadow)">
+    <circle r="94" fill="#b93662" opacity="0.18"/>
+    <circle r="75" fill="none" stroke="#ff7a86" stroke-width="3" stroke-dasharray="8 12" opacity="0.72"/>
+    <rect x="-58" y="-58" width="116" height="116" rx="26" fill="url(#alert)"/>
+    <path d="M-24 -25 L27 25 M27 -25 L-24 25" stroke="#fff2e7" stroke-width="12" stroke-linecap="round" opacity="0.9"/>
+  </g>
+  <path d="M735 545 C735 580 730 602 730 622" fill="none" stroke="#ff8290" stroke-width="5" stroke-dasharray="7 12" opacity="0.72"/>
+
+  <g transform="translate(1240 460)" filter="url(#shadow)">
+    <path d="M0 -130 C65 -101 112 -88 145 -82 V12 C145 108 83 174 0 214 C-83 174 -145 108 -145 12 V-82 C-112 -88 -65 -101 0 -130Z" fill="url(#shield)"/>
+    <path d="M0 -96 C48 -76 83 -66 108 -61 V8 C108 77 65 126 0 160 C-65 126 -108 77 -108 8 V-61 C-83 -66 -48 -76 0 -96Z" fill="#0b2940" opacity="0.52"/>
+    <path d="M-53 19 L-13 59 L70 -34" fill="none" stroke="#d9fff7" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g opacity="0.5" fill="#9cefe0">
+    <circle cx="1010" cy="330" r="5"/>
+    <circle cx="1050" cy="305" r="3"/>
+    <circle cx="1080" cy="345" r="4"/>
+    <circle cx="995" cy="575" r="4"/>
+    <circle cx="1045" cy="610" r="6"/>
+  </g>
+</svg>
