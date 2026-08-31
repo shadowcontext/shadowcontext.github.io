@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Protected water channels converging on a resilient treatment basin</title>
+  <desc id="desc">Abstract editorial artwork showing blue water channels passing through layered amber and teal protective arcs into a secured circular basin, representing shared cyber defense translated into utility-level resilience.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071b2b"/>
+      <stop offset="0.52" stop-color="#0b3043"/>
+      <stop offset="1" stop-color="#102332"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#56d6dc" stop-opacity=".42"/>
+      <stop offset=".6" stop-color="#2289a0" stop-opacity=".13"/>
+      <stop offset="1" stop-color="#071b2b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#167eae"/>
+      <stop offset=".48" stop-color="#59d5e2"/>
+      <stop offset="1" stop-color="#9bedeb"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f3ad49"/>
+      <stop offset="1" stop-color="#d66c2f"/>
+    </linearGradient>
+    <linearGradient id="teal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#66e3d1"/>
+      <stop offset="1" stop-color="#178d94"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+    <pattern id="grain" width="64" height="64" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="13" r="1" fill="#ffffff" opacity=".045"/>
+      <circle cx="42" cy="24" r=".8" fill="#ffffff" opacity=".035"/>
+      <circle cx="25" cy="51" r="1.1" fill="#ffffff" opacity=".03"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <ellipse cx="1050" cy="460" rx="520" ry="420" fill="url(#halo)"/>
+  <path d="M0 714 C310 650 472 764 712 706 S1110 562 1600 660 V900 H0Z" fill="#071723" opacity=".78"/>
+  <path d="M0 756 C275 704 514 806 802 744 S1245 650 1600 708" fill="none" stroke="#1d5365" stroke-width="2" opacity=".5"/>
+
+  <g opacity=".27" fill="none" stroke="#71c9d1" stroke-width="2">
+    <path d="M95 172 C330 112 486 168 654 292"/>
+    <path d="M58 226 C292 166 443 206 595 319"/>
+    <path d="M1240 151 C1410 201 1513 294 1590 407"/>
+  </g>
+
+  <g filter="url(#soft)" opacity=".28">
+    <ellipse cx="921" cy="719" rx="290" ry="74" fill="#32c7d0"/>
+    <ellipse cx="1092" cy="435" rx="230" ry="190" fill="#16869e"/>
+  </g>
+
+  <!-- Three distinct support currents converge without becoming a literal process diagram. -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M-60 334 C265 338 438 365 642 468 C759 527 842 553 968 548" stroke="#146487" stroke-width="108" opacity=".46"/>
+    <path d="M-60 334 C265 338 438 365 642 468 C759 527 842 553 968 548" stroke="url(#water)" stroke-width="58" opacity=".88"/>
+    <path d="M-35 500 C235 468 433 487 619 563 C752 618 850 623 974 589" stroke="#0b5977" stroke-width="92" opacity=".5"/>
+    <path d="M-35 500 C235 468 433 487 619 563 C752 618 850 623 974 589" stroke="url(#water)" stroke-width="42" opacity=".72"/>
+    <path d="M110 683 C355 614 507 624 680 663 C792 688 878 682 1008 625" stroke="#0a4b66" stroke-width="78" opacity=".55"/>
+    <path d="M110 683 C355 614 507 624 680 663 C792 688 878 682 1008 625" stroke="url(#water)" stroke-width="30" opacity=".58"/>
+  </g>
+
+  <!-- Layered protective arcs frame the operational basin. -->
+  <path d="M785 593 A319 319 0 0 1 1303 318" fill="none" stroke="#0b1620" stroke-width="112" opacity=".74"/>
+  <path d="M797 580 A298 298 0 0 1 1283 324" fill="none" stroke="url(#amber)" stroke-width="33" stroke-linecap="round" filter="url(#glow)"/>
+  <path d="M843 615 A252 252 0 0 1 1255 396" fill="none" stroke="url(#teal)" stroke-width="41" stroke-linecap="round"/>
+  <path d="M889 639 A204 204 0 0 1 1222 462" fill="none" stroke="#83e8e1" stroke-width="10" stroke-linecap="round" opacity=".82"/>
+
+  <g transform="translate(1074 606)">
+    <ellipse cx="0" cy="50" rx="246" ry="94" fill="#051521" opacity=".78"/>
+    <ellipse cx="0" cy="8" rx="224" ry="129" fill="#0b3c50" stroke="#3aa5ad" stroke-width="5"/>
+    <ellipse cx="0" cy="-5" rx="193" ry="102" fill="#0d6b83"/>
+    <ellipse cx="0" cy="-17" rx="166" ry="78" fill="#59d6dc" opacity=".72" filter="url(#glow)"/>
+    <ellipse cx="0" cy="-22" rx="133" ry="56" fill="#b5f5ed" opacity=".78"/>
+    <path d="M-136 -20 C-58 -51 42 -2 137 -34" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity=".42"/>
+    <path d="M-109 11 C-39 -10 44 21 108 -2" fill="none" stroke="#d9ffff" stroke-width="4" stroke-linecap="round" opacity=".36"/>
+  </g>
+
+  <g transform="translate(1076 388)" filter="url(#glow)">
+    <path d="M0 -58 L70 -24 V31 C70 81 35 113 0 130 C-35 113 -70 81 -70 31 V-24Z" fill="#0b2a38" stroke="#f2b253" stroke-width="8"/>
+    <path d="M-29 27 L-7 49 L36 2" fill="none" stroke="#8cebe1" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g fill="#f5bd67">
+    <circle cx="782" cy="581" r="9"/>
+    <circle cx="847" cy="415" r="7" opacity=".8"/>
+    <circle cx="1019" cy="288" r="8" opacity=".9"/>
+    <circle cx="1228" cy="327" r="6" opacity=".7"/>
+  </g>
+  <rect width="1600" height="900" fill="url(#grain)"/>
+</svg>
