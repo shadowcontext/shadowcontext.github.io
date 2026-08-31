@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Layered protection for a remote desktop session</title>
+  <desc id="desc">An abstract remote desktop window travels through translucent security layers toward a verified endpoint, representing client, library, and process-level patch proof.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071827"/>
+      <stop offset="0.55" stop-color="#0a3040"/>
+      <stop offset="1" stop-color="#09252f"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#61f0d2" stop-opacity="0.46"/>
+      <stop offset="1" stop-color="#61f0d2" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d9fff7" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#58cfc3" stop-opacity="0.34"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8affdf" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#20a4b0" stop-opacity="0.18"/>
+    </linearGradient>
+    <linearGradient id="endpoint" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#35d6c2"/>
+      <stop offset="1" stop-color="#9cf6ba"/>
+    </linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="28"/></filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#001019" flood-opacity="0.7"/>
+    </filter>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#87e8dd" stroke-opacity="0.065" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <ellipse cx="812" cy="450" rx="650" ry="360" fill="url(#glow)" filter="url(#blur)"/>
+  <path d="M0 705C300 630 468 748 782 675s510-60 818 30v195H0Z" fill="#04121c" fill-opacity="0.72"/>
+
+  <g opacity="0.34">
+    <path d="M208 190L438 104l230 86v210c0 161-95 267-230 333-135-66-230-172-230-333Z" fill="none" stroke="#3dc7c1" stroke-width="3"/>
+    <path d="M932 190l230-86 230 86v210c0 161-95 267-230 333-135-66-230-172-230-333Z" fill="none" stroke="#70e4c8" stroke-width="3"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <path d="M570 151l230-78 230 78v219c0 166-96 282-230 351-134-69-230-185-230-351Z" fill="url(#shield)" stroke="#78efdb" stroke-width="4"/>
+    <path d="M621 190l179-61 179 61v174c0 128-70 220-179 281-109-61-179-153-179-281Z" fill="#092b38" fill-opacity="0.7" stroke="#a1f7e5" stroke-opacity="0.55" stroke-width="2"/>
+  </g>
+
+  <g transform="translate(375 257)" filter="url(#shadow)">
+    <rect x="0" y="0" width="850" height="420" rx="28" fill="#071b28" stroke="#8cf4df" stroke-width="4"/>
+    <rect x="22" y="22" width="806" height="328" rx="16" fill="url(#panel)"/>
+    <circle cx="58" cy="55" r="9" fill="#60dbc8"/>
+    <circle cx="88" cy="55" r="9" fill="#338fa2"/>
+    <circle cx="118" cy="55" r="9" fill="#206175"/>
+    <path d="M53 98h744" stroke="#0c5161" stroke-opacity="0.45" stroke-width="3"/>
+    <rect x="69" y="133" width="268" height="163" rx="14" fill="#0a3443" fill-opacity="0.78"/>
+    <rect x="372" y="133" width="356" height="29" rx="14" fill="#0b5360" fill-opacity="0.62"/>
+    <rect x="372" y="184" width="290" height="19" rx="9" fill="#0f6f78" fill-opacity="0.44"/>
+    <rect x="372" y="224" width="324" height="19" rx="9" fill="#0f6f78" fill-opacity="0.32"/>
+    <rect x="372" y="264" width="230" height="19" rx="9" fill="#0f6f78" fill-opacity="0.24"/>
+    <path d="M158 365h534" stroke="#8cf4df" stroke-width="4" stroke-linecap="round"/>
+    <path d="M362 420l30 68h66l30-68" fill="#071b28" stroke="#8cf4df" stroke-width="4"/>
+    <path d="M320 490h210" stroke="#8cf4df" stroke-width="8" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(718 368)">
+    <circle cx="82" cy="82" r="72" fill="#062331" stroke="url(#endpoint)" stroke-width="8"/>
+    <path d="M48 82l23 24 48-52" fill="none" stroke="url(#endpoint)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="82" cy="82" r="92" fill="none" stroke="#9cf6ba" stroke-opacity="0.25" stroke-width="3"/>
+  </g>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M176 449h154" stroke="#47c8c0" stroke-width="6" stroke-opacity="0.35"/>
+    <path d="M1270 449h154" stroke="#80e6ca" stroke-width="6" stroke-opacity="0.35"/>
+    <path d="M242 411l-40 38 40 38" stroke="#47c8c0" stroke-width="6" stroke-opacity="0.55"/>
+    <path d="M1358 411l40 38-40 38" stroke="#80e6ca" stroke-width="6" stroke-opacity="0.55"/>
+  </g>
+</svg>
