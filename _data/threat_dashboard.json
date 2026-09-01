@@ -1,15 +1,35 @@
 {
-  "generated_at": "2026-08-31T01:21:09Z",
-  "generated_display": "31 Aug 2026 · 01:21 UTC",
+  "generated_at": "2026-09-01T01:25:09Z",
+  "generated_display": "01 Sep 2026 · 01:25 UTC",
   "metrics": {
-    "kev_total": 1685,
-    "kev_added_30d": 29,
+    "kev_total": 1687,
+    "kev_added_30d": 31,
     "due_next_7d": 2,
     "ioc_total": 197,
     "ioc_total_display": "197",
     "ioc_total_exact": "197"
   },
   "vulnerabilities": [
+    {
+      "cve": "CVE-2026-82078",
+      "name": "PaperCut NG/MF Unsafe Reflection Vulnerability",
+      "vendor": "PaperCut",
+      "product": "NG/MF",
+      "date_added": "2026-08-31",
+      "due_date": "2026-09-14",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-82078"
+    },
+    {
+      "cve": "CVE-2026-81578",
+      "name": "PaperCut NG/MF Missing Authentication for Critical Function Vulnerability",
+      "vendor": "PaperCut",
+      "product": "NG/MF",
+      "date_added": "2026-08-31",
+      "due_date": "2026-09-14",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-81578"
+    },
     {
       "cve": "CVE-2026-66384",
       "name": "JFrog Artifactory Improper Limitation of a Pathname to a Restricted Directory Vulnerability",
@@ -69,26 +89,6 @@
       "due_date": "2026-09-09",
       "ransomware": "Unknown",
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2021-23758"
-    },
-    {
-      "cve": "CVE-2019-1068",
-      "name": "Microsoft SQL Server Remote Code Execution Vulnerability",
-      "vendor": "Microsoft",
-      "product": "SQL Server",
-      "date_added": "2026-08-26",
-      "due_date": "2026-08-29",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2019-1068"
-    },
-    {
-      "cve": "CVE-2015-5287",
-      "name": "Red Hat Automatic Bug Reporting Tool Privilege Escalation Vulnerability",
-      "vendor": "Red Hat",
-      "product": "Automatic Bug Reporting Tool",
-      "date_added": "2026-08-26",
-      "due_date": "2026-09-09",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2015-5287"
     }
   ],
   "platforms": [
@@ -162,19 +162,27 @@
   "advisories": [
     {
       "authority": "Saudi NCA / CERT",
-      "title": "TP-Link Alert",
-      "url": "https://nca.gov.sa/en/cert/7910/",
-      "date": "2026-08-29",
+      "title": "F5 Alert",
+      "url": "https://nca.gov.sa/en/cert/7913/",
+      "date": "2026-09-01",
       "severity": "High",
-      "summary": "Security alert 2026-7786. Review the official notice for affected products and remediation guidance."
+      "summary": "Security alert 2026-7789. Review the official notice for affected products and remediation guidance."
     },
     {
       "authority": "Saudi NCA / CERT",
-      "title": "Chrome Alert",
-      "url": "https://nca.gov.sa/en/cert/7909/",
-      "date": "2026-08-28",
+      "title": "F5 Alert",
+      "url": "https://nca.gov.sa/en/cert/7912/",
+      "date": "2026-08-31",
       "severity": "High",
-      "summary": "Security alert 2026-7785. Review the official notice for affected products and remediation guidance."
+      "summary": "Security alert 2026-7788. Review the official notice for affected products and remediation guidance."
+    },
+    {
+      "authority": "Saudi NCA / CERT",
+      "title": "F5 Alert",
+      "url": "https://nca.gov.sa/en/cert/7911/",
+      "date": "2026-08-31",
+      "severity": "High",
+      "summary": "Security alert 2026-7787. Review the official notice for affected products and remediation guidance."
     },
     {
       "title": "Rockwell Automation OTTO Fleet Manager",
@@ -207,14 +215,6 @@
       "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow a remote attacker to cause a denial-of-service (DoS) condition, a timeout error, or a communication…",
       "authority": "CISA",
       "severity": ""
-    },
-    {
-      "authority": "Saudi NCA / CERT",
-      "title": "TP-Link Alert",
-      "url": "https://nca.gov.sa/en/cert/7908/",
-      "date": "2026-08-26",
-      "severity": "High",
-      "summary": "Security alert 2026-7784. Review the official notice for affected products and remediation guidance."
     },
     {
       "title": "How to secure your online meetings",
@@ -363,7 +363,7 @@
       "name": "CISA Advisories",
       "coverage": "Technical and industrial-control advisories",
       "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml",
-      "status": "online"
+      "status": "degraded"
     },
     {
       "name": "UK NCSC",
@@ -379,9 +379,9 @@
     },
     {
       "name": "CISA STIX",
-      "coverage": "TLP:CLEAR indicators from 4 advisories",
+      "coverage": "Last validated TLP:CLEAR indicator snapshot",
       "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-239a",
-      "status": "online"
+      "status": "degraded"
     }
   ]
 }
