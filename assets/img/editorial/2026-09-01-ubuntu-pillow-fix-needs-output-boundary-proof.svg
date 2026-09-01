@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Contained memory fragments around a protected image-output boundary</title>
+  <desc id="desc">An abstract editorial scene of layered image tiles crossing a luminous boundary while loose memory fragments remain contained on the protected side.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071827"/>
+      <stop offset="0.52" stop-color="#102d43"/>
+      <stop offset="1" stop-color="#07131f"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#55e6ce" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#55e6ce" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="membrane" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8af4df" stop-opacity="0.22"/>
+      <stop offset="0.5" stop-color="#52dbc6" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#8af4df" stop-opacity="0.18"/>
+    </linearGradient>
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f4b75c"/>
+      <stop offset="0.5" stop-color="#e46d78"/>
+      <stop offset="1" stop-color="#7554c7"/>
+    </linearGradient>
+    <linearGradient id="tileCool" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#79e5e0"/>
+      <stop offset="1" stop-color="#3185bb"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-30%" width="260%" height="160%">
+      <feGaussianBlur stdDeviation="18" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <clipPath id="frameClip">
+      <rect x="935" y="258" width="390" height="292" rx="34"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <ellipse cx="810" cy="455" rx="520" ry="430" fill="url(#halo)"/>
+  <path d="M0 718 C285 620 430 790 720 698 S1230 616 1600 720 V900 H0Z" fill="#06111b" opacity="0.68"/>
+  <path d="M0 735 C260 650 510 792 760 716 S1230 650 1600 744" fill="none" stroke="#2b6471" stroke-opacity="0.28" stroke-width="2"/>
+
+  <g opacity="0.72">
+    <circle cx="235" cy="244" r="5" fill="#70e3d2"/>
+    <circle cx="289" cy="312" r="8" fill="#e68977"/>
+    <rect x="336" y="218" width="12" height="12" rx="3" fill="#7b83d7" transform="rotate(18 342 224)"/>
+    <circle cx="404" cy="356" r="6" fill="#f1b861"/>
+    <rect x="452" y="277" width="16" height="16" rx="4" fill="#5bd8c7" transform="rotate(-22 460 285)"/>
+    <circle cx="505" cy="410" r="4" fill="#cb6e94"/>
+    <rect x="548" y="326" width="10" height="10" rx="2" fill="#77d7df"/>
+    <circle cx="591" cy="473" r="7" fill="#f1b861"/>
+    <path d="M258 411l10-17 10 17-10 17z" fill="#518fc3"/>
+    <path d="M378 477l9-15 9 15-9 15z" fill="#e27980"/>
+    <circle cx="482" cy="528" r="5" fill="#67dacd"/>
+    <rect x="315" y="551" width="13" height="13" rx="3" fill="#946dcc" transform="rotate(30 321 557)"/>
+  </g>
+
+  <g transform="translate(350 188) rotate(-7 250 250)">
+    <rect x="62" y="85" width="430" height="318" rx="36" fill="#0b1b2c" stroke="#31576b" stroke-width="3"/>
+    <rect x="93" y="116" width="368" height="256" rx="25" fill="url(#tile)" opacity="0.93"/>
+    <circle cx="184" cy="198" r="38" fill="#ffe6a3" opacity="0.9"/>
+    <path d="M93 330l94-88 72 61 63-72 139 141H93z" fill="#252b61" opacity="0.78"/>
+    <path d="M93 343l126-78 58 48 53-34 131 93H93z" fill="#122e4a" opacity="0.68"/>
+    <rect x="115" y="392" width="165" height="9" rx="4.5" fill="#7894a8" opacity="0.35"/>
+    <rect x="297" y="392" width="91" height="9" rx="4.5" fill="#7894a8" opacity="0.22"/>
+  </g>
+
+  <g filter="url(#glow)">
+    <rect x="772" y="92" width="8" height="716" rx="4" fill="url(#membrane)"/>
+    <rect x="786" y="142" width="2" height="616" rx="1" fill="#b8fff1" opacity="0.7"/>
+  </g>
+  <path d="M742 154 C787 204 787 286 756 330 C726 374 728 468 770 520 C804 562 805 650 750 724" fill="none" stroke="#8af4df" stroke-opacity="0.52" stroke-width="3"/>
+
+  <g transform="rotate(5 1128 405)">
+    <rect x="910" y="232" width="438" height="340" rx="42" fill="#081a29" stroke="#72e0d3" stroke-opacity="0.52" stroke-width="3"/>
+    <g clip-path="url(#frameClip)">
+      <rect x="935" y="258" width="390" height="292" fill="url(#tileCool)"/>
+      <circle cx="1231" cy="342" r="57" fill="#d9fff2" opacity="0.75"/>
+      <path d="M935 500l102-99 69 65 73-92 146 176H935z" fill="#17426a" opacity="0.82"/>
+      <path d="M935 526l142-103 57 54 52-43 139 116H935z" fill="#09263c" opacity="0.78"/>
+      <path d="M963 287h338M963 320h338M963 353h338M963 386h338M963 419h338M963 452h338M963 485h338M963 518h338" stroke="#e5fff8" stroke-opacity="0.08" stroke-width="2"/>
+    </g>
+    <circle cx="954" cy="596" r="7" fill="#6ce0d0"/>
+    <rect x="980" y="590" width="178" height="12" rx="6" fill="#6f95a8" opacity="0.32"/>
+    <rect x="1172" y="590" width="101" height="12" rx="6" fill="#6f95a8" opacity="0.2"/>
+  </g>
+
+  <g opacity="0.36" filter="url(#soft)">
+    <ellipse cx="1050" cy="696" rx="310" ry="38" fill="#48c6bd"/>
+  </g>
+  <g opacity="0.78">
+    <path d="M690 254l9-15 9 15-9 15z" fill="#f0b762"/>
+    <circle cx="715" cy="306" r="5" fill="#df7283"/>
+    <rect x="690" y="370" width="11" height="11" rx="3" fill="#8e6bd0" transform="rotate(22 695 375)"/>
+    <circle cx="729" cy="428" r="7" fill="#e9aa62"/>
+    <rect x="701" y="492" width="14" height="14" rx="4" fill="#67d6cf" transform="rotate(-17 708 499)"/>
+    <circle cx="739" cy="558" r="5" fill="#dc6b87"/>
+    <path d="M700 626l8-14 8 14-8 14z" fill="#8474d0"/>
+  </g>
+  <g opacity="0.45">
+    <circle cx="842" cy="300" r="3" fill="#9cfff0"/>
+    <circle cx="868" cy="407" r="4" fill="#9cfff0"/>
+    <circle cx="834" cy="534" r="3" fill="#9cfff0"/>
+  </g>
+</svg>
