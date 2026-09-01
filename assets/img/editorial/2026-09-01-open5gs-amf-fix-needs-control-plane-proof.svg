@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Protected cellular control plane safely diverts a malformed signal</title>
+  <desc id="desc">Abstract editorial artwork with cellular nodes surrounding a luminous protected core while an irregular incoming signal is diverted into a calm error path.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07141f"/>
+      <stop offset="0.55" stop-color="#10283a"/>
+      <stop offset="1" stop-color="#0d1d2d"/>
+    </linearGradient>
+    <radialGradient id="core" cx="50%" cy="45%" r="55%">
+      <stop offset="0" stop-color="#ecfff5"/>
+      <stop offset="0.28" stop-color="#7ef0cb"/>
+      <stop offset="0.7" stop-color="#24afac"/>
+      <stop offset="1" stop-color="#17627f"/>
+    </radialGradient>
+    <linearGradient id="signal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff7a59" stop-opacity="0"/>
+      <stop offset="0.55" stop-color="#ffb45e"/>
+      <stop offset="1" stop-color="#ffdf9d"/>
+    </linearGradient>
+    <linearGradient id="safe" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9dffe5"/>
+      <stop offset="1" stop-color="#3bd4cf" stop-opacity="0.1"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <path d="M0 735 C240 650 402 765 650 703 S1110 600 1600 718 V900 H0Z" fill="#081722" opacity="0.9"/>
+  <circle cx="870" cy="448" r="310" fill="#36d7c5" opacity="0.08" filter="url(#glow)"/>
+  <g fill="none" stroke="#61dfd2" stroke-opacity="0.25">
+    <circle cx="870" cy="448" r="300" stroke-width="2" stroke-dasharray="5 24"/>
+    <circle cx="870" cy="448" r="242" stroke-width="3" stroke-dasharray="2 18"/>
+  </g>
+  <g stroke="#55d8cf" stroke-width="5" stroke-linecap="round" opacity="0.58">
+    <path d="M870 148 V245"/><path d="M870 651 V748"/>
+    <path d="M570 448 H667"/><path d="M1073 448 H1170"/>
+    <path d="M658 236 L728 306"/><path d="M1012 590 L1082 660"/>
+    <path d="M1082 236 L1012 306"/><path d="M728 590 L658 660"/>
+  </g>
+  <g fill="#102f40" stroke="#82efda" stroke-width="4">
+    <circle cx="870" cy="148" r="25"/><circle cx="870" cy="748" r="25"/>
+    <circle cx="570" cy="448" r="25"/><circle cx="1170" cy="448" r="25"/>
+    <circle cx="658" cy="236" r="25"/><circle cx="1082" cy="236" r="25"/>
+    <circle cx="658" cy="660" r="25"/><circle cx="1082" cy="660" r="25"/>
+  </g>
+  <circle cx="870" cy="448" r="176" fill="#0a1d2b" stroke="#7af0d8" stroke-width="4"/>
+  <path d="M870 302 C951 333 1016 353 1016 421 C1016 526 955 580 870 612 C785 580 724 526 724 421 C724 353 789 333 870 302Z" fill="url(#core)" opacity="0.95"/>
+  <path d="M870 349 C927 370 965 386 965 433 C965 500 929 539 870 568 C811 539 775 500 775 433 C775 386 813 370 870 349Z" fill="#0b3040" opacity="0.76"/>
+  <circle cx="870" cy="448" r="47" fill="#dffff4"/>
+  <circle cx="870" cy="448" r="19" fill="#1b8f9c"/>
+  <g fill="none" stroke="url(#signal)" stroke-linecap="round">
+    <path d="M40 367 C152 367 173 315 262 315 C351 315 366 418 451 418 C500 418 532 390 585 390" stroke-width="13"/>
+    <path d="M70 415 C180 415 211 468 307 468 C397 468 413 348 507 348 C545 348 568 366 608 366" stroke-width="5" opacity="0.8"/>
+  </g>
+  <path d="M610 337 C658 352 688 391 697 437 C706 485 690 529 650 561" fill="none" stroke="#ffe2a1" stroke-width="20" stroke-linecap="round"/>
+  <path d="M650 561 C596 606 542 632 469 650 C398 668 328 671 243 671" fill="none" stroke="url(#safe)" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="610" cy="337" r="11" fill="#fff0bf"/>
+  <g fill="#68e5d4" opacity="0.75">
+    <circle cx="1321" cy="272" r="7"/><circle cx="1394" cy="321" r="4"/>
+    <circle cx="1292" cy="592" r="5"/><circle cx="1418" cy="548" r="8"/>
+  </g>
+</svg>
