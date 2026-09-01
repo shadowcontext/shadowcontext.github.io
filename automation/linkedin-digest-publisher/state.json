@@ -417,6 +417,22 @@
       "github_run_id": "33301570063",
       "status": "published",
       "last_error": null
+    },
+    "e1e3ff99a03169bdc2ebef99b14d7f6b9cb49d2ea9daceb8f12e751232c695f4": {
+      "title": "Daily Security News Digest: Updates, Boundary Proofs, and Fixes",
+      "digest_date": "2026-08-31",
+      "digest_hash": "e1e3ff99a03169bdc2ebef99b14d7f6b9cb49d2ea9daceb8f12e751232c695f4",
+      "generated_at": "2026-09-01T09:55:29.859+04:00",
+      "briefing_url": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-31/e1e3ff99a03169bd/daily-digest.html",
+      "pdf_file": "assets/social/linkedin-digest/2026-08-31/e1e3ff99a03169bd/daily-digest.pdf",
+      "linkedin_caption": "Review comprehensive independent defensive summaries and operational guidance across recent security advisories.\n\nThis edition brings together 22 ShadowContext briefings from August 31, 2026, with direct source links and operational priorities.\n\nRead the full daily briefing:\nhttps://shadowcontext.com/assets/social/linkedin-digest/2026-08-31/e1e3ff99a03169bd/daily-digest.html\n\n#Cybersecurity #ThreatIntelligence #InfoSec #AISecurity",
+      "linkedin_document_urn": "urn:li:document:D4D10AQFqMrozVMbUGA",
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7500461073981132800",
+      "published_at": "2026-09-01T07:54:32.186Z",
+      "github_run_id": "33484378662",
+      "status": "published",
+      "last_error": null
     }
   }
 }
