@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Layered resilience around a connected financial system</title>
+  <desc id="desc">Abstract blue and gold financial network nodes orbit a shared luminous core while layered protective arcs contain fast-moving signals.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07172d"/>
+      <stop offset="0.55" stop-color="#102c50"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <radialGradient id="core" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#fff4b8"/>
+      <stop offset="0.28" stop-color="#f4c85b"/>
+      <stop offset="0.7" stop-color="#4bd4d0" stop-opacity="0.58"/>
+      <stop offset="1" stop-color="#4bd4d0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="arc" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#48cdd1" stop-opacity="0.2"/>
+      <stop offset="0.5" stop-color="#7ee9e2"/>
+      <stop offset="1" stop-color="#48cdd1" stop-opacity="0.2"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <ellipse cx="800" cy="455" rx="590" ry="310" fill="#1a5273" opacity="0.18" filter="url(#soft)"/>
+  <g fill="none" stroke-linecap="round">
+    <path d="M310 555 C390 180 1210 180 1290 555" stroke="#2e678c" stroke-width="52" opacity="0.24"/>
+    <path d="M370 570 C455 260 1145 260 1230 570" stroke="url(#arc)" stroke-width="12" opacity="0.86"/>
+    <path d="M445 590 C535 360 1065 360 1155 590" stroke="#6fdaff" stroke-width="5" opacity="0.54"/>
+    <path d="M510 624 C605 460 995 460 1090 624" stroke="#f0c45b" stroke-width="4" opacity="0.62"/>
+  </g>
+  <g stroke="#5fa8c7" stroke-width="3" opacity="0.54">
+    <path d="M800 455 L535 318 L325 535"/>
+    <path d="M800 455 L1058 315 L1280 535"/>
+    <path d="M800 455 L510 635 L275 680"/>
+    <path d="M800 455 L1080 635 L1328 676"/>
+    <path d="M800 455 L800 705"/>
+    <path d="M535 318 L1058 315"/>
+    <path d="M510 635 L1080 635"/>
+  </g>
+  <circle cx="800" cy="455" r="145" fill="url(#core)" opacity="0.58" filter="url(#glow)"/>
+  <circle cx="800" cy="455" r="78" fill="#0c304b" stroke="#ffe28a" stroke-width="8"/>
+  <circle cx="800" cy="455" r="45" fill="#f6cf65" filter="url(#glow)"/>
+  <g fill="#173d5d" stroke="#75e3dd" stroke-width="6">
+    <circle cx="535" cy="318" r="44"/>
+    <circle cx="1058" cy="315" r="44"/>
+    <circle cx="510" cy="635" r="50"/>
+    <circle cx="1080" cy="635" r="50"/>
+    <circle cx="800" cy="705" r="47"/>
+    <circle cx="325" cy="535" r="34"/>
+    <circle cx="1280" cy="535" r="34"/>
+    <circle cx="275" cy="680" r="29"/>
+    <circle cx="1328" cy="676" r="29"/>
+  </g>
+  <g fill="#d7fbf4">
+    <circle cx="535" cy="318" r="12"/><circle cx="1058" cy="315" r="12"/>
+    <circle cx="510" cy="635" r="14"/><circle cx="1080" cy="635" r="14"/>
+    <circle cx="800" cy="705" r="13"/><circle cx="325" cy="535" r="9"/>
+    <circle cx="1280" cy="535" r="9"/><circle cx="275" cy="680" r="8"/>
+    <circle cx="1328" cy="676" r="8"/>
+  </g>
+  <g fill="#f6cf65" filter="url(#glow)">
+    <circle cx="423" cy="409" r="8"/><circle cx="1168" cy="410" r="8"/>
+    <circle cx="639" cy="552" r="7"/><circle cx="960" cy="552" r="7"/>
+  </g>
+  <g fill="#8ee8ef" opacity="0.75">
+    <path d="M193 268 l32 -14 28 21 -10 34 -37 3 -20 -25z"/>
+    <path d="M1395 238 l27 -9 24 19 -8 28 -31 4 -19 -21z"/>
+    <path d="M183 741 l24 -8 20 15 -5 25 -28 5 -18 -17z"/>
+    <path d="M1407 738 l29 -10 23 20 -8 30 -31 3 -20 -21z"/>
+  </g>
+  <path d="M130 790 C430 720 1170 720 1470 790" fill="none" stroke="#2d7093" stroke-width="3" opacity="0.42"/>
+</svg>
