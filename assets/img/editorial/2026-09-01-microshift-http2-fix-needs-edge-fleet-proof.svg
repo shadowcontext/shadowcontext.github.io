@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Protected edge fleet disperses a malformed network wave</title>
+  <desc id="desc">Abstract editorial artwork showing a constellation of edge-computing nodes behind layered teal shields while an angular amber network wave breaks into harmless particles.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07131f"/>
+      <stop offset="0.55" stop-color="#10283a"/>
+      <stop offset="1" stop-color="#081924"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="73%" cy="47%" r="48%">
+      <stop offset="0" stop-color="#4ce6ce" stop-opacity="0.28"/>
+      <stop offset="0.55" stop-color="#1d9fb5" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#07131f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b8fff0"/>
+      <stop offset="0.48" stop-color="#47dccd"/>
+      <stop offset="1" stop-color="#147892"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff765c" stop-opacity="0"/>
+      <stop offset="0.38" stop-color="#ff8b5f"/>
+      <stop offset="1" stop-color="#ffd17c"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#halo)"/>
+  <path d="M0 728 C248 663 428 763 674 707 C955 643 1225 632 1600 725 V900 H0Z" fill="#06131d" opacity="0.92"/>
+
+  <g fill="none" stroke="#56d9cf" stroke-opacity="0.19" stroke-width="3">
+    <path d="M905 258 L1135 180 L1370 297 L1325 565 L1098 702 L850 581 Z"/>
+    <path d="M1135 180 L1098 702 M905 258 L1325 565 M1370 297 L850 581"/>
+  </g>
+  <g fill="#0c2b3b" stroke="#71e7d8" stroke-width="4">
+    <path d="M1135 132 l42 24 v48 l-42 24 -42-24 v-48Z"/>
+    <path d="M1370 249 l42 24 v48 l-42 24 -42-24 v-48Z"/>
+    <path d="M1325 517 l42 24 v48 l-42 24 -42-24 v-48Z"/>
+    <path d="M1098 654 l42 24 v48 l-42 24 -42-24 v-48Z"/>
+    <path d="M850 533 l42 24 v48 l-42 24 -42-24 v-48Z"/>
+    <path d="M905 210 l42 24 v48 l-42 24 -42-24 v-48Z"/>
+  </g>
+  <g fill="#85f0dd">
+    <circle cx="1135" cy="180" r="10"/><circle cx="1370" cy="297" r="10"/>
+    <circle cx="1325" cy="565" r="10"/><circle cx="1098" cy="702" r="10"/>
+    <circle cx="850" cy="581" r="10"/><circle cx="905" cy="258" r="10"/>
+  </g>
+
+  <ellipse cx="1057" cy="451" rx="248" ry="250" fill="#42d9ca" opacity="0.13" filter="url(#glow)"/>
+  <path d="M1057 207 C1167 246 1246 275 1246 382 C1246 530 1173 616 1057 665 C941 616 868 530 868 382 C868 275 947 246 1057 207Z" fill="#092233" stroke="#72eadc" stroke-width="6"/>
+  <path d="M1057 258 C1137 287 1192 309 1192 392 C1192 500 1143 566 1057 609 C971 566 922 500 922 392 C922 309 977 287 1057 258Z" fill="url(#shield)" opacity="0.93"/>
+  <path d="M1057 318 C1111 338 1145 355 1145 408 C1145 476 1114 519 1057 551 C1000 519 969 476 969 408 C969 355 1003 338 1057 318Z" fill="#0b3444" opacity="0.78"/>
+  <circle cx="1057" cy="431" r="50" fill="#dffff7"/>
+  <path d="M1034 431 l17 17 33-39" fill="none" stroke="#168a97" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g fill="none" stroke="url(#wave)" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 346 H188 L245 290 L324 431 L401 337 L478 491 L560 310 L641 432 L744 432" stroke-width="15"/>
+    <path d="M42 401 H184 L254 367 L328 474 L410 386 L486 528 L565 365 L648 474 L747 474" stroke-width="5" opacity="0.7"/>
+  </g>
+  <path d="M764 331 C819 360 842 396 850 441 C858 492 839 535 797 572" fill="none" stroke="#ffe3a0" stroke-width="20" stroke-linecap="round"/>
+  <g fill="#ffd387">
+    <circle cx="750" cy="363" r="9"/><circle cx="727" cy="331" r="6"/>
+    <circle cx="728" cy="504" r="8"/><circle cx="694" cy="548" r="5"/>
+    <circle cx="765" cy="598" r="7"/><circle cx="680" cy="402" r="4"/>
+  </g>
+  <g fill="#5ce0d2" opacity="0.65">
+    <circle cx="1460" cy="171" r="6"/><circle cx="1511" cy="224" r="3"/>
+    <circle cx="1438" cy="682" r="8"/><circle cx="1492" cy="626" r="4"/>
+    <circle cx="668" cy="197" r="5"/><circle cx="584" cy="686" r="7"/>
+  </g>
+</svg>
