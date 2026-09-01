@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Protected query cursor approaching an OpenSearch core</title>
+  <desc id="desc">Abstract blue and violet query ribbons flow through a segmented pagination ring toward a protected search core, while an unsafe cursor path is sealed by a bright security boundary.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#081426"/>
+      <stop offset="0.52" stop-color="#10284a"/>
+      <stop offset="1" stop-color="#180f35"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#64e9ff" stop-opacity="0.35"/>
+      <stop offset="0.48" stop-color="#5f7cff" stop-opacity="0.13"/>
+      <stop offset="1" stop-color="#5f7cff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ribbonA" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#39d9ff" stop-opacity="0"/>
+      <stop offset="0.35" stop-color="#39d9ff"/>
+      <stop offset="1" stop-color="#8f78ff"/>
+    </linearGradient>
+    <linearGradient id="ribbonB" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#806bff" stop-opacity="0"/>
+      <stop offset="0.42" stop-color="#806bff"/>
+      <stop offset="1" stop-color="#f287ff"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d8fbff"/>
+      <stop offset="0.38" stop-color="#55dfff"/>
+      <stop offset="1" stop-color="#5475ff"/>
+    </linearGradient>
+    <filter id="blur20" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="coreClip">
+      <circle cx="1115" cy="450" r="167"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <ellipse cx="1050" cy="450" rx="520" ry="430" fill="url(#halo)"/>
+  <circle cx="132" cy="122" r="220" fill="#22c8ff" opacity="0.05" filter="url(#blur20)"/>
+  <circle cx="1450" cy="790" r="260" fill="#9a57ff" opacity="0.07" filter="url(#blur20)"/>
+
+  <g opacity="0.22" fill="none" stroke="#8edfff">
+    <path d="M70 182 C330 135 454 222 665 188"/>
+    <path d="M84 706 C338 756 510 646 701 688"/>
+    <path d="M1240 116 C1402 171 1488 286 1522 402"/>
+  </g>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M-40 344 C210 270 348 326 516 411 C608 457 692 456 789 434" stroke="url(#ribbonA)" stroke-width="25" opacity="0.88"/>
+    <path d="M-70 445 C160 397 331 423 498 477 C603 511 696 502 790 469" stroke="url(#ribbonB)" stroke-width="17" opacity="0.78"/>
+    <path d="M-30 552 C193 598 365 569 533 514 C621 486 704 484 792 492" stroke="url(#ribbonA)" stroke-width="9" opacity="0.68"/>
+  </g>
+
+  <g transform="translate(814 450)">
+    <circle r="174" fill="#0a1932" opacity="0.9" stroke="#92edff" stroke-width="2"/>
+    <circle r="144" fill="none" stroke="#4b668d" stroke-width="21" stroke-dasharray="55 22" transform="rotate(-12)"/>
+    <circle r="108" fill="none" stroke="#726dff" stroke-width="6" stroke-dasharray="20 15" transform="rotate(21)" opacity="0.85"/>
+    <circle r="68" fill="#142f57" stroke="#75e8ff" stroke-width="3"/>
+    <circle r="23" fill="#b8f7ff" filter="url(#glow)"/>
+    <path d="M-53 -17 C-14 -52 18 -52 56 -15 M-53 18 C-11 51 19 50 56 15" fill="none" stroke="#a8f3ff" stroke-width="7" stroke-linecap="round" opacity="0.9"/>
+  </g>
+
+  <path d="M974 450 C1022 450 1048 450 1074 450" fill="none" stroke="#a8f5ff" stroke-width="15" stroke-linecap="round" filter="url(#glow)"/>
+
+  <circle cx="1115" cy="450" r="188" fill="#07162c" stroke="#64799e" stroke-width="2"/>
+  <g clip-path="url(#coreClip)">
+    <rect x="940" y="278" width="350" height="344" fill="#0d2242"/>
+    <g fill="none" stroke="#5bcfee" opacity="0.52">
+      <ellipse cx="1115" cy="450" rx="150" ry="54"/>
+      <ellipse cx="1115" cy="450" rx="150" ry="101"/>
+      <path d="M965 450 H1265 M1115 283 V617"/>
+      <path d="M1000 325 C1070 387 1070 512 1000 575 M1230 325 C1160 387 1160 512 1230 575"/>
+    </g>
+    <circle cx="1115" cy="450" r="75" fill="#5b75ff" opacity="0.17" filter="url(#blur20)"/>
+  </g>
+  <circle cx="1115" cy="450" r="167" fill="none" stroke="url(#shield)" stroke-width="10" filter="url(#glow)"/>
+  <circle cx="1115" cy="450" r="143" fill="none" stroke="#c4f9ff" stroke-width="2" opacity="0.6"/>
+
+  <g transform="translate(978 304) rotate(-18)" filter="url(#glow)">
+    <path d="M0 0 L70 0 L70 15 L43 15 L43 40 L27 40 L27 15 L0 15 Z" fill="#ff6f9f" opacity="0.93"/>
+    <circle cx="35" cy="8" r="5" fill="#ffe4ed"/>
+  </g>
+  <path d="M918 285 C949 319 975 345 1010 366" fill="none" stroke="#ff739f" stroke-width="7" stroke-linecap="round" opacity="0.7"/>
+  <path d="M991 345 L1025 378" stroke="#ffe2ed" stroke-width="8" stroke-linecap="round" filter="url(#glow)"/>
+
+  <g opacity="0.82">
+    <circle cx="1340" cy="336" r="8" fill="#6deaff"/>
+    <circle cx="1404" cy="450" r="5" fill="#a17dff"/>
+    <circle cx="1328" cy="574" r="7" fill="#7de8ff"/>
+    <path d="M1275 366 L1334 340 M1280 450 H1396 M1264 540 L1321 570" stroke="#7187b0" stroke-width="2"/>
+  </g>
+
+  <rect x="1.5" y="1.5" width="1597" height="897" rx="28" fill="none" stroke="#a9eaff" stroke-opacity="0.12" stroke-width="3"/>
+</svg>
