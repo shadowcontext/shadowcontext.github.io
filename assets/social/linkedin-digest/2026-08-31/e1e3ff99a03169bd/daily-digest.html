@@ -1,0 +1,888 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Daily Security News Digest: Updates, Boundary Proofs, and Fixes | ShadowContext</title>
+    <style>
+      :root {
+        --paper: #05080d;
+        --panel: #0d1319;
+        --panel-soft: #091017;
+        --ink: #f1f7fa;
+        --ink-2: #c4d1d8;
+        --muted: #8496a1;
+        --line: #1d2b34;
+        --cyan: #35e6d1;
+        --violet: #8b7dff;
+        --sans: "Space Grotesk", Inter, Arial, sans-serif;
+        --mono: "DM Mono", Consolas, monospace;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: var(--sans);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        font-size: 10.5pt;
+        line-height: 1.55;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        position: relative;
+        width: 210mm;
+        min-height: 297mm;
+        padding: 18mm;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 83% 18%, rgba(139, 125, 255, 0.1), transparent 28%),
+          linear-gradient(145deg, #05080d 0%, #081017 62%, #0c101c 100%);
+      }
+
+      .page::before {
+        content: "";
+        position: absolute;
+        inset: 8mm;
+        pointer-events: none;
+        border: 0.25mm solid var(--line);
+      }
+
+      .cover {
+        display: flex;
+        flex-direction: column;
+        page-break-after: always;
+      }
+
+      .brand-row,
+      .section-head,
+      .document-footer {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 4mm;
+        font-size: 20pt;
+        font-weight: 750;
+        letter-spacing: -0.04em;
+      }
+
+      .brand em {
+        color: var(--cyan);
+        font-style: normal;
+      }
+
+      .brand-mark {
+        position: relative;
+        display: block;
+        width: 12mm;
+        height: 12mm;
+        transform: rotate(30deg);
+        border: 1mm solid var(--cyan);
+        border-radius: 1.2mm;
+      }
+
+      .brand-mark::before {
+        content: "";
+        position: absolute;
+        inset: 2.2mm;
+        border: 0.8mm solid var(--violet);
+        border-radius: 0.9mm;
+      }
+
+      .brand-mark::after {
+        content: "";
+        position: absolute;
+        inset: 4.5mm;
+        background: var(--cyan);
+        border-radius: 0.5mm;
+      }
+
+      .edition,
+      .eyebrow,
+      .topic,
+      .section-count,
+      .why span,
+      .document-footer,
+      .source-link {
+        font-family: var(--mono);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .edition,
+      .section-count,
+      .document-footer {
+        color: var(--muted);
+        font-size: 8pt;
+      }
+
+      .cover-copy {
+        position: relative;
+        z-index: 1;
+        margin: 30mm 0 0;
+      }
+
+      .eyebrow {
+        margin: 0 0 7mm;
+        color: var(--cyan);
+        font-size: 10pt;
+      }
+
+      h1 {
+        max-width: 165mm;
+        margin: 0;
+        font-size: 37pt;
+        line-height: 1.03;
+        letter-spacing: -0.05em;
+      }
+
+      .dek {
+        max-width: 155mm;
+        margin: 10mm 0 0;
+        color: var(--ink-2);
+        font-size: 16pt;
+        line-height: 1.45;
+      }
+
+      .context {
+        position: relative;
+        z-index: 1;
+        margin-top: auto;
+        padding: 9mm;
+        background: rgba(13, 19, 25, 0.94);
+        border: 0.3mm solid var(--line);
+        border-left: 1mm solid var(--violet);
+      }
+
+      .context h2,
+      .section-head h2,
+      .operating-view h2,
+      .sources h2 {
+        margin: 0;
+      }
+
+      .context h2 {
+        color: var(--violet);
+        font-family: var(--mono);
+        font-size: 9pt;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .context p {
+        margin: 4mm 0 0;
+        color: var(--ink-2);
+        font-size: 13pt;
+      }
+
+      .cover-meta {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 9mm;
+        color: var(--muted);
+        font: 8pt var(--mono);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .content {
+        padding-top: 15mm;
+        padding-bottom: 18mm;
+      }
+
+      .section-head {
+        margin-bottom: 9mm;
+        padding-bottom: 5mm;
+        border-bottom: 0.3mm solid var(--line);
+      }
+
+      .section-head h2 {
+        font-size: 23pt;
+      }
+
+      .stories {
+        position: relative;
+        z-index: 1;
+      }
+
+      .story {
+        display: grid;
+        grid-template-columns: 15mm 1fr;
+        gap: 5mm;
+        margin: 0 0 6mm;
+        padding: 7mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: rgba(13, 19, 25, 0.96);
+        border: 0.3mm solid var(--line);
+      }
+
+      .story-index {
+        color: var(--cyan);
+        font: 12pt var(--mono);
+      }
+
+      .topic {
+        margin: 0 0 2mm;
+        color: var(--cyan);
+        font-size: 7.5pt;
+      }
+
+      .story h3 {
+        margin: 0;
+        font-size: 16pt;
+        line-height: 1.18;
+        letter-spacing: -0.025em;
+      }
+
+      .summary {
+        margin: 3mm 0;
+        color: var(--ink-2);
+        font-size: 10.5pt;
+      }
+
+      .why {
+        padding-top: 3mm;
+        border-top: 0.25mm solid var(--line);
+      }
+
+      .why span {
+        color: var(--violet);
+        font-size: 7pt;
+      }
+
+      .why p {
+        display: inline;
+        margin: 0 0 0 2mm;
+        font-weight: 650;
+      }
+
+      .source-link {
+        display: inline-block;
+        margin-top: 4mm;
+        color: var(--cyan);
+        font-size: 6.8pt;
+        letter-spacing: 0.04em;
+        text-transform: none;
+      }
+
+      .operating-view,
+      .sources {
+        position: relative;
+        z-index: 1;
+        margin-top: 12mm;
+        padding: 9mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: var(--panel-soft);
+        border: 0.3mm solid var(--line);
+      }
+
+      .operating-view {
+        border-top: 1mm solid var(--cyan);
+      }
+
+      .operating-view h2,
+      .sources h2 {
+        font-size: 18pt;
+      }
+
+      .operating-view > p {
+        color: var(--ink-2);
+        font-size: 12pt;
+      }
+
+      .watch-list,
+      .source-list {
+        margin: 6mm 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .watch-list li {
+        display: grid;
+        grid-template-columns: 9mm 1fr;
+        gap: 4mm;
+        align-items: start;
+        margin: 3mm 0;
+      }
+
+      .watch-list span {
+        display: grid;
+        width: 8mm;
+        height: 8mm;
+        place-items: center;
+        color: var(--cyan);
+        border: 0.3mm solid var(--cyan);
+        font: 8pt var(--mono);
+      }
+
+      .watch-list p {
+        margin: 0;
+      }
+
+      .source-list li {
+        display: grid;
+        grid-template-columns: 10mm 1fr;
+        gap: 3mm;
+        margin: 2.5mm 0;
+        color: var(--ink-2);
+        font-size: 8.5pt;
+      }
+
+      .source-list span {
+        color: var(--violet);
+        font-family: var(--mono);
+      }
+
+      .source-list a {
+        color: var(--cyan);
+        text-decoration: underline;
+        text-decoration-color: rgba(53, 230, 209, 0.35);
+        text-underline-offset: 1mm;
+      }
+
+      .cta {
+        position: relative;
+        z-index: 1;
+        margin: 12mm 0 0;
+        padding: 7mm 9mm;
+        break-inside: avoid;
+        color: #04100f;
+        background: var(--cyan);
+      }
+
+      .cta strong {
+        display: block;
+        font-size: 14pt;
+      }
+
+      .cta span {
+        font: 9pt var(--mono);
+      }
+
+      .document-footer {
+        margin-top: 12mm;
+        padding-top: 5mm;
+        border-top: 0.3mm solid var(--line);
+      }
+
+      @media screen {
+        body {
+          width: 210mm;
+          margin: 0 auto;
+        }
+
+        .page {
+          box-shadow: 0 0 20mm rgba(0, 0, 0, 0.45);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="page cover">
+      <header class="brand-row">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Shadow<em>Context</em></span>
+        </div>
+        <span class="edition">Daily security digest</span>
+      </header>
+
+      <main class="cover-copy">
+        <p class="eyebrow">The day in context / 2026-08-31</p>
+        <h1>Daily Security News Digest: Updates, Boundary Proofs, and Fixes</h1>
+        <p class="dek">ShadowContext examines critical security advisories, AI framework vulnerabilities, dependency updates, and defensive infrastructure controls.</p>
+      </main>
+
+      <aside class="context">
+        <h2>Executive summary</h2>
+        <p>Today&#39;s publication reviews 22 independent security advisories spanning authentication frameworks, cloud infrastructure, AI interfaces, browser extensions, and operating system packages, emphasizing the necessity of deployment proof and strict validation boundaries.</p>
+      </aside>
+
+      <div class="cover-meta">
+        <span>22 briefings included</span>
+        <span>https://shadowcontext.com/</span>
+      </div>
+    </section>
+
+    <section class="page content">
+      <header class="section-head">
+        <h2>All news from the day</h2>
+        <span class="section-count">22 / 2026-08-31</span>
+      </header>
+
+      <main class="stories">
+    <article class="story">
+      <div class="story-index">01</div>
+      <div class="story-copy">
+        <p class="topic">Rodauth WebAuthn Security</p>
+        <h3>Rodauth WebAuthn Fix Needs Account-Binding Proof</h3>
+        <p class="summary">Rodauth before 2.46.0 allowed logged-in users to authenticate as another account via WebAuthn, requiring verification and updates.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Credential verification must remain indivisible from correct account selection to prevent authentication bypass.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/rodauth-webauthn-fix-needs-account-binding-proof/">Rodauth WebAuthn Fix Needs Account-Binding Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">02</div>
+      <div class="story-copy">
+        <p class="topic">Jina Reader SSRF</p>
+        <h3>Jina Reader SSRF Makes Egress Control Critical</h3>
+        <p class="summary">CVE-2026-82638 exposes an SSRF risk in self-hosted Jina Reader, making egress filtering an immediate priority.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>URL readers crossing trust boundaries need strict network enforcement to block internal resource access.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/jina-reader-ssrf-needs-egress-boundaries/">Jina Reader SSRF Makes Egress Control the Critical Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">03</div>
+      <div class="story-copy">
+        <p class="topic">Argo CD IPS</p>
+        <h3>New Argo CD IPS Coverage Is a Backstop</h3>
+        <p class="summary">New IPS coverage flags Argo CD secret exposure attempts, but teams still need patched versions and least privilege.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Signature detection is a useful backstop, but upgrading software and restricting reader access remain essential.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/argocd-ips-coverage-is-a-backstop/">New Argo CD IPS Coverage Is a Backstop, Not a Patch ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">04</div>
+      <div class="story-copy">
+        <p class="topic">NextChat API Key</p>
+        <h3>NextChat API Key Flaw Needs Destination Proof</h3>
+        <p class="summary">CVE-2026-82639 in NextChat highlights improper input validation where substring matching allowed improper key attachment.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Proxies must validate canonical destinations against explicit policy before injecting provider credentials.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/nextchat-api-key-flaw-needs-destination-proof/">NextChat API Key Flaw Needs Destination Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">05</div>
+      <div class="story-copy">
+        <p class="topic">Browser Agent Storage</p>
+        <h3>Browser Agent API Keys Need Storage Boundaries</h3>
+        <p class="summary">CVE-2026-82640 reveals browser-use web-ui stores LLM API keys in plaintext, necessitating strict local access controls.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Persistent configuration states must separate sensitive credentials from ordinary agent settings.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/browser-agent-api-keys-need-storage-boundaries/">Browser Agent API Keys Need a Storage Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">06</div>
+      <div class="story-copy">
+        <p class="topic">Browser Extension Security</p>
+        <h3>Browser Extension Trust Needs Continuous Review</h3>
+        <p class="summary">Research into malicious Chrome and Edge extensions shows previously clean products can receive dangerous updates.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Continuous inventory and identifier-based monitoring are vital as legitimate extension ownership changes.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/browser-extension-trust-needs-continuous-review/">Browser Extension Trust Needs Continuous Review ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">07</div>
+      <div class="story-copy">
+        <p class="topic">SiYuan Rendering Flaws</p>
+        <h3>SiYuan Rendering Fixes Need Regression Proof</h3>
+        <p class="summary">SiYuan before 3.8.1 contains stored rendering flaws permitting active HTML execution, requiring immediate upgrades.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Output safety must remain default and intact across refactoring and subsequent code updates.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/siyuan-rendering-fixes-need-regression-proof/">SiYuan Rendering Fixes Need Regression Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">08</div>
+      <div class="story-copy">
+        <p class="topic">Admidio SQL Injection</p>
+        <h3>Admidio Fix Needs Query-Boundary Proof</h3>
+        <p class="summary">CVE-2026-82655 introduces a blind SQL injection risk in Admidio before 5.0.12, requiring prompt patching and validation.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Authorization and query construction must be tested as a single path from request to database.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/admidio-fix-needs-query-boundary-proof/">Admidio Fix Needs Query-Boundary Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">09</div>
+      <div class="story-copy">
+        <p class="topic">AshGraphql Error Handling</p>
+        <h3>AshGraphql Fix Needs Runtime Error Proof</h3>
+        <p class="summary">AshGraphql 1.11.0 resolves Relay-node error handling issues, requiring updated versions and controlled failure responses.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Malicious or malformed inputs must yield bounded, observable, and non-revealing outcomes.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ashgraphql-fix-needs-runtime-error-proof/">AshGraphql fix needs runtime error proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">10</div>
+      <div class="story-copy">
+        <p class="topic">AshAI Code Injection</p>
+        <h3>AshAI Runtime Prompts Need Code Boundary</h3>
+        <p class="summary">AshAI 1.0.0 addresses a code injection flaw by separating runtime prompt content from EEx template evaluation.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Untrusted request text must remain data rather than being evaluated as executable code.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ashai-runtime-prompts-need-a-code-boundary/">AshAI Runtime Prompts Need a Code Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">11</div>
+      <div class="story-copy">
+        <p class="topic">Debian Starlette Update</p>
+        <h3>Debian Starlette Fix Needs Request-Path Proof</h3>
+        <p class="summary">Debian addresses Starlette vulnerabilities affecting authorization dispatch and request URL validation.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Framework controls must be enforced consistently across every processed request path.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/starlette-update-needs-request-path-and-package-proof/">Debian’s Starlette Fix Needs Request-Path and Package Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">12</div>
+      <div class="story-copy">
+        <p class="topic">AshAdmin Cookie Security</p>
+        <h3>AshAdmin Cookie Fix Needs Domain Boundaries</h3>
+        <p class="summary">AshAdmin 1.3.1 resolves cookie-name shadowing vulnerabilities, preventing sibling subdomains from altering sessions.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Exact name parsing and strict domain boundaries protect administrative session contexts.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ashadmin-cookie-fix-needs-domain-boundaries/">AshAdmin Cookie Fix Needs Domain-Boundary Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">13</div>
+      <div class="story-copy">
+        <p class="topic">AshAI MCP Origin</p>
+        <h3>AshAI MCP Fix Restores Browser-to-Tool Boundary</h3>
+        <p class="summary">AshAI 1.0.0 fixes an origin validation flaw in its MCP server, requiring explicit allowedOrigins configurations.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Local server bindings require declared origin policies rather than inferred request metadata.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ashai-mcp-needs-origin-boundaries/">AshAI MCP Fix Restores the Browser-to-Tool Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">14</div>
+      <div class="story-copy">
+        <p class="topic">Red Hat osbuild</p>
+        <h3>Red Hat osbuild Update Needs Canonicalization</h3>
+        <p class="summary">Red Hat updates osbuild-composer to address upstream Go gRPC and IDNA canonicalization flaws.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Authorization layers must inspect the exact canonical representation consumed downstream.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/red-hat-osbuild-update-needs-canonicalization-proof/">Red Hat’s osbuild Update Needs Canonicalization Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">15</div>
+      <div class="story-copy">
+        <p class="topic">AshPostgres Tenant Security</p>
+        <h3>AshPostgres Tenant Renames Must Fail Closed</h3>
+        <p class="summary">AshPostgres 2.13.0 fixes schema rename handling so failed database transactions correctly roll back.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Infrastructure rejections must never be treated as successful application state transitions.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ashpostgres-tenant-renames-must-fail-closed/">AshPostgres Tenant Renames Must Fail Closed ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">16</div>
+      <div class="story-copy">
+        <p class="topic">Undertow WebSockets</p>
+        <h3>Undertow WebSockets Need Resource Boundaries</h3>
+        <p class="summary">CVE-2026-81624 exposes resource consumption risks in Undertow WebSockets requiring compensating limits.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Applications require explicit external resource limits until supported vendor updates arrive.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/undertow-websockets-need-resource-boundaries/">Undertow WebSockets Need Resource Boundaries Before a Fix Lands ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">17</div>
+      <div class="story-copy">
+        <p class="topic">OpenJDK 26 Update</p>
+        <h3>OpenJDK 26 Update Needs Runtime-Line Proof</h3>
+        <p class="summary">Ubuntu addresses multiple Java component vulnerabilities in OpenJDK 26, requiring verified workload restarts.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Fleet-wide assurance demands confirming specific runtime versions and active process execution.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/openjdk-26-update-needs-runtime-line-proof/">OpenJDK 26 Update Needs Runtime-Line Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">18</div>
+      <div class="story-copy">
+        <p class="topic">Ubuntu libssh Security</p>
+        <h3>Ubuntu libssh Fixes Need Process Proof</h3>
+        <p class="summary">Ubuntu libssh updates patch multiple buffer overflow and cryptographic verification vulnerabilities.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Package updates must be verified alongside active library mapping in running workloads.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ubuntu-libssh-fixes-need-package-and-process-proof/">Ubuntu libssh Fixes Need Package and Process Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">19</div>
+      <div class="story-copy">
+        <p class="topic">FreeRDP Update</p>
+        <h3>FreeRDP Update Needs Client and Library Proof</h3>
+        <p class="summary">Ubuntu ships FreeRDP 3.31.0 security updates addressing memory and remote execution issues.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Remote desktop protocols require verifying client binaries, shared libraries, and process states.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/freerdp-update-needs-client-and-library-proof/">FreeRDP Update Needs Client and Library-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">20</div>
+      <div class="story-copy">
+        <p class="topic">Ubuntu BIND DNS</p>
+        <h3>Ubuntu BIND Update Needs Resolver Proof</h3>
+        <p class="summary">Ubuntu fixes a BIND DNSSEC validation vulnerability that could cause resolver crashes.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Resolver resilience requires active process monitoring alongside package upgrades.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ubuntu-bind-update-needs-resolver-proof/">Ubuntu’s BIND Update Needs Resolver-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">21</div>
+      <div class="story-copy">
+        <p class="topic">Ubuntu Coreutils</p>
+        <h3>Ubuntu Coreutils Fixes Need Pipeline Boundaries</h3>
+        <p class="summary">Ubuntu addresses memory-read flaws in sort and uniq, requiring strict caller-option boundaries.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Automation pipelines must prevent external data from altering command-line options.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ubuntu-coreutils-update-needs-pipeline-boundaries/">Ubuntu Coreutils Fixes Need Pipeline Boundaries ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">22</div>
+      <div class="story-copy">
+        <p class="topic">Ubuntu UDisks Security</p>
+        <h3>Ubuntu UDisks Fix Needs Caller-Identity Proof</h3>
+        <p class="summary">Ubuntu fixes CVE-2026-7867 in udisks2, requiring package verification and system reboots.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Delegated mounting actions require strict validation of caller identity and policy constraints.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ubuntu-udisks-fix-needs-caller-identity-proof/">Ubuntu UDisks Fix Needs Caller-Identity Proof ↗</a>
+      </div>
+    </article></main>
+
+      <section class="operating-view">
+        <p class="eyebrow">The operating view</p>
+        <h2>What the day means for defenders</h2>
+        <p>Maintain strict provenance across package repositories, verify active process runtimes rather than relying solely on file state, and enforce explicit network and identity boundaries across all integrated application pipelines.</p>
+        <ol class="watch-list"><li><span>1</span><p>Verify that deployed packages match distribution-specific backports rather than generic upstream version strings.</p></li>
+<li><span>2</span><p>Ensure runtime environments reflect applied updates by restarting active processes and containers.</p></li>
+<li><span>3</span><p>Validate that authorization policies and input validators operate on canonical request representations.</p></li></ol>
+      </section>
+
+      <section class="sources">
+        <p class="eyebrow">Source index</p>
+        <h2>Every briefing in this digest</h2>
+        <ol class="source-list">
+    <li>
+      <span>01</span>
+      <a href="https://shadowcontext.com/rodauth-webauthn-fix-needs-account-binding-proof/">Rodauth WebAuthn Fix Needs Account-Binding Proof</a>
+    </li>
+
+    <li>
+      <span>02</span>
+      <a href="https://shadowcontext.com/jina-reader-ssrf-needs-egress-boundaries/">Jina Reader SSRF Makes Egress Control the Critical Boundary</a>
+    </li>
+
+    <li>
+      <span>03</span>
+      <a href="https://shadowcontext.com/argocd-ips-coverage-is-a-backstop/">New Argo CD IPS Coverage Is a Backstop, Not a Patch</a>
+    </li>
+
+    <li>
+      <span>04</span>
+      <a href="https://shadowcontext.com/nextchat-api-key-flaw-needs-destination-proof/">NextChat API Key Flaw Needs Destination Proof</a>
+    </li>
+
+    <li>
+      <span>05</span>
+      <a href="https://shadowcontext.com/browser-agent-api-keys-need-storage-boundaries/">Browser Agent API Keys Need a Storage Boundary</a>
+    </li>
+
+    <li>
+      <span>06</span>
+      <a href="https://shadowcontext.com/browser-extension-trust-needs-continuous-review/">Browser Extension Trust Needs Continuous Review</a>
+    </li>
+
+    <li>
+      <span>07</span>
+      <a href="https://shadowcontext.com/siyuan-rendering-fixes-need-regression-proof/">SiYuan Rendering Fixes Need Regression Proof</a>
+    </li>
+
+    <li>
+      <span>08</span>
+      <a href="https://shadowcontext.com/admidio-fix-needs-query-boundary-proof/">Admidio Fix Needs Query-Boundary Proof</a>
+    </li>
+
+    <li>
+      <span>09</span>
+      <a href="https://shadowcontext.com/ashgraphql-fix-needs-runtime-error-proof/">AshGraphql fix needs runtime error proof</a>
+    </li>
+
+    <li>
+      <span>10</span>
+      <a href="https://shadowcontext.com/ashai-runtime-prompts-need-a-code-boundary/">AshAI Runtime Prompts Need a Code Boundary</a>
+    </li>
+
+    <li>
+      <span>11</span>
+      <a href="https://shadowcontext.com/starlette-update-needs-request-path-and-package-proof/">Debian’s Starlette Fix Needs Request-Path and Package Proof</a>
+    </li>
+
+    <li>
+      <span>12</span>
+      <a href="https://shadowcontext.com/ashadmin-cookie-fix-needs-domain-boundaries/">AshAdmin Cookie Fix Needs Domain-Boundary Proof</a>
+    </li>
+
+    <li>
+      <span>13</span>
+      <a href="https://shadowcontext.com/ashai-mcp-needs-origin-boundaries/">AshAI MCP Fix Restores the Browser-to-Tool Boundary</a>
+    </li>
+
+    <li>
+      <span>14</span>
+      <a href="https://shadowcontext.com/red-hat-osbuild-update-needs-canonicalization-proof/">Red Hat’s osbuild Update Needs Canonicalization Proof</a>
+    </li>
+
+    <li>
+      <span>15</span>
+      <a href="https://shadowcontext.com/ashpostgres-tenant-renames-must-fail-closed/">AshPostgres Tenant Renames Must Fail Closed</a>
+    </li>
+
+    <li>
+      <span>16</span>
+      <a href="https://shadowcontext.com/undertow-websockets-need-resource-boundaries/">Undertow WebSockets Need Resource Boundaries Before a Fix Lands</a>
+    </li>
+
+    <li>
+      <span>17</span>
+      <a href="https://shadowcontext.com/openjdk-26-update-needs-runtime-line-proof/">OpenJDK 26 Update Needs Runtime-Line Proof</a>
+    </li>
+
+    <li>
+      <span>18</span>
+      <a href="https://shadowcontext.com/ubuntu-libssh-fixes-need-package-and-process-proof/">Ubuntu libssh Fixes Need Package and Process Proof</a>
+    </li>
+
+    <li>
+      <span>19</span>
+      <a href="https://shadowcontext.com/freerdp-update-needs-client-and-library-proof/">FreeRDP Update Needs Client and Library-Level Proof</a>
+    </li>
+
+    <li>
+      <span>20</span>
+      <a href="https://shadowcontext.com/ubuntu-bind-update-needs-resolver-proof/">Ubuntu’s BIND Update Needs Resolver-Level Proof</a>
+    </li>
+
+    <li>
+      <span>21</span>
+      <a href="https://shadowcontext.com/ubuntu-coreutils-update-needs-pipeline-boundaries/">Ubuntu Coreutils Fixes Need Pipeline Boundaries</a>
+    </li>
+
+    <li>
+      <span>22</span>
+      <a href="https://shadowcontext.com/ubuntu-udisks-fix-needs-caller-identity-proof/">Ubuntu UDisks Fix Needs Caller-Identity Proof</a>
+    </li></ol>
+      </section>
+
+      <div class="cta">
+        <strong>Read the full analysis</strong>
+        <span>https://shadowcontext.com/</span>
+      </div>
+
+      <footer class="document-footer">
+        <span>ShadowContext</span>
+        <span>Independent defensive security intelligence</span>
+      </footer>
+    </section>
+  </body>
+</html>

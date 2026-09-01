@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-09-01T09:55:29.859+04:00",
+  "digestDate": "2026-08-31",
+  "digestHash": "e1e3ff99a03169bdc2ebef99b14d7f6b9cb49d2ea9daceb8f12e751232c695f4",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "Daily Security News Digest: Updates, Boundary Proofs, and Fixes",
+  "articleCount": 22,
+  "sourceArticles": [
+    {
+      "title": "Rodauth WebAuthn Fix Needs Account-Binding Proof",
+      "canonicalUrl": "https://shadowcontext.com/rodauth-webauthn-fix-needs-account-binding-proof/",
+      "publishedAt": "2026-08-31T00:09:33.000+04:00",
+      "category": "defense",
+      "sourceHash": "fb38df08babfa92adb1df6c4848792101509e4efc86fa6680d7003aafd47b6be"
+    },
+    {
+      "title": "Jina Reader SSRF Makes Egress Control the Critical Boundary",
+      "canonicalUrl": "https://shadowcontext.com/jina-reader-ssrf-needs-egress-boundaries/",
+      "publishedAt": "2026-08-31T01:09:03.000+04:00",
+      "category": "defense",
+      "sourceHash": "974a744dd778b3f30c34dca160bb1c5d86d003d7586e205286bc8ab24b3c3d00"
+    },
+    {
+      "title": "New Argo CD IPS Coverage Is a Backstop, Not a Patch",
+      "canonicalUrl": "https://shadowcontext.com/argocd-ips-coverage-is-a-backstop/",
+      "publishedAt": "2026-08-31T02:09:12.000+04:00",
+      "category": "defense",
+      "sourceHash": "7acded533acbc251b0c81de5d3e31b0683af4e490fcde1da74568f342dea7550"
+    },
+    {
+      "title": "NextChat API Key Flaw Needs Destination Proof",
+      "canonicalUrl": "https://shadowcontext.com/nextchat-api-key-flaw-needs-destination-proof/",
+      "publishedAt": "2026-08-31T03:09:35.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "ba832d151451dd5cccc97b9c8678aeaaf375bb496afffbbf85b98ca5301cdcfb"
+    },
+    {
+      "title": "Browser Agent API Keys Need a Storage Boundary",
+      "canonicalUrl": "https://shadowcontext.com/browser-agent-api-keys-need-storage-boundaries/",
+      "publishedAt": "2026-08-31T04:08:13.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "924e7e2987b3ec3b693b0e9432af0cc3bb88f246edad0f06f0640c5b9b1f86e6"
+    },
+    {
+      "title": "Browser Extension Trust Needs Continuous Review",
+      "canonicalUrl": "https://shadowcontext.com/browser-extension-trust-needs-continuous-review/",
+      "publishedAt": "2026-08-31T05:09:33.000+04:00",
+      "category": "threat-intelligence",
+      "sourceHash": "728763e1fdfa87395f341a61e271b14d9503ca22b7310d88b653000e0df8e1cf"
+    },
+    {
+      "title": "SiYuan Rendering Fixes Need Regression Proof",
+      "canonicalUrl": "https://shadowcontext.com/siyuan-rendering-fixes-need-regression-proof/",
+      "publishedAt": "2026-08-31T06:09:47.000+04:00",
+      "category": "defense",
+      "sourceHash": "4435913f6ca8fa9b9b96d43ede0c8100f95ba4d076356c6396652fe8e4a425ac"
+    },
+    {
+      "title": "Admidio Fix Needs Query-Boundary Proof",
+      "canonicalUrl": "https://shadowcontext.com/admidio-fix-needs-query-boundary-proof/",
+      "publishedAt": "2026-08-31T07:09:43.000+04:00",
+      "category": "defense",
+      "sourceHash": "a8550a807bb5aec6c00f5d9d7a0672f60bb1e868e0e6699a480b3d880bb59326"
+    },
+    {
+      "title": "AshGraphql fix needs runtime error proof",
+      "canonicalUrl": "https://shadowcontext.com/ashgraphql-fix-needs-runtime-error-proof/",
+      "publishedAt": "2026-08-31T08:10:04.000+04:00",
+      "category": "defense",
+      "sourceHash": "d30bc1d5591a058ab02b598043af74f5c30e3316a240b9a50e6255283f0d3f98"
+    },
+    {
+      "title": "AshAI Runtime Prompts Need a Code Boundary",
+      "canonicalUrl": "https://shadowcontext.com/ashai-runtime-prompts-need-a-code-boundary/",
+      "publishedAt": "2026-08-31T09:09:39.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "a4f548c5fc391913afdabe7b781f3d5565d99e23d232467da8c6a3e65d4b1d61"
+    },
+    {
+      "title": "Debian’s Starlette Fix Needs Request-Path and Package Proof",
+      "canonicalUrl": "https://shadowcontext.com/starlette-update-needs-request-path-and-package-proof/",
+      "publishedAt": "2026-08-31T10:10:28.000+04:00",
+      "category": "defense",
+      "sourceHash": "17044422229519647815c4269fc1b30ac839b3687b0939ace65159b8b03b79d8"
+    },
+    {
+      "title": "AshAdmin Cookie Fix Needs Domain-Boundary Proof",
+      "canonicalUrl": "https://shadowcontext.com/ashadmin-cookie-fix-needs-domain-boundaries/",
+      "publishedAt": "2026-08-31T11:10:23.000+04:00",
+      "category": "defense",
+      "sourceHash": "81bc5681c5e3d74a517c6970d4ca7f8b9a7e77a97e7e09843ae18726e92dcd77"
+    },
+    {
+      "title": "AshAI MCP Fix Restores the Browser-to-Tool Boundary",
+      "canonicalUrl": "https://shadowcontext.com/ashai-mcp-needs-origin-boundaries/",
+      "publishedAt": "2026-08-31T12:10:51.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "5bc2f432697c1264d81ef94608f4db3be1eb2dff13edfa3775bbebca511b62f3"
+    },
+    {
+      "title": "Red Hat’s osbuild Update Needs Canonicalization Proof",
+      "canonicalUrl": "https://shadowcontext.com/red-hat-osbuild-update-needs-canonicalization-proof/",
+      "publishedAt": "2026-08-31T13:14:08.000+04:00",
+      "category": "defense",
+      "sourceHash": "6786e28cca23a904719de938f3169326ecf7b03c55fdc5bdcc33df0ea9fc18ba"
+    },
+    {
+      "title": "AshPostgres Tenant Renames Must Fail Closed",
+      "canonicalUrl": "https://shadowcontext.com/ashpostgres-tenant-renames-must-fail-closed/",
+      "publishedAt": "2026-08-31T15:11:41.000+04:00",
+      "category": "defense",
+      "sourceHash": "8fd6112beb6fe6a7f696dbfce0480bf1849606e2fc8fb96d2b4867adf2be97dc"
+    },
+    {
+      "title": "Undertow WebSockets Need Resource Boundaries Before a Fix Lands",
+      "canonicalUrl": "https://shadowcontext.com/undertow-websockets-need-resource-boundaries/",
+      "publishedAt": "2026-08-31T16:17:28.000+04:00",
+      "category": "defense",
+      "sourceHash": "b64bb617f0a980ed86e39098507ceb9dc8c4353171781a0489ab220a677a9249"
+    },
+    {
+      "title": "OpenJDK 26 Update Needs Runtime-Line Proof",
+      "canonicalUrl": "https://shadowcontext.com/openjdk-26-update-needs-runtime-line-proof/",
+      "publishedAt": "2026-08-31T18:11:38.000+04:00",
+      "category": "defense",
+      "sourceHash": "b4df3e7f2a27a1eb9007876f68ceb78a9e5cd0e506994d1454e7ac4346c92a65"
+    },
+    {
+      "title": "Ubuntu libssh Fixes Need Package and Process Proof",
+      "canonicalUrl": "https://shadowcontext.com/ubuntu-libssh-fixes-need-package-and-process-proof/",
+      "publishedAt": "2026-08-31T19:11:00.000+04:00",
+      "category": "defense",
+      "sourceHash": "c4ba41072ddeec19eb5ceb191ec97ced554b61655b5b3e961ef037bfa3d3765a"
+    },
+    {
+      "title": "FreeRDP Update Needs Client and Library-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/freerdp-update-needs-client-and-library-proof/",
+      "publishedAt": "2026-08-31T20:11:57.000+04:00",
+      "category": "defense",
+      "sourceHash": "d01ffe4db1392cb283b6498e38da15cef033cf2d89e8acf3e6ec8992082b9896"
+    },
+    {
+      "title": "Ubuntu’s BIND Update Needs Resolver-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/ubuntu-bind-update-needs-resolver-proof/",
+      "publishedAt": "2026-08-31T21:12:59.000+04:00",
+      "category": "defense",
+      "sourceHash": "b5a375ff3d2b78938399c46a80bb0dda7ef106b61da7ca3d2ea96815cf24091d"
+    },
+    {
+      "title": "Ubuntu Coreutils Fixes Need Pipeline Boundaries",
+      "canonicalUrl": "https://shadowcontext.com/ubuntu-coreutils-update-needs-pipeline-boundaries/",
+      "publishedAt": "2026-08-31T22:09:57.000+04:00",
+      "category": "defense",
+      "sourceHash": "bbb686b827fc3632db4178a8e84c41cf3e067ea7e34115be877ed86dcbce8acb"
+    },
+    {
+      "title": "Ubuntu UDisks Fix Needs Caller-Identity Proof",
+      "canonicalUrl": "https://shadowcontext.com/ubuntu-udisks-fix-needs-caller-identity-proof/",
+      "publishedAt": "2026-08-31T23:11:49.000+04:00",
+      "category": "defense",
+      "sourceHash": "63e0322e8104448dc545454b16664907fed4dadf24d3b89d6a3069143815b201"
+    }
+  ],
+  "caption": "Review comprehensive independent defensive summaries and operational guidance across recent security advisories.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-08-31/e1e3ff99a03169bd/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-31/e1e3ff99a03169bd/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-08-31/e1e3ff99a03169bd/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-08-31/e1e3ff99a03169bd/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}

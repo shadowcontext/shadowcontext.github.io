@@ -1,0 +1,168 @@
+{
+  "digest_title": "Daily Security News Digest: Updates, Boundary Proofs, and Fixes",
+  "dek": "ShadowContext examines critical security advisories, AI framework vulnerabilities, dependency updates, and defensive infrastructure controls.",
+  "overview": "Today's publication reviews 22 independent security advisories spanning authentication frameworks, cloud infrastructure, AI interfaces, browser extensions, and operating system packages, emphasizing the necessity of deployment proof and strict validation boundaries.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "Rodauth WebAuthn Fix Needs Account-Binding Proof",
+      "summary": "Rodauth before 2.46.0 allowed logged-in users to authenticate as another account via WebAuthn, requiring verification and updates.",
+      "why_it_matters": "Credential verification must remain indivisible from correct account selection to prevent authentication bypass.",
+      "topic": "Rodauth WebAuthn Security"
+    },
+    {
+      "source_id": "S02",
+      "headline": "Jina Reader SSRF Makes Egress Control Critical",
+      "summary": "CVE-2026-82638 exposes an SSRF risk in self-hosted Jina Reader, making egress filtering an immediate priority.",
+      "why_it_matters": "URL readers crossing trust boundaries need strict network enforcement to block internal resource access.",
+      "topic": "Jina Reader SSRF"
+    },
+    {
+      "source_id": "S03",
+      "headline": "New Argo CD IPS Coverage Is a Backstop",
+      "summary": "New IPS coverage flags Argo CD secret exposure attempts, but teams still need patched versions and least privilege.",
+      "why_it_matters": "Signature detection is a useful backstop, but upgrading software and restricting reader access remain essential.",
+      "topic": "Argo CD IPS"
+    },
+    {
+      "source_id": "S04",
+      "headline": "NextChat API Key Flaw Needs Destination Proof",
+      "summary": "CVE-2026-82639 in NextChat highlights improper input validation where substring matching allowed improper key attachment.",
+      "why_it_matters": "Proxies must validate canonical destinations against explicit policy before injecting provider credentials.",
+      "topic": "NextChat API Key"
+    },
+    {
+      "source_id": "S05",
+      "headline": "Browser Agent API Keys Need Storage Boundaries",
+      "summary": "CVE-2026-82640 reveals browser-use web-ui stores LLM API keys in plaintext, necessitating strict local access controls.",
+      "why_it_matters": "Persistent configuration states must separate sensitive credentials from ordinary agent settings.",
+      "topic": "Browser Agent Storage"
+    },
+    {
+      "source_id": "S06",
+      "headline": "Browser Extension Trust Needs Continuous Review",
+      "summary": "Research into malicious Chrome and Edge extensions shows previously clean products can receive dangerous updates.",
+      "why_it_matters": "Continuous inventory and identifier-based monitoring are vital as legitimate extension ownership changes.",
+      "topic": "Browser Extension Security"
+    },
+    {
+      "source_id": "S07",
+      "headline": "SiYuan Rendering Fixes Need Regression Proof",
+      "summary": "SiYuan before 3.8.1 contains stored rendering flaws permitting active HTML execution, requiring immediate upgrades.",
+      "why_it_matters": "Output safety must remain default and intact across refactoring and subsequent code updates.",
+      "topic": "SiYuan Rendering Flaws"
+    },
+    {
+      "source_id": "S08",
+      "headline": "Admidio Fix Needs Query-Boundary Proof",
+      "summary": "CVE-2026-82655 introduces a blind SQL injection risk in Admidio before 5.0.12, requiring prompt patching and validation.",
+      "why_it_matters": "Authorization and query construction must be tested as a single path from request to database.",
+      "topic": "Admidio SQL Injection"
+    },
+    {
+      "source_id": "S09",
+      "headline": "AshGraphql Fix Needs Runtime Error Proof",
+      "summary": "AshGraphql 1.11.0 resolves Relay-node error handling issues, requiring updated versions and controlled failure responses.",
+      "why_it_matters": "Malicious or malformed inputs must yield bounded, observable, and non-revealing outcomes.",
+      "topic": "AshGraphql Error Handling"
+    },
+    {
+      "source_id": "S10",
+      "headline": "AshAI Runtime Prompts Need Code Boundary",
+      "summary": "AshAI 1.0.0 addresses a code injection flaw by separating runtime prompt content from EEx template evaluation.",
+      "why_it_matters": "Untrusted request text must remain data rather than being evaluated as executable code.",
+      "topic": "AshAI Code Injection"
+    },
+    {
+      "source_id": "S11",
+      "headline": "Debian Starlette Fix Needs Request-Path Proof",
+      "summary": "Debian addresses Starlette vulnerabilities affecting authorization dispatch and request URL validation.",
+      "why_it_matters": "Framework controls must be enforced consistently across every processed request path.",
+      "topic": "Debian Starlette Update"
+    },
+    {
+      "source_id": "S12",
+      "headline": "AshAdmin Cookie Fix Needs Domain Boundaries",
+      "summary": "AshAdmin 1.3.1 resolves cookie-name shadowing vulnerabilities, preventing sibling subdomains from altering sessions.",
+      "why_it_matters": "Exact name parsing and strict domain boundaries protect administrative session contexts.",
+      "topic": "AshAdmin Cookie Security"
+    },
+    {
+      "source_id": "S13",
+      "headline": "AshAI MCP Fix Restores Browser-to-Tool Boundary",
+      "summary": "AshAI 1.0.0 fixes an origin validation flaw in its MCP server, requiring explicit allowedOrigins configurations.",
+      "why_it_matters": "Local server bindings require declared origin policies rather than inferred request metadata.",
+      "topic": "AshAI MCP Origin"
+    },
+    {
+      "source_id": "S14",
+      "headline": "Red Hat osbuild Update Needs Canonicalization",
+      "summary": "Red Hat updates osbuild-composer to address upstream Go gRPC and IDNA canonicalization flaws.",
+      "why_it_matters": "Authorization layers must inspect the exact canonical representation consumed downstream.",
+      "topic": "Red Hat osbuild"
+    },
+    {
+      "source_id": "S15",
+      "headline": "AshPostgres Tenant Renames Must Fail Closed",
+      "summary": "AshPostgres 2.13.0 fixes schema rename handling so failed database transactions correctly roll back.",
+      "why_it_matters": "Infrastructure rejections must never be treated as successful application state transitions.",
+      "topic": "AshPostgres Tenant Security"
+    },
+    {
+      "source_id": "S16",
+      "headline": "Undertow WebSockets Need Resource Boundaries",
+      "summary": "CVE-2026-81624 exposes resource consumption risks in Undertow WebSockets requiring compensating limits.",
+      "why_it_matters": "Applications require explicit external resource limits until supported vendor updates arrive.",
+      "topic": "Undertow WebSockets"
+    },
+    {
+      "source_id": "S17",
+      "headline": "OpenJDK 26 Update Needs Runtime-Line Proof",
+      "summary": "Ubuntu addresses multiple Java component vulnerabilities in OpenJDK 26, requiring verified workload restarts.",
+      "why_it_matters": "Fleet-wide assurance demands confirming specific runtime versions and active process execution.",
+      "topic": "OpenJDK 26 Update"
+    },
+    {
+      "source_id": "S18",
+      "headline": "Ubuntu libssh Fixes Need Process Proof",
+      "summary": "Ubuntu libssh updates patch multiple buffer overflow and cryptographic verification vulnerabilities.",
+      "why_it_matters": "Package updates must be verified alongside active library mapping in running workloads.",
+      "topic": "Ubuntu libssh Security"
+    },
+    {
+      "source_id": "S19",
+      "headline": "FreeRDP Update Needs Client and Library Proof",
+      "summary": "Ubuntu ships FreeRDP 3.31.0 security updates addressing memory and remote execution issues.",
+      "why_it_matters": "Remote desktop protocols require verifying client binaries, shared libraries, and process states.",
+      "topic": "FreeRDP Update"
+    },
+    {
+      "source_id": "S20",
+      "headline": "Ubuntu BIND Update Needs Resolver Proof",
+      "summary": "Ubuntu fixes a BIND DNSSEC validation vulnerability that could cause resolver crashes.",
+      "why_it_matters": "Resolver resilience requires active process monitoring alongside package upgrades.",
+      "topic": "Ubuntu BIND DNS"
+    },
+    {
+      "source_id": "S21",
+      "headline": "Ubuntu Coreutils Fixes Need Pipeline Boundaries",
+      "summary": "Ubuntu addresses memory-read flaws in sort and uniq, requiring strict caller-option boundaries.",
+      "why_it_matters": "Automation pipelines must prevent external data from altering command-line options.",
+      "topic": "Ubuntu Coreutils"
+    },
+    {
+      "source_id": "S22",
+      "headline": "Ubuntu UDisks Fix Needs Caller-Identity Proof",
+      "summary": "Ubuntu fixes CVE-2026-7867 in udisks2, requiring package verification and system reboots.",
+      "why_it_matters": "Delegated mounting actions require strict validation of caller identity and policy constraints.",
+      "topic": "Ubuntu UDisks Security"
+    }
+  ],
+  "operating_view": "Maintain strict provenance across package repositories, verify active process runtimes rather than relying solely on file state, and enforce explicit network and identity boundaries across all integrated application pipelines.",
+  "watch_items": [
+    "Verify that deployed packages match distribution-specific backports rather than generic upstream version strings.",
+    "Ensure runtime environments reflect applied updates by restarting active processes and containers.",
+    "Validate that authorization policies and input validators operate on canonical request representations."
+  ],
+  "caption_intro": "Review comprehensive independent defensive summaries and operational guidance across recent security advisories."
+}
