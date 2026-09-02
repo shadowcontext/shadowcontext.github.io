@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Protected desk-phone fleet and restricted web access</title>
+  <desc id="desc">Abstract desk phones sit behind layered blue access boundaries while an amber network connection is stopped outside the protected fleet.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071526"/>
+      <stop offset="0.52" stop-color="#0b2942"/>
+      <stop offset="1" stop-color="#06111f"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="62%" cy="46%" r="58%">
+      <stop offset="0" stop-color="#2ab8d0" stop-opacity="0.24"/>
+      <stop offset="0.55" stop-color="#1882a4" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#071526" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="barrier" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#45d9e8" stop-opacity="0.16"/>
+      <stop offset="0.48" stop-color="#6ce8f2" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#278bad" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="phone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c9f6f7"/>
+      <stop offset="1" stop-color="#4995ad"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffb247" stop-opacity="0"/>
+      <stop offset="0.7" stop-color="#ffb247"/>
+      <stop offset="1" stop-color="#ffd28a"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#020a12" flood-opacity="0.55"/>
+    </filter>
+    <g id="deskphone">
+      <path d="M44 62 C58 35 87 20 120 20 H220 C253 20 282 35 296 62 L270 90 C257 75 240 68 218 68 H122 C100 68 83 75 70 90 Z" fill="url(#phone)"/>
+      <rect x="76" y="78" width="188" height="178" rx="24" fill="#123a51" stroke="#6ad6df" stroke-width="4"/>
+      <rect x="112" y="105" width="116" height="62" rx="10" fill="#071b2d" stroke="#3c849c" stroke-width="3"/>
+      <g fill="#75d5dc" opacity="0.78">
+        <circle cx="126" cy="195" r="7"/><circle cx="170" cy="195" r="7"/><circle cx="214" cy="195" r="7"/>
+        <circle cx="126" cy="224" r="7"/><circle cx="170" cy="224" r="7"/><circle cx="214" cy="224" r="7"/>
+      </g>
+      <path d="M44 62 L70 90 C53 105 36 102 24 88 C15 77 19 65 44 62 Z" fill="#8de5e8"/>
+      <path d="M296 62 L270 90 C287 105 304 102 316 88 C325 77 321 65 296 62 Z" fill="#8de5e8"/>
+      <path d="M95 256 H245 L278 292 H62 Z" fill="#2c7189"/>
+    </g>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <g opacity="0.22" fill="none" stroke="#4aa9bd" stroke-width="2">
+    <path d="M90 154 C350 36 590 77 784 205 S1207 360 1518 160"/>
+    <path d="M72 726 C312 598 540 617 751 733 S1205 854 1517 697"/>
+    <circle cx="1328" cy="176" r="96"/><circle cx="1328" cy="176" r="142"/>
+  </g>
+  <ellipse cx="1030" cy="757" rx="455" ry="74" fill="#020a12" opacity="0.55" filter="url(#soft)"/>
+  <g filter="url(#shadow)">
+    <g transform="translate(720 190) scale(0.92)"><use href="#deskphone"/></g>
+    <g transform="translate(1010 290) scale(0.74)" opacity="0.9"><use href="#deskphone"/></g>
+    <g transform="translate(735 500) scale(0.68)" opacity="0.8"><use href="#deskphone"/></g>
+  </g>
+  <path d="M590 90 C680 173 696 279 674 390 C648 521 655 675 744 808" fill="none" stroke="#1d6886" stroke-width="54" opacity="0.35"/>
+  <path d="M606 82 C690 177 705 282 683 393 C657 523 665 666 755 814" fill="none" stroke="url(#barrier)" stroke-width="12"/>
+  <path d="M622 84 C700 180 715 287 693 397 C668 520 677 657 768 808" fill="none" stroke="#b9f9f6" stroke-width="3" opacity="0.82"/>
+  <g fill="none" stroke="url(#amber)" stroke-linecap="round">
+    <path d="M70 375 C228 375 331 385 517 385" stroke-width="16"/>
+    <path d="M103 430 C266 430 360 430 530 430" stroke-width="7" opacity="0.66"/>
+    <path d="M165 320 C303 320 390 333 518 350" stroke-width="5" opacity="0.48"/>
+  </g>
+  <circle cx="553" cy="386" r="58" fill="#102a3d" stroke="#ffbd59" stroke-width="9"/>
+  <path d="M525 386 H581" stroke="#ffd38b" stroke-width="10" stroke-linecap="round"/>
+  <g fill="#78dce3" opacity="0.72">
+    <circle cx="878" cy="245" r="8"/><circle cx="1157" cy="359" r="7"/><circle cx="876" cy="559" r="6"/>
+  </g>
+  <g fill="none" stroke="#5ac5d2" stroke-width="3" opacity="0.4">
+    <path d="M885 245 C961 229 1034 249 1092 300"/>
+    <path d="M885 559 C969 540 1024 493 1073 443"/>
+  </g>
+  <rect x="46" y="46" width="1508" height="808" rx="34" fill="none" stroke="#7bd9e1" stroke-opacity="0.13" stroke-width="2"/>
+</svg>
