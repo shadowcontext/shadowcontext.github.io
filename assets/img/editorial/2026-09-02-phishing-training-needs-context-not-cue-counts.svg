@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Phishing cues moving toward a protected reporting channel</title>
+  <desc id="desc">Abstract email cards carrying varied visual warning cues flow through contextual layers toward a shielded reporting control.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071628"/>
+      <stop offset="0.55" stop-color="#102c43"/>
+      <stop offset="1" stop-color="#07131f"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#54e2cf" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#54e2cf" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e8fbff" stop-opacity="0.94"/>
+      <stop offset="1" stop-color="#8bc6d5" stop-opacity="0.72"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8ff7e4"/>
+      <stop offset="1" stop-color="#1a8ea1"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="18" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="20" stdDeviation="18" flood-color="#020911" flood-opacity="0.55"/>
+    </filter>
+    <pattern id="grain" width="52" height="52" patternUnits="userSpaceOnUse">
+      <circle cx="7" cy="9" r="1" fill="#caeff5" opacity="0.08"/>
+      <circle cx="38" cy="29" r="1.2" fill="#caeff5" opacity="0.05"/>
+      <circle cx="18" cy="45" r="0.8" fill="#ffffff" opacity="0.06"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grain)"/>
+  <ellipse cx="1180" cy="455" rx="430" ry="390" fill="url(#aura)"/>
+  <ellipse cx="440" cy="455" rx="390" ry="330" fill="#d75c79" opacity="0.08"/>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M160 282 C470 190 658 300 877 398 C1014 459 1076 463 1156 451" stroke="#69d8de" stroke-width="3" opacity="0.24"/>
+    <path d="M132 445 C390 392 615 470 849 460 C991 454 1073 447 1155 451" stroke="#c4fbf2" stroke-width="4" opacity="0.3"/>
+    <path d="M169 625 C432 690 640 578 862 506 C993 463 1075 457 1155 451" stroke="#ef7891" stroke-width="3" opacity="0.22"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <g transform="translate(215 210) rotate(-7 170 112)">
+      <rect width="340" height="224" rx="24" fill="url(#card)" stroke="#d9fbff" stroke-width="2"/>
+      <path d="M32 54 L170 143 L308 54" fill="none" stroke="#34798c" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="0.72"/>
+      <circle cx="290" cy="37" r="18" fill="#ef6f87"/>
+      <path d="M290 27 V40 M290 49 V50" stroke="#fff4f6" stroke-width="5" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(310 515) rotate(5 156 102)">
+      <rect width="312" height="204" rx="22" fill="url(#card)" stroke="#d9fbff" stroke-width="2"/>
+      <path d="M30 50 L156 132 L282 50" fill="none" stroke="#34798c" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+      <path d="M54 168 H181" stroke="#ef7891" stroke-width="9" stroke-linecap="round" opacity="0.74"/>
+      <path d="M205 168 H257" stroke="#34798c" stroke-width="9" stroke-linecap="round" opacity="0.4"/>
+    </g>
+    <g transform="translate(625 282) rotate(7 150 98)">
+      <rect width="300" height="196" rx="22" fill="url(#card)" stroke="#d9fbff" stroke-width="2"/>
+      <path d="M29 48 L150 127 L271 48" fill="none" stroke="#34798c" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+      <circle cx="55" cy="158" r="10" fill="#f5b965"/>
+      <circle cx="88" cy="158" r="10" fill="#ef7891"/>
+      <circle cx="121" cy="158" r="10" fill="#52c9d7"/>
+    </g>
+  </g>
+
+  <g opacity="0.48" fill="none" stroke="#83e7e2">
+    <ellipse cx="1020" cy="450" rx="210" ry="285" stroke-width="3"/>
+    <ellipse cx="1062" cy="450" rx="154" ry="222" stroke-width="4"/>
+    <path d="M895 254 C969 336 971 565 902 641" stroke-width="2" stroke-dasharray="8 16"/>
+  </g>
+
+  <g transform="translate(1135 270)" filter="url(#glow)">
+    <path d="M180 0 C277 35 330 45 330 135 C330 269 265 347 180 386 C95 347 30 269 30 135 C30 45 83 35 180 0Z" fill="url(#shield)" stroke="#cefff7" stroke-width="5"/>
+    <rect x="92" y="105" width="176" height="132" rx="17" fill="#08263a" stroke="#d5fff8" stroke-width="4"/>
+    <path d="M107 128 L180 181 L253 128" fill="none" stroke="#8ff7e4" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M134 276 L168 309 L230 244" fill="none" stroke="#e8fffb" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g fill="#c8fff8">
+    <circle cx="1000" cy="239" r="5" opacity="0.55"/>
+    <circle cx="1052" cy="333" r="8" opacity="0.38"/>
+    <circle cx="1035" cy="565" r="6" opacity="0.46"/>
+    <circle cx="973" cy="655" r="4" opacity="0.55"/>
+  </g>
+</svg>
