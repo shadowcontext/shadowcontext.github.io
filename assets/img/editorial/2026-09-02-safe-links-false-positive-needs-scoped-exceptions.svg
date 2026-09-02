@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Scoped review of a false link-security signal</title>
+  <desc id="desc">Abstract blue link forms flow through a luminous scanning ring while one amber signal is isolated inside a smaller review halo.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07162b"/>
+      <stop offset="0.55" stop-color="#0a2740"/>
+      <stop offset="1" stop-color="#07121f"/>
+    </linearGradient>
+    <radialGradient id="field" cx="52%" cy="48%" r="58%">
+      <stop offset="0" stop-color="#1ba7c9" stop-opacity="0.2"/>
+      <stop offset="0.55" stop-color="#106080" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#07162b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="linkBlue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#69e1ee"/>
+      <stop offset="1" stop-color="#2380b8"/>
+    </linearGradient>
+    <linearGradient id="linkDeep" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2b9bc8"/>
+      <stop offset="1" stop-color="#155078"/>
+    </linearGradient>
+    <radialGradient id="amber" cx="38%" cy="30%" r="70%">
+      <stop offset="0" stop-color="#ffd78a"/>
+      <stop offset="0.55" stop-color="#efa742"/>
+      <stop offset="1" stop-color="#b45c24"/>
+    </radialGradient>
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="smallGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <pattern id="grain" width="88" height="88" patternUnits="userSpaceOnUse">
+      <circle cx="9" cy="14" r="1" fill="#c8f4ff" opacity="0.10"/>
+      <circle cx="62" cy="35" r="1.2" fill="#c8f4ff" opacity="0.07"/>
+      <circle cx="31" cy="76" r="0.8" fill="#c8f4ff" opacity="0.08"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#field)"/>
+  <rect width="1600" height="900" fill="url(#grain)"/>
+  <path d="M-80 680 C260 530 455 620 720 500 S1170 235 1680 330" fill="none" stroke="#40b5cf" stroke-opacity="0.09" stroke-width="120"/>
+  <path d="M-80 680 C260 530 455 620 720 500 S1170 235 1680 330" fill="none" stroke="#7de4ec" stroke-opacity="0.18" stroke-width="3"/>
+
+  <g transform="translate(785 445)">
+    <circle r="238" fill="none" stroke="#3bd2de" stroke-opacity="0.12" stroke-width="52" filter="url(#softGlow)"/>
+    <circle r="214" fill="#09263b" fill-opacity="0.34" stroke="#78e9ed" stroke-opacity="0.58" stroke-width="5"/>
+    <circle r="181" fill="none" stroke="#3b9ebd" stroke-opacity="0.32" stroke-width="2" stroke-dasharray="8 16"/>
+    <path d="M-198 -79 A214 214 0 0 1 -84 -197" fill="none" stroke="#b0fbf5" stroke-width="12" stroke-linecap="round" opacity="0.75"/>
+    <path d="M183 111 A214 214 0 0 1 86 196" fill="none" stroke="#219dc2" stroke-width="8" stroke-linecap="round" opacity="0.7"/>
+  </g>
+
+  <g transform="translate(170 570) rotate(-18)">
+    <rect x="0" y="0" width="250" height="126" rx="63" fill="none" stroke="url(#linkDeep)" stroke-width="34"/>
+    <rect x="178" y="0" width="250" height="126" rx="63" fill="none" stroke="url(#linkBlue)" stroke-width="34"/>
+  </g>
+  <g transform="translate(495 480) rotate(-18)" opacity="0.94">
+    <rect x="0" y="0" width="230" height="116" rx="58" fill="none" stroke="url(#linkDeep)" stroke-width="30"/>
+    <rect x="162" y="0" width="230" height="116" rx="58" fill="none" stroke="url(#linkBlue)" stroke-width="30"/>
+  </g>
+  <g transform="translate(890 342) rotate(-18)">
+    <rect x="0" y="0" width="240" height="120" rx="60" fill="none" stroke="url(#linkDeep)" stroke-width="31"/>
+    <rect x="170" y="0" width="240" height="120" rx="60" fill="none" stroke="url(#linkBlue)" stroke-width="31"/>
+  </g>
+  <g transform="translate(1218 238) rotate(-18)" opacity="0.82">
+    <rect x="0" y="0" width="222" height="111" rx="56" fill="none" stroke="url(#linkDeep)" stroke-width="28"/>
+    <rect x="154" y="0" width="222" height="111" rx="56" fill="none" stroke="url(#linkBlue)" stroke-width="28"/>
+  </g>
+
+  <g transform="translate(1015 618)">
+    <circle r="142" fill="#f0a63f" opacity="0.10" filter="url(#softGlow)"/>
+    <circle r="111" fill="#0a2032" fill-opacity="0.92" stroke="#f4b856" stroke-opacity="0.72" stroke-width="4"/>
+    <circle r="87" fill="none" stroke="#f8c76d" stroke-opacity="0.42" stroke-width="2" stroke-dasharray="5 12"/>
+    <circle r="28" fill="url(#amber)"/>
+    <circle r="43" fill="none" stroke="#ffd580" stroke-opacity="0.38" stroke-width="8" filter="url(#smallGlow)"/>
+    <path d="M-75 -78 L-97 -101 M75 78 L97 101 M75 -78 L97 -101 M-75 78 L-97 101" stroke="#ffd27a" stroke-width="5" stroke-linecap="round" opacity="0.55"/>
+  </g>
+
+  <g fill="#b9f6f5">
+    <circle cx="294" cy="250" r="4" opacity="0.42"/>
+    <circle cx="382" cy="195" r="2.5" opacity="0.32"/>
+    <circle cx="1282" cy="628" r="3" opacity="0.36"/>
+    <circle cx="1380" cy="572" r="5" opacity="0.22"/>
+    <circle cx="1188" cy="740" r="2.5" opacity="0.4"/>
+  </g>
+  <path d="M985 483 C1026 512 1046 533 1053 565" fill="none" stroke="#f3bd62" stroke-width="3" stroke-dasharray="7 12" opacity="0.62"/>
+</svg>
