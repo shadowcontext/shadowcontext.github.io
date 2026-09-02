@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Guarded biomedical signal file boundary</title>
+  <desc id="desc">Abstract cyan and coral biomedical waveforms approach a luminous file-shaped boundary, with approved signals continuing into an isolated analysis chamber.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="0.52" stop-color="#102238"/>
+      <stop offset="1" stop-color="#17172a"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#51e5d5" stop-opacity="0.32"/>
+      <stop offset="0.52" stop-color="#269cab" stop-opacity="0.11"/>
+      <stop offset="1" stop-color="#07111f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c8fff7" stop-opacity="0.28"/>
+      <stop offset="0.48" stop-color="#3ac7bd" stop-opacity="0.13"/>
+      <stop offset="1" stop-color="#17344a" stop-opacity="0.5"/>
+    </linearGradient>
+    <linearGradient id="signal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5b819f" stop-opacity="0.35"/>
+      <stop offset="0.42" stop-color="#77f4df"/>
+      <stop offset="1" stop-color="#d2fff7"/>
+    </linearGradient>
+    <linearGradient id="rejected" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffcf7a"/>
+      <stop offset="0.48" stop-color="#f07c72"/>
+      <stop offset="1" stop-color="#592a43" stop-opacity="0.15"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="42"/>
+    </filter>
+    <pattern id="grain" width="48" height="48" patternUnits="userSpaceOnUse">
+      <circle cx="7" cy="10" r="1" fill="#e5fffb" opacity="0.045"/>
+      <circle cx="34" cy="30" r="0.8" fill="#e5fffb" opacity="0.04"/>
+      <circle cx="16" cy="42" r="0.6" fill="#e5fffb" opacity="0.035"/>
+    </pattern>
+    <clipPath id="fileWindow">
+      <path d="M625 170 H875 L1015 310 V720 H625 Z"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <ellipse cx="875" cy="446" rx="610" ry="420" fill="url(#halo)"/>
+  <circle cx="255" cy="175" r="170" fill="#2b6f8d" opacity="0.12" filter="url(#soft)"/>
+  <circle cx="1330" cy="715" r="220" fill="#7b385d" opacity="0.12" filter="url(#soft)"/>
+
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M45 292 H150 L180 250 L213 346 L250 190 L292 408 L330 290 H430 L461 258 L493 325 L530 292 H624" stroke="url(#signal)" stroke-width="9" opacity="0.88"/>
+    <path d="M45 452 H130 L160 425 L194 485 L230 375 L270 538 L309 450 H390 L425 412 L463 495 L504 451 H624" stroke="url(#signal)" stroke-width="12"/>
+    <path d="M45 610 H142 L178 574 L214 663 L251 520 L292 707 L334 610 H413 L451 580 L486 642 L528 610 H624" stroke="url(#rejected)" stroke-width="9" opacity="0.9"/>
+  </g>
+
+  <g opacity="0.6" fill="#7af2df">
+    <circle cx="88" cy="292" r="6"/><circle cx="344" cy="290" r="4"/><circle cx="520" cy="292" r="5"/>
+    <circle cx="92" cy="452" r="5"/><circle cx="344" cy="450" r="6"/><circle cx="540" cy="451" r="4"/>
+  </g>
+
+  <path d="M625 170 H875 L1015 310 V720 H625 Z" fill="url(#glass)" stroke="#83ecde" stroke-width="4"/>
+  <path d="M875 170 V310 H1015" fill="#153149" stroke="#83ecde" stroke-width="4"/>
+  <path d="M652 197 H854" stroke="#d8fff8" stroke-width="2" opacity="0.42"/>
+  <path d="M652 695 H987" stroke="#183c50" stroke-width="3" opacity="0.8"/>
+
+  <g clip-path="url(#fileWindow)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M570 292 H680 L710 256 L747 350 L786 218 L826 388 L867 292 H1045" stroke="#b9fff3" stroke-width="9" opacity="0.94"/>
+    <path d="M570 452 H674 L710 418 L747 492 L787 362 L828 542 L872 451 H1045" stroke="#62dfcf" stroke-width="12"/>
+    <path d="M570 610 H680 L716 577 L751 657 L790 524 L831 698 L874 610 H1045" stroke="#ffb36d" stroke-width="9" opacity="0.34"/>
+  </g>
+
+  <g transform="translate(600 535)">
+    <circle cx="25" cy="75" r="66" fill="#0b1726" stroke="#f09a73" stroke-width="4"/>
+    <circle cx="25" cy="75" r="44" fill="#592a43" opacity="0.52"/>
+    <path d="M-1 49 L51 101 M51 49 L-1 101" stroke="#ffd09a" stroke-width="9" stroke-linecap="round"/>
+  </g>
+
+  <path d="M1015 292 C1110 292 1134 330 1204 352" fill="none" stroke="#77ead9" stroke-width="9" opacity="0.8"/>
+  <path d="M1015 452 C1110 452 1140 449 1204 449" fill="none" stroke="#bffff4" stroke-width="12"/>
+  <path d="M1015 590 C1102 590 1140 560 1204 542" fill="none" stroke="#5bd2c6" stroke-width="8" opacity="0.72"/>
+
+  <g transform="translate(1195 226)">
+    <ellipse cx="177" cy="225" rx="190" ry="252" fill="#091525" stroke="#294c63" stroke-width="4"/>
+    <ellipse cx="177" cy="225" rx="151" ry="205" fill="#0e2939" stroke="#47cfc0" stroke-width="4"/>
+    <ellipse cx="177" cy="225" rx="110" ry="155" fill="#123d49" stroke="#83eddd" stroke-width="4"/>
+    <circle cx="177" cy="225" r="64" fill="#5fe1d0" opacity="0.15" filter="url(#glow)"/>
+    <path d="M122 225 H147 L162 198 L185 261 L207 171 L231 225 H256" fill="none" stroke="#dcfff8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <g fill="#86f1df" opacity="0.6">
+      <circle cx="177" cy="42" r="5"/><circle cx="298" cy="121" r="4"/><circle cx="304" cy="324" r="6"/><circle cx="60" cy="330" r="4"/>
+    </g>
+  </g>
+
+  <g opacity="0.4" fill="none" stroke="#64b6c5" stroke-width="2">
+    <circle cx="1130" cy="173" r="18"/><circle cx="1110" cy="702" r="12"/>
+    <path d="M1088 173 H1038 M1075 702 H1028"/>
+  </g>
+  <rect width="1600" height="900" fill="url(#grain)"/>
+  <path d="M0 842 C290 794 518 875 800 832 S1290 784 1600 850 V900 H0 Z" fill="#040a12" opacity="0.56"/>
+</svg>
