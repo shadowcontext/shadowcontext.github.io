@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">AI-generated detections passing through validation gates</title>
+  <desc id="desc">Abstract red and blue signal fields converge through layered luminous validation rings around a protected detection core.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071421"/>
+      <stop offset="0.52" stop-color="#0b2434"/>
+      <stop offset="1" stop-color="#071019"/>
+    </linearGradient>
+    <radialGradient id="core" cx="50%" cy="48%" r="52%">
+      <stop offset="0" stop-color="#d9fff8"/>
+      <stop offset="0.22" stop-color="#61e4d2"/>
+      <stop offset="0.62" stop-color="#187d88"/>
+      <stop offset="1" stop-color="#0a2634"/>
+    </radialGradient>
+    <linearGradient id="redFlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff5b68" stop-opacity="0"/>
+      <stop offset="0.55" stop-color="#ff6d73" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#ffd0bf" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="blueFlow" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0" stop-color="#31b9ff" stop-opacity="0"/>
+      <stop offset="0.55" stop-color="#4ad2f2" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#c5fff5" stop-opacity="0.9"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="34"/>
+    </filter>
+    <pattern id="grain" width="48" height="48" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="8" r="1" fill="#9ed8df" opacity="0.10"/>
+      <circle cx="31" cy="22" r="1.2" fill="#9ed8df" opacity="0.07"/>
+      <circle cx="17" cy="40" r="0.8" fill="#ffffff" opacity="0.06"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grain)"/>
+  <ellipse cx="800" cy="450" rx="430" ry="330" fill="#1b7780" opacity="0.12" filter="url(#soft)"/>
+  <ellipse cx="250" cy="450" rx="290" ry="360" fill="#ae344a" opacity="0.12" filter="url(#soft)"/>
+  <ellipse cx="1350" cy="450" rx="290" ry="360" fill="#176ca6" opacity="0.14" filter="url(#soft)"/>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M40 260 C250 210 350 345 540 360 S680 410 735 432" stroke="url(#redFlow)" stroke-width="12"/>
+    <path d="M10 440 C230 370 370 500 565 470 S675 452 739 449" stroke="url(#redFlow)" stroke-width="7" opacity="0.9"/>
+    <path d="M35 640 C240 690 370 565 555 580 S675 500 742 469" stroke="url(#redFlow)" stroke-width="10" opacity="0.75"/>
+    <path d="M1560 260 C1350 210 1250 345 1060 360 S920 410 865 432" stroke="url(#blueFlow)" stroke-width="12"/>
+    <path d="M1590 440 C1370 370 1230 500 1035 470 S925 452 861 449" stroke="url(#blueFlow)" stroke-width="7" opacity="0.9"/>
+    <path d="M1565 640 C1360 690 1230 565 1045 580 S925 500 858 469" stroke="url(#blueFlow)" stroke-width="10" opacity="0.75"/>
+  </g>
+
+  <g fill="none" transform="translate(800 450)">
+    <ellipse rx="360" ry="280" stroke="#70d9d7" stroke-width="2" opacity="0.18"/>
+    <ellipse rx="296" ry="232" stroke="#7ce8df" stroke-width="3" opacity="0.28"/>
+    <ellipse rx="232" ry="184" stroke="#9df3e8" stroke-width="5" opacity="0.46"/>
+    <ellipse rx="174" ry="137" stroke="#d0fff6" stroke-width="4" opacity="0.74" filter="url(#glow)"/>
+  </g>
+
+  <g opacity="0.92">
+    <circle cx="497" cy="336" r="8" fill="#ff8990"/>
+    <circle cx="555" cy="579" r="6" fill="#ffc0ac"/>
+    <circle cx="420" cy="472" r="5" fill="#ff6375"/>
+    <circle cx="1103" cy="336" r="8" fill="#67dcff"/>
+    <circle cx="1045" cy="579" r="6" fill="#a5fff3"/>
+    <circle cx="1180" cy="472" r="5" fill="#40bfff"/>
+  </g>
+
+  <g filter="url(#glow)">
+    <path d="M800 330 C879 354 917 370 917 431 C917 520 870 573 800 603 C730 573 683 520 683 431 C683 370 721 354 800 330Z" fill="url(#core)" stroke="#d7fff7" stroke-width="4"/>
+    <circle cx="800" cy="450" r="48" fill="#071d29" stroke="#bafff1" stroke-width="5"/>
+    <path d="M777 450 L795 468 L830 427" fill="none" stroke="#cafff5" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g fill="#b5ece9" opacity="0.28">
+    <circle cx="800" cy="118" r="3"/><circle cx="694" cy="151" r="2"/><circle cx="906" cy="151" r="2"/>
+    <circle cx="800" cy="782" r="3"/><circle cx="694" cy="749" r="2"/><circle cx="906" cy="749" r="2"/>
+  </g>
+</svg>
