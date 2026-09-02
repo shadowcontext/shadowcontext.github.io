@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-01T01:25:09Z",
-  "generated_display": "01 Sep 2026 · 01:25 UTC",
+  "generated_at": "2026-09-02T01:23:09Z",
+  "generated_display": "02 Sep 2026 · 01:23 UTC",
   "metrics": {
     "kev_total": 1687,
     "kev_added_30d": 31,
-    "due_next_7d": 2,
+    "due_next_7d": 6,
     "ioc_total": 197,
     "ioc_total_display": "197",
     "ioc_total_exact": "197"
@@ -162,59 +162,59 @@
   "advisories": [
     {
       "authority": "Saudi NCA / CERT",
-      "title": "F5 Alert",
-      "url": "https://nca.gov.sa/en/cert/7913/",
+      "title": "Mozilla Alert",
+      "url": "https://nca.gov.sa/en/cert/7919/",
+      "date": "2026-09-02",
+      "severity": "High",
+      "summary": "Security alert 2026-7795. Review the official notice for affected products and remediation guidance."
+    },
+    {
+      "title": "Rockwell Automation RSLinx Classic",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-244-01",
       "date": "2026-09-01",
-      "severity": "High",
-      "summary": "Security alert 2026-7789. Review the official notice for affected products and remediation guidance."
+      "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to cause a denial-of-service condition on the affected product. The following versions…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "title": "Rockwell Automation Historian ME",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-244-06",
+      "date": "2026-09-01",
+      "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could crash the device being accessed; an out-of-bounds write condition may allow remote code execution. The…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "title": "Rockwell Automation ControlLogix, CompactLogix, CompactLogix 5480, GuardLogix, Compact GuardLogix",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-244-05",
+      "date": "2026-09-01",
+      "summary": "View CSAF Summary The following versions of Rockwell Automation ControlLogix, CompactLogix, CompactLogix 5480, GuardLogix, Compact GuardLogix are affected: ControlLogix 5580…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "title": "Rockwell Automation Logix Platform",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-244-03",
+      "date": "2026-09-01",
+      "summary": "View CSAF Summary The following versions of Rockwell Automation Logix Platform are affected: ControlLogix 5580 CompactLogix 5380 GuardLogix 5580 Compact GuardLogix 5380 CVSS…",
+      "authority": "CISA",
+      "severity": ""
     },
     {
       "authority": "Saudi NCA / CERT",
-      "title": "F5 Alert",
-      "url": "https://nca.gov.sa/en/cert/7912/",
-      "date": "2026-08-31",
-      "severity": "High",
-      "summary": "Security alert 2026-7788. Review the official notice for affected products and remediation guidance."
+      "title": "SonicWall Alert",
+      "url": "https://nca.gov.sa/en/cert/7918/",
+      "date": "2026-09-01",
+      "severity": "Critical",
+      "summary": "Security alert 2026-7794. Review the official notice for affected products and remediation guidance."
     },
     {
       "authority": "Saudi NCA / CERT",
-      "title": "F5 Alert",
-      "url": "https://nca.gov.sa/en/cert/7911/",
-      "date": "2026-08-31",
-      "severity": "High",
-      "summary": "Security alert 2026-7787. Review the official notice for affected products and remediation guidance."
-    },
-    {
-      "title": "Rockwell Automation OTTO Fleet Manager",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-239-03",
-      "date": "2026-08-27",
-      "summary": "View CSAF Summary Successful exploitation of this vulnerability could reduce the computational cost required for an attacker to perform offline brute-force attacks against stored…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
-      "title": "Xiiaozet LK100W",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-239-01",
-      "date": "2026-08-27",
-      "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to take control over the device. The following versions of Xiiaozet LK100W are…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
-      "title": "Mitsubishi Electric CNC Series (Update A)",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-078-05",
-      "date": "2026-08-27",
-      "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow a remote attacker to cause an out-of-bounds read, resulting in a denial-of-service condition in the…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
-      "title": "Mitsubishi Electric Multiple FA Products (Update D)",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-128-03",
-      "date": "2026-08-27",
-      "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow a remote attacker to cause a denial-of-service (DoS) condition, a timeout error, or a communication…",
-      "authority": "CISA",
-      "severity": ""
+      "title": "HPE Alert",
+      "url": "https://nca.gov.sa/en/cert/7917/",
+      "date": "2026-09-01",
+      "severity": "Critical",
+      "summary": "Security alert 2026-7793. Review the official notice for affected products and remediation guidance."
     },
     {
       "title": "How to secure your online meetings",
@@ -324,7 +324,7 @@
       "path": "/assets/data/daily-urls.txt"
     }
   ],
-  "ioc_sha256": "13e0c75fd5938ef09f7b4a9a83232ee45a0743cb3864ab2458e42c7c7ae4aadb",
+  "ioc_sha256": "a0f1d439408eb2e032b88dc99219e6026eb7d83f18e32078e1cc72e92166de3e",
   "sources": {
     "kev": {
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
@@ -363,7 +363,7 @@
       "name": "CISA Advisories",
       "coverage": "Technical and industrial-control advisories",
       "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml",
-      "status": "degraded"
+      "status": "online"
     },
     {
       "name": "UK NCSC",
@@ -379,9 +379,9 @@
     },
     {
       "name": "CISA STIX",
-      "coverage": "Last validated TLP:CLEAR indicator snapshot",
+      "coverage": "TLP:CLEAR indicators from 4 advisories",
       "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-239a",
-      "status": "degraded"
+      "status": "online"
     }
   ]
 }
