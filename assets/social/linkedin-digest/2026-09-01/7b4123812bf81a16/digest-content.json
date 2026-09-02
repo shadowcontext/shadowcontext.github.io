@@ -1,0 +1,168 @@
+{
+  "digest_title": "Daily Security News Digest: September 1, 2026",
+  "dek": "ShadowContext daily briefing covering critical infrastructure pilots, security vulnerabilities, zero-day fixes, and cloud and edge resilience updates.",
+  "overview": "ShadowContext independent daily defense briefing covering critical infrastructure pilots, component vulnerabilities, API and cloud boundaries, and edge fleet verification across diverse environments.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "Project Watershed 250 Needs Utility-Level Proof",
+      "summary": "Texas and federal partners launched Project Watershed 250 to bring no-cost cyber support to water utilities over six months.",
+      "why_it_matters": "Real risk reduction requires verified configurations and durable local controls after the pilot closes.",
+      "topic": "Critical Infrastructure"
+    },
+    {
+      "source_id": "S02",
+      "headline": "FreePBX GraphQL Fix Needs Scope-Level Proof",
+      "summary": "FreePBX patched a high-severity authorization flaw in framework 16.0.49 and 17.0.32 where read tokens could invoke mutations.",
+      "why_it_matters": "Updating software must be paired with API scope reviews and regression tests.",
+      "topic": "API Security"
+    },
+    {
+      "source_id": "S03",
+      "headline": "Printer Web Fix Expands to Konica Minolta 1422W Fleets",
+      "summary": "Konica Minolta added 1422W series devices to Web Image Monitor advisories for reflected XSS and open redirect issues.",
+      "why_it_matters": "Shared management components require component-level discovery across branded fleets.",
+      "topic": "Hardware Security"
+    },
+    {
+      "source_id": "S04",
+      "headline": "Kubio Fix Makes Theme Input an Availability Boundary",
+      "summary": "Kubio 2.9.1 fixes a persistent WordPress denial-of-service vulnerability caused by unvalidated theme name input.",
+      "why_it_matters": "Privileged configuration input requires strict type validation to prevent persistent application downtime.",
+      "topic": "Web Security"
+    },
+    {
+      "source_id": "S05",
+      "headline": "Apigee Custom Code Needs a Service-Agent Boundary",
+      "summary": "Google fixed an Apigee issue where restricted deployers could obtain core service-agent OAuth tokens via custom proxies.",
+      "why_it_matters": "Deployment rights and platform runtime privileges form a single security boundary.",
+      "topic": "Cloud Security"
+    },
+    {
+      "source_id": "S06",
+      "headline": "Open5GS AMF Fix Turns Malformed Requests Into Errors",
+      "summary": "Open5GS version 2.8.0 fixes AMF null-pointer and message-transfer flaws that caused control-plane crashes.",
+      "why_it_matters": "Mobile core control plane services must fail closed without terminating service.",
+      "topic": "Telecom Security"
+    },
+    {
+      "source_id": "S07",
+      "headline": "MicroShift HTTP/2 Fix Needs Edge-Fleet Proof",
+      "summary": "Red Hat released MicroShift 4.21.31 to address a Go HTTP/2 denial-of-service flaw affecting resource utilization.",
+      "why_it_matters": "Distributed edge fleets require runtime evidence that every intended node runs the corrected build.",
+      "topic": "Edge Security"
+    },
+    {
+      "source_id": "S08",
+      "headline": "Debian 11 End of Life Needs Supported-System Proof",
+      "summary": "Debian 11 bullseye reached end of life after five years, ending standard security updates.",
+      "why_it_matters": "Organizations must discover unmanaged instances and migrate workloads to supported releases.",
+      "topic": "Operating Systems"
+    },
+    {
+      "source_id": "S09",
+      "headline": "Plesk Shell Access Needs Root-Boundary Proof",
+      "summary": "Plesk patched an OS command injection flaw allowing shell users to escalate to root on Linux servers.",
+      "why_it_matters": "Delegated tenant access must be reconciled with server-wide administrative boundaries.",
+      "topic": "Hosting Security"
+    },
+    {
+      "source_id": "S10",
+      "headline": "Unsupported Opera11 Devices Need Retirement Proof",
+      "summary": "QVidium Opera11 firmware has an unpatched command injection vulnerability with the vendor closed.",
+      "why_it_matters": "Unsupported appliances require aggressive network containment and planned hardware retirement.",
+      "topic": "Hardware Security"
+    },
+    {
+      "source_id": "S11",
+      "headline": "Hono OAuth Callbacks Must Fail Closed on Missing State",
+      "summary": "Hono fixed an OAuth middleware flaw in version 0.8.6 where missing state values bypassed anti-CSRF checks.",
+      "why_it_matters": "Identity protocol boundaries must verify presence before evaluating equality.",
+      "topic": "Authentication"
+    },
+    {
+      "source_id": "S12",
+      "headline": "Kaspersky Fix Needs Antivirus Database Freshness Proof",
+      "summary": "Kaspersky resolved the HardBreacher issue via antivirus database updates dated August 30 or later.",
+      "why_it_matters": "Endpoint protection fixes require verifying content freshness rather than app version numbers.",
+      "topic": "Endpoint Security"
+    },
+    {
+      "source_id": "S13",
+      "headline": "PALLET CONTROL Fix Needs Service-Boundary Proofs",
+      "summary": "JAL Digital fixed local access control flaws in PALLET CONTROL allowing low-privileged users SYSTEM rights.",
+      "why_it_matters": "Endpoint management services must protect local privileges from managed users.",
+      "topic": "Privilege Escalation"
+    },
+    {
+      "source_id": "S14",
+      "headline": "Ubuntu cpio fixes need archive-boundary proof",
+      "summary": "Canonical released updates for three GNU cpio vulnerabilities affecting extraction, memory bounds, and output.",
+      "why_it_matters": "Automated archive processing requires strict validation of paths and link targets.",
+      "topic": "Software Supply Chain"
+    },
+    {
+      "source_id": "S15",
+      "headline": "Ubuntu OpenZFS Fix Needs Kernel-Level Proof",
+      "summary": "Ubuntu published OpenZFS updates fixing an authorization bypass allowing unprivileged user namespaces pool access.",
+      "why_it_matters": "Kernel authorization must accurately evaluate namespace boundaries and device permissions.",
+      "topic": "Kernel Security"
+    },
+    {
+      "source_id": "S16",
+      "headline": "Frontier AI Cyber Risk Needs System-Level Resilience",
+      "summary": "The FSB warned that frontier AI could accelerate cyber risk and scale financial system disruptions.",
+      "why_it_matters": "Financial institutions must map shared dependencies and rehearse continuous recovery capacities.",
+      "topic": "AI Security"
+    },
+    {
+      "source_id": "S17",
+      "headline": "OpenSearch SQL Cursor Fix Needs Permission-Level Proof",
+      "summary": "AWS published bulletins for an OpenSearch SQL cursor flaw permitting remote code execution via search access.",
+      "why_it_matters": "Query permissions can grant unintended server execution paths if cursors are unsanitized.",
+      "topic": "Database Security"
+    },
+    {
+      "source_id": "S18",
+      "headline": "Ubuntu’s Pillow Fix Needs Output-Boundary Proof",
+      "summary": "Ubuntu fixed a Pillow TGA encoder vulnerability that could leak process memory into generated image files.",
+      "why_it_matters": "Media output pipelines require strict controls over generated export formats.",
+      "topic": "Data Protection"
+    },
+    {
+      "source_id": "S19",
+      "headline": "UAE Warning Makes Study AI an Approved-Data Decision",
+      "summary": "The UAE Cybersecurity Council warned students and families against sharing sensitive data with unverified study AI.",
+      "why_it_matters": "Educational institutions must enforce approved tool lists and minimal data sharing.",
+      "topic": "AI Security"
+    },
+    {
+      "source_id": "S20",
+      "headline": "Firefox 155 Fixes Need Release-Channel Proof",
+      "summary": "Mozilla released Firefox 155 and ESR updates fixing high-impact use-after-free and sandbox escape flaws.",
+      "why_it_matters": "Browser updates require verifying that target channels actually restart into corrected builds.",
+      "topic": "Browser Security"
+    },
+    {
+      "source_id": "S21",
+      "headline": "Ubuntu OpenSSL Follow-Up Needs Loaded-Library Proof",
+      "summary": "Ubuntu issued a follow-up advisory for 26.04 LTS to correct an omitted fix for an OpenSSL AEAD vulnerability.",
+      "why_it_matters": "Successful package transactions do not guarantee long-running processes have loaded updated libraries.",
+      "topic": "Cryptographic Security"
+    },
+    {
+      "source_id": "S22",
+      "headline": "1756-ENBT Flaw Turns Restart Risk Into a Network Boundary",
+      "summary": "Rockwell Automation disclosed an unpatchable denial-of-service vulnerability in 1756-ENBT modules requiring restarts.",
+      "why_it_matters": "Legacy industrial gear requires strict CIP network segmentation and rehearsed recovery plans.",
+      "topic": "Operational Technology"
+    }
+  ],
+  "operating_view": "Maintain defensive rigor by verifying runtime state rather than relying on automated update tickets. Reconcile identities, validate API and database scopes, enforce network segmentation for legacy assets, and establish durable metrics across all infrastructures.",
+  "watch_items": [
+    "Verify runtime package versions and loaded libraries across edge and cloud instances.",
+    "Enforce strict API authorization boundaries and input validation for management consoles.",
+    "Monitor network reachability and patch cadence for unpatchable legacy industrial modules."
+  ],
+  "caption_intro": "Explore today's comprehensive technical briefing from ShadowContext detailing critical vulnerability disclosures and defensive operational strategies."
+}

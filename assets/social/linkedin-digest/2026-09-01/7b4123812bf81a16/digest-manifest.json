@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-09-02T09:18:43.966+04:00",
+  "digestDate": "2026-09-01",
+  "digestHash": "7b4123812bf81a16f66106ee01e4fd1421f4ff995b435a29660750dee8858162",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "Daily Security News Digest: September 1, 2026",
+  "articleCount": 22,
+  "sourceArticles": [
+    {
+      "title": "Project Watershed 250 Needs Utility-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/project-watershed-needs-utility-level-proof/",
+      "publishedAt": "2026-09-01T01:12:59.000+04:00",
+      "category": "defense",
+      "sourceHash": "0b52123a6dd093116f6341c6a6115c038bc8391d88d8d7495e9b901969be8c30"
+    },
+    {
+      "title": "FreePBX GraphQL Fix Needs Scope-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/freepbx-graphql-fix-needs-scope-proof/",
+      "publishedAt": "2026-09-01T02:11:00.000+04:00",
+      "category": "defense",
+      "sourceHash": "8770b10be48c9ee4baecb352b89e853553acbd41cde5f608d89c9603301fb3f4"
+    },
+    {
+      "title": "Printer Web Fix Expands to Konica Minolta 1422W Fleets",
+      "canonicalUrl": "https://shadowcontext.com/wide-format-printer-fix-needs-web-interface-proof/",
+      "publishedAt": "2026-09-01T03:10:26.000+04:00",
+      "category": "defense",
+      "sourceHash": "3f7bb7faab881b7aa0ca1e4ef95037d167e112d897025c6fdde6b6a3fe7ad8c8"
+    },
+    {
+      "title": "Kubio Fix Makes Theme Input an Availability Boundary",
+      "canonicalUrl": "https://shadowcontext.com/kubio-fix-makes-theme-input-an-availability-boundary/",
+      "publishedAt": "2026-09-01T04:09:59.000+04:00",
+      "category": "defense",
+      "sourceHash": "19ae4229ba96fa2fbc37cd039023e2858cd8eace464b2f38b1fc64122ee060b2"
+    },
+    {
+      "title": "Apigee Custom Code Needs a Service-Agent Boundary",
+      "canonicalUrl": "https://shadowcontext.com/apigee-custom-code-needs-service-agent-boundaries/",
+      "publishedAt": "2026-09-01T05:09:25.000+04:00",
+      "category": "defense",
+      "sourceHash": "c1740707feb1bc7d8a2262d8196c8b627b43117526b0bf6b30a8c3ee2406f22e"
+    },
+    {
+      "title": "Open5GS AMF Fix Turns Malformed Requests Into Errors, Not Crashes",
+      "canonicalUrl": "https://shadowcontext.com/open5gs-amf-fix-needs-control-plane-proof/",
+      "publishedAt": "2026-09-01T06:12:14.000+04:00",
+      "category": "defense",
+      "sourceHash": "617ad1fb7064d48641b28c1d82bec1d8f1725d468620e6b4a54d119ae2d98b47"
+    },
+    {
+      "title": "MicroShift HTTP/2 Fix Needs Edge-Fleet Proof",
+      "canonicalUrl": "https://shadowcontext.com/microshift-http2-fix-needs-edge-fleet-proof/",
+      "publishedAt": "2026-09-01T07:11:00.000+04:00",
+      "category": "defense",
+      "sourceHash": "c15a8d44011614ae0fb1577fd8d49a5a7f39a7c37fb3dde19430a86dbf1cae74"
+    },
+    {
+      "title": "Debian 11 End of Life Needs Supported-System Proof",
+      "canonicalUrl": "https://shadowcontext.com/debian-11-eol-needs-supported-system-proof/",
+      "publishedAt": "2026-09-01T08:12:37.000+04:00",
+      "category": "defense",
+      "sourceHash": "cd8971a909280c57bb0d0bd54bb0748108eed5e8f6374c94ff3216d81621aaa0"
+    },
+    {
+      "title": "Plesk Shell Access Needs Root-Boundary Proof",
+      "canonicalUrl": "https://shadowcontext.com/plesk-shell-access-needs-root-boundary-proof/",
+      "publishedAt": "2026-09-01T09:11:19.000+04:00",
+      "category": "defense",
+      "sourceHash": "b6d37a81779b0637ff00549649268c8e156af42a873460fb3aee8e0566f6cf89"
+    },
+    {
+      "title": "Unsupported Opera11 Devices Need Retirement Proof",
+      "canonicalUrl": "https://shadowcontext.com/unsupported-opera11-needs-retirement-proof/",
+      "publishedAt": "2026-09-01T10:13:43.000+04:00",
+      "category": "defense",
+      "sourceHash": "b8d4de2a3ffae456d2828c32ef4d710076bb3d578fde173da917460109ef1c16"
+    },
+    {
+      "title": "Hono OAuth Callbacks Must Fail Closed on Missing State",
+      "canonicalUrl": "https://shadowcontext.com/hono-oauth-callbacks-must-fail-closed/",
+      "publishedAt": "2026-09-01T11:13:28.000+04:00",
+      "category": "defense",
+      "sourceHash": "9c07ee5c9e408f1cf0a95f8f7900e2d4efe1b02220f700dfe2a3bb4048f6d037"
+    },
+    {
+      "title": "Kaspersky Fix Needs Antivirus Database Freshness Proof",
+      "canonicalUrl": "https://shadowcontext.com/kaspersky-fix-needs-database-freshness-proof/",
+      "publishedAt": "2026-09-01T12:13:26.000+04:00",
+      "category": "defense",
+      "sourceHash": "6488896686570762bbeafdbe514155337b81a67152668a49019aaac28fcfbade"
+    },
+    {
+      "title": "PALLET CONTROL Fix Needs Service-Boundary Proof",
+      "canonicalUrl": "https://shadowcontext.com/pallet-control-fix-needs-service-boundary-proof/",
+      "publishedAt": "2026-09-01T13:10:16.000+04:00",
+      "category": "defense",
+      "sourceHash": "5b207a156da87a3cd0e8b6de1d8581d4847c6ebec85625d70b7581ee73dc0daf"
+    },
+    {
+      "title": "Ubuntu cpio fixes need archive-boundary proof",
+      "canonicalUrl": "https://shadowcontext.com/ubuntu-cpio-fixes-need-archive-boundary-proof/",
+      "publishedAt": "2026-09-01T14:09:47.000+04:00",
+      "category": "defense",
+      "sourceHash": "3ab2439852b053a40f5ef71fb5d4a7e779670c288dc58c6931e8a132bd4aa0e1"
+    },
+    {
+      "title": "Ubuntu OpenZFS Fix Needs Kernel-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/ubuntu-openzfs-fix-needs-kernel-level-proof/",
+      "publishedAt": "2026-09-01T15:12:15.000+04:00",
+      "category": "defense",
+      "sourceHash": "636a7eaa233bb640ceb3b338e20c76f85af2063517d45c15f7bdf6c167009849"
+    },
+    {
+      "title": "Frontier AI Cyber Risk Needs System-Level Resilience",
+      "canonicalUrl": "https://shadowcontext.com/frontier-ai-cyber-risk-needs-system-level-resilience/",
+      "publishedAt": "2026-09-01T16:10:28.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "857caa76719f2192a9422daa8e7abf02b14f1b5ee9b48e7d3029eccc7a017c54"
+    },
+    {
+      "title": "OpenSearch SQL Cursor Fix Needs Permission-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/opensearch-sql-cursor-fix-needs-permission-proof/",
+      "publishedAt": "2026-09-01T17:13:00.000+04:00",
+      "category": "defense",
+      "sourceHash": "7b9708ad1c94c893af5a6870b5b272a4d12a8c0eacac5364e55d4e83d598c9a0"
+    },
+    {
+      "title": "Ubuntu’s Pillow Fix Needs Output-Boundary Proof",
+      "canonicalUrl": "https://shadowcontext.com/ubuntu-pillow-fix-needs-output-boundary-proof/",
+      "publishedAt": "2026-09-01T18:11:22.000+04:00",
+      "category": "defense",
+      "sourceHash": "f0bbb7f41a2af0918995fc810e72ce2bc5a22061f3c162200bf8a70538fc85f4"
+    },
+    {
+      "title": "UAE Warning Makes Study AI an Approved-Data Decision",
+      "canonicalUrl": "https://shadowcontext.com/uae-study-ai-needs-an-approved-data-path/",
+      "publishedAt": "2026-09-01T19:12:59.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "81b9a7dab57a831094447e195011b022ac0a8e289cfd459b9342449d458ce4e5"
+    },
+    {
+      "title": "Firefox 155 Fixes Need Release-Channel Proof",
+      "canonicalUrl": "https://shadowcontext.com/firefox-155-fixes-need-release-channel-proof/",
+      "publishedAt": "2026-09-01T20:11:44.000+04:00",
+      "category": "defense",
+      "sourceHash": "763332caa410c432d8de229200cd32e601640fbd28f210dbbba1bc43b79f5bb2"
+    },
+    {
+      "title": "Ubuntu OpenSSL Follow-Up Needs Loaded-Library Proof",
+      "canonicalUrl": "https://shadowcontext.com/ubuntu-openssl-follow-up-needs-loaded-library-proof/",
+      "publishedAt": "2026-09-01T21:14:34.000+04:00",
+      "category": "defense",
+      "sourceHash": "8ee06167a8c280a29b51520ac7024153f049594774ceefccbff233bf65524516"
+    },
+    {
+      "title": "1756-ENBT Flaw Turns Restart Risk Into a Network Boundary",
+      "canonicalUrl": "https://shadowcontext.com/enbt-flaw-turns-restart-into-a-network-boundary/",
+      "publishedAt": "2026-09-01T23:09:37.000+04:00",
+      "category": "defense",
+      "sourceHash": "781b194d1cd365a0d0d59b5553dbce12ed7a59dccdd68ead64c6d5c0d5a97106"
+    }
+  ],
+  "caption": "Explore today's comprehensive technical briefing from ShadowContext detailing critical vulnerability disclosures and defensive operational strategies.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-09-01/7b4123812bf81a16/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-09-01/7b4123812bf81a16/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-09-01/7b4123812bf81a16/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-09-01/7b4123812bf81a16/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}
