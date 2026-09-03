@@ -1,0 +1,888 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Daily Security News Digest: Updates, Evidence, and Boundaries | ShadowContext</title>
+    <style>
+      :root {
+        --paper: #05080d;
+        --panel: #0d1319;
+        --panel-soft: #091017;
+        --ink: #f1f7fa;
+        --ink-2: #c4d1d8;
+        --muted: #8496a1;
+        --line: #1d2b34;
+        --cyan: #35e6d1;
+        --violet: #8b7dff;
+        --sans: "Space Grotesk", Inter, Arial, sans-serif;
+        --mono: "DM Mono", Consolas, monospace;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: var(--sans);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        font-size: 10.5pt;
+        line-height: 1.55;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        position: relative;
+        width: 210mm;
+        min-height: 297mm;
+        padding: 18mm;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 83% 18%, rgba(139, 125, 255, 0.1), transparent 28%),
+          linear-gradient(145deg, #05080d 0%, #081017 62%, #0c101c 100%);
+      }
+
+      .page::before {
+        content: "";
+        position: absolute;
+        inset: 8mm;
+        pointer-events: none;
+        border: 0.25mm solid var(--line);
+      }
+
+      .cover {
+        display: flex;
+        flex-direction: column;
+        page-break-after: always;
+      }
+
+      .brand-row,
+      .section-head,
+      .document-footer {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 4mm;
+        font-size: 20pt;
+        font-weight: 750;
+        letter-spacing: -0.04em;
+      }
+
+      .brand em {
+        color: var(--cyan);
+        font-style: normal;
+      }
+
+      .brand-mark {
+        position: relative;
+        display: block;
+        width: 12mm;
+        height: 12mm;
+        transform: rotate(30deg);
+        border: 1mm solid var(--cyan);
+        border-radius: 1.2mm;
+      }
+
+      .brand-mark::before {
+        content: "";
+        position: absolute;
+        inset: 2.2mm;
+        border: 0.8mm solid var(--violet);
+        border-radius: 0.9mm;
+      }
+
+      .brand-mark::after {
+        content: "";
+        position: absolute;
+        inset: 4.5mm;
+        background: var(--cyan);
+        border-radius: 0.5mm;
+      }
+
+      .edition,
+      .eyebrow,
+      .topic,
+      .section-count,
+      .why span,
+      .document-footer,
+      .source-link {
+        font-family: var(--mono);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .edition,
+      .section-count,
+      .document-footer {
+        color: var(--muted);
+        font-size: 8pt;
+      }
+
+      .cover-copy {
+        position: relative;
+        z-index: 1;
+        margin: 30mm 0 0;
+      }
+
+      .eyebrow {
+        margin: 0 0 7mm;
+        color: var(--cyan);
+        font-size: 10pt;
+      }
+
+      h1 {
+        max-width: 165mm;
+        margin: 0;
+        font-size: 37pt;
+        line-height: 1.03;
+        letter-spacing: -0.05em;
+      }
+
+      .dek {
+        max-width: 155mm;
+        margin: 10mm 0 0;
+        color: var(--ink-2);
+        font-size: 16pt;
+        line-height: 1.45;
+      }
+
+      .context {
+        position: relative;
+        z-index: 1;
+        margin-top: auto;
+        padding: 9mm;
+        background: rgba(13, 19, 25, 0.94);
+        border: 0.3mm solid var(--line);
+        border-left: 1mm solid var(--violet);
+      }
+
+      .context h2,
+      .section-head h2,
+      .operating-view h2,
+      .sources h2 {
+        margin: 0;
+      }
+
+      .context h2 {
+        color: var(--violet);
+        font-family: var(--mono);
+        font-size: 9pt;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .context p {
+        margin: 4mm 0 0;
+        color: var(--ink-2);
+        font-size: 13pt;
+      }
+
+      .cover-meta {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 9mm;
+        color: var(--muted);
+        font: 8pt var(--mono);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .content {
+        padding-top: 15mm;
+        padding-bottom: 18mm;
+      }
+
+      .section-head {
+        margin-bottom: 9mm;
+        padding-bottom: 5mm;
+        border-bottom: 0.3mm solid var(--line);
+      }
+
+      .section-head h2 {
+        font-size: 23pt;
+      }
+
+      .stories {
+        position: relative;
+        z-index: 1;
+      }
+
+      .story {
+        display: grid;
+        grid-template-columns: 15mm 1fr;
+        gap: 5mm;
+        margin: 0 0 6mm;
+        padding: 7mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: rgba(13, 19, 25, 0.96);
+        border: 0.3mm solid var(--line);
+      }
+
+      .story-index {
+        color: var(--cyan);
+        font: 12pt var(--mono);
+      }
+
+      .topic {
+        margin: 0 0 2mm;
+        color: var(--cyan);
+        font-size: 7.5pt;
+      }
+
+      .story h3 {
+        margin: 0;
+        font-size: 16pt;
+        line-height: 1.18;
+        letter-spacing: -0.025em;
+      }
+
+      .summary {
+        margin: 3mm 0;
+        color: var(--ink-2);
+        font-size: 10.5pt;
+      }
+
+      .why {
+        padding-top: 3mm;
+        border-top: 0.25mm solid var(--line);
+      }
+
+      .why span {
+        color: var(--violet);
+        font-size: 7pt;
+      }
+
+      .why p {
+        display: inline;
+        margin: 0 0 0 2mm;
+        font-weight: 650;
+      }
+
+      .source-link {
+        display: inline-block;
+        margin-top: 4mm;
+        color: var(--cyan);
+        font-size: 6.8pt;
+        letter-spacing: 0.04em;
+        text-transform: none;
+      }
+
+      .operating-view,
+      .sources {
+        position: relative;
+        z-index: 1;
+        margin-top: 12mm;
+        padding: 9mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: var(--panel-soft);
+        border: 0.3mm solid var(--line);
+      }
+
+      .operating-view {
+        border-top: 1mm solid var(--cyan);
+      }
+
+      .operating-view h2,
+      .sources h2 {
+        font-size: 18pt;
+      }
+
+      .operating-view > p {
+        color: var(--ink-2);
+        font-size: 12pt;
+      }
+
+      .watch-list,
+      .source-list {
+        margin: 6mm 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .watch-list li {
+        display: grid;
+        grid-template-columns: 9mm 1fr;
+        gap: 4mm;
+        align-items: start;
+        margin: 3mm 0;
+      }
+
+      .watch-list span {
+        display: grid;
+        width: 8mm;
+        height: 8mm;
+        place-items: center;
+        color: var(--cyan);
+        border: 0.3mm solid var(--cyan);
+        font: 8pt var(--mono);
+      }
+
+      .watch-list p {
+        margin: 0;
+      }
+
+      .source-list li {
+        display: grid;
+        grid-template-columns: 10mm 1fr;
+        gap: 3mm;
+        margin: 2.5mm 0;
+        color: var(--ink-2);
+        font-size: 8.5pt;
+      }
+
+      .source-list span {
+        color: var(--violet);
+        font-family: var(--mono);
+      }
+
+      .source-list a {
+        color: var(--cyan);
+        text-decoration: underline;
+        text-decoration-color: rgba(53, 230, 209, 0.35);
+        text-underline-offset: 1mm;
+      }
+
+      .cta {
+        position: relative;
+        z-index: 1;
+        margin: 12mm 0 0;
+        padding: 7mm 9mm;
+        break-inside: avoid;
+        color: #04100f;
+        background: var(--cyan);
+      }
+
+      .cta strong {
+        display: block;
+        font-size: 14pt;
+      }
+
+      .cta span {
+        font: 9pt var(--mono);
+      }
+
+      .document-footer {
+        margin-top: 12mm;
+        padding-top: 5mm;
+        border-top: 0.3mm solid var(--line);
+      }
+
+      @media screen {
+        body {
+          width: 210mm;
+          margin: 0 auto;
+        }
+
+        .page {
+          box-shadow: 0 0 20mm rgba(0, 0, 0, 0.45);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="page cover">
+      <header class="brand-row">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Shadow<em>Context</em></span>
+        </div>
+        <span class="edition">Daily security digest</span>
+      </header>
+
+      <main class="cover-copy">
+        <p class="eyebrow">The day in context / 2026-09-02</p>
+        <h1>Daily Security News Digest: Updates, Evidence, and Boundaries</h1>
+        <p class="dek">ShadowContext daily briefing covers critical advisories, boundary verifications, and operational controls across network devices, Linux systems, and enterprise libraries.</p>
+      </main>
+
+      <aside class="context">
+        <h2>Executive summary</h2>
+        <p>Defenders must verify running versions, isolate management planes, and validate untrusted input boundaries across multiple infrastructure advisories. Updates alone are insufficient without runtime evidence.</p>
+      </aside>
+
+      <div class="cover-meta">
+        <span>22 briefings included</span>
+        <span>https://shadowcontext.com/</span>
+      </div>
+    </section>
+
+    <section class="page content">
+      <header class="section-head">
+        <h2>All news from the day</h2>
+        <span class="section-count">22 / 2026-09-02</span>
+      </header>
+
+      <main class="stories">
+    <article class="story">
+      <div class="story-index">01</div>
+      <div class="story-copy">
+        <p class="topic">Kubernetes Policy</p>
+        <h3>Kyverno API Calls Need Destination Boundaries</h3>
+        <p class="summary">CVE-2026-84196 allows controllable resource data to influence API call destinations. Defenders must update to 1.18.0 and enforce policy egress boundaries.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Admission controllers operate with privileged identities, making delegated lookups an important egress control problem.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/kyverno-api-calls-need-destination-boundaries/">Kyverno API Calls Need Destination Boundaries ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">02</div>
+      <div class="story-copy">
+        <p class="topic">Python Dependencies</p>
+        <h3>Ubuntu pyasn1 Fix Needs Parser-Boundary Proof</h3>
+        <p class="summary">Ubuntu fixed three pyasn1 denial-of-service flaws. Teams should verify the exact package provenance and ensure ASN.1 parsing stays within resource limits.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Compact encoded objects can exhaust resources if parsers lack effective limits.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ubuntu-pyasn1-fix-needs-parser-boundaries/">Ubuntu pyasn1 Fix Needs Parser-Boundary Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">03</div>
+      <div class="story-copy">
+        <p class="topic">Network Libraries</p>
+        <h3>Ubuntu libevent Fixes Need Protocol-Path Proof</h3>
+        <p class="summary">Ubuntu Security Notice USN-8710-1 fixes five libevent vulnerabilities. Defenders must map loaded modules, update packages, and verify runtime protocol paths.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Libevent is shared infrastructure; package updates must be paired with module and protocol path reviews.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ubuntu-libevent-fixes-need-protocol-path-proof/">Ubuntu libevent Fixes Need Protocol-Path Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">04</div>
+      <div class="story-copy">
+        <p class="topic">Content Sanitization</p>
+        <h3>SVG Sanitizer Fixes Need Rendering-Context Proof</h3>
+        <p class="summary">Four advisories for enshrined/svg-sanitize require verifying parser, serializer, and browser rendering contexts rather than relying solely on package updates.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Content safety depends on how downstream renderers interpret sanitized output.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/svg-sanitizer-fixes-need-rendering-context-proof/">SVG Sanitizer Fixes Need Rendering-Context Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">05</div>
+      <div class="story-copy">
+        <p class="topic">Access Control</p>
+        <h3>Ubuntu sudo-rs Fix Puts Fine-Grained sudoedit Rules Under Review</h3>
+        <p class="summary">Ubuntu patched a sudoedit race condition in sudo-rs for Ubuntu 26.04 LTS. Teams must update and audit fine-grained file-editing policies.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Delegated editing permissions can allow unauthorized filesystem boundary crossings if time-of-check flaws exist.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ubuntu-sudo-rs-fix-needs-file-identity-proof/">Ubuntu sudo-rs Fix Puts Fine-Grained sudoedit Rules Under Review ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">06</div>
+      <div class="story-copy">
+        <p class="topic">Remote Access</p>
+        <h3>SMA 1000 Fix Needs a New Version Floor</h3>
+        <p class="summary">SonicWall issued actively exploited hotfixes for SMA 1000 appliances. Previous patch levels do not protect against the new version floor.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Prior remediation records expire when new advisories introduce critical vulnerabilities.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/sma1000-fix-needs-a-new-version-floor/">SMA 1000 Fix Needs a New Version Floor ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">07</div>
+      <div class="story-copy">
+        <p class="topic">CI/CD Security</p>
+        <h3>Devtron Token Fix Needs Release-Level Proof</h3>
+        <p class="summary">CVE-2026-82882 exposes an API-token authorization gap in Devtron. Operators must confirm a supported fixed release before declaring closure.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Control plane tokens provide platform-wide authority beyond ordinary sessions.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/devtron-token-fix-needs-release-level-proof/">Devtron Token Fix Needs Release-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">08</div>
+      <div class="story-copy">
+        <p class="topic">Endpoint Management</p>
+        <h3>Netwrix Endpoint Protector Fix Needs Appliance-Level Proof</h3>
+        <p class="summary">Netwrix fixed seven Endpoint Protector Server flaws in version 2608.0.1.0. Defenders must verify appliance versions and review administrator boundaries.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Hard-coded credentials and configuration gaps require appliance-level oversight and strict role boundaries.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/netwrix-endpoint-protector-fix-needs-appliance-proof/">Netwrix Endpoint Protector Fix Needs Appliance-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">09</div>
+      <div class="story-copy">
+        <p class="topic">Space Networking</p>
+        <h3>ION-DTN Fix Needs Protocol-Path Proof</h3>
+        <p class="summary">CVE-2026-84484 impacts NASA/JPL ION-DTN parsing. Upgrading to 4.2.0 requires verifying every network-facing protocol path that uses the shared decoder.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Shared decoders span multiple protocol layers, turning single parser flaws into multi-service risks.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ion-dtn-fix-needs-protocol-path-proof/">ION-DTN Fix Needs Protocol-Path Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">10</div>
+      <div class="story-copy">
+        <p class="topic">Client Security</p>
+        <h3>Thunderbird Calendar Invites Need Attachment Boundaries</h3>
+        <p class="summary">Mozilla patched critical Thunderbird flaws and a Windows calendar-attachment bypass. Defenders must verify channel updates and treat calendar invites as untrusted.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Calendar interfaces can grant attachments misplaced user trust compared to normal email.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/thunderbird-calendar-invites-need-attachment-boundaries/">Thunderbird Calendar Invites Need Attachment Boundaries ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">11</div>
+      <div class="story-copy">
+        <p class="topic">Network Infrastructure</p>
+        <h3>Critical AOS-CX Fix Needs Control-Plane Proof</h3>
+        <p class="summary">HPE disclosed critical AOS-CX flaws. Defenders must map running versions, restrict management paths, and verify the post-update software state.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Switch operating systems govern both traffic forwarding and critical network administrative services.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/aos-cx-fix-needs-control-plane-proof/">Critical AOS-CX Fix Needs Control-Plane Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">12</div>
+      <div class="story-copy">
+        <p class="topic">Browser Security</p>
+        <h3>Chrome 152 Update Needs Platform-Level Proof</h3>
+        <p class="summary">Google released Chrome 152 with 26 security fixes, including two critical use-after-free bugs. Teams must verify platform-specific version floors.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Staged rollouts and platform variations require verifying active browser binaries rather than deployment tasks.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/chrome-152-update-needs-platform-level-proof/">Chrome 152 Update Needs Platform-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">13</div>
+      <div class="story-copy">
+        <p class="topic">AI Security</p>
+        <h3>AI-Generated Detections Need Validation Gates</h3>
+        <p class="summary">An evaluation of AI defensive agents highlights the need for strict linting, replay, and independent review gates before promoting generated rules.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Generated detection logic must survive rigorous validation to ensure operational reliability and prevent noise.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ai-generated-detections-need-validation-gates/">AI-Generated Detections Need Validation Gates ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">14</div>
+      <div class="story-copy">
+        <p class="topic">Networking Libraries</p>
+        <h3>curl Cookie Fix Makes Public-Suffix Checks a Runtime Boundary</h3>
+        <p class="summary">curl 8.22.0 addresses a low-severity public-suffix cookie flaw. Defenders must verify embedded versions, libpsl support, and application cookie usage.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Embedded libraries require workload-level evidence to ensure the correct patched code is executing.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/curl-cookie-fix-needs-public-suffix-proof/">curl Cookie Fix Makes Public-Suffix Checks a Runtime Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">15</div>
+      <div class="story-copy">
+        <p class="topic">Network Management</p>
+        <h3>Fabric Composer Fix Needs Management-Plane Proof</h3>
+        <p class="summary">HPE Fabric Composer updates address critical CVSS 10.0 flaws. Defenders must update, isolate management planes, and verify running releases.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Management appliances control network-wide fabrics and require strict network segmentation.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/fabric-composer-fix-needs-management-plane-proof/">Fabric Composer Fix Needs Management-Plane Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">16</div>
+      <div class="story-copy">
+        <p class="topic">Security Awareness</p>
+        <h3>Phishing Training Needs Context, Not Cue Counts</h3>
+        <p class="summary">A large NIST study shows warning cues alone do not predict clicking. Awareness programs should measure reporting rates, context, and workflows.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Workplace context heavily influences user decisions, making simple click metrics inadequate for measuring program quality.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/phishing-training-needs-context-not-cue-counts/">Phishing Training Needs Context, Not Cue Counts ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">17</div>
+      <div class="story-copy">
+        <p class="topic">JavaScript Libraries</p>
+        <h3>xmldom Fix Needs Parser-Cost Boundaries</h3>
+        <p class="summary">CVE-2026-83615 exposes quadratic memory consumption in xmldom namespace parsing. Defenders must update maintained branches and apply resource bounds.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Parsers can exhaust memory during early input handling before downstream validation checks execute.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/xmldom-fix-needs-parser-cost-boundaries/">xmldom Fix Needs Parser-Cost Boundaries ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">18</div>
+      <div class="story-copy">
+        <p class="topic">Email Security</p>
+        <h3>Safe Links False Positive Needs Scoped Exceptions</h3>
+        <p class="summary">A Microsoft Defender classification error incorrectly blocked Google search URLs. Defenders must validate scope and apply short-lived, auditable exceptions.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Service classification issues can disrupt users, requiring disciplined exceptions rather than blanket security overrides.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/safe-links-false-positive-needs-scoped-exceptions/">Safe Links False Positive Needs Scoped Exceptions ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">19</div>
+      <div class="story-copy">
+        <p class="topic">Scientific Software</p>
+        <h3>BioSig Fix Makes Biomedical Signal Files a Trust Boundary</h3>
+        <p class="summary">Ubuntu fixed BioSig memory-safety flaws. Defenders must patch packages, track parser execution paths, and isolate untrusted data intake.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Scientific data files act as active inputs to complex native parsers and require pre-parsing trust decisions.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/biosig-fix-makes-signal-files-a-trust-boundary/">BioSig Fix Makes Biomedical Signal Files a Trust Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">20</div>
+      <div class="story-copy">
+        <p class="topic">Data Center Networking</p>
+        <h3>Nexus Silicon One Fix Needs Model-Level Proof</h3>
+        <p class="summary">Cisco fixed a critical Nexus 9000 Silicon One flaw. Defenders must verify hardware models, restrict exposed TCP ports, and validate running software.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Hardware-specific vulnerabilities require physical asset verification and strict reachability controls.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/nexus-silicon-one-fix-needs-model-level-proof/">Nexus Silicon One Fix Needs Model-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">21</div>
+      <div class="story-copy">
+        <p class="topic">Industrial Control</p>
+        <h3>RSLinx flaws make service recovery an industrial control</h3>
+        <p class="summary">Rockwell RSLinx Classic flaws can crash communications services via CIP input. Defenders need version proof, network segmentation, and tested runbooks.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Industrial service disruptions impair process visibility, making recovery time an operational control.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/rslinx-flaws-make-service-recovery-a-control/">RSLinx flaws make service recovery an industrial control ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">22</div>
+      <div class="story-copy">
+        <p class="topic">Router Security</p>
+        <h3>IOS XR Hardening Needs SMU Coverage Proof</h3>
+        <p class="summary">Cisco&#39;s IOS XR hardening release addresses seven vulnerability classes across all releases. Defenders must prove every required SMU is active on each router.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Grouped security advisories require per-device manifest tracking to ensure complete platform coverage.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ios-xr-hardening-needs-smu-coverage-proof/">IOS XR Hardening Needs SMU Coverage Proof ↗</a>
+      </div>
+    </article></main>
+
+      <section class="operating-view">
+        <p class="eyebrow">The operating view</p>
+        <h2>What the day means for defenders</h2>
+        <p>Security programs must prioritize running-state evidence over simple package installation. Across infrastructure devices, enterprise libraries, and cloud admission controllers, version floors change rapidly and require strict network boundary enforcement.</p>
+        <ol class="watch-list"><li><span>1</span><p>Verify running software versions across physical devices and containerized deployments instead of relying on package manifests.</p></li>
+<li><span>2</span><p>Enforce strict network and protocol boundary controls around management interfaces and parsers.</p></li>
+<li><span>3</span><p>Validate that temporary bypasses and exceptions have short expirations and clear ownership.</p></li></ol>
+      </section>
+
+      <section class="sources">
+        <p class="eyebrow">Source index</p>
+        <h2>Every briefing in this digest</h2>
+        <ol class="source-list">
+    <li>
+      <span>01</span>
+      <a href="https://shadowcontext.com/kyverno-api-calls-need-destination-boundaries/">Kyverno API Calls Need Destination Boundaries</a>
+    </li>
+
+    <li>
+      <span>02</span>
+      <a href="https://shadowcontext.com/ubuntu-pyasn1-fix-needs-parser-boundaries/">Ubuntu pyasn1 Fix Needs Parser-Boundary Proof</a>
+    </li>
+
+    <li>
+      <span>03</span>
+      <a href="https://shadowcontext.com/ubuntu-libevent-fixes-need-protocol-path-proof/">Ubuntu libevent Fixes Need Protocol-Path Proof</a>
+    </li>
+
+    <li>
+      <span>04</span>
+      <a href="https://shadowcontext.com/svg-sanitizer-fixes-need-rendering-context-proof/">SVG Sanitizer Fixes Need Rendering-Context Proof</a>
+    </li>
+
+    <li>
+      <span>05</span>
+      <a href="https://shadowcontext.com/ubuntu-sudo-rs-fix-needs-file-identity-proof/">Ubuntu sudo-rs Fix Puts Fine-Grained sudoedit Rules Under Review</a>
+    </li>
+
+    <li>
+      <span>06</span>
+      <a href="https://shadowcontext.com/sma1000-fix-needs-a-new-version-floor/">SMA 1000 Fix Needs a New Version Floor</a>
+    </li>
+
+    <li>
+      <span>07</span>
+      <a href="https://shadowcontext.com/devtron-token-fix-needs-release-level-proof/">Devtron Token Fix Needs Release-Level Proof</a>
+    </li>
+
+    <li>
+      <span>08</span>
+      <a href="https://shadowcontext.com/netwrix-endpoint-protector-fix-needs-appliance-proof/">Netwrix Endpoint Protector Fix Needs Appliance-Level Proof</a>
+    </li>
+
+    <li>
+      <span>09</span>
+      <a href="https://shadowcontext.com/ion-dtn-fix-needs-protocol-path-proof/">ION-DTN Fix Needs Protocol-Path Proof</a>
+    </li>
+
+    <li>
+      <span>10</span>
+      <a href="https://shadowcontext.com/thunderbird-calendar-invites-need-attachment-boundaries/">Thunderbird Calendar Invites Need Attachment Boundaries</a>
+    </li>
+
+    <li>
+      <span>11</span>
+      <a href="https://shadowcontext.com/aos-cx-fix-needs-control-plane-proof/">Critical AOS-CX Fix Needs Control-Plane Proof</a>
+    </li>
+
+    <li>
+      <span>12</span>
+      <a href="https://shadowcontext.com/chrome-152-update-needs-platform-level-proof/">Chrome 152 Update Needs Platform-Level Proof</a>
+    </li>
+
+    <li>
+      <span>13</span>
+      <a href="https://shadowcontext.com/ai-generated-detections-need-validation-gates/">AI-Generated Detections Need Validation Gates</a>
+    </li>
+
+    <li>
+      <span>14</span>
+      <a href="https://shadowcontext.com/curl-cookie-fix-needs-public-suffix-proof/">curl Cookie Fix Makes Public-Suffix Checks a Runtime Boundary</a>
+    </li>
+
+    <li>
+      <span>15</span>
+      <a href="https://shadowcontext.com/fabric-composer-fix-needs-management-plane-proof/">Fabric Composer Fix Needs Management-Plane Proof</a>
+    </li>
+
+    <li>
+      <span>16</span>
+      <a href="https://shadowcontext.com/phishing-training-needs-context-not-cue-counts/">Phishing Training Needs Context, Not Cue Counts</a>
+    </li>
+
+    <li>
+      <span>17</span>
+      <a href="https://shadowcontext.com/xmldom-fix-needs-parser-cost-boundaries/">xmldom Fix Needs Parser-Cost Boundaries</a>
+    </li>
+
+    <li>
+      <span>18</span>
+      <a href="https://shadowcontext.com/safe-links-false-positive-needs-scoped-exceptions/">Safe Links False Positive Needs Scoped Exceptions</a>
+    </li>
+
+    <li>
+      <span>19</span>
+      <a href="https://shadowcontext.com/biosig-fix-makes-signal-files-a-trust-boundary/">BioSig Fix Makes Biomedical Signal Files a Trust Boundary</a>
+    </li>
+
+    <li>
+      <span>20</span>
+      <a href="https://shadowcontext.com/nexus-silicon-one-fix-needs-model-level-proof/">Nexus Silicon One Fix Needs Model-Level Proof</a>
+    </li>
+
+    <li>
+      <span>21</span>
+      <a href="https://shadowcontext.com/rslinx-flaws-make-service-recovery-a-control/">RSLinx flaws make service recovery an industrial control</a>
+    </li>
+
+    <li>
+      <span>22</span>
+      <a href="https://shadowcontext.com/ios-xr-hardening-needs-smu-coverage-proof/">IOS XR Hardening Needs SMU Coverage Proof</a>
+    </li></ol>
+      </section>
+
+      <div class="cta">
+        <strong>Read the full analysis</strong>
+        <span>https://shadowcontext.com/</span>
+      </div>
+
+      <footer class="document-footer">
+        <span>ShadowContext</span>
+        <span>Independent defensive security intelligence</span>
+      </footer>
+    </section>
+  </body>
+</html>

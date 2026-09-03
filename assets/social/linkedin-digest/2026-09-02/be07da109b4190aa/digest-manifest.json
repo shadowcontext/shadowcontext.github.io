@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-09-03T09:23:05.081+04:00",
+  "digestDate": "2026-09-02",
+  "digestHash": "be07da109b4190aacc9870b2816d8eaf6c119794b9fa5c17a429d517d2726059",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "Daily Security News Digest: Updates, Evidence, and Boundaries",
+  "articleCount": 22,
+  "sourceArticles": [
+    {
+      "title": "Kyverno API Calls Need Destination Boundaries",
+      "canonicalUrl": "https://shadowcontext.com/kyverno-api-calls-need-destination-boundaries/",
+      "publishedAt": "2026-09-02T00:10:25.000+04:00",
+      "category": "defense",
+      "sourceHash": "7c60ecd38a97aa9d1838efdb5e97fb95a7dab6201be186726cf8de6e35af6876"
+    },
+    {
+      "title": "Ubuntu pyasn1 Fix Needs Parser-Boundary Proof",
+      "canonicalUrl": "https://shadowcontext.com/ubuntu-pyasn1-fix-needs-parser-boundaries/",
+      "publishedAt": "2026-09-02T01:09:28.000+04:00",
+      "category": "defense",
+      "sourceHash": "0af636c2381e846f7f5ea2ef3c8a60e15e6a0f9194d4f03d37bb0f9400209da6"
+    },
+    {
+      "title": "Ubuntu libevent Fixes Need Protocol-Path Proof",
+      "canonicalUrl": "https://shadowcontext.com/ubuntu-libevent-fixes-need-protocol-path-proof/",
+      "publishedAt": "2026-09-02T02:10:20.000+04:00",
+      "category": "defense",
+      "sourceHash": "da7cae8a6292f2622ecf987daad5bdf55b65dd3d0cca33462b8eb35a5cc16a94"
+    },
+    {
+      "title": "SVG Sanitizer Fixes Need Rendering-Context Proof",
+      "canonicalUrl": "https://shadowcontext.com/svg-sanitizer-fixes-need-rendering-context-proof/",
+      "publishedAt": "2026-09-02T03:11:41.000+04:00",
+      "category": "defense",
+      "sourceHash": "af87d917692a0d25ab4272a4f076c06df9e895a4eab5deeba4e9d4ed5fdc6a21"
+    },
+    {
+      "title": "Ubuntu sudo-rs Fix Puts Fine-Grained sudoedit Rules Under Review",
+      "canonicalUrl": "https://shadowcontext.com/ubuntu-sudo-rs-fix-needs-file-identity-proof/",
+      "publishedAt": "2026-09-02T04:11:25.000+04:00",
+      "category": "defense",
+      "sourceHash": "e259d49cc0ea37d995f4c87310c82f2e514af6171b4e2ddeab78d83adf4b7aa6"
+    },
+    {
+      "title": "SMA 1000 Fix Needs a New Version Floor",
+      "canonicalUrl": "https://shadowcontext.com/sma1000-fix-needs-a-new-version-floor/",
+      "publishedAt": "2026-09-02T06:10:33.000+04:00",
+      "category": "defense",
+      "sourceHash": "db3838f24fd6fbea376b0732c8fbeda61eacd05429c5149f6cf9f9325d3ab933"
+    },
+    {
+      "title": "Devtron Token Fix Needs Release-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/devtron-token-fix-needs-release-level-proof/",
+      "publishedAt": "2026-09-02T07:11:52.000+04:00",
+      "category": "defense",
+      "sourceHash": "542fe835a4c960625b2008f0371f51e7d26a363a260006105cd57967e53edcaa"
+    },
+    {
+      "title": "Netwrix Endpoint Protector Fix Needs Appliance-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/netwrix-endpoint-protector-fix-needs-appliance-proof/",
+      "publishedAt": "2026-09-02T08:10:32.000+04:00",
+      "category": "defense",
+      "sourceHash": "c46bbc1857f85312974bbaa3ca6bbbe4ed9555656936b1a060bd8b5c0f9520ef"
+    },
+    {
+      "title": "ION-DTN Fix Needs Protocol-Path Proof",
+      "canonicalUrl": "https://shadowcontext.com/ion-dtn-fix-needs-protocol-path-proof/",
+      "publishedAt": "2026-09-02T09:10:50.000+04:00",
+      "category": "defense",
+      "sourceHash": "ea802f080b935338c7f7a57e87e81027d6538400bf7920c0c5e3c70f36700fcb"
+    },
+    {
+      "title": "Thunderbird Calendar Invites Need Attachment Boundaries",
+      "canonicalUrl": "https://shadowcontext.com/thunderbird-calendar-invites-need-attachment-boundaries/",
+      "publishedAt": "2026-09-02T10:12:05.000+04:00",
+      "category": "defense",
+      "sourceHash": "0c721c3bedab55ba294f31c2b0635b70e96c170819bc3dc63c0eeea67e32f055"
+    },
+    {
+      "title": "Critical AOS-CX Fix Needs Control-Plane Proof",
+      "canonicalUrl": "https://shadowcontext.com/aos-cx-fix-needs-control-plane-proof/",
+      "publishedAt": "2026-09-02T12:13:37.000+04:00",
+      "category": "defense",
+      "sourceHash": "3e1c20651d21316a470d814edcf4c85965ad308c9a5a7f1eefdb85463111c123"
+    },
+    {
+      "title": "Chrome 152 Update Needs Platform-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/chrome-152-update-needs-platform-level-proof/",
+      "publishedAt": "2026-09-02T13:10:32.000+04:00",
+      "category": "defense",
+      "sourceHash": "b8e3be3c5872982e7ab5af038f3b297d15c312bdcb65bcaaf10195a9c0cb03d8"
+    },
+    {
+      "title": "AI-Generated Detections Need Validation Gates",
+      "canonicalUrl": "https://shadowcontext.com/ai-generated-detections-need-validation-gates/",
+      "publishedAt": "2026-09-02T14:12:00.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "47e618a6737a9b01ff92f9c8ed3b9cee8b0ea967a17a2b4dc4fe03b124cdae73"
+    },
+    {
+      "title": "curl Cookie Fix Makes Public-Suffix Checks a Runtime Boundary",
+      "canonicalUrl": "https://shadowcontext.com/curl-cookie-fix-needs-public-suffix-proof/",
+      "publishedAt": "2026-09-02T15:10:49.000+04:00",
+      "category": "defense",
+      "sourceHash": "b4820c1b9c8f1d9b24e37f6bf2041f75f710029280783c1b26889da0af389dd4"
+    },
+    {
+      "title": "Fabric Composer Fix Needs Management-Plane Proof",
+      "canonicalUrl": "https://shadowcontext.com/fabric-composer-fix-needs-management-plane-proof/",
+      "publishedAt": "2026-09-02T16:12:10.000+04:00",
+      "category": "defense",
+      "sourceHash": "31a9408d4ee1e736082286d9fa454edcd6945f4ffe74e557e38756beaf10093c"
+    },
+    {
+      "title": "Phishing Training Needs Context, Not Cue Counts",
+      "canonicalUrl": "https://shadowcontext.com/phishing-training-needs-context-not-cue-counts/",
+      "publishedAt": "2026-09-02T17:11:49.000+04:00",
+      "category": "defense",
+      "sourceHash": "e1e2aef931248942485ba6f2237faf991698b9f7d90f9cb4d4925858e53c15b1"
+    },
+    {
+      "title": "xmldom Fix Needs Parser-Cost Boundaries",
+      "canonicalUrl": "https://shadowcontext.com/xmldom-fix-needs-parser-cost-boundaries/",
+      "publishedAt": "2026-09-02T18:11:35.000+04:00",
+      "category": "defense",
+      "sourceHash": "82beeaf1838d2298512327ef157ca0d1d53f9dfcfffb63f8a4f3c60796b1f3cc"
+    },
+    {
+      "title": "Safe Links False Positive Needs Scoped Exceptions",
+      "canonicalUrl": "https://shadowcontext.com/safe-links-false-positive-needs-scoped-exceptions/",
+      "publishedAt": "2026-09-02T19:09:34.000+04:00",
+      "category": "defense",
+      "sourceHash": "6dfb562a08456d0dfa9ccc7b6a978ca96514046cece9d474a46f3a4df4eacda8"
+    },
+    {
+      "title": "BioSig Fix Makes Biomedical Signal Files a Trust Boundary",
+      "canonicalUrl": "https://shadowcontext.com/biosig-fix-makes-signal-files-a-trust-boundary/",
+      "publishedAt": "2026-09-02T20:11:33.000+04:00",
+      "category": "defense",
+      "sourceHash": "f5822a50dd63ea7d481a4668f28d28d7775228429f839167debb4e9c68d920cd"
+    },
+    {
+      "title": "Nexus Silicon One Fix Needs Model-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/nexus-silicon-one-fix-needs-model-level-proof/",
+      "publishedAt": "2026-09-02T21:11:40.000+04:00",
+      "category": "defense",
+      "sourceHash": "61c278f9cc692e8cb9f24fbae721d83948628420b5c29031d73de329a926b83f"
+    },
+    {
+      "title": "RSLinx flaws make service recovery an industrial control",
+      "canonicalUrl": "https://shadowcontext.com/rslinx-flaws-make-service-recovery-a-control/",
+      "publishedAt": "2026-09-02T22:12:17.000+04:00",
+      "category": "defense",
+      "sourceHash": "8a6b25a048a82282cf9eb0daef072027d18322b7cbd6e031d2927855baa03b61"
+    },
+    {
+      "title": "IOS XR Hardening Needs SMU Coverage Proof",
+      "canonicalUrl": "https://shadowcontext.com/ios-xr-hardening-needs-smu-coverage-proof/",
+      "publishedAt": "2026-09-02T23:12:32.000+04:00",
+      "category": "defense",
+      "sourceHash": "b50a0bd2f2026f644ec65dafa4b3dccbf82ed81a10c8a4e48f6926c39f816694"
+    }
+  ],
+  "caption": "ShadowContext daily security-news digest for September 2, 2026. Reviewing critical advisories, boundary verifications, and operational controls.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-09-02/be07da109b4190aa/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-09-02/be07da109b4190aa/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-09-02/be07da109b4190aa/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-09-02/be07da109b4190aa/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}

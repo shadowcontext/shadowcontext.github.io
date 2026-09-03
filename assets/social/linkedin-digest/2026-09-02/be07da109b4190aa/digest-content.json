@@ -1,0 +1,168 @@
+{
+  "digest_title": "Daily Security News Digest: Updates, Evidence, and Boundaries",
+  "dek": "ShadowContext daily briefing covers critical advisories, boundary verifications, and operational controls across network devices, Linux systems, and enterprise libraries.",
+  "overview": "Defenders must verify running versions, isolate management planes, and validate untrusted input boundaries across multiple infrastructure advisories. Updates alone are insufficient without runtime evidence.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "Kyverno API Calls Need Destination Boundaries",
+      "summary": "CVE-2026-84196 allows controllable resource data to influence API call destinations. Defenders must update to 1.18.0 and enforce policy egress boundaries.",
+      "why_it_matters": "Admission controllers operate with privileged identities, making delegated lookups an important egress control problem.",
+      "topic": "Kubernetes Policy"
+    },
+    {
+      "source_id": "S02",
+      "headline": "Ubuntu pyasn1 Fix Needs Parser-Boundary Proof",
+      "summary": "Ubuntu fixed three pyasn1 denial-of-service flaws. Teams should verify the exact package provenance and ensure ASN.1 parsing stays within resource limits.",
+      "why_it_matters": "Compact encoded objects can exhaust resources if parsers lack effective limits.",
+      "topic": "Python Dependencies"
+    },
+    {
+      "source_id": "S03",
+      "headline": "Ubuntu libevent Fixes Need Protocol-Path Proof",
+      "summary": "Ubuntu Security Notice USN-8710-1 fixes five libevent vulnerabilities. Defenders must map loaded modules, update packages, and verify runtime protocol paths.",
+      "why_it_matters": "Libevent is shared infrastructure; package updates must be paired with module and protocol path reviews.",
+      "topic": "Network Libraries"
+    },
+    {
+      "source_id": "S04",
+      "headline": "SVG Sanitizer Fixes Need Rendering-Context Proof",
+      "summary": "Four advisories for enshrined/svg-sanitize require verifying parser, serializer, and browser rendering contexts rather than relying solely on package updates.",
+      "why_it_matters": "Content safety depends on how downstream renderers interpret sanitized output.",
+      "topic": "Content Sanitization"
+    },
+    {
+      "source_id": "S05",
+      "headline": "Ubuntu sudo-rs Fix Puts Fine-Grained sudoedit Rules Under Review",
+      "summary": "Ubuntu patched a sudoedit race condition in sudo-rs for Ubuntu 26.04 LTS. Teams must update and audit fine-grained file-editing policies.",
+      "why_it_matters": "Delegated editing permissions can allow unauthorized filesystem boundary crossings if time-of-check flaws exist.",
+      "topic": "Access Control"
+    },
+    {
+      "source_id": "S06",
+      "headline": "SMA 1000 Fix Needs a New Version Floor",
+      "summary": "SonicWall issued actively exploited hotfixes for SMA 1000 appliances. Previous patch levels do not protect against the new version floor.",
+      "why_it_matters": "Prior remediation records expire when new advisories introduce critical vulnerabilities.",
+      "topic": "Remote Access"
+    },
+    {
+      "source_id": "S07",
+      "headline": "Devtron Token Fix Needs Release-Level Proof",
+      "summary": "CVE-2026-82882 exposes an API-token authorization gap in Devtron. Operators must confirm a supported fixed release before declaring closure.",
+      "why_it_matters": "Control plane tokens provide platform-wide authority beyond ordinary sessions.",
+      "topic": "CI/CD Security"
+    },
+    {
+      "source_id": "S08",
+      "headline": "Netwrix Endpoint Protector Fix Needs Appliance-Level Proof",
+      "summary": "Netwrix fixed seven Endpoint Protector Server flaws in version 2608.0.1.0. Defenders must verify appliance versions and review administrator boundaries.",
+      "why_it_matters": "Hard-coded credentials and configuration gaps require appliance-level oversight and strict role boundaries.",
+      "topic": "Endpoint Management"
+    },
+    {
+      "source_id": "S09",
+      "headline": "ION-DTN Fix Needs Protocol-Path Proof",
+      "summary": "CVE-2026-84484 impacts NASA/JPL ION-DTN parsing. Upgrading to 4.2.0 requires verifying every network-facing protocol path that uses the shared decoder.",
+      "why_it_matters": "Shared decoders span multiple protocol layers, turning single parser flaws into multi-service risks.",
+      "topic": "Space Networking"
+    },
+    {
+      "source_id": "S10",
+      "headline": "Thunderbird Calendar Invites Need Attachment Boundaries",
+      "summary": "Mozilla patched critical Thunderbird flaws and a Windows calendar-attachment bypass. Defenders must verify channel updates and treat calendar invites as untrusted.",
+      "why_it_matters": "Calendar interfaces can grant attachments misplaced user trust compared to normal email.",
+      "topic": "Client Security"
+    },
+    {
+      "source_id": "S11",
+      "headline": "Critical AOS-CX Fix Needs Control-Plane Proof",
+      "summary": "HPE disclosed critical AOS-CX flaws. Defenders must map running versions, restrict management paths, and verify the post-update software state.",
+      "why_it_matters": "Switch operating systems govern both traffic forwarding and critical network administrative services.",
+      "topic": "Network Infrastructure"
+    },
+    {
+      "source_id": "S12",
+      "headline": "Chrome 152 Update Needs Platform-Level Proof",
+      "summary": "Google released Chrome 152 with 26 security fixes, including two critical use-after-free bugs. Teams must verify platform-specific version floors.",
+      "why_it_matters": "Staged rollouts and platform variations require verifying active browser binaries rather than deployment tasks.",
+      "topic": "Browser Security"
+    },
+    {
+      "source_id": "S13",
+      "headline": "AI-Generated Detections Need Validation Gates",
+      "summary": "An evaluation of AI defensive agents highlights the need for strict linting, replay, and independent review gates before promoting generated rules.",
+      "why_it_matters": "Generated detection logic must survive rigorous validation to ensure operational reliability and prevent noise.",
+      "topic": "AI Security"
+    },
+    {
+      "source_id": "S14",
+      "headline": "curl Cookie Fix Makes Public-Suffix Checks a Runtime Boundary",
+      "summary": "curl 8.22.0 addresses a low-severity public-suffix cookie flaw. Defenders must verify embedded versions, libpsl support, and application cookie usage.",
+      "why_it_matters": "Embedded libraries require workload-level evidence to ensure the correct patched code is executing.",
+      "topic": "Networking Libraries"
+    },
+    {
+      "source_id": "S15",
+      "headline": "Fabric Composer Fix Needs Management-Plane Proof",
+      "summary": "HPE Fabric Composer updates address critical CVSS 10.0 flaws. Defenders must update, isolate management planes, and verify running releases.",
+      "why_it_matters": "Management appliances control network-wide fabrics and require strict network segmentation.",
+      "topic": "Network Management"
+    },
+    {
+      "source_id": "S16",
+      "headline": "Phishing Training Needs Context, Not Cue Counts",
+      "summary": "A large NIST study shows warning cues alone do not predict clicking. Awareness programs should measure reporting rates, context, and workflows.",
+      "why_it_matters": "Workplace context heavily influences user decisions, making simple click metrics inadequate for measuring program quality.",
+      "topic": "Security Awareness"
+    },
+    {
+      "source_id": "S17",
+      "headline": "xmldom Fix Needs Parser-Cost Boundaries",
+      "summary": "CVE-2026-83615 exposes quadratic memory consumption in xmldom namespace parsing. Defenders must update maintained branches and apply resource bounds.",
+      "why_it_matters": "Parsers can exhaust memory during early input handling before downstream validation checks execute.",
+      "topic": "JavaScript Libraries"
+    },
+    {
+      "source_id": "S18",
+      "headline": "Safe Links False Positive Needs Scoped Exceptions",
+      "summary": "A Microsoft Defender classification error incorrectly blocked Google search URLs. Defenders must validate scope and apply short-lived, auditable exceptions.",
+      "why_it_matters": "Service classification issues can disrupt users, requiring disciplined exceptions rather than blanket security overrides.",
+      "topic": "Email Security"
+    },
+    {
+      "source_id": "S19",
+      "headline": "BioSig Fix Makes Biomedical Signal Files a Trust Boundary",
+      "summary": "Ubuntu fixed BioSig memory-safety flaws. Defenders must patch packages, track parser execution paths, and isolate untrusted data intake.",
+      "why_it_matters": "Scientific data files act as active inputs to complex native parsers and require pre-parsing trust decisions.",
+      "topic": "Scientific Software"
+    },
+    {
+      "source_id": "S20",
+      "headline": "Nexus Silicon One Fix Needs Model-Level Proof",
+      "summary": "Cisco fixed a critical Nexus 9000 Silicon One flaw. Defenders must verify hardware models, restrict exposed TCP ports, and validate running software.",
+      "why_it_matters": "Hardware-specific vulnerabilities require physical asset verification and strict reachability controls.",
+      "topic": "Data Center Networking"
+    },
+    {
+      "source_id": "S21",
+      "headline": "RSLinx flaws make service recovery an industrial control",
+      "summary": "Rockwell RSLinx Classic flaws can crash communications services via CIP input. Defenders need version proof, network segmentation, and tested runbooks.",
+      "why_it_matters": "Industrial service disruptions impair process visibility, making recovery time an operational control.",
+      "topic": "Industrial Control"
+    },
+    {
+      "source_id": "S22",
+      "headline": "IOS XR Hardening Needs SMU Coverage Proof",
+      "summary": "Cisco's IOS XR hardening release addresses seven vulnerability classes across all releases. Defenders must prove every required SMU is active on each router.",
+      "why_it_matters": "Grouped security advisories require per-device manifest tracking to ensure complete platform coverage.",
+      "topic": "Router Security"
+    }
+  ],
+  "operating_view": "Security programs must prioritize running-state evidence over simple package installation. Across infrastructure devices, enterprise libraries, and cloud admission controllers, version floors change rapidly and require strict network boundary enforcement.",
+  "watch_items": [
+    "Verify running software versions across physical devices and containerized deployments instead of relying on package manifests.",
+    "Enforce strict network and protocol boundary controls around management interfaces and parsers.",
+    "Validate that temporary bypasses and exceptions have short expirations and clear ownership."
+  ],
+  "caption_intro": "ShadowContext daily security-news digest for September 2, 2026. Reviewing critical advisories, boundary verifications, and operational controls."
+}
