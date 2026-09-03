@@ -1,15 +1,85 @@
 {
-  "generated_at": "2026-09-02T01:23:09Z",
-  "generated_display": "02 Sep 2026 · 01:23 UTC",
+  "generated_at": "2026-09-03T01:24:09Z",
+  "generated_display": "03 Sep 2026 · 01:24 UTC",
   "metrics": {
-    "kev_total": 1687,
-    "kev_added_30d": 31,
-    "due_next_7d": 6,
+    "kev_total": 1694,
+    "kev_added_30d": 37,
+    "due_next_7d": 11,
     "ioc_total": 197,
     "ioc_total_display": "197",
     "ioc_total_exact": "197"
   },
   "vulnerabilities": [
+    {
+      "cve": "CVE-2026-9586",
+      "name": "Sangoma Switchvox SQL Injection Vulnerability",
+      "vendor": "Sangoma",
+      "product": "Switchvox",
+      "date_added": "2026-09-02",
+      "due_date": "2026-09-05",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-9586"
+    },
+    {
+      "cve": "CVE-2026-83549",
+      "name": "SonicWall SMA1000 Appliances OS Command Injection Vulnerability",
+      "vendor": "SonicWall",
+      "product": "SMA1000 Appliances",
+      "date_added": "2026-09-02",
+      "due_date": "2026-09-05",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-83549"
+    },
+    {
+      "cve": "CVE-2026-83548",
+      "name": "SonicWall SMA1000 Appliances Server-Side Request Forgery Vulnerability",
+      "vendor": "SonicWall",
+      "product": "SMA1000 Appliances",
+      "date_added": "2026-09-02",
+      "due_date": "2026-09-05",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-83548"
+    },
+    {
+      "cve": "CVE-2026-82329",
+      "name": "JFrog Artifactory Improper Authentication Vulnerability",
+      "vendor": "JFrog",
+      "product": "Artifactory",
+      "date_added": "2026-09-02",
+      "due_date": "2026-09-05",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-82329"
+    },
+    {
+      "cve": "CVE-2026-59822",
+      "name": "BerriAI LiteLLM Improper Authentication Vulnerability",
+      "vendor": "BerriAI",
+      "product": "LiteLLM",
+      "date_added": "2026-09-02",
+      "due_date": "2026-09-16",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-59822"
+    },
+    {
+      "cve": "CVE-2026-49869",
+      "name": "Kestra OSS OS Command Injection Vulnerability",
+      "vendor": "Kestra",
+      "product": "Kestra OSS",
+      "date_added": "2026-09-02",
+      "due_date": "2026-09-05",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-49869"
+    },
+    {
+      "cve": "CVE-2026-48710",
+      "name": "Kludex Starlette HTTP Request/Response Smuggling Vulnerability",
+      "vendor": "Kludex",
+      "product": "Starlette",
+      "date_added": "2026-09-02",
+      "due_date": "2026-09-16",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-48710"
+    },
     {
       "cve": "CVE-2026-82078",
       "name": "PaperCut NG/MF Unsafe Reflection Vulnerability",
@@ -19,76 +89,6 @@
       "due_date": "2026-09-14",
       "ransomware": "Unknown",
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-82078"
-    },
-    {
-      "cve": "CVE-2026-81578",
-      "name": "PaperCut NG/MF Missing Authentication for Critical Function Vulnerability",
-      "vendor": "PaperCut",
-      "product": "NG/MF",
-      "date_added": "2026-08-31",
-      "due_date": "2026-09-14",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-81578"
-    },
-    {
-      "cve": "CVE-2026-66384",
-      "name": "JFrog Artifactory Improper Limitation of a Pathname to a Restricted Directory Vulnerability",
-      "vendor": "JFrog",
-      "product": "Artifactory",
-      "date_added": "2026-08-27",
-      "due_date": "2026-09-10",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-66384"
-    },
-    {
-      "cve": "CVE-2026-53362",
-      "name": "Linux Kernel Unspecified Vulnerability",
-      "vendor": "Linux",
-      "product": "Kernel",
-      "date_added": "2026-08-27",
-      "due_date": "2026-08-30",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-53362"
-    },
-    {
-      "cve": "CVE-2023-49105",
-      "name": "ownCloud Improper Authentication Vulnerability",
-      "vendor": "ownCloud",
-      "product": "ownCloud",
-      "date_added": "2026-08-27",
-      "due_date": "2026-08-30",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2023-49105"
-    },
-    {
-      "cve": "CVE-2026-8452",
-      "name": "Citrix NetScaler ADC and NetScaler Gateway Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
-      "vendor": "Citrix",
-      "product": "NetScaler ADC and NetScaler Gateway",
-      "date_added": "2026-08-26",
-      "due_date": "2026-08-29",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-8452"
-    },
-    {
-      "cve": "CVE-2022-0995",
-      "name": "Linux Kernel Out-of-Bounds Write Vulnerability",
-      "vendor": "Linux",
-      "product": "Kernel",
-      "date_added": "2026-08-26",
-      "due_date": "2026-09-09",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2022-0995"
-    },
-    {
-      "cve": "CVE-2021-23758",
-      "name": "Ajax.NET Professional Deserialization of Untrusted Data Vulnerability",
-      "vendor": "Ajax.NET Professional",
-      "product": "Ajax.NET Professional",
-      "date_added": "2026-08-26",
-      "due_date": "2026-09-09",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2021-23758"
     }
   ],
   "platforms": [
@@ -162,11 +162,35 @@
   "advisories": [
     {
       "authority": "Saudi NCA / CERT",
-      "title": "Mozilla Alert",
-      "url": "https://nca.gov.sa/en/cert/7919/",
+      "title": "F5 Alert",
+      "url": "https://nca.gov.sa/en/cert/7926/",
+      "date": "2026-09-03",
+      "severity": "High",
+      "summary": "Security alert 2026-7802. Review the official notice for affected products and remediation guidance."
+    },
+    {
+      "title": "CISA Adds Seven Known Exploited Vulnerabilities to Catalog",
+      "url": "https://www.cisa.gov/news-events/alerts/2026/09/02/cisa-adds-seven-known-exploited-vulnerabilities-catalog",
+      "date": "2026-09-02",
+      "summary": "CISA has added seven new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-9586 Sangoma Switchvox SQL…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "authority": "Saudi NCA / CERT",
+      "title": "Drupal Alert",
+      "url": "https://nca.gov.sa/en/cert/7925/",
+      "date": "2026-09-02",
+      "severity": "Critical",
+      "summary": "Security alert 2026-7801. Review the official notice for affected products and remediation guidance."
+    },
+    {
+      "authority": "Saudi NCA / CERT",
+      "title": "F5 Alert",
+      "url": "https://nca.gov.sa/en/cert/7924/",
       "date": "2026-09-02",
       "severity": "High",
-      "summary": "Security alert 2026-7795. Review the official notice for affected products and remediation guidance."
+      "summary": "Security alert 2026-7800. Review the official notice for affected products and remediation guidance."
     },
     {
       "title": "Rockwell Automation RSLinx Classic",
@@ -191,30 +215,6 @@
       "summary": "View CSAF Summary The following versions of Rockwell Automation ControlLogix, CompactLogix, CompactLogix 5480, GuardLogix, Compact GuardLogix are affected: ControlLogix 5580…",
       "authority": "CISA",
       "severity": ""
-    },
-    {
-      "title": "Rockwell Automation Logix Platform",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-244-03",
-      "date": "2026-09-01",
-      "summary": "View CSAF Summary The following versions of Rockwell Automation Logix Platform are affected: ControlLogix 5580 CompactLogix 5380 GuardLogix 5580 Compact GuardLogix 5380 CVSS…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
-      "authority": "Saudi NCA / CERT",
-      "title": "SonicWall Alert",
-      "url": "https://nca.gov.sa/en/cert/7918/",
-      "date": "2026-09-01",
-      "severity": "Critical",
-      "summary": "Security alert 2026-7794. Review the official notice for affected products and remediation guidance."
-    },
-    {
-      "authority": "Saudi NCA / CERT",
-      "title": "HPE Alert",
-      "url": "https://nca.gov.sa/en/cert/7917/",
-      "date": "2026-09-01",
-      "severity": "Critical",
-      "summary": "Security alert 2026-7793. Review the official notice for affected products and remediation guidance."
     },
     {
       "title": "How to secure your online meetings",
@@ -324,7 +324,7 @@
       "path": "/assets/data/daily-urls.txt"
     }
   ],
-  "ioc_sha256": "a0f1d439408eb2e032b88dc99219e6026eb7d83f18e32078e1cc72e92166de3e",
+  "ioc_sha256": "0f0e63dde3908c7ecac6cf7f999e36619b30ed9dfe249981cc009f4d391a2a2f",
   "sources": {
     "kev": {
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
