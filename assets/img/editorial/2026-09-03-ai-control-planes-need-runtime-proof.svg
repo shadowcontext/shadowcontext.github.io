@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">AI control planes protected by layered runtime boundaries</title>
+  <desc id="desc">Two luminous blue control-plane cores sit inside layered security rings while amber network paths are filtered at the outer boundary.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071427"/>
+      <stop offset="0.52" stop-color="#102747"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <radialGradient id="halo">
+      <stop offset="0" stop-color="#45d6ff" stop-opacity="0.32"/>
+      <stop offset="0.55" stop-color="#2687d9" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#071427" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#79e7ff"/>
+      <stop offset="0.48" stop-color="#258dd8"/>
+      <stop offset="1" stop-color="#164b8a"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffb23e" stop-opacity="0"/>
+      <stop offset="0.45" stop-color="#ffc35c"/>
+      <stop offset="1" stop-color="#e77b2f"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <path d="M0 693 C282 565 388 749 665 625 S1114 465 1600 623 V900 H0Z" fill="#0b1d34" opacity="0.8"/>
+  <circle cx="565" cy="448" r="360" fill="url(#halo)"/>
+  <circle cx="1035" cy="448" r="360" fill="url(#halo)"/>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M-40 258 C210 258 286 338 385 401" stroke="url(#amber)" stroke-width="9"/>
+    <path d="M-70 454 C180 454 262 446 347 446" stroke="url(#amber)" stroke-width="6"/>
+    <path d="M-20 676 C211 641 282 568 382 508" stroke="url(#amber)" stroke-width="8"/>
+    <path d="M1640 255 C1394 261 1312 338 1215 401" stroke="url(#amber)" stroke-width="9"/>
+    <path d="M1670 454 C1425 454 1340 446 1253 446" stroke="url(#amber)" stroke-width="6"/>
+    <path d="M1620 676 C1390 640 1318 568 1218 508" stroke="url(#amber)" stroke-width="8"/>
+  </g>
+
+  <g opacity="0.92">
+    <circle cx="565" cy="448" r="260" fill="none" stroke="#2a649a" stroke-width="3" stroke-dasharray="3 19"/>
+    <circle cx="565" cy="448" r="218" fill="#0b203a" fill-opacity="0.5" stroke="#3c83bb" stroke-width="5"/>
+    <circle cx="565" cy="448" r="169" fill="none" stroke="#55b9df" stroke-width="3" stroke-dasharray="88 26" transform="rotate(-24 565 448)"/>
+    <circle cx="1035" cy="448" r="260" fill="none" stroke="#2a649a" stroke-width="3" stroke-dasharray="3 19"/>
+    <circle cx="1035" cy="448" r="218" fill="#0b203a" fill-opacity="0.5" stroke="#3c83bb" stroke-width="5"/>
+    <circle cx="1035" cy="448" r="169" fill="none" stroke="#55b9df" stroke-width="3" stroke-dasharray="88 26" transform="rotate(24 1035 448)"/>
+  </g>
+
+  <g fill="#ffbb4f" filter="url(#glow)">
+    <circle cx="385" cy="401" r="9"/><circle cx="347" cy="446" r="7"/><circle cx="382" cy="508" r="8"/>
+    <circle cx="1215" cy="401" r="9"/><circle cx="1253" cy="446" r="7"/><circle cx="1218" cy="508" r="8"/>
+  </g>
+
+  <g filter="url(#glow)">
+    <path d="M565 318 L676 382 L676 510 L565 574 L454 510 L454 382Z" fill="url(#core)" stroke="#a8f1ff" stroke-width="4"/>
+    <path d="M1035 318 L1146 382 L1146 510 L1035 574 L924 510 L924 382Z" fill="url(#core)" stroke="#a8f1ff" stroke-width="4"/>
+  </g>
+  <g fill="none" stroke="#d1f8ff" stroke-linecap="round">
+    <path d="M516 447 C538 416 589 414 614 447 C589 480 539 481 516 447Z" stroke-width="8" opacity="0.9"/>
+    <circle cx="565" cy="447" r="19" fill="#d1f8ff" stroke-width="4"/>
+    <path d="M986 447 C1008 416 1059 414 1084 447 C1059 480 1009 481 986 447Z" stroke-width="8" opacity="0.9"/>
+    <circle cx="1035" cy="447" r="19" fill="#d1f8ff" stroke-width="4"/>
+  </g>
+
+  <path d="M717 448 C758 407 842 407 883 448 C842 489 758 489 717 448Z" fill="#153a61" stroke="#67ccea" stroke-width="4"/>
+  <path d="M758 448 H842" stroke="#a4efff" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="800" cy="448" r="13" fill="#a4efff" filter="url(#glow)"/>
+
+  <g fill="#73d7f4" opacity="0.7">
+    <circle cx="565" cy="188" r="6"/><circle cx="565" cy="708" r="6"/>
+    <circle cx="305" cy="448" r="6"/><circle cx="825" cy="448" r="6"/>
+    <circle cx="1035" cy="188" r="6"/><circle cx="1035" cy="708" r="6"/>
+    <circle cx="775" cy="448" r="6"/><circle cx="1295" cy="448" r="6"/>
+  </g>
+  <ellipse cx="800" cy="786" rx="470" ry="42" fill="#1c74ac" opacity="0.13" filter="url(#soft)"/>
+</svg>
