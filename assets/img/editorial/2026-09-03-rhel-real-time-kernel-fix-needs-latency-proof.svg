@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Real-time kernel security and latency validation</title>
+  <desc id="desc">Abstract teal kernel rings protect a precise gold timing pulse that connects a field of real-time computing nodes.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071824"/>
+      <stop offset="0.52" stop-color="#0b2d3b"/>
+      <stop offset="1" stop-color="#122734"/>
+    </linearGradient>
+    <radialGradient id="core" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#70f1dc" stop-opacity="0.42"/>
+      <stop offset="0.5" stop-color="#21a9a5" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#06202b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="pulse" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#a76f31"/>
+      <stop offset="0.48" stop-color="#ffd880"/>
+      <stop offset="1" stop-color="#b67b38"/>
+    </linearGradient>
+    <filter id="blur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <filter id="pulseGlow" x="-20%" y="-80%" width="140%" height="260%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <circle cx="800" cy="445" r="360" fill="url(#core)" filter="url(#blur)"/>
+
+  <g fill="none" stroke="#2a6470" stroke-width="2" opacity="0.42">
+    <path d="M80 170 H1520"/><path d="M80 730 H1520"/>
+    <path d="M180 110 V790"/><path d="M1420 110 V790"/>
+  </g>
+
+  <g fill="none" stroke-linecap="round">
+    <circle cx="800" cy="445" r="296" stroke="#276675" stroke-width="35" opacity="0.38"/>
+    <circle cx="800" cy="445" r="240" stroke="#48c9bd" stroke-width="9" opacity="0.78" stroke-dasharray="145 28"/>
+    <circle cx="800" cy="445" r="190" stroke="#71ead7" stroke-width="3" opacity="0.58" stroke-dasharray="18 19"/>
+    <circle cx="800" cy="445" r="137" stroke="#d2a557" stroke-width="4" opacity="0.8"/>
+  </g>
+
+  <g fill="#0d3542" stroke="#55d5c8" stroke-width="3">
+    <rect x="103" y="346" width="150" height="112" rx="20"/>
+    <rect x="1347" y="346" width="150" height="112" rx="20"/>
+    <rect x="222" y="655" width="150" height="112" rx="20"/>
+    <rect x="1228" y="655" width="150" height="112" rx="20"/>
+    <rect x="222" y="122" width="150" height="112" rx="20"/>
+    <rect x="1228" y="122" width="150" height="112" rx="20"/>
+  </g>
+
+  <g fill="#58dacf" opacity="0.8">
+    <circle cx="178" cy="402" r="13"/><circle cx="1422" cy="402" r="13"/>
+    <circle cx="297" cy="711" r="13"/><circle cx="1303" cy="711" r="13"/>
+    <circle cx="297" cy="178" r="13"/><circle cx="1303" cy="178" r="13"/>
+  </g>
+
+  <g fill="none" stroke="#3da99f" stroke-width="4" opacity="0.62">
+    <path d="M253 402 C367 402 416 420 506 432"/>
+    <path d="M1347 402 C1233 402 1184 420 1094 432"/>
+    <path d="M356 655 C430 570 465 531 527 500"/>
+    <path d="M1244 655 C1170 570 1135 531 1073 500"/>
+    <path d="M356 234 C430 309 469 355 531 384"/>
+    <path d="M1244 234 C1170 309 1131 355 1069 384"/>
+  </g>
+
+  <path d="M70 445 H405 L470 445 L510 382 L552 520 L599 445 H720 L753 415 L788 475 L828 359 L875 523 L918 445 H1047 L1081 422 L1124 445 H1530" fill="none" stroke="#6b4c2a" stroke-width="18" opacity="0.3" filter="url(#pulseGlow)"/>
+  <path d="M70 445 H405 L470 445 L510 382 L552 520 L599 445 H720 L753 415 L788 475 L828 359 L875 523 L918 445 H1047 L1081 422 L1124 445 H1530" fill="none" stroke="url(#pulse)" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" filter="url(#pulseGlow)"/>
+
+  <circle cx="800" cy="445" r="62" fill="#0a2632" stroke="#78ebd9" stroke-width="5"/>
+  <circle cx="800" cy="445" r="32" fill="#e7bb67" opacity="0.92"/>
+  <circle cx="800" cy="445" r="11" fill="#fff0bb"/>
+
+  <g fill="#d9ae5e">
+    <circle cx="510" cy="382" r="7"/><circle cx="552" cy="520" r="7"/>
+    <circle cx="828" cy="359" r="7"/><circle cx="875" cy="523" r="7"/>
+    <circle cx="1081" cy="422" r="7"/>
+  </g>
+</svg>
