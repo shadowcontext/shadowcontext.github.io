@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Virtual machine isolated inside a protected host boundary</title>
+  <desc id="desc">Abstract nested virtual machine and host layers are separated by a luminous boundary, while network and shared-folder paths approach a protected central core.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="0.5" stop-color="#10243b"/>
+      <stop offset="1" stop-color="#080d19"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="52%" cy="48%" r="58%">
+      <stop offset="0" stop-color="#4bd6cf" stop-opacity="0.27"/>
+      <stop offset="0.52" stop-color="#2b86ad" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#07111f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hostFace" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2e7192" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#14354e" stop-opacity="0.74"/>
+    </linearGradient>
+    <linearGradient id="guestFace" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#72e1dc"/>
+      <stop offset="1" stop-color="#267596"/>
+    </linearGradient>
+    <linearGradient id="boundary" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6ce8df" stop-opacity="0.25"/>
+      <stop offset="0.48" stop-color="#b0fff2"/>
+      <stop offset="1" stop-color="#55b8d6" stop-opacity="0.32"/>
+    </linearGradient>
+    <linearGradient id="signal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f3a84f" stop-opacity="0.14"/>
+      <stop offset="0.7" stop-color="#ffbf62"/>
+      <stop offset="1" stop-color="#fff0c2"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="28" stdDeviation="28" flood-color="#020710" flood-opacity="0.7"/>
+    </filter>
+    <filter id="blur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#aura)"/>
+  <g fill="none" stroke="#55a5bd" stroke-width="2" opacity="0.18">
+    <path d="M56 197 C312 64 556 92 720 213 S1133 375 1544 170"/>
+    <path d="M40 730 C314 594 546 635 729 748 S1188 855 1560 680"/>
+    <circle cx="1390" cy="170" r="76"/><circle cx="1390" cy="170" r="121"/>
+  </g>
+  <ellipse cx="862" cy="760" rx="510" ry="78" fill="#020711" opacity="0.58" filter="url(#blur)"/>
+  <g filter="url(#shadow)">
+    <path d="M493 205 L1109 205 L1282 363 L1282 675 L1109 765 L493 765 L318 675 L318 363 Z" fill="url(#hostFace)" stroke="#58a9c1" stroke-width="5"/>
+    <path d="M493 205 L1109 205 L1218 304 L382 304 Z" fill="#4185a0" opacity="0.42"/>
+    <path d="M382 304 L1218 304 L1218 664 L382 664 Z" fill="#091827" stroke="url(#boundary)" stroke-width="9"/>
+    <path d="M573 365 L1017 365 L1110 445 L1110 596 L1017 651 L573 651 L480 596 L480 445 Z" fill="url(#guestFace)" stroke="#b6fff1" stroke-width="5"/>
+    <path d="M573 365 L1017 365 L1070 411 L520 411 Z" fill="#c8fff4" opacity="0.25"/>
+    <rect x="570" y="444" width="450" height="145" rx="18" fill="#0c2639" stroke="#60cbd0" stroke-width="3"/>
+    <circle cx="616" cy="485" r="10" fill="#82eee2"/><circle cx="651" cy="485" r="10" fill="#4fa8c4"/>
+    <path d="M601 538 H981" stroke="#4d9db7" stroke-width="8" stroke-linecap="round" opacity="0.55"/>
+  </g>
+  <g fill="none" stroke="url(#signal)" stroke-linecap="round">
+    <path d="M54 428 C190 428 256 430 379 449" stroke-width="14"/>
+    <path d="M77 480 C214 480 279 484 379 493" stroke-width="6" opacity="0.72"/>
+  </g>
+  <g transform="translate(179 372)">
+    <path d="M0 28 H58 L76 47 H156 V120 H0 Z" fill="#172b3b" stroke="#f1b457" stroke-width="5"/>
+    <path d="M8 36 H54 L70 52 H148" fill="none" stroke="#ffd28a" stroke-width="6"/>
+  </g>
+  <g fill="none" stroke="#76ddd9" stroke-width="7" stroke-linecap="round">
+    <path d="M1222 448 C1341 418 1437 421 1541 454"/>
+    <path d="M1222 507 C1353 538 1440 535 1545 508" opacity="0.55"/>
+  </g>
+  <g fill="#9af5e8">
+    <circle cx="1291" cy="433" r="9"/><circle cx="1383" cy="427" r="7"/><circle cx="1475" cy="440" r="9"/>
+  </g>
+  <path d="M379 449 C422 456 449 468 480 491" fill="none" stroke="#ffca74" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="430" cy="462" r="31" fill="#102133" stroke="#ffd184" stroke-width="7"/>
+  <path d="M416 462 H444" stroke="#fff0c2" stroke-width="7" stroke-linecap="round"/>
+  <rect x="45" y="45" width="1510" height="810" rx="34" fill="none" stroke="#84dce0" stroke-opacity="0.14" stroke-width="2"/>
+</svg>
