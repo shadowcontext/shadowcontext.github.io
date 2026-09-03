@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Patched firewall isolates an optional server service</title>
+  <desc id="desc">An abstract server shield is divided into layered components, with one optional service channel isolated behind a luminous patched firewall.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#081725"/>
+      <stop offset="0.55" stop-color="#102f3c"/>
+      <stop offset="1" stop-color="#101b31"/>
+    </linearGradient>
+    <linearGradient id="wall" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2cc7b4"/>
+      <stop offset="0.5" stop-color="#a1f1ce"/>
+      <stop offset="1" stop-color="#32a9c2"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d8fff1" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#2aa5aa" stop-opacity="0.34"/>
+    </linearGradient>
+    <radialGradient id="aura">
+      <stop offset="0" stop-color="#70e6c8" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#70e6c8" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#b8f4e3" stroke-opacity="0.045"/>
+    </pattern>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="depth" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#020711" flood-opacity="0.62"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <ellipse cx="830" cy="442" rx="590" ry="420" fill="url(#aura)"/>
+  <path d="M0 733c303-92 515 58 782-20s471-38 818-146v333H0Z" fill="#050f1c" opacity="0.72"/>
+
+  <!-- Incoming network paths, one highlighted as an optional service. -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M70 274h405" stroke="#547d96" stroke-width="12" opacity="0.48"/>
+    <path d="M70 425h405" stroke="#ff8f70" stroke-width="18" opacity="0.92"/>
+    <path d="M70 576h405" stroke="#547d96" stroke-width="12" opacity="0.48"/>
+  </g>
+  <g fill="#102b3c" stroke-width="5">
+    <circle cx="110" cy="274" r="27" stroke="#6d9bb2"/><circle cx="205" cy="274" r="17" stroke="#6d9bb2"/>
+    <circle cx="110" cy="425" r="31" stroke="#ffad89"/><circle cx="217" cy="425" r="19" stroke="#ffad89"/>
+    <circle cx="110" cy="576" r="27" stroke="#6d9bb2"/><circle cx="205" cy="576" r="17" stroke="#6d9bb2"/>
+  </g>
+  <path d="m306 386 72 39-72 39Z" fill="#ff9b78" opacity="0.88"/>
+
+  <!-- Layered firewall: brickwork makes patch coverage tangible. -->
+  <g transform="translate(458 148)" filter="url(#depth)">
+    <rect x="0" y="0" width="166" height="602" rx="24" fill="#173b47" stroke="#73e5c9" stroke-width="6"/>
+    <g fill="url(#wall)" opacity="0.94">
+      <rect x="18" y="22" width="59" height="70" rx="10"/><rect x="88" y="22" width="60" height="70" rx="10"/>
+      <rect x="18" y="103" width="94" height="70" rx="10"/><rect x="123" y="103" width="25" height="70" rx="10"/>
+      <rect x="18" y="184" width="51" height="70" rx="10"/><rect x="80" y="184" width="68" height="70" rx="10"/>
+      <rect x="18" y="265" width="130" height="74" rx="10" fill="#e9fff7"/>
+      <rect x="18" y="350" width="72" height="70" rx="10"/><rect x="101" y="350" width="47" height="70" rx="10"/>
+      <rect x="18" y="431" width="41" height="70" rx="10"/><rect x="70" y="431" width="78" height="70" rx="10"/>
+      <rect x="18" y="512" width="86" height="68" rx="10"/><rect x="115" y="512" width="33" height="68" rx="10"/>
+    </g>
+    <circle cx="83" cy="302" r="33" fill="#113340" stroke="#d8fff1" stroke-width="7"/>
+    <path d="m67 302 12 13 23-28" fill="none" stroke="#d8fff1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Component-level server shield beyond the wall. -->
+  <g transform="translate(690 112)" filter="url(#softGlow)">
+    <path d="M292 32c104 63 194 69 258 78v235c0 184-102 321-258 400C136 666 34 529 34 345V110c64-9 154-15 258-78Z" fill="url(#shield)" stroke="#caffed" stroke-width="8"/>
+    <path d="M292 101c72 39 134 49 190 57v176c0 133-70 238-190 306-120-68-190-173-190-306V158c56-8 118-18 190-57Z" fill="#0b2d3b" opacity="0.78"/>
+  </g>
+
+  <g transform="translate(823 251)" filter="url(#depth)">
+    <rect width="322" height="368" rx="34" fill="#102b3a" stroke="#83e7cd" stroke-width="6"/>
+    <g>
+      <rect x="32" y="34" width="258" height="76" rx="16" fill="#1a4654"/>
+      <rect x="32" y="126" width="258" height="76" rx="16" fill="#1a4654"/>
+      <rect x="32" y="218" width="258" height="116" rx="16" fill="#163d4c" stroke="#ff9b78" stroke-width="4" stroke-opacity="0.75"/>
+      <g fill="#8af0d2"><circle cx="63" cy="72" r="9"/><circle cx="63" cy="164" r="9"/></g>
+      <circle cx="63" cy="256" r="9" fill="#ff9b78"/>
+      <g fill="#5e8798"><rect x="91" y="63" width="162" height="18" rx="9"/><rect x="91" y="155" width="162" height="18" rx="9"/></g>
+      <rect x="91" y="247" width="162" height="18" rx="9" fill="#ff9b78" opacity="0.52"/>
+      <path d="M62 302h194" stroke="#79e7c8" stroke-width="7" stroke-dasharray="11 13" opacity="0.62"/>
+    </g>
+  </g>
+
+  <!-- Ordered egress indicates verified running state. -->
+  <path d="M1242 425h285" stroke="#8eefd3" stroke-width="8" stroke-linecap="round" opacity="0.6"/>
+  <g fill="#9cf3d9" stroke="#e3fff5" stroke-width="3">
+    <circle cx="1291" cy="425" r="18"/><circle cx="1381" cy="425" r="14"/><circle cx="1461" cy="425" r="10"/>
+  </g>
+  <g fill="#ff9272" opacity="0.66">
+    <path d="m397 397 21 28-33 4Z"/><path d="m395 448 30 15-26 20Z"/><path d="m421 370 17-24 13 28Z"/>
+  </g>
+</svg>
