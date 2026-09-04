@@ -465,6 +465,22 @@
       "github_run_id": "33727292311",
       "status": "published",
       "last_error": null
+    },
+    "0d6800b78b89e6882d7324f2c8ba33a45e91e17e5ef82a98d17744e18feebdb2": {
+      "title": "Defensive Intelligence: Patching Infrastructure and Verifying Control Boundaries",
+      "digest_date": "2026-09-03",
+      "digest_hash": "0d6800b78b89e6882d7324f2c8ba33a45e91e17e5ef82a98d17744e18feebdb2",
+      "generated_at": "2026-09-04T09:18:47.802+04:00",
+      "briefing_url": "https://shadowcontext.com/assets/social/linkedin-digest/2026-09-03/0d6800b78b89e688/daily-digest.html",
+      "pdf_file": "assets/social/linkedin-digest/2026-09-03/0d6800b78b89e688/daily-digest.pdf",
+      "linkedin_caption": "Explore today's complete defensive intelligence brief, featuring detailed analysis of security advisories, patch guidance, and operational verification strategies.\n\nThis edition brings together 21 ShadowContext briefings from September 3, 2026, with direct source links and operational priorities.\n\nRead the full daily briefing:\nhttps://shadowcontext.com/assets/social/linkedin-digest/2026-09-03/0d6800b78b89e688/daily-digest.html\n\n#Cybersecurity #ThreatIntelligence #InfoSec #AISecurity",
+      "linkedin_document_urn": "urn:li:document:D4D10AQFQ7r_268vxbA",
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7501539448741031937",
+      "published_at": "2026-09-04T07:19:36.729Z",
+      "github_run_id": "33848198693",
+      "status": "published",
+      "last_error": null
     }
   }
 }
