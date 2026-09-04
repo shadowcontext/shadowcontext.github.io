@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">FPGA installation protected from untrusted temporary files</title>
+  <desc id="desc">An abstract FPGA circuit board glows behind a curved teal privilege boundary while amber temporary-file fragments remain outside it.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06101f"/>
+      <stop offset="0.52" stop-color="#102a3d"/>
+      <stop offset="1" stop-color="#081723"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="66%" cy="47%" r="52%">
+      <stop offset="0" stop-color="#67ead7" stop-opacity="0.3"/>
+      <stop offset="0.52" stop-color="#1b7f85" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#06101f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="board" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#164f5d"/>
+      <stop offset="1" stop-color="#0a293b"/>
+    </linearGradient>
+    <linearGradient id="chip" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b6fff1"/>
+      <stop offset="0.45" stop-color="#43c8bc"/>
+      <stop offset="1" stop-color="#137180"/>
+    </linearGradient>
+    <linearGradient id="boundary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a5fff1"/>
+      <stop offset="0.5" stop-color="#38cfc1"/>
+      <stop offset="1" stop-color="#1b8192"/>
+    </linearGradient>
+    <linearGradient id="fragment" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd08a"/>
+      <stop offset="1" stop-color="#db772f"/>
+    </linearGradient>
+    <pattern id="microgrid" width="56" height="56" patternUnits="userSpaceOnUse">
+      <path d="M56 0H0V56" fill="none" stroke="#a8e5e1" stroke-opacity="0.055"/>
+      <circle cx="0" cy="0" r="2" fill="#a8e5e1" fill-opacity="0.12"/>
+    </pattern>
+    <filter id="softShadow" x="-35%" y="-35%" width="170%" height="170%">
+      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#01060d" flood-opacity="0.7"/>
+    </filter>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="11" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#microgrid)"/>
+  <rect width="1600" height="900" fill="url(#aura)"/>
+  <ellipse cx="942" cy="783" rx="570" ry="72" fill="#020812" opacity="0.58"/>
+
+  <g transform="translate(760 184)" filter="url(#softShadow)">
+    <path d="M100 58L568 18L724 144L680 568L184 618L22 478Z" fill="url(#board)" stroke="#4ba4a9" stroke-width="6"/>
+    <path d="M139 102L537 67L670 175L635 520L214 563L78 445Z" fill="none" stroke="#87e0d8" stroke-opacity="0.28" stroke-width="3"/>
+    <g fill="none" stroke="#59c9c0" stroke-width="8" stroke-linecap="round" opacity="0.58">
+      <path d="M82 210h148l62 58"/>
+      <path d="M106 410h131l55-52"/>
+      <path d="M441 115v92l-47 39"/>
+      <path d="M455 405l64 62h126"/>
+      <path d="M468 304h153"/>
+    </g>
+    <g fill="#b7fff0" opacity="0.88">
+      <circle cx="82" cy="210" r="12"/><circle cx="106" cy="410" r="12"/>
+      <circle cx="441" cy="115" r="12"/><circle cx="645" cy="467" r="12"/>
+      <circle cx="621" cy="304" r="12"/>
+    </g>
+    <g transform="translate(260 210)">
+      <rect width="230" height="230" rx="28" fill="#071b2b" stroke="#99f7e9" stroke-width="8"/>
+      <rect x="35" y="35" width="160" height="160" rx="20" fill="url(#chip)"/>
+      <path d="M76 84h78M76 116h78M76 148h46" fill="none" stroke="#073246" stroke-width="12" stroke-linecap="round" opacity="0.8"/>
+      <g stroke="#8ff3e5" stroke-width="7">
+        <path d="M40 0v-29M82 0v-29M124 0v-29M166 0v-29M208 0v-29"/>
+        <path d="M40 230v29M82 230v29M124 230v29M166 230v29M208 230v29"/>
+        <path d="M0 40h-29M0 82h-29M0 124h-29M0 166h-29M0 208h-29"/>
+        <path d="M230 40h29M230 82h29M230 124h29M230 166h29M230 208h29"/>
+      </g>
+    </g>
+  </g>
+
+  <path d="M694 104C556 238 530 386 568 516C606 649 566 764 456 836" fill="none" stroke="#0a1f30" stroke-width="66" opacity="0.84"/>
+  <path d="M694 104C556 238 530 386 568 516C606 649 566 764 456 836" fill="none" stroke="url(#boundary)" stroke-width="17" filter="url(#glow)"/>
+  <path d="M689 104C564 240 543 385 581 512C618 638 580 753 467 836" fill="none" stroke="#d4fff7" stroke-opacity="0.46" stroke-width="3"/>
+
+  <g filter="url(#softShadow)">
+    <g transform="translate(194 222) rotate(-12)">
+      <path d="M0 25L38 0h126l37 37v125l-32 29H34L0 155Z" fill="url(#fragment)" stroke="#ffe0ad" stroke-width="5"/>
+      <path d="M48 62h104M48 95h72M48 128h91" stroke="#6f351b" stroke-width="12" stroke-linecap="round" opacity="0.72"/>
+    </g>
+    <g transform="translate(330 468) rotate(9)">
+      <path d="M0 20L31 0h98l31 30v98l-27 25H28L0 126Z" fill="url(#fragment)" stroke="#ffdca4" stroke-width="5"/>
+      <path d="M39 50h80M39 78h55M39 106h68" stroke="#70361b" stroke-width="10" stroke-linecap="round" opacity="0.72"/>
+    </g>
+    <g transform="translate(145 651) rotate(-7)">
+      <path d="M0 17L27 0h83l27 25v84l-23 21H24L0 107Z" fill="#b95f2a" stroke="#f6b968" stroke-width="4"/>
+      <path d="M34 42h67M34 67h47M34 92h58" stroke="#4d2818" stroke-width="8" stroke-linecap="round" opacity="0.75"/>
+    </g>
+  </g>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M410 330C483 344 513 365 547 405" stroke="#ed9846" stroke-width="8" stroke-dasharray="3 22" opacity="0.72"/>
+    <path d="M490 545C523 548 542 554 569 571" stroke="#ed9846" stroke-width="8" stroke-dasharray="3 22" opacity="0.64"/>
+  </g>
+
+  <g transform="translate(526 421)" filter="url(#glow)">
+    <circle r="34" fill="#09283a" stroke="#bafff3" stroke-width="7"/>
+    <path d="M-12 1l9 10 20-25" fill="none" stroke="#bafff3" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g fill="#7ee3d9" opacity="0.3">
+    <circle cx="88" cy="118" r="5"/><circle cx="344" cy="112" r="7"/>
+    <circle cx="1477" cy="169" r="6"/><circle cx="1512" cy="692" r="5"/>
+    <circle cx="1110" cy="92" r="4"/><circle cx="866" cy="788" r="6"/>
+  </g>
+</svg>
