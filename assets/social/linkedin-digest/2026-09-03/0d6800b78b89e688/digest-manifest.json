@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-09-04T09:18:47.802+04:00",
+  "digestDate": "2026-09-03",
+  "digestHash": "0d6800b78b89e6882d7324f2c8ba33a45e91e17e5ef82a98d17744e18feebdb2",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "Defensive Intelligence: Patching Infrastructure and Verifying Control Boundaries",
+  "articleCount": 21,
+  "sourceArticles": [
+    {
+      "title": "Nexus POM Fix Makes Artifact Publishing an Availability Boundary",
+      "canonicalUrl": "https://shadowcontext.com/nexus-pom-fix-needs-publisher-boundaries/",
+      "publishedAt": "2026-09-03T00:11:59.000+04:00",
+      "category": "defense",
+      "sourceHash": "ccbf51cc50c372426b319f5e9e4659f56f5cc3046fadcef5592a649b40bc1fdb"
+    },
+    {
+      "title": "Cisco Phone Fix Needs Web Access and Firmware Proof",
+      "canonicalUrl": "https://shadowcontext.com/cisco-phone-fix-needs-web-access-proof/",
+      "publishedAt": "2026-09-03T01:12:31.000+04:00",
+      "category": "defense",
+      "sourceHash": "31415d56fd4b4181849feda5aae4f383fc3c7f4ece1d6a67358caf4750515ffb"
+    },
+    {
+      "title": "UAE Cabinet AI Needs Verifiable Decision Boundaries",
+      "canonicalUrl": "https://shadowcontext.com/uae-cabinet-ai-needs-decision-boundaries/",
+      "publishedAt": "2026-09-03T02:13:30.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "468291c694daac8ee433bba02514847379c336ac121f5f1f07b5376c55183156"
+    },
+    {
+      "title": "Cisco Secure Email Fix Needs Gateway-Path Proof",
+      "canonicalUrl": "https://shadowcontext.com/secure-email-fix-needs-gateway-path-proof/",
+      "publishedAt": "2026-09-03T03:11:22.000+04:00",
+      "category": "defense",
+      "sourceHash": "6a3d96e1ec4e9192f53c319c037f08177ecf4aa4b4d049193efe2859143cfd12"
+    },
+    {
+      "title": "AI-Assisted PLC Research Makes Reachability the First Control",
+      "canonicalUrl": "https://shadowcontext.com/ai-assisted-plc-research-needs-reachability-controls/",
+      "publishedAt": "2026-09-03T04:12:34.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "72d2283a8561b9ca463ee8852056efa4100ce2ece7e5dbedc41e300206771187"
+    },
+    {
+      "title": "Telerik Fixes Need Handler and Key-Exposure Proof",
+      "canonicalUrl": "https://shadowcontext.com/telerik-fixes-need-handler-and-key-proof/",
+      "publishedAt": "2026-09-03T05:14:19.000+04:00",
+      "category": "defense",
+      "sourceHash": "602767d0dd067a2df3c1c2cc7c1799dbc8bf50a738063e5565d4403cb2b76756"
+    },
+    {
+      "title": "Actively Exploited Switchvox Flaw Demands PBX Exposure Proof",
+      "canonicalUrl": "https://shadowcontext.com/switchvox-fix-needs-pbx-exposure-proof/",
+      "publishedAt": "2026-09-03T06:10:31.000+04:00",
+      "category": "threat-intelligence",
+      "sourceHash": "dc8048f2bf005dec244b94ffea63b1a60d3f2e389720acccf3010515c6ba797c"
+    },
+    {
+      "title": "GitHub Enterprise Fix Needs Management-Plane Proof",
+      "canonicalUrl": "https://shadowcontext.com/github-enterprise-fix-needs-management-plane-proof/",
+      "publishedAt": "2026-09-03T07:11:28.000+04:00",
+      "category": "defense",
+      "sourceHash": "fd516c725aa70f100c2cab2e3a74b0af4b2272e029cfea12640a2b76859f3d4a"
+    },
+    {
+      "title": "BookStack Drawing Fix Needs Content-Type Proof",
+      "canonicalUrl": "https://shadowcontext.com/bookstack-drawing-fix-needs-content-type-proof/",
+      "publishedAt": "2026-09-03T08:11:23.000+04:00",
+      "category": "defense",
+      "sourceHash": "7e7e8cf8c1f1069760988ee14be3691f6f5d284e4347957cb3c3d24045cca729"
+    },
+    {
+      "title": "Jenkins Fixes Need Core-and-Plugin Proof",
+      "canonicalUrl": "https://shadowcontext.com/jenkins-fixes-need-core-and-plugin-proof/",
+      "publishedAt": "2026-09-03T09:08:56.000+04:00",
+      "category": "defense",
+      "sourceHash": "ca6dbc1fd1ecbe871579c44175afd3e49a8b04f2e6679ba52302f2f7f6d158d6"
+    },
+    {
+      "title": "Cross-Channel Phishing Needs Transaction-Level Friction",
+      "canonicalUrl": "https://shadowcontext.com/cross-channel-phishing-needs-transaction-friction/",
+      "publishedAt": "2026-09-03T10:13:16.000+04:00",
+      "category": "defense",
+      "sourceHash": "44112a724b918c4d6bdb67198c77b3da65e87b46e6f7a01fa321b475aa18338d"
+    },
+    {
+      "title": "Known Exploitation Makes AI Control-Plane Inventory Urgent",
+      "canonicalUrl": "https://shadowcontext.com/ai-control-planes-need-runtime-proof/",
+      "publishedAt": "2026-09-03T11:12:01.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "ddb38e441efb5c06144e7f419b0d20a8ef87a0724e1ed5b262a189201e0a8f4c"
+    },
+    {
+      "title": "Libreswan FIPS Fix Needs Runtime-State Proof",
+      "canonicalUrl": "https://shadowcontext.com/libreswan-fips-fix-needs-runtime-state-proof/",
+      "publishedAt": "2026-09-03T12:10:21.000+04:00",
+      "category": "defense",
+      "sourceHash": "2f667220fe5ff55686fad0a9500fcff2437da28cec5d0657cae22a3de9f8a27f"
+    },
+    {
+      "title": "RHEL Real-Time Kernel Fix Needs Latency Proof",
+      "canonicalUrl": "https://shadowcontext.com/rhel-real-time-kernel-fix-needs-latency-proof/",
+      "publishedAt": "2026-09-03T13:12:55.000+04:00",
+      "category": "defense",
+      "sourceHash": "402b729b42f31a9bcdbc87a9750dcff91d490e1f31352d598c887af9e371070f"
+    },
+    {
+      "title": "OpenChoreo Fixes Need Resource-Bound Authorization",
+      "canonicalUrl": "https://shadowcontext.com/openchoreo-fixes-need-resource-bound-authorization/",
+      "publishedAt": "2026-09-03T14:11:36.000+04:00",
+      "category": "defense",
+      "sourceHash": "f24e6f93b4a4c0c1bd522daab4de042dc9a97b8c36998a7d7d112019a6b74c77"
+    },
+    {
+      "title": "F5 Control-Plane Fix Needs Account-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/f5-control-plane-fix-needs-account-proof/",
+      "publishedAt": "2026-09-03T15:12:02.000+04:00",
+      "category": "defense",
+      "sourceHash": "a6d4f3a175c23eabdacae909b00ac7d5c601d58fe4b6e130e96deafab3a813fb"
+    },
+    {
+      "title": "VMware Fix Needs Guest-to-Host Boundary Proof",
+      "canonicalUrl": "https://shadowcontext.com/vmware-fix-needs-guest-to-host-boundary-proof/",
+      "publishedAt": "2026-09-03T16:11:20.000+04:00",
+      "category": "defense",
+      "sourceHash": "d7c71ba989081e37a845c4cf8a705cd5a64fda2c5ee851c725609bfc9497c214"
+    },
+    {
+      "title": "Jetson Boot Fix Needs Physical-Boundary Proof",
+      "canonicalUrl": "https://shadowcontext.com/jetson-boot-fix-needs-physical-boundary-proof/",
+      "publishedAt": "2026-09-03T17:10:20.000+04:00",
+      "category": "defense",
+      "sourceHash": "69576e3385ca583861539d9e4dd4fa6765debc313b7e9cf54beb07dff2ffa837"
+    },
+    {
+      "title": "vm2 Fix Needs Sandbox-Boundary Proof",
+      "canonicalUrl": "https://shadowcontext.com/vm2-fix-needs-sandbox-boundary-proof/",
+      "publishedAt": "2026-09-03T21:09:24.000+04:00",
+      "category": "defense",
+      "sourceHash": "94b2583247f9f24b2347b8a7bd2d5ebbb44b3810538d6ba6f6c02578ba4f3ab9"
+    },
+    {
+      "title": "CSF Fix Needs Plugin and Feature-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/csf-fix-needs-plugin-and-feature-proof/",
+      "publishedAt": "2026-09-03T22:15:57.000+04:00",
+      "category": "defense",
+      "sourceHash": "d7d6590277c08be993cd30c1ebe0b41a3a56ffcf5c2f411d07209b2ebbe2aea1"
+    },
+    {
+      "title": "Ubuntu OpenSSH Fixes Need Three-Layer Runtime Proof",
+      "canonicalUrl": "https://shadowcontext.com/ubuntu-openssh-fixes-need-three-layer-proof/",
+      "publishedAt": "2026-09-03T23:12:12.000+04:00",
+      "category": "defense",
+      "sourceHash": "93d28b900a31a3da9ad6f68bb0c3b00a80c6ea9c026c686a7381adeaf919ada0"
+    }
+  ],
+  "caption": "Explore today's complete defensive intelligence brief, featuring detailed analysis of security advisories, patch guidance, and operational verification strategies.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-09-03/0d6800b78b89e688/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-09-03/0d6800b78b89e688/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-09-03/0d6800b78b89e688/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-09-03/0d6800b78b89e688/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}

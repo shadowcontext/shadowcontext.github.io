@@ -1,0 +1,161 @@
+{
+  "digest_title": "Defensive Intelligence: Patching Infrastructure and Verifying Control Boundaries",
+  "dek": "A comprehensive daily review of vendor updates, exploit intelligence, and security advisories requiring rigorous asset and boundary verification.",
+  "overview": "ShadowContext's September 3, 2026 defensive digest examines 21 advisories across enterprise software, developer platforms, and operational technology. Effective remediation requires verifying package versions, live feature states, and operational boundaries rather than relying on automated deployment metrics.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "Nexus POM Fix Makes Artifact Publishing an Availability Boundary",
+      "summary": "Sonatype fixed a denial-of-service vulnerability in Nexus Repository Maven metadata handling, requiring updates, scoped publishing rights, and recovery tests.",
+      "why_it_matters": "Publisher rights can impact availability for all consumers, requiring treat-as-production identity controls.",
+      "topic": "Supply Chain"
+    },
+    {
+      "source_id": "S02",
+      "headline": "Cisco Phone Fix Needs Web Access and Firmware Proof",
+      "summary": "Cisco fixed a high-severity SIP phone denial-of-service flaw, requiring Web Access verification, model mapping, and manual recovery planning.",
+      "why_it_matters": "Exposure depends on specific firmware, Unified CM registration, and enabled Web Access.",
+      "topic": "VoIP Security"
+    },
+    {
+      "source_id": "S03",
+      "headline": "UAE Cabinet AI Needs Verifiable Decision Boundaries",
+      "summary": "The UAE Cabinet approved an agentic AI advisor, highlighting the need for approved sources, confidentiality, and verifiable decision evidence.",
+      "why_it_matters": "High-stakes government agents require machine-verifiable identity, separated permissions, and complete decision logging.",
+      "topic": "AI Security"
+    },
+    {
+      "source_id": "S04",
+      "headline": "Cisco Secure Email Fix Needs Gateway-Path Proof",
+      "summary": "Cisco patched two Secure Email S/MIME integrity flaws that could expose plaintext, demanding route mapping and test verification.",
+      "why_it_matters": "Encryption requires validating message integrity across every alternate and regional gateway path.",
+      "topic": "Email Security"
+    },
+    {
+      "source_id": "S05",
+      "headline": "AI-Assisted PLC Research Makes Reachability the First Control",
+      "summary": "Research shows an AI coding agent porting an OT exploit, proving that asset reachability and safe test boundaries remain vital controls.",
+      "why_it_matters": "AI accelerates specialist capability, making legacy network exposure and reachability immediate priorities.",
+      "topic": "OT Security"
+    },
+    {
+      "source_id": "S06",
+      "headline": "Telerik Fixes Need Handler and Key-Exposure Proof",
+      "summary": "Progress updated guidance for two Telerik UI flaws, requiring application scope checks, key audits, and filesystem guardrails.",
+      "why_it_matters": "Server-side components require verifying active handlers and encryption keys rather than package installs alone.",
+      "topic": "Web Application"
+    },
+    {
+      "source_id": "S07",
+      "headline": "Actively Exploited Switchvox Flaw Demands PBX Exposure Proof",
+      "summary": "SK-CERT reported active exploitation of a critical Switchvox SQL injection flaw, demanding rapid updates and PBX reachability audits.",
+      "why_it_matters": "Exploitation requires rapid patching, exposure reduction, and scoped post-update log reviews.",
+      "topic": "Threat Intelligence"
+    },
+    {
+      "source_id": "S08",
+      "headline": "GitHub Enterprise Fix Needs Management-Plane Proof",
+      "summary": "GitHub fixed an enterprise SSRF flaw, requiring administrators to resolve version discrepancies and verify management-plane node patches.",
+      "why_it_matters": "Conflicting official release cues require cautious patch selection and restored firewall configurations.",
+      "topic": "Developer Tools"
+    },
+    {
+      "source_id": "S09",
+      "headline": "BookStack Drawing Fix Needs Content-Type Proof",
+      "summary": "BookStack fixed a stored XSS flaw in SVG drawing endpoints, requiring version verification and MIME-based content-type checks.",
+      "why_it_matters": "User-authored media must be validated at storage and delivery to prevent execution in privileged browsers.",
+      "topic": "Web Application"
+    },
+    {
+      "source_id": "S10",
+      "headline": "Jenkins Fixes Need Core-and-Plugin Proof",
+      "summary": "Jenkins released a security advisory for core platform and plugin flaws, requiring coordinated updates and authorization audits.",
+      "why_it_matters": "Controllers and plugins must cross version boundaries together without weakening authorization models.",
+      "topic": "CI/CD Security"
+    },
+    {
+      "source_id": "S11",
+      "headline": "Cross-Channel Phishing Needs Transaction-Level Friction",
+      "summary": "APWG's Q2 report details rising cross-channel phishing, requiring independent out-of-band verification and payment controls.",
+      "why_it_matters": "Fragmented multi-step attacks require protecting consequential actions independently of communication channels.",
+      "topic": "Phishing"
+    },
+    {
+      "source_id": "S12",
+      "headline": "Known Exploitation Makes AI Control-Plane Inventory Urgent",
+      "summary": "CISA added Kestra and LiteLLM flaws to KEV, requiring runtime verification and gateway access control for AI workflow engines.",
+      "why_it_matters": "AI control planes connect services and automate actions, demanding runtime proof of authentication.",
+      "topic": "AI Security"
+    },
+    {
+      "source_id": "S13",
+      "headline": "Libreswan FIPS Fix Needs Runtime-State Proof",
+      "summary": "Libreswan fixed an X.509 certificate parsing denial-of-service flaw affecting FIPS mode, requiring runtime exposure verification.",
+      "why_it_matters": "Configuration-dependent vulnerabilities require proving active cryptographic modes and testing VPN recovery.",
+      "topic": "VPN Security"
+    },
+    {
+      "source_id": "S14",
+      "headline": "RHEL Real-Time Kernel Fix Needs Latency Proof",
+      "summary": "Red Hat issued a RHEL 8 real-time kernel update fixing 14 CVEs, requiring reboots and workload latency validation.",
+      "why_it_matters": "Deterministic real-time systems require proving active kernel states and preserving performance envelopes.",
+      "topic": "Kernel Security"
+    },
+    {
+      "source_id": "S15",
+      "headline": "OpenChoreo Fixes Need Resource-Bound Authorization",
+      "summary": "OpenChoreo security advisories reveal authorization and trust-boundary flaws, demanding resource ownership validation and gateway isolation.",
+      "why_it_matters": "Control planes must derive permissions from object ownership rather than client-supplied strings.",
+      "topic": "Cloud Native"
+    },
+    {
+      "source_id": "S16",
+      "headline": "F5 Control-Plane Fix Needs Account-Level Proof",
+      "summary": "F5 fixed a BIG-IP and BIG-IQ configuration utility flaw, demanding management access restriction and privileged account audits.",
+      "why_it_matters": "Management utility vulnerabilities require verified software versions and restricted administrative populations.",
+      "topic": "Network Security"
+    },
+    {
+      "source_id": "S17",
+      "headline": "VMware Fix Needs Guest-to-Host Boundary Proof",
+      "summary": "Broadcom fixed two critical guest-to-host VMware Workstation and Fusion flaws, requiring updates and integration feature reviews.",
+      "why_it_matters": "Virtualization boundaries require verified builds and inventory of risky guest-to-host integrations.",
+      "topic": "Virtualization"
+    },
+    {
+      "source_id": "S18",
+      "headline": "Jetson Boot Fix Needs Physical-Boundary Proof",
+      "summary": "Research into Jetson Linux reveals a boot command-injection weakness, requiring branch-specific updates and physical access controls.",
+      "why_it_matters": "Edge hardware outside data centers requires verified pre-boot configurations and custody management.",
+      "topic": "Edge Security"
+    },
+    {
+      "source_id": "S19",
+      "headline": "vm2 Fix Needs Sandbox-Boundary Proof",
+      "summary": "A critical vm2 sandbox escape flaw requires package updates, host function reviews, and outer process containment.",
+      "why_it_matters": "Language-runtime sandboxes require process-level isolation and strict receiver validation to protect hosts.",
+      "topic": "Application Security"
+    },
+    {
+      "source_id": "S20",
+      "headline": "CSF Fix Needs Plugin and Feature-Level Proof",
+      "summary": "cPanel fixed a code execution flaw in CSF's MESSENGER service, requiring plugin version and feature state verification.",
+      "why_it_matters": "Optional firewall services disabled by default require continuous configuration visibility and verification.",
+      "topic": "Hosting Security"
+    },
+    {
+      "source_id": "S21",
+      "headline": "Ubuntu OpenSSH Fixes Need Three-Layer Runtime Proof",
+      "summary": "Ubuntu fixed three OpenSSH client, agent, and server tunnel flaws, requiring package updates, process restarts, and policy tests.",
+      "why_it_matters": "Comprehensive remediation requires verifying client, forwarded agent, and server tunnel enforcement points.",
+      "topic": "Operating Systems"
+    }
+  ],
+  "operating_view": "Maintain operational resilience by prioritizing verified asset states, bounded trust relationships, and rigorous post-update testing across all enterprise and edge infrastructures.",
+  "watch_items": [
+    "Verify active firmware releases, feature configurations, and service states across all updated endpoints.",
+    "Ensure control-plane management interfaces remain narrowly restricted and explicitly authenticated.",
+    "Validate authorization logic and boundary enforcement using empirical behavioral testing rather than package inventories alone."
+  ],
+  "caption_intro": "Explore today's complete defensive intelligence brief, featuring detailed analysis of security advisories, patch guidance, and operational verification strategies."
+}
