@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Protected policy distribution across endpoint nodes</title>
+  <desc id="desc">Abstract teal endpoint nodes receive bounded policy paths from a protected amber control core inside layered security arcs.</desc>
+  <defs>
+    <linearGradient id="bg" x1="120" y1="80" x2="1460" y2="820" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#071923"/>
+      <stop offset="0.55" stop-color="#0b2b36"/>
+      <stop offset="1" stop-color="#10212e"/>
+    </linearGradient>
+    <radialGradient id="core" cx="50%" cy="42%" r="65%">
+      <stop offset="0" stop-color="#ffd889"/>
+      <stop offset="0.5" stop-color="#f2a83b"/>
+      <stop offset="1" stop-color="#b85b1d"/>
+    </radialGradient>
+    <linearGradient id="flow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f4b34e"/>
+      <stop offset="0.45" stop-color="#63d5c7"/>
+      <stop offset="1" stop-color="#168fa0"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="800" cy="450" r="330" fill="none" stroke="#1c5964" stroke-width="2" opacity="0.55"/>
+  <circle cx="800" cy="450" r="265" fill="none" stroke="#2c7b80" stroke-width="3" stroke-dasharray="7 20" opacity="0.58"/>
+  <circle cx="800" cy="450" r="205" fill="#0d3942" opacity="0.62"/>
+  <ellipse cx="800" cy="450" rx="170" ry="150" fill="#26b5a5" opacity="0.1" filter="url(#soft)"/>
+
+  <path d="M800 450 C655 410 540 295 380 250" fill="none" stroke="url(#flow)" stroke-width="12" stroke-linecap="round" opacity="0.9"/>
+  <path d="M800 450 C635 500 520 610 340 665" fill="none" stroke="url(#flow)" stroke-width="12" stroke-linecap="round" opacity="0.9"/>
+  <path d="M800 450 C950 400 1065 270 1238 225" fill="none" stroke="url(#flow)" stroke-width="12" stroke-linecap="round" opacity="0.9"/>
+  <path d="M800 450 C970 505 1090 620 1275 675" fill="none" stroke="url(#flow)" stroke-width="12" stroke-linecap="round" opacity="0.9"/>
+
+  <g fill="#09252e" stroke="#5ad3c2" stroke-width="7">
+    <circle cx="350" cy="242" r="74"/>
+    <circle cx="306" cy="680" r="74"/>
+    <circle cx="1270" cy="214" r="74"/>
+    <circle cx="1310" cy="689" r="74"/>
+  </g>
+  <g fill="#47c8ba" opacity="0.9">
+    <circle cx="350" cy="242" r="27"/>
+    <circle cx="306" cy="680" r="27"/>
+    <circle cx="1270" cy="214" r="27"/>
+    <circle cx="1310" cy="689" r="27"/>
+  </g>
+  <g fill="none" stroke="#9ce9dc" stroke-width="4" opacity="0.7">
+    <path d="M318 205 Q350 174 382 205"/>
+    <path d="M274 643 Q306 612 338 643"/>
+    <path d="M1238 177 Q1270 146 1302 177"/>
+    <path d="M1278 652 Q1310 621 1342 652"/>
+  </g>
+
+  <g transform="translate(800 450)" filter="url(#glow)">
+    <path d="M0-118 103-59 103 59 0 118-103 59-103-59Z" fill="#152d33" stroke="#f7bd57" stroke-width="8"/>
+    <path d="M0-78 65-40 65 40 0 78-65 40-65-40Z" fill="url(#core)"/>
+    <circle r="23" fill="#fff0c5"/>
+    <path d="M-42 7 H42 M-28-26 H28 M-28 40 H28" stroke="#7a3f19" stroke-width="7" stroke-linecap="round" opacity="0.75"/>
+  </g>
+
+  <g fill="#f6bd58">
+    <circle cx="619" cy="381" r="8"/><circle cx="543" cy="330" r="6"/>
+    <circle cx="614" cy="527" r="8"/><circle cx="520" cy="591" r="6"/>
+    <circle cx="982" cy="369" r="8"/><circle cx="1074" cy="296" r="6"/>
+    <circle cx="991" cy="537" r="8"/><circle cx="1094" cy="605" r="6"/>
+  </g>
+  <path d="M600 102 Q800 28 1000 102" fill="none" stroke="#66d8ca" stroke-width="5" stroke-linecap="round" opacity="0.65"/>
+  <path d="M520 790 Q800 872 1080 790" fill="none" stroke="#66d8ca" stroke-width="5" stroke-linecap="round" opacity="0.45"/>
+</svg>
