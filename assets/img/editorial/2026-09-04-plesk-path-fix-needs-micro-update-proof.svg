@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Micro-update rings protecting a privileged hosting server</title>
+  <desc id="desc">An abstract Linux hosting server is surrounded by nested teal update rings while an amber file path bends away from the luminous privileged core.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071522"/>
+      <stop offset="0.55" stop-color="#0b2d38"/>
+      <stop offset="1" stop-color="#09121e"/>
+    </linearGradient>
+    <radialGradient id="field" cx="50%" cy="48%" r="52%">
+      <stop offset="0" stop-color="#35e4cc" stop-opacity="0.22"/>
+      <stop offset="0.62" stop-color="#168fa0" stop-opacity="0.07"/>
+      <stop offset="1" stop-color="#071522" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tower" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#163f4e"/>
+      <stop offset="1" stop-color="#092333"/>
+    </linearGradient>
+    <linearGradient id="path" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff8d49" stop-opacity="0.25"/>
+      <stop offset="0.55" stop-color="#ffb65c"/>
+      <stop offset="1" stop-color="#ffe09a"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="13" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="72" height="72" patternUnits="userSpaceOnUse">
+      <path d="M72 0H0V72" fill="none" stroke="#80e8dc" stroke-opacity="0.05"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <ellipse cx="820" cy="440" rx="640" ry="395" fill="url(#field)"/>
+
+  <g fill="none" stroke-linecap="round">
+    <ellipse cx="820" cy="447" rx="430" ry="318" stroke="#176271" stroke-width="34" stroke-dasharray="250 42" opacity="0.36"/>
+    <ellipse cx="820" cy="447" rx="350" ry="258" stroke="#28a99f" stroke-width="22" stroke-dasharray="172 30" opacity="0.62"/>
+    <ellipse cx="820" cy="447" rx="276" ry="202" stroke="#56e3cd" stroke-width="10" stroke-dasharray="115 22" opacity="0.88"/>
+  </g>
+
+  <g>
+    <path d="M645 250L802 199l170 54v402l-166 58-161-56Z" fill="url(#tower)" stroke="#5be8d4" stroke-width="4"/>
+    <path d="M681 290l122-38 130 41v95l-130 39-122-37Z" fill="#0a2634" stroke="#238c91" stroke-width="3"/>
+    <path d="M681 419l122-38 130 41v95l-130 39-122-37Z" fill="#0a2634" stroke="#238c91" stroke-width="3"/>
+    <path d="M681 548l122-38 130 41v65l-129 44-123-42Z" fill="#0a2634" stroke="#238c91" stroke-width="3"/>
+    <g fill="#63f2d9" filter="url(#glow)">
+      <circle cx="708" cy="333" r="8"/><circle cx="708" cy="462" r="8"/><circle cx="708" cy="585" r="8"/>
+    </g>
+    <g fill="#174b58">
+      <rect x="744" y="318" width="145" height="13" rx="6"/><rect x="744" y="447" width="145" height="13" rx="6"/><rect x="744" y="574" width="145" height="13" rx="6"/>
+    </g>
+    <circle cx="805" cy="480" r="54" fill="#35d9c0" opacity="0.16" filter="url(#glow)"/>
+  </g>
+
+  <path d="M75 618C245 618 286 560 386 560c101 0 112 91 211 91 83 0 105-82 136-129" fill="none" stroke="url(#path)" stroke-width="20" stroke-linecap="round"/>
+  <path d="M730 527l8-58 45 36" fill="none" stroke="#ffe09a" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  <g fill="#ffb65c" opacity="0.72">
+    <path d="M125 589l28 17-28 17-28-17Z"/><path d="M246 575l25 15-25 15-25-15Z"/><path d="M354 536l24 14-24 14-24-14Z"/>
+  </g>
+
+  <g fill="#47d9c7">
+    <circle cx="454" cy="243" r="9"/><circle cx="1154" cy="250" r="9"/><circle cx="1207" cy="638" r="9"/>
+  </g>
+  <g fill="none" stroke="#237b85" stroke-width="5" opacity="0.7">
+    <path d="M454 243h117l49 43"/><path d="M1154 250h117l96 72"/><path d="M1207 638h126l93-61"/>
+  </g>
+  <path d="M1100 172l42 26v49l-42 26-42-26v-49Z" fill="#0e3542" stroke="#46cfbf" stroke-width="4"/>
+  <path d="M1084 222l13 14 25-31" fill="none" stroke="#bafff2" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="810" cy="780" rx="390" ry="34" fill="#34d9c2" opacity="0.1" filter="url(#glow)"/>
+</svg>
