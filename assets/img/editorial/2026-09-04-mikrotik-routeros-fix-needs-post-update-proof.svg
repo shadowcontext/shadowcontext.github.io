@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Router update verification at a protected network boundary</title>
+  <desc id="desc">An abstract dark network appliance is surrounded by guarded connection paths while a luminous inspection lens reveals a repaired seam in its surface.</desc>
+  <defs>
+    <linearGradient id="bg" x1="120" y1="80" x2="1480" y2="820" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071A2B"/>
+      <stop offset="0.55" stop-color="#102B46"/>
+      <stop offset="1" stop-color="#081725"/>
+    </linearGradient>
+    <linearGradient id="device" x1="510" y1="270" x2="1050" y2="650" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#244863"/>
+      <stop offset="1" stop-color="#10283C"/>
+    </linearGradient>
+    <linearGradient id="seal" x1="670" y1="330" x2="930" y2="580" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#67E8F9"/>
+      <stop offset="1" stop-color="#2DD4BF"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop stop-color="#67E8F9" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#67E8F9" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="14" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#020A11" flood-opacity="0.7"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="800" cy="450" r="390" fill="url(#halo)"/>
+  <g fill="none" stroke-linecap="round">
+    <path d="M130 268 C310 268 332 363 500 363" stroke="#2D5770" stroke-width="8"/>
+    <path d="M1470 268 C1290 268 1268 363 1100 363" stroke="#2D5770" stroke-width="8"/>
+    <path d="M130 632 C310 632 332 537 500 537" stroke="#2D5770" stroke-width="8"/>
+    <path d="M1470 632 C1290 632 1268 537 1100 537" stroke="#2D5770" stroke-width="8"/>
+    <path d="M800 85 V238" stroke="#2D5770" stroke-width="8"/>
+    <path d="M800 662 V815" stroke="#2D5770" stroke-width="8"/>
+  </g>
+  <g fill="#16384F" stroke="#75E6F4" stroke-width="4">
+    <circle cx="130" cy="268" r="18"/><circle cx="1470" cy="268" r="18"/>
+    <circle cx="130" cy="632" r="18"/><circle cx="1470" cy="632" r="18"/>
+    <circle cx="800" cy="85" r="18"/><circle cx="800" cy="815" r="18"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="470" y="238" width="660" height="424" rx="74" fill="url(#device)" stroke="#40647B" stroke-width="5"/>
+    <rect x="514" y="286" width="572" height="328" rx="46" fill="#0B2032" stroke="#34536A" stroke-width="3"/>
+  </g>
+  <g opacity="0.82">
+    <rect x="554" y="336" width="132" height="44" rx="14" fill="#1E4058"/>
+    <rect x="554" y="410" width="132" height="44" rx="14" fill="#1E4058"/>
+    <rect x="554" y="484" width="132" height="44" rx="14" fill="#1E4058"/>
+    <circle cx="654" cy="358" r="7" fill="#67E8F9"/>
+    <circle cx="654" cy="432" r="7" fill="#2DD4BF"/>
+    <circle cx="654" cy="506" r="7" fill="#67E8F9"/>
+  </g>
+  <path d="M792 316 L770 388 L816 429 L781 484 L827 536 L806 585" fill="none" stroke="#071723" stroke-width="28" stroke-linejoin="round"/>
+  <path d="M792 316 L770 388 L816 429 L781 484 L827 536 L806 585" fill="none" stroke="url(#seal)" stroke-width="10" stroke-linejoin="round" filter="url(#glow)"/>
+  <g transform="translate(905 357)" filter="url(#shadow)">
+    <circle cx="0" cy="0" r="105" fill="#0A1C2A" fill-opacity="0.72" stroke="#8DF2F6" stroke-width="12"/>
+    <circle cx="0" cy="0" r="78" fill="#2DD4BF" fill-opacity="0.08" stroke="#3BA9B8" stroke-width="3"/>
+    <path d="M72 72 L154 154" stroke="#8DF2F6" stroke-width="30" stroke-linecap="round"/>
+    <path d="M-30 3 L-5 29 L47 -30" fill="none" stroke="#5EEAD4" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  </g>
+  <path d="M457 450 C413 412 413 344 457 306" fill="none" stroke="#F6C85F" stroke-width="9" stroke-linecap="round"/>
+  <path d="M1143 450 C1187 488 1187 556 1143 594" fill="none" stroke="#F6C85F" stroke-width="9" stroke-linecap="round"/>
+  <g fill="#F6C85F">
+    <circle cx="448" cy="300" r="9"/><circle cx="448" cy="456" r="9"/>
+    <circle cx="1152" cy="444" r="9"/><circle cx="1152" cy="600" r="9"/>
+  </g>
+</svg>
