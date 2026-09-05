@@ -481,6 +481,22 @@
       "github_run_id": "33848198693",
       "status": "published",
       "last_error": null
+    },
+    "9855dffb4fb328a39b5a76043671476607146bdf5aa588e9e90ecc34a1b4fd71": {
+      "title": "Daily Security Digest: Patch Boundaries, Verification, and Edge Controls",
+      "digest_date": "2026-09-04",
+      "digest_hash": "9855dffb4fb328a39b5a76043671476607146bdf5aa588e9e90ecc34a1b4fd71",
+      "generated_at": "2026-09-05T09:07:31.970+04:00",
+      "briefing_url": "https://shadowcontext.com/assets/social/linkedin-digest/2026-09-04/9855dffb4fb328a3/daily-digest.html",
+      "pdf_file": "assets/social/linkedin-digest/2026-09-04/9855dffb4fb328a3/daily-digest.pdf",
+      "linkedin_caption": "Review today's independent security updates and boundary verifications.\n\nThis edition brings together 22 ShadowContext briefings from September 4, 2026, with direct source links and operational priorities.\n\nRead the full daily briefing:\nhttps://shadowcontext.com/assets/social/linkedin-digest/2026-09-04/9855dffb4fb328a3/daily-digest.html\n\n#Cybersecurity #ThreatIntelligence #InfoSec #SecurityOperations",
+      "linkedin_document_urn": "urn:li:document:D4D10AQEAGLhlaKgrzQ",
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7501897124511449089",
+      "published_at": "2026-09-05T07:00:53.283Z",
+      "github_run_id": "33951362684",
+      "status": "published",
+      "last_error": null
     }
   }
 }
