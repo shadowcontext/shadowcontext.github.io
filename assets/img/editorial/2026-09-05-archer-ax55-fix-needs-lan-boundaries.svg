@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Router protected by a segmented local-network boundary</title>
+  <desc id="desc">Abstract editorial illustration of a home router behind a luminous boundary, with mesh signals reaching separated device nodes.</desc>
+  <defs>
+    <linearGradient id="bg" x1="120" y1="70" x2="1480" y2="850" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071B2B"/>
+      <stop offset="0.52" stop-color="#0A2F42"/>
+      <stop offset="1" stop-color="#06141F"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(814 440) rotate(90) scale(390 660)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#18D2C2" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#18D2C2" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shield" x1="614" y1="193" x2="1010" y2="703" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4EF2D6" stop-opacity="0.82"/>
+      <stop offset="0.5" stop-color="#1EB8BD" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#3A79A4" stop-opacity="0.12"/>
+    </linearGradient>
+    <linearGradient id="device" x1="674" y1="412" x2="934" y2="648" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D7FFF7"/>
+      <stop offset="0.18" stop-color="#50E0CF"/>
+      <stop offset="1" stop-color="#1282A0"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="165" y1="315" x2="611" y2="505" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFB24A" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#FFB24A" stop-opacity="0.92"/>
+    </linearGradient>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <pattern id="grid" width="54" height="54" patternUnits="userSpaceOnUse">
+      <path d="M54 0H0V54" fill="none" stroke="#8AC7D0" stroke-opacity="0.065" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <ellipse cx="814" cy="440" rx="660" ry="390" fill="url(#glow)"/>
+  <path d="M0 762C280 668 447 730 671 790C922 858 1255 832 1600 692V900H0Z" fill="#031019" fill-opacity="0.66"/>
+
+  <g opacity="0.92">
+    <path d="M176 346C330 346 435 381 565 449" fill="none" stroke="url(#amber)" stroke-width="8" stroke-linecap="round"/>
+    <path d="M203 456C342 456 433 468 557 492" fill="none" stroke="url(#amber)" stroke-width="5" stroke-linecap="round"/>
+    <path d="M248 566C375 552 448 539 568 519" fill="none" stroke="url(#amber)" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="173" cy="346" r="12" fill="#FFB24A"/>
+    <circle cx="202" cy="456" r="9" fill="#FFB24A" fill-opacity="0.8"/>
+    <circle cx="246" cy="566" r="7" fill="#FFB24A" fill-opacity="0.65"/>
+  </g>
+
+  <path d="M801 158C893 215 997 236 1064 248V430C1064 584 968 708 801 774C634 708 538 584 538 430V248C605 236 709 215 801 158Z" fill="url(#shield)" stroke="#63F6DF" stroke-width="5" stroke-opacity="0.78"/>
+  <path d="M801 191C882 238 966 257 1025 268V428C1025 557 946 663 801 728C656 663 577 557 577 428V268C636 257 720 238 801 191Z" fill="#082B3A" fill-opacity="0.62" stroke="#B8FFF2" stroke-width="2" stroke-opacity="0.28"/>
+  <path d="M556 443C662 464 950 464 1045 437" fill="none" stroke="#71FBE6" stroke-width="12" stroke-opacity="0.14" filter="url(#soft)"/>
+
+  <g>
+    <path d="M688 566H914L942 645C947 661 935 677 918 677H684C667 677 655 661 660 645L688 566Z" fill="#0A6275" stroke="#5EF1DB" stroke-width="4"/>
+    <rect x="683" y="480" width="236" height="118" rx="28" fill="url(#device)"/>
+    <rect x="704" y="500" width="194" height="76" rx="18" fill="#082837" fill-opacity="0.88"/>
+    <circle cx="752" cy="539" r="8" fill="#80FFE9"/>
+    <circle cx="789" cy="539" r="8" fill="#80FFE9" fill-opacity="0.72"/>
+    <circle cx="826" cy="539" r="8" fill="#80FFE9" fill-opacity="0.44"/>
+    <path d="M717 480L692 394" stroke="#97FFF0" stroke-width="7" stroke-linecap="round"/>
+    <path d="M885 480L910 394" stroke="#97FFF0" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="692" cy="394" r="8" fill="#C6FFF6"/>
+    <circle cx="910" cy="394" r="8" fill="#C6FFF6"/>
+  </g>
+
+  <g fill="none" stroke="#53EED8" stroke-linecap="round">
+    <path d="M713 441C761 398 841 398 889 441" stroke-width="8" stroke-opacity="0.88"/>
+    <path d="M744 457C776 430 826 430 858 457" stroke-width="7" stroke-opacity="0.75"/>
+    <path d="M780 474C793 464 809 464 822 474" stroke-width="6" stroke-opacity="0.62"/>
+  </g>
+
+  <g>
+    <path d="M1030 351C1135 291 1253 277 1377 307" fill="none" stroke="#55DCCC" stroke-width="4" stroke-opacity="0.54"/>
+    <path d="M1045 451C1173 432 1294 450 1400 511" fill="none" stroke="#55DCCC" stroke-width="4" stroke-opacity="0.42"/>
+    <path d="M1024 551C1133 615 1241 644 1365 631" fill="none" stroke="#55DCCC" stroke-width="4" stroke-opacity="0.32"/>
+    <g fill="#0C3A4B" stroke="#79F3E0" stroke-width="4">
+      <rect x="1345" y="270" width="92" height="74" rx="18"/>
+      <circle cx="1407" cy="509" r="46"/>
+      <path d="M1340 598L1414 579L1451 644L1376 665Z"/>
+    </g>
+    <circle cx="1373" cy="307" r="9" fill="#80FFE9"/>
+    <circle cx="1387" cy="509" r="9" fill="#80FFE9"/>
+    <circle cx="1365" cy="631" r="9" fill="#80FFE9"/>
+  </g>
+
+  <g opacity="0.45" filter="url(#blur)">
+    <circle cx="801" cy="674" r="34" fill="#43E9D3"/>
+    <circle cx="1048" cy="447" r="20" fill="#43E9D3"/>
+    <circle cx="555" cy="483" r="18" fill="#FFB24A"/>
+  </g>
+</svg>
