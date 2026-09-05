@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Tenant authorization boundary protecting layered databases</title>
+  <desc id="desc">Abstract violet database layers separated into tenant zones, with a luminous route stopped at a cyan authorization boundary.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#090d25"/>
+      <stop offset="0.52" stop-color="#17133e"/>
+      <stop offset="1" stop-color="#071c2f"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="48%" r="52%">
+      <stop offset="0" stop-color="#6ee7f2" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#6ee7f2" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9f7aea"/>
+      <stop offset="1" stop-color="#5136a8"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#43d9e6"/>
+      <stop offset="1" stop-color="#9af7df"/>
+    </linearGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <filter id="shine" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="leftZone"><rect x="120" y="120" width="610" height="660" rx="52"/></clipPath>
+    <clipPath id="rightZone"><rect x="870" y="120" width="610" height="660" rx="52"/></clipPath>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="800" cy="445" r="510" fill="url(#glow)"/>
+  <g opacity=".2" fill="none" stroke="#8ca3d9" stroke-width="2">
+    <path d="M80 180C350 90 550 125 760 250S1190 390 1525 210"/>
+    <path d="M45 720C310 610 520 690 770 610S1230 450 1560 660"/>
+    <path d="M230 50C350 260 300 480 185 845"/>
+    <path d="M1375 40C1245 260 1300 540 1435 850"/>
+  </g>
+  <rect x="120" y="120" width="610" height="660" rx="52" fill="#171746" stroke="#7964c8" stroke-width="3" opacity=".72"/>
+  <rect x="870" y="120" width="610" height="660" rx="52" fill="#102d42" stroke="#367f9b" stroke-width="3" opacity=".72"/>
+  <g clip-path="url(#leftZone)" opacity=".95">
+    <ellipse cx="405" cy="300" rx="205" ry="72" fill="#ad8bf0"/>
+    <path d="M200 300v230c0 40 92 72 205 72s205-32 205-72V300c0 40-92 72-205 72s-205-32-205-72z" fill="url(#violet)"/>
+    <ellipse cx="405" cy="530" rx="205" ry="72" fill="#6445bd" stroke="#c0a8ff" stroke-width="4"/>
+    <ellipse cx="405" cy="410" rx="205" ry="72" fill="none" stroke="#c7b4ff" stroke-width="3" opacity=".6"/>
+  </g>
+  <g clip-path="url(#rightZone)" opacity=".95">
+    <ellipse cx="1195" cy="300" rx="205" ry="72" fill="#54c8d7"/>
+    <path d="M990 300v230c0 40 92 72 205 72s205-32 205-72V300c0 40-92 72-205 72s-205-32-205-72z" fill="#17677e"/>
+    <ellipse cx="1195" cy="530" rx="205" ry="72" fill="#14536f" stroke="#72e9ec" stroke-width="4"/>
+    <ellipse cx="1195" cy="410" rx="205" ry="72" fill="none" stroke="#9af7df" stroke-width="3" opacity=".58"/>
+  </g>
+  <path d="M420 690C565 690 600 560 704 520C760 498 780 472 800 440" fill="none" stroke="#bfa8ff" stroke-width="18" stroke-linecap="round" opacity=".85" filter="url(#shine)"/>
+  <circle cx="420" cy="690" r="20" fill="#d5c7ff"/>
+  <g filter="url(#shine)">
+    <rect x="770" y="155" width="60" height="590" rx="30" fill="url(#cyan)"/>
+    <path d="M800 344l76 42v88l-76 42-76-42v-88z" fill="#0b1833" stroke="#c3fff2" stroke-width="8"/>
+    <path d="M768 431l22 22 45-49" fill="none" stroke="#9af7df" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <path d="M830 440C925 420 980 350 1070 350" fill="none" stroke="#6fe2e7" stroke-width="10" stroke-dasharray="3 28" stroke-linecap="round" opacity=".65"/>
+  <circle cx="800" cy="450" r="330" fill="none" stroke="#8cefeb" stroke-width="2" opacity=".14"/>
+  <circle cx="800" cy="450" r="390" fill="none" stroke="#b79cf4" stroke-width="2" opacity=".1"/>
+  <g fill="#c8fbf1">
+    <circle cx="760" cy="112" r="5"/><circle cx="840" cy="788" r="5"/><circle cx="1510" cy="458" r="4"/><circle cx="88" cy="428" r="4"/>
+  </g>
+  <ellipse cx="800" cy="805" rx="420" ry="40" fill="#38c9dd" opacity=".12" filter="url(#soft)"/>
+</svg>
