@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Legacy kernel crossing a verified maintenance boundary</title>
+  <desc id="desc">A layered amber and blue server core moves through a luminous maintenance arc while small detached modules reconnect into a stable orbit.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07131d"/>
+      <stop offset="0.52" stop-color="#10253a"/>
+      <stop offset="1" stop-color="#18213d"/>
+    </linearGradient>
+    <radialGradient id="field" cx="50%" cy="48%" r="54%">
+      <stop offset="0" stop-color="#4edbd1" stop-opacity="0.2"/>
+      <stop offset="0.5" stop-color="#3a74a5" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#07131d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bridge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#234761" stop-opacity="0"/>
+      <stop offset="0.38" stop-color="#2bb7bd"/>
+      <stop offset="0.62" stop-color="#8cf3d6"/>
+      <stop offset="1" stop-color="#234761" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="oldCore" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f4b85f"/>
+      <stop offset="1" stop-color="#9b542c"/>
+    </linearGradient>
+    <linearGradient id="liveCore" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8ef2df"/>
+      <stop offset="0.52" stop-color="#38b8c5"/>
+      <stop offset="1" stop-color="#35699d"/>
+    </linearGradient>
+    <linearGradient id="arc" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a7fff0"/>
+      <stop offset="0.5" stop-color="#45d2cf"/>
+      <stop offset="1" stop-color="#28769c"/>
+    </linearGradient>
+    <filter id="glow" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="34"/>
+    </filter>
+    <pattern id="mesh" width="72" height="72" patternUnits="userSpaceOnUse">
+      <path d="M72 0H0V72" fill="none" stroke="#9bc4d8" stroke-opacity="0.055"/>
+      <circle cx="0" cy="0" r="2" fill="#9bc4d8" fill-opacity="0.1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#mesh)"/>
+  <ellipse cx="850" cy="440" rx="620" ry="390" fill="url(#field)"/>
+  <path d="M120 528 C390 528 514 480 704 480 S1030 528 1480 528" fill="none" stroke="#37c9c3" stroke-opacity="0.13" stroke-width="92" filter="url(#soft)"/>
+  <path d="M105 525 C374 525 510 478 710 478 S1040 525 1495 525" fill="none" stroke="url(#bridge)" stroke-width="8" stroke-linecap="round"/>
+  <g fill="none" stroke="#5e8daa" stroke-opacity="0.32">
+    <ellipse cx="800" cy="450" rx="545" ry="300" stroke-width="2"/>
+    <ellipse cx="800" cy="450" rx="455" ry="246" stroke-width="2" stroke-dasharray="6 18"/>
+  </g>
+  <g opacity="0.72">
+    <path d="M340 360h230l62 62v190H340z" fill="#14283a" stroke="#b7793e" stroke-width="4"/>
+    <path d="M570 360v62h62" fill="none" stroke="#e2aa5b" stroke-width="4"/>
+    <path d="M390 452h168M390 496h126M390 540h148" stroke="#d79a51" stroke-opacity="0.66" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="591" cy="558" r="13" fill="#f0bc65"/>
+  </g>
+  <path d="M746 174 C646 268 614 354 614 452 C614 570 668 658 766 730" fill="none" stroke="#205d76" stroke-opacity="0.42" stroke-width="54" filter="url(#soft)"/>
+  <path d="M758 160 C648 260 606 352 606 452 C606 574 662 676 776 748" fill="none" stroke="url(#arc)" stroke-width="18" stroke-linecap="round" filter="url(#glow)"/>
+  <g transform="translate(910 452)" filter="url(#glow)">
+    <path d="M0-154 134-78 134 78 0 154-134 78-134-78Z" fill="#102b42" stroke="#72e9dc" stroke-width="6"/>
+    <path d="M0-112 98-56 98 56 0 112-98 56-98-56Z" fill="url(#liveCore)" stroke="#c0fff2" stroke-width="4"/>
+    <path d="M0-68 58-34 58 34 0 68-58 34-58-34Z" fill="#102238" stroke="#e4fff9" stroke-width="4"/>
+    <circle r="25" fill="#f1c36e"/>
+  </g>
+  <g fill="url(#oldCore)" stroke="#ffd68f" stroke-width="3">
+    <path d="M681 240l28-16 28 16v32l-28 16-28-16z"/>
+    <path d="M558 650l24-14 24 14v28l-24 14-24-14z"/>
+  </g>
+  <g fill="url(#liveCore)" stroke="#b9fff1" stroke-width="3" filter="url(#glow)">
+    <path d="M1166 238l30-17 30 17v34l-30 17-30-17z"/>
+    <path d="M1252 598l27-16 27 16v31l-27 16-27-16z"/>
+    <path d="M1034 698l23-13 23 13v27l-23 13-23-13z"/>
+  </g>
+  <g fill="none" stroke="#72e6da" stroke-width="4" stroke-linecap="round" stroke-dasharray="5 14" opacity="0.7">
+    <path d="M1196 289 C1158 338 1104 366 1043 384"/>
+    <path d="M1254 599 C1179 580 1118 551 1050 520"/>
+    <path d="M1057 685 C1030 618 1003 574 983 557"/>
+  </g>
+  <g fill="#d8fff7">
+    <circle cx="1043" cy="384" r="7"/>
+    <circle cx="1050" cy="520" r="7"/>
+    <circle cx="983" cy="557" r="7"/>
+  </g>
+  <path d="M700 782 Q910 734 1118 782" fill="none" stroke="#4ad6ce" stroke-opacity="0.28" stroke-width="5"/>
+</svg>
