@@ -1,0 +1,168 @@
+{
+  "digest_title": "Daily Security Digest: Patch Boundaries, Verification, and Edge Controls",
+  "dek": "Independent defensive briefing on critical vulnerabilities, boundary verification, and operational hygiene across endpoints, infrastructure, and observability tools.",
+  "overview": "Defenders must verify running versions, isolate management planes, and inspect internal components rather than relying on package metadata or high-level status across twenty-two advisory channels.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "UAE IoT Warning Makes Device Boundaries a Defensive Priority",
+      "summary": "A UAE warning notes attacks on connected devices, making inventory, trusted onboarding, segmentation, and lifecycle control active defensive priorities.",
+      "why_it_matters": "Connected systems create numerous routes for hostile activity and false signals to reach operations.",
+      "topic": "IoT Security"
+    },
+    {
+      "source_id": "S02",
+      "headline": "Invisible Unicode Makes Canonicalization an Email Security Control",
+      "summary": "Microsoft research shows invisible Unicode in phishing, demonstrating why email defenses should canonicalize content before processing.",
+      "why_it_matters": "Canonicalization ensures filters and AI tools evaluate the same visible meaning as recipients.",
+      "topic": "Email Security"
+    },
+    {
+      "source_id": "S03",
+      "headline": "CodeCatalyst Blueprint Fix Makes Ownership Metadata a Build Boundary",
+      "summary": "AWS fixed a command-injection flaw in CodeCatalyst blueprints, showing metadata must be treated as an active input.",
+      "why_it_matters": "Project metadata can become part of the execution boundary when automation reads it during regeneration.",
+      "topic": "Supply Chain"
+    },
+    {
+      "source_id": "S04",
+      "headline": "Ubuntu GnuPG Fix Needs CMS-Path Proof",
+      "summary": "Ubuntu fixed a GnuPG CMS integrity flaw, reminding defenders that installed packages alone do not prove binary exposure.",
+      "why_it_matters": "Systems automating decisions on CMS content depend on trustworthy integrity results.",
+      "topic": "Cryptographic Integrity"
+    },
+    {
+      "source_id": "S05",
+      "headline": "AWS FPGA SDK Fix Makes Temporary Files a Privilege Boundary",
+      "summary": "AWS fixed an FPGA Developer Kit local privilege-escalation flaw involving predictable temporary files.",
+      "why_it_matters": "Every file consumed after privilege elevation must be treated as trusted execution input.",
+      "topic": "Privilege Escalation"
+    },
+    {
+      "source_id": "S06",
+      "headline": "Kibana Fleet Fixes Demand Proof of Policy Boundaries",
+      "summary": "Elastic disclosed authorization flaws in Kibana Fleet, proving policy management can indirectly act as credential issuance.",
+      "why_it_matters": "Broad authorization at the policy layer can extend well beyond the initiating user.",
+      "topic": "Access Control"
+    },
+    {
+      "source_id": "S07",
+      "headline": "WHMCS Fixes Make Billing Portals an Immediate Patch Boundary",
+      "summary": "WHMCS fixed unauthenticated data-access and code-execution flaws, requiring operators to update supported releases.",
+      "why_it_matters": "Billing applications join customer data, payment integrations, and server execution in one web-facing system.",
+      "topic": "Web Security"
+    },
+    {
+      "source_id": "S08",
+      "headline": "BlueZ AVRCP Flaw Makes Nearby Bluetooth an Input Boundary",
+      "summary": "A BlueZ advisory describes an out-of-bounds write in the AVRCP controller path of bluetoothd.",
+      "why_it_matters": "Nearby protocol traffic remains untrusted input when convenience features terminate in privileged daemons.",
+      "topic": "Bluetooth Security"
+    },
+    {
+      "source_id": "S09",
+      "headline": "Chrome Follow-Up Makes Maintenance Build the Security Boundary",
+      "summary": "Google updated Chrome to fix an exploited V8 type-confusion flaw, making exact version proof essential.",
+      "why_it_matters": "Major version compliance fails when exact maintenance builds determine exploit mitigation.",
+      "topic": "Browser Security"
+    },
+    {
+      "source_id": "S10",
+      "headline": "ASUS Control Center Flaw Makes Management Reach a Patch Priority",
+      "summary": "A critical vulnerability in ASUS Control Center Enterprise combines missing authentication, SSRF, and hard-coded credentials.",
+      "why_it_matters": "A management product's legitimate reach can amplify the consequence of losing its trust boundary.",
+      "topic": "Management Platforms"
+    },
+    {
+      "source_id": "S11",
+      "headline": "XFS Privilege Fix Needs Filesystem Feature Proof",
+      "summary": "An XFS copy-on-write flaw enables local privilege escalation when specific filesystem features are active.",
+      "why_it_matters": "Filesystem vulnerabilities are configuration-sensitive kernel risks requiring feature proof alongside inventory.",
+      "topic": "Kernel Security"
+    },
+    {
+      "source_id": "S12",
+      "headline": "SkyWalking XSS Fix Needs UI-Boundary Proof",
+      "summary": "Apache disclosed a stored XSS vulnerability in SkyWalking's legacy Booster UI, prompting migration to Horizon UI.",
+      "why_it_matters": "An observability interface is its own trust boundary even when attached to a monitored backend.",
+      "topic": "Observability Security"
+    },
+    {
+      "source_id": "S13",
+      "headline": "Ubuntu rabbitmq-c Fixes Need Client Runtime Proof",
+      "summary": "Ubuntu fixed five vulnerabilities in rabbitmq-c, spanning frame processing, credential exposure, and fragment validation.",
+      "why_it_matters": "Messaging security requires verifying client runtimes rather than relying solely on server checks.",
+      "topic": "Client Security"
+    },
+    {
+      "source_id": "S14",
+      "headline": "SmartIT Fix Must Replace Credentials Across Management Boundary",
+      "summary": "SmartIT Desktop Manager flaws expose fixed credentials and service accounts, requiring version 11 and secret replacement.",
+      "why_it_matters": "Fixed credentials can turn legitimate administrative reach into shared attacker reach across endpoints.",
+      "topic": "Endpoint Management"
+    },
+    {
+      "source_id": "S15",
+      "headline": "Imagination GPU Fixes Need Driver-State Proof",
+      "summary": "New Imagination Graphics DDK CVEs highlight boundary risks in guest VM GPU memory and IOCTL calls.",
+      "why_it_matters": "Accelerators process sensitive workloads, yet their drivers and firmware require active loaded-state verification.",
+      "topic": "Hardware Security"
+    },
+    {
+      "source_id": "S16",
+      "headline": "Casdoor Bypass Shows Authorization Needs One Object Identity",
+      "summary": "CERT/CC warned of a Casdoor cross-tenant authorization bypass where query and body identifiers conflict.",
+      "why_it_matters": "A policy check fails when authorization layers and backend logic act on different object representations.",
+      "topic": "Identity Management"
+    },
+    {
+      "source_id": "S17",
+      "headline": "MOOSDB Stall Flaw Makes Functional Reconnect Tests Essential",
+      "summary": "A core-moos availability flaw can cause blocking reads during handshakes, stalling client acceptance.",
+      "why_it_matters": "An open network port is not proof that middleware clients can complete handshakes and participate.",
+      "topic": "Middleware Security"
+    },
+    {
+      "source_id": "S18",
+      "headline": "Divi Ajax Filter Fix Needs Plugin-Level Proof",
+      "summary": "Patchstack disclosed an unauthenticated file-inclusion vulnerability in Divi Ajax Filter affecting versions through 5.1.2.",
+      "why_it_matters": "Convenience plugins accepting public filter input sit on sensitive server-side boundaries.",
+      "topic": "Plugin Security"
+    },
+    {
+      "source_id": "S19",
+      "headline": "FreeIPMI Fixes Need Management-Path Proof",
+      "summary": "FreeIPMI 1.6.19 fixes six memory-safety flaws involving controller responses parsed by host software.",
+      "why_it_matters": "Hardware management controller replies are untrusted inputs to host-side client software.",
+      "topic": "IPMI Security"
+    },
+    {
+      "source_id": "S20",
+      "headline": "SonicWall NSM Fix Needs Administrative Boundary Proof",
+      "summary": "SonicWall fixed three NSM On-Prem flaws involving authorization, command injection, and archive path traversal.",
+      "why_it_matters": "Centralized security tooling concentrates authority, making role and file verification vital.",
+      "topic": "Network Management"
+    },
+    {
+      "source_id": "S21",
+      "headline": "Plesk Path Fix Needs Micro-Update Proof",
+      "summary": "CVE-2026-67397 affects Plesk for Linux through specific builds, allowing low-privileged users root code execution.",
+      "why_it_matters": "Micro-updates carry root-level security meaning, making exact build verification mandatory.",
+      "topic": "Hosting Security"
+    },
+    {
+      "source_id": "S22",
+      "headline": "RouterOS Security Update Needs Post-Upgrade Proof",
+      "summary": "MikroTik issued an important RouterOS security update across release channels without immediate technical details.",
+      "why_it_matters": "Post-upgrade log checks and configuration validation are vital when vulnerability specifics remain withheld.",
+      "topic": "Router Security"
+    }
+  ],
+  "operating_view": "Defenders must move beyond binary inventory by enforcing runtime verification, precise version tracking, and strict administrative boundaries across every software layer.",
+  "watch_items": [
+    "Verify exact running versions rather than relying on package metadata or high-level status.",
+    "Restrict administrative reach and isolate control planes from untrusted network segments.",
+    "Preserve evidence trails that connect software updates, configuration integrity, and active behaviors."
+  ],
+  "caption_intro": "Review today's independent security updates and boundary verifications."
+}

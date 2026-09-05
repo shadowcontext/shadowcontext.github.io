@@ -1,0 +1,888 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Daily Security Digest: Patch Boundaries, Verification, and Edge Controls | ShadowContext</title>
+    <style>
+      :root {
+        --paper: #05080d;
+        --panel: #0d1319;
+        --panel-soft: #091017;
+        --ink: #f1f7fa;
+        --ink-2: #c4d1d8;
+        --muted: #8496a1;
+        --line: #1d2b34;
+        --cyan: #35e6d1;
+        --violet: #8b7dff;
+        --sans: "Space Grotesk", Inter, Arial, sans-serif;
+        --mono: "DM Mono", Consolas, monospace;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: var(--sans);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        font-size: 10.5pt;
+        line-height: 1.55;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        position: relative;
+        width: 210mm;
+        min-height: 297mm;
+        padding: 18mm;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 83% 18%, rgba(139, 125, 255, 0.1), transparent 28%),
+          linear-gradient(145deg, #05080d 0%, #081017 62%, #0c101c 100%);
+      }
+
+      .page::before {
+        content: "";
+        position: absolute;
+        inset: 8mm;
+        pointer-events: none;
+        border: 0.25mm solid var(--line);
+      }
+
+      .cover {
+        display: flex;
+        flex-direction: column;
+        page-break-after: always;
+      }
+
+      .brand-row,
+      .section-head,
+      .document-footer {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 4mm;
+        font-size: 20pt;
+        font-weight: 750;
+        letter-spacing: -0.04em;
+      }
+
+      .brand em {
+        color: var(--cyan);
+        font-style: normal;
+      }
+
+      .brand-mark {
+        position: relative;
+        display: block;
+        width: 12mm;
+        height: 12mm;
+        transform: rotate(30deg);
+        border: 1mm solid var(--cyan);
+        border-radius: 1.2mm;
+      }
+
+      .brand-mark::before {
+        content: "";
+        position: absolute;
+        inset: 2.2mm;
+        border: 0.8mm solid var(--violet);
+        border-radius: 0.9mm;
+      }
+
+      .brand-mark::after {
+        content: "";
+        position: absolute;
+        inset: 4.5mm;
+        background: var(--cyan);
+        border-radius: 0.5mm;
+      }
+
+      .edition,
+      .eyebrow,
+      .topic,
+      .section-count,
+      .why span,
+      .document-footer,
+      .source-link {
+        font-family: var(--mono);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .edition,
+      .section-count,
+      .document-footer {
+        color: var(--muted);
+        font-size: 8pt;
+      }
+
+      .cover-copy {
+        position: relative;
+        z-index: 1;
+        margin: 30mm 0 0;
+      }
+
+      .eyebrow {
+        margin: 0 0 7mm;
+        color: var(--cyan);
+        font-size: 10pt;
+      }
+
+      h1 {
+        max-width: 165mm;
+        margin: 0;
+        font-size: 37pt;
+        line-height: 1.03;
+        letter-spacing: -0.05em;
+      }
+
+      .dek {
+        max-width: 155mm;
+        margin: 10mm 0 0;
+        color: var(--ink-2);
+        font-size: 16pt;
+        line-height: 1.45;
+      }
+
+      .context {
+        position: relative;
+        z-index: 1;
+        margin-top: auto;
+        padding: 9mm;
+        background: rgba(13, 19, 25, 0.94);
+        border: 0.3mm solid var(--line);
+        border-left: 1mm solid var(--violet);
+      }
+
+      .context h2,
+      .section-head h2,
+      .operating-view h2,
+      .sources h2 {
+        margin: 0;
+      }
+
+      .context h2 {
+        color: var(--violet);
+        font-family: var(--mono);
+        font-size: 9pt;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .context p {
+        margin: 4mm 0 0;
+        color: var(--ink-2);
+        font-size: 13pt;
+      }
+
+      .cover-meta {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 9mm;
+        color: var(--muted);
+        font: 8pt var(--mono);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .content {
+        padding-top: 15mm;
+        padding-bottom: 18mm;
+      }
+
+      .section-head {
+        margin-bottom: 9mm;
+        padding-bottom: 5mm;
+        border-bottom: 0.3mm solid var(--line);
+      }
+
+      .section-head h2 {
+        font-size: 23pt;
+      }
+
+      .stories {
+        position: relative;
+        z-index: 1;
+      }
+
+      .story {
+        display: grid;
+        grid-template-columns: 15mm 1fr;
+        gap: 5mm;
+        margin: 0 0 6mm;
+        padding: 7mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: rgba(13, 19, 25, 0.96);
+        border: 0.3mm solid var(--line);
+      }
+
+      .story-index {
+        color: var(--cyan);
+        font: 12pt var(--mono);
+      }
+
+      .topic {
+        margin: 0 0 2mm;
+        color: var(--cyan);
+        font-size: 7.5pt;
+      }
+
+      .story h3 {
+        margin: 0;
+        font-size: 16pt;
+        line-height: 1.18;
+        letter-spacing: -0.025em;
+      }
+
+      .summary {
+        margin: 3mm 0;
+        color: var(--ink-2);
+        font-size: 10.5pt;
+      }
+
+      .why {
+        padding-top: 3mm;
+        border-top: 0.25mm solid var(--line);
+      }
+
+      .why span {
+        color: var(--violet);
+        font-size: 7pt;
+      }
+
+      .why p {
+        display: inline;
+        margin: 0 0 0 2mm;
+        font-weight: 650;
+      }
+
+      .source-link {
+        display: inline-block;
+        margin-top: 4mm;
+        color: var(--cyan);
+        font-size: 6.8pt;
+        letter-spacing: 0.04em;
+        text-transform: none;
+      }
+
+      .operating-view,
+      .sources {
+        position: relative;
+        z-index: 1;
+        margin-top: 12mm;
+        padding: 9mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: var(--panel-soft);
+        border: 0.3mm solid var(--line);
+      }
+
+      .operating-view {
+        border-top: 1mm solid var(--cyan);
+      }
+
+      .operating-view h2,
+      .sources h2 {
+        font-size: 18pt;
+      }
+
+      .operating-view > p {
+        color: var(--ink-2);
+        font-size: 12pt;
+      }
+
+      .watch-list,
+      .source-list {
+        margin: 6mm 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .watch-list li {
+        display: grid;
+        grid-template-columns: 9mm 1fr;
+        gap: 4mm;
+        align-items: start;
+        margin: 3mm 0;
+      }
+
+      .watch-list span {
+        display: grid;
+        width: 8mm;
+        height: 8mm;
+        place-items: center;
+        color: var(--cyan);
+        border: 0.3mm solid var(--cyan);
+        font: 8pt var(--mono);
+      }
+
+      .watch-list p {
+        margin: 0;
+      }
+
+      .source-list li {
+        display: grid;
+        grid-template-columns: 10mm 1fr;
+        gap: 3mm;
+        margin: 2.5mm 0;
+        color: var(--ink-2);
+        font-size: 8.5pt;
+      }
+
+      .source-list span {
+        color: var(--violet);
+        font-family: var(--mono);
+      }
+
+      .source-list a {
+        color: var(--cyan);
+        text-decoration: underline;
+        text-decoration-color: rgba(53, 230, 209, 0.35);
+        text-underline-offset: 1mm;
+      }
+
+      .cta {
+        position: relative;
+        z-index: 1;
+        margin: 12mm 0 0;
+        padding: 7mm 9mm;
+        break-inside: avoid;
+        color: #04100f;
+        background: var(--cyan);
+      }
+
+      .cta strong {
+        display: block;
+        font-size: 14pt;
+      }
+
+      .cta span {
+        font: 9pt var(--mono);
+      }
+
+      .document-footer {
+        margin-top: 12mm;
+        padding-top: 5mm;
+        border-top: 0.3mm solid var(--line);
+      }
+
+      @media screen {
+        body {
+          width: 210mm;
+          margin: 0 auto;
+        }
+
+        .page {
+          box-shadow: 0 0 20mm rgba(0, 0, 0, 0.45);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="page cover">
+      <header class="brand-row">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Shadow<em>Context</em></span>
+        </div>
+        <span class="edition">Daily security digest</span>
+      </header>
+
+      <main class="cover-copy">
+        <p class="eyebrow">The day in context / 2026-09-04</p>
+        <h1>Daily Security Digest: Patch Boundaries, Verification, and Edge Controls</h1>
+        <p class="dek">Independent defensive briefing on critical vulnerabilities, boundary verification, and operational hygiene across endpoints, infrastructure, and observability tools.</p>
+      </main>
+
+      <aside class="context">
+        <h2>Executive summary</h2>
+        <p>Defenders must verify running versions, isolate management planes, and inspect internal components rather than relying on package metadata or high-level status across twenty-two advisory channels.</p>
+      </aside>
+
+      <div class="cover-meta">
+        <span>22 briefings included</span>
+        <span>https://shadowcontext.com/</span>
+      </div>
+    </section>
+
+    <section class="page content">
+      <header class="section-head">
+        <h2>All news from the day</h2>
+        <span class="section-count">22 / 2026-09-04</span>
+      </header>
+
+      <main class="stories">
+    <article class="story">
+      <div class="story-index">01</div>
+      <div class="story-copy">
+        <p class="topic">IoT Security</p>
+        <h3>UAE IoT Warning Makes Device Boundaries a Defensive Priority</h3>
+        <p class="summary">A UAE warning notes attacks on connected devices, making inventory, trusted onboarding, segmentation, and lifecycle control active defensive priorities.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Connected systems create numerous routes for hostile activity and false signals to reach operations.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/uae-iot-warning-needs-device-boundaries/">UAE IoT Warning Makes Device Boundaries a Defensive Priority ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">02</div>
+      <div class="story-copy">
+        <p class="topic">Email Security</p>
+        <h3>Invisible Unicode Makes Canonicalization an Email Security Control</h3>
+        <p class="summary">Microsoft research shows invisible Unicode in phishing, demonstrating why email defenses should canonicalize content before processing.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Canonicalization ensures filters and AI tools evaluate the same visible meaning as recipients.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/invisible-unicode-needs-canonicalization-before-detection/">Invisible Unicode Makes Canonicalization an Email Security Control ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">03</div>
+      <div class="story-copy">
+        <p class="topic">Supply Chain</p>
+        <h3>CodeCatalyst Blueprint Fix Makes Ownership Metadata a Build Boundary</h3>
+        <p class="summary">AWS fixed a command-injection flaw in CodeCatalyst blueprints, showing metadata must be treated as an active input.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Project metadata can become part of the execution boundary when automation reads it during regeneration.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/codecatalyst-blueprint-fix-needs-resynthesis-boundaries/">CodeCatalyst Blueprint Fix Makes Ownership Metadata a Build Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">04</div>
+      <div class="story-copy">
+        <p class="topic">Cryptographic Integrity</p>
+        <h3>Ubuntu GnuPG Fix Needs CMS-Path Proof</h3>
+        <p class="summary">Ubuntu fixed a GnuPG CMS integrity flaw, reminding defenders that installed packages alone do not prove binary exposure.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Systems automating decisions on CMS content depend on trustworthy integrity results.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/gnupg-fix-needs-cms-path-proof/">Ubuntu GnuPG Fix Needs CMS-Path Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">05</div>
+      <div class="story-copy">
+        <p class="topic">Privilege Escalation</p>
+        <h3>AWS FPGA SDK Fix Makes Temporary Files a Privilege Boundary</h3>
+        <p class="summary">AWS fixed an FPGA Developer Kit local privilege-escalation flaw involving predictable temporary files.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Every file consumed after privilege elevation must be treated as trusted execution input.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/fpga-sdk-fix-needs-temporary-file-boundaries/">AWS FPGA SDK Fix Makes Temporary Files a Privilege Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">06</div>
+      <div class="story-copy">
+        <p class="topic">Access Control</p>
+        <h3>Kibana Fleet Fixes Demand Proof of Policy Boundaries</h3>
+        <p class="summary">Elastic disclosed authorization flaws in Kibana Fleet, proving policy management can indirectly act as credential issuance.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Broad authorization at the policy layer can extend well beyond the initiating user.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/kibana-fleet-fixes-need-policy-boundary-proof/">Kibana Fleet Fixes Demand Proof of Policy Boundaries ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">07</div>
+      <div class="story-copy">
+        <p class="topic">Web Security</p>
+        <h3>WHMCS Fixes Make Billing Portals an Immediate Patch Boundary</h3>
+        <p class="summary">WHMCS fixed unauthenticated data-access and code-execution flaws, requiring operators to update supported releases.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Billing applications join customer data, payment integrations, and server execution in one web-facing system.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/whmcs-fixes-need-billing-boundary-proof/">WHMCS Fixes Make Billing Portals an Immediate Patch Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">08</div>
+      <div class="story-copy">
+        <p class="topic">Bluetooth Security</p>
+        <h3>BlueZ AVRCP Flaw Makes Nearby Bluetooth an Input Boundary</h3>
+        <p class="summary">A BlueZ advisory describes an out-of-bounds write in the AVRCP controller path of bluetoothd.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Nearby protocol traffic remains untrusted input when convenience features terminate in privileged daemons.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/bluez-avrcp-flaw-needs-radio-boundaries/">BlueZ AVRCP Flaw Makes Nearby Bluetooth an Input Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">09</div>
+      <div class="story-copy">
+        <p class="topic">Browser Security</p>
+        <h3>Chrome Follow-Up Makes Maintenance Build the Security Boundary</h3>
+        <p class="summary">Google updated Chrome to fix an exploited V8 type-confusion flaw, making exact version proof essential.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Major version compliance fails when exact maintenance builds determine exploit mitigation.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/chrome-follow-up-needs-maintenance-build-proof/">Chrome Follow-Up Makes the Maintenance Build the Security Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">10</div>
+      <div class="story-copy">
+        <p class="topic">Management Platforms</p>
+        <h3>ASUS Control Center Flaw Makes Management Reach a Patch Priority</h3>
+        <p class="summary">A critical vulnerability in ASUS Control Center Enterprise combines missing authentication, SSRF, and hard-coded credentials.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>A management product&#39;s legitimate reach can amplify the consequence of losing its trust boundary.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/asus-control-center-fix-needs-management-boundaries/">ASUS Control Center Flaw Makes Management Reach a Patch Priority ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">11</div>
+      <div class="story-copy">
+        <p class="topic">Kernel Security</p>
+        <h3>XFS Privilege Fix Needs Filesystem Feature Proof</h3>
+        <p class="summary">An XFS copy-on-write flaw enables local privilege escalation when specific filesystem features are active.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Filesystem vulnerabilities are configuration-sensitive kernel risks requiring feature proof alongside inventory.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/xfs-fix-needs-filesystem-feature-proof/">XFS Privilege Fix Needs Filesystem Feature Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">12</div>
+      <div class="story-copy">
+        <p class="topic">Observability Security</p>
+        <h3>SkyWalking XSS Fix Needs UI-Boundary Proof</h3>
+        <p class="summary">Apache disclosed a stored XSS vulnerability in SkyWalking&#39;s legacy Booster UI, prompting migration to Horizon UI.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>An observability interface is its own trust boundary even when attached to a monitored backend.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/skywalking-xss-fix-needs-ui-boundary-proof/">SkyWalking XSS Fix Needs UI-Boundary Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">13</div>
+      <div class="story-copy">
+        <p class="topic">Client Security</p>
+        <h3>Ubuntu rabbitmq-c Fixes Need Client Runtime Proof</h3>
+        <p class="summary">Ubuntu fixed five vulnerabilities in rabbitmq-c, spanning frame processing, credential exposure, and fragment validation.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Messaging security requires verifying client runtimes rather than relying solely on server checks.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/rabbitmq-c-fixes-need-client-runtime-proof/">Ubuntu rabbitmq-c Fixes Need Client Runtime Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">14</div>
+      <div class="story-copy">
+        <p class="topic">Endpoint Management</p>
+        <h3>SmartIT Fix Must Replace Credentials Across Management Boundary</h3>
+        <p class="summary">SmartIT Desktop Manager flaws expose fixed credentials and service accounts, requiring version 11 and secret replacement.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Fixed credentials can turn legitimate administrative reach into shared attacker reach across endpoints.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/smartit-fix-needs-credential-boundary-proof/">SmartIT Fix Must Replace Credentials Across the Management Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">15</div>
+      <div class="story-copy">
+        <p class="topic">Hardware Security</p>
+        <h3>Imagination GPU Fixes Need Driver-State Proof</h3>
+        <p class="summary">New Imagination Graphics DDK CVEs highlight boundary risks in guest VM GPU memory and IOCTL calls.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Accelerators process sensitive workloads, yet their drivers and firmware require active loaded-state verification.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/imagination-gpu-fixes-need-driver-state-proof/">Imagination GPU Fixes Need Driver-State Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">16</div>
+      <div class="story-copy">
+        <p class="topic">Identity Management</p>
+        <h3>Casdoor Bypass Shows Authorization Needs One Object Identity</h3>
+        <p class="summary">CERT/CC warned of a Casdoor cross-tenant authorization bypass where query and body identifiers conflict.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>A policy check fails when authorization layers and backend logic act on different object representations.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/casdoor-bypass-needs-one-object-identity/">Casdoor Bypass Shows Authorization Needs One Object Identity ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">17</div>
+      <div class="story-copy">
+        <p class="topic">Middleware Security</p>
+        <h3>MOOSDB Stall Flaw Makes Functional Reconnect Tests Essential</h3>
+        <p class="summary">A core-moos availability flaw can cause blocking reads during handshakes, stalling client acceptance.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>An open network port is not proof that middleware clients can complete handshakes and participate.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/moosdb-fix-needs-functional-reconnect-proof/">MOOSDB Stall Flaw Makes Functional Reconnect Tests Essential ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">18</div>
+      <div class="story-copy">
+        <p class="topic">Plugin Security</p>
+        <h3>Divi Ajax Filter Fix Needs Plugin-Level Proof</h3>
+        <p class="summary">Patchstack disclosed an unauthenticated file-inclusion vulnerability in Divi Ajax Filter affecting versions through 5.1.2.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Convenience plugins accepting public filter input sit on sensitive server-side boundaries.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/divi-ajax-filter-fix-needs-plugin-level-proof/">Divi Ajax Filter Fix Needs Plugin-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">19</div>
+      <div class="story-copy">
+        <p class="topic">IPMI Security</p>
+        <h3>FreeIPMI Fixes Need Management-Path Proof</h3>
+        <p class="summary">FreeIPMI 1.6.19 fixes six memory-safety flaws involving controller responses parsed by host software.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Hardware management controller replies are untrusted inputs to host-side client software.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/freeipmi-fixes-need-management-path-proof/">FreeIPMI Fixes Need Management-Path Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">20</div>
+      <div class="story-copy">
+        <p class="topic">Network Management</p>
+        <h3>SonicWall NSM Fix Needs Administrative Boundary Proof</h3>
+        <p class="summary">SonicWall fixed three NSM On-Prem flaws involving authorization, command injection, and archive path traversal.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Centralized security tooling concentrates authority, making role and file verification vital.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/sonicwall-nsm-fix-needs-admin-boundary-proof/">SonicWall NSM Fix Needs Administrative Boundary Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">21</div>
+      <div class="story-copy">
+        <p class="topic">Hosting Security</p>
+        <h3>Plesk Path Fix Needs Micro-Update Proof</h3>
+        <p class="summary">CVE-2026-67397 affects Plesk for Linux through specific builds, allowing low-privileged users root code execution.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Micro-updates carry root-level security meaning, making exact build verification mandatory.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/plesk-path-fix-needs-micro-update-proof/">Plesk Path Fix Needs Micro-Update Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">22</div>
+      <div class="story-copy">
+        <p class="topic">Router Security</p>
+        <h3>RouterOS Security Update Needs Post-Upgrade Proof</h3>
+        <p class="summary">MikroTik issued an important RouterOS security update across release channels without immediate technical details.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Post-upgrade log checks and configuration validation are vital when vulnerability specifics remain withheld.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/mikrotik-routeros-fix-needs-post-update-proof/">RouterOS Security Update Needs Post-Upgrade Proof ↗</a>
+      </div>
+    </article></main>
+
+      <section class="operating-view">
+        <p class="eyebrow">The operating view</p>
+        <h2>What the day means for defenders</h2>
+        <p>Defenders must move beyond binary inventory by enforcing runtime verification, precise version tracking, and strict administrative boundaries across every software layer.</p>
+        <ol class="watch-list"><li><span>1</span><p>Verify exact running versions rather than relying on package metadata or high-level status.</p></li>
+<li><span>2</span><p>Restrict administrative reach and isolate control planes from untrusted network segments.</p></li>
+<li><span>3</span><p>Preserve evidence trails that connect software updates, configuration integrity, and active behaviors.</p></li></ol>
+      </section>
+
+      <section class="sources">
+        <p class="eyebrow">Source index</p>
+        <h2>Every briefing in this digest</h2>
+        <ol class="source-list">
+    <li>
+      <span>01</span>
+      <a href="https://shadowcontext.com/uae-iot-warning-needs-device-boundaries/">UAE IoT Warning Makes Device Boundaries a Defensive Priority</a>
+    </li>
+
+    <li>
+      <span>02</span>
+      <a href="https://shadowcontext.com/invisible-unicode-needs-canonicalization-before-detection/">Invisible Unicode Makes Canonicalization an Email Security Control</a>
+    </li>
+
+    <li>
+      <span>03</span>
+      <a href="https://shadowcontext.com/codecatalyst-blueprint-fix-needs-resynthesis-boundaries/">CodeCatalyst Blueprint Fix Makes Ownership Metadata a Build Boundary</a>
+    </li>
+
+    <li>
+      <span>04</span>
+      <a href="https://shadowcontext.com/gnupg-fix-needs-cms-path-proof/">Ubuntu GnuPG Fix Needs CMS-Path Proof</a>
+    </li>
+
+    <li>
+      <span>05</span>
+      <a href="https://shadowcontext.com/fpga-sdk-fix-needs-temporary-file-boundaries/">AWS FPGA SDK Fix Makes Temporary Files a Privilege Boundary</a>
+    </li>
+
+    <li>
+      <span>06</span>
+      <a href="https://shadowcontext.com/kibana-fleet-fixes-need-policy-boundary-proof/">Kibana Fleet Fixes Demand Proof of Policy Boundaries</a>
+    </li>
+
+    <li>
+      <span>07</span>
+      <a href="https://shadowcontext.com/whmcs-fixes-need-billing-boundary-proof/">WHMCS Fixes Make Billing Portals an Immediate Patch Boundary</a>
+    </li>
+
+    <li>
+      <span>08</span>
+      <a href="https://shadowcontext.com/bluez-avrcp-flaw-needs-radio-boundaries/">BlueZ AVRCP Flaw Makes Nearby Bluetooth an Input Boundary</a>
+    </li>
+
+    <li>
+      <span>09</span>
+      <a href="https://shadowcontext.com/chrome-follow-up-needs-maintenance-build-proof/">Chrome Follow-Up Makes the Maintenance Build the Security Boundary</a>
+    </li>
+
+    <li>
+      <span>10</span>
+      <a href="https://shadowcontext.com/asus-control-center-fix-needs-management-boundaries/">ASUS Control Center Flaw Makes Management Reach a Patch Priority</a>
+    </li>
+
+    <li>
+      <span>11</span>
+      <a href="https://shadowcontext.com/xfs-fix-needs-filesystem-feature-proof/">XFS Privilege Fix Needs Filesystem Feature Proof</a>
+    </li>
+
+    <li>
+      <span>12</span>
+      <a href="https://shadowcontext.com/skywalking-xss-fix-needs-ui-boundary-proof/">SkyWalking XSS Fix Needs UI-Boundary Proof</a>
+    </li>
+
+    <li>
+      <span>13</span>
+      <a href="https://shadowcontext.com/rabbitmq-c-fixes-need-client-runtime-proof/">Ubuntu rabbitmq-c Fixes Need Client Runtime Proof</a>
+    </li>
+
+    <li>
+      <span>14</span>
+      <a href="https://shadowcontext.com/smartit-fix-needs-credential-boundary-proof/">SmartIT Fix Must Replace Credentials Across the Management Boundary</a>
+    </li>
+
+    <li>
+      <span>15</span>
+      <a href="https://shadowcontext.com/imagination-gpu-fixes-need-driver-state-proof/">Imagination GPU Fixes Need Driver-State Proof</a>
+    </li>
+
+    <li>
+      <span>16</span>
+      <a href="https://shadowcontext.com/casdoor-bypass-needs-one-object-identity/">Casdoor Bypass Shows Authorization Needs One Object Identity</a>
+    </li>
+
+    <li>
+      <span>17</span>
+      <a href="https://shadowcontext.com/moosdb-fix-needs-functional-reconnect-proof/">MOOSDB Stall Flaw Makes Functional Reconnect Tests Essential</a>
+    </li>
+
+    <li>
+      <span>18</span>
+      <a href="https://shadowcontext.com/divi-ajax-filter-fix-needs-plugin-level-proof/">Divi Ajax Filter Fix Needs Plugin-Level Proof</a>
+    </li>
+
+    <li>
+      <span>19</span>
+      <a href="https://shadowcontext.com/freeipmi-fixes-need-management-path-proof/">FreeIPMI Fixes Need Management-Path Proof</a>
+    </li>
+
+    <li>
+      <span>20</span>
+      <a href="https://shadowcontext.com/sonicwall-nsm-fix-needs-admin-boundary-proof/">SonicWall NSM Fix Needs Administrative Boundary Proof</a>
+    </li>
+
+    <li>
+      <span>21</span>
+      <a href="https://shadowcontext.com/plesk-path-fix-needs-micro-update-proof/">Plesk Path Fix Needs Micro-Update Proof</a>
+    </li>
+
+    <li>
+      <span>22</span>
+      <a href="https://shadowcontext.com/mikrotik-routeros-fix-needs-post-update-proof/">RouterOS Security Update Needs Post-Upgrade Proof</a>
+    </li></ol>
+      </section>
+
+      <div class="cta">
+        <strong>Read the full analysis</strong>
+        <span>https://shadowcontext.com/</span>
+      </div>
+
+      <footer class="document-footer">
+        <span>ShadowContext</span>
+        <span>Independent defensive security intelligence</span>
+      </footer>
+    </section>
+  </body>
+</html>

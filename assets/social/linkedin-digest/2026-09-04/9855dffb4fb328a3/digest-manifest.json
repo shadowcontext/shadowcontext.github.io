@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-09-05T09:07:31.970+04:00",
+  "digestDate": "2026-09-04",
+  "digestHash": "9855dffb4fb328a39b5a76043671476607146bdf5aa588e9e90ecc34a1b4fd71",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "Daily Security Digest: Patch Boundaries, Verification, and Edge Controls",
+  "articleCount": 22,
+  "sourceArticles": [
+    {
+      "title": "UAE IoT Warning Makes Device Boundaries a Defensive Priority",
+      "canonicalUrl": "https://shadowcontext.com/uae-iot-warning-needs-device-boundaries/",
+      "publishedAt": "2026-09-04T00:11:52.000+04:00",
+      "category": "defense",
+      "sourceHash": "c460bee5b609a8ffeb72a16cdb73889c5c320adb1b62a4e611643ef7d4f3f508"
+    },
+    {
+      "title": "Invisible Unicode Makes Canonicalization an Email Security Control",
+      "canonicalUrl": "https://shadowcontext.com/invisible-unicode-needs-canonicalization-before-detection/",
+      "publishedAt": "2026-09-04T01:12:02.000+04:00",
+      "category": "threat-intelligence",
+      "sourceHash": "53b05279cade0c756cf2dd59a9b7f3ef2d0c1fae944b3b08f9a4ce8c7cec6c10"
+    },
+    {
+      "title": "CodeCatalyst Blueprint Fix Makes Ownership Metadata a Build Boundary",
+      "canonicalUrl": "https://shadowcontext.com/codecatalyst-blueprint-fix-needs-resynthesis-boundaries/",
+      "publishedAt": "2026-09-04T02:09:01.000+04:00",
+      "category": "defense",
+      "sourceHash": "573821a5981194332a6856c6c375135d1a4f521e88b824be086d97594c7e42f2"
+    },
+    {
+      "title": "Ubuntu GnuPG Fix Needs CMS-Path Proof",
+      "canonicalUrl": "https://shadowcontext.com/gnupg-fix-needs-cms-path-proof/",
+      "publishedAt": "2026-09-04T03:12:11.000+04:00",
+      "category": "defense",
+      "sourceHash": "3a6c81a1e80ba32b2f0c41abd46126c9c80efbc20c4e2020719687bccb9de9a9"
+    },
+    {
+      "title": "AWS FPGA SDK Fix Makes Temporary Files a Privilege Boundary",
+      "canonicalUrl": "https://shadowcontext.com/fpga-sdk-fix-needs-temporary-file-boundaries/",
+      "publishedAt": "2026-09-04T04:09:48.000+04:00",
+      "category": "defense",
+      "sourceHash": "043bb1288d3249deda65f47675119783f1551ec1213845c4961ca225c63f6563"
+    },
+    {
+      "title": "Kibana Fleet Fixes Demand Proof of Policy Boundaries",
+      "canonicalUrl": "https://shadowcontext.com/kibana-fleet-fixes-need-policy-boundary-proof/",
+      "publishedAt": "2026-09-04T05:10:50.000+04:00",
+      "category": "defense",
+      "sourceHash": "78a5c77f9c4282323670f8bc52d191a84abd8e4b989e48e964934b5944f43833"
+    },
+    {
+      "title": "WHMCS Fixes Make Billing Portals an Immediate Patch Boundary",
+      "canonicalUrl": "https://shadowcontext.com/whmcs-fixes-need-billing-boundary-proof/",
+      "publishedAt": "2026-09-04T06:11:36.000+04:00",
+      "category": "defense",
+      "sourceHash": "d6e11c838bfb05df76437b38363e90ae707cdb24b2461a2ffb0f4e9ca2765c82"
+    },
+    {
+      "title": "BlueZ AVRCP Flaw Makes Nearby Bluetooth an Input Boundary",
+      "canonicalUrl": "https://shadowcontext.com/bluez-avrcp-flaw-needs-radio-boundaries/",
+      "publishedAt": "2026-09-04T07:09:21.000+04:00",
+      "category": "defense",
+      "sourceHash": "32dd8759f22ebfea41b35b14fc0d383d0de8f10f78a216d53a52cf6d3e710eb3"
+    },
+    {
+      "title": "Chrome Follow-Up Makes the Maintenance Build the Security Boundary",
+      "canonicalUrl": "https://shadowcontext.com/chrome-follow-up-needs-maintenance-build-proof/",
+      "publishedAt": "2026-09-04T08:12:08.000+04:00",
+      "category": "defense",
+      "sourceHash": "7ee60d16287a01a08fd2b72d6950e2cf997105f7bd648ee5cf1e6c827e56bf6e"
+    },
+    {
+      "title": "ASUS Control Center Flaw Makes Management Reach a Patch Priority",
+      "canonicalUrl": "https://shadowcontext.com/asus-control-center-fix-needs-management-boundaries/",
+      "publishedAt": "2026-09-04T09:11:21.000+04:00",
+      "category": "defense",
+      "sourceHash": "95c1eb1943e123d602ccda00ab652a3adedcc55c1308fd9f9ab1d4aa26845999"
+    },
+    {
+      "title": "XFS Privilege Fix Needs Filesystem Feature Proof",
+      "canonicalUrl": "https://shadowcontext.com/xfs-fix-needs-filesystem-feature-proof/",
+      "publishedAt": "2026-09-04T10:11:49.000+04:00",
+      "category": "defense",
+      "sourceHash": "54b63ac74cd0ddb6109a8dc582114a2ee38b3d98d95b3c81c792410c4ff0a47f"
+    },
+    {
+      "title": "SkyWalking XSS Fix Needs UI-Boundary Proof",
+      "canonicalUrl": "https://shadowcontext.com/skywalking-xss-fix-needs-ui-boundary-proof/",
+      "publishedAt": "2026-09-04T11:11:42.000+04:00",
+      "category": "defense",
+      "sourceHash": "c87e7ff814586503376fb37c3c1bd8b9526f61a390e482d14d9bdb4a4de2941e"
+    },
+    {
+      "title": "Ubuntu rabbitmq-c Fixes Need Client Runtime Proof",
+      "canonicalUrl": "https://shadowcontext.com/rabbitmq-c-fixes-need-client-runtime-proof/",
+      "publishedAt": "2026-09-04T12:13:47.000+04:00",
+      "category": "defense",
+      "sourceHash": "73263556944bcdbb3a0ce04e13e3bc67376d96ab814f4b3cdb78609cdcdcadf9"
+    },
+    {
+      "title": "SmartIT Fix Must Replace Credentials Across the Management Boundary",
+      "canonicalUrl": "https://shadowcontext.com/smartit-fix-needs-credential-boundary-proof/",
+      "publishedAt": "2026-09-04T14:13:24.000+04:00",
+      "category": "defense",
+      "sourceHash": "04b6e54de789c85530bb2f7c0ada9a5cde2f353f7065ebf4be5e18ebb63db9c6"
+    },
+    {
+      "title": "Imagination GPU Fixes Need Driver-State Proof",
+      "canonicalUrl": "https://shadowcontext.com/imagination-gpu-fixes-need-driver-state-proof/",
+      "publishedAt": "2026-09-04T15:10:45.000+04:00",
+      "category": "defense",
+      "sourceHash": "dcfc6df7e81b484455175c4726170412343e9a10aa56fee200de78e0430f2663"
+    },
+    {
+      "title": "Casdoor Bypass Shows Authorization Needs One Object Identity",
+      "canonicalUrl": "https://shadowcontext.com/casdoor-bypass-needs-one-object-identity/",
+      "publishedAt": "2026-09-04T17:11:51.000+04:00",
+      "category": "defense",
+      "sourceHash": "44dd580176ac23b8e63fd027a6f4835741e7e9e3596ea839fb503eb281efcce8"
+    },
+    {
+      "title": "MOOSDB Stall Flaw Makes Functional Reconnect Tests Essential",
+      "canonicalUrl": "https://shadowcontext.com/moosdb-fix-needs-functional-reconnect-proof/",
+      "publishedAt": "2026-09-04T18:10:26.000+04:00",
+      "category": "defense",
+      "sourceHash": "af0caec37f1de0ded73148b97b1b6f04b66596eb8f8211e1540b8bc30b2a5778"
+    },
+    {
+      "title": "Divi Ajax Filter Fix Needs Plugin-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/divi-ajax-filter-fix-needs-plugin-level-proof/",
+      "publishedAt": "2026-09-04T19:14:27.000+04:00",
+      "category": "defense",
+      "sourceHash": "f80d8503c719f56a2e228cdfb6e28c18326e3497bcb2137f83d20c6dd31b0dd6"
+    },
+    {
+      "title": "FreeIPMI Fixes Need Management-Path Proof",
+      "canonicalUrl": "https://shadowcontext.com/freeipmi-fixes-need-management-path-proof/",
+      "publishedAt": "2026-09-04T20:13:34.000+04:00",
+      "category": "defense",
+      "sourceHash": "e133ca03ba90e1e93a8f55ed6199c35462c749db8442107b865bfd319f2c3ff8"
+    },
+    {
+      "title": "SonicWall NSM Fix Needs Administrative Boundary Proof",
+      "canonicalUrl": "https://shadowcontext.com/sonicwall-nsm-fix-needs-admin-boundary-proof/",
+      "publishedAt": "2026-09-04T21:12:48.000+04:00",
+      "category": "defense",
+      "sourceHash": "6de4a87ce45a33839b686cf9ca551e0e85332b3b54d9642bea17efeb11f6a887"
+    },
+    {
+      "title": "Plesk Path Fix Needs Micro-Update Proof",
+      "canonicalUrl": "https://shadowcontext.com/plesk-path-fix-needs-micro-update-proof/",
+      "publishedAt": "2026-09-04T22:12:43.000+04:00",
+      "category": "defense",
+      "sourceHash": "b087232badf50a030a933fa3227704161f0f737e00c2ee0252616e3d85eaa694"
+    },
+    {
+      "title": "RouterOS Security Update Needs Post-Upgrade Proof",
+      "canonicalUrl": "https://shadowcontext.com/mikrotik-routeros-fix-needs-post-update-proof/",
+      "publishedAt": "2026-09-04T23:09:38.000+04:00",
+      "category": "defense",
+      "sourceHash": "973764e27d608f871fcc1e96b33116f3b07856e697fef508a5d7153ffb9ec383"
+    }
+  ],
+  "caption": "Review today's independent security updates and boundary verifications.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-09-04/9855dffb4fb328a3/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-09-04/9855dffb4fb328a3/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-09-04/9855dffb4fb328a3/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-09-04/9855dffb4fb328a3/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}
