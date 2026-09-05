@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Cloud kernel update reconnecting modular services</title>
+  <desc id="desc">An abstract cloud server core reconnects modular components across a luminous kernel update boundary.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071525"/>
+      <stop offset="0.52" stop-color="#12354b"/>
+      <stop offset="1" stop-color="#0a1a2d"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="55%">
+      <stop offset="0" stop-color="#68e3cc" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#68e3cc" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#83f0dc"/>
+      <stop offset="1" stop-color="#4e8fea"/>
+    </linearGradient>
+    <linearGradient id="module" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#254d6b"/>
+      <stop offset="1" stop-color="#122c48"/>
+    </linearGradient>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#020713" flood-opacity="0.62"/>
+    </filter>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="13"/>
+    </filter>
+    <pattern id="grain" width="64" height="64" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="8" r="1.5" fill="#b9e9f0" opacity="0.08"/>
+      <circle cx="42" cy="35" r="1" fill="#b9e9f0" opacity="0.05"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grain)"/>
+  <ellipse cx="800" cy="455" rx="600" ry="370" fill="url(#halo)"/>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M260 264C365 156 515 108 680 126" stroke="#5186a5" stroke-width="7" opacity="0.28"/>
+    <path d="M1340 264C1235 156 1085 108 920 126" stroke="#5186a5" stroke-width="7" opacity="0.28"/>
+    <path d="M260 636C365 744 515 792 680 774" stroke="#5186a5" stroke-width="7" opacity="0.28"/>
+    <path d="M1340 636C1235 744 1085 792 920 774" stroke="#5186a5" stroke-width="7" opacity="0.28"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="588" y="228" width="424" height="444" rx="86" fill="#0b2037" stroke="#5599b5" stroke-width="4"/>
+    <rect x="630" y="270" width="340" height="360" rx="62" fill="#102e49" stroke="#75d6d5" stroke-width="3" opacity="0.96"/>
+    <path d="M654 398H946" stroke="#6be2d1" stroke-width="16" opacity="0.16" filter="url(#glow)"/>
+    <path d="M654 398H946" stroke="url(#core)" stroke-width="8"/>
+    <path d="M654 505H946" stroke="#4b8fbc" stroke-width="4" opacity="0.55"/>
+    <circle cx="800" cy="450" r="90" fill="url(#core)" opacity="0.18" filter="url(#glow)"/>
+    <circle cx="800" cy="450" r="72" fill="#0d2942" stroke="url(#core)" stroke-width="12"/>
+    <circle cx="800" cy="450" r="25" fill="#b8fff1"/>
+  </g>
+
+  <g fill="url(#module)" stroke="#65b2ca" stroke-width="4" filter="url(#shadow)">
+    <rect x="250" y="230" width="230" height="150" rx="34"/>
+    <rect x="1120" y="230" width="230" height="150" rx="34"/>
+    <rect x="250" y="520" width="230" height="150" rx="34"/>
+    <rect x="1120" y="520" width="230" height="150" rx="34"/>
+  </g>
+  <g fill="none" stroke-linecap="round">
+    <path d="M480 305H555Q588 305 588 338" stroke="#79d9d1" stroke-width="10"/>
+    <path d="M1120 305H1045Q1012 305 1012 338" stroke="#79d9d1" stroke-width="10"/>
+    <path d="M480 595H555Q588 595 588 562" stroke="#5b9fe0" stroke-width="10"/>
+    <path d="M1120 595H1045Q1012 595 1012 562" stroke="#5b9fe0" stroke-width="10"/>
+  </g>
+  <g fill="#b5fff1">
+    <circle cx="520" cy="305" r="10"/>
+    <circle cx="1080" cy="305" r="10"/>
+  </g>
+  <g fill="#80bfff">
+    <circle cx="520" cy="595" r="10"/>
+    <circle cx="1080" cy="595" r="10"/>
+  </g>
+
+  <g opacity="0.68" fill="none" stroke="#8ddedb" stroke-width="8" stroke-linecap="round">
+    <path d="M302 278H425"/>
+    <path d="M1175 278H1298"/>
+    <path d="M302 568H425"/>
+    <path d="M1175 568H1298"/>
+  </g>
+  <g opacity="0.34" fill="none" stroke="#8ddedb" stroke-width="5" stroke-linecap="round">
+    <path d="M330 326H397"/>
+    <path d="M1203 326H1270"/>
+    <path d="M330 616H397"/>
+    <path d="M1203 616H1270"/>
+  </g>
+</svg>
