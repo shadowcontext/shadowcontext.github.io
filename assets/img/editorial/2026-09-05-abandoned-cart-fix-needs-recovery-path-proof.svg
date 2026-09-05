@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Protected account-recovery email routes</title>
+  <desc id="desc">Abstract editorial artwork showing luminous email paths converging on a shielded recovery gateway, with a blocked diversion route.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08152c"/>
+      <stop offset="0.52" stop-color="#102d4d"/>
+      <stop offset="1" stop-color="#071923"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="50%" cy="48%" r="52%">
+      <stop offset="0" stop-color="#39d9c5" stop-opacity="0.32"/>
+      <stop offset="0.6" stop-color="#1893b8" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#08152c" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="route" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#62a9ff" stop-opacity="0.22"/>
+      <stop offset="0.55" stop-color="#54e3ca"/>
+      <stop offset="1" stop-color="#d9fff4"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#baffef"/>
+      <stop offset="0.38" stop-color="#49d8c5"/>
+      <stop offset="1" stop-color="#168aac"/>
+    </linearGradient>
+    <linearGradient id="warning" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffb45a"/>
+      <stop offset="1" stop-color="#ef5f71"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#8fc7dd" stroke-opacity="0.055" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <ellipse cx="890" cy="445" rx="600" ry="405" fill="url(#aura)"/>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M120 250 C390 250 450 405 700 405" stroke="url(#route)" stroke-width="12"/>
+    <path d="M95 450 C350 450 455 450 700 450" stroke="url(#route)" stroke-width="12"/>
+    <path d="M150 665 C390 665 470 505 700 495" stroke="url(#route)" stroke-width="12"/>
+    <path d="M1050 450 C1240 450 1315 370 1500 370" stroke="url(#route)" stroke-width="12"/>
+    <circle cx="334" cy="307" r="7" fill="#79e7d5" filter="url(#glow)"/>
+    <circle cx="475" cy="450" r="7" fill="#79e7d5" filter="url(#glow)"/>
+    <circle cx="420" cy="590" r="7" fill="#79e7d5" filter="url(#glow)"/>
+    <circle cx="1260" cy="414" r="7" fill="#b7fff0" filter="url(#glow)"/>
+  </g>
+
+  <g stroke="#a7d9e9" stroke-width="5" fill="#102e4a">
+    <g transform="translate(115 195)">
+      <rect width="180" height="118" rx="20"/>
+      <path d="M12 20L90 75l78-55" fill="none"/>
+    </g>
+    <g transform="translate(90 390)">
+      <rect width="180" height="118" rx="20"/>
+      <path d="M12 20L90 75l78-55" fill="none"/>
+    </g>
+    <g transform="translate(145 605)">
+      <rect width="180" height="118" rx="20"/>
+      <path d="M12 20L90 75l78-55" fill="none"/>
+    </g>
+  </g>
+
+  <g transform="translate(690 225)">
+    <path d="M190 0C268 51 336 67 380 73v164c0 139-74 238-190 293C74 475 0 376 0 237V73C44 67 112 51 190 0Z" fill="#0d253d" stroke="#70ead7" stroke-width="8"/>
+    <path d="M190 38c61 38 111 53 150 62v137c0 108-52 186-150 237C92 423 40 345 40 237V100c39-9 89-24 150-62Z" fill="url(#shield)" opacity="0.94"/>
+    <circle cx="190" cy="225" r="82" fill="#0a2138" stroke="#d7fff7" stroke-width="7"/>
+    <path d="M155 221v-28c0-48 70-48 70 0v28" fill="none" stroke="#d7fff7" stroke-width="18" stroke-linecap="round"/>
+    <rect x="137" y="214" width="106" height="91" rx="18" fill="#d7fff7"/>
+    <circle cx="190" cy="254" r="12" fill="#168eaa"/>
+    <path d="M190 265v17" stroke="#168eaa" stroke-width="11" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(1160 590)">
+    <path d="M-30-60C-120-95-184-98-252-86" fill="none" stroke="url(#warning)" stroke-width="11" stroke-linecap="round" stroke-dasharray="24 24"/>
+    <circle cx="0" cy="0" r="92" fill="#311b2b" stroke="url(#warning)" stroke-width="9"/>
+    <path d="M-42-42L42 42M42-42L-42 42" stroke="#ff9a68" stroke-width="18" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(1360 308)" fill="#153955" stroke="#b7fff0" stroke-width="5">
+    <rect width="164" height="108" rx="18"/>
+    <path d="M12 18l70 51 70-51" fill="none"/>
+  </g>
+
+  <g fill="#a5eada">
+    <circle cx="635" cy="150" r="4"/><circle cx="1190" cy="182" r="5"/><circle cx="1324" cy="700" r="4"/>
+    <circle cx="445" cy="760" r="3"/><circle cx="1460" cy="180" r="3"/><circle cx="337" cy="120" r="4"/>
+  </g>
+</svg>
