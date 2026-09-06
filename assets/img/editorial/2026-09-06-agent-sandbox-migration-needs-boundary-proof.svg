@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Agent workload protected by a microVM chamber</title>
+  <desc id="desc">An abstract cobalt agent core floats inside a faceted cyan microVM chamber, while two older isolation paths recede into a dark violet background.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="0.52" stop-color="#111b3a"/>
+      <stop offset="1" stop-color="#2a1642"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="58%" cy="48%" r="52%">
+      <stop offset="0" stop-color="#55e9e2" stop-opacity="0.28"/>
+      <stop offset="0.55" stop-color="#4d77ec" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#08111f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8ff7ed" stop-opacity="0.34"/>
+      <stop offset="0.52" stop-color="#4aa9e9" stop-opacity="0.13"/>
+      <stop offset="1" stop-color="#8b6cff" stop-opacity="0.25"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a3fff3"/>
+      <stop offset="0.48" stop-color="#52cfe3"/>
+      <stop offset="1" stop-color="#8a73ff"/>
+    </linearGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#67f0e2"/>
+      <stop offset="0.46" stop-color="#3d8ee7"/>
+      <stop offset="1" stop-color="#7954d8"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="mesh" width="72" height="72" patternUnits="userSpaceOnUse">
+      <path d="M72 0H0V72" fill="none" stroke="#9fc1dc" stroke-opacity="0.055"/>
+      <circle cx="0" cy="0" r="2" fill="#9fc1dc" fill-opacity="0.11"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#mesh)"/>
+  <ellipse cx="930" cy="445" rx="590" ry="390" fill="url(#aura)"/>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M120 250C300 250 364 310 470 365" stroke="#9e6fd0" stroke-width="22" stroke-opacity="0.18"/>
+    <path d="M105 650C292 650 352 585 470 525" stroke="#c27bbd" stroke-width="22" stroke-opacity="0.14"/>
+    <path d="M132 250C302 250 365 308 468 361" stroke="#d1a2ea" stroke-width="3" stroke-opacity="0.25" stroke-dasharray="12 24"/>
+    <path d="M118 650C295 650 355 584 468 529" stroke="#efabd9" stroke-width="3" stroke-opacity="0.2" stroke-dasharray="12 24"/>
+  </g>
+  <g fill="#4c315f" stroke="#bd88dc" stroke-opacity="0.32" stroke-width="4">
+    <circle cx="120" cy="250" r="28"/><circle cx="105" cy="650" r="28"/>
+  </g>
+
+  <g filter="url(#glow)">
+    <path d="M800 118L1168 258L1260 516L1065 742L730 772L495 566L546 286Z" fill="url(#glass)" stroke="url(#edge)" stroke-width="10"/>
+  </g>
+  <g fill="none" stroke="#a9fff4" stroke-opacity="0.24" stroke-width="3">
+    <path d="M800 118L825 284L546 286L710 430L495 566"/>
+    <path d="M1168 258L1015 335L1260 516L963 524L1065 742"/>
+    <path d="M730 772L710 430L963 524L800 118"/>
+    <path d="M546 286L1015 335L1168 258"/>
+    <path d="M495 566L963 524L1260 516"/>
+  </g>
+
+  <ellipse cx="865" cy="487" rx="238" ry="82" fill="#061422" fill-opacity="0.68" stroke="#72dfe5" stroke-opacity="0.35" stroke-width="4"/>
+  <g filter="url(#glow)">
+    <path d="M865 303L1018 390V564L865 651L712 564V390Z" fill="url(#core)" stroke="#c7fff8" stroke-width="7"/>
+    <path d="M712 390L865 480L1018 390M865 480V651" fill="none" stroke="#e2fffb" stroke-opacity="0.58" stroke-width="5"/>
+    <circle cx="865" cy="480" r="35" fill="#09172b" stroke="#8ef7ec" stroke-width="8"/>
+    <circle cx="865" cy="480" r="9" fill="#f4fffd"/>
+  </g>
+
+  <g fill="#8af5ea">
+    <circle cx="546" cy="286" r="8"/><circle cx="1168" cy="258" r="8"/><circle cx="1260" cy="516" r="8"/>
+    <circle cx="1065" cy="742" r="8"/><circle cx="730" cy="772" r="8"/><circle cx="495" cy="566" r="8"/>
+  </g>
+  <g fill="#d7bcff" fill-opacity="0.55">
+    <circle cx="1375" cy="188" r="5"/><circle cx="1430" cy="315" r="8"/><circle cx="1340" cy="700" r="6"/>
+    <circle cx="312" cy="136" r="6"/><circle cx="260" cy="758" r="5"/>
+  </g>
+</svg>
