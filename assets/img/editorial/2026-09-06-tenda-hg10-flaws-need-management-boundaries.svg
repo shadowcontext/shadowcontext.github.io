@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Protected optical gateway management core</title>
+  <desc id="desc">An abstract fiber gateway sits inside layered blue security arcs while two orange request paths stop at the outer boundary.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071426"/>
+      <stop offset="0.55" stop-color="#0b2742"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="49%" r="48%">
+      <stop offset="0" stop-color="#2bd2ff" stop-opacity="0.22"/>
+      <stop offset="0.6" stop-color="#1787bb" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#071426" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="device" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dff8ff"/>
+      <stop offset="0.5" stop-color="#7dd7ec"/>
+      <stop offset="1" stop-color="#2783a5"/>
+    </linearGradient>
+    <linearGradient id="signal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff7a3d"/>
+      <stop offset="1" stop-color="#ffc15c"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#6dc8e8" stroke-opacity="0.055" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <ellipse cx="800" cy="450" rx="660" ry="420" fill="url(#halo)"/>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M405 692C252 527 279 284 477 167" stroke="#174f72" stroke-width="34" opacity="0.42"/>
+    <path d="M1195 692c153-165 126-408-72-525" stroke="#174f72" stroke-width="34" opacity="0.42"/>
+    <path d="M493 645C382 516 404 329 548 235" stroke="#2598c2" stroke-width="22" opacity="0.7"/>
+    <path d="M1107 645c111-129 89-316-55-410" stroke="#2598c2" stroke-width="22" opacity="0.7"/>
+    <path d="M574 591c-68-89-51-215 36-278" stroke="#58d5ec" stroke-width="13" opacity="0.9" filter="url(#glow)"/>
+    <path d="M1026 591c68-89 51-215-36-278" stroke="#58d5ec" stroke-width="13" opacity="0.9" filter="url(#glow)"/>
+  </g>
+
+  <g opacity="0.95">
+    <path d="M95 316H355l118 73" fill="none" stroke="url(#signal)" stroke-width="11" stroke-linecap="round"/>
+    <path d="M1505 584h-260l-118-73" fill="none" stroke="url(#signal)" stroke-width="11" stroke-linecap="round"/>
+    <circle cx="95" cy="316" r="13" fill="#ff8b46"/>
+    <circle cx="1505" cy="584" r="13" fill="#ffb04f"/>
+    <path d="M468 365l38 24-38 24z" fill="#ff9b49" filter="url(#glow)"/>
+    <path d="M1132 487l-38 24 38 24z" fill="#ffb451" filter="url(#glow)"/>
+  </g>
+
+  <g transform="translate(615 286)">
+    <ellipse cx="185" cy="343" rx="250" ry="55" fill="#020914" opacity="0.62"/>
+    <path d="M48 68Q48 30 86 30h198q38 0 38 38v255H48z" fill="url(#device)" stroke="#c9f7ff" stroke-width="4"/>
+    <path d="M73 91h224v199H73z" fill="#09253a" stroke="#77daee" stroke-width="3"/>
+    <path d="M95 119h180M95 151h180M95 183h180" stroke="#236986" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="108" cy="246" r="10" fill="#54f0bf" filter="url(#glow)"/>
+    <circle cx="144" cy="246" r="10" fill="#54f0bf"/>
+    <circle cx="180" cy="246" r="10" fill="#173f55"/>
+    <circle cx="216" cy="246" r="10" fill="#173f55"/>
+    <path d="M116 30V-8M254 30V-8" stroke="#9ceafb" stroke-width="9" stroke-linecap="round"/>
+    <path d="M87 323v42M283 323v42" stroke="#398cab" stroke-width="18" stroke-linecap="round"/>
+  </g>
+
+  <g fill="#76dff2">
+    <circle cx="420" cy="184" r="5" opacity="0.7"/>
+    <circle cx="1180" cy="716" r="5" opacity="0.7"/>
+    <circle cx="1288" cy="220" r="3" opacity="0.45"/>
+    <circle cx="310" cy="706" r="3" opacity="0.45"/>
+  </g>
+</svg>
