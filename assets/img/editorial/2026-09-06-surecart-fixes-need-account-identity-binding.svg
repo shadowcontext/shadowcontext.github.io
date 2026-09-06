@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Account identity verification across an abstract digital storefront</title>
+  <desc id="desc">Layered storefront panels converge through aligned identity rings into a luminous shield, representing exact account binding and verified access control.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071725"/>
+      <stop offset="0.55" stop-color="#102a3d"/>
+      <stop offset="1" stop-color="#08131f"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8ce7e0" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#267d94" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b8fff2"/>
+      <stop offset="0.48" stop-color="#42d6ca"/>
+      <stop offset="1" stop-color="#118a9c"/>
+    </linearGradient>
+    <radialGradient id="halo">
+      <stop offset="0" stop-color="#56e5d6" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#56e5d6" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="800" cy="446" r="330" fill="url(#halo)" filter="url(#soft)"/>
+  <g fill="none" stroke="#71c9ce" stroke-opacity="0.13">
+    <path d="M0 720 Q300 570 600 710 T1200 690 T1600 700"/>
+    <path d="M0 760 Q280 620 590 755 T1190 735 T1600 748"/>
+    <path d="M120 120 L410 365 M1480 120 L1190 365 M160 820 L475 570 M1440 820 L1125 570"/>
+  </g>
+  <g transform="translate(190 225)">
+    <path d="M0 92 L90 0 H340 L430 92 V420 H0Z" fill="url(#glass)" stroke="#62bfc8" stroke-width="3"/>
+    <path d="M44 92 H386" stroke="#93eee5" stroke-width="18" stroke-linecap="round" opacity="0.55"/>
+    <path d="M70 154 H360 V382 H70Z" fill="#091b29" stroke="#397d91" stroke-width="3"/>
+    <circle cx="215" cy="247" r="62" fill="none" stroke="#59d7cf" stroke-width="8"/>
+    <circle cx="215" cy="229" r="19" fill="#9bf4e8"/>
+    <path d="M170 286 Q215 247 260 286" fill="none" stroke="#9bf4e8" stroke-width="14" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(980 225)">
+    <path d="M0 92 L90 0 H340 L430 92 V420 H0Z" fill="url(#glass)" stroke="#62bfc8" stroke-width="3"/>
+    <path d="M44 92 H386" stroke="#93eee5" stroke-width="18" stroke-linecap="round" opacity="0.55"/>
+    <path d="M70 154 H360 V382 H70Z" fill="#091b29" stroke="#397d91" stroke-width="3"/>
+    <circle cx="215" cy="247" r="62" fill="none" stroke="#59d7cf" stroke-width="8"/>
+    <circle cx="215" cy="229" r="19" fill="#9bf4e8"/>
+    <path d="M170 286 Q215 247 260 286" fill="none" stroke="#9bf4e8" stroke-width="14" stroke-linecap="round"/>
+  </g>
+  <g fill="none" stroke="#68e5da" stroke-width="5" stroke-linecap="round" opacity="0.72">
+    <path d="M620 472 C678 472 690 430 730 430"/>
+    <path d="M980 472 C922 472 910 430 870 430"/>
+    <path d="M620 520 C682 520 694 558 738 558"/>
+    <path d="M980 520 C918 520 906 558 862 558"/>
+  </g>
+  <g fill="#b9fff2" filter="url(#glow)">
+    <circle cx="691" cy="449" r="8"/><circle cx="909" cy="449" r="8"/>
+    <circle cx="696" cy="540" r="8"/><circle cx="904" cy="540" r="8"/>
+  </g>
+  <g transform="translate(800 472)">
+    <circle r="156" fill="#081c2a" stroke="#246f81" stroke-width="3"/>
+    <circle r="123" fill="none" stroke="#79eee2" stroke-width="7" stroke-dasharray="44 15"/>
+    <circle r="92" fill="none" stroke="#d2fff6" stroke-opacity="0.7" stroke-width="3"/>
+    <path d="M0 -70 C30 -48 62 -43 70 -40 V8 C70 58 38 93 0 111 C-38 93 -70 58 -70 8 V-40 C-62 -43 -30 -48 0 -70Z" fill="url(#shield)" filter="url(#glow)"/>
+    <path d="M-31 10 L-8 34 L37 -19" fill="none" stroke="#062332" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g fill="#76dcd6" opacity="0.42">
+    <circle cx="120" cy="174" r="6"/><circle cx="1480" cy="174" r="6"/>
+    <circle cx="98" cy="708" r="4"/><circle cx="1502" cy="708" r="4"/>
+    <circle cx="800" cy="120" r="5"/><circle cx="800" cy="782" r="5"/>
+  </g>
+  <rect x="56" y="56" width="1488" height="788" rx="30" fill="none" stroke="#8ce7e0" stroke-opacity="0.16" stroke-width="2"/>
+</svg>
