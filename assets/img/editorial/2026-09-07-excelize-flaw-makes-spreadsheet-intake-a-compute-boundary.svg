@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Contained spreadsheet computation</title>
+  <desc id="desc">Abstract spreadsheet cells enter an isolated processing chamber while an amber computation spiral remains contained behind a cyan boundary.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071522"/>
+      <stop offset="0.55" stop-color="#10243a"/>
+      <stop offset="1" stop-color="#071019"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#43e5dc" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#43e5dc" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sheet" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d7fbf6" stop-opacity="0.94"/>
+      <stop offset="1" stop-color="#75bfc6" stop-opacity="0.38"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd276"/>
+      <stop offset="1" stop-color="#ef7f4d"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="26"/>
+    </filter>
+    <clipPath id="chamberClip">
+      <circle cx="1050" cy="450" r="272"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <ellipse cx="1050" cy="450" rx="470" ry="410" fill="url(#halo)"/>
+  <path d="M0 690 C310 610 520 770 805 676 C1065 590 1280 673 1600 548 L1600 900 L0 900Z" fill="#0c1e30"/>
+  <path d="M0 728 C330 642 560 806 830 708 C1090 616 1305 710 1600 584" fill="none" stroke="#2b6074" stroke-opacity="0.38" stroke-width="2"/>
+
+  <g transform="translate(145 220) rotate(-7 300 230)">
+    <rect x="0" y="0" width="570" height="460" rx="24" fill="#0d2638" stroke="#6bd7d3" stroke-opacity="0.55" stroke-width="3"/>
+    <rect x="28" y="30" width="514" height="400" rx="10" fill="url(#sheet)" opacity="0.76"/>
+    <g fill="none" stroke="#0e4b5b" stroke-width="3" opacity="0.76">
+      <path d="M28 108H542M28 186H542M28 264H542M28 342H542"/>
+      <path d="M131 30V430M234 30V430M337 30V430M440 30V430"/>
+    </g>
+    <g fill="#42ddd2" opacity="0.68">
+      <rect x="142" y="121" width="80" height="52" rx="6"/>
+      <rect x="245" y="199" width="80" height="52" rx="6" opacity="0.48"/>
+      <rect x="348" y="277" width="80" height="52" rx="6" opacity="0.32"/>
+    </g>
+    <path d="M45 55H115" stroke="#e4fffb" stroke-width="10" stroke-linecap="round" opacity="0.75"/>
+  </g>
+
+  <g opacity="0.78">
+    <rect x="686" y="352" width="64" height="64" rx="10" fill="#8ceee5" transform="rotate(12 718 384)"/>
+    <rect x="758" y="418" width="44" height="44" rx="8" fill="#5fcac8" transform="rotate(-9 780 440)"/>
+    <rect x="704" y="493" width="31" height="31" rx="6" fill="#d5fffa" transform="rotate(18 719 508)"/>
+  </g>
+
+  <circle cx="1050" cy="450" r="300" fill="#081824" fill-opacity="0.92" stroke="#50e4dc" stroke-width="10"/>
+  <circle cx="1050" cy="450" r="274" fill="#0b2233" stroke="#26778a" stroke-width="2"/>
+  <g clip-path="url(#chamberClip)">
+    <circle cx="1050" cy="450" r="210" fill="#ffac5c" opacity="0.08" filter="url(#soft)"/>
+    <path d="M1050 450 C1050 377 1144 367 1178 419 C1225 492 1147 583 1058 570 C945 553 903 422 972 344 C1054 251 1232 286 1293 402" fill="none" stroke="url(#amber)" stroke-width="18" stroke-linecap="round" filter="url(#glow)"/>
+    <path d="M1050 450 C1110 450 1119 520 1078 549 C1011 597 912 541 905 452 C894 325 1031 248 1140 302" fill="none" stroke="#ffcc72" stroke-opacity="0.5" stroke-width="7" stroke-linecap="round"/>
+    <g fill="#ffd47b">
+      <circle cx="1050" cy="450" r="18"/>
+      <circle cx="1178" cy="419" r="10" opacity="0.8"/>
+      <circle cx="1058" cy="570" r="8" opacity="0.65"/>
+    </g>
+  </g>
+
+  <path d="M782 176 C842 126 912 99 987 87" fill="none" stroke="#67ece3" stroke-width="5" stroke-linecap="round" opacity="0.55"/>
+  <path d="M1265 704 C1327 678 1390 628 1434 566" fill="none" stroke="#67ece3" stroke-width="5" stroke-linecap="round" opacity="0.45"/>
+  <g fill="#8ef4eb">
+    <circle cx="988" cy="87" r="7"/>
+    <circle cx="1434" cy="566" r="7"/>
+  </g>
+  <g fill="none" stroke="#3b90a0" stroke-width="2" opacity="0.45">
+    <circle cx="1050" cy="450" r="335" stroke-dasharray="5 17"/>
+    <circle cx="1050" cy="450" r="365" stroke-dasharray="2 24"/>
+  </g>
+</svg>
