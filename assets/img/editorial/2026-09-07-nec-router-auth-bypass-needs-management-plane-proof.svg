@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Router management plane isolated behind layered network boundaries</title>
+  <desc id="desc">Abstract editorial artwork showing an amber network signal stopped outside layered cyan barriers that protect a router control core.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071522"/>
+      <stop offset="0.52" stop-color="#0a2433"/>
+      <stop offset="1" stop-color="#050e19"/>
+    </linearGradient>
+    <radialGradient id="coreAura" cx="62%" cy="49%" r="44%">
+      <stop offset="0" stop-color="#2fe8dc" stop-opacity="0.25"/>
+      <stop offset="0.55" stop-color="#168fa3" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#071522" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="barrier" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9cfff2"/>
+      <stop offset="0.48" stop-color="#2cd6d2"/>
+      <stop offset="1" stop-color="#176b84"/>
+    </linearGradient>
+    <linearGradient id="signal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7e3e2b" stop-opacity="0.2"/>
+      <stop offset="0.5" stop-color="#ffb148"/>
+      <stop offset="1" stop-color="#ffe09b"/>
+    </linearGradient>
+    <linearGradient id="routerFace" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#16394a"/>
+      <stop offset="1" stop-color="#071723"/>
+    </linearGradient>
+    <filter id="wideGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+    <filter id="tightGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <pattern id="grid" width="72" height="72" patternUnits="userSpaceOnUse">
+      <path d="M72 0H0V72" fill="none" stroke="#7bd8dc" stroke-opacity="0.05"/>
+      <circle cx="0" cy="0" r="2" fill="#69d8d2" fill-opacity="0.14"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#coreAura)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+
+  <g fill="none" stroke="#2c7586" stroke-width="2" opacity="0.33">
+    <path d="M0 186C244 139 405 247 637 192S1078 135 1600 202"/>
+    <path d="M0 719C291 773 465 654 734 718S1225 782 1600 680"/>
+    <path d="M178 0C218 211 138 332 208 514S306 746 272 900"/>
+  </g>
+
+  <path d="M70 456H595" stroke="#f29b3d" stroke-opacity="0.18" stroke-width="78" filter="url(#wideGlow)"/>
+  <path d="M70 456H598" stroke="url(#signal)" stroke-width="15" stroke-linecap="round"/>
+  <g fill="#ffbd5d">
+    <circle cx="112" cy="456" r="8"/>
+    <circle cx="230" cy="456" r="5" opacity="0.7"/>
+    <circle cx="349" cy="456" r="7" opacity="0.82"/>
+    <circle cx="476" cy="456" r="5" opacity="0.66"/>
+  </g>
+
+  <path d="M636 176L795 267V633L636 724L477 633V267Z" fill="#0b2633" fill-opacity="0.82" stroke="#27bfc3" stroke-width="7"/>
+  <path d="M636 229L748 294V606L636 671L524 606V294Z" fill="#071923" stroke="url(#barrier)" stroke-width="12"/>
+  <path d="M636 291L694 325V575L636 609L578 575V325Z" fill="#0a2a37" stroke="#7ef9eb" stroke-width="8"/>
+  <circle cx="636" cy="450" r="51" fill="#08202c" stroke="#a5fff3" stroke-width="8"/>
+  <path d="M611 451L629 469L665 430" fill="none" stroke="#74f5e6" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M598 456C623 456 637 442 644 420" fill="none" stroke="#ffcf76" stroke-width="22" stroke-linecap="round" filter="url(#tightGlow)" opacity="0.45"/>
+  <path d="M597 456L546 426V486Z" fill="#ffd379" stroke="#ffedbe" stroke-width="4"/>
+
+  <g transform="translate(890 272)">
+    <path d="M0 66L114 0H390L504 66V290L390 356H114L0 290Z" fill="#081b28" stroke="#2fbfc5" stroke-width="7"/>
+    <path d="M56 87H448V273H56Z" fill="url(#routerFace)" stroke="#73ece3" stroke-width="5"/>
+    <path d="M92 128H412M92 177H412M92 226H412" stroke="#245a69" stroke-width="4"/>
+    <g fill="#66efe1">
+      <circle cx="112" cy="128" r="8"/>
+      <circle cx="147" cy="128" r="8" opacity="0.55"/>
+      <circle cx="182" cy="128" r="8" opacity="0.8"/>
+      <circle cx="112" cy="177" r="8" opacity="0.7"/>
+      <circle cx="147" cy="177" r="8"/>
+      <circle cx="182" cy="177" r="8" opacity="0.45"/>
+    </g>
+    <g fill="#0a1822" stroke="#3e91a0" stroke-width="3">
+      <rect x="260" y="112" width="132" height="30" rx="6"/>
+      <rect x="260" y="162" width="132" height="30" rx="6"/>
+      <rect x="260" y="212" width="132" height="30" rx="6"/>
+    </g>
+    <circle cx="252" cy="178" r="210" fill="none" stroke="#3de0d5" stroke-opacity="0.14" stroke-width="34" filter="url(#wideGlow)"/>
+  </g>
+
+  <path d="M799 450H891" stroke="#57ddd6" stroke-width="9" stroke-linecap="round" opacity="0.7"/>
+  <g fill="#65e9df" opacity="0.8">
+    <circle cx="827" cy="450" r="7"/>
+    <circle cx="863" cy="450" r="5"/>
+  </g>
+
+  <g fill="#4aa3af" opacity="0.42">
+    <circle cx="356" cy="252" r="6"/>
+    <circle cx="407" cy="683" r="5"/>
+    <circle cx="1089" cy="176" r="7"/>
+    <circle cx="1415" cy="689" r="6"/>
+    <circle cx="1318" cy="232" r="4"/>
+  </g>
+</svg>
