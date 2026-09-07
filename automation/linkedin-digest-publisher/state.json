@@ -497,6 +497,22 @@
       "github_run_id": "33951362684",
       "status": "published",
       "last_error": null
+    },
+    "c2bfeca9b47ba400b661b2bcd84982f0afd58fd71fe7bae5b9b13a799ba03c3a": {
+      "title": "Daily Defensive Security Digest: Vulnerabilities, Identity, and Boundaries",
+      "digest_date": "2026-09-06",
+      "digest_hash": "c2bfeca9b47ba400b661b2bcd84982f0afd58fd71fe7bae5b9b13a799ba03c3a",
+      "generated_at": "2026-09-07T09:31:20.490+04:00",
+      "briefing_url": "https://shadowcontext.com/assets/social/linkedin-digest/2026-09-06/c2bfeca9b47ba400/daily-digest.html",
+      "pdf_file": "assets/social/linkedin-digest/2026-09-06/c2bfeca9b47ba400/daily-digest.pdf",
+      "linkedin_caption": "Review today's key independent security updates, vulnerability disclosures, and defensive boundary verifications from ShadowContext.\n\nThis edition brings together 22 ShadowContext briefings from September 6, 2026, with direct source links and operational priorities.\n\nRead the full daily briefing:\nhttps://shadowcontext.com/assets/social/linkedin-digest/2026-09-06/c2bfeca9b47ba400/daily-digest.html\n\n#Cybersecurity #ThreatIntelligence #InfoSec #AISecurity",
+      "linkedin_document_urn": "urn:li:document:D4D10AQHmnhCceBd4xA",
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7502628225198698496",
+      "published_at": "2026-09-07T07:26:01.269Z",
+      "github_run_id": "34095426341",
+      "status": "published",
+      "last_error": null
     }
   }
 }
