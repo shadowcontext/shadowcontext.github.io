@@ -1,0 +1,168 @@
+{
+  "digest_title": "Daily Defensive Security Digest: Vulnerabilities, Identity, and Boundaries",
+  "dek": "A roundup of recent cybersecurity vulnerabilities and fixes emphasizing boundary proof, configuration validation, and precise inventory control across platforms.",
+  "overview": "Today's disclosures cover a wide array of application frameworks, desktop utilities, and plugins. Across all cases, version updates alone are insufficient without verifying runtime builds, active plugin features, and strict network or identity boundaries.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "Ash Unicode Flaw Highlights Storage Boundaries",
+      "summary": "CVE-2026-82752 reveals that grapheme limits in Ash do not guarantee byte or storage boundaries, risking resource exhaustion.",
+      "why_it_matters": "Visual character limits do not match storage costs, requiring explicit layered input ceilings.",
+      "topic": "Input Validation"
+    },
+    {
+      "source_id": "S02",
+      "headline": "PCRE2 10.48 Fixes Require Embedded Library Verification",
+      "summary": "PCRE2 10.48 addresses memory safety flaws and parsing errors, requiring defenders to verify loaded library paths.",
+      "why_it_matters": "Bundled or statically linked libraries can remain vulnerable despite safe system-level package versions.",
+      "topic": "Memory Safety"
+    },
+    {
+      "source_id": "S03",
+      "headline": "Cua Control Server Requires Network Boundary Proof",
+      "summary": "CVE-2026-86121 exposes missing authentication and broad listening defaults in Cua computer-server before version 0.3.42.",
+      "why_it_matters": "Privileged control planes must bind to local addresses and require authentication across networks.",
+      "topic": "Access Control"
+    },
+    {
+      "source_id": "S04",
+      "headline": "WeeChat 4.10.1 Fixes Demand Plugin Boundary Proof",
+      "summary": "WeeChat 4.10.1 addresses six flaws in Xfer and Relay plugins, requiring active runtime configuration reviews.",
+      "why_it_matters": "Modular clients create modular exposure where installed package versions do not determine active risk.",
+      "topic": "Plugin Security"
+    },
+    {
+      "source_id": "S05",
+      "headline": "AVideo File Write Flaw Requires Path Boundaries",
+      "summary": "CVE-2026-86189 exposes an unauthenticated file-write vector in AVideo's FFmpeg notification endpoint through version 29.0.",
+      "why_it_matters": "Decrypted tokens require strict purpose, expiry, and destination validation to prevent arbitrary writes.",
+      "topic": "Path Control"
+    },
+    {
+      "source_id": "S06",
+      "headline": "MStore API Fix Demands JWT Signature Proof",
+      "summary": "CVE-2026-13447 in MStore API shows that decoding claims does not replace cryptographic signature verification.",
+      "why_it_matters": "Federated identity handoffs require strict cryptographic validation rather than trusting header claims.",
+      "topic": "Identity Verification"
+    },
+    {
+      "source_id": "S07",
+      "headline": "Tenda CP3 Flaws Require Camera Network Boundaries",
+      "summary": "CVE-2026-86152 and CVE-2026-86153 highlight command injection and privilege issues in Tenda CP3 firmware 27.5.57.101.",
+      "why_it_matters": "Connected cameras are managed devices requiring strict network segmentation and verified firmware provenance.",
+      "topic": "IoT Security"
+    },
+    {
+      "source_id": "S08",
+      "headline": "Bilibili Desktop Shows TLS Alone Is Insufficient",
+      "summary": "CVE-2026-86185 combines disabled TLS checks with unauthenticated remote configuration execution in Bilibili Desktop.",
+      "why_it_matters": "Transport encryption fails to secure endpoints if content trust and native bridge controls are missing.",
+      "topic": "Desktop Security"
+    },
+    {
+      "source_id": "S09",
+      "headline": "Tenda HG10 Flaws Demand Management Plane Boundaries",
+      "summary": "Two buffer overflows affect Tenda HG10 firmware 300001138, necessitating strict management interface isolation.",
+      "why_it_matters": "Edge device security depends on demonstrable management reachability controls and verified builds.",
+      "topic": "Edge Device Security"
+    },
+    {
+      "source_id": "S10",
+      "headline": "Util-linux Fix Requires Descriptor Lifetime Proof",
+      "summary": "A util-linux follow-up for CVE-2026-78408 requires verifying complete cgroup file descriptor cleanup and flags.",
+      "why_it_matters": "Privileged file descriptors can retain security authority across execution if lifetimes are unmanaged.",
+      "topic": "Linux Utilities"
+    },
+    {
+      "source_id": "S11",
+      "headline": "Lara Dashboard Fix Needs Environment Boundary Proof",
+      "summary": "CVE-2026-86184 exposes an environment-gated authentication bypass in Lara Dashboard screenshot-login utilities.",
+      "why_it_matters": "Deployment environment labels must never substitute for strict, independent application access controls.",
+      "topic": "Authentication Bypass"
+    },
+    {
+      "source_id": "S12",
+      "headline": "Mail Mint Form Fix Requires Strict Object Boundaries",
+      "summary": "CVE-2026-10196 exposes PHP object injection via form submission logic in Mail Mint through version 1.31.0.",
+      "why_it_matters": "Browser input must remain inert data and never trigger arbitrary type instantiation or deserialization.",
+      "topic": "Deserialization Safety"
+    },
+    {
+      "source_id": "S13",
+      "headline": "Coolify OAuth Flaw Demands Proper Identity Binding",
+      "summary": "CVE-2026-86117 in Coolify allows improper OAuth account matching based solely on email address strings.",
+      "why_it_matters": "Federated claims must bind explicitly to local accounts instead of relying on email address matches.",
+      "topic": "OAuth Security"
+    },
+    {
+      "source_id": "S14",
+      "headline": "Agent Sandbox Migration Requires Boundary Proof",
+      "summary": "GitHub's migration of Agentic Workflows to Cloud Hypervisor requires verifying runner virtualization support.",
+      "why_it_matters": "Workflow isolation must be proven at execution time rather than assumed from configuration names.",
+      "topic": "Agent Sandboxing"
+    },
+    {
+      "source_id": "S15",
+      "headline": "Libpcap RPCAP Fix Needs Feature Level Proof",
+      "summary": "CVE-2026-18238 addresses a buffer over-read in libpcap's remote packet-capture client prior to version 1.10.7.",
+      "why_it_matters": "Vulnerability scope is limited by build configuration, requiring feature verification before escalation.",
+      "topic": "Network Capture"
+    },
+    {
+      "source_id": "S16",
+      "headline": "Grav Reset Link Fix Makes Canonical Origin Essential",
+      "summary": "CVE-2026-86196 fixes password reset links derived from untrusted request hosts in Grav API Plugin 1.0.20.",
+      "why_it_matters": "Security links must rely on explicitly configured canonical origins rather than dynamic request headers.",
+      "topic": "Origin Validation"
+    },
+    {
+      "source_id": "S17",
+      "headline": "N-central Hotfix Requires Server Level Proof",
+      "summary": "N-central CVE-2026-86218 requires updating on-premises servers to build 2026.3.1.14 to fix code injection.",
+      "why_it_matters": "Management control planes require explicit server-level build verification to ensure vulnerability closure.",
+      "topic": "Management Platforms"
+    },
+    {
+      "source_id": "S18",
+      "headline": "MemberDash Fix Needs User Object Boundary Proof",
+      "summary": "CVE-2026-16310 allows unauthenticated password changes in MemberDash through version 1.8.5 due to authorization gaps.",
+      "why_it_matters": "Registration and profile update flows must enforce server-side object ownership for all requests.",
+      "topic": "Object Authorization"
+    },
+    {
+      "source_id": "S19",
+      "headline": "SureCart Fixes Demand Account Identity Binding",
+      "summary": "SureCart disclosures CVE-2026-75793 and CVE-2026-18480 address unauthorized account creation and modification.",
+      "why_it_matters": "Store checkout logic must strictly honor site configuration and map customer roles accurately.",
+      "topic": "Identity Binding"
+    },
+    {
+      "source_id": "S20",
+      "headline": "B2BKing Registration Fix Demands Role Binding",
+      "summary": "CVE-2026-85038 exposes missing role validation during registration flows in WooCommerce B2BPlugin versions prior to 5.2.40.",
+      "why_it_matters": "Servers must independently validate and authorize requested roles rather than trusting client inputs.",
+      "topic": "Role Enforcement"
+    },
+    {
+      "source_id": "S21",
+      "headline": "Kirki Comment Fix Makes Rendering Context Crucial",
+      "summary": "CVE-2026-84219 addresses stored cross-site scripting via unescaped entity decoding in Kirki versions 6.2.1 through 6.2.5.",
+      "why_it_matters": "Content rendering must apply context-appropriate output encoding to prevent delayed script execution.",
+      "topic": "Rendering Safety"
+    },
+    {
+      "source_id": "S22",
+      "headline": "HivePress Token Fix Needs Audience Binding",
+      "summary": "CVE-2026-18056 highlights missing application audience checks in HivePress Authentication Facebook login flows.",
+      "why_it_matters": "Valid federated tokens must explicitly verify application audience bindings before local account mapping.",
+      "topic": "Token Validation"
+    }
+  ],
+  "operating_view": "Defenders must move beyond version dashboards by auditing active plugin features, runtime library binaries, and network listening boundaries across every deployment.",
+  "watch_items": [
+    "Verify build versions and active runtime code rather than relying solely on package manifests.",
+    "Enforce strict server-side authorization and audience checks across all identity and token handoffs.",
+    "Isolate management interfaces and network-edge services from untrusted public access."
+  ],
+  "caption_intro": "Review today's key independent security updates, vulnerability disclosures, and defensive boundary verifications from ShadowContext."
+}

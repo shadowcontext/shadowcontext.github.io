@@ -1,0 +1,888 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Daily Defensive Security Digest: Vulnerabilities, Identity, and Boundaries | ShadowContext</title>
+    <style>
+      :root {
+        --paper: #05080d;
+        --panel: #0d1319;
+        --panel-soft: #091017;
+        --ink: #f1f7fa;
+        --ink-2: #c4d1d8;
+        --muted: #8496a1;
+        --line: #1d2b34;
+        --cyan: #35e6d1;
+        --violet: #8b7dff;
+        --sans: "Space Grotesk", Inter, Arial, sans-serif;
+        --mono: "DM Mono", Consolas, monospace;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: var(--sans);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        font-size: 10.5pt;
+        line-height: 1.55;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        position: relative;
+        width: 210mm;
+        min-height: 297mm;
+        padding: 18mm;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 83% 18%, rgba(139, 125, 255, 0.1), transparent 28%),
+          linear-gradient(145deg, #05080d 0%, #081017 62%, #0c101c 100%);
+      }
+
+      .page::before {
+        content: "";
+        position: absolute;
+        inset: 8mm;
+        pointer-events: none;
+        border: 0.25mm solid var(--line);
+      }
+
+      .cover {
+        display: flex;
+        flex-direction: column;
+        page-break-after: always;
+      }
+
+      .brand-row,
+      .section-head,
+      .document-footer {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 4mm;
+        font-size: 20pt;
+        font-weight: 750;
+        letter-spacing: -0.04em;
+      }
+
+      .brand em {
+        color: var(--cyan);
+        font-style: normal;
+      }
+
+      .brand-mark {
+        position: relative;
+        display: block;
+        width: 12mm;
+        height: 12mm;
+        transform: rotate(30deg);
+        border: 1mm solid var(--cyan);
+        border-radius: 1.2mm;
+      }
+
+      .brand-mark::before {
+        content: "";
+        position: absolute;
+        inset: 2.2mm;
+        border: 0.8mm solid var(--violet);
+        border-radius: 0.9mm;
+      }
+
+      .brand-mark::after {
+        content: "";
+        position: absolute;
+        inset: 4.5mm;
+        background: var(--cyan);
+        border-radius: 0.5mm;
+      }
+
+      .edition,
+      .eyebrow,
+      .topic,
+      .section-count,
+      .why span,
+      .document-footer,
+      .source-link {
+        font-family: var(--mono);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .edition,
+      .section-count,
+      .document-footer {
+        color: var(--muted);
+        font-size: 8pt;
+      }
+
+      .cover-copy {
+        position: relative;
+        z-index: 1;
+        margin: 30mm 0 0;
+      }
+
+      .eyebrow {
+        margin: 0 0 7mm;
+        color: var(--cyan);
+        font-size: 10pt;
+      }
+
+      h1 {
+        max-width: 165mm;
+        margin: 0;
+        font-size: 37pt;
+        line-height: 1.03;
+        letter-spacing: -0.05em;
+      }
+
+      .dek {
+        max-width: 155mm;
+        margin: 10mm 0 0;
+        color: var(--ink-2);
+        font-size: 16pt;
+        line-height: 1.45;
+      }
+
+      .context {
+        position: relative;
+        z-index: 1;
+        margin-top: auto;
+        padding: 9mm;
+        background: rgba(13, 19, 25, 0.94);
+        border: 0.3mm solid var(--line);
+        border-left: 1mm solid var(--violet);
+      }
+
+      .context h2,
+      .section-head h2,
+      .operating-view h2,
+      .sources h2 {
+        margin: 0;
+      }
+
+      .context h2 {
+        color: var(--violet);
+        font-family: var(--mono);
+        font-size: 9pt;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .context p {
+        margin: 4mm 0 0;
+        color: var(--ink-2);
+        font-size: 13pt;
+      }
+
+      .cover-meta {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 9mm;
+        color: var(--muted);
+        font: 8pt var(--mono);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .content {
+        padding-top: 15mm;
+        padding-bottom: 18mm;
+      }
+
+      .section-head {
+        margin-bottom: 9mm;
+        padding-bottom: 5mm;
+        border-bottom: 0.3mm solid var(--line);
+      }
+
+      .section-head h2 {
+        font-size: 23pt;
+      }
+
+      .stories {
+        position: relative;
+        z-index: 1;
+      }
+
+      .story {
+        display: grid;
+        grid-template-columns: 15mm 1fr;
+        gap: 5mm;
+        margin: 0 0 6mm;
+        padding: 7mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: rgba(13, 19, 25, 0.96);
+        border: 0.3mm solid var(--line);
+      }
+
+      .story-index {
+        color: var(--cyan);
+        font: 12pt var(--mono);
+      }
+
+      .topic {
+        margin: 0 0 2mm;
+        color: var(--cyan);
+        font-size: 7.5pt;
+      }
+
+      .story h3 {
+        margin: 0;
+        font-size: 16pt;
+        line-height: 1.18;
+        letter-spacing: -0.025em;
+      }
+
+      .summary {
+        margin: 3mm 0;
+        color: var(--ink-2);
+        font-size: 10.5pt;
+      }
+
+      .why {
+        padding-top: 3mm;
+        border-top: 0.25mm solid var(--line);
+      }
+
+      .why span {
+        color: var(--violet);
+        font-size: 7pt;
+      }
+
+      .why p {
+        display: inline;
+        margin: 0 0 0 2mm;
+        font-weight: 650;
+      }
+
+      .source-link {
+        display: inline-block;
+        margin-top: 4mm;
+        color: var(--cyan);
+        font-size: 6.8pt;
+        letter-spacing: 0.04em;
+        text-transform: none;
+      }
+
+      .operating-view,
+      .sources {
+        position: relative;
+        z-index: 1;
+        margin-top: 12mm;
+        padding: 9mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: var(--panel-soft);
+        border: 0.3mm solid var(--line);
+      }
+
+      .operating-view {
+        border-top: 1mm solid var(--cyan);
+      }
+
+      .operating-view h2,
+      .sources h2 {
+        font-size: 18pt;
+      }
+
+      .operating-view > p {
+        color: var(--ink-2);
+        font-size: 12pt;
+      }
+
+      .watch-list,
+      .source-list {
+        margin: 6mm 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .watch-list li {
+        display: grid;
+        grid-template-columns: 9mm 1fr;
+        gap: 4mm;
+        align-items: start;
+        margin: 3mm 0;
+      }
+
+      .watch-list span {
+        display: grid;
+        width: 8mm;
+        height: 8mm;
+        place-items: center;
+        color: var(--cyan);
+        border: 0.3mm solid var(--cyan);
+        font: 8pt var(--mono);
+      }
+
+      .watch-list p {
+        margin: 0;
+      }
+
+      .source-list li {
+        display: grid;
+        grid-template-columns: 10mm 1fr;
+        gap: 3mm;
+        margin: 2.5mm 0;
+        color: var(--ink-2);
+        font-size: 8.5pt;
+      }
+
+      .source-list span {
+        color: var(--violet);
+        font-family: var(--mono);
+      }
+
+      .source-list a {
+        color: var(--cyan);
+        text-decoration: underline;
+        text-decoration-color: rgba(53, 230, 209, 0.35);
+        text-underline-offset: 1mm;
+      }
+
+      .cta {
+        position: relative;
+        z-index: 1;
+        margin: 12mm 0 0;
+        padding: 7mm 9mm;
+        break-inside: avoid;
+        color: #04100f;
+        background: var(--cyan);
+      }
+
+      .cta strong {
+        display: block;
+        font-size: 14pt;
+      }
+
+      .cta span {
+        font: 9pt var(--mono);
+      }
+
+      .document-footer {
+        margin-top: 12mm;
+        padding-top: 5mm;
+        border-top: 0.3mm solid var(--line);
+      }
+
+      @media screen {
+        body {
+          width: 210mm;
+          margin: 0 auto;
+        }
+
+        .page {
+          box-shadow: 0 0 20mm rgba(0, 0, 0, 0.45);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="page cover">
+      <header class="brand-row">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Shadow<em>Context</em></span>
+        </div>
+        <span class="edition">Daily security digest</span>
+      </header>
+
+      <main class="cover-copy">
+        <p class="eyebrow">The day in context / 2026-09-06</p>
+        <h1>Daily Defensive Security Digest: Vulnerabilities, Identity, and Boundaries</h1>
+        <p class="dek">A roundup of recent cybersecurity vulnerabilities and fixes emphasizing boundary proof, configuration validation, and precise inventory control across platforms.</p>
+      </main>
+
+      <aside class="context">
+        <h2>Executive summary</h2>
+        <p>Today&#39;s disclosures cover a wide array of application frameworks, desktop utilities, and plugins. Across all cases, version updates alone are insufficient without verifying runtime builds, active plugin features, and strict network or identity boundaries.</p>
+      </aside>
+
+      <div class="cover-meta">
+        <span>22 briefings included</span>
+        <span>https://shadowcontext.com/</span>
+      </div>
+    </section>
+
+    <section class="page content">
+      <header class="section-head">
+        <h2>All news from the day</h2>
+        <span class="section-count">22 / 2026-09-06</span>
+      </header>
+
+      <main class="stories">
+    <article class="story">
+      <div class="story-index">01</div>
+      <div class="story-copy">
+        <p class="topic">Input Validation</p>
+        <h3>Ash Unicode Flaw Highlights Storage Boundaries</h3>
+        <p class="summary">CVE-2026-82752 reveals that grapheme limits in Ash do not guarantee byte or storage boundaries, risking resource exhaustion.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Visual character limits do not match storage costs, requiring explicit layered input ceilings.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ash-unicode-limits-need-storage-boundaries/">Ash Unicode Flaw Makes String Length a Storage Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">02</div>
+      <div class="story-copy">
+        <p class="topic">Memory Safety</p>
+        <h3>PCRE2 10.48 Fixes Require Embedded Library Verification</h3>
+        <p class="summary">PCRE2 10.48 addresses memory safety flaws and parsing errors, requiring defenders to verify loaded library paths.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Bundled or statically linked libraries can remain vulnerable despite safe system-level package versions.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/pcre2-fixes-need-embedded-library-proof/">PCRE2 10.48 Fixes Need Embedded-Library Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">03</div>
+      <div class="story-copy">
+        <p class="topic">Access Control</p>
+        <h3>Cua Control Server Requires Network Boundary Proof</h3>
+        <p class="summary">CVE-2026-86121 exposes missing authentication and broad listening defaults in Cua computer-server before version 0.3.42.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Privileged control planes must bind to local addresses and require authentication across networks.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/cua-control-server-needs-network-boundary-proof/">Cua Control Server Fix Needs Network Boundary Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">04</div>
+      <div class="story-copy">
+        <p class="topic">Plugin Security</p>
+        <h3>WeeChat 4.10.1 Fixes Demand Plugin Boundary Proof</h3>
+        <p class="summary">WeeChat 4.10.1 addresses six flaws in Xfer and Relay plugins, requiring active runtime configuration reviews.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Modular clients create modular exposure where installed package versions do not determine active risk.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/weechat-fixes-need-plugin-boundary-proof/">WeeChat 4.10.1 Fixes Need Plugin-Boundary Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">05</div>
+      <div class="story-copy">
+        <p class="topic">Path Control</p>
+        <h3>AVideo File Write Flaw Requires Path Boundaries</h3>
+        <p class="summary">CVE-2026-86189 exposes an unauthenticated file-write vector in AVideo&#39;s FFmpeg notification endpoint through version 29.0.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Decrypted tokens require strict purpose, expiry, and destination validation to prevent arbitrary writes.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/avideo-file-write-needs-path-and-token-boundaries/">AVideo File-Write Flaw Needs Path and Token Boundaries ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">06</div>
+      <div class="story-copy">
+        <p class="topic">Identity Verification</p>
+        <h3>MStore API Fix Demands JWT Signature Proof</h3>
+        <p class="summary">CVE-2026-13447 in MStore API shows that decoding claims does not replace cryptographic signature verification.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Federated identity handoffs require strict cryptographic validation rather than trusting header claims.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/mstore-api-fix-needs-jwt-signature-proof/">MStore API Fix Needs JWT Signature Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">07</div>
+      <div class="story-copy">
+        <p class="topic">IoT Security</p>
+        <h3>Tenda CP3 Flaws Require Camera Network Boundaries</h3>
+        <p class="summary">CVE-2026-86152 and CVE-2026-86153 highlight command injection and privilege issues in Tenda CP3 firmware 27.5.57.101.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Connected cameras are managed devices requiring strict network segmentation and verified firmware provenance.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/tenda-cp3-flaws-need-camera-network-boundaries/">Tenda CP3 Flaws Need Camera-Network Boundaries ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">08</div>
+      <div class="story-copy">
+        <p class="topic">Desktop Security</p>
+        <h3>Bilibili Desktop Shows TLS Alone Is Insufficient</h3>
+        <p class="summary">CVE-2026-86185 combines disabled TLS checks with unauthenticated remote configuration execution in Bilibili Desktop.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Transport encryption fails to secure endpoints if content trust and native bridge controls are missing.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/bilibili-desktop-needs-layered-content-trust/">Bilibili Desktop Flaw Shows Why TLS Is Only One Trust Layer ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">09</div>
+      <div class="story-copy">
+        <p class="topic">Edge Device Security</p>
+        <h3>Tenda HG10 Flaws Demand Management Plane Boundaries</h3>
+        <p class="summary">Two buffer overflows affect Tenda HG10 firmware 300001138, necessitating strict management interface isolation.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Edge device security depends on demonstrable management reachability controls and verified builds.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/tenda-hg10-flaws-need-management-boundaries/">Tenda HG10 Flaws Need Management-Plane Boundaries ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">10</div>
+      <div class="story-copy">
+        <p class="topic">Linux Utilities</p>
+        <h3>Util-linux Fix Requires Descriptor Lifetime Proof</h3>
+        <p class="summary">A util-linux follow-up for CVE-2026-78408 requires verifying complete cgroup file descriptor cleanup and flags.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Privileged file descriptors can retain security authority across execution if lifetimes are unmanaged.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/util-linux-fix-needs-descriptor-lifetime-proof/">util-linux Fix Needs Descriptor-Lifetime Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">11</div>
+      <div class="story-copy">
+        <p class="topic">Authentication Bypass</p>
+        <h3>Lara Dashboard Fix Needs Environment Boundary Proof</h3>
+        <p class="summary">CVE-2026-86184 exposes an environment-gated authentication bypass in Lara Dashboard screenshot-login utilities.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Deployment environment labels must never substitute for strict, independent application access controls.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/lara-dashboard-fix-needs-environment-boundary-proof/">Lara Dashboard Fix Needs Environment Boundary Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">12</div>
+      <div class="story-copy">
+        <p class="topic">Deserialization Safety</p>
+        <h3>Mail Mint Form Fix Requires Strict Object Boundaries</h3>
+        <p class="summary">CVE-2026-10196 exposes PHP object injection via form submission logic in Mail Mint through version 1.31.0.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Browser input must remain inert data and never trigger arbitrary type instantiation or deserialization.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/mail-mint-form-fix-needs-object-boundaries/">Mail Mint Form Fix Needs Object Boundaries ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">13</div>
+      <div class="story-copy">
+        <p class="topic">OAuth Security</p>
+        <h3>Coolify OAuth Flaw Demands Proper Identity Binding</h3>
+        <p class="summary">CVE-2026-86117 in Coolify allows improper OAuth account matching based solely on email address strings.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Federated claims must bind explicitly to local accounts instead of relying on email address matches.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/coolify-oauth-flaw-needs-identity-binding/">Coolify OAuth Flaw Demands Identity Binding, Not Email Matching ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">14</div>
+      <div class="story-copy">
+        <p class="topic">Agent Sandboxing</p>
+        <h3>Agent Sandbox Migration Requires Boundary Proof</h3>
+        <p class="summary">GitHub&#39;s migration of Agentic Workflows to Cloud Hypervisor requires verifying runner virtualization support.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Workflow isolation must be proven at execution time rather than assumed from configuration names.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/agent-sandbox-migration-needs-boundary-proof/">Agent Sandbox Migration Needs Boundary Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">15</div>
+      <div class="story-copy">
+        <p class="topic">Network Capture</p>
+        <h3>Libpcap RPCAP Fix Needs Feature Level Proof</h3>
+        <p class="summary">CVE-2026-18238 addresses a buffer over-read in libpcap&#39;s remote packet-capture client prior to version 1.10.7.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Vulnerability scope is limited by build configuration, requiring feature verification before escalation.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/libpcap-rpcap-fix-needs-feature-level-proof/">libpcap RPCAP Fix Needs Feature-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">16</div>
+      <div class="story-copy">
+        <p class="topic">Origin Validation</p>
+        <h3>Grav Reset Link Fix Makes Canonical Origin Essential</h3>
+        <p class="summary">CVE-2026-86196 fixes password reset links derived from untrusted request hosts in Grav API Plugin 1.0.20.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Security links must rely on explicitly configured canonical origins rather than dynamic request headers.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/grav-reset-links-need-canonical-origin/">Grav Reset-Link Fix Makes the Canonical Origin a Security Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">17</div>
+      <div class="story-copy">
+        <p class="topic">Management Platforms</p>
+        <h3>N-central Hotfix Requires Server Level Proof</h3>
+        <p class="summary">N-central CVE-2026-86218 requires updating on-premises servers to build 2026.3.1.14 to fix code injection.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Management control planes require explicit server-level build verification to ensure vulnerability closure.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/n-central-hotfix-needs-server-level-proof/">N-central Hotfix Needs Server-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">18</div>
+      <div class="story-copy">
+        <p class="topic">Object Authorization</p>
+        <h3>MemberDash Fix Needs User Object Boundary Proof</h3>
+        <p class="summary">CVE-2026-16310 allows unauthenticated password changes in MemberDash through version 1.8.5 due to authorization gaps.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Registration and profile update flows must enforce server-side object ownership for all requests.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/memberdash-fix-needs-user-object-boundaries/">MemberDash Fix Needs User-Object Boundary Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">19</div>
+      <div class="story-copy">
+        <p class="topic">Identity Binding</p>
+        <h3>SureCart Fixes Demand Account Identity Binding</h3>
+        <p class="summary">SureCart disclosures CVE-2026-75793 and CVE-2026-18480 address unauthorized account creation and modification.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Store checkout logic must strictly honor site configuration and map customer roles accurately.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/surecart-fixes-need-account-identity-binding/">SureCart Fixes Need Account Identity Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">20</div>
+      <div class="story-copy">
+        <p class="topic">Role Enforcement</p>
+        <h3>B2BKing Registration Fix Demands Role Binding</h3>
+        <p class="summary">CVE-2026-85038 exposes missing role validation during registration flows in WooCommerce B2BPlugin versions prior to 5.2.40.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Servers must independently validate and authorize requested roles rather than trusting client inputs.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/b2bking-registration-needs-role-binding/">B2BKing Registration Fix Demands Server-Side Role Binding ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">21</div>
+      <div class="story-copy">
+        <p class="topic">Rendering Safety</p>
+        <h3>Kirki Comment Fix Makes Rendering Context Crucial</h3>
+        <p class="summary">CVE-2026-84219 addresses stored cross-site scripting via unescaped entity decoding in Kirki versions 6.2.1 through 6.2.5.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Content rendering must apply context-appropriate output encoding to prevent delayed script execution.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/kirki-comments-need-context-safe-rendering/">Kirki Comment Flaw Makes Rendering Context a Security Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">22</div>
+      <div class="story-copy">
+        <p class="topic">Token Validation</p>
+        <h3>HivePress Token Fix Needs Audience Binding</h3>
+        <p class="summary">CVE-2026-18056 highlights missing application audience checks in HivePress Authentication Facebook login flows.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Valid federated tokens must explicitly verify application audience bindings before local account mapping.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/hivepress-token-fix-needs-audience-binding/">HivePress Token Fix Needs Audience Binding ↗</a>
+      </div>
+    </article></main>
+
+      <section class="operating-view">
+        <p class="eyebrow">The operating view</p>
+        <h2>What the day means for defenders</h2>
+        <p>Defenders must move beyond version dashboards by auditing active plugin features, runtime library binaries, and network listening boundaries across every deployment.</p>
+        <ol class="watch-list"><li><span>1</span><p>Verify build versions and active runtime code rather than relying solely on package manifests.</p></li>
+<li><span>2</span><p>Enforce strict server-side authorization and audience checks across all identity and token handoffs.</p></li>
+<li><span>3</span><p>Isolate management interfaces and network-edge services from untrusted public access.</p></li></ol>
+      </section>
+
+      <section class="sources">
+        <p class="eyebrow">Source index</p>
+        <h2>Every briefing in this digest</h2>
+        <ol class="source-list">
+    <li>
+      <span>01</span>
+      <a href="https://shadowcontext.com/ash-unicode-limits-need-storage-boundaries/">Ash Unicode Flaw Makes String Length a Storage Boundary</a>
+    </li>
+
+    <li>
+      <span>02</span>
+      <a href="https://shadowcontext.com/pcre2-fixes-need-embedded-library-proof/">PCRE2 10.48 Fixes Need Embedded-Library Proof</a>
+    </li>
+
+    <li>
+      <span>03</span>
+      <a href="https://shadowcontext.com/cua-control-server-needs-network-boundary-proof/">Cua Control Server Fix Needs Network Boundary Proof</a>
+    </li>
+
+    <li>
+      <span>04</span>
+      <a href="https://shadowcontext.com/weechat-fixes-need-plugin-boundary-proof/">WeeChat 4.10.1 Fixes Need Plugin-Boundary Proof</a>
+    </li>
+
+    <li>
+      <span>05</span>
+      <a href="https://shadowcontext.com/avideo-file-write-needs-path-and-token-boundaries/">AVideo File-Write Flaw Needs Path and Token Boundaries</a>
+    </li>
+
+    <li>
+      <span>06</span>
+      <a href="https://shadowcontext.com/mstore-api-fix-needs-jwt-signature-proof/">MStore API Fix Needs JWT Signature Proof</a>
+    </li>
+
+    <li>
+      <span>07</span>
+      <a href="https://shadowcontext.com/tenda-cp3-flaws-need-camera-network-boundaries/">Tenda CP3 Flaws Need Camera-Network Boundaries</a>
+    </li>
+
+    <li>
+      <span>08</span>
+      <a href="https://shadowcontext.com/bilibili-desktop-needs-layered-content-trust/">Bilibili Desktop Flaw Shows Why TLS Is Only One Trust Layer</a>
+    </li>
+
+    <li>
+      <span>09</span>
+      <a href="https://shadowcontext.com/tenda-hg10-flaws-need-management-boundaries/">Tenda HG10 Flaws Need Management-Plane Boundaries</a>
+    </li>
+
+    <li>
+      <span>10</span>
+      <a href="https://shadowcontext.com/util-linux-fix-needs-descriptor-lifetime-proof/">util-linux Fix Needs Descriptor-Lifetime Proof</a>
+    </li>
+
+    <li>
+      <span>11</span>
+      <a href="https://shadowcontext.com/lara-dashboard-fix-needs-environment-boundary-proof/">Lara Dashboard Fix Needs Environment Boundary Proof</a>
+    </li>
+
+    <li>
+      <span>12</span>
+      <a href="https://shadowcontext.com/mail-mint-form-fix-needs-object-boundaries/">Mail Mint Form Fix Needs Object Boundaries</a>
+    </li>
+
+    <li>
+      <span>13</span>
+      <a href="https://shadowcontext.com/coolify-oauth-flaw-needs-identity-binding/">Coolify OAuth Flaw Demands Identity Binding, Not Email Matching</a>
+    </li>
+
+    <li>
+      <span>14</span>
+      <a href="https://shadowcontext.com/agent-sandbox-migration-needs-boundary-proof/">Agent Sandbox Migration Needs Boundary Proof</a>
+    </li>
+
+    <li>
+      <span>15</span>
+      <a href="https://shadowcontext.com/libpcap-rpcap-fix-needs-feature-level-proof/">libpcap RPCAP Fix Needs Feature-Level Proof</a>
+    </li>
+
+    <li>
+      <span>16</span>
+      <a href="https://shadowcontext.com/grav-reset-links-need-canonical-origin/">Grav Reset-Link Fix Makes the Canonical Origin a Security Boundary</a>
+    </li>
+
+    <li>
+      <span>17</span>
+      <a href="https://shadowcontext.com/n-central-hotfix-needs-server-level-proof/">N-central Hotfix Needs Server-Level Proof</a>
+    </li>
+
+    <li>
+      <span>18</span>
+      <a href="https://shadowcontext.com/memberdash-fix-needs-user-object-boundaries/">MemberDash Fix Needs User-Object Boundary Proof</a>
+    </li>
+
+    <li>
+      <span>19</span>
+      <a href="https://shadowcontext.com/surecart-fixes-need-account-identity-binding/">SureCart Fixes Need Account Identity Proof</a>
+    </li>
+
+    <li>
+      <span>20</span>
+      <a href="https://shadowcontext.com/b2bking-registration-needs-role-binding/">B2BKing Registration Fix Demands Server-Side Role Binding</a>
+    </li>
+
+    <li>
+      <span>21</span>
+      <a href="https://shadowcontext.com/kirki-comments-need-context-safe-rendering/">Kirki Comment Flaw Makes Rendering Context a Security Boundary</a>
+    </li>
+
+    <li>
+      <span>22</span>
+      <a href="https://shadowcontext.com/hivepress-token-fix-needs-audience-binding/">HivePress Token Fix Needs Audience Binding</a>
+    </li></ol>
+      </section>
+
+      <div class="cta">
+        <strong>Read the full analysis</strong>
+        <span>https://shadowcontext.com/</span>
+      </div>
+
+      <footer class="document-footer">
+        <span>ShadowContext</span>
+        <span>Independent defensive security intelligence</span>
+      </footer>
+    </section>
+  </body>
+</html>

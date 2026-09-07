@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-09-07T09:31:20.490+04:00",
+  "digestDate": "2026-09-06",
+  "digestHash": "c2bfeca9b47ba400b661b2bcd84982f0afd58fd71fe7bae5b9b13a799ba03c3a",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "Daily Defensive Security Digest: Vulnerabilities, Identity, and Boundaries",
+  "articleCount": 22,
+  "sourceArticles": [
+    {
+      "title": "Ash Unicode Flaw Makes String Length a Storage Boundary",
+      "canonicalUrl": "https://shadowcontext.com/ash-unicode-limits-need-storage-boundaries/",
+      "publishedAt": "2026-09-06T01:10:13.000+04:00",
+      "category": "defense",
+      "sourceHash": "6c9f1cdbfb06b4fde2aa10d3a9069511e1cedd632d026a39e52f4dcdfd5bdb3e"
+    },
+    {
+      "title": "PCRE2 10.48 Fixes Need Embedded-Library Proof",
+      "canonicalUrl": "https://shadowcontext.com/pcre2-fixes-need-embedded-library-proof/",
+      "publishedAt": "2026-09-06T02:11:01.000+04:00",
+      "category": "defense",
+      "sourceHash": "4a1067bd98cfcddb33791a101891fd3bad39bf24e005cb36a12210e17f5d04da"
+    },
+    {
+      "title": "Cua Control Server Fix Needs Network Boundary Proof",
+      "canonicalUrl": "https://shadowcontext.com/cua-control-server-needs-network-boundary-proof/",
+      "publishedAt": "2026-09-06T03:10:45.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "7b14b698a0d2fbd77bc48b8b3551ff9deb3ebdff5ba25814e6d9d5c3e12a7950"
+    },
+    {
+      "title": "WeeChat 4.10.1 Fixes Need Plugin-Boundary Proof",
+      "canonicalUrl": "https://shadowcontext.com/weechat-fixes-need-plugin-boundary-proof/",
+      "publishedAt": "2026-09-06T04:09:55.000+04:00",
+      "category": "defense",
+      "sourceHash": "68c96fed4fe4caafbd0291d2a86dcef3223f0cdff302f6d75aa12e4a51763bca"
+    },
+    {
+      "title": "AVideo File-Write Flaw Needs Path and Token Boundaries",
+      "canonicalUrl": "https://shadowcontext.com/avideo-file-write-needs-path-and-token-boundaries/",
+      "publishedAt": "2026-09-06T05:09:51.000+04:00",
+      "category": "defense",
+      "sourceHash": "32bc3f7f327b3d4430531b8e140cc75c7e2e8ed8bc0ac7fbcf0df1a89104a1c5"
+    },
+    {
+      "title": "MStore API Fix Needs JWT Signature Proof",
+      "canonicalUrl": "https://shadowcontext.com/mstore-api-fix-needs-jwt-signature-proof/",
+      "publishedAt": "2026-09-06T06:10:30.000+04:00",
+      "category": "defense",
+      "sourceHash": "3b7a33dc860a51da74643382a2df25d1b5535970fa1ac1901a77631eeb757a20"
+    },
+    {
+      "title": "Tenda CP3 Flaws Need Camera-Network Boundaries",
+      "canonicalUrl": "https://shadowcontext.com/tenda-cp3-flaws-need-camera-network-boundaries/",
+      "publishedAt": "2026-09-06T07:08:49.000+04:00",
+      "category": "defense",
+      "sourceHash": "58e89bb909a207a8e3fa6488a9c54fbabda4258273b847cc7078ba201ff59e15"
+    },
+    {
+      "title": "Bilibili Desktop Flaw Shows Why TLS Is Only One Trust Layer",
+      "canonicalUrl": "https://shadowcontext.com/bilibili-desktop-needs-layered-content-trust/",
+      "publishedAt": "2026-09-06T08:09:40.000+04:00",
+      "category": "defense",
+      "sourceHash": "07fc69a5fa94704deeb517f8010efa188ab44df54f2d5a64204b1550e3e378f2"
+    },
+    {
+      "title": "Tenda HG10 Flaws Need Management-Plane Boundaries",
+      "canonicalUrl": "https://shadowcontext.com/tenda-hg10-flaws-need-management-boundaries/",
+      "publishedAt": "2026-09-06T09:09:26.000+04:00",
+      "category": "defense",
+      "sourceHash": "d5b1e371764fd5844e6c1489cdf13173e05a6fff9b2bddce88fca16d5c188249"
+    },
+    {
+      "title": "util-linux Fix Needs Descriptor-Lifetime Proof",
+      "canonicalUrl": "https://shadowcontext.com/util-linux-fix-needs-descriptor-lifetime-proof/",
+      "publishedAt": "2026-09-06T10:10:29.000+04:00",
+      "category": "defense",
+      "sourceHash": "b9239154bb78a005f33938504740a49cf24546efbf048d8ad469edace2c3c078"
+    },
+    {
+      "title": "Lara Dashboard Fix Needs Environment Boundary Proof",
+      "canonicalUrl": "https://shadowcontext.com/lara-dashboard-fix-needs-environment-boundary-proof/",
+      "publishedAt": "2026-09-06T11:09:46.000+04:00",
+      "category": "defense",
+      "sourceHash": "935482e5c9b15cc3adabb75b6cfdf7018be59dbc942239d403bb34687a69eaab"
+    },
+    {
+      "title": "Mail Mint Form Fix Needs Object Boundaries",
+      "canonicalUrl": "https://shadowcontext.com/mail-mint-form-fix-needs-object-boundaries/",
+      "publishedAt": "2026-09-06T12:10:03.000+04:00",
+      "category": "defense",
+      "sourceHash": "b637daa36f82a83b666bcbe0988449c4a14172a1a15a32fc11ba11ee5548fc4e"
+    },
+    {
+      "title": "Coolify OAuth Flaw Demands Identity Binding, Not Email Matching",
+      "canonicalUrl": "https://shadowcontext.com/coolify-oauth-flaw-needs-identity-binding/",
+      "publishedAt": "2026-09-06T13:10:13.000+04:00",
+      "category": "defense",
+      "sourceHash": "2f2e07907943cf08aaaf56e20760e123529000d953bdd5e1bfa5c8a760338124"
+    },
+    {
+      "title": "Agent Sandbox Migration Needs Boundary Proof",
+      "canonicalUrl": "https://shadowcontext.com/agent-sandbox-migration-needs-boundary-proof/",
+      "publishedAt": "2026-09-06T14:10:00.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "c585a2944e68c6b370c8bb37b4ec66f38fec41902d8383bf60990205f2b89a4f"
+    },
+    {
+      "title": "libpcap RPCAP Fix Needs Feature-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/libpcap-rpcap-fix-needs-feature-level-proof/",
+      "publishedAt": "2026-09-06T15:09:31.000+04:00",
+      "category": "defense",
+      "sourceHash": "81c29b5c2b2f7e003ad923870ab3c49ef3f8aa784649d2f2056d7223b1168e3c"
+    },
+    {
+      "title": "Grav Reset-Link Fix Makes the Canonical Origin a Security Boundary",
+      "canonicalUrl": "https://shadowcontext.com/grav-reset-links-need-canonical-origin/",
+      "publishedAt": "2026-09-06T16:09:57.000+04:00",
+      "category": "defense",
+      "sourceHash": "64e5a997524717d61645266fc059b99725c46f0b22a1e8240a622f0d949430ff"
+    },
+    {
+      "title": "N-central Hotfix Needs Server-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/n-central-hotfix-needs-server-level-proof/",
+      "publishedAt": "2026-09-06T17:10:50.000+04:00",
+      "category": "defense",
+      "sourceHash": "8fde5712c81f5d9383770efbbfc76ba72fd689810fdfb27d71a720069c513c84"
+    },
+    {
+      "title": "MemberDash Fix Needs User-Object Boundary Proof",
+      "canonicalUrl": "https://shadowcontext.com/memberdash-fix-needs-user-object-boundaries/",
+      "publishedAt": "2026-09-06T18:09:30.000+04:00",
+      "category": "defense",
+      "sourceHash": "ae680f7b350ec18b4e6926ed49111cf526989cfb5886b1bb7ffc65b56879a6fa"
+    },
+    {
+      "title": "SureCart Fixes Need Account Identity Proof",
+      "canonicalUrl": "https://shadowcontext.com/surecart-fixes-need-account-identity-binding/",
+      "publishedAt": "2026-09-06T19:09:32.000+04:00",
+      "category": "defense",
+      "sourceHash": "b59fdf7b9ae655ddced08854079ebeb77d75240cd5e4b80e990703ad0753c602"
+    },
+    {
+      "title": "B2BKing Registration Fix Demands Server-Side Role Binding",
+      "canonicalUrl": "https://shadowcontext.com/b2bking-registration-needs-role-binding/",
+      "publishedAt": "2026-09-06T20:10:14.000+04:00",
+      "category": "defense",
+      "sourceHash": "58824ce31656993c1279314e23eae37c325f3ce732ef08dbf70f8010195e2bf1"
+    },
+    {
+      "title": "Kirki Comment Flaw Makes Rendering Context a Security Boundary",
+      "canonicalUrl": "https://shadowcontext.com/kirki-comments-need-context-safe-rendering/",
+      "publishedAt": "2026-09-06T21:10:48.000+04:00",
+      "category": "defense",
+      "sourceHash": "6386d51a957ac82e3d151face573bc231970f46f00ff046641804769d0b5a65f"
+    },
+    {
+      "title": "HivePress Token Fix Needs Audience Binding",
+      "canonicalUrl": "https://shadowcontext.com/hivepress-token-fix-needs-audience-binding/",
+      "publishedAt": "2026-09-06T22:10:07.000+04:00",
+      "category": "defense",
+      "sourceHash": "d9a1d2a7ecd67a5bac664076f9816bd1f6cd34b635c3a8ba66314298113a6c41"
+    }
+  ],
+  "caption": "Review today's key independent security updates, vulnerability disclosures, and defensive boundary verifications from ShadowContext.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-09-06/c2bfeca9b47ba400/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-09-06/c2bfeca9b47ba400/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-09-06/c2bfeca9b47ba400/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-09-06/c2bfeca9b47ba400/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}
