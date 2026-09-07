@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Notebook pages held within a verified filesystem boundary</title>
+  <desc id="desc">Abstract notebook pages sit inside a luminous cyan filesystem frame while a nearby amber path curves away at the boundary.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071521"/>
+      <stop offset="0.55" stop-color="#0b2936"/>
+      <stop offset="1" stop-color="#123642"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="48%" r="52%">
+      <stop offset="0" stop-color="#52e4d0" stop-opacity=".24"/>
+      <stop offset="1" stop-color="#52e4d0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="frame" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8df5df"/>
+      <stop offset="1" stop-color="#1aa8b5"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e8fffa"/>
+      <stop offset="1" stop-color="#88d9d5"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd271"/>
+      <stop offset="1" stop-color="#ed7b45"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="20" stdDeviation="22" flood-color="#000912" flood-opacity=".55"/>
+    </filter>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <pattern id="grid" width="72" height="72" patternUnits="userSpaceOnUse">
+      <path d="M72 0H0V72" fill="none" stroke="#9beee5" stroke-opacity=".05"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <ellipse cx="790" cy="440" rx="650" ry="420" fill="url(#halo)"/>
+  <circle cx="1325" cy="180" r="140" fill="#f6a757" opacity=".055" filter="url(#glow)"/>
+
+  <g filter="url(#shadow)">
+    <path d="M355 188H920l92 96h238v426H355Z" fill="#0d3341" stroke="url(#frame)" stroke-width="10" stroke-linejoin="round"/>
+    <path d="M395 235H891l94 96h225v339H395Z" fill="#102b38" stroke="#72e7da" stroke-opacity=".32" stroke-width="3"/>
+  </g>
+
+  <g transform="translate(500 302) rotate(-5 205 145)" filter="url(#shadow)">
+    <rect width="410" height="290" rx="24" fill="url(#paper)"/>
+    <path d="M328 0h58a24 24 0 0 1 24 24v58Z" fill="#5cbab9" opacity=".7"/>
+    <g fill="#174553" opacity=".72">
+      <circle cx="62" cy="62" r="14"/>
+      <rect x="96" y="51" width="220" height="20" rx="10"/>
+      <rect x="62" y="112" width="290" height="13" rx="6.5" opacity=".48"/>
+      <rect x="62" y="149" width="250" height="13" rx="6.5" opacity=".38"/>
+      <rect x="62" y="186" width="272" height="13" rx="6.5" opacity=".3"/>
+    </g>
+    <g transform="translate(286 218)" fill="#1b7180">
+      <rect width="67" height="10" rx="5"/><rect x="-25" y="24" width="92" height="10" rx="5" opacity=".65"/>
+    </g>
+  </g>
+
+  <path d="M141 646C246 646 279 560 355 553" fill="none" stroke="#65e2d4" stroke-width="14" stroke-linecap="round" opacity=".68"/>
+  <circle cx="141" cy="646" r="18" fill="#75ecdc"/>
+  <path d="M1290 506C1178 506 1143 602 1031 602" fill="none" stroke="url(#amber)" stroke-width="16" stroke-linecap="round" stroke-dasharray="6 28"/>
+  <path d="M1027 563v78" stroke="#ffba5f" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="1027" cy="602" r="42" fill="#102d39" stroke="#ffbd62" stroke-width="7"/>
+  <path d="M1008 583l38 38m0-38-38 38" stroke="#ffbd62" stroke-width="8" stroke-linecap="round"/>
+
+  <g opacity=".55" fill="#7beadd">
+    <circle cx="217" cy="194" r="5"/><circle cx="285" cy="759" r="4"/><circle cx="1410" cy="360" r="5"/><circle cx="1160" cy="138" r="4"/>
+  </g>
+</svg>
