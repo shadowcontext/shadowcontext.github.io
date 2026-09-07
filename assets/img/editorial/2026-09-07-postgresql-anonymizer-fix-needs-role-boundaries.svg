@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Masking roles form a boundary around protected database layers</title>
+  <desc id="desc">Abstract database layers sit behind a translucent privacy veil while a luminous boundary separates elevated access from masked data.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071425"/>
+      <stop offset="0.55" stop-color="#10243a"/>
+      <stop offset="1" stop-color="#08111e"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="48%" r="55%">
+      <stop offset="0" stop-color="#3be4d0" stop-opacity="0.24"/>
+      <stop offset="0.55" stop-color="#267ca5" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#071425" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="disc" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#bdfbf0"/>
+      <stop offset="0.18" stop-color="#42d8c4"/>
+      <stop offset="1" stop-color="#146b7c"/>
+    </linearGradient>
+    <linearGradient id="side" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0d4a65"/>
+      <stop offset="0.48" stop-color="#238ca0"/>
+      <stop offset="1" stop-color="#0b405d"/>
+    </linearGradient>
+    <linearGradient id="veil" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b7fbf3" stop-opacity="0.26"/>
+      <stop offset="0.52" stop-color="#5fe6d3" stop-opacity="0.11"/>
+      <stop offset="1" stop-color="#36a7c7" stop-opacity="0.24"/>
+    </linearGradient>
+    <linearGradient id="boundary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe7a5"/>
+      <stop offset="0.48" stop-color="#ffbd59"/>
+      <stop offset="1" stop-color="#f07449"/>
+    </linearGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grain" width="36" height="36" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="7" r="1" fill="#b9e9ee" opacity="0.08"/>
+      <circle cx="27" cy="23" r="1.2" fill="#b9e9ee" opacity="0.06"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#halo)"/>
+  <circle cx="470" cy="452" r="265" fill="#1cd2bb" opacity="0.08" filter="url(#soft)"/>
+  <circle cx="1270" cy="430" r="190" fill="#ffad54" opacity="0.09" filter="url(#soft)"/>
+  <g opacity="0.22" fill="none" stroke="#61b6c8" stroke-width="2">
+    <path d="M80 185 C300 105 470 150 640 80"/>
+    <path d="M965 800 C1180 700 1360 745 1535 650"/>
+    <path d="M113 704 C236 639 314 661 407 602"/>
+  </g>
+  <g transform="translate(210 194)">
+    <path d="M70 162 C70 99 198 48 356 48 C514 48 642 99 642 162 L642 452 C642 516 514 567 356 567 C198 567 70 516 70 452 Z" fill="url(#side)" opacity="0.96"/>
+    <ellipse cx="356" cy="162" rx="286" ry="114" fill="url(#disc)"/>
+    <ellipse cx="356" cy="162" rx="214" ry="76" fill="#0a2538" opacity="0.92"/>
+    <ellipse cx="356" cy="162" rx="155" ry="48" fill="#4ee0cb" opacity="0.28"/>
+    <path d="M70 265 C70 328 198 379 356 379 C514 379 642 328 642 265" fill="none" stroke="#77eadc" stroke-width="7" opacity="0.7"/>
+    <path d="M70 365 C70 428 198 479 356 479 C514 479 642 428 642 365" fill="none" stroke="#77eadc" stroke-width="7" opacity="0.54"/>
+    <path d="M70 452 C70 516 198 567 356 567 C514 567 642 516 642 452" fill="none" stroke="#b2f5eb" stroke-width="8" opacity="0.78"/>
+    <g fill="#d2fff8" opacity="0.46">
+      <circle cx="170" cy="280" r="8"/><circle cx="215" cy="300" r="6"/><circle cx="262" cy="313" r="7"/>
+      <circle cx="451" cy="315" r="7"/><circle cx="500" cy="302" r="6"/><circle cx="548" cy="281" r="8"/>
+      <circle cx="184" cy="394" r="7"/><circle cx="232" cy="416" r="6"/><circle cx="479" cy="416" r="6"/><circle cx="531" cy="393" r="7"/>
+    </g>
+  </g>
+  <path d="M631 120 C764 210 810 338 787 468 C763 607 684 722 605 826 L1072 826 C1008 704 971 584 985 451 C998 322 1060 218 1168 120 Z" fill="url(#veil)" stroke="#87e8df" stroke-width="3" opacity="0.92"/>
+  <path d="M788 112 L788 793" stroke="#ffbe61" stroke-width="5" opacity="0.34" filter="url(#glow)"/>
+  <path d="M941 109 L941 793" stroke="url(#boundary)" stroke-width="13" stroke-linecap="round" filter="url(#glow)"/>
+  <g transform="translate(1180 260)">
+    <circle cx="132" cy="132" r="116" fill="#141d2a" stroke="#f6b454" stroke-width="4" opacity="0.97"/>
+    <circle cx="132" cy="103" r="39" fill="#ffc46b"/>
+    <path d="M58 212 C69 159 93 140 132 140 C171 140 195 159 206 212" fill="#f28a52"/>
+    <path d="M132 250 L132 366" stroke="#f6b454" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="132" cy="394" r="28" fill="#ffca72" opacity="0.9"/>
+  </g>
+  <g opacity="0.56" stroke="#8cd9de" stroke-width="3" fill="none">
+    <circle cx="1320" cy="704" r="70"/>
+    <circle cx="1320" cy="704" r="42"/>
+    <path d="M1250 704 H1130 M1390 704 H1510"/>
+  </g>
+  <rect width="1600" height="900" fill="url(#grain)"/>
+  <path d="M0 820 C280 775 468 864 741 822 C1028 778 1263 751 1600 820 V900 H0 Z" fill="#050d18" opacity="0.7"/>
+</svg>
