@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Guarded redirects protect an intelligence feed</title>
+  <desc id="desc">Abstract blue intelligence streams pass through layered redirect gates while amber credential tokens remain inside a protected boundary.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071426"/>
+      <stop offset="0.55" stop-color="#102b45"/>
+      <stop offset="1" stop-color="#07121f"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#2bd9d1" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#2bd9d1" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="stream" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2479ba"/>
+      <stop offset="0.55" stop-color="#45e4dc"/>
+      <stop offset="1" stop-color="#8ff7e7"/>
+    </linearGradient>
+    <linearGradient id="gate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#89f4e6" stop-opacity="0.94"/>
+      <stop offset="1" stop-color="#158ab2" stop-opacity="0.82"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000814" flood-opacity="0.58"/>
+    </filter>
+    <clipPath id="innerShield">
+      <path d="M1195 220 L1365 282 V438 C1365 560 1295 652 1195 700 C1095 652 1025 560 1025 438 V282 Z"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <ellipse cx="820" cy="450" rx="640" ry="360" fill="url(#glow)"/>
+  <g opacity="0.16" fill="none" stroke="#8fd8e8" stroke-width="2">
+    <path d="M80 170 C330 70 520 130 690 250 S1050 350 1510 155"/>
+    <path d="M40 720 C320 610 520 720 725 650 S1130 480 1550 690"/>
+    <circle cx="250" cy="210" r="85"/><circle cx="1430" cy="690" r="110"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <path d="M105 455 C285 455 340 350 510 350 C650 350 690 450 825 450 C935 450 980 410 1068 410" fill="none" stroke="#0a1d31" stroke-width="78" stroke-linecap="round"/>
+    <path d="M105 455 C285 455 340 350 510 350 C650 350 690 450 825 450 C935 450 980 410 1068 410" fill="none" stroke="url(#stream)" stroke-width="34" stroke-linecap="round"/>
+    <path d="M105 455 C285 455 340 350 510 350 C650 350 690 450 825 450 C935 450 980 410 1068 410" fill="none" stroke="#d7fffa" stroke-opacity="0.55" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <g fill="#d6fffb" stroke="#0e5b78" stroke-width="7">
+    <circle cx="175" cy="446" r="18"/><circle cx="278" cy="412" r="14"/><circle cx="388" cy="357" r="17"/>
+    <circle cx="560" cy="362" r="15"/><circle cx="710" cy="425" r="18"/><circle cx="872" cy="445" r="14"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <path d="M462 230 L548 230 L588 450 L548 670 L462 670 L422 450 Z" fill="#0a2438" stroke="url(#gate)" stroke-width="12"/>
+    <path d="M487 275 L523 275 L553 450 L523 625 L487 625 L457 450 Z" fill="#123b4c" stroke="#7df4e3" stroke-width="5"/>
+    <circle cx="505" cy="450" r="42" fill="#0a2639" stroke="#b1fff2" stroke-width="8"/>
+    <path d="M489 451 L502 464 L525 436" fill="none" stroke="#7df4e3" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <path d="M808 260 L894 260 L934 450 L894 640 L808 640 L768 450 Z" fill="#0a2438" stroke="url(#gate)" stroke-width="12"/>
+    <path d="M833 302 L869 302 L899 450 L869 598 L833 598 L803 450 Z" fill="#123b4c" stroke="#7df4e3" stroke-width="5"/>
+    <circle cx="851" cy="450" r="42" fill="#0a2639" stroke="#b1fff2" stroke-width="8"/>
+    <path d="M835 451 L848 464 L871 436" fill="none" stroke="#7df4e3" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <path d="M690 410 C745 330 815 330 870 372" fill="none" stroke="#ffb957" stroke-width="10" stroke-linecap="round" stroke-dasharray="5 22" opacity="0.9"/>
+  <path d="M892 372 L866 351 L860 387 Z" fill="#ffb957"/>
+
+  <g filter="url(#shadow)">
+    <path d="M1195 205 L1385 275 V445 C1385 580 1305 682 1195 735 C1085 682 1005 580 1005 445 V275 Z" fill="#0a2135" stroke="#56e5da" stroke-width="12"/>
+    <path d="M1195 240 L1348 296 V437 C1348 544 1288 626 1195 674 C1102 626 1042 544 1042 437 V296 Z" fill="#103a4c" opacity="0.82"/>
+    <g clip-path="url(#innerShield)">
+      <path d="M995 410 H1395" stroke="url(#stream)" stroke-width="34"/>
+      <path d="M995 410 H1395" stroke="#d7fffa" stroke-opacity="0.55" stroke-width="5"/>
+    </g>
+  </g>
+
+  <g fill="#ffc766" stroke="#7c4e17" stroke-width="7" filter="url(#shadow)">
+    <circle cx="1135" cy="525" r="28"/>
+    <circle cx="1225" cy="548" r="28"/>
+    <circle cx="1300" cy="500" r="28"/>
+  </g>
+  <g fill="none" stroke="#ffe3a6" stroke-width="7" stroke-linecap="round">
+    <path d="M1135 514 V536 M1124 525 H1146"/>
+    <path d="M1225 537 V559 M1214 548 H1236"/>
+    <path d="M1300 489 V511 M1289 500 H1311"/>
+  </g>
+
+  <g opacity="0.52" fill="#63e8dc">
+    <circle cx="1090" cy="170" r="5"/><circle cx="1450" cy="315" r="7"/><circle cx="965" cy="690" r="5"/>
+    <circle cx="275" cy="700" r="6"/><circle cx="670" cy="180" r="5"/>
+  </g>
+</svg>
