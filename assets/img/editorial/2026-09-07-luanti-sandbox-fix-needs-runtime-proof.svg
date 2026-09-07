@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Voxel sandbox protected by layered runtime boundaries</title>
+  <desc id="desc">An abstract voxel landscape sits within luminous cyan security layers while an amber code fragment is stopped at the outer boundary.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#061421"/>
+      <stop offset="0.55" stop-color="#0b2633"/>
+      <stop offset="1" stop-color="#10202b"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="48%" r="55%">
+      <stop offset="0" stop-color="#22d3c5" stop-opacity="0.22"/>
+      <stop offset="0.62" stop-color="#0e7490" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#061421" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#67e8df" stop-opacity="0.78"/>
+      <stop offset="1" stop-color="#0891a8" stop-opacity="0.12"/>
+    </linearGradient>
+    <linearGradient id="top" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9ff6e8"/>
+      <stop offset="1" stop-color="#2ab7ac"/>
+    </linearGradient>
+    <linearGradient id="left" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1f8d8a"/>
+      <stop offset="1" stop-color="#115c68"/>
+    </linearGradient>
+    <linearGradient id="right" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#157484"/>
+      <stop offset="1" stop-color="#0a394c"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd166"/>
+      <stop offset="1" stop-color="#f97316"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#halo)"/>
+  <circle cx="785" cy="438" r="310" fill="#14b8a6" opacity="0.08" filter="url(#soft)"/>
+  <path d="M242 676 783 358l575 321-552 165z" fill="#041019" opacity="0.72"/>
+  <path d="M328 626 786 365l485 272-472 141z" fill="#0d3340" stroke="#1d7180" stroke-width="3"/>
+  <path d="M328 626v67l471 137v-52z" fill="#08242f"/>
+  <path d="M799 778v52l472-142v-51z" fill="#061b27"/>
+  <g opacity="0.96">
+    <path d="M507 565 657 480l151 84-151 86z" fill="url(#top)"/>
+    <path d="M507 565v111l150 85V650z" fill="url(#left)"/>
+    <path d="M657 650v111l151-86V564z" fill="url(#right)"/>
+    <path d="M674 470 793 402l120 67-120 69z" fill="#69ded2"/>
+    <path d="M674 470v91l119 67v-90z" fill="#176f76"/>
+    <path d="M793 538v90l120-68v-91z" fill="#0c5062"/>
+    <path d="M831 555 954 485l124 69-124 71z" fill="#52cfc7"/>
+    <path d="M831 555v96l123 69v-95z" fill="#14636c"/>
+    <path d="M954 625v95l124-70v-96z" fill="#0a4355"/>
+    <path d="M631 411 715 363l85 47-85 49z" fill="#b2f5e8"/>
+    <path d="M631 411v66l84 47v-65z" fill="#238f89"/>
+    <path d="M715 459v65l85-48v-66z" fill="#126274"/>
+  </g>
+  <g fill="none" stroke-linejoin="round">
+    <path d="M407 611 789 392l405 227-394 119z" stroke="url(#wall)" stroke-width="7" opacity="0.95" filter="url(#glow)"/>
+    <path d="M407 611v92l393 115v-80M800 738v80l394-119v-80" stroke="#22d3c5" stroke-width="5" opacity="0.45"/>
+    <path d="M362 635 788 389l452 254-440 133z" stroke="#67e8df" stroke-width="2" opacity="0.35"/>
+    <path d="M362 635v100l438 128v-87M800 776v87l440-132v-88" stroke="#1ca7ac" stroke-width="2" opacity="0.22"/>
+  </g>
+  <g transform="translate(1240 412) rotate(-12)" filter="url(#glow)">
+    <path d="M0 45 65 8l65 37-65 38z" fill="url(#amber)"/>
+    <path d="M0 45v67l65 38V83z" fill="#d85c16"/>
+    <path d="M65 83v67l65-38V45z" fill="#a33d15"/>
+    <path d="M-92 79h69" stroke="#ffd166" stroke-width="9" stroke-linecap="round" opacity="0.9"/>
+    <path d="m-43 49 29 30-29 30" fill="none" stroke="#ffd166" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <path d="M1203 383v322" stroke="#8af7e9" stroke-width="8" opacity="0.82" filter="url(#glow)"/>
+  <path d="M1203 394v300" stroke="#d9fff9" stroke-width="2" opacity="0.9"/>
+  <g fill="#8af7e9">
+    <circle cx="1203" cy="383" r="8"/><circle cx="1203" cy="705" r="8"/>
+    <circle cx="407" cy="611" r="6" opacity="0.8"/><circle cx="800" cy="738" r="6" opacity="0.8"/>
+  </g>
+  <g opacity="0.2" fill="#79e9df">
+    <circle cx="242" cy="212" r="3"/><circle cx="318" cy="308" r="5"/><circle cx="1327" cy="208" r="4"/>
+    <circle cx="1395" cy="302" r="3"/><circle cx="1147" cy="151" r="3"/><circle cx="208" cy="493" r="4"/>
+  </g>
+</svg>
