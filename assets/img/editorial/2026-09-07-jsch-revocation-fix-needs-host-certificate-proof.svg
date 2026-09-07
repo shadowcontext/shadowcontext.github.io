@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Revoked SSH host certificate stopped at a verified trust boundary</title>
+  <desc id="desc">Polished abstract editorial scene of a luminous network path crossing layered certificate gates, with one revoked amber certificate diverted into a sealed chamber.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071824"/>
+      <stop offset="0.52" stop-color="#0a2633"/>
+      <stop offset="1" stop-color="#07121d"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="48%" cy="49%" r="58%">
+      <stop offset="0" stop-color="#1ed6ca" stop-opacity="0.2"/>
+      <stop offset="0.65" stop-color="#0a7c87" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#071824" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="path" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#24677a" stop-opacity="0.15"/>
+      <stop offset="0.45" stop-color="#51efe0" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#3c92ac" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="gate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9ffcf1"/>
+      <stop offset="0.48" stop-color="#22c9c1"/>
+      <stop offset="1" stop-color="#0d6174"/>
+    </linearGradient>
+    <linearGradient id="certificate" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd27b"/>
+      <stop offset="0.5" stop-color="#f29a38"/>
+      <stop offset="1" stop-color="#a84b2a"/>
+    </linearGradient>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="smallGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <pattern id="mesh" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#72c9cf" stroke-opacity="0.055"/>
+      <circle cx="0" cy="0" r="2" fill="#71dcd6" fill-opacity="0.16"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#aura)"/>
+  <rect width="1600" height="900" fill="url(#mesh)"/>
+
+  <g opacity="0.35" fill="none" stroke="#3c8997">
+    <path d="M0 185C290 220 374 142 628 187S1056 276 1600 170"/>
+    <path d="M0 724C360 650 522 782 844 714S1320 635 1600 711"/>
+  </g>
+
+  <path d="M94 452C338 452 430 412 618 447C786 479 882 475 1030 447C1200 414 1350 450 1510 450" fill="none" stroke="#2cf1df" stroke-opacity="0.2" stroke-width="74" filter="url(#softGlow)"/>
+  <path d="M94 452C338 452 430 412 618 447C786 479 882 475 1030 447C1200 414 1350 450 1510 450" fill="none" stroke="url(#path)" stroke-width="18" stroke-linecap="round"/>
+
+  <g fill="none" stroke="url(#gate)" stroke-width="12">
+    <path d="M480 277L558 323V575L480 621L402 575V323Z" opacity="0.74"/>
+    <path d="M789 247L886 304V594L789 651L692 594V304Z" opacity="0.96"/>
+    <path d="M1105 284L1176 326V572L1105 614L1034 572V326Z" opacity="0.72"/>
+  </g>
+  <g fill="#071b27" stroke="#7df7ec" stroke-width="5">
+    <circle cx="480" cy="451" r="39"/>
+    <circle cx="789" cy="451" r="48"/>
+    <circle cx="1105" cy="451" r="36"/>
+  </g>
+  <g fill="#78f5e8" opacity="0.92">
+    <circle cx="480" cy="451" r="14"/>
+    <circle cx="789" cy="451" r="18"/>
+    <circle cx="1105" cy="451" r="13"/>
+  </g>
+
+  <path d="M790 452C790 555 725 610 638 676" fill="none" stroke="#f0a044" stroke-opacity="0.34" stroke-width="36" filter="url(#smallGlow)"/>
+  <path d="M790 452C790 555 725 610 638 676" fill="none" stroke="#f6ad4e" stroke-width="8" stroke-linecap="round"/>
+
+  <g transform="translate(560 635) rotate(-12 78 60)">
+    <path d="M14 8H118L150 40V112H14Z" fill="url(#certificate)" stroke="#ffd68d" stroke-width="5"/>
+    <path d="M118 8V40H150" fill="#7e3528" fill-opacity="0.52" stroke="#ffd68d" stroke-width="5"/>
+    <circle cx="58" cy="66" r="22" fill="#7a3329" fill-opacity="0.55" stroke="#ffe0a0" stroke-width="5"/>
+    <path d="M45 66L55 76L73 54" fill="none" stroke="#ffe7b2" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g transform="translate(476 695)">
+    <path d="M0 27L43 0H231L274 27V112L231 139H43L0 112Z" fill="#0b2933" stroke="#e89443" stroke-width="6"/>
+    <path d="M26 42H248V99H26Z" fill="#071923" stroke="#8a4b32" stroke-width="3"/>
+    <circle cx="230" cy="70" r="9" fill="#f4a142"/>
+  </g>
+
+  <g fill="#75eee4">
+    <circle cx="176" cy="452" r="7"/>
+    <circle cx="282" cy="444" r="5" opacity="0.65"/>
+    <circle cx="1287" cy="438" r="6" opacity="0.7"/>
+    <circle cx="1424" cy="449" r="8"/>
+  </g>
+  <g fill="#4eb3bd" opacity="0.38">
+    <circle cx="249" cy="263" r="5"/>
+    <circle cx="1320" cy="266" r="7"/>
+    <circle cx="1260" cy="687" r="5"/>
+    <circle cx="354" cy="737" r="6"/>
+  </g>
+</svg>
