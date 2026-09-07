@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Industrial switch fabric protected by a layered management boundary</title>
+  <desc id="desc">Abstract editorial artwork showing an amber disruption meeting layered protective arcs before a stable field of interconnected industrial switch nodes.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07131f"/>
+      <stop offset="0.52" stop-color="#102a38"/>
+      <stop offset="1" stop-color="#071821"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="67%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#49e2c2" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#49e2c2" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="pulse" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff5d57" stop-opacity=".1"/>
+      <stop offset=".52" stop-color="#ffb54b" stop-opacity=".95"/>
+      <stop offset="1" stop-color="#ffe09a" stop-opacity=".15"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b8fff1"/>
+      <stop offset=".48" stop-color="#50ddc3"/>
+      <stop offset="1" stop-color="#248cad"/>
+    </linearGradient>
+    <linearGradient id="node" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f586a"/>
+      <stop offset="1" stop-color="#0b2938"/>
+    </linearGradient>
+    <filter id="glow" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="smallGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#aura)"/>
+  <g fill="none" stroke="#6fa6b5" stroke-width="2" opacity=".14">
+    <path d="M66 154 C306 72 490 89 686 202"/>
+    <path d="M70 750 C296 825 494 798 690 686"/>
+    <path d="M1172 92 C1384 170 1502 303 1538 474"/>
+    <path d="M1170 808 C1370 736 1490 623 1538 470"/>
+  </g>
+  <g opacity=".35">
+    <path d="M84 368 C254 368 353 399 492 454 C578 488 647 494 739 468" fill="none" stroke="url(#pulse)" stroke-width="92"/>
+    <path d="M84 366 C260 366 372 405 501 454 C585 486 654 488 744 456" fill="none" stroke="#ffc66f" stroke-width="6"/>
+    <path d="M85 462 C249 462 354 448 490 464 C601 477 662 503 749 496" fill="none" stroke="#ff785f" stroke-width="4" opacity=".8"/>
+  </g>
+  <g transform="translate(130 282)">
+    <path d="M0 82 L142 0 L284 82 L284 246 L142 328 L0 246Z" fill="#241d28" stroke="#ff9a5d" stroke-opacity=".7" stroke-width="4"/>
+    <path d="M72 164 H212" stroke="#ffd47d" stroke-width="18" stroke-linecap="round"/>
+    <circle cx="77" cy="164" r="31" fill="#ff6358" opacity=".25" filter="url(#smallGlow)"/>
+    <circle cx="207" cy="164" r="31" fill="#ffb64f" opacity=".25" filter="url(#smallGlow)"/>
+    <circle cx="72" cy="164" r="13" fill="#ff6b5e"/>
+    <circle cx="212" cy="164" r="13" fill="#ffd07b"/>
+  </g>
+  <g opacity=".34" filter="url(#glow)" fill="none" stroke="#57e4c7" stroke-width="38">
+    <path d="M790 168 C625 260 610 629 790 732"/>
+    <path d="M866 127 C666 244 655 650 868 774"/>
+  </g>
+  <g fill="none" stroke-linecap="round">
+    <path d="M790 168 C625 260 610 629 790 732" stroke="url(#shield)" stroke-width="14"/>
+    <path d="M866 127 C666 244 655 650 868 774" stroke="url(#shield)" stroke-width="8" opacity=".72"/>
+    <path d="M927 103 C697 229 686 671 929 798" stroke="#79b9c8" stroke-width="4" opacity=".38"/>
+  </g>
+  <g stroke="#5fcfbe" stroke-opacity=".62" stroke-width="5" fill="none">
+    <path d="M1000 269 L1172 193 L1354 299 L1306 479 L1420 622"/>
+    <path d="M1000 269 L1058 462 L955 634 L1158 715 L1306 479"/>
+    <path d="M1058 462 L1306 479 L1354 299"/>
+    <path d="M955 634 L1306 479"/>
+    <path d="M1158 715 L1420 622"/>
+  </g>
+  <g fill="#58dbc4" opacity=".18" filter="url(#smallGlow)">
+    <circle cx="1000" cy="269" r="34"/><circle cx="1172" cy="193" r="34"/><circle cx="1354" cy="299" r="34"/>
+    <circle cx="1058" cy="462" r="34"/><circle cx="1306" cy="479" r="34"/><circle cx="955" cy="634" r="34"/>
+    <circle cx="1158" cy="715" r="34"/><circle cx="1420" cy="622" r="34"/>
+  </g>
+  <g fill="url(#node)" stroke="#9bf4e2" stroke-width="4">
+    <rect x="952" y="236" width="96" height="66" rx="15"/>
+    <rect x="1124" y="160" width="96" height="66" rx="15"/>
+    <rect x="1306" y="266" width="96" height="66" rx="15"/>
+    <rect x="1010" y="429" width="96" height="66" rx="15"/>
+    <rect x="1258" y="446" width="96" height="66" rx="15"/>
+    <rect x="907" y="601" width="96" height="66" rx="15"/>
+    <rect x="1110" y="682" width="96" height="66" rx="15"/>
+    <rect x="1372" y="589" width="96" height="66" rx="15"/>
+  </g>
+  <g fill="#baffef">
+    <circle cx="974" cy="269" r="5"/><circle cx="990" cy="269" r="5"/><circle cx="1006" cy="269" r="5"/>
+    <circle cx="1146" cy="193" r="5"/><circle cx="1162" cy="193" r="5"/><circle cx="1178" cy="193" r="5"/>
+    <circle cx="1330" cy="299" r="5"/><circle cx="1346" cy="299" r="5"/><circle cx="1362" cy="299" r="5"/>
+    <circle cx="1034" cy="462" r="5"/><circle cx="1050" cy="462" r="5"/><circle cx="1066" cy="462" r="5"/>
+    <circle cx="1282" cy="479" r="5"/><circle cx="1298" cy="479" r="5"/><circle cx="1314" cy="479" r="5"/>
+    <circle cx="931" cy="634" r="5"/><circle cx="947" cy="634" r="5"/><circle cx="963" cy="634" r="5"/>
+    <circle cx="1134" cy="715" r="5"/><circle cx="1150" cy="715" r="5"/><circle cx="1166" cy="715" r="5"/>
+    <circle cx="1396" cy="622" r="5"/><circle cx="1412" cy="622" r="5"/><circle cx="1428" cy="622" r="5"/>
+  </g>
+  <g fill="#dcfff7">
+    <circle cx="789" cy="211" r="6"/><circle cx="742" cy="318" r="5"/><circle cx="722" cy="449" r="7"/>
+    <circle cx="739" cy="581" r="5"/><circle cx="792" cy="689" r="6"/>
+  </g>
+  <rect x="34" y="34" width="1532" height="832" rx="42" fill="none" stroke="#a9dbe3" stroke-opacity=".12" stroke-width="2"/>
+</svg>
