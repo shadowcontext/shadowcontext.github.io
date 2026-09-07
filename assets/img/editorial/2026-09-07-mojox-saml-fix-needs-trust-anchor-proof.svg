@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Trust anchor protecting a SAML assertion path</title>
+  <desc id="desc">Abstract cyan trust anchor securing a luminous assertion path while an untrusted magenta certificate is diverted outside a protected boundary.</desc>
+  <defs>
+    <linearGradient id="bg" x1="130" y1="60" x2="1470" y2="840" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07182D"/>
+      <stop offset="0.52" stop-color="#0B2440"/>
+      <stop offset="1" stop-color="#160F30"/>
+    </linearGradient>
+    <radialGradient id="cyanGlow" cx="0" cy="0" r="1" gradientTransform="translate(846 440) rotate(90) scale(390 520)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#37E4DD" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#37E4DD" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="path" x1="250" y1="450" x2="1280" y2="450" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#77FFF3" stop-opacity="0.28"/>
+      <stop offset="0.48" stop-color="#77FFF3"/>
+      <stop offset="1" stop-color="#B4FFF7" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="anchor" x1="690" y1="270" x2="940" y2="670" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B9FFF9"/>
+      <stop offset="0.45" stop-color="#42DED8"/>
+      <stop offset="1" stop-color="#1885B3"/>
+    </linearGradient>
+    <linearGradient id="falseCert" x1="1190" y1="270" x2="1370" y2="470" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF77C8"/>
+      <stop offset="1" stop-color="#8F3BD1"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="36"/>
+    </filter>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" fill="none" stroke="#88AACA" stroke-opacity="0.065"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <ellipse cx="846" cy="440" rx="520" ry="390" fill="url(#cyanGlow)"/>
+  <circle cx="1330" cy="280" r="190" fill="#B22B9D" opacity="0.11" filter="url(#soft)"/>
+  <path d="M190 450C370 450 448 360 610 390C732 412 758 510 890 500C1030 490 1080 404 1218 412" fill="none" stroke="#173D5B" stroke-width="58" stroke-linecap="round"/>
+  <path d="M190 450C370 450 448 360 610 390C732 412 758 510 890 500C1030 490 1080 404 1218 412" fill="none" stroke="url(#path)" stroke-width="8" stroke-linecap="round" filter="url(#glow)"/>
+  <g opacity="0.9">
+    <rect x="208" y="382" width="148" height="136" rx="24" fill="#0C2942" stroke="#79FFF4" stroke-width="3"/>
+    <path d="M242 422H322M242 451H310M242 480H291" stroke="#A4FFF8" stroke-width="8" stroke-linecap="round" opacity="0.72"/>
+    <circle cx="326" cy="486" r="16" fill="#52E5DD"/>
+  </g>
+  <g transform="translate(636 225)" filter="url(#glow)">
+    <path d="M164 48C209 48 246 84 246 129C246 162 226 190 198 203V279H248V322H198C184 390 128 439 58 444V389C107 384 143 350 151 322H72V279H151V203C123 190 103 162 103 129C103 84 119 48 164 48Z" fill="url(#anchor)"/>
+    <circle cx="164" cy="129" r="43" fill="#09243B" stroke="#D4FFFB" stroke-width="9"/>
+    <path d="M164 172V337" stroke="#D4FFFB" stroke-width="13" stroke-linecap="round"/>
+    <path d="M98 357C116 390 136 405 164 414C192 405 212 390 230 357" fill="none" stroke="#D4FFFB" stroke-width="12" stroke-linecap="round"/>
+  </g>
+  <path d="M970 296C1066 220 1158 220 1242 282" fill="none" stroke="#F171C8" stroke-opacity="0.65" stroke-width="5" stroke-dasharray="14 18"/>
+  <path d="M1188 405C1118 407 1062 431 1010 474" fill="none" stroke="#F171C8" stroke-opacity="0.5" stroke-width="5" stroke-dasharray="14 18"/>
+  <g transform="rotate(10 1280 346)">
+    <rect x="1198" y="258" width="170" height="192" rx="25" fill="#23153E" stroke="url(#falseCert)" stroke-width="5"/>
+    <circle cx="1283" cy="326" r="34" fill="none" stroke="#FF8FD0" stroke-width="9"/>
+    <path d="M1237 387H1329M1254 417H1312" stroke="#DDA0F1" stroke-width="9" stroke-linecap="round" opacity="0.78"/>
+  </g>
+  <path d="M1138 242L1180 277L1137 311" fill="none" stroke="#FF8FD0" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M520 708C701 766 930 772 1110 704" fill="none" stroke="#5CEDE4" stroke-opacity="0.22" stroke-width="3"/>
+  <circle cx="520" cy="708" r="7" fill="#72FFF4"/>
+  <circle cx="1110" cy="704" r="7" fill="#72FFF4"/>
+</svg>
