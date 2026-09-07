@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Firmware assurance across video and radio components</title>
+  <desc id="desc">Abstract editorial artwork of a mobile device protecting a layered processor core, with floating video frames on one side and radio waves on the other.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07131f"/>
+      <stop offset="0.5" stop-color="#10283a"/>
+      <stop offset="1" stop-color="#060b15"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#30e1c2" stop-opacity="0.25"/>
+      <stop offset="0.55" stop-color="#1386a4" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#08121d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="device" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a4658"/>
+      <stop offset="0.5" stop-color="#0b2433"/>
+      <stop offset="1" stop-color="#06131f"/>
+    </linearGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a8fff0"/>
+      <stop offset="0.45" stop-color="#35d6c2"/>
+      <stop offset="1" stop-color="#176f8c"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffe19a"/>
+      <stop offset="0.5" stop-color="#ffb657"/>
+      <stop offset="1" stop-color="#d86b43"/>
+    </linearGradient>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" fill="none" stroke="#78d8d3" stroke-opacity="0.055"/>
+    </pattern>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <filter id="smallGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <ellipse cx="800" cy="454" rx="610" ry="430" fill="url(#aura)"/>
+
+  <g fill="none" stroke="#34889a" stroke-width="2" opacity="0.3">
+    <path d="M0 181C285 127 421 242 678 183S1198 144 1600 212"/>
+    <path d="M0 732C235 786 473 677 712 728S1234 786 1600 680"/>
+  </g>
+
+  <g transform="translate(128 275)">
+    <rect x="0" y="0" width="292" height="188" rx="18" fill="#0b2634" stroke="#3aa9ae" stroke-width="5"/>
+    <rect x="27" y="24" width="238" height="140" rx="10" fill="#102f3c" stroke="#78ded4" stroke-opacity="0.5" stroke-width="3"/>
+    <path d="M116 61L192 94L116 127Z" fill="url(#amber)"/>
+    <path d="M292 94H446" stroke="#f6b45d" stroke-width="10" stroke-linecap="round" opacity="0.8"/>
+    <circle cx="342" cy="94" r="7" fill="#ffdc8d"/>
+    <circle cx="405" cy="94" r="5" fill="#f3a552"/>
+  </g>
+
+  <g transform="translate(590 92)">
+    <rect x="0" y="0" width="420" height="716" rx="68" fill="url(#device)" stroke="#66dfd3" stroke-width="8"/>
+    <rect x="28" y="58" width="364" height="600" rx="40" fill="#071620" stroke="#256677" stroke-width="4"/>
+    <rect x="160" y="24" width="100" height="9" rx="5" fill="#66d9d0" opacity="0.62"/>
+    <circle cx="210" cy="684" r="13" fill="#0a1b25" stroke="#50b9bb" stroke-width="4"/>
+
+    <circle cx="210" cy="355" r="188" fill="#20ceb9" fill-opacity="0.11" filter="url(#glow)"/>
+    <path d="M210 168L344 245V465L210 542L76 465V245Z" fill="#092631" stroke="#278f9f" stroke-width="8"/>
+    <path d="M210 213L305 268V442L210 497L115 442V268Z" fill="#0b1b26" stroke="url(#core)" stroke-width="12"/>
+    <rect x="155" y="300" width="110" height="110" rx="18" fill="url(#core)"/>
+    <rect x="176" y="321" width="68" height="68" rx="10" fill="#08202b" stroke="#c0fff3" stroke-width="5"/>
+    <path d="M194 355L207 369L230 341" fill="none" stroke="#8effe9" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <g stroke="#5fdace" stroke-width="7" stroke-linecap="round">
+      <path d="M155 283V252M210 283V243M265 283V252"/>
+      <path d="M155 427V458M210 427V467M265 427V458"/>
+      <path d="M138 310H107M138 355H98M138 400H107"/>
+      <path d="M282 310H313M282 355H322M282 400H313"/>
+    </g>
+  </g>
+
+  <g transform="translate(1080 240)" fill="none" stroke-linecap="round">
+    <path d="M0 210H102" stroke="#53d7cf" stroke-width="10" opacity="0.8"/>
+    <circle cx="44" cy="210" r="7" fill="#8ff4e5" stroke="none"/>
+    <path d="M139 210C139 161 178 122 227 122" stroke="#ffbd61" stroke-width="12"/>
+    <path d="M139 210C139 113 218 34 315 34" stroke="#ee9254" stroke-width="11" opacity="0.85"/>
+    <path d="M139 210C139 259 178 298 227 298" stroke="#ffbd61" stroke-width="12"/>
+    <path d="M139 210C139 307 218 386 315 386" stroke="#ee9254" stroke-width="11" opacity="0.85"/>
+    <circle cx="139" cy="210" r="22" fill="url(#amber)" stroke="#ffe2a0" stroke-width="5" filter="url(#smallGlow)"/>
+  </g>
+
+  <g fill="#70ddd4" opacity="0.38">
+    <circle cx="238" cy="178" r="6"/>
+    <circle cx="421" cy="702" r="5"/>
+    <circle cx="1175" cy="142" r="7"/>
+    <circle cx="1406" cy="700" r="6"/>
+    <circle cx="1290" cy="786" r="4"/>
+  </g>
+</svg>
