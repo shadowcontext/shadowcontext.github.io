@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Security gate restricting file transfer in a remote session</title>
+  <desc id="desc">An abstract remote-support connection flows between two dark glass panels through a luminous cyan gate, while an amber file is held outside the protected channel.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="0.48" stop-color="#112d3c"/>
+      <stop offset="1" stop-color="#07131d"/>
+    </linearGradient>
+    <radialGradient id="aura">
+      <stop offset="0" stop-color="#49e5dd" stop-opacity="0.32"/>
+      <stop offset="0.55" stop-color="#27a9bc" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#07131d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#214b5e" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#0a1d2b" stop-opacity="0.94"/>
+    </linearGradient>
+    <linearGradient id="gate" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#148ba2" stop-opacity="0.35"/>
+      <stop offset="0.5" stop-color="#8afff4" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#148ba2" stop-opacity="0.35"/>
+    </linearGradient>
+    <linearGradient id="file" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd07c"/>
+      <stop offset="1" stop-color="#df7a35"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="35"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <ellipse cx="800" cy="450" rx="630" ry="410" fill="url(#aura)"/>
+  <g fill="none" stroke="#7bcbd4" stroke-width="2" opacity="0.14">
+    <path d="M0 182 C265 95 424 251 665 182 S1115 90 1600 194"/>
+    <path d="M0 704 C282 638 445 785 728 710 S1238 633 1600 716"/>
+    <path d="M184 0 C272 234 148 498 235 900"/>
+    <path d="M1412 0 C1323 236 1452 511 1368 900"/>
+  </g>
+  <g>
+    <rect x="180" y="230" width="470" height="440" rx="48" fill="url(#panel)" stroke="#35778a" stroke-width="4"/>
+    <rect x="950" y="230" width="470" height="440" rx="48" fill="url(#panel)" stroke="#35778a" stroke-width="4"/>
+    <circle cx="240" cy="286" r="11" fill="#55e3da"/>
+    <circle cx="1009" cy="286" r="11" fill="#55e3da"/>
+    <g stroke="#78d9df" stroke-width="12" stroke-linecap="round" opacity="0.55">
+      <path d="M245 350 H476"/><path d="M245 402 H552"/><path d="M245 566 H406"/>
+      <path d="M1015 350 H1246"/><path d="M1015 402 H1321"/><path d="M1015 566 H1176"/>
+    </g>
+    <g fill="#153849" stroke="#5caeb9" stroke-width="3">
+      <rect x="245" y="456" width="116" height="62" rx="18"/>
+      <rect x="379" y="456" width="116" height="62" rx="18"/>
+      <rect x="513" y="456" width="72" height="62" rx="18"/>
+      <rect x="1015" y="456" width="116" height="62" rx="18"/>
+      <rect x="1149" y="456" width="116" height="62" rx="18"/>
+      <rect x="1283" y="456" width="72" height="62" rx="18"/>
+    </g>
+  </g>
+  <path d="M620 450 C692 390 724 390 800 450 C876 510 908 510 980 450" fill="none" stroke="#4ce3dc" stroke-width="18" stroke-linecap="round" opacity="0.42" filter="url(#glow)"/>
+  <path d="M620 450 C692 390 724 390 800 450 C876 510 908 510 980 450" fill="none" stroke="#b4fff8" stroke-width="5" stroke-linecap="round"/>
+  <g filter="url(#glow)">
+    <path d="M768 185 L832 185 L875 258 L875 642 L832 715 L768 715 L725 642 L725 258 Z" fill="url(#gate)" stroke="#8afff4" stroke-width="5"/>
+    <path d="M800 324 C749 324 710 363 710 414 V462 C710 524 748 572 800 593 C852 572 890 524 890 462 V414 C890 363 851 324 800 324 Z" fill="#0a2836" stroke="#c2fff8" stroke-width="7"/>
+    <path d="M767 442 L791 466 L840 414" fill="none" stroke="#72f3e8" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(560 282) rotate(-8 70 88)" filter="url(#glow)">
+    <path d="M12 0 H94 L140 46 V176 H12 Z" fill="url(#file)" stroke="#ffe0a6" stroke-width="5"/>
+    <path d="M94 0 V46 H140" fill="#ad5d31" stroke="#ffe0a6" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M42 85 H108 M42 119 H96" stroke="#5c342d" stroke-width="11" stroke-linecap="round" opacity="0.72"/>
+  </g>
+  <path d="M665 370 C702 387 710 410 714 438" fill="none" stroke="#f4a14d" stroke-width="10" stroke-linecap="round"/>
+  <path d="M695 432 L716 458 L729 427" fill="#ffbe63"/>
+  <g fill="#5ce9df" opacity="0.8">
+    <circle cx="670" cy="637" r="8"/><circle cx="700" cy="670" r="5"/><circle cx="930" cy="637" r="8"/><circle cx="900" cy="670" r="5"/>
+  </g>
+  <ellipse cx="800" cy="754" rx="380" ry="42" fill="#2bd6d2" opacity="0.18" filter="url(#soft)"/>
+</svg>
