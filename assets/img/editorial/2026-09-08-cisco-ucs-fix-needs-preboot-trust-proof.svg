@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Layered pre-boot protection around a server chassis</title>
+  <desc id="desc">An abstract editorial illustration of a dark server chassis beneath layered cyan and amber shields, with a luminous verified firmware path passing through the protected boot boundary.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071525"/>
+      <stop offset="0.52" stop-color="#102b3c"/>
+      <stop offset="1" stop-color="#071018"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="46%" r="55%">
+      <stop offset="0" stop-color="#2bd9d0" stop-opacity="0.28"/>
+      <stop offset="0.55" stop-color="#187a8c" stop-opacity="0.09"/>
+      <stop offset="1" stop-color="#071018" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#8df8ed" stop-opacity="0.95"/>
+      <stop offset="0.52" stop-color="#24c9cf" stop-opacity="0.56"/>
+      <stop offset="1" stop-color="#08738f" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd887"/>
+      <stop offset="1" stop-color="#f58b3a"/>
+    </linearGradient>
+    <linearGradient id="server" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#29455a"/>
+      <stop offset="1" stop-color="#0b1d2c"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="14" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#77d9dc" stroke-opacity="0.065" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <ellipse cx="800" cy="410" rx="650" ry="450" fill="url(#halo)"/>
+  <path d="M125 690C360 610 500 654 665 730S1045 807 1475 650" fill="none" stroke="#5ee6df" stroke-opacity="0.16" stroke-width="2"/>
+  <path d="M186 745C434 670 548 716 706 779S1096 835 1418 718" fill="none" stroke="#f5a34c" stroke-opacity="0.13" stroke-width="2"/>
+
+  <g opacity="0.5">
+    <circle cx="263" cy="244" r="5" fill="#7deee5"/>
+    <circle cx="1333" cy="250" r="5" fill="#7deee5"/>
+    <circle cx="1410" cy="555" r="4" fill="#ffbd69"/>
+    <circle cx="183" cy="542" r="4" fill="#ffbd69"/>
+    <path d="M263 244L454 317M1333 250l-188 66M1410 555l-202 44M183 542l206 52" stroke="#7deee5" stroke-opacity="0.27" stroke-width="2"/>
+  </g>
+
+  <g transform="translate(0 12)">
+    <path d="M800 105c112 72 220 100 337 112v174c0 179-103 300-337 391-234-91-337-212-337-391V217c117-12 225-40 337-112Z" fill="#071727" stroke="#4bdad8" stroke-opacity="0.28" stroke-width="4"/>
+    <path d="M800 151c91 58 179 81 274 91v142c0 145-84 243-274 317-190-74-274-172-274-317V242c95-10 183-33 274-91Z" fill="url(#shield)" fill-opacity="0.13" stroke="url(#shield)" stroke-width="7"/>
+    <path d="M800 201c67 42 132 60 202 67v107c0 109-62 182-202 238-140-56-202-129-202-238V268c70-7 135-25 202-67Z" fill="#0b2435" stroke="#69e8df" stroke-opacity="0.42" stroke-width="3"/>
+  </g>
+
+  <g transform="translate(548 361)">
+    <rect x="0" y="0" width="504" height="214" rx="28" fill="#06131f" stroke="#85eee5" stroke-opacity="0.35" stroke-width="3"/>
+    <rect x="22" y="22" width="460" height="48" rx="11" fill="url(#server)"/>
+    <rect x="22" y="83" width="460" height="48" rx="11" fill="url(#server)"/>
+    <rect x="22" y="144" width="460" height="48" rx="11" fill="url(#server)"/>
+    <g fill="#4ee2da">
+      <circle cx="54" cy="46" r="7"/><circle cx="54" cy="107" r="7"/><circle cx="54" cy="168" r="7"/>
+    </g>
+    <g fill="#b8d5db" opacity="0.44">
+      <rect x="84" y="38" width="225" height="16" rx="5"/><rect x="84" y="99" width="225" height="16" rx="5"/><rect x="84" y="160" width="225" height="16" rx="5"/>
+    </g>
+    <g fill="#173447" stroke="#5fcfce" stroke-opacity="0.35">
+      <rect x="337" y="36" width="55" height="20" rx="4"/><rect x="405" y="36" width="55" height="20" rx="4"/>
+      <rect x="337" y="97" width="55" height="20" rx="4"/><rect x="405" y="97" width="55" height="20" rx="4"/>
+      <rect x="337" y="158" width="55" height="20" rx="4"/><rect x="405" y="158" width="55" height="20" rx="4"/>
+    </g>
+  </g>
+
+  <g filter="url(#glow)">
+    <path d="M800 690V618" stroke="#ffbb63" stroke-width="9" stroke-linecap="round"/>
+    <path d="M800 342V270" stroke="#70eee5" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="800" cy="324" r="34" fill="#0a2231" stroke="url(#amber)" stroke-width="8"/>
+    <path d="m785 324 11 12 23-28" fill="none" stroke="#ffd27c" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g opacity="0.75">
+    <path d="M668 667h264" stroke="#67e5dd" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="704" cy="667" r="8" fill="#67e5dd"/><circle cx="800" cy="667" r="8" fill="#ffbd69"/><circle cx="896" cy="667" r="8" fill="#67e5dd"/>
+    <path d="M704 667v46M800 667v68M896 667v46" stroke="#67e5dd" stroke-opacity="0.45" stroke-width="2"/>
+  </g>
+</svg>
