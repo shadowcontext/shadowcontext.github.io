@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Mail-event trails crossing an update gate toward a protected server core</title>
+  <desc id="desc">Abstract editorial image of luminous mail-event trails passing through a segmented teal and amber update gate before reaching a protected hosting server core.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071521"/>
+      <stop offset="0.54" stop-color="#102d3c"/>
+      <stop offset="1" stop-color="#09131f"/>
+    </linearGradient>
+    <radialGradient id="field" cx="70%" cy="48%" r="48%">
+      <stop offset="0" stop-color="#39c9c4" stop-opacity="0.24"/>
+      <stop offset="0.55" stop-color="#247d88" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#071521" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="trail" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#23909c" stop-opacity="0"/>
+      <stop offset="0.52" stop-color="#52dbd4" stop-opacity="0.78"/>
+      <stop offset="1" stop-color="#d8fff7"/>
+    </linearGradient>
+    <linearGradient id="gate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe1a1"/>
+      <stop offset="0.48" stop-color="#e69d43"/>
+      <stop offset="1" stop-color="#744725"/>
+    </linearGradient>
+    <linearGradient id="server" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b7fff5"/>
+      <stop offset="0.42" stop-color="#35bfc0"/>
+      <stop offset="1" stop-color="#164764"/>
+    </linearGradient>
+    <pattern id="grain" width="50" height="50" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="10" r="1" fill="#c8f7f2" opacity="0.06"/>
+      <circle cx="36" cy="28" r="1.3" fill="#f7c873" opacity="0.05"/>
+      <circle cx="18" cy="43" r="0.8" fill="#81d8dc" opacity="0.06"/>
+    </pattern>
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="blur"><feGaussianBlur stdDeviation="28"/></filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#grain)"/>
+  <ellipse cx="1110" cy="430" rx="610" ry="440" fill="url(#field)" filter="url(#blur)"/>
+
+  <g fill="none" stroke="#76bdc6" opacity="0.14">
+    <path d="M70 132 C390 132 482 250 690 300"/>
+    <path d="M70 768 C390 768 482 650 690 600"/>
+    <path d="M1530 130 C1280 178 1262 276 1190 340"/>
+    <path d="M1530 770 C1280 722 1262 624 1190 560"/>
+  </g>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M-80 246 C240 230 395 270 625 362" stroke="url(#trail)" stroke-width="28" opacity="0.72"/>
+    <path d="M-80 450 C236 450 422 450 625 450" stroke="url(#trail)" stroke-width="32" opacity="0.78"/>
+    <path d="M-80 654 C240 670 395 630 625 538" stroke="url(#trail)" stroke-width="28" opacity="0.72"/>
+    <path d="M60 244 C287 246 427 296 622 373" stroke="#c9fff5" stroke-width="3" opacity="0.84"/>
+    <path d="M55 450 C288 450 430 450 622 450" stroke="#c9fff5" stroke-width="3" opacity="0.9"/>
+    <path d="M60 656 C287 654 427 604 622 527" stroke="#c9fff5" stroke-width="3" opacity="0.84"/>
+  </g>
+
+  <g opacity="0.82" fill="none" stroke="#7ce5dd" stroke-width="4">
+    <path d="M180 194 258 194 258 246 219 273 180 246Z"/>
+    <path d="m182 198 37 29 37-29"/>
+    <path d="M343 396 421 396 421 448 382 475 343 448Z"/>
+    <path d="m345 400 37 29 37-29"/>
+    <path d="M215 586 293 586 293 638 254 665 215 638Z"/>
+    <path d="m217 590 37 29 37-29"/>
+  </g>
+
+  <g transform="translate(760 450)">
+    <ellipse rx="186" ry="286" fill="#081a26" stroke="#3d9eaa" stroke-width="3" opacity="0.9"/>
+    <path d="M-62-270 C-13-283 13-283 62-270 L62-92 C25-105-25-105-62-92Z" fill="url(#gate)"/>
+    <path d="M-62-68 C-19-80 19-80 62-68 L62 68 C19 80-19 80-62 68Z" fill="url(#gate)"/>
+    <path d="M-62 92 C-25 105 25 105 62 92 L62 270 C13 283-13 283-62 270Z" fill="url(#gate)"/>
+    <path d="M-16-244 16-244 16-128-16-128Z" fill="#fff0c2" opacity="0.9"/>
+    <path d="M-16-48 16-48 16 48-16 48Z" fill="#fff0c2" opacity="0.9"/>
+    <path d="M-16 128 16 128 16 244-16 244Z" fill="#fff0c2" opacity="0.9"/>
+  </g>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M824 362 C930 322 990 328 1050 365" stroke="#f1ba64" stroke-width="16" opacity="0.38"/>
+    <path d="M824 450 C928 450 980 450 1043 450" stroke="#f1ba64" stroke-width="16" opacity="0.42"/>
+    <path d="M824 538 C930 578 990 572 1050 535" stroke="#f1ba64" stroke-width="16" opacity="0.38"/>
+    <path d="M824 362 C930 322 990 328 1050 365" stroke="#ffe4a3" stroke-width="3" opacity="0.9"/>
+    <path d="M824 450 C928 450 980 450 1043 450" stroke="#ffe4a3" stroke-width="3" opacity="0.92"/>
+    <path d="M824 538 C930 578 990 572 1050 535" stroke="#ffe4a3" stroke-width="3" opacity="0.9"/>
+  </g>
+
+  <g transform="translate(1190 450)" filter="url(#softGlow)">
+    <path d="M0-202 172-104 172 104 0 202-172 104-172-104Z" fill="#0b2635" stroke="#58d4d0" stroke-width="5"/>
+    <path d="M0-150 126-76 126 76 0 150-126 76-126-76Z" fill="url(#server)" stroke="#c9fff5" stroke-width="3"/>
+    <rect x="-75" y="-79" width="150" height="45" rx="8" fill="#0a293b" opacity="0.9"/>
+    <rect x="-75" y="-22" width="150" height="45" rx="8" fill="#0a293b" opacity="0.9"/>
+    <rect x="-75" y="35" width="150" height="45" rx="8" fill="#0a293b" opacity="0.9"/>
+    <circle cx="48" cy="-56" r="7" fill="#ffe2a0"/>
+    <circle cx="48" cy="0" r="7" fill="#88eee5"/>
+    <circle cx="48" cy="57" r="7" fill="#88eee5"/>
+  </g>
+
+  <g fill="#c7fff5" opacity="0.7">
+    <circle cx="520" cy="321" r="4"/><circle cx="548" cy="450" r="5"/><circle cx="518" cy="580" r="4"/>
+    <circle cx="933" cy="334" r="4"/><circle cx="946" cy="450" r="5"/><circle cx="933" cy="566" r="4"/>
+  </g>
+  <g fill="#f7c777" opacity="0.75">
+    <circle cx="684" cy="191" r="4"/><circle cx="837" cy="676" r="3"/><circle cx="1407" cy="350" r="4"/>
+  </g>
+  <path d="M0 821 C305 786 535 851 800 828 C1087 803 1300 850 1600 810 L1600 900 0 900Z" fill="#06111b" opacity="0.72"/>
+</svg>
