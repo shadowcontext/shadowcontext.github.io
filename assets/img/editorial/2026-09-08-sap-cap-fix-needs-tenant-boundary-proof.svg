@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Guarded tenant extension boundary</title>
+  <desc id="desc">Abstract editorial artwork showing separated tenant chambers orbiting a guarded extension gateway inside layered blue and amber security fields.</desc>
+  <defs>
+    <linearGradient id="bg" x1="90" y1="40" x2="1510" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07162E"/>
+      <stop offset="0.55" stop-color="#102F51"/>
+      <stop offset="1" stop-color="#07111F"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="0" cy="0" r="1" gradientTransform="translate(800 450) rotate(90) scale(350 500)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#31C9CE" stop-opacity="0.25"/>
+      <stop offset="0.62" stop-color="#2789B7" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#07162E" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gate" x1="665" y1="260" x2="940" y2="650" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#51E2D2"/>
+      <stop offset="0.5" stop-color="#1689B4"/>
+      <stop offset="1" stop-color="#0B416F"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFD37B"/>
+      <stop offset="1" stop-color="#E88435"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <path d="M0 681C215 588 348 700 561 631C802 553 968 654 1171 600C1356 551 1471 579 1600 518V900H0Z" fill="#0B233C"/>
+  <ellipse cx="800" cy="450" rx="520" ry="366" fill="url(#aura)"/>
+  <ellipse cx="800" cy="450" rx="426" ry="294" fill="none" stroke="#72DAD6" stroke-opacity="0.17" stroke-width="2"/>
+  <ellipse cx="800" cy="450" rx="334" ry="232" fill="none" stroke="#72DAD6" stroke-opacity="0.28" stroke-width="2" stroke-dasharray="8 18"/>
+
+  <g opacity="0.95">
+    <path d="M280 232L443 190L566 282L531 446L369 488L246 396Z" fill="#0D2C4C" stroke="#42BFC6" stroke-width="3"/>
+    <path d="M302 250L440 215L543 292L514 428L377 463L273 386Z" fill="#123B60"/>
+    <circle cx="408" cy="338" r="62" fill="#1A5075" stroke="#7BE4DA" stroke-opacity="0.62" stroke-width="3"/>
+    <circle cx="408" cy="338" r="20" fill="#7BE4DA" fill-opacity="0.72"/>
+  </g>
+  <g opacity="0.95">
+    <path d="M1034 282L1157 190L1320 232L1354 396L1231 488L1069 446Z" fill="#0D2C4C" stroke="#42BFC6" stroke-width="3"/>
+    <path d="M1057 292L1160 215L1298 250L1327 386L1223 463L1086 428Z" fill="#123B60"/>
+    <circle cx="1192" cy="338" r="62" fill="#1A5075" stroke="#7BE4DA" stroke-opacity="0.62" stroke-width="3"/>
+    <circle cx="1192" cy="338" r="20" fill="#7BE4DA" fill-opacity="0.72"/>
+  </g>
+  <g opacity="0.95">
+    <path d="M371 550L514 478L654 550L654 708L514 780L371 708Z" fill="#0C2948" stroke="#368EAE" stroke-width="3"/>
+    <path d="M400 570L514 512L625 570L625 687L514 745L400 687Z" fill="#123A5D"/>
+    <circle cx="514" cy="628" r="53" fill="#194F73" stroke="#6AD6D2" stroke-opacity="0.55" stroke-width="3"/>
+  </g>
+  <g opacity="0.95">
+    <path d="M946 550L1086 478L1229 550L1229 708L1086 780L946 708Z" fill="#0C2948" stroke="#368EAE" stroke-width="3"/>
+    <path d="M975 570L1086 512L1200 570L1200 687L1086 745L975 687Z" fill="#123A5D"/>
+    <circle cx="1086" cy="628" r="53" fill="#194F73" stroke="#6AD6D2" stroke-opacity="0.55" stroke-width="3"/>
+  </g>
+
+  <g fill="none" stroke="#58D7D2" stroke-width="5" stroke-linecap="round" opacity="0.65">
+    <path d="M520 356C610 374 641 391 682 420"/>
+    <path d="M1080 356C990 374 959 391 918 420"/>
+    <path d="M612 588C660 550 681 523 700 492"/>
+    <path d="M988 588C940 550 919 523 900 492"/>
+  </g>
+  <g fill="#FFD27A" filter="url(#glow)">
+    <circle cx="650" cy="397" r="7"/>
+    <circle cx="950" cy="397" r="7"/>
+    <circle cx="678" cy="531" r="7"/>
+    <circle cx="922" cy="531" r="7"/>
+  </g>
+
+  <circle cx="800" cy="450" r="178" fill="#0A203A" stroke="#2B6F92" stroke-width="12"/>
+  <circle cx="800" cy="450" r="143" fill="none" stroke="#68E0D6" stroke-opacity="0.32" stroke-width="3" stroke-dasharray="5 12"/>
+  <path d="M800 284C849 324 900 337 934 342V454C934 539 879 608 800 638C721 608 666 539 666 454V342C700 337 751 324 800 284Z" fill="url(#gate)" stroke="#A3F5E8" stroke-width="4"/>
+  <path d="M800 322C835 348 870 359 896 364V451C896 513 858 563 800 590C742 563 704 513 704 451V364C730 359 765 348 800 322Z" fill="#082844" fill-opacity="0.82"/>
+  <rect x="766" y="413" width="68" height="92" rx="20" fill="url(#amber)" filter="url(#glow)"/>
+  <path d="M778 413V386C778 356 822 356 822 386V413" fill="none" stroke="#FFD98B" stroke-width="15" stroke-linecap="round"/>
+  <circle cx="800" cy="451" r="10" fill="#102B45"/>
+  <path d="M800 460V478" stroke="#102B45" stroke-width="8" stroke-linecap="round"/>
+
+  <g opacity="0.65">
+    <circle cx="156" cy="156" r="4" fill="#65D8D1"/>
+    <circle cx="1434" cy="170" r="5" fill="#65D8D1"/>
+    <circle cx="1451" cy="678" r="4" fill="#F4B657"/>
+    <circle cx="174" cy="711" r="5" fill="#F4B657"/>
+    <path d="M90 514H222" stroke="#3A7898" stroke-width="2"/>
+    <path d="M1378 514H1510" stroke="#3A7898" stroke-width="2"/>
+  </g>
+  <ellipse cx="800" cy="750" rx="278" ry="38" fill="#000A13" opacity="0.38" filter="url(#soft)"/>
+</svg>
