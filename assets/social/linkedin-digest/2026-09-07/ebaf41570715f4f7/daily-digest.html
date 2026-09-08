@@ -1,0 +1,850 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Daily Security Digest: Vulnerability Fixes Across Seven Defensive Domains | ShadowContext</title>
+    <style>
+      :root {
+        --paper: #05080d;
+        --panel: #0d1319;
+        --panel-soft: #091017;
+        --ink: #f1f7fa;
+        --ink-2: #c4d1d8;
+        --muted: #8496a1;
+        --line: #1d2b34;
+        --cyan: #35e6d1;
+        --violet: #8b7dff;
+        --sans: "Space Grotesk", Inter, Arial, sans-serif;
+        --mono: "DM Mono", Consolas, monospace;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: var(--sans);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        font-size: 10.5pt;
+        line-height: 1.55;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        position: relative;
+        width: 210mm;
+        min-height: 297mm;
+        padding: 18mm;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 83% 18%, rgba(139, 125, 255, 0.1), transparent 28%),
+          linear-gradient(145deg, #05080d 0%, #081017 62%, #0c101c 100%);
+      }
+
+      .page::before {
+        content: "";
+        position: absolute;
+        inset: 8mm;
+        pointer-events: none;
+        border: 0.25mm solid var(--line);
+      }
+
+      .cover {
+        display: flex;
+        flex-direction: column;
+        page-break-after: always;
+      }
+
+      .brand-row,
+      .section-head,
+      .document-footer {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 4mm;
+        font-size: 20pt;
+        font-weight: 750;
+        letter-spacing: -0.04em;
+      }
+
+      .brand em {
+        color: var(--cyan);
+        font-style: normal;
+      }
+
+      .brand-mark {
+        position: relative;
+        display: block;
+        width: 12mm;
+        height: 12mm;
+        transform: rotate(30deg);
+        border: 1mm solid var(--cyan);
+        border-radius: 1.2mm;
+      }
+
+      .brand-mark::before {
+        content: "";
+        position: absolute;
+        inset: 2.2mm;
+        border: 0.8mm solid var(--violet);
+        border-radius: 0.9mm;
+      }
+
+      .brand-mark::after {
+        content: "";
+        position: absolute;
+        inset: 4.5mm;
+        background: var(--cyan);
+        border-radius: 0.5mm;
+      }
+
+      .edition,
+      .eyebrow,
+      .topic,
+      .section-count,
+      .why span,
+      .document-footer,
+      .source-link {
+        font-family: var(--mono);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .edition,
+      .section-count,
+      .document-footer {
+        color: var(--muted);
+        font-size: 8pt;
+      }
+
+      .cover-copy {
+        position: relative;
+        z-index: 1;
+        margin: 30mm 0 0;
+      }
+
+      .eyebrow {
+        margin: 0 0 7mm;
+        color: var(--cyan);
+        font-size: 10pt;
+      }
+
+      h1 {
+        max-width: 165mm;
+        margin: 0;
+        font-size: 37pt;
+        line-height: 1.03;
+        letter-spacing: -0.05em;
+      }
+
+      .dek {
+        max-width: 155mm;
+        margin: 10mm 0 0;
+        color: var(--ink-2);
+        font-size: 16pt;
+        line-height: 1.45;
+      }
+
+      .context {
+        position: relative;
+        z-index: 1;
+        margin-top: auto;
+        padding: 9mm;
+        background: rgba(13, 19, 25, 0.94);
+        border: 0.3mm solid var(--line);
+        border-left: 1mm solid var(--violet);
+      }
+
+      .context h2,
+      .section-head h2,
+      .operating-view h2,
+      .sources h2 {
+        margin: 0;
+      }
+
+      .context h2 {
+        color: var(--violet);
+        font-family: var(--mono);
+        font-size: 9pt;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .context p {
+        margin: 4mm 0 0;
+        color: var(--ink-2);
+        font-size: 13pt;
+      }
+
+      .cover-meta {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 9mm;
+        color: var(--muted);
+        font: 8pt var(--mono);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .content {
+        padding-top: 15mm;
+        padding-bottom: 18mm;
+      }
+
+      .section-head {
+        margin-bottom: 9mm;
+        padding-bottom: 5mm;
+        border-bottom: 0.3mm solid var(--line);
+      }
+
+      .section-head h2 {
+        font-size: 23pt;
+      }
+
+      .stories {
+        position: relative;
+        z-index: 1;
+      }
+
+      .story {
+        display: grid;
+        grid-template-columns: 15mm 1fr;
+        gap: 5mm;
+        margin: 0 0 6mm;
+        padding: 7mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: rgba(13, 19, 25, 0.96);
+        border: 0.3mm solid var(--line);
+      }
+
+      .story-index {
+        color: var(--cyan);
+        font: 12pt var(--mono);
+      }
+
+      .topic {
+        margin: 0 0 2mm;
+        color: var(--cyan);
+        font-size: 7.5pt;
+      }
+
+      .story h3 {
+        margin: 0;
+        font-size: 16pt;
+        line-height: 1.18;
+        letter-spacing: -0.025em;
+      }
+
+      .summary {
+        margin: 3mm 0;
+        color: var(--ink-2);
+        font-size: 10.5pt;
+      }
+
+      .why {
+        padding-top: 3mm;
+        border-top: 0.25mm solid var(--line);
+      }
+
+      .why span {
+        color: var(--violet);
+        font-size: 7pt;
+      }
+
+      .why p {
+        display: inline;
+        margin: 0 0 0 2mm;
+        font-weight: 650;
+      }
+
+      .source-link {
+        display: inline-block;
+        margin-top: 4mm;
+        color: var(--cyan);
+        font-size: 6.8pt;
+        letter-spacing: 0.04em;
+        text-transform: none;
+      }
+
+      .operating-view,
+      .sources {
+        position: relative;
+        z-index: 1;
+        margin-top: 12mm;
+        padding: 9mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: var(--panel-soft);
+        border: 0.3mm solid var(--line);
+      }
+
+      .operating-view {
+        border-top: 1mm solid var(--cyan);
+      }
+
+      .operating-view h2,
+      .sources h2 {
+        font-size: 18pt;
+      }
+
+      .operating-view > p {
+        color: var(--ink-2);
+        font-size: 12pt;
+      }
+
+      .watch-list,
+      .source-list {
+        margin: 6mm 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .watch-list li {
+        display: grid;
+        grid-template-columns: 9mm 1fr;
+        gap: 4mm;
+        align-items: start;
+        margin: 3mm 0;
+      }
+
+      .watch-list span {
+        display: grid;
+        width: 8mm;
+        height: 8mm;
+        place-items: center;
+        color: var(--cyan);
+        border: 0.3mm solid var(--cyan);
+        font: 8pt var(--mono);
+      }
+
+      .watch-list p {
+        margin: 0;
+      }
+
+      .source-list li {
+        display: grid;
+        grid-template-columns: 10mm 1fr;
+        gap: 3mm;
+        margin: 2.5mm 0;
+        color: var(--ink-2);
+        font-size: 8.5pt;
+      }
+
+      .source-list span {
+        color: var(--violet);
+        font-family: var(--mono);
+      }
+
+      .source-list a {
+        color: var(--cyan);
+        text-decoration: underline;
+        text-decoration-color: rgba(53, 230, 209, 0.35);
+        text-underline-offset: 1mm;
+      }
+
+      .cta {
+        position: relative;
+        z-index: 1;
+        margin: 12mm 0 0;
+        padding: 7mm 9mm;
+        break-inside: avoid;
+        color: #04100f;
+        background: var(--cyan);
+      }
+
+      .cta strong {
+        display: block;
+        font-size: 14pt;
+      }
+
+      .cta span {
+        font: 9pt var(--mono);
+      }
+
+      .document-footer {
+        margin-top: 12mm;
+        padding-top: 5mm;
+        border-top: 0.3mm solid var(--line);
+      }
+
+      @media screen {
+        body {
+          width: 210mm;
+          margin: 0 auto;
+        }
+
+        .page {
+          box-shadow: 0 0 20mm rgba(0, 0, 0, 0.45);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="page cover">
+      <header class="brand-row">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Shadow<em>Context</em></span>
+        </div>
+        <span class="edition">Daily security digest</span>
+      </header>
+
+      <main class="cover-copy">
+        <p class="eyebrow">The day in context / 2026-09-07</p>
+        <h1>Daily Security Digest: Vulnerability Fixes Across Seven Defensive Domains</h1>
+        <p class="dek">September 7 defense updates cover image parsers, authentication bindings, environment parity, spreadsheet intake, query-level authorization, and component-level proofs.</p>
+      </main>
+
+      <aside class="context">
+        <h2>Executive summary</h2>
+        <p>Defenders face multiple September 7 disclosures spanning image parsing, authentication, environment parity, file intake, query authorization, and path boundaries. Operators must verify runtime versions, test security invariants, and enforce rigorous trust boundaries across every active layer.</p>
+      </aside>
+
+      <div class="cover-meta">
+        <span>20 briefings included</span>
+        <span>https://shadowcontext.com/</span>
+      </div>
+    </section>
+
+    <section class="page content">
+      <header class="section-head">
+        <h2>All news from the day</h2>
+        <span class="section-count">20 / 2026-09-07</span>
+      </header>
+
+      <main class="stories">
+    <article class="story">
+      <div class="story-index">01</div>
+      <div class="story-copy">
+        <p class="topic">Image Processing</p>
+        <h3>libheif 1.23.4 Fixes Image Pipeline Availability</h3>
+        <p class="summary">libheif 1.23.4 addresses three high-severity availability flaws involving quadratic consumption, stack exhaustion, and deadlock during parallel decoding.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Untrusted images can consume resources before decoding starts.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/libheif-fixes-need-image-pipeline-boundaries/">libheif 1.23.4 fixes demand image-pipeline boundaries ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">02</div>
+      <div class="story-copy">
+        <p class="topic">Authentication Security</p>
+        <h3>Authen-SASL Replay Fix Enforces Challenge Binding</h3>
+        <p class="summary">CVE-2026-86219 fixes a DIGEST-MD5 replay weakness in Authen-SASL by ensuring servers verify the nonce returned in client responses.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Unbound challenges permit session replay without passwords.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/authen-sasl-replay-fix-needs-challenge-binding/">Authen-SASL Replay Fix Makes Challenge Binding the Test ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">03</div>
+      <div class="story-copy">
+        <p class="topic">AI Security</p>
+        <h3>OpenMAIC Fix Requires Strict Environment Parity</h3>
+        <p class="summary">CVE-2026-86259 closes an SSRF vulnerability where outbound URL validation and authentication skipped checks outside production environments.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Non-production labels must never silently weaken security boundaries.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/openmaic-fix-needs-environment-parity/">OpenMAIC Fix Makes Environment Parity a Security Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">04</div>
+      <div class="story-copy">
+        <p class="topic">Resource Management</p>
+        <h3>Excelize Flaw Turns Spreadsheet Intake into Boundary</h3>
+        <p class="summary">Excelize versions 2.3.1 through 2.11.0 suffer from unbounded CPU consumption during agile encryption metadata parsing.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Unvalidated spreadsheets can exhaust service compute capacity.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/excelize-flaw-makes-spreadsheet-intake-a-compute-boundary/">Excelize flaw makes spreadsheet intake a compute boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">05</div>
+      <div class="story-copy">
+        <p class="topic">Authorization Control</p>
+        <h3>MISP UiBeta Fix Highlights Query Authorization Needs</h3>
+        <p class="summary">CVE-2026-86283 corrects a secondary enrichment query in MISP that bypassed event access-control lists for authorized users.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Secondary lookups must always bind to the current caller.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/misp-uibeta-fix-needs-query-level-authorization/">MISP UiBeta fix shows why every query needs authorization ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">06</div>
+      <div class="story-copy">
+        <p class="topic">Path Traversal</p>
+        <h3>nbviewer Local Files Require Path-Boundary Proof</h3>
+        <p class="summary">CVE-2026-86258 addresses a path traversal flaw in nbviewer where string-prefix checks mistakenly approved sibling directories.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Directory boundaries require canonical path verification, not prefix matching.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/nbviewer-local-files-need-path-boundary-proof/">nbviewer local files need path-boundary proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">07</div>
+      <div class="story-copy">
+        <p class="topic">Identity Verification</p>
+        <h3>MojoX SAML Fix Makes Trust-Anchor Proof Essential</h3>
+        <p class="summary">CVE-2026-86304 fixes an authentication bypass in MojoX::Authentication where signatures were not anchored to a trusted authority.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Cryptographic signatures fail if verifiers let messages choose certificates.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/mojox-saml-fix-needs-trust-anchor-proof/">MojoX SAML Fix Makes Trust-Anchor Proof Essential ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">08</div>
+      <div class="story-copy">
+        <p class="topic">Webmail Security</p>
+        <h3>Roundcube Update Repairs Twelve Message Path Issues</h3>
+        <p class="summary">Roundcube versions 1.6.19 and 1.7.4 resolve twelve security issues spanning rendering, header injection, address books, and URL fetching.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Email processing touches multiple distinct security trust boundaries.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/roundcube-update-needs-message-path-proof/">Roundcube Update Needs Proof Across Every Message Path ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">09</div>
+      <div class="story-copy">
+        <p class="topic">SSH Security</p>
+        <h3>JSch Revocation Fix Requires Host-Certificate Proof</h3>
+        <p class="summary">CVE-2026-86231 resolves an issue where revoked SSH host certificates were incorrectly parsed and failed to apply.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Security configurations must be proven to enforce their rules.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/jsch-revocation-fix-needs-host-certificate-proof/">JSch Revocation Fix Needs Host-Certificate Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">10</div>
+      <div class="story-copy">
+        <p class="topic">Network Security</p>
+        <h3>NEC Router Flaw Demands Management-Plane Proof</h3>
+        <p class="summary">CVE-2026-16876 affects NEC UNIVERGE routers, allowing unauthenticated remote command execution via vulnerable WebGUI configurations.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Router management consoles must be strictly restricted and patched.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/nec-router-auth-bypass-needs-management-plane-proof/">NEC Router Flaw Makes Web Management Reachability the First Check ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">11</div>
+      <div class="story-copy">
+        <p class="topic">Database Security</p>
+        <h3>PostgreSQL Anonymizer 3.2 Introduces Superuser Barrier</h3>
+        <p class="summary">PostgreSQL Anonymizer 3.2 fixes three privilege escalation vectors and blocks the extension from running on behalf of superusers.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Data masking roles must maintain strict separation of privileges.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/postgresql-anonymizer-fix-needs-role-boundaries/">PostgreSQL Anonymizer 3.2 Makes Masking Roles a Security Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">12</div>
+      <div class="story-copy">
+        <p class="topic">Runtime Security</p>
+        <h3>Walrus Integer Overflow Affects WebAssembly Intake</h3>
+        <p class="summary">CVE-2026-86314 documents an integer-overflow heap-read flaw in Samsung Walrus when processing crafted WebAssembly modules.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>WebAssembly runtimes require isolated compute boundaries.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/walrus-overflow-makes-wasm-intake-a-runtime-boundary/">Walrus Overflow Makes WebAssembly Intake a Runtime Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">13</div>
+      <div class="story-copy">
+        <p class="topic">Hardware Security</p>
+        <h3>MediaTek Bulletins Demand Device-Level Firmware Proof</h3>
+        <p class="summary">MediaTek&#39;s September bulletin addresses decoder privilege escalation and modem denial-of-service vulnerabilities across chipsets.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Chipset advisories require tracking through OEM firmware pipelines.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/mediatek-fixes-need-device-firmware-proof/">MediaTek Fixes Need Device-Level Firmware Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">14</div>
+      <div class="story-copy">
+        <p class="topic">AI Credential Security</p>
+        <h3>JeecgBoot Fix Secures AI Credential Export Paths</h3>
+        <p class="summary">CVE-2026-86228 fixes an access-control flaw in JeecgBoot that exposed AI model-provider credentials during spreadsheet exports.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Every serialization path must enforce secret-bearing field restrictions.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/jeecgboot-ai-credentials-need-export-boundaries/">JeecgBoot Fix Makes AI Credential Exports a Security Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">15</div>
+      <div class="story-copy">
+        <p class="topic">Access Mitigation</p>
+        <h3>ScreenConnect Mitigation Requires Permission-Level Proof</h3>
+        <p class="summary">ConnectWise advises removing file-transfer permissions from ScreenConnect roles while an unpatched session vulnerability is addressed.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Temporary feature mitigations require strict ownership and verification.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/screenconnect-mitigation-needs-permission-proof/">ScreenConnect Mitigation Needs Permission-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">16</div>
+      <div class="story-copy">
+        <p class="topic">Industrial Security</p>
+        <h3>WISE-6610 Fixes Require Gateway Firmware Proof</h3>
+        <p class="summary">CVE-2026-79697 and CVE-2026-79698 cover command-injection flaws in Advantech WISE-6610 V2 industrial gateways.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Industrial gateways require exact firmware builds and network restrictions.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/wise-6610-fixes-need-gateway-level-proof/">WISE-6610 fixes need gateway-level proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">17</div>
+      <div class="story-copy">
+        <p class="topic">VPN Security</p>
+        <h3>OpenVPN Updates Require Control-Channel and Service Proof</h3>
+        <p class="summary">OpenVPN 2.7.7 resolves a control-channel availability flaw and repairs multiple Windows-specific service and process boundaries.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>VPN control channels maintain the integrity of secure sessions.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/openvpn-fixes-need-control-channel-proof/">OpenVPN Fixes Need Control-Channel and Windows Service Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">18</div>
+      <div class="story-copy">
+        <p class="topic">Identity Security</p>
+        <h3>FreeIPA Flaw Makes LDAP Reachability Identity Control</h3>
+        <p class="summary">CVE-2026-76578 addresses a critical FreeIPA flaw allowing unauthenticated LDAP clients to obtain administrator-group membership.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Directory servers serve as critical security control planes.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/freeipa-flaw-makes-ldap-reachability-an-identity-control/">Critical FreeIPA Flaw Makes LDAP Reachability an Identity Control ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">19</div>
+      <div class="story-copy">
+        <p class="topic">Dashboard Security</p>
+        <h3>OpenShift AI Fixes Dashboard Secret Read Paths</h3>
+        <p class="summary">CVE-2026-86332 resolves a missing authorization check allowing dashboard users to read NVIDIA NIM credentials in OpenShift AI.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Read operations must follow the sensitivity of protected objects.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/openshift-ai-secrets-need-read-path-authorization/">OpenShift AI Secrets Need Read-Path Authorization ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">20</div>
+      <div class="story-copy">
+        <p class="topic">Sandbox Security</p>
+        <h3>Luanti Sandbox Fixes Require Runtime Environment Proof</h3>
+        <p class="summary">Ubuntu backports a fix for CVE-2026-41196, closing a LuaJIT sandbox escape vulnerability in Minetest server packages.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Sandboxed environments depend heavily on active runtime configurations.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/luanti-sandbox-fix-needs-runtime-proof/">Luanti Sandbox Fix Needs Runtime Proof ↗</a>
+      </div>
+    </article></main>
+
+      <section class="operating-view">
+        <p class="eyebrow">The operating view</p>
+        <h2>What the day means for defenders</h2>
+        <p>Treat every parser, export routine, and management plane as an untrusted boundary. Verify active runtime versions, enforce strict role permissions, and maintain evidence of structural containment across all system upgrades.</p>
+        <ol class="watch-list"><li><span>1</span><p>Verify runtime package versions and active dependency trees instead of relying solely on build manifests.</p></li>
+<li><span>2</span><p>Enforce strict input validation and resource limits on all unauthenticated parsing and ingestion pipelines.</p></li>
+<li><span>3</span><p>Audit authorization checks and privilege boundaries across secondary query and export paths.</p></li></ol>
+      </section>
+
+      <section class="sources">
+        <p class="eyebrow">Source index</p>
+        <h2>Every briefing in this digest</h2>
+        <ol class="source-list">
+    <li>
+      <span>01</span>
+      <a href="https://shadowcontext.com/libheif-fixes-need-image-pipeline-boundaries/">libheif 1.23.4 fixes demand image-pipeline boundaries</a>
+    </li>
+
+    <li>
+      <span>02</span>
+      <a href="https://shadowcontext.com/authen-sasl-replay-fix-needs-challenge-binding/">Authen-SASL Replay Fix Makes Challenge Binding the Test</a>
+    </li>
+
+    <li>
+      <span>03</span>
+      <a href="https://shadowcontext.com/openmaic-fix-needs-environment-parity/">OpenMAIC Fix Makes Environment Parity a Security Boundary</a>
+    </li>
+
+    <li>
+      <span>04</span>
+      <a href="https://shadowcontext.com/excelize-flaw-makes-spreadsheet-intake-a-compute-boundary/">Excelize flaw makes spreadsheet intake a compute boundary</a>
+    </li>
+
+    <li>
+      <span>05</span>
+      <a href="https://shadowcontext.com/misp-uibeta-fix-needs-query-level-authorization/">MISP UiBeta fix shows why every query needs authorization</a>
+    </li>
+
+    <li>
+      <span>06</span>
+      <a href="https://shadowcontext.com/nbviewer-local-files-need-path-boundary-proof/">nbviewer local files need path-boundary proof</a>
+    </li>
+
+    <li>
+      <span>07</span>
+      <a href="https://shadowcontext.com/mojox-saml-fix-needs-trust-anchor-proof/">MojoX SAML Fix Makes Trust-Anchor Proof Essential</a>
+    </li>
+
+    <li>
+      <span>08</span>
+      <a href="https://shadowcontext.com/roundcube-update-needs-message-path-proof/">Roundcube Update Needs Proof Across Every Message Path</a>
+    </li>
+
+    <li>
+      <span>09</span>
+      <a href="https://shadowcontext.com/jsch-revocation-fix-needs-host-certificate-proof/">JSch Revocation Fix Needs Host-Certificate Proof</a>
+    </li>
+
+    <li>
+      <span>10</span>
+      <a href="https://shadowcontext.com/nec-router-auth-bypass-needs-management-plane-proof/">NEC Router Flaw Makes Web Management Reachability the First Check</a>
+    </li>
+
+    <li>
+      <span>11</span>
+      <a href="https://shadowcontext.com/postgresql-anonymizer-fix-needs-role-boundaries/">PostgreSQL Anonymizer 3.2 Makes Masking Roles a Security Boundary</a>
+    </li>
+
+    <li>
+      <span>12</span>
+      <a href="https://shadowcontext.com/walrus-overflow-makes-wasm-intake-a-runtime-boundary/">Walrus Overflow Makes WebAssembly Intake a Runtime Boundary</a>
+    </li>
+
+    <li>
+      <span>13</span>
+      <a href="https://shadowcontext.com/mediatek-fixes-need-device-firmware-proof/">MediaTek Fixes Need Device-Level Firmware Proof</a>
+    </li>
+
+    <li>
+      <span>14</span>
+      <a href="https://shadowcontext.com/jeecgboot-ai-credentials-need-export-boundaries/">JeecgBoot Fix Makes AI Credential Exports a Security Boundary</a>
+    </li>
+
+    <li>
+      <span>15</span>
+      <a href="https://shadowcontext.com/screenconnect-mitigation-needs-permission-proof/">ScreenConnect Mitigation Needs Permission-Level Proof</a>
+    </li>
+
+    <li>
+      <span>16</span>
+      <a href="https://shadowcontext.com/wise-6610-fixes-need-gateway-level-proof/">WISE-6610 fixes need gateway-level proof</a>
+    </li>
+
+    <li>
+      <span>17</span>
+      <a href="https://shadowcontext.com/openvpn-fixes-need-control-channel-proof/">OpenVPN Fixes Need Control-Channel and Windows Service Proof</a>
+    </li>
+
+    <li>
+      <span>18</span>
+      <a href="https://shadowcontext.com/freeipa-flaw-makes-ldap-reachability-an-identity-control/">Critical FreeIPA Flaw Makes LDAP Reachability an Identity Control</a>
+    </li>
+
+    <li>
+      <span>19</span>
+      <a href="https://shadowcontext.com/openshift-ai-secrets-need-read-path-authorization/">OpenShift AI Secrets Need Read-Path Authorization</a>
+    </li>
+
+    <li>
+      <span>20</span>
+      <a href="https://shadowcontext.com/luanti-sandbox-fix-needs-runtime-proof/">Luanti Sandbox Fix Needs Runtime Proof</a>
+    </li></ol>
+      </section>
+
+      <div class="cta">
+        <strong>Read the full analysis</strong>
+        <span>https://shadowcontext.com/</span>
+      </div>
+
+      <footer class="document-footer">
+        <span>ShadowContext</span>
+        <span>Independent defensive security intelligence</span>
+      </footer>
+    </section>
+  </body>
+</html>

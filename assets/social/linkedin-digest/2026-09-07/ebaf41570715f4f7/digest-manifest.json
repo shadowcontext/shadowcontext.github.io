@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-09-08T09:30:18.572+04:00",
+  "digestDate": "2026-09-07",
+  "digestHash": "ebaf41570715f4f738ef6bf38f2b59fda840828876b0476d483a93425ade6907",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "Daily Security Digest: Vulnerability Fixes Across Seven Defensive Domains",
+  "articleCount": 20,
+  "sourceArticles": [
+    {
+      "title": "libheif 1.23.4 fixes demand image-pipeline boundaries",
+      "canonicalUrl": "https://shadowcontext.com/libheif-fixes-need-image-pipeline-boundaries/",
+      "publishedAt": "2026-09-07T00:09:12.000+04:00",
+      "category": "defense",
+      "sourceHash": "4052d5ea7be1f04d1fe820faa2100118d19b4f97056ab457ef80008b28a0874a"
+    },
+    {
+      "title": "Authen-SASL Replay Fix Makes Challenge Binding the Test",
+      "canonicalUrl": "https://shadowcontext.com/authen-sasl-replay-fix-needs-challenge-binding/",
+      "publishedAt": "2026-09-07T01:10:43.000+04:00",
+      "category": "defense",
+      "sourceHash": "d974e9e823a7208ba249f4a95cef17c1ffdb2f7b71a7db4eeaca29abc550bd13"
+    },
+    {
+      "title": "OpenMAIC Fix Makes Environment Parity a Security Boundary",
+      "canonicalUrl": "https://shadowcontext.com/openmaic-fix-needs-environment-parity/",
+      "publishedAt": "2026-09-07T02:09:51.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "2068914f1434b5261b2c00cb720cd71985228c4847a116b1bf4cb0365e1dde14"
+    },
+    {
+      "title": "Excelize flaw makes spreadsheet intake a compute boundary",
+      "canonicalUrl": "https://shadowcontext.com/excelize-flaw-makes-spreadsheet-intake-a-compute-boundary/",
+      "publishedAt": "2026-09-07T03:09:53.000+04:00",
+      "category": "defense",
+      "sourceHash": "95f8af625688ab8f119f2f418878e5b850163b7e886eb51c3c72868df3fb4c8e"
+    },
+    {
+      "title": "MISP UiBeta fix shows why every query needs authorization",
+      "canonicalUrl": "https://shadowcontext.com/misp-uibeta-fix-needs-query-level-authorization/",
+      "publishedAt": "2026-09-07T04:08:37.000+04:00",
+      "category": "defense",
+      "sourceHash": "a4ac2888c960cba5e2dd2243721436b6f5f83ec9a04f88db60bdfae47aa4fbfb"
+    },
+    {
+      "title": "nbviewer local files need path-boundary proof",
+      "canonicalUrl": "https://shadowcontext.com/nbviewer-local-files-need-path-boundary-proof/",
+      "publishedAt": "2026-09-07T05:09:00.000+04:00",
+      "category": "defense",
+      "sourceHash": "5649f25ff363c711d5cbd1eeec957b02d44af5bd30a9102ab3e64bcb720a1c22"
+    },
+    {
+      "title": "MojoX SAML Fix Makes Trust-Anchor Proof Essential",
+      "canonicalUrl": "https://shadowcontext.com/mojox-saml-fix-needs-trust-anchor-proof/",
+      "publishedAt": "2026-09-07T06:09:11.000+04:00",
+      "category": "defense",
+      "sourceHash": "0b21407f301c0492cff0422e30629f906c17e1a78633f9e39c215540afd8ff4d"
+    },
+    {
+      "title": "Roundcube Update Needs Proof Across Every Message Path",
+      "canonicalUrl": "https://shadowcontext.com/roundcube-update-needs-message-path-proof/",
+      "publishedAt": "2026-09-07T08:09:50.000+04:00",
+      "category": "defense",
+      "sourceHash": "343136d3338e604504ffcd1978d0a991328813f106135a39849865bff36f8de7"
+    },
+    {
+      "title": "JSch Revocation Fix Needs Host-Certificate Proof",
+      "canonicalUrl": "https://shadowcontext.com/jsch-revocation-fix-needs-host-certificate-proof/",
+      "publishedAt": "2026-09-07T09:09:58.000+04:00",
+      "category": "defense",
+      "sourceHash": "ad19450ee8cc0ea90310645ded22b64fc8377f644dc1b66f4b7b4c4eca9319d6"
+    },
+    {
+      "title": "NEC Router Flaw Makes Web Management Reachability the First Check",
+      "canonicalUrl": "https://shadowcontext.com/nec-router-auth-bypass-needs-management-plane-proof/",
+      "publishedAt": "2026-09-07T10:08:46.000+04:00",
+      "category": "defense",
+      "sourceHash": "794374fd755a60758a5640f0f580006db839cb96d734e1b6b8b2b2ca7713a1c2"
+    },
+    {
+      "title": "PostgreSQL Anonymizer 3.2 Makes Masking Roles a Security Boundary",
+      "canonicalUrl": "https://shadowcontext.com/postgresql-anonymizer-fix-needs-role-boundaries/",
+      "publishedAt": "2026-09-07T11:11:42.000+04:00",
+      "category": "defense",
+      "sourceHash": "537fdcfe67e784839e440a51af1be5fdea6a56e33be260c959ab544326fc77cd"
+    },
+    {
+      "title": "Walrus Overflow Makes WebAssembly Intake a Runtime Boundary",
+      "canonicalUrl": "https://shadowcontext.com/walrus-overflow-makes-wasm-intake-a-runtime-boundary/",
+      "publishedAt": "2026-09-07T12:12:59.000+04:00",
+      "category": "defense",
+      "sourceHash": "ca81d2f59f369d69bb3cd4a8ed8700a5112572e1d862bad5d21f67cc32ed7118"
+    },
+    {
+      "title": "MediaTek Fixes Need Device-Level Firmware Proof",
+      "canonicalUrl": "https://shadowcontext.com/mediatek-fixes-need-device-firmware-proof/",
+      "publishedAt": "2026-09-07T13:11:45.000+04:00",
+      "category": "defense",
+      "sourceHash": "a07bfa6f409a5dee5aa005471c688cc545323ad823363ca6b7bfad23a28eded6"
+    },
+    {
+      "title": "JeecgBoot Fix Makes AI Credential Exports a Security Boundary",
+      "canonicalUrl": "https://shadowcontext.com/jeecgboot-ai-credentials-need-export-boundaries/",
+      "publishedAt": "2026-09-07T14:12:49.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "20994e319bfe33d9215114b48aa272a35cc2dea1e92f60987384dfb8c2efcaaa"
+    },
+    {
+      "title": "ScreenConnect Mitigation Needs Permission-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/screenconnect-mitigation-needs-permission-proof/",
+      "publishedAt": "2026-09-07T16:11:26.000+04:00",
+      "category": "defense",
+      "sourceHash": "30169ed4cdd33bdc49e5fee1e2a6cca86afedff1322a2baa9b3a5d9b1bd4f82c"
+    },
+    {
+      "title": "WISE-6610 fixes need gateway-level proof",
+      "canonicalUrl": "https://shadowcontext.com/wise-6610-fixes-need-gateway-level-proof/",
+      "publishedAt": "2026-09-07T19:11:53.000+04:00",
+      "category": "defense",
+      "sourceHash": "6410ed195b0228678ef3a8b12e90dd5bfb3e555b8aec40937cb39fc6f9432a27"
+    },
+    {
+      "title": "OpenVPN Fixes Need Control-Channel and Windows Service Proof",
+      "canonicalUrl": "https://shadowcontext.com/openvpn-fixes-need-control-channel-proof/",
+      "publishedAt": "2026-09-07T20:12:47.000+04:00",
+      "category": "defense",
+      "sourceHash": "57f484a3754e60922c3fd3e2a96305a6c77751a41f89028bd2ad7581a0f36ebb"
+    },
+    {
+      "title": "Critical FreeIPA Flaw Makes LDAP Reachability an Identity Control",
+      "canonicalUrl": "https://shadowcontext.com/freeipa-flaw-makes-ldap-reachability-an-identity-control/",
+      "publishedAt": "2026-09-07T21:13:27.000+04:00",
+      "category": "defense",
+      "sourceHash": "2550f8f6eb4ea48ab05552636aac8d98d95f302d27c7005d6b344cdeac5cadf0"
+    },
+    {
+      "title": "OpenShift AI Secrets Need Read-Path Authorization",
+      "canonicalUrl": "https://shadowcontext.com/openshift-ai-secrets-need-read-path-authorization/",
+      "publishedAt": "2026-09-07T22:14:11.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "e0e4ebc333b4ac4b12ab75fa910d4e5db3acea08629dabf4f4161280500106e1"
+    },
+    {
+      "title": "Luanti Sandbox Fix Needs Runtime Proof",
+      "canonicalUrl": "https://shadowcontext.com/luanti-sandbox-fix-needs-runtime-proof/",
+      "publishedAt": "2026-09-07T23:12:39.000+04:00",
+      "category": "defense",
+      "sourceHash": "fa27aeb86306215091b41d16aff6a90cc7afcdeed8a7118d943ccda2e24c7056"
+    }
+  ],
+  "caption": "Review today's security digest from ShadowContext to maintain precise operational visibility across your defensive posture.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-09-07/ebaf41570715f4f7/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-09-07/ebaf41570715f4f7/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-09-07/ebaf41570715f4f7/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-09-07/ebaf41570715f4f7/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}
