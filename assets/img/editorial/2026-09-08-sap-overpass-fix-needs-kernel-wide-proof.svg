@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Protected kernel at the convergence of three data paths</title>
+  <desc id="desc">Abstract editorial artwork showing three luminous communication streams approaching a hardened central kernel through layered blue and amber containment rings.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071425"/>
+      <stop offset="0.52" stop-color="#102b43"/>
+      <stop offset="1" stop-color="#07111d"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="55%">
+      <stop offset="0" stop-color="#55d6df" stop-opacity="0.28"/>
+      <stop offset="0.5" stop-color="#2a7895" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#071425" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="streamA" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#24566f" stop-opacity="0"/>
+      <stop offset="0.55" stop-color="#5bd6df" stop-opacity="0.88"/>
+      <stop offset="1" stop-color="#d7fbf5"/>
+    </linearGradient>
+    <linearGradient id="streamB" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#7d4f1d" stop-opacity="0"/>
+      <stop offset="0.6" stop-color="#f1aa45" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#ffe0a3"/>
+    </linearGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#dffdf8"/>
+      <stop offset="0.32" stop-color="#63d9db"/>
+      <stop offset="0.7" stop-color="#1d7694"/>
+      <stop offset="1" stop-color="#12344e"/>
+    </linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="22"/></filter>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="9" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grain" width="48" height="48" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="7" r="1" fill="#b7e4e8" opacity="0.08"/>
+      <circle cx="31" cy="19" r="1.4" fill="#b7e4e8" opacity="0.05"/>
+      <circle cx="17" cy="39" r="0.8" fill="#f8bd66" opacity="0.08"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grain)"/>
+  <ellipse cx="805" cy="450" rx="540" ry="410" fill="url(#halo)" filter="url(#blur)"/>
+
+  <g opacity="0.2" fill="none" stroke="#75b7c8">
+    <path d="M70 160 C360 160 420 308 630 350"/>
+    <path d="M90 742 C370 744 454 612 643 554"/>
+    <path d="M1535 171 C1250 190 1184 320 974 357"/>
+    <path d="M1515 735 C1258 708 1179 590 969 546"/>
+  </g>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M-60 210 C282 198 438 282 654 391" stroke="url(#streamA)" stroke-width="30" opacity="0.72"/>
+    <path d="M-75 210 C302 228 447 323 663 411" stroke="#9bf1ed" stroke-width="3" opacity="0.92"/>
+    <path d="M-40 698 C283 704 456 610 663 494" stroke="url(#streamB)" stroke-width="32" opacity="0.7"/>
+    <path d="M-65 699 C298 672 467 574 672 477" stroke="#ffd186" stroke-width="3" opacity="0.9"/>
+    <path d="M1660 450 C1328 448 1161 450 970 450" stroke="url(#streamA)" stroke-width="34" opacity="0.78"/>
+    <path d="M1650 449 C1322 432 1167 436 968 444" stroke="#a7f3ed" stroke-width="3" opacity="0.92"/>
+  </g>
+
+  <g fill="none" transform="translate(800 450)">
+    <ellipse rx="355" ry="304" stroke="#4fa3b8" stroke-width="2" opacity="0.28"/>
+    <ellipse rx="301" ry="260" stroke="#64d7d8" stroke-width="10" opacity="0.18"/>
+    <ellipse rx="250" ry="217" stroke="#f1ae52" stroke-width="3" opacity="0.52" stroke-dasharray="18 19"/>
+    <ellipse rx="207" ry="179" stroke="#9bedeb" stroke-width="8" opacity="0.26"/>
+  </g>
+
+  <g transform="translate(800 450)" filter="url(#glow)">
+    <path d="M0-150 130-75 130 75 0 150-130 75-130-75Z" fill="url(#core)" stroke="#d9fffa" stroke-width="4"/>
+    <path d="M0-102 88-51 88 51 0 102-88 51-88-51Z" fill="#0d2d43" opacity="0.86" stroke="#82e6e3" stroke-width="3"/>
+    <path d="M-48-28 0-57 48-28 48 29 0 58-48 29Z" fill="#f1b45e" opacity="0.92"/>
+    <circle cx="0" cy="0" r="18" fill="#fff0c7"/>
+  </g>
+
+  <g fill="#c4fbf5" opacity="0.75">
+    <circle cx="520" cy="326" r="5"/><circle cx="577" cy="357" r="3"/><circle cx="565" cy="581" r="5"/>
+    <circle cx="515" cy="614" r="3"/><circle cx="1084" cy="450" r="5"/><circle cx="1151" cy="448" r="3"/>
+  </g>
+  <g fill="#f6bd68" opacity="0.8">
+    <circle cx="619" cy="548" r="4"/><circle cx="455" cy="643" r="3"/><circle cx="998" cy="254" r="3"/>
+  </g>
+
+  <path d="M0 820 C310 785 520 854 800 826 C1088 798 1280 850 1600 806 L1600 900 0 900Z" fill="#06101b" opacity="0.72"/>
+</svg>
