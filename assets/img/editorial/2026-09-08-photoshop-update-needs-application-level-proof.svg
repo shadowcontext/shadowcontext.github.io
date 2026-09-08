@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Creative image panels protected by an application security boundary</title>
+  <desc id="desc">Layered abstract image panels flow from a fragmented intake area toward a luminous central shield, which blocks scattered pixels before a clean protected workspace.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#081529"/>
+      <stop offset="0.55" stop-color="#102a48"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="52%" cy="48%" r="53%">
+      <stop offset="0" stop-color="#37d6d0" stop-opacity="0.28"/>
+      <stop offset="0.55" stop-color="#256aa0" stop-opacity="0.11"/>
+      <stop offset="1" stop-color="#081529" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="panelA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff8a63"/>
+      <stop offset="0.48" stop-color="#914c9f"/>
+      <stop offset="1" stop-color="#263b78"/>
+    </linearGradient>
+    <linearGradient id="panelB" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#2e5e86"/>
+      <stop offset="0.5" stop-color="#35aaa4"/>
+      <stop offset="1" stop-color="#b9e06e"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c7fff3" stop-opacity="0.95"/>
+      <stop offset="0.5" stop-color="#32d5d0" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#2473a5" stop-opacity="0.88"/>
+    </linearGradient>
+    <linearGradient id="clean" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#52e4d4"/>
+      <stop offset="0.5" stop-color="#329fc0"/>
+      <stop offset="1" stop-color="#3856a5"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#020914" flood-opacity="0.55"/>
+    </filter>
+    <clipPath id="shieldClip">
+      <path d="M800 214 L1002 292 V464 C1002 605 917 699 800 754 C683 699 598 605 598 464 V292 Z"/>
+    </clipPath>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <circle cx="800" cy="440" r="286" fill="#37d6d0" opacity="0.08" filter="url(#soft)"/>
+
+  <g opacity="0.22" fill="none" stroke="#83b5ce" stroke-width="2">
+    <path d="M80 173 C330 92 482 175 625 294"/>
+    <path d="M98 746 C330 820 492 710 624 592"/>
+    <path d="M972 295 C1112 171 1280 105 1518 174"/>
+    <path d="M976 593 C1112 714 1296 818 1520 740"/>
+  </g>
+
+  <g filter="url(#shadow)" transform="translate(128 218) rotate(-7 250 230)">
+    <rect x="0" y="0" width="470" height="400" rx="28" fill="#142b47" stroke="#315775" stroke-width="3"/>
+    <rect x="28" y="28" width="414" height="278" rx="18" fill="url(#panelA)"/>
+    <circle cx="340" cy="98" r="50" fill="#ffd888" opacity="0.9"/>
+    <path d="M28 260 L145 145 L242 231 L316 174 L442 292 V306 H28 Z" fill="#132a56" opacity="0.68"/>
+    <path d="M28 277 L126 199 L206 264 L269 223 L378 306 H28 Z" fill="#20a4a0" opacity="0.62"/>
+    <g fill="#7595ac">
+      <rect x="31" y="332" width="210" height="12" rx="6"/>
+      <rect x="31" y="360" width="136" height="9" rx="4.5" opacity="0.55"/>
+    </g>
+  </g>
+
+  <g opacity="0.82" transform="translate(254 130) rotate(5 190 150)">
+    <rect x="0" y="0" width="380" height="300" rx="24" fill="#183653" stroke="#47708a" stroke-width="3"/>
+    <rect x="24" y="24" width="332" height="205" rx="15" fill="url(#panelB)"/>
+    <circle cx="112" cy="91" r="34" fill="#ddffb5" opacity="0.74"/>
+    <path d="M24 206 L116 121 L185 181 L252 105 L356 214 V229 H24 Z" fill="#1b5274" opacity="0.72"/>
+    <rect x="26" y="253" width="166" height="10" rx="5" fill="#7698ab"/>
+  </g>
+
+  <g fill="#ff806c" opacity="0.9">
+    <rect x="530" y="297" width="25" height="25" rx="4" transform="rotate(15 542 309)"/>
+    <rect x="548" y="362" width="15" height="15" rx="3" transform="rotate(-12 555 369)"/>
+    <rect x="512" y="436" width="31" height="31" rx="5" transform="rotate(8 527 451)"/>
+    <rect x="548" y="524" width="19" height="19" rx="4" transform="rotate(-18 557 533)"/>
+    <rect x="524" y="584" width="12" height="12" rx="2"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <path d="M800 214 L1002 292 V464 C1002 605 917 699 800 754 C683 699 598 605 598 464 V292 Z" fill="#0d2238" stroke="url(#shield)" stroke-width="10"/>
+    <g clip-path="url(#shieldClip)">
+      <path d="M574 639 L995 224 L1069 301 L648 716 Z" fill="#49e0d1" opacity="0.16"/>
+      <path d="M641 707 L1013 337" stroke="#bafff3" stroke-width="5" opacity="0.48"/>
+      <circle cx="800" cy="452" r="128" fill="#35d5cf" opacity="0.11"/>
+      <path d="M730 462 L778 510 L880 386" fill="none" stroke="#d9fff8" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+
+  <g transform="translate(1048 228) rotate(5 218 210)" filter="url(#shadow)">
+    <rect x="0" y="0" width="438" height="382" rx="29" fill="#153451" stroke="#4b7b95" stroke-width="3"/>
+    <rect x="29" y="29" width="380" height="254" rx="18" fill="url(#clean)"/>
+    <circle cx="320" cy="102" r="48" fill="#caffbe" opacity="0.72"/>
+    <path d="M29 250 L138 132 L221 205 L291 157 L409 267 V283 H29 Z" fill="#174b73" opacity="0.68"/>
+    <path d="M29 268 L132 190 L220 243 L279 211 L374 283 H29 Z" fill="#42c3ae" opacity="0.7"/>
+    <rect x="32" y="319" width="200" height="12" rx="6" fill="#78a4b9"/>
+    <rect x="32" y="348" width="126" height="9" rx="4.5" fill="#78a4b9" opacity="0.55"/>
+  </g>
+
+  <g fill="#79efe0" opacity="0.7">
+    <circle cx="1045" cy="346" r="7"/>
+    <circle cx="1080" cy="415" r="5"/>
+    <circle cx="1033" cy="522" r="8"/>
+  </g>
+  <g fill="#b8d8e7" opacity="0.45">
+    <circle cx="121" cy="113" r="4"/>
+    <circle cx="1444" cy="151" r="5"/>
+    <circle cx="1495" cy="687" r="4"/>
+    <circle cx="177" cy="758" r="6"/>
+  </g>
+</svg>
