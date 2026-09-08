@@ -513,6 +513,22 @@
       "github_run_id": "34095426341",
       "status": "published",
       "last_error": null
+    },
+    "ebaf41570715f4f738ef6bf38f2b59fda840828876b0476d483a93425ade6907": {
+      "title": "Daily Security Digest: Vulnerability Fixes Across Seven Defensive Domains",
+      "digest_date": "2026-09-07",
+      "digest_hash": "ebaf41570715f4f738ef6bf38f2b59fda840828876b0476d483a93425ade6907",
+      "generated_at": "2026-09-08T09:30:18.572+04:00",
+      "briefing_url": "https://shadowcontext.com/assets/social/linkedin-digest/2026-09-07/ebaf41570715f4f7/daily-digest.html",
+      "pdf_file": "assets/social/linkedin-digest/2026-09-07/ebaf41570715f4f7/daily-digest.pdf",
+      "linkedin_caption": "Review today's security digest from ShadowContext to maintain precise operational visibility across your defensive posture.\n\nThis edition brings together 20 ShadowContext briefings from September 7, 2026, with direct source links and operational priorities.\n\nRead the full daily briefing:\nhttps://shadowcontext.com/assets/social/linkedin-digest/2026-09-07/ebaf41570715f4f7/daily-digest.html\n\n#Cybersecurity #ThreatIntelligence #InfoSec #AISecurity",
+      "linkedin_document_urn": "urn:li:document:D4D10AQHBFxCSjKK7uQ",
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7502989168617390080",
+      "published_at": "2026-09-08T07:20:16.893Z",
+      "github_run_id": "34198807899",
+      "status": "published",
+      "last_error": null
     }
   }
 }
