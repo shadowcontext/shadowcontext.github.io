@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Hotpatch baseline awaiting a server restart</title>
+  <desc id="desc">Abstract midnight-blue server columns sit beneath a segmented cyan restart arc, while a single amber patch layer glows to represent a baseline that needs reboot completion.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071426"/>
+      <stop offset="0.55" stop-color="#10294a"/>
+      <stop offset="1" stop-color="#07101f"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="48%" r="52%">
+      <stop offset="0" stop-color="#1bd4d0" stop-opacity="0.20"/>
+      <stop offset="0.58" stop-color="#2384c6" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#071426" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="server" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#244c6e"/>
+      <stop offset="1" stop-color="#10283f"/>
+    </linearGradient>
+    <linearGradient id="patch" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffb34d"/>
+      <stop offset="1" stop-color="#ffd477"/>
+    </linearGradient>
+    <filter id="cyanGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="12" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="amberGlow" x="-60%" y="-100%" width="220%" height="300%">
+      <feGaussianBlur stdDeviation="14" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#halo)"/>
+  <g opacity="0.16" fill="none" stroke="#81cfe5" stroke-width="2">
+    <path d="M90 710 C340 620 475 695 690 630 S1110 535 1515 655"/>
+    <path d="M75 765 C335 685 525 760 760 690 S1215 610 1530 720"/>
+    <path d="M175 190 L410 115 L645 190 L880 115 L1115 190 L1350 115"/>
+  </g>
+  <g transform="translate(360 365)">
+    <rect x="0" y="0" width="250" height="345" rx="30" fill="url(#server)" stroke="#5ba8c8" stroke-opacity="0.45" stroke-width="3"/>
+    <rect x="315" y="-55" width="250" height="400" rx="30" fill="url(#server)" stroke="#67c7d7" stroke-opacity="0.55" stroke-width="3"/>
+    <rect x="630" y="25" width="250" height="320" rx="30" fill="url(#server)" stroke="#5ba8c8" stroke-opacity="0.45" stroke-width="3"/>
+    <g fill="#72d9dd">
+      <circle cx="42" cy="58" r="8"/><circle cx="357" cy="8" r="8"/><circle cx="672" cy="82" r="8"/>
+    </g>
+    <g fill="#0b1b2d" opacity="0.88">
+      <rect x="35" y="92" width="180" height="28" rx="14"/><rect x="35" y="145" width="180" height="28" rx="14"/><rect x="35" y="198" width="180" height="28" rx="14"/><rect x="35" y="251" width="180" height="28" rx="14"/>
+      <rect x="350" y="42" width="180" height="28" rx="14"/><rect x="350" y="95" width="180" height="28" rx="14"/><rect x="350" y="201" width="180" height="28" rx="14"/><rect x="350" y="254" width="180" height="28" rx="14"/>
+      <rect x="665" y="112" width="180" height="28" rx="14"/><rect x="665" y="165" width="180" height="28" rx="14"/><rect x="665" y="218" width="180" height="28" rx="14"/>
+    </g>
+    <rect x="350" y="148" width="180" height="30" rx="15" fill="url(#patch)" filter="url(#amberGlow)"/>
+  </g>
+  <g fill="none" stroke="#47e1df" stroke-linecap="round" filter="url(#cyanGlow)">
+    <path d="M492 322 A390 290 0 0 1 1110 244" stroke-width="25"/>
+    <path d="M1110 244 L1068 185" stroke-width="25"/>
+    <path d="M1110 244 L1041 263" stroke-width="25"/>
+  </g>
+  <g fill="#b8f7f1" opacity="0.82">
+    <circle cx="506" cy="314" r="7"/><circle cx="622" cy="225" r="6"/><circle cx="765" cy="187" r="5"/><circle cx="914" cy="185" r="6"/>
+  </g>
+  <ellipse cx="800" cy="770" rx="540" ry="38" fill="#020914" opacity="0.55"/>
+</svg>
