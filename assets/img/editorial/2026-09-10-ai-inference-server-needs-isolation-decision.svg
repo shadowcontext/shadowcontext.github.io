@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Isolated industrial AI inference core</title>
+  <desc id="desc">An abstract industrial AI processing core is enclosed by layered blue isolation rings while an amber data stream is diverted through a guarded boundary.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071426"/>
+      <stop offset="0.55" stop-color="#0b2942"/>
+      <stop offset="1" stop-color="#071b2f"/>
+    </linearGradient>
+    <radialGradient id="core" cx="50%" cy="46%" r="60%">
+      <stop offset="0" stop-color="#9ff8f0"/>
+      <stop offset="0.45" stop-color="#28bed0"/>
+      <stop offset="1" stop-color="#126785"/>
+    </radialGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f7a632" stop-opacity="0"/>
+      <stop offset="0.55" stop-color="#ffc45c"/>
+      <stop offset="1" stop-color="#e57d20"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#78dbe5" stroke-opacity="0.055" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <circle cx="810" cy="445" r="360" fill="#0a3450" opacity="0.42"/>
+  <circle cx="810" cy="445" r="306" fill="none" stroke="#4bc9db" stroke-opacity="0.2" stroke-width="3" stroke-dasharray="12 18"/>
+  <circle cx="810" cy="445" r="246" fill="none" stroke="#74e3e8" stroke-opacity="0.42" stroke-width="18"/>
+  <circle cx="810" cy="445" r="210" fill="#09253b" stroke="#50d2df" stroke-width="3"/>
+  <path d="M102 308C260 308 314 356 432 356H545C612 356 647 389 668 421" fill="none" stroke="url(#amber)" stroke-width="20" stroke-linecap="round"/>
+  <path d="M101 515C260 515 322 487 449 487H585" fill="none" stroke="#f6a33a" stroke-opacity="0.42" stroke-width="6" stroke-linecap="round"/>
+  <path d="M584 487c38 0 58 17 78 40" fill="none" stroke="#f6a33a" stroke-opacity="0.22" stroke-width="6" stroke-linecap="round"/>
+  <path d="M624 282L699 357 658 398 583 323Z" fill="#102f45" stroke="#ffbd58" stroke-width="4"/>
+  <path d="M639 317l25 25" stroke="#ffcf77" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="810" cy="445" r="136" fill="url(#core)" filter="url(#glow)"/>
+  <path d="M746 396l64-37 64 37v74l-64 37-64-37z" fill="#0a3049" fill-opacity="0.72" stroke="#c5fffa" stroke-width="4"/>
+  <circle cx="810" cy="433" r="34" fill="#b9fff8" opacity="0.94"/>
+  <path d="M810 359v-42M874 396l37-22M874 470l37 22M810 507v42M746 470l-37 22M746 396l-37-22" stroke="#89ede9" stroke-width="8" stroke-linecap="round"/>
+  <g fill="#7ee6e7">
+    <circle cx="810" cy="308" r="11"/><circle cx="920" cy="369" r="11"/><circle cx="920" cy="515" r="11"/>
+    <circle cx="810" cy="558" r="11"/><circle cx="700" cy="515" r="11"/><circle cx="700" cy="369" r="11"/>
+  </g>
+  <g fill="#143c55" stroke="#65d6df" stroke-width="3">
+    <rect x="1130" y="246" width="170" height="112" rx="26"/><rect x="1196" y="394" width="190" height="112" rx="26"/>
+    <rect x="1106" y="552" width="178" height="112" rx="26"/>
+  </g>
+  <g stroke="#59cad6" stroke-opacity="0.45" stroke-width="5" fill="none">
+    <path d="M1020 350l110-48"/><path d="M1055 445h141"/><path d="M1012 548l94 60"/>
+  </g>
+  <path d="M1340 136c90 70 145 181 145 309 0 140-66 264-168 343" fill="none" stroke="#2f91ab" stroke-opacity="0.25" stroke-width="28" stroke-linecap="round"/>
+  <circle cx="1438" cy="298" r="8" fill="#77e5e5"/><circle cx="1468" cy="445" r="8" fill="#77e5e5"/><circle cx="1427" cy="610" r="8" fill="#77e5e5"/>
+</svg>
