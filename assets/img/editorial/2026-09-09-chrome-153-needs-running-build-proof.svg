@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Browser fleet crossing a verified update boundary</title>
+  <desc id="desc">Abstract browser panes cross a luminous cyan update boundary while an amber memory fragment is contained below it.</desc>
+  <defs>
+    <linearGradient id="background" x1="120" y1="70" x2="1490" y2="840" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071426"/>
+      <stop offset="0.52" stop-color="#12274A"/>
+      <stop offset="1" stop-color="#080E1D"/>
+    </linearGradient>
+    <radialGradient id="cyanHalo" cx="0" cy="0" r="1" gradientTransform="translate(845 432) rotate(90) scale(410 620)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4CE5E8" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#4CE5E8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="boundary" x1="420" y1="450" x2="1240" y2="450" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3DA9FF" stop-opacity="0"/>
+      <stop offset="0.18" stop-color="#52D7F2"/>
+      <stop offset="0.5" stop-color="#A3FFF2"/>
+      <stop offset="0.82" stop-color="#52D7F2"/>
+      <stop offset="1" stop-color="#3DA9FF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="pane" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#294D78"/>
+      <stop offset="1" stop-color="#112A50"/>
+    </linearGradient>
+    <linearGradient id="safePane" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#2A6581"/>
+      <stop offset="1" stop-color="#143A62"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="650" y1="716" x2="830" y2="540" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF6B5F"/>
+      <stop offset="1" stop-color="#FFC15B"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+    <filter id="smallGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#cyanHalo)"/>
+  <circle cx="1375" cy="155" r="205" fill="#6958D9" opacity="0.08"/>
+  <circle cx="205" cy="735" r="250" fill="#19CABD" opacity="0.06"/>
+
+  <g opacity="0.45" stroke="#6F8DB6" stroke-width="2">
+    <path d="M145 765L515 552L835 736L465 950Z" fill="#102744"/>
+    <path d="M515 552L885 338L1205 523L835 736Z" fill="#173252"/>
+    <path d="M885 338L1165 176L1485 361L1205 523Z" fill="#1C385B"/>
+  </g>
+
+  <path d="M245 454H1370" stroke="#55E9F0" stroke-width="46" opacity="0.12" filter="url(#glow)"/>
+  <path d="M245 454H1370" stroke="url(#boundary)" stroke-width="9" stroke-linecap="round"/>
+  <g transform="translate(807 454)">
+    <circle r="62" fill="#52E7EA" opacity="0.18" filter="url(#smallGlow)"/>
+    <circle r="46" fill="#102E51" stroke="#9AFFF3" stroke-width="7"/>
+    <path d="M-20 0L-5 16L24-20" fill="none" stroke="#B5FFF7" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g transform="translate(250 560) rotate(-8 190 110)">
+    <rect width="380" height="220" rx="26" fill="url(#pane)" stroke="#6485B1" stroke-width="3"/>
+    <path d="M0 58H380" stroke="#6485B1" stroke-width="3"/>
+    <circle cx="34" cy="29" r="8" fill="#FF7869"/>
+    <circle cx="62" cy="29" r="8" fill="#FFBD5A"/>
+    <circle cx="90" cy="29" r="8" fill="#4ED9D0"/>
+    <path d="M50 105H250M50 143H310M50 181H215" stroke="#7E9CC2" stroke-width="13" stroke-linecap="round" opacity="0.55"/>
+  </g>
+
+  <g transform="translate(520 175) rotate(4 220 125)">
+    <rect width="440" height="250" rx="28" fill="url(#safePane)" stroke="#69E7EA" stroke-width="4"/>
+    <path d="M0 64H440" stroke="#69E7EA" stroke-width="3" opacity="0.8"/>
+    <circle cx="38" cy="32" r="9" fill="#55D6CF"/>
+    <circle cx="70" cy="32" r="9" fill="#79E6E1"/>
+    <circle cx="102" cy="32" r="9" fill="#A5F7EF"/>
+    <path d="M64 118H294M64 160H365M64 202H254" stroke="#87DDE4" stroke-width="14" stroke-linecap="round" opacity="0.6"/>
+  </g>
+
+  <g transform="translate(1030 252) rotate(9 155 90)">
+    <rect width="310" height="180" rx="24" fill="url(#safePane)" stroke="#58CFE1" stroke-width="3"/>
+    <path d="M0 52H310" stroke="#58CFE1" stroke-width="3" opacity="0.75"/>
+    <circle cx="32" cy="26" r="7" fill="#65DDD7"/>
+    <circle cx="57" cy="26" r="7" fill="#8DEAE5"/>
+    <path d="M46 96H210M46 132H258" stroke="#83C8DB" stroke-width="12" stroke-linecap="round" opacity="0.58"/>
+  </g>
+
+  <g transform="translate(685 590)">
+    <path d="M0 35L42 0L89 20L126 4L173 44L145 91L93 82L53 112L8 84Z" fill="url(#amber)" opacity="0.18" filter="url(#glow)"/>
+    <path d="M0 35L42 0L89 20L126 4L173 44L145 91L93 82L53 112L8 84Z" fill="#1B2C47" stroke="url(#amber)" stroke-width="8"/>
+    <path d="M44 36L76 56L108 30M74 77L103 58L137 73" fill="none" stroke="#FFB75A" stroke-width="8" stroke-linecap="round"/>
+  </g>
+
+  <g fill="#73ECED">
+    <circle cx="330" cy="483" r="6"/>
+    <circle cx="452" cy="470" r="6"/>
+    <circle cx="1138" cy="462" r="6"/>
+    <circle cx="1265" cy="474" r="6"/>
+  </g>
+  <path d="M635 760C720 802 891 806 992 756" fill="none" stroke="#586F99" stroke-width="3" stroke-dasharray="10 15" opacity="0.7"/>
+</svg>
