@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-09-09T09:37:41.875+04:00",
+  "digestDate": "2026-09-08",
+  "digestHash": "d714c2e017515e6b563cb61a5c5497d9e3a3901ec3e1d2e1aaefc389ae8a2cdc",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "ShadowContext Daily Security Digest: Trust Boundaries and Firmware Baselines",
+  "articleCount": 22,
+  "sourceArticles": [
+    {
+      "title": "Sunshine Input Fix Makes Paired-Client Review a Security Control",
+      "canonicalUrl": "https://shadowcontext.com/sunshine-input-fix-needs-paired-client-review/",
+      "publishedAt": "2026-09-08T00:11:11.000+04:00",
+      "category": "defense",
+      "sourceHash": "1e273dbdf99e300a6e05d3eeb24442e7b68956ed894bf4c61b99c73af1404145"
+    },
+    {
+      "title": "MISP Feed Redirects Need Explicit Egress Boundaries",
+      "canonicalUrl": "https://shadowcontext.com/misp-feed-redirects-need-egress-boundaries/",
+      "publishedAt": "2026-09-08T02:11:35.000+04:00",
+      "category": "defense",
+      "sourceHash": "41c6c2c93c9981ad7d88fbb0fe30f37d5b5d0fa78375eba7beff9171cfab0ae6"
+    },
+    {
+      "title": "HiOS Fix Needs Switch-Level Recovery Proof",
+      "canonicalUrl": "https://shadowcontext.com/hios-fix-needs-switch-level-recovery-proof/",
+      "publishedAt": "2026-09-08T03:13:06.000+04:00",
+      "category": "defense",
+      "sourceHash": "529c79b7c7ad26ee3e79c657bd8499659c62b4cf0c3d7c6929eff33c2d2b2dcf"
+    },
+    {
+      "title": "IntelliJ Dev Containers Need Project-Trust Proof",
+      "canonicalUrl": "https://shadowcontext.com/intellij-dev-containers-need-project-trust-proof/",
+      "publishedAt": "2026-09-08T04:13:52.000+04:00",
+      "category": "defense",
+      "sourceHash": "dbdaeb113d1a38d521beb3ef5b1926bf6d6db7e85756fd61a24385dd035e778f"
+    },
+    {
+      "title": "Critical JetBrains Hub Fix Needs Service-Trust Proof",
+      "canonicalUrl": "https://shadowcontext.com/jetbrains-hub-fix-needs-service-trust-proof/",
+      "publishedAt": "2026-09-08T05:13:53.000+04:00",
+      "category": "defense",
+      "sourceHash": "a4ec95b3001cab76abe6e7921bf572742737977f1e531f5f37770343e91a032f"
+    },
+    {
+      "title": "LibreNMS API Fix Needs Token-Type Proof",
+      "canonicalUrl": "https://shadowcontext.com/librenms-api-fix-needs-token-type-proof/",
+      "publishedAt": "2026-09-08T06:12:40.000+04:00",
+      "category": "defense",
+      "sourceHash": "0e34d330b7aca1f8ff01a08431a94fecbd3db87e5f078b1dc58a3511b742dd72"
+    },
+    {
+      "title": "YouTrack Helpdesk Fix Needs Email Identity Proof",
+      "canonicalUrl": "https://shadowcontext.com/youtrack-helpdesk-fix-needs-email-identity-proof/",
+      "publishedAt": "2026-09-08T07:11:42.000+04:00",
+      "category": "defense",
+      "sourceHash": "df99a85a56992a45ba0ce2afae4185f6e39a33afae273f6de8c841980bc517d1"
+    },
+    {
+      "title": "Dubai QR Guidance Makes Destination Proof the Safety Check",
+      "canonicalUrl": "https://shadowcontext.com/dubai-qr-guidance-needs-destination-proof/",
+      "publishedAt": "2026-09-08T08:11:51.000+04:00",
+      "category": "defense",
+      "sourceHash": "679b91175cd8e9f0856dfc9be857c3687e8fdd17e75e8ff471d4302102a11821"
+    },
+    {
+      "title": "Photoshop Update Needs Application-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/photoshop-update-needs-application-level-proof/",
+      "publishedAt": "2026-09-08T09:11:43.000+04:00",
+      "category": "defense",
+      "sourceHash": "1e233d64b98c26e1929e56914c4fbf09a9d4632f67f59e355093750ef3642dad"
+    },
+    {
+      "title": "Triton Update Needs Inference-Boundary Proof",
+      "canonicalUrl": "https://shadowcontext.com/triton-update-needs-inference-boundary-proof/",
+      "publishedAt": "2026-09-08T10:11:36.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "1b7a05421e0ec3c1f1c38caaf185de6dce1c12596a29b81a7a9ba9d8f144cd37"
+    },
+    {
+      "title": "DFSA Blockchain Scam Warning Makes Independent Verification Essential",
+      "canonicalUrl": "https://shadowcontext.com/dfsa-blockchain-scam-needs-independent-verification/",
+      "publishedAt": "2026-09-08T11:13:06.000+04:00",
+      "category": "threat-intelligence",
+      "sourceHash": "53a8d6a65c04bf6658fe4a810c6c6e7244e378a18320aa3948d6df5f1b6ff067"
+    },
+    {
+      "title": "SAP CAP Fix Needs Tenant-Boundary Proof",
+      "canonicalUrl": "https://shadowcontext.com/sap-cap-fix-needs-tenant-boundary-proof/",
+      "publishedAt": "2026-09-08T12:12:13.000+04:00",
+      "category": "defense",
+      "sourceHash": "6594b995e569e4ce127d41d879abdabb0a5530d353d7294b1be7ce93196fcb57"
+    },
+    {
+      "title": "SAP Message Server Fix Needs Registration Proof",
+      "canonicalUrl": "https://shadowcontext.com/sap-message-server-fix-needs-registration-proof/",
+      "publishedAt": "2026-09-08T14:10:45.000+04:00",
+      "category": "defense",
+      "sourceHash": "e002cf32d0f9e1f9a9a9a4e9e683cb44fbe1379975d2130acd14e175acbfb94c"
+    },
+    {
+      "title": "389 Directory Server Fix Needs Authentication-State Proof",
+      "canonicalUrl": "https://shadowcontext.com/389-directory-server-fix-needs-state-reset-proof/",
+      "publishedAt": "2026-09-08T15:12:12.000+04:00",
+      "category": "defense",
+      "sourceHash": "25e8f93e43692bab8d7f6087724106f0b504b293e1cd96ccfe5c112871632075"
+    },
+    {
+      "title": "Illustrator Update Makes Creative Files a Security Boundary",
+      "canonicalUrl": "https://shadowcontext.com/illustrator-update-needs-creative-file-boundaries/",
+      "publishedAt": "2026-09-08T16:12:08.000+04:00",
+      "category": "defense",
+      "sourceHash": "61cfae262db691acce4502c4ec9e1cb9ffdf6fb5e1a60bc54e51fa25095eb235"
+    },
+    {
+      "title": "SIMOVE and SIPLANT Fix Needs Service-Boundary Proof",
+      "canonicalUrl": "https://shadowcontext.com/simove-siplant-fix-needs-service-boundary-proof/",
+      "publishedAt": "2026-09-08T17:13:32.000+04:00",
+      "category": "defense",
+      "sourceHash": "019cacde95ff5d90c3a00f4ef534a611ff9b25f24d3afa8371d8eb21602db6af"
+    },
+    {
+      "title": "Armoury Crate Fixes Need Driver-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/armoury-crate-fixes-need-driver-level-proof/",
+      "publishedAt": "2026-09-08T18:12:04.000+04:00",
+      "category": "defense",
+      "sourceHash": "6f0e736ad0d0c4e2fd267857fa356aecd060dc099f3d4c42ad493ad26cfae3e4"
+    },
+    {
+      "title": "XenForo Security Fixes Need Version-Specific Proof",
+      "canonicalUrl": "https://shadowcontext.com/xenforo-fixes-need-version-specific-proof/",
+      "publishedAt": "2026-09-08T19:14:14.000+04:00",
+      "category": "defense",
+      "sourceHash": "38baf85c31f9e84890ac4d573bc809b12b0bf16f6bde8b77db763f39a4514001"
+    },
+    {
+      "title": "Reyrolle 7SR5 Fix Needs Relay-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/reyrolle-7sr5-fix-needs-relay-level-proof/",
+      "publishedAt": "2026-09-08T20:13:47.000+04:00",
+      "category": "defense",
+      "sourceHash": "3f6a4f656e4d4cc98d72113c8ba729a6e8312242a47fb120d4eb1e89a5d3ae0f"
+    },
+    {
+      "title": "SAP OVERPASS Fix Needs Kernel-Wide Proof",
+      "canonicalUrl": "https://shadowcontext.com/sap-overpass-fix-needs-kernel-wide-proof/",
+      "publishedAt": "2026-09-08T21:12:00.000+04:00",
+      "category": "defense",
+      "sourceHash": "4ab8af38f1dd53fc9ad6f8287403dcc930bd0f878c7cd3713867e673ec408734"
+    },
+    {
+      "title": "cPanel EmailTrack Fix Needs Release-Line Build Proof",
+      "canonicalUrl": "https://shadowcontext.com/cpanel-emailtrack-fix-needs-build-proof/",
+      "publishedAt": "2026-09-08T22:13:10.000+04:00",
+      "category": "defense",
+      "sourceHash": "d45b30b0787c8d3b016b352fd7580d61c3dc59758d3e5891b862dc1169b1dc74"
+    },
+    {
+      "title": "Cisco UCS Fix Needs Pre-Boot Trust Proof",
+      "canonicalUrl": "https://shadowcontext.com/cisco-ucs-fix-needs-preboot-trust-proof/",
+      "publishedAt": "2026-09-08T23:10:44.000+04:00",
+      "category": "defense",
+      "sourceHash": "e5c8741fe1051e7784f8e500d0138885f2a6c79ddcdb01bf6647ff0ea5c9fb13"
+    }
+  ],
+  "caption": "Read the complete ShadowContext advisory breakdowns and technical notes for today's independent security updates.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-09-08/d714c2e017515e6b/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-09-08/d714c2e017515e6b/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-09-08/d714c2e017515e6b/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-09-08/d714c2e017515e6b/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}

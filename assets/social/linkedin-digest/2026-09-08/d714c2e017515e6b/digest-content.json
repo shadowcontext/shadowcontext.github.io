@@ -1,0 +1,168 @@
+{
+  "digest_title": "ShadowContext Daily Security Digest: Trust Boundaries and Firmware Baselines",
+  "dek": "Twenty-two independent security advisories reveal critical flaws across streaming hosts, identity stores, network relays, and hardware platforms requiring verified remediation.",
+  "overview": "Today's advisories cover vulnerabilities spanning self-hosted streaming, enterprise identity stores, network routing, and hardware platforms. Across all disclosures, defenders must prioritize branch-specific version verification, strict boundary controls, and durable evidence over unverified automated status markers.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "Sunshine Unicode Packet Fix Clarifies Paired-Client Trust Boundaries",
+      "summary": "Sunshine fixed a heap buffer read flaw requiring a paired client and active stream, emphasizing pairing as authorization rather than input validation.",
+      "why_it_matters": "Paired devices can outlive their trust justification; hosts must validate every packet.",
+      "topic": "Streaming Host Flaw"
+    },
+    {
+      "source_id": "S02",
+      "headline": "MISP Feed Redirect Fixes Require Explicit Egress Boundaries",
+      "summary": "CVE-2026-86419 fixes redirect validation in MISP feeds and TAXII discovery, stopping credential leakage and server-side request forgery.",
+      "why_it_matters": "Redirects change destinations; approving a feed does not authorize forwarding credentials.",
+      "topic": "Feed Security"
+    },
+    {
+      "source_id": "S03",
+      "headline": "HiOS Advisory Calls for Branch-Specific Updates and Recovery Proof",
+      "summary": "Belden published a remote denial-of-service advisory for HiOS with precise fixed floors across six release branches.",
+      "why_it_matters": "Industrial switches are availability concentrators; management exposure must be strictly controlled.",
+      "topic": "Industrial Switch"
+    },
+    {
+      "source_id": "S04",
+      "headline": "IntelliJ Dev Containers Need Explicit Project-Trust Confirmation",
+      "summary": "CVE-2026-86504 fixes a missing trust check before building Dev Containers, preventing silent host-level code execution.",
+      "why_it_matters": "Viewing an unfamiliar repository must not automatically authorize host-affecting execution.",
+      "topic": "IDE Trust"
+    },
+    {
+      "source_id": "S05",
+      "headline": "Critical JetBrains Hub Fix Restricts Service Registration",
+      "summary": "CVE-2026-86480 addresses an unauthenticated trusted-service registration flaw leading to superuser privileges in JetBrains Hub.",
+      "why_it_matters": "Identity control planes require strict service inventory and audit validation.",
+      "topic": "Identity Control"
+    },
+    {
+      "source_id": "S06",
+      "headline": "LibreNMS API Fix Enforces Strict Token Type Checks",
+      "summary": "CVE-2026-86426 fixes an API authentication bypass where type conversion matched unauthorized inputs against stored token hashes.",
+      "why_it_matters": "Authentication must validate data representation as well as value.",
+      "topic": "Monitoring API"
+    },
+    {
+      "source_id": "S07",
+      "headline": "YouTrack Helpdesk Fix Addresses Self-Asserted Email Takeovers",
+      "summary": "CVE-2026-86478 fixes an unauthenticated account takeover flaw caused by accepting self-asserted email addresses.",
+      "why_it_matters": "An email address is an identifier, not proof of mailbox control.",
+      "topic": "Helpdesk Identity"
+    },
+    {
+      "source_id": "S08",
+      "headline": "Dubai QR Guidance Highlights Destination Proof and Verification",
+      "summary": "Dubai Municipality updated security guidance instructing users to verify domain names and avoid surprise payment prompts.",
+      "why_it_matters": "A QR code compresses destinations and removes visibility before scanning.",
+      "topic": "QR Security"
+    },
+    {
+      "source_id": "S09",
+      "headline": "Adobe Photoshop Update Fixes Eight Critical Vulnerabilities",
+      "summary": "Adobe published September updates for Photoshop 2025 and 2026, establishing precise version baselines for Windows and macOS.",
+      "why_it_matters": "Creative file intake functions as active input processing and requires rigorous boundaries.",
+      "topic": "Application Patch"
+    },
+    {
+      "source_id": "S10",
+      "headline": "NVIDIA Triton Update Addresses Authorization and Denial Risks",
+      "summary": "NVIDIA fixed authorization and excessive-iteration flaws, setting r26.07 as the minimum baseline for Linux servers.",
+      "why_it_matters": "Inference endpoints combine access control boundaries with finite computing resources.",
+      "topic": "AI Platform"
+    },
+    {
+      "source_id": "S11",
+      "headline": "DFSA Warns of Blockchain Settlement Scams and Fake Demands",
+      "summary": "The DFSA alerted firms to fraudulent fund-release demands utilizing regulator branding and blockchain terminology.",
+      "why_it_matters": "Independent verification breaks advance-fee fraud relying on borrowed institutional authority.",
+      "topic": "Regulator Warning"
+    },
+    {
+      "source_id": "S12",
+      "headline": "SAP CAP Fix Protects Multitenant Extensibility Boundaries",
+      "summary": "CVE-2026-76969 addresses an authorization weakness in @sap/cds-mtxs allowing potential tenant data exposure.",
+      "why_it_matters": "Shared extension features sit at the intersection of tenant separation and service credentials.",
+      "topic": "Multitenant App"
+    },
+    {
+      "source_id": "S13",
+      "headline": "SAP Message Server Fix Requires Kernel Registration Proof",
+      "summary": "CVE-2026-58240 addresses insufficient component validation during registration in the NetWeaver Message Server.",
+      "why_it_matters": "Internal components require strict identity authentication during registration.",
+      "topic": "Kernel Security"
+    },
+    {
+      "source_id": "S14",
+      "headline": "389 Directory Server Fix Resets Connection Authentication State",
+      "summary": "CVE-2026-18922 fixes a flaw where stale SASL property identity persisted across failed and successful binds.",
+      "why_it_matters": "Identity state must not bleed across connection authentication attempts.",
+      "topic": "Directory State"
+    },
+    {
+      "source_id": "S15",
+      "headline": "Adobe Illustrator Update Establishes Creative File Boundaries",
+      "summary": "Adobe updated Illustrator to fix three critical code execution flaws requiring user interaction.",
+      "why_it_matters": "External design files represent untrusted inputs crossing execution boundaries.",
+      "topic": "Design Editor"
+    },
+    {
+      "source_id": "S16",
+      "headline": "Siemens Fixes File-Read Flaw in SIMOVE and SIPLANT Products",
+      "summary": "SSA-517424 addresses a path traversal vulnerability in embedded HTTP servers allowing arbitrary file reads.",
+      "why_it_matters": "Embedded file endpoints inherit the sensitivity of underlying operating system files.",
+      "topic": "Industrial HTTP"
+    },
+    {
+      "source_id": "S17",
+      "headline": "ASUS Armoury Crate Fixes Require Driver-Level Verification",
+      "summary": "ASUS patched three IOCTL verification flaws in Armoury Crate versions through 6.5.7 affecting hardware control.",
+      "why_it_matters": "Kernel drivers remain the true security boundary regardless of user-space updates.",
+      "topic": "Driver Security"
+    },
+    {
+      "source_id": "S18",
+      "headline": "XenForo Updates Address Fourteen Vulnerabilities Across Branches",
+      "summary": "XenForo released maintenance patches for supported branches and fixed a server-side request forgery flaw.",
+      "why_it_matters": "Webhooks must not be granted unrestricted authority over outbound network requests.",
+      "topic": "Forum Security"
+    },
+    {
+      "source_id": "S19",
+      "headline": "Siemens Reyrolle 7SR5 Advisory Sets V2.70 Firmware Baseline",
+      "summary": "SSA-142885 covers multiple vulnerabilities in protection relays, establishing V2.70 as the corrected baseline.",
+      "why_it_matters": "Electrical protection relays require rigorous device-level inventory and recovery planning.",
+      "topic": "Protection Relay"
+    },
+    {
+      "source_id": "S20",
+      "headline": "SAP OVERPASS Fixes Shared Kernel Memory-Safety Vulnerability",
+      "summary": "CVE-2026-44756 addresses an Extended Passport Protocol memory flaw reachable across multiple communication layers.",
+      "why_it_matters": "Shared code vulnerable across several entry points requires kernel-wide remediation.",
+      "topic": "Memory Safety"
+    },
+    {
+      "source_id": "S21",
+      "headline": "cPanel EmailTrack Fix Requires Exact Build Verification",
+      "summary": "CVE-2026-67401 addresses an SQL injection vulnerability in EmailTrack leading to root code execution.",
+      "why_it_matters": "Delegated mail management features must remain strictly separated from root privileges.",
+      "topic": "Hosting Panel"
+    },
+    {
+      "source_id": "S22",
+      "headline": "Cisco UCS Fixes UEFI Secure Boot Memory-Write Bypass",
+      "summary": "CVE-2026-20293 addresses a UEFI Shell memory-modification flaw requiring model-aware firmware updates.",
+      "why_it_matters": "Pre-boot console access must be treated as privileged infrastructure control.",
+      "topic": "Hardware Boot"
+    }
+  ],
+  "operating_view": "Maintain strict version baselines, verify running instances rather than inventory metadata, and enforce explicit network boundaries around identity and file processing paths.",
+  "watch_items": [
+    "Verify branch-specific fixed builds across live application instances rather than relying on automated deployment jobs.",
+    "Restrict network reachability and audit service registration credentials for identity-bearing components.",
+    "Treat management consoles, webhooks, and file intake routes as privileged trust boundaries."
+  ],
+  "caption_intro": "Read the complete ShadowContext advisory breakdowns and technical notes for today's independent security updates."
+}

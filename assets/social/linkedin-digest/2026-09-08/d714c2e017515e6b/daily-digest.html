@@ -1,0 +1,888 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ShadowContext Daily Security Digest: Trust Boundaries and Firmware Baselines | ShadowContext</title>
+    <style>
+      :root {
+        --paper: #05080d;
+        --panel: #0d1319;
+        --panel-soft: #091017;
+        --ink: #f1f7fa;
+        --ink-2: #c4d1d8;
+        --muted: #8496a1;
+        --line: #1d2b34;
+        --cyan: #35e6d1;
+        --violet: #8b7dff;
+        --sans: "Space Grotesk", Inter, Arial, sans-serif;
+        --mono: "DM Mono", Consolas, monospace;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: var(--sans);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        font-size: 10.5pt;
+        line-height: 1.55;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        position: relative;
+        width: 210mm;
+        min-height: 297mm;
+        padding: 18mm;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 83% 18%, rgba(139, 125, 255, 0.1), transparent 28%),
+          linear-gradient(145deg, #05080d 0%, #081017 62%, #0c101c 100%);
+      }
+
+      .page::before {
+        content: "";
+        position: absolute;
+        inset: 8mm;
+        pointer-events: none;
+        border: 0.25mm solid var(--line);
+      }
+
+      .cover {
+        display: flex;
+        flex-direction: column;
+        page-break-after: always;
+      }
+
+      .brand-row,
+      .section-head,
+      .document-footer {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 4mm;
+        font-size: 20pt;
+        font-weight: 750;
+        letter-spacing: -0.04em;
+      }
+
+      .brand em {
+        color: var(--cyan);
+        font-style: normal;
+      }
+
+      .brand-mark {
+        position: relative;
+        display: block;
+        width: 12mm;
+        height: 12mm;
+        transform: rotate(30deg);
+        border: 1mm solid var(--cyan);
+        border-radius: 1.2mm;
+      }
+
+      .brand-mark::before {
+        content: "";
+        position: absolute;
+        inset: 2.2mm;
+        border: 0.8mm solid var(--violet);
+        border-radius: 0.9mm;
+      }
+
+      .brand-mark::after {
+        content: "";
+        position: absolute;
+        inset: 4.5mm;
+        background: var(--cyan);
+        border-radius: 0.5mm;
+      }
+
+      .edition,
+      .eyebrow,
+      .topic,
+      .section-count,
+      .why span,
+      .document-footer,
+      .source-link {
+        font-family: var(--mono);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .edition,
+      .section-count,
+      .document-footer {
+        color: var(--muted);
+        font-size: 8pt;
+      }
+
+      .cover-copy {
+        position: relative;
+        z-index: 1;
+        margin: 30mm 0 0;
+      }
+
+      .eyebrow {
+        margin: 0 0 7mm;
+        color: var(--cyan);
+        font-size: 10pt;
+      }
+
+      h1 {
+        max-width: 165mm;
+        margin: 0;
+        font-size: 37pt;
+        line-height: 1.03;
+        letter-spacing: -0.05em;
+      }
+
+      .dek {
+        max-width: 155mm;
+        margin: 10mm 0 0;
+        color: var(--ink-2);
+        font-size: 16pt;
+        line-height: 1.45;
+      }
+
+      .context {
+        position: relative;
+        z-index: 1;
+        margin-top: auto;
+        padding: 9mm;
+        background: rgba(13, 19, 25, 0.94);
+        border: 0.3mm solid var(--line);
+        border-left: 1mm solid var(--violet);
+      }
+
+      .context h2,
+      .section-head h2,
+      .operating-view h2,
+      .sources h2 {
+        margin: 0;
+      }
+
+      .context h2 {
+        color: var(--violet);
+        font-family: var(--mono);
+        font-size: 9pt;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .context p {
+        margin: 4mm 0 0;
+        color: var(--ink-2);
+        font-size: 13pt;
+      }
+
+      .cover-meta {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 9mm;
+        color: var(--muted);
+        font: 8pt var(--mono);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .content {
+        padding-top: 15mm;
+        padding-bottom: 18mm;
+      }
+
+      .section-head {
+        margin-bottom: 9mm;
+        padding-bottom: 5mm;
+        border-bottom: 0.3mm solid var(--line);
+      }
+
+      .section-head h2 {
+        font-size: 23pt;
+      }
+
+      .stories {
+        position: relative;
+        z-index: 1;
+      }
+
+      .story {
+        display: grid;
+        grid-template-columns: 15mm 1fr;
+        gap: 5mm;
+        margin: 0 0 6mm;
+        padding: 7mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: rgba(13, 19, 25, 0.96);
+        border: 0.3mm solid var(--line);
+      }
+
+      .story-index {
+        color: var(--cyan);
+        font: 12pt var(--mono);
+      }
+
+      .topic {
+        margin: 0 0 2mm;
+        color: var(--cyan);
+        font-size: 7.5pt;
+      }
+
+      .story h3 {
+        margin: 0;
+        font-size: 16pt;
+        line-height: 1.18;
+        letter-spacing: -0.025em;
+      }
+
+      .summary {
+        margin: 3mm 0;
+        color: var(--ink-2);
+        font-size: 10.5pt;
+      }
+
+      .why {
+        padding-top: 3mm;
+        border-top: 0.25mm solid var(--line);
+      }
+
+      .why span {
+        color: var(--violet);
+        font-size: 7pt;
+      }
+
+      .why p {
+        display: inline;
+        margin: 0 0 0 2mm;
+        font-weight: 650;
+      }
+
+      .source-link {
+        display: inline-block;
+        margin-top: 4mm;
+        color: var(--cyan);
+        font-size: 6.8pt;
+        letter-spacing: 0.04em;
+        text-transform: none;
+      }
+
+      .operating-view,
+      .sources {
+        position: relative;
+        z-index: 1;
+        margin-top: 12mm;
+        padding: 9mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: var(--panel-soft);
+        border: 0.3mm solid var(--line);
+      }
+
+      .operating-view {
+        border-top: 1mm solid var(--cyan);
+      }
+
+      .operating-view h2,
+      .sources h2 {
+        font-size: 18pt;
+      }
+
+      .operating-view > p {
+        color: var(--ink-2);
+        font-size: 12pt;
+      }
+
+      .watch-list,
+      .source-list {
+        margin: 6mm 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .watch-list li {
+        display: grid;
+        grid-template-columns: 9mm 1fr;
+        gap: 4mm;
+        align-items: start;
+        margin: 3mm 0;
+      }
+
+      .watch-list span {
+        display: grid;
+        width: 8mm;
+        height: 8mm;
+        place-items: center;
+        color: var(--cyan);
+        border: 0.3mm solid var(--cyan);
+        font: 8pt var(--mono);
+      }
+
+      .watch-list p {
+        margin: 0;
+      }
+
+      .source-list li {
+        display: grid;
+        grid-template-columns: 10mm 1fr;
+        gap: 3mm;
+        margin: 2.5mm 0;
+        color: var(--ink-2);
+        font-size: 8.5pt;
+      }
+
+      .source-list span {
+        color: var(--violet);
+        font-family: var(--mono);
+      }
+
+      .source-list a {
+        color: var(--cyan);
+        text-decoration: underline;
+        text-decoration-color: rgba(53, 230, 209, 0.35);
+        text-underline-offset: 1mm;
+      }
+
+      .cta {
+        position: relative;
+        z-index: 1;
+        margin: 12mm 0 0;
+        padding: 7mm 9mm;
+        break-inside: avoid;
+        color: #04100f;
+        background: var(--cyan);
+      }
+
+      .cta strong {
+        display: block;
+        font-size: 14pt;
+      }
+
+      .cta span {
+        font: 9pt var(--mono);
+      }
+
+      .document-footer {
+        margin-top: 12mm;
+        padding-top: 5mm;
+        border-top: 0.3mm solid var(--line);
+      }
+
+      @media screen {
+        body {
+          width: 210mm;
+          margin: 0 auto;
+        }
+
+        .page {
+          box-shadow: 0 0 20mm rgba(0, 0, 0, 0.45);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="page cover">
+      <header class="brand-row">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Shadow<em>Context</em></span>
+        </div>
+        <span class="edition">Daily security digest</span>
+      </header>
+
+      <main class="cover-copy">
+        <p class="eyebrow">The day in context / 2026-09-08</p>
+        <h1>ShadowContext Daily Security Digest: Trust Boundaries and Firmware Baselines</h1>
+        <p class="dek">Twenty-two independent security advisories reveal critical flaws across streaming hosts, identity stores, network relays, and hardware platforms requiring verified remediation.</p>
+      </main>
+
+      <aside class="context">
+        <h2>Executive summary</h2>
+        <p>Today&#39;s advisories cover vulnerabilities spanning self-hosted streaming, enterprise identity stores, network routing, and hardware platforms. Across all disclosures, defenders must prioritize branch-specific version verification, strict boundary controls, and durable evidence over unverified automated status markers.</p>
+      </aside>
+
+      <div class="cover-meta">
+        <span>22 briefings included</span>
+        <span>https://shadowcontext.com/</span>
+      </div>
+    </section>
+
+    <section class="page content">
+      <header class="section-head">
+        <h2>All news from the day</h2>
+        <span class="section-count">22 / 2026-09-08</span>
+      </header>
+
+      <main class="stories">
+    <article class="story">
+      <div class="story-index">01</div>
+      <div class="story-copy">
+        <p class="topic">Streaming Host Flaw</p>
+        <h3>Sunshine Unicode Packet Fix Clarifies Paired-Client Trust Boundaries</h3>
+        <p class="summary">Sunshine fixed a heap buffer read flaw requiring a paired client and active stream, emphasizing pairing as authorization rather than input validation.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Paired devices can outlive their trust justification; hosts must validate every packet.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/sunshine-input-fix-needs-paired-client-review/">Sunshine Input Fix Makes Paired-Client Review a Security Control ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">02</div>
+      <div class="story-copy">
+        <p class="topic">Feed Security</p>
+        <h3>MISP Feed Redirect Fixes Require Explicit Egress Boundaries</h3>
+        <p class="summary">CVE-2026-86419 fixes redirect validation in MISP feeds and TAXII discovery, stopping credential leakage and server-side request forgery.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Redirects change destinations; approving a feed does not authorize forwarding credentials.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/misp-feed-redirects-need-egress-boundaries/">MISP Feed Redirects Need Explicit Egress Boundaries ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">03</div>
+      <div class="story-copy">
+        <p class="topic">Industrial Switch</p>
+        <h3>HiOS Advisory Calls for Branch-Specific Updates and Recovery Proof</h3>
+        <p class="summary">Belden published a remote denial-of-service advisory for HiOS with precise fixed floors across six release branches.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Industrial switches are availability concentrators; management exposure must be strictly controlled.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/hios-fix-needs-switch-level-recovery-proof/">HiOS Fix Needs Switch-Level Recovery Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">04</div>
+      <div class="story-copy">
+        <p class="topic">IDE Trust</p>
+        <h3>IntelliJ Dev Containers Need Explicit Project-Trust Confirmation</h3>
+        <p class="summary">CVE-2026-86504 fixes a missing trust check before building Dev Containers, preventing silent host-level code execution.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Viewing an unfamiliar repository must not automatically authorize host-affecting execution.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/intellij-dev-containers-need-project-trust-proof/">IntelliJ Dev Containers Need Project-Trust Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">05</div>
+      <div class="story-copy">
+        <p class="topic">Identity Control</p>
+        <h3>Critical JetBrains Hub Fix Restricts Service Registration</h3>
+        <p class="summary">CVE-2026-86480 addresses an unauthenticated trusted-service registration flaw leading to superuser privileges in JetBrains Hub.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Identity control planes require strict service inventory and audit validation.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/jetbrains-hub-fix-needs-service-trust-proof/">Critical JetBrains Hub Fix Needs Service-Trust Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">06</div>
+      <div class="story-copy">
+        <p class="topic">Monitoring API</p>
+        <h3>LibreNMS API Fix Enforces Strict Token Type Checks</h3>
+        <p class="summary">CVE-2026-86426 fixes an API authentication bypass where type conversion matched unauthorized inputs against stored token hashes.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Authentication must validate data representation as well as value.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/librenms-api-fix-needs-token-type-proof/">LibreNMS API Fix Needs Token-Type Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">07</div>
+      <div class="story-copy">
+        <p class="topic">Helpdesk Identity</p>
+        <h3>YouTrack Helpdesk Fix Addresses Self-Asserted Email Takeovers</h3>
+        <p class="summary">CVE-2026-86478 fixes an unauthenticated account takeover flaw caused by accepting self-asserted email addresses.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>An email address is an identifier, not proof of mailbox control.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/youtrack-helpdesk-fix-needs-email-identity-proof/">YouTrack Helpdesk Fix Needs Email Identity Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">08</div>
+      <div class="story-copy">
+        <p class="topic">QR Security</p>
+        <h3>Dubai QR Guidance Highlights Destination Proof and Verification</h3>
+        <p class="summary">Dubai Municipality updated security guidance instructing users to verify domain names and avoid surprise payment prompts.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>A QR code compresses destinations and removes visibility before scanning.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/dubai-qr-guidance-needs-destination-proof/">Dubai QR Guidance Makes Destination Proof the Safety Check ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">09</div>
+      <div class="story-copy">
+        <p class="topic">Application Patch</p>
+        <h3>Adobe Photoshop Update Fixes Eight Critical Vulnerabilities</h3>
+        <p class="summary">Adobe published September updates for Photoshop 2025 and 2026, establishing precise version baselines for Windows and macOS.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Creative file intake functions as active input processing and requires rigorous boundaries.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/photoshop-update-needs-application-level-proof/">Photoshop Update Needs Application-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">10</div>
+      <div class="story-copy">
+        <p class="topic">AI Platform</p>
+        <h3>NVIDIA Triton Update Addresses Authorization and Denial Risks</h3>
+        <p class="summary">NVIDIA fixed authorization and excessive-iteration flaws, setting r26.07 as the minimum baseline for Linux servers.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Inference endpoints combine access control boundaries with finite computing resources.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/triton-update-needs-inference-boundary-proof/">Triton Update Needs Inference-Boundary Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">11</div>
+      <div class="story-copy">
+        <p class="topic">Regulator Warning</p>
+        <h3>DFSA Warns of Blockchain Settlement Scams and Fake Demands</h3>
+        <p class="summary">The DFSA alerted firms to fraudulent fund-release demands utilizing regulator branding and blockchain terminology.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Independent verification breaks advance-fee fraud relying on borrowed institutional authority.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/dfsa-blockchain-scam-needs-independent-verification/">DFSA Blockchain Scam Warning Makes Independent Verification Essential ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">12</div>
+      <div class="story-copy">
+        <p class="topic">Multitenant App</p>
+        <h3>SAP CAP Fix Protects Multitenant Extensibility Boundaries</h3>
+        <p class="summary">CVE-2026-76969 addresses an authorization weakness in @sap/cds-mtxs allowing potential tenant data exposure.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Shared extension features sit at the intersection of tenant separation and service credentials.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/sap-cap-fix-needs-tenant-boundary-proof/">SAP CAP Fix Needs Tenant-Boundary Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">13</div>
+      <div class="story-copy">
+        <p class="topic">Kernel Security</p>
+        <h3>SAP Message Server Fix Requires Kernel Registration Proof</h3>
+        <p class="summary">CVE-2026-58240 addresses insufficient component validation during registration in the NetWeaver Message Server.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Internal components require strict identity authentication during registration.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/sap-message-server-fix-needs-registration-proof/">SAP Message Server Fix Needs Registration Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">14</div>
+      <div class="story-copy">
+        <p class="topic">Directory State</p>
+        <h3>389 Directory Server Fix Resets Connection Authentication State</h3>
+        <p class="summary">CVE-2026-18922 fixes a flaw where stale SASL property identity persisted across failed and successful binds.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Identity state must not bleed across connection authentication attempts.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/389-directory-server-fix-needs-state-reset-proof/">389 Directory Server Fix Needs Authentication-State Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">15</div>
+      <div class="story-copy">
+        <p class="topic">Design Editor</p>
+        <h3>Adobe Illustrator Update Establishes Creative File Boundaries</h3>
+        <p class="summary">Adobe updated Illustrator to fix three critical code execution flaws requiring user interaction.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>External design files represent untrusted inputs crossing execution boundaries.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/illustrator-update-needs-creative-file-boundaries/">Illustrator Update Makes Creative Files a Security Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">16</div>
+      <div class="story-copy">
+        <p class="topic">Industrial HTTP</p>
+        <h3>Siemens Fixes File-Read Flaw in SIMOVE and SIPLANT Products</h3>
+        <p class="summary">SSA-517424 addresses a path traversal vulnerability in embedded HTTP servers allowing arbitrary file reads.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Embedded file endpoints inherit the sensitivity of underlying operating system files.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/simove-siplant-fix-needs-service-boundary-proof/">SIMOVE and SIPLANT Fix Needs Service-Boundary Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">17</div>
+      <div class="story-copy">
+        <p class="topic">Driver Security</p>
+        <h3>ASUS Armoury Crate Fixes Require Driver-Level Verification</h3>
+        <p class="summary">ASUS patched three IOCTL verification flaws in Armoury Crate versions through 6.5.7 affecting hardware control.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Kernel drivers remain the true security boundary regardless of user-space updates.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/armoury-crate-fixes-need-driver-level-proof/">Armoury Crate Fixes Need Driver-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">18</div>
+      <div class="story-copy">
+        <p class="topic">Forum Security</p>
+        <h3>XenForo Updates Address Fourteen Vulnerabilities Across Branches</h3>
+        <p class="summary">XenForo released maintenance patches for supported branches and fixed a server-side request forgery flaw.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Webhooks must not be granted unrestricted authority over outbound network requests.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/xenforo-fixes-need-version-specific-proof/">XenForo Security Fixes Need Version-Specific Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">19</div>
+      <div class="story-copy">
+        <p class="topic">Protection Relay</p>
+        <h3>Siemens Reyrolle 7SR5 Advisory Sets V2.70 Firmware Baseline</h3>
+        <p class="summary">SSA-142885 covers multiple vulnerabilities in protection relays, establishing V2.70 as the corrected baseline.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Electrical protection relays require rigorous device-level inventory and recovery planning.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/reyrolle-7sr5-fix-needs-relay-level-proof/">Reyrolle 7SR5 Fix Needs Relay-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">20</div>
+      <div class="story-copy">
+        <p class="topic">Memory Safety</p>
+        <h3>SAP OVERPASS Fixes Shared Kernel Memory-Safety Vulnerability</h3>
+        <p class="summary">CVE-2026-44756 addresses an Extended Passport Protocol memory flaw reachable across multiple communication layers.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Shared code vulnerable across several entry points requires kernel-wide remediation.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/sap-overpass-fix-needs-kernel-wide-proof/">SAP OVERPASS Fix Needs Kernel-Wide Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">21</div>
+      <div class="story-copy">
+        <p class="topic">Hosting Panel</p>
+        <h3>cPanel EmailTrack Fix Requires Exact Build Verification</h3>
+        <p class="summary">CVE-2026-67401 addresses an SQL injection vulnerability in EmailTrack leading to root code execution.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Delegated mail management features must remain strictly separated from root privileges.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/cpanel-emailtrack-fix-needs-build-proof/">cPanel EmailTrack Fix Needs Release-Line Build Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">22</div>
+      <div class="story-copy">
+        <p class="topic">Hardware Boot</p>
+        <h3>Cisco UCS Fixes UEFI Secure Boot Memory-Write Bypass</h3>
+        <p class="summary">CVE-2026-20293 addresses a UEFI Shell memory-modification flaw requiring model-aware firmware updates.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Pre-boot console access must be treated as privileged infrastructure control.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/cisco-ucs-fix-needs-preboot-trust-proof/">Cisco UCS Fix Needs Pre-Boot Trust Proof ↗</a>
+      </div>
+    </article></main>
+
+      <section class="operating-view">
+        <p class="eyebrow">The operating view</p>
+        <h2>What the day means for defenders</h2>
+        <p>Maintain strict version baselines, verify running instances rather than inventory metadata, and enforce explicit network boundaries around identity and file processing paths.</p>
+        <ol class="watch-list"><li><span>1</span><p>Verify branch-specific fixed builds across live application instances rather than relying on automated deployment jobs.</p></li>
+<li><span>2</span><p>Restrict network reachability and audit service registration credentials for identity-bearing components.</p></li>
+<li><span>3</span><p>Treat management consoles, webhooks, and file intake routes as privileged trust boundaries.</p></li></ol>
+      </section>
+
+      <section class="sources">
+        <p class="eyebrow">Source index</p>
+        <h2>Every briefing in this digest</h2>
+        <ol class="source-list">
+    <li>
+      <span>01</span>
+      <a href="https://shadowcontext.com/sunshine-input-fix-needs-paired-client-review/">Sunshine Input Fix Makes Paired-Client Review a Security Control</a>
+    </li>
+
+    <li>
+      <span>02</span>
+      <a href="https://shadowcontext.com/misp-feed-redirects-need-egress-boundaries/">MISP Feed Redirects Need Explicit Egress Boundaries</a>
+    </li>
+
+    <li>
+      <span>03</span>
+      <a href="https://shadowcontext.com/hios-fix-needs-switch-level-recovery-proof/">HiOS Fix Needs Switch-Level Recovery Proof</a>
+    </li>
+
+    <li>
+      <span>04</span>
+      <a href="https://shadowcontext.com/intellij-dev-containers-need-project-trust-proof/">IntelliJ Dev Containers Need Project-Trust Proof</a>
+    </li>
+
+    <li>
+      <span>05</span>
+      <a href="https://shadowcontext.com/jetbrains-hub-fix-needs-service-trust-proof/">Critical JetBrains Hub Fix Needs Service-Trust Proof</a>
+    </li>
+
+    <li>
+      <span>06</span>
+      <a href="https://shadowcontext.com/librenms-api-fix-needs-token-type-proof/">LibreNMS API Fix Needs Token-Type Proof</a>
+    </li>
+
+    <li>
+      <span>07</span>
+      <a href="https://shadowcontext.com/youtrack-helpdesk-fix-needs-email-identity-proof/">YouTrack Helpdesk Fix Needs Email Identity Proof</a>
+    </li>
+
+    <li>
+      <span>08</span>
+      <a href="https://shadowcontext.com/dubai-qr-guidance-needs-destination-proof/">Dubai QR Guidance Makes Destination Proof the Safety Check</a>
+    </li>
+
+    <li>
+      <span>09</span>
+      <a href="https://shadowcontext.com/photoshop-update-needs-application-level-proof/">Photoshop Update Needs Application-Level Proof</a>
+    </li>
+
+    <li>
+      <span>10</span>
+      <a href="https://shadowcontext.com/triton-update-needs-inference-boundary-proof/">Triton Update Needs Inference-Boundary Proof</a>
+    </li>
+
+    <li>
+      <span>11</span>
+      <a href="https://shadowcontext.com/dfsa-blockchain-scam-needs-independent-verification/">DFSA Blockchain Scam Warning Makes Independent Verification Essential</a>
+    </li>
+
+    <li>
+      <span>12</span>
+      <a href="https://shadowcontext.com/sap-cap-fix-needs-tenant-boundary-proof/">SAP CAP Fix Needs Tenant-Boundary Proof</a>
+    </li>
+
+    <li>
+      <span>13</span>
+      <a href="https://shadowcontext.com/sap-message-server-fix-needs-registration-proof/">SAP Message Server Fix Needs Registration Proof</a>
+    </li>
+
+    <li>
+      <span>14</span>
+      <a href="https://shadowcontext.com/389-directory-server-fix-needs-state-reset-proof/">389 Directory Server Fix Needs Authentication-State Proof</a>
+    </li>
+
+    <li>
+      <span>15</span>
+      <a href="https://shadowcontext.com/illustrator-update-needs-creative-file-boundaries/">Illustrator Update Makes Creative Files a Security Boundary</a>
+    </li>
+
+    <li>
+      <span>16</span>
+      <a href="https://shadowcontext.com/simove-siplant-fix-needs-service-boundary-proof/">SIMOVE and SIPLANT Fix Needs Service-Boundary Proof</a>
+    </li>
+
+    <li>
+      <span>17</span>
+      <a href="https://shadowcontext.com/armoury-crate-fixes-need-driver-level-proof/">Armoury Crate Fixes Need Driver-Level Proof</a>
+    </li>
+
+    <li>
+      <span>18</span>
+      <a href="https://shadowcontext.com/xenforo-fixes-need-version-specific-proof/">XenForo Security Fixes Need Version-Specific Proof</a>
+    </li>
+
+    <li>
+      <span>19</span>
+      <a href="https://shadowcontext.com/reyrolle-7sr5-fix-needs-relay-level-proof/">Reyrolle 7SR5 Fix Needs Relay-Level Proof</a>
+    </li>
+
+    <li>
+      <span>20</span>
+      <a href="https://shadowcontext.com/sap-overpass-fix-needs-kernel-wide-proof/">SAP OVERPASS Fix Needs Kernel-Wide Proof</a>
+    </li>
+
+    <li>
+      <span>21</span>
+      <a href="https://shadowcontext.com/cpanel-emailtrack-fix-needs-build-proof/">cPanel EmailTrack Fix Needs Release-Line Build Proof</a>
+    </li>
+
+    <li>
+      <span>22</span>
+      <a href="https://shadowcontext.com/cisco-ucs-fix-needs-preboot-trust-proof/">Cisco UCS Fix Needs Pre-Boot Trust Proof</a>
+    </li></ol>
+      </section>
+
+      <div class="cta">
+        <strong>Read the full analysis</strong>
+        <span>https://shadowcontext.com/</span>
+      </div>
+
+      <footer class="document-footer">
+        <span>ShadowContext</span>
+        <span>Independent defensive security intelligence</span>
+      </footer>
+    </section>
+  </body>
+</html>
