@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Protected endpoint-management modules receiving a coordinated update</title>
+  <desc id="desc">An abstract endpoint management core is surrounded by four protected module arcs as amber access paths converge on a cyan update ring.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07131f"/>
+      <stop offset="0.48" stop-color="#102b3b"/>
+      <stop offset="1" stop-color="#132638"/>
+    </linearGradient>
+    <radialGradient id="halo">
+      <stop offset="0" stop-color="#4ce5d7" stop-opacity="0.25"/>
+      <stop offset="0.55" stop-color="#279fb5" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#07131f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9affea"/>
+      <stop offset="0.5" stop-color="#46d7d5"/>
+      <stop offset="1" stop-color="#278cab"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7b4c32" stop-opacity="0.3"/>
+      <stop offset="0.7" stop-color="#f0a85a"/>
+      <stop offset="1" stop-color="#ffd487"/>
+    </linearGradient>
+    <filter id="glow" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <ellipse cx="800" cy="450" rx="570" ry="390" fill="url(#halo)"/>
+  <g fill="none" stroke="#54a9b7" stroke-width="2" opacity="0.18">
+    <path d="M0 180C270 86 460 170 620 122S1040 54 1600 184"/>
+    <path d="M0 734C310 822 440 708 650 770S1110 832 1600 716"/>
+    <circle cx="800" cy="450" r="354" stroke-dasharray="6 20"/>
+    <circle cx="800" cy="450" r="418" stroke-dasharray="2 28"/>
+  </g>
+  <g fill="#46d7d5" opacity="0.14" filter="url(#soft)">
+    <circle cx="330" cy="260" r="80"/><circle cx="1270" cy="260" r="80"/>
+    <circle cx="330" cy="640" r="80"/><circle cx="1270" cy="640" r="80"/>
+  </g>
+  <g fill="none" stroke="url(#amber)" stroke-width="8" stroke-linecap="round">
+    <path d="M132 258C250 258 323 285 424 342"/>
+    <path d="M1468 258C1350 258 1277 285 1176 342"/>
+    <path d="M132 642C250 642 323 615 424 558"/>
+    <path d="M1468 642C1350 642 1277 615 1176 558"/>
+  </g>
+  <g fill="#ffd487" filter="url(#glow)">
+    <circle cx="132" cy="258" r="10"/><circle cx="1468" cy="258" r="10"/>
+    <circle cx="132" cy="642" r="10"/><circle cx="1468" cy="642" r="10"/>
+  </g>
+  <g fill="#0b202e" stroke="url(#cyan)" stroke-width="10">
+    <path d="M442 192A340 340 0 0 1 704 113L725 225A226 226 0 0 0 548 278Z"/>
+    <path d="M896 113A340 340 0 0 1 1158 192L1052 278A226 226 0 0 0 875 225Z"/>
+    <path d="M442 708A340 340 0 0 0 704 787L725 675A226 226 0 0 1 548 622Z"/>
+    <path d="M896 787A340 340 0 0 0 1158 708L1052 622A226 226 0 0 1 875 675Z"/>
+  </g>
+  <g fill="#74eee3" opacity="0.8">
+    <circle cx="578" cy="189" r="9"/><circle cx="1022" cy="189" r="9"/>
+    <circle cx="578" cy="711" r="9"/><circle cx="1022" cy="711" r="9"/>
+  </g>
+  <circle cx="800" cy="450" r="248" fill="#091d2a" stroke="#287e95" stroke-width="5"/>
+  <circle cx="800" cy="450" r="205" fill="none" stroke="url(#cyan)" stroke-width="18" stroke-dasharray="235 28" filter="url(#glow)"/>
+  <circle cx="800" cy="450" r="146" fill="#113747" stroke="#82f4e5" stroke-width="7"/>
+  <path d="M800 328L903 388V508L800 568L697 508V388Z" fill="#0b2635" stroke="#67e4dd" stroke-width="8"/>
+  <path d="M800 370L866 408V486L800 526L734 486V408Z" fill="#175367"/>
+  <circle cx="800" cy="448" r="40" fill="#92f8e8" filter="url(#glow)"/>
+  <circle cx="800" cy="448" r="15" fill="#0c2a38"/>
+  <g fill="none" stroke="#ffe0a8" stroke-width="6" stroke-linecap="round" opacity="0.9">
+    <path d="M486 342L560 376"/><path d="M1114 342L1040 376"/>
+    <path d="M486 558L560 524"/><path d="M1114 558L1040 524"/>
+  </g>
+  <g fill="#ffbf6f" stroke="#102b3b" stroke-width="5">
+    <path d="M402 330l31-18 31 18v36l-31 18-31-18z"/>
+    <path d="M1136 330l31-18 31 18v36l-31 18-31-18z"/>
+    <path d="M402 534l31-18 31 18v36l-31 18-31-18z"/>
+    <path d="M1136 534l31-18 31 18v36l-31 18-31-18z"/>
+  </g>
+  <path d="M610 820C730 850 870 850 990 820" fill="none" stroke="#50dcd7" stroke-width="5" stroke-linecap="round" stroke-dasharray="18 18" opacity="0.65"/>
+  <path d="M982 800l22 18-25 12" fill="none" stroke="#7cf4e5" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
