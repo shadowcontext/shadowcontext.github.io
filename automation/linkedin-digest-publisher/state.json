@@ -529,6 +529,22 @@
       "github_run_id": "34198807899",
       "status": "published",
       "last_error": null
+    },
+    "d714c2e017515e6b563cb61a5c5497d9e3a3901ec3e1d2e1aaefc389ae8a2cdc": {
+      "title": "ShadowContext Daily Security Digest: Trust Boundaries and Firmware Baselines",
+      "digest_date": "2026-09-08",
+      "digest_hash": "d714c2e017515e6b563cb61a5c5497d9e3a3901ec3e1d2e1aaefc389ae8a2cdc",
+      "generated_at": "2026-09-09T09:37:41.875+04:00",
+      "briefing_url": "https://shadowcontext.com/assets/social/linkedin-digest/2026-09-08/d714c2e017515e6b/daily-digest.html",
+      "pdf_file": "assets/social/linkedin-digest/2026-09-08/d714c2e017515e6b/daily-digest.pdf",
+      "linkedin_caption": "Read the complete ShadowContext advisory breakdowns and technical notes for today's independent security updates.\n\nThis edition brings together 22 ShadowContext briefings from September 8, 2026, with direct source links and operational priorities.\n\nRead the full daily briefing:\nhttps://shadowcontext.com/assets/social/linkedin-digest/2026-09-08/d714c2e017515e6b/daily-digest.html\n\n#Cybersecurity #ThreatIntelligence #InfoSec #AISecurity",
+      "linkedin_document_urn": "urn:li:document:D4D10AQFOL0F8M4Zp3A",
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7503353697268195328",
+      "published_at": "2026-09-09T07:28:47.357Z",
+      "github_run_id": "34324023995",
+      "status": "published",
+      "last_error": null
     }
   }
 }
