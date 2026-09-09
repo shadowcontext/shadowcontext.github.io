@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Protected DNS service network</title>
+  <desc id="desc">Abstract DNS network nodes converge on protected server columns behind a layered blue shield, while amber paths are stopped at the boundary.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071426"/>
+      <stop offset="0.55" stop-color="#0b2940"/>
+      <stop offset="1" stop-color="#102f42"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0.85" y2="1">
+      <stop offset="0" stop-color="#72e1ff"/>
+      <stop offset="0.48" stop-color="#238fcb"/>
+      <stop offset="1" stop-color="#12517f"/>
+    </linearGradient>
+    <linearGradient id="server" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#173f5c"/>
+      <stop offset="1" stop-color="#0a2137"/>
+    </linearGradient>
+    <radialGradient id="halo">
+      <stop offset="0" stop-color="#5ddcff" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#5ddcff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="890" cy="450" r="390" fill="url(#halo)"/>
+  <g opacity="0.18" stroke="#7bc9df" stroke-width="2" fill="none">
+    <path d="M0 170 C250 95 390 250 650 205 S1110 85 1600 165"/>
+    <path d="M0 755 C300 660 425 815 750 740 S1230 650 1600 720"/>
+    <circle cx="180" cy="205" r="82"/><circle cx="322" cy="675" r="118"/>
+  </g>
+  <g stroke="#56c7ea" stroke-width="5" fill="none" opacity="0.8">
+    <path d="M170 245 C360 245 455 345 660 400"/>
+    <path d="M235 455 C395 455 505 455 660 455"/>
+    <path d="M170 665 C360 665 465 565 660 510"/>
+  </g>
+  <g fill="#081b2d" stroke="#70dcf5" stroke-width="7">
+    <circle cx="150" cy="245" r="38"/><circle cx="215" cy="455" r="46"/><circle cx="150" cy="665" r="38"/>
+  </g>
+  <g fill="#7ce8ff" filter="url(#glow)">
+    <circle cx="150" cy="245" r="9"/><circle cx="215" cy="455" r="11"/><circle cx="150" cy="665" r="9"/>
+  </g>
+  <g stroke="#f3ad48" stroke-width="7" fill="none" stroke-linecap="round">
+    <path d="M25 340 C240 330 430 375 665 425"/>
+    <path d="M25 570 C255 580 430 535 665 485"/>
+  </g>
+  <g fill="#f8be62" filter="url(#glow)">
+    <circle cx="590" cy="410" r="9"/><circle cx="590" cy="500" r="9"/>
+  </g>
+  <g transform="translate(1010 245)">
+    <rect x="0" y="0" width="360" height="126" rx="24" fill="url(#server)" stroke="#4dbfe5" stroke-width="4"/>
+    <rect x="0" y="142" width="360" height="126" rx="24" fill="url(#server)" stroke="#4dbfe5" stroke-width="4"/>
+    <rect x="0" y="284" width="360" height="126" rx="24" fill="url(#server)" stroke="#4dbfe5" stroke-width="4"/>
+    <g fill="#71e2ff"><circle cx="42" cy="42" r="9"/><circle cx="42" cy="184" r="9"/><circle cx="42" cy="326" r="9"/></g>
+    <g fill="#246181"><rect x="75" y="35" width="235" height="14" rx="7"/><rect x="75" y="177" width="235" height="14" rx="7"/><rect x="75" y="319" width="235" height="14" rx="7"/></g>
+    <g fill="#173c58"><rect x="75" y="70" width="150" height="11" rx="5"/><rect x="75" y="212" width="150" height="11" rx="5"/><rect x="75" y="354" width="150" height="11" rx="5"/></g>
+  </g>
+  <g transform="translate(650 165)">
+    <path d="M190 0 C276 55 351 72 380 80 V325 C380 471 302 568 190 625 C78 568 0 471 0 325 V80 C29 72 104 55 190 0Z" fill="#071b2d" stroke="#85e7ff" stroke-width="18" opacity="0.97"/>
+    <path d="M190 48 C251 87 306 99 332 106 V319 C332 429 276 507 190 557 C104 507 48 429 48 319 V106 C74 99 129 87 190 48Z" fill="url(#shield)" opacity="0.88"/>
+    <g transform="translate(190 294)" fill="none" stroke="#d7f8ff" stroke-width="18" stroke-linecap="round">
+      <circle r="82"/>
+      <path d="M-82 0H82M0-82C-42-38-42 38 0 82M0-82C42-38 42 38 0 82"/>
+    </g>
+  </g>
+  <path d="M1400 125 C1320 165 1290 210 1265 246" fill="none" stroke="#63d3f1" stroke-width="4" opacity="0.55"/>
+  <circle cx="1400" cy="125" r="18" fill="#0b2135" stroke="#70dcf5" stroke-width="5"/>
+</svg>
