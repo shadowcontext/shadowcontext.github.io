@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Resilient route-origin validation</title>
+  <desc id="desc">Abstract network routes pass through paired cyan validation rings while a fragmented cache path is isolated in amber.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07131f"/>
+      <stop offset="0.52" stop-color="#0b2837"/>
+      <stop offset="1" stop-color="#123b48"/>
+    </linearGradient>
+    <radialGradient id="aura">
+      <stop offset="0" stop-color="#62e8df" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#62e8df" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="route" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#247d91"/>
+      <stop offset="0.5" stop-color="#7af4df"/>
+      <stop offset="1" stop-color="#39a8c8"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b3fff3" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#1b738c" stop-opacity="0.08"/>
+    </linearGradient>
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <circle cx="860" cy="448" r="410" fill="url(#aura)"/>
+  <g fill="none" stroke="#4ca4b5" stroke-width="2" opacity="0.2">
+    <path d="M0 148C250 70 405 235 642 168S1100 56 1600 160"/>
+    <path d="M0 772C270 674 442 836 704 758S1190 660 1600 748"/>
+    <circle cx="204" cy="450" r="155"/><circle cx="1372" cy="452" r="172"/>
+  </g>
+  <g fill="#0b2533" stroke="#55c9d0" stroke-width="6">
+    <circle cx="132" cy="248" r="34"/><circle cx="120" cy="450" r="42"/><circle cx="132" cy="652" r="34"/>
+    <circle cx="1460" cy="248" r="34"/><circle cx="1480" cy="450" r="42"/><circle cx="1460" cy="652" r="34"/>
+  </g>
+  <g fill="#91fff0" filter="url(#softGlow)">
+    <circle cx="132" cy="248" r="8"/><circle cx="120" cy="450" r="10"/><circle cx="132" cy="652" r="8"/>
+    <circle cx="1460" cy="248" r="8"/><circle cx="1480" cy="450" r="10"/><circle cx="1460" cy="652" r="8"/>
+  </g>
+  <g fill="none" stroke="url(#route)" stroke-width="8" stroke-linecap="round">
+    <path d="M166 248C360 248 430 322 612 350"/>
+    <path d="M162 450H608"/>
+    <path d="M166 652C360 652 430 578 612 550"/>
+    <path d="M990 350C1168 322 1248 248 1426 248"/>
+    <path d="M992 450H1438"/>
+    <path d="M990 550C1168 578 1248 652 1426 652"/>
+  </g>
+  <g transform="translate(610 180)">
+    <circle cx="190" cy="270" r="190" fill="#081c29" stroke="#8cf7e9" stroke-width="15"/>
+    <circle cx="190" cy="270" r="142" fill="url(#glass)" stroke="#35aab8" stroke-width="5"/>
+    <path d="M190 128L305 198V338L190 408L75 338V198Z" fill="#0e3343" stroke="#9affee" stroke-width="8"/>
+    <path d="M190 165L272 215V315L190 365L108 315V215Z" fill="#164d5c"/>
+    <circle cx="190" cy="265" r="36" fill="#8cf7e9" filter="url(#softGlow)"/>
+    <circle cx="190" cy="265" r="14" fill="#0a2634"/>
+  </g>
+  <g transform="translate(892 305)" opacity="0.95">
+    <circle cx="94" cy="145" r="116" fill="#091b28" stroke="#62d9de" stroke-width="10"/>
+    <circle cx="94" cy="145" r="77" fill="none" stroke="#78efe4" stroke-width="6" stroke-dasharray="28 15"/>
+    <circle cx="94" cy="145" r="18" fill="#78efe4"/>
+  </g>
+  <g fill="none" stroke="#f3ab55" stroke-linecap="round">
+    <path d="M350 705C515 685 570 660 666 610" stroke-width="9"/>
+    <path d="M686 600L720 581M741 567L770 551M794 538L820 525" stroke-width="12"/>
+  </g>
+  <g fill="#ffc66e" filter="url(#softGlow)">
+    <circle cx="686" cy="600" r="9"/><circle cx="741" cy="567" r="8"/><circle cx="794" cy="538" r="7"/>
+  </g>
+  <path d="M628 684C735 738 890 748 1013 700" fill="none" stroke="#4fc4ca" stroke-width="5" stroke-dasharray="14 16" opacity="0.7"/>
+  <path d="M1013 700l-22-4 13-19" fill="none" stroke="#75ece0" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
