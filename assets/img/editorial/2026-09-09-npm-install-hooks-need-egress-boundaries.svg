@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Contained network paths around a software build pipeline</title>
+  <desc id="desc">Abstract package blocks approach a luminous guarded build channel while branching network paths stop at a protective boundary.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071426"/>
+      <stop offset="0.55" stop-color="#102748"/>
+      <stop offset="1" stop-color="#0a172d"/>
+    </linearGradient>
+    <linearGradient id="gate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7cf6d2"/>
+      <stop offset="1" stop-color="#21a9c7"/>
+    </linearGradient>
+    <linearGradient id="parcel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f5b85a"/>
+      <stop offset="1" stop-color="#dc607e"/>
+    </linearGradient>
+    <radialGradient id="halo">
+      <stop offset="0" stop-color="#43dbcf" stop-opacity=".26"/>
+      <stop offset="1" stop-color="#43dbcf" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="14" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#9fc6e8" stroke-opacity=".055" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <ellipse cx="835" cy="450" rx="560" ry="430" fill="url(#halo)"/>
+
+  <path d="M90 720C345 630 420 555 610 470S965 380 1510 190" fill="none" stroke="#b5d5ee" stroke-opacity=".12" stroke-width="76" stroke-linecap="round"/>
+  <path d="M90 720C345 630 420 555 610 470S965 380 1510 190" fill="none" stroke="#61dbd1" stroke-opacity=".72" stroke-width="4" stroke-dasharray="12 20" stroke-linecap="round"/>
+
+  <g opacity=".9">
+    <path d="M210 218C390 235 446 330 628 348" fill="none" stroke="#e78d87" stroke-width="5"/>
+    <path d="M198 300C370 326 458 395 628 408" fill="none" stroke="#e78d87" stroke-width="5"/>
+    <path d="M230 655C420 610 498 525 628 500" fill="none" stroke="#e78d87" stroke-width="5"/>
+    <circle cx="210" cy="218" r="10" fill="#ffb068"/>
+    <circle cx="198" cy="300" r="10" fill="#ffb068"/>
+    <circle cx="230" cy="655" r="10" fill="#ffb068"/>
+  </g>
+
+  <g transform="translate(320 360)">
+    <path d="M0 60 112 0l112 60-112 62Z" fill="#f9c264"/>
+    <path d="M0 60v130l112 65V122Z" fill="#d75f7b"/>
+    <path d="M224 60v130l-112 65V122Z" fill="url(#parcel)"/>
+    <path d="m112 0 38 20-112 61-38-21Z" fill="#ffe2a1" opacity=".76"/>
+    <path d="M112 122v133" stroke="#6c244d" stroke-opacity=".55" stroke-width="4"/>
+  </g>
+
+  <g filter="url(#glow)">
+    <path d="M650 145h70v610h-70z" fill="url(#gate)" opacity=".24"/>
+    <path d="M680 130c115 45 176 53 270 55v259c0 158-105 248-270 323-165-75-270-165-270-323V185c94-2 155-10 270-55Z" fill="#102947" stroke="url(#gate)" stroke-width="13"/>
+    <path d="M680 206c77 30 126 40 194 45v192c0 107-69 178-194 241-125-63-194-134-194-241V251c68-5 117-15 194-45Z" fill="#0b1c33" stroke="#69e6d1" stroke-opacity=".5" stroke-width="3"/>
+    <circle cx="680" cy="437" r="80" fill="#153f55" stroke="#85f7d6" stroke-width="8"/>
+    <path d="M643 438l26 27 53-62" fill="none" stroke="#9bffe4" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g stroke="#70ead8" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M950 350h178c57 0 70-54 128-54h144"/>
+    <path d="M950 438h258c52 0 65 48 118 48h116"/>
+    <path d="M923 535h164c52 0 71 68 124 68h173"/>
+  </g>
+  <g fill="#92ffe0">
+    <circle cx="1128" cy="350" r="11"/>
+    <circle cx="1208" cy="438" r="11"/>
+    <circle cx="1087" cy="535" r="11"/>
+  </g>
+  <g fill="#10233e" stroke="#eb7690" stroke-width="6">
+    <rect x="1375" y="269" width="54" height="54" rx="14"/>
+    <rect x="1416" y="459" width="54" height="54" rx="14"/>
+    <rect x="1357" y="576" width="54" height="54" rx="14"/>
+  </g>
+  <g stroke="#ffc169" stroke-width="7" stroke-linecap="round">
+    <path d="m1389 283 26 26m0-26-26 26"/>
+    <path d="m1430 473 26 26m0-26-26 26"/>
+    <path d="m1371 590 26 26m0-26-26 26"/>
+  </g>
+  <path d="M1010 695c150 6 290-14 445-77" fill="none" stroke="#8db9dc" stroke-opacity=".18" stroke-width="3" stroke-dasharray="7 15"/>
+</svg>
