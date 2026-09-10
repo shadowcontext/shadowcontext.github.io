@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Permission gate across monitoring and notebook restore paths</title>
+  <desc id="desc">Abstract endpoint telemetry and notebook fragments travel along separate amber paths into a shared teal permission gate that protects a field of endpoints.</desc>
+  <defs>
+    <linearGradient id="bg" x1="90" y1="40" x2="1510" y2="850" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#061827"/>
+      <stop offset="0.5" stop-color="#0A2D3B"/>
+      <stop offset="1" stop-color="#07131D"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="0" cy="0" r="1" gradientTransform="translate(846 456) rotate(90) scale(390 570)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2DD4BF" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#2DD4BF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gate" x1="680" y1="170" x2="980" y2="746" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#99F6E4"/>
+      <stop offset="0.48" stop-color="#2DD4BF"/>
+      <stop offset="1" stop-color="#0891B2"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="90" y1="350" x2="730" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F59E0B" stop-opacity="0"/>
+      <stop offset="0.35" stop-color="#FBBF24"/>
+      <stop offset="1" stop-color="#F97316"/>
+    </linearGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="68" height="68" patternUnits="userSpaceOnUse">
+      <path d="M68 0H0V68" fill="none" stroke="#CFFAFE" stroke-opacity="0.045"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <ellipse cx="846" cy="456" rx="590" ry="390" fill="url(#aura)"/>
+  <path d="M0 725C276 640 482 754 765 690C1062 623 1280 714 1600 594V900H0Z" fill="#020A11" fill-opacity="0.54"/>
+
+  <!-- Monitoring path: endpoint signals become scheduled artifacts -->
+  <g transform="translate(108 215)" fill="#092835" stroke="#67E8F9" stroke-width="3">
+    <rect width="220" height="138" rx="24"/>
+    <path d="M28 42h164M28 70h164M28 98h164" opacity="0.32"/>
+    <circle cx="49" cy="42" r="7" fill="#22D3EE" stroke="none"/>
+    <circle cx="49" cy="70" r="7" fill="#5EEAD4" stroke="none"/>
+    <circle cx="49" cy="98" r="7" fill="#FBBF24" stroke="none"/>
+  </g>
+  <path d="M328 284C460 284 513 357 652 392" fill="none" stroke="url(#amber)" stroke-width="12" stroke-linecap="round"/>
+  <g fill="#FBBF24" opacity="0.88">
+    <circle cx="403" cy="294" r="8"/><circle cx="477" cy="318" r="6"/><circle cx="553" cy="356" r="9"/>
+  </g>
+  <path d="M380 250l18 11v22l-18 11-18-11v-22Z" fill="#F59E0B" fill-opacity="0.18" stroke="#FBBF24" stroke-width="3"/>
+
+  <!-- Restore path: notebook fragments re-enter the active system -->
+  <g transform="translate(112 538)">
+    <path d="M28 0h154l34 36v114H28Z" fill="#092835" stroke="#67E8F9" stroke-width="3"/>
+    <path d="M182 0v36h34" fill="none" stroke="#67E8F9" stroke-width="3"/>
+    <path d="M58 57h119M58 82h91M58 107h108" stroke="#99F6E4" stroke-opacity="0.55" stroke-width="5" stroke-linecap="round"/>
+    <path d="M0 24h28v104H0" fill="#0D3B48" stroke="#22D3EE" stroke-width="3"/>
+    <circle cx="14" cy="50" r="5" fill="#FBBF24"/>
+    <circle cx="14" cy="76" r="5" fill="#5EEAD4"/>
+    <circle cx="14" cy="102" r="5" fill="#22D3EE"/>
+  </g>
+  <path d="M328 612C465 612 521 547 654 515" fill="none" stroke="url(#amber)" stroke-width="12" stroke-linecap="round"/>
+  <g fill="#FBBF24" opacity="0.88">
+    <circle cx="407" cy="602" r="8"/><circle cx="482" cy="578" r="6"/><circle cx="555" cy="541" r="9"/>
+  </g>
+
+  <!-- Shared authorization gate -->
+  <path d="M826 143L1032 260V496C1032 628 950 727 826 778C702 727 620 628 620 496V260Z" fill="#071F2A" stroke="#5EEAD4" stroke-opacity="0.35" stroke-width="4"/>
+  <path d="M826 181L995 278V491C995 601 930 686 826 734C722 686 657 601 657 491V278Z" fill="url(#gate)" fill-opacity="0.13" stroke="url(#gate)" stroke-width="5"/>
+  <rect x="713" y="338" width="226" height="238" rx="34" fill="#082B36" stroke="#99F6E4" stroke-width="4"/>
+  <path d="M764 338v-46c0-44 25-78 62-78s62 34 62 78v46" fill="none" stroke="#5EEAD4" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="826" cy="437" r="42" fill="#0E7490" fill-opacity="0.48" stroke="#CCFBF1" stroke-width="3"/>
+  <path d="M826 468v55" stroke="#A7F3D0" stroke-width="15" stroke-linecap="round"/>
+  <circle cx="826" cy="436" r="12" fill="#CCFBF1" filter="url(#glow)"/>
+  <path d="M672 393h41M667 515h46" stroke="#FBBF24" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="672" cy="393" r="11" fill="#F59E0B" stroke="#FDE68A" stroke-width="3"/>
+  <circle cx="667" cy="515" r="11" fill="#F59E0B" stroke="#FDE68A" stroke-width="3"/>
+
+  <!-- Authorized paths leave the gate toward protected endpoints -->
+  <path d="M939 398C1084 342 1161 260 1518 257" fill="none" stroke="#5EEAD4" stroke-width="9" stroke-linecap="round" opacity="0.8"/>
+  <path d="M939 515C1093 561 1183 649 1518 650" fill="none" stroke="#22D3EE" stroke-width="8" stroke-linecap="round" opacity="0.72"/>
+  <path d="M944 456C1117 456 1244 455 1542 455" fill="none" stroke="#A7F3D0" stroke-width="5" stroke-linecap="round" opacity="0.62"/>
+
+  <g fill="#092835" stroke="#67E8F9" stroke-width="3">
+    <g transform="translate(1250 151)"><rect width="210" height="126" rx="22"/><path d="M27 38h156M27 64h156M27 90h156" opacity="0.3"/><circle cx="48" cy="38" r="7" fill="#5EEAD4" stroke="none"/><circle cx="48" cy="64" r="7" fill="#5EEAD4" stroke="none"/><circle cx="48" cy="90" r="7" fill="#22D3EE" stroke="none"/></g>
+    <g transform="translate(1302 390)"><rect width="210" height="126" rx="22"/><path d="M27 38h156M27 64h156M27 90h156" opacity="0.3"/><circle cx="48" cy="38" r="7" fill="#5EEAD4" stroke="none"/><circle cx="48" cy="64" r="7" fill="#22D3EE" stroke="none"/><circle cx="48" cy="90" r="7" fill="#5EEAD4" stroke="none"/></g>
+    <g transform="translate(1245 620)"><rect width="210" height="126" rx="22"/><path d="M27 38h156M27 64h156M27 90h156" opacity="0.3"/><circle cx="48" cy="38" r="7" fill="#22D3EE" stroke="none"/><circle cx="48" cy="64" r="7" fill="#5EEAD4" stroke="none"/><circle cx="48" cy="90" r="7" fill="#5EEAD4" stroke="none"/></g>
+  </g>
+
+  <g fill="#A7F3D0" filter="url(#glow)">
+    <circle cx="1074" cy="345" r="7"/><circle cx="1164" cy="292" r="9"/>
+    <circle cx="1083" cy="560" r="7"/><circle cx="1174" cy="613" r="9"/>
+    <circle cx="1090" cy="456" r="6"/><circle cx="1210" cy="455" r="7"/>
+  </g>
+  <g opacity="0.2" filter="url(#soft)">
+    <ellipse cx="844" cy="467" rx="255" ry="210" fill="#2DD4BF"/>
+    <ellipse cx="463" cy="452" rx="175" ry="110" fill="#F59E0B"/>
+  </g>
+</svg>
