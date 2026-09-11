@@ -545,6 +545,22 @@
       "github_run_id": "34324023995",
       "status": "published",
       "last_error": null
+    },
+    "18ed5055e998ed247c8c2d4fe40069c8776cbf703529f2e3a09110c561e5757d": {
+      "title": "Defensive Security Digest: Infrastructure Flaws and AI Tool Risks",
+      "digest_date": "2026-09-10",
+      "digest_hash": "18ed5055e998ed247c8c2d4fe40069c8776cbf703529f2e3a09110c561e5757d",
+      "generated_at": "2026-09-11T09:29:02.535+04:00",
+      "briefing_url": "https://shadowcontext.com/assets/social/linkedin-digest/2026-09-10/18ed5055e998ed24/daily-digest.html",
+      "pdf_file": "assets/social/linkedin-digest/2026-09-10/18ed5055e998ed24/daily-digest.pdf",
+      "linkedin_caption": "ShadowContext brings you concise defensive security intelligence focused on verified infrastructure facts and actionable architectural controls.\n\nThis edition brings together 9 ShadowContext briefings from September 10, 2026, with direct source links and operational priorities.\n\nRead the full daily briefing:\nhttps://shadowcontext.com/assets/social/linkedin-digest/2026-09-10/18ed5055e998ed24/daily-digest.html\n\n#Cybersecurity #ThreatIntelligence #InfoSec #AISecurity",
+      "linkedin_document_urn": "urn:li:document:D4D10AQEmNSc0aJ--mA",
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7504076903247659008",
+      "published_at": "2026-09-11T07:22:33.040Z",
+      "github_run_id": "34574064426",
+      "status": "published",
+      "last_error": null
     }
   }
 }
