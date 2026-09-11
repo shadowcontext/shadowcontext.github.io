@@ -1,0 +1,77 @@
+{
+  "digest_title": "Defensive Security Digest: Infrastructure Flaws and AI Tool Risks",
+  "dek": "Today's security updates cover critical vulnerabilities in enterprise firewalls, VPNs, AI inference, model distillation defenses, and MCP package-management tools.",
+  "overview": "Defenders face multiple unpatched or newly fixed flaws in enterprise and AI infrastructure today. Priorities include verifying active protections for Check Point VPNs, managing Siemens inference exposure without a patch, and securing MCP dependency tools.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "Siemens Drops AI Inference Fix",
+      "summary": "Siemens confirmed no fix is planned for CVE-2025-15467 affecting its AI Lightweight Inference Server across all versions.",
+      "why_it_matters": "Operators must isolate workloads or plan replacements rather than awaiting a vendor patch.",
+      "topic": "AI Security"
+    },
+    {
+      "source_id": "S02",
+      "headline": "Cross-Platform AI Distillation Guidance",
+      "summary": "New US guidance calls for correlated behavioral detection across identity and infrastructure layers to mitigate AI distillation.",
+      "why_it_matters": "Distributed extraction requires joined detection clusters rather than static rate limits alone.",
+      "topic": "AI Threat Defense"
+    },
+    {
+      "source_id": "S03",
+      "headline": "Check Point Fixes VPN Flaws",
+      "summary": "Check Point disclosed CVE-2026-85102 and CVE-2026-85103 involving certificate processing and ASN.1 decoding in VPN gateways.",
+      "why_it_matters": "Unauthenticated remote code execution risks require verifying active protection on every process.",
+      "topic": "VPN Security"
+    },
+    {
+      "source_id": "S04",
+      "headline": "Browser-Built Phishing Campaign Observed",
+      "summary": "Phishing campaigns now assemble deceptive login pages inside browser sessions using blob URLs and service workers.",
+      "why_it_matters": "Static URL inspection fails when initial links appear trusted before rendering malicious content.",
+      "topic": "Phishing Defense"
+    },
+    {
+      "source_id": "S05",
+      "headline": "PAN-OS XML Buffer Overflow Fixed",
+      "summary": "Palo Alto Networks fixed a high-severity XML processing buffer overflow affecting management and dataplane paths.",
+      "why_it_matters": "Exposure depends on platform type and reachable interfaces, necessitating platform-aware verification.",
+      "topic": "Firewall Defense"
+    },
+    {
+      "source_id": "S06",
+      "headline": "Open WebUI Fixes Redirect Flaw",
+      "summary": "Open WebUI version 0.11.1 addresses CVE-2026-88001, a redirect validation weakness in retrieval paths.",
+      "why_it_matters": "Security policy must evaluate final destinations after HTTP redirects, not just initial URLs.",
+      "topic": "AI Infrastructure"
+    },
+    {
+      "source_id": "S07",
+      "headline": "Arista P4Runtime Vulnerability Disclosed",
+      "summary": "Arista addressed CVE-2026-73453, a critical code-injection flaw in P4Runtime services requiring specific feature configurations.",
+      "why_it_matters": "Configuration evidence is essential since exposure depends on authentication settings and enabled states.",
+      "topic": "Network Security"
+    },
+    {
+      "source_id": "S08",
+      "headline": "Velociraptor Patches Permission Gaps",
+      "summary": "Velociraptor version 0.77.2 resolves permission enforcement issues in client monitoring and notebook restore workflows.",
+      "why_it_matters": "Defensive tooling must preserve authorization rules across indirect scheduling and recovery paths.",
+      "topic": "Endpoint Security"
+    },
+    {
+      "source_id": "S09",
+      "headline": "MCP Version Tool Flaw Patched",
+      "summary": "Version 1.4.4 of functype-mcp-server fixes CVE-2026-59176, where version values allowed arbitrary package source installations.",
+      "why_it_matters": "Agent tools altering dependencies require strict source boundaries to prevent unauthorized code execution.",
+      "topic": "AI Tool Security"
+    }
+  ],
+  "operating_view": "Maintain rigorous inventory tracking across physical, virtual, and AI infrastructure. Verify active protection states post-update and ensure component-level validation for all deployed patches and mitigations.",
+  "watch_items": [
+    "Verify that VPN and firewall updates successfully activate protections on every target process and interface.",
+    "Monitor AI retrieval and assistant workflows for unexpected redirects, external fetches, and package modifications.",
+    "Enforce strict authorization and source validation across all administrative and monitoring backup paths."
+  ],
+  "caption_intro": "ShadowContext brings you concise defensive security intelligence focused on verified infrastructure facts and actionable architectural controls."
+}

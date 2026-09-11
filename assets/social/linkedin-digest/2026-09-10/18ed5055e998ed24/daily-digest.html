@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Defensive Security Digest: Infrastructure Flaws and AI Tool Risks | ShadowContext</title>
+    <style>
+      :root {
+        --paper: #05080d;
+        --panel: #0d1319;
+        --panel-soft: #091017;
+        --ink: #f1f7fa;
+        --ink-2: #c4d1d8;
+        --muted: #8496a1;
+        --line: #1d2b34;
+        --cyan: #35e6d1;
+        --violet: #8b7dff;
+        --sans: "Space Grotesk", Inter, Arial, sans-serif;
+        --mono: "DM Mono", Consolas, monospace;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: var(--sans);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        font-size: 10.5pt;
+        line-height: 1.55;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        position: relative;
+        width: 210mm;
+        min-height: 297mm;
+        padding: 18mm;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 83% 18%, rgba(139, 125, 255, 0.1), transparent 28%),
+          linear-gradient(145deg, #05080d 0%, #081017 62%, #0c101c 100%);
+      }
+
+      .page::before {
+        content: "";
+        position: absolute;
+        inset: 8mm;
+        pointer-events: none;
+        border: 0.25mm solid var(--line);
+      }
+
+      .cover {
+        display: flex;
+        flex-direction: column;
+        page-break-after: always;
+      }
+
+      .brand-row,
+      .section-head,
+      .document-footer {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 4mm;
+        font-size: 20pt;
+        font-weight: 750;
+        letter-spacing: -0.04em;
+      }
+
+      .brand em {
+        color: var(--cyan);
+        font-style: normal;
+      }
+
+      .brand-mark {
+        position: relative;
+        display: block;
+        width: 12mm;
+        height: 12mm;
+        transform: rotate(30deg);
+        border: 1mm solid var(--cyan);
+        border-radius: 1.2mm;
+      }
+
+      .brand-mark::before {
+        content: "";
+        position: absolute;
+        inset: 2.2mm;
+        border: 0.8mm solid var(--violet);
+        border-radius: 0.9mm;
+      }
+
+      .brand-mark::after {
+        content: "";
+        position: absolute;
+        inset: 4.5mm;
+        background: var(--cyan);
+        border-radius: 0.5mm;
+      }
+
+      .edition,
+      .eyebrow,
+      .topic,
+      .section-count,
+      .why span,
+      .document-footer,
+      .source-link {
+        font-family: var(--mono);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .edition,
+      .section-count,
+      .document-footer {
+        color: var(--muted);
+        font-size: 8pt;
+      }
+
+      .cover-copy {
+        position: relative;
+        z-index: 1;
+        margin: 30mm 0 0;
+      }
+
+      .eyebrow {
+        margin: 0 0 7mm;
+        color: var(--cyan);
+        font-size: 10pt;
+      }
+
+      h1 {
+        max-width: 165mm;
+        margin: 0;
+        font-size: 37pt;
+        line-height: 1.03;
+        letter-spacing: -0.05em;
+      }
+
+      .dek {
+        max-width: 155mm;
+        margin: 10mm 0 0;
+        color: var(--ink-2);
+        font-size: 16pt;
+        line-height: 1.45;
+      }
+
+      .context {
+        position: relative;
+        z-index: 1;
+        margin-top: auto;
+        padding: 9mm;
+        background: rgba(13, 19, 25, 0.94);
+        border: 0.3mm solid var(--line);
+        border-left: 1mm solid var(--violet);
+      }
+
+      .context h2,
+      .section-head h2,
+      .operating-view h2,
+      .sources h2 {
+        margin: 0;
+      }
+
+      .context h2 {
+        color: var(--violet);
+        font-family: var(--mono);
+        font-size: 9pt;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .context p {
+        margin: 4mm 0 0;
+        color: var(--ink-2);
+        font-size: 13pt;
+      }
+
+      .cover-meta {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 9mm;
+        color: var(--muted);
+        font: 8pt var(--mono);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .content {
+        padding-top: 15mm;
+        padding-bottom: 18mm;
+      }
+
+      .section-head {
+        margin-bottom: 9mm;
+        padding-bottom: 5mm;
+        border-bottom: 0.3mm solid var(--line);
+      }
+
+      .section-head h2 {
+        font-size: 23pt;
+      }
+
+      .stories {
+        position: relative;
+        z-index: 1;
+      }
+
+      .story {
+        display: grid;
+        grid-template-columns: 15mm 1fr;
+        gap: 5mm;
+        margin: 0 0 6mm;
+        padding: 7mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: rgba(13, 19, 25, 0.96);
+        border: 0.3mm solid var(--line);
+      }
+
+      .story-index {
+        color: var(--cyan);
+        font: 12pt var(--mono);
+      }
+
+      .topic {
+        margin: 0 0 2mm;
+        color: var(--cyan);
+        font-size: 7.5pt;
+      }
+
+      .story h3 {
+        margin: 0;
+        font-size: 16pt;
+        line-height: 1.18;
+        letter-spacing: -0.025em;
+      }
+
+      .summary {
+        margin: 3mm 0;
+        color: var(--ink-2);
+        font-size: 10.5pt;
+      }
+
+      .why {
+        padding-top: 3mm;
+        border-top: 0.25mm solid var(--line);
+      }
+
+      .why span {
+        color: var(--violet);
+        font-size: 7pt;
+      }
+
+      .why p {
+        display: inline;
+        margin: 0 0 0 2mm;
+        font-weight: 650;
+      }
+
+      .source-link {
+        display: inline-block;
+        margin-top: 4mm;
+        color: var(--cyan);
+        font-size: 6.8pt;
+        letter-spacing: 0.04em;
+        text-transform: none;
+      }
+
+      .operating-view,
+      .sources {
+        position: relative;
+        z-index: 1;
+        margin-top: 12mm;
+        padding: 9mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: var(--panel-soft);
+        border: 0.3mm solid var(--line);
+      }
+
+      .operating-view {
+        border-top: 1mm solid var(--cyan);
+      }
+
+      .operating-view h2,
+      .sources h2 {
+        font-size: 18pt;
+      }
+
+      .operating-view > p {
+        color: var(--ink-2);
+        font-size: 12pt;
+      }
+
+      .watch-list,
+      .source-list {
+        margin: 6mm 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .watch-list li {
+        display: grid;
+        grid-template-columns: 9mm 1fr;
+        gap: 4mm;
+        align-items: start;
+        margin: 3mm 0;
+      }
+
+      .watch-list span {
+        display: grid;
+        width: 8mm;
+        height: 8mm;
+        place-items: center;
+        color: var(--cyan);
+        border: 0.3mm solid var(--cyan);
+        font: 8pt var(--mono);
+      }
+
+      .watch-list p {
+        margin: 0;
+      }
+
+      .source-list li {
+        display: grid;
+        grid-template-columns: 10mm 1fr;
+        gap: 3mm;
+        margin: 2.5mm 0;
+        color: var(--ink-2);
+        font-size: 8.5pt;
+      }
+
+      .source-list span {
+        color: var(--violet);
+        font-family: var(--mono);
+      }
+
+      .source-list a {
+        color: var(--cyan);
+        text-decoration: underline;
+        text-decoration-color: rgba(53, 230, 209, 0.35);
+        text-underline-offset: 1mm;
+      }
+
+      .cta {
+        position: relative;
+        z-index: 1;
+        margin: 12mm 0 0;
+        padding: 7mm 9mm;
+        break-inside: avoid;
+        color: #04100f;
+        background: var(--cyan);
+      }
+
+      .cta strong {
+        display: block;
+        font-size: 14pt;
+      }
+
+      .cta span {
+        font: 9pt var(--mono);
+      }
+
+      .document-footer {
+        margin-top: 12mm;
+        padding-top: 5mm;
+        border-top: 0.3mm solid var(--line);
+      }
+
+      @media screen {
+        body {
+          width: 210mm;
+          margin: 0 auto;
+        }
+
+        .page {
+          box-shadow: 0 0 20mm rgba(0, 0, 0, 0.45);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="page cover">
+      <header class="brand-row">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Shadow<em>Context</em></span>
+        </div>
+        <span class="edition">Daily security digest</span>
+      </header>
+
+      <main class="cover-copy">
+        <p class="eyebrow">The day in context / 2026-09-10</p>
+        <h1>Defensive Security Digest: Infrastructure Flaws and AI Tool Risks</h1>
+        <p class="dek">Today&#39;s security updates cover critical vulnerabilities in enterprise firewalls, VPNs, AI inference, model distillation defenses, and MCP package-management tools.</p>
+      </main>
+
+      <aside class="context">
+        <h2>Executive summary</h2>
+        <p>Defenders face multiple unpatched or newly fixed flaws in enterprise and AI infrastructure today. Priorities include verifying active protections for Check Point VPNs, managing Siemens inference exposure without a patch, and securing MCP dependency tools.</p>
+      </aside>
+
+      <div class="cover-meta">
+        <span>9 briefings included</span>
+        <span>https://shadowcontext.com/</span>
+      </div>
+    </section>
+
+    <section class="page content">
+      <header class="section-head">
+        <h2>All news from the day</h2>
+        <span class="section-count">9 / 2026-09-10</span>
+      </header>
+
+      <main class="stories">
+    <article class="story">
+      <div class="story-index">01</div>
+      <div class="story-copy">
+        <p class="topic">AI Security</p>
+        <h3>Siemens Drops AI Inference Fix</h3>
+        <p class="summary">Siemens confirmed no fix is planned for CVE-2025-15467 affecting its AI Lightweight Inference Server across all versions.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Operators must isolate workloads or plan replacements rather than awaiting a vendor patch.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ai-inference-server-needs-isolation-decision/">Unpatched AI Inference Server Needs an Isolation Decision ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">02</div>
+      <div class="story-copy">
+        <p class="topic">AI Threat Defense</p>
+        <h3>Cross-Platform AI Distillation Guidance</h3>
+        <p class="summary">New US guidance calls for correlated behavioral detection across identity and infrastructure layers to mitigate AI distillation.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Distributed extraction requires joined detection clusters rather than static rate limits alone.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ai-distillation-defense-needs-cross-platform-signals/">AI Distillation Defense Needs Cross-Platform Signals ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">03</div>
+      <div class="story-copy">
+        <p class="topic">VPN Security</p>
+        <h3>Check Point Fixes VPN Flaws</h3>
+        <p class="summary">Check Point disclosed CVE-2026-85102 and CVE-2026-85103 involving certificate processing and ASN.1 decoding in VPN gateways.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Unauthenticated remote code execution risks require verifying active protection on every process.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/check-point-vpn-fixes-need-process-level-proof/">Check Point VPN Fixes Need Process-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">04</div>
+      <div class="story-copy">
+        <p class="topic">Phishing Defense</p>
+        <h3>Browser-Built Phishing Campaign Observed</h3>
+        <p class="summary">Phishing campaigns now assemble deceptive login pages inside browser sessions using blob URLs and service workers.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Static URL inspection fails when initial links appear trusted before rendering malicious content.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/browser-built-phishing-needs-full-path-inspection/">Browser-Built Phishing Needs Full-Path Inspection ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">05</div>
+      <div class="story-copy">
+        <p class="topic">Firewall Defense</p>
+        <h3>PAN-OS XML Buffer Overflow Fixed</h3>
+        <p class="summary">Palo Alto Networks fixed a high-severity XML processing buffer overflow affecting management and dataplane paths.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Exposure depends on platform type and reachable interfaces, necessitating platform-aware verification.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/pan-os-xml-fix-needs-interface-aware-proof/">PAN-OS XML Fix Needs Interface-Aware Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">06</div>
+      <div class="story-copy">
+        <p class="topic">AI Infrastructure</p>
+        <h3>Open WebUI Fixes Redirect Flaw</h3>
+        <p class="summary">Open WebUI version 0.11.1 addresses CVE-2026-88001, a redirect validation weakness in retrieval paths.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Security policy must evaluate final destinations after HTTP redirects, not just initial URLs.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/open-webui-fetch-controls-need-every-hop-proof/">Open WebUI Fetch Controls Need Every-Hop Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">07</div>
+      <div class="story-copy">
+        <p class="topic">Network Security</p>
+        <h3>Arista P4Runtime Vulnerability Disclosed</h3>
+        <p class="summary">Arista addressed CVE-2026-73453, a critical code-injection flaw in P4Runtime services requiring specific feature configurations.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Configuration evidence is essential since exposure depends on authentication settings and enabled states.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/arista-p4runtime-fix-needs-configuration-proof/">Arista P4Runtime Fix Needs Configuration-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">08</div>
+      <div class="story-copy">
+        <p class="topic">Endpoint Security</p>
+        <h3>Velociraptor Patches Permission Gaps</h3>
+        <p class="summary">Velociraptor version 0.77.2 resolves permission enforcement issues in client monitoring and notebook restore workflows.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Defensive tooling must preserve authorization rules across indirect scheduling and recovery paths.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/velociraptor-fixes-need-path-level-permission-proof/">Velociraptor Fixes Need Path-Level Permission Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">09</div>
+      <div class="story-copy">
+        <p class="topic">AI Tool Security</p>
+        <h3>MCP Version Tool Flaw Patched</h3>
+        <p class="summary">Version 1.4.4 of functype-mcp-server fixes CVE-2026-59176, where version values allowed arbitrary package source installations.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Agent tools altering dependencies require strict source boundaries to prevent unauthorized code execution.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/mcp-version-tools-need-package-source-boundaries/">MCP Version Tools Need Package-Source Boundaries ↗</a>
+      </div>
+    </article></main>
+
+      <section class="operating-view">
+        <p class="eyebrow">The operating view</p>
+        <h2>What the day means for defenders</h2>
+        <p>Maintain rigorous inventory tracking across physical, virtual, and AI infrastructure. Verify active protection states post-update and ensure component-level validation for all deployed patches and mitigations.</p>
+        <ol class="watch-list"><li><span>1</span><p>Verify that VPN and firewall updates successfully activate protections on every target process and interface.</p></li>
+<li><span>2</span><p>Monitor AI retrieval and assistant workflows for unexpected redirects, external fetches, and package modifications.</p></li>
+<li><span>3</span><p>Enforce strict authorization and source validation across all administrative and monitoring backup paths.</p></li></ol>
+      </section>
+
+      <section class="sources">
+        <p class="eyebrow">Source index</p>
+        <h2>Every briefing in this digest</h2>
+        <ol class="source-list">
+    <li>
+      <span>01</span>
+      <a href="https://shadowcontext.com/ai-inference-server-needs-isolation-decision/">Unpatched AI Inference Server Needs an Isolation Decision</a>
+    </li>
+
+    <li>
+      <span>02</span>
+      <a href="https://shadowcontext.com/ai-distillation-defense-needs-cross-platform-signals/">AI Distillation Defense Needs Cross-Platform Signals</a>
+    </li>
+
+    <li>
+      <span>03</span>
+      <a href="https://shadowcontext.com/check-point-vpn-fixes-need-process-level-proof/">Check Point VPN Fixes Need Process-Level Proof</a>
+    </li>
+
+    <li>
+      <span>04</span>
+      <a href="https://shadowcontext.com/browser-built-phishing-needs-full-path-inspection/">Browser-Built Phishing Needs Full-Path Inspection</a>
+    </li>
+
+    <li>
+      <span>05</span>
+      <a href="https://shadowcontext.com/pan-os-xml-fix-needs-interface-aware-proof/">PAN-OS XML Fix Needs Interface-Aware Proof</a>
+    </li>
+
+    <li>
+      <span>06</span>
+      <a href="https://shadowcontext.com/open-webui-fetch-controls-need-every-hop-proof/">Open WebUI Fetch Controls Need Every-Hop Proof</a>
+    </li>
+
+    <li>
+      <span>07</span>
+      <a href="https://shadowcontext.com/arista-p4runtime-fix-needs-configuration-proof/">Arista P4Runtime Fix Needs Configuration-Level Proof</a>
+    </li>
+
+    <li>
+      <span>08</span>
+      <a href="https://shadowcontext.com/velociraptor-fixes-need-path-level-permission-proof/">Velociraptor Fixes Need Path-Level Permission Proof</a>
+    </li>
+
+    <li>
+      <span>09</span>
+      <a href="https://shadowcontext.com/mcp-version-tools-need-package-source-boundaries/">MCP Version Tools Need Package-Source Boundaries</a>
+    </li></ol>
+      </section>
+
+      <div class="cta">
+        <strong>Read the full analysis</strong>
+        <span>https://shadowcontext.com/</span>
+      </div>
+
+      <footer class="document-footer">
+        <span>ShadowContext</span>
+        <span>Independent defensive security intelligence</span>
+      </footer>
+    </section>
+  </body>
+</html>

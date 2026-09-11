@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-09-11T09:29:02.535+04:00",
+  "digestDate": "2026-09-10",
+  "digestHash": "18ed5055e998ed247c8c2d4fe40069c8776cbf703529f2e3a09110c561e5757d",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "Defensive Security Digest: Infrastructure Flaws and AI Tool Risks",
+  "articleCount": 9,
+  "sourceArticles": [
+    {
+      "title": "Unpatched AI Inference Server Needs an Isolation Decision",
+      "canonicalUrl": "https://shadowcontext.com/ai-inference-server-needs-isolation-decision/",
+      "publishedAt": "2026-09-10T00:14:27.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "3b7a3178bbd9825a7086bc6f4f914473cff1affff2fa2fed9e68173ac6b23aa9"
+    },
+    {
+      "title": "AI Distillation Defense Needs Cross-Platform Signals",
+      "canonicalUrl": "https://shadowcontext.com/ai-distillation-defense-needs-cross-platform-signals/",
+      "publishedAt": "2026-09-10T02:14:07.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "359e33444c35ee12517318974f7364771b871030ee61ede91dd87acddce25ea0"
+    },
+    {
+      "title": "Check Point VPN Fixes Need Process-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/check-point-vpn-fixes-need-process-level-proof/",
+      "publishedAt": "2026-09-10T03:12:45.000+04:00",
+      "category": "defense",
+      "sourceHash": "f72725a0949be0ea1c2785255de027882e1e7b2c951681db9b836751d3915d78"
+    },
+    {
+      "title": "Browser-Built Phishing Needs Full-Path Inspection",
+      "canonicalUrl": "https://shadowcontext.com/browser-built-phishing-needs-full-path-inspection/",
+      "publishedAt": "2026-09-10T04:12:24.000+04:00",
+      "category": "threat-intelligence",
+      "sourceHash": "124b5a417088279f57c577acc77313d25aff56942e1ca042346a77fe736a3c7b"
+    },
+    {
+      "title": "PAN-OS XML Fix Needs Interface-Aware Proof",
+      "canonicalUrl": "https://shadowcontext.com/pan-os-xml-fix-needs-interface-aware-proof/",
+      "publishedAt": "2026-09-10T05:11:46.000+04:00",
+      "category": "defense",
+      "sourceHash": "325df411864141cf92a920731f0972e7ab33c202b544975421fc91dc22479940"
+    },
+    {
+      "title": "Open WebUI Fetch Controls Need Every-Hop Proof",
+      "canonicalUrl": "https://shadowcontext.com/open-webui-fetch-controls-need-every-hop-proof/",
+      "publishedAt": "2026-09-10T06:12:14.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "c9011861ddfde67d748dbf1832d69c65c1a88ebb1a7db12c58bc550e28a01044"
+    },
+    {
+      "title": "Arista P4Runtime Fix Needs Configuration-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/arista-p4runtime-fix-needs-configuration-proof/",
+      "publishedAt": "2026-09-10T07:12:34.000+04:00",
+      "category": "defense",
+      "sourceHash": "c541822e884bf4613fa5d436bc54e4383b35cc497ffc41811c718bc14d65daf1"
+    },
+    {
+      "title": "Velociraptor Fixes Need Path-Level Permission Proof",
+      "canonicalUrl": "https://shadowcontext.com/velociraptor-fixes-need-path-level-permission-proof/",
+      "publishedAt": "2026-09-10T08:22:33.000+04:00",
+      "category": "defense",
+      "sourceHash": "bacb401ce63ce6c709411f8f4c21e99a20c399e301f731c920f1d3b70e3ab1d5"
+    },
+    {
+      "title": "MCP Version Tools Need Package-Source Boundaries",
+      "canonicalUrl": "https://shadowcontext.com/mcp-version-tools-need-package-source-boundaries/",
+      "publishedAt": "2026-09-10T09:12:41.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "19eb1c66224ea728da7cfba06e39b19173d098e1a86caf32b73dcf11f41a0431"
+    }
+  ],
+  "caption": "ShadowContext brings you concise defensive security intelligence focused on verified infrastructure facts and actionable architectural controls.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-09-10/18ed5055e998ed24/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-09-10/18ed5055e998ed24/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-09-10/18ed5055e998ed24/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-09-10/18ed5055e998ed24/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}
