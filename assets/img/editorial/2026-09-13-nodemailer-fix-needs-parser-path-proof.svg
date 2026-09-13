@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Guarded email parser channel</title>
+  <desc id="desc">An abstract envelope enters a luminous guarded channel, where tangled header lines resolve into a smooth contained signal.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07162b"/>
+      <stop offset="0.55" stop-color="#102f4e"/>
+      <stop offset="1" stop-color="#07131f"/>
+    </linearGradient>
+    <linearGradient id="lane" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#33d6c1" stop-opacity="0.08"/>
+      <stop offset="0.5" stop-color="#55e4ce" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#86f0d7" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="envelope" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e5f8f4"/>
+      <stop offset="1" stop-color="#73b9c4"/>
+    </linearGradient>
+    <radialGradient id="halo">
+      <stop offset="0" stop-color="#69efd3" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#69efd3" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+    <clipPath id="channelClip">
+      <rect x="640" y="255" width="790" height="390" rx="195"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1180" cy="450" r="360" fill="url(#halo)" opacity="0.45"/>
+  <circle cx="300" cy="210" r="210" fill="#315c87" opacity="0.18" filter="url(#soft)"/>
+  <g opacity="0.16" fill="#9ad7dd">
+    <circle cx="128" cy="164" r="3"/><circle cx="238" cy="735" r="4"/><circle cx="474" cy="112" r="3"/>
+    <circle cx="1410" cy="154" r="4"/><circle cx="1492" cy="684" r="3"/><circle cx="1120" cy="768" r="4"/>
+  </g>
+
+  <rect x="610" y="225" width="850" height="450" rx="225" fill="#0b2135" stroke="#7debd8" stroke-opacity="0.28" stroke-width="3"/>
+  <rect x="640" y="255" width="790" height="390" rx="195" fill="url(#lane)"/>
+  <path d="M665 450 H1395" stroke="#8af1da" stroke-opacity="0.18" stroke-width="2" stroke-dasharray="10 20"/>
+
+  <g transform="translate(173 292)">
+    <rect x="0" y="0" width="430" height="316" rx="38" fill="url(#envelope)" opacity="0.96"/>
+    <path d="M23 33 L215 182 L407 33" fill="none" stroke="#276479" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M20 287 L166 153 M410 287 L264 153" fill="none" stroke="#3e8190" stroke-width="13" stroke-linecap="round"/>
+    <rect x="0" y="0" width="430" height="316" rx="38" fill="none" stroke="#d8fff6" stroke-width="4" opacity="0.65"/>
+  </g>
+
+  <g clip-path="url(#channelClip)" fill="none" stroke-linecap="round">
+    <path d="M566 335 C700 315 710 520 820 372 S980 600 1055 374" stroke="#ffb26f" stroke-width="13" opacity="0.82"/>
+    <path d="M574 397 C695 590 760 278 855 503 S990 292 1060 438" stroke="#e36fae" stroke-width="10" opacity="0.74"/>
+    <path d="M570 488 C700 277 762 620 864 390 S992 570 1060 488" stroke="#f4d37a" stroke-width="8" opacity="0.72"/>
+    <path d="M570 550 C720 430 765 564 855 475 S980 362 1064 450" stroke="#7c8df2" stroke-width="11" opacity="0.68"/>
+    <path d="M1048 450 C1130 450 1175 450 1230 450 S1330 450 1438 450" stroke="#80f3d8" stroke-width="15"/>
+    <path d="M1052 420 C1132 420 1175 420 1236 420 S1335 420 1440 420" stroke="#b6fff0" stroke-width="4" opacity="0.58"/>
+    <path d="M1052 480 C1132 480 1175 480 1236 480 S1335 480 1440 480" stroke="#49b9d1" stroke-width="5" opacity="0.64"/>
+  </g>
+
+  <g transform="translate(1035 450)">
+    <circle r="116" fill="#0a2638" stroke="#8bf2db" stroke-width="8"/>
+    <circle r="92" fill="none" stroke="#5bd9c7" stroke-opacity="0.32" stroke-width="3" stroke-dasharray="8 13"/>
+    <path d="M0 -58 C33 -58 58 -33 58 0 C58 43 30 70 0 82 C-30 70 -58 43 -58 0 C-58 -33 -33 -58 0 -58Z" fill="#54d9c4" opacity="0.18" stroke="#a4f7e6" stroke-width="5"/>
+    <path d="M-30 4 L-8 27 L35 -24" fill="none" stroke="#d8fff6" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle r="125" fill="none" stroke="#67e8d0" stroke-width="12" opacity="0.18" filter="url(#glow)"/>
+  </g>
+
+  <g opacity="0.4" stroke="#78d9d1" fill="none">
+    <path d="M115 705 C360 806 610 783 810 704" stroke-width="3"/>
+    <path d="M1255 166 C1376 211 1460 298 1510 401" stroke-width="2"/>
+  </g>
+</svg>
