@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">S2OPC notification streams protected at a memory boundary</title>
+  <desc id="desc">Abstract OPC UA notification streams approach a guarded memory core while a depleted amber path is contained before reaching an industrial service.</desc>
+  <defs>
+    <linearGradient id="bg" x1="120" y1="80" x2="1460" y2="840" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07162C"/>
+      <stop offset="0.52" stop-color="#0A2940"/>
+      <stop offset="1" stop-color="#10213A"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0" cy="0" r="1" gradientTransform="translate(948 445) rotate(180) scale(470 390)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2DD4BF" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#2DD4BF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="stream" x1="175" y1="0" x2="1035" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#64748B" stop-opacity="0.2"/>
+      <stop offset="0.42" stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#5EEAD4"/>
+    </linearGradient>
+    <linearGradient id="guard" x1="810" y1="220" x2="1110" y2="690" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#67E8F9"/>
+      <stop offset="0.55" stop-color="#14B8A6"/>
+      <stop offset="1" stop-color="#0F766E"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="330" y1="650" x2="870" y2="530" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F59E0B" stop-opacity="0.08"/>
+      <stop offset="0.68" stop-color="#FBBF24"/>
+      <stop offset="1" stop-color="#FB7185"/>
+    </linearGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="54" height="54" patternUnits="userSpaceOnUse">
+      <path d="M54 0H0V54" fill="none" stroke="#93C5FD" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" rx="34" fill="url(#bg)"/>
+  <rect x="42" y="42" width="1516" height="816" rx="28" fill="none" stroke="#7DD3FC" stroke-opacity="0.13" stroke-width="2"/>
+  <rect x="42" y="42" width="1516" height="816" rx="28" fill="url(#grid)"/>
+  <ellipse cx="948" cy="445" rx="470" ry="390" fill="url(#halo)"/>
+
+  <g opacity="0.26" fill="none" stroke="#38BDF8">
+    <circle cx="228" cy="244" r="52" stroke-width="2"/>
+    <circle cx="228" cy="244" r="31" stroke-width="4"/>
+    <circle cx="228" cy="450" r="64" stroke-width="2"/>
+    <circle cx="228" cy="450" r="38" stroke-width="4"/>
+    <circle cx="228" cy="666" r="48" stroke-width="2"/>
+    <circle cx="228" cy="666" r="27" stroke-width="4"/>
+  </g>
+
+  <g fill="none" stroke="url(#stream)" stroke-linecap="round">
+    <path d="M174 244C390 244 473 350 680 350C758 350 810 328 868 301" stroke-width="14"/>
+    <path d="M174 450C418 450 520 444 695 444C771 444 822 444 882 444" stroke-width="20"/>
+    <path d="M174 666C390 666 490 552 681 552C760 552 816 576 873 601" stroke-width="14"/>
+  </g>
+  <g fill="#BAE6FD" filter="url(#glow)">
+    <circle cx="430" cy="285" r="8"/><circle cx="584" cy="344" r="7"/><circle cx="414" cy="450" r="9"/>
+    <circle cx="626" cy="444" r="8"/><circle cx="410" cy="615" r="8"/><circle cx="596" cy="558" r="7"/>
+  </g>
+
+  <path d="M328 696C492 696 541 621 676 621C748 621 790 585 844 548" fill="none" stroke="url(#amber)" stroke-width="17" stroke-linecap="round"/>
+  <g transform="translate(816 510)" filter="url(#glow)">
+    <path d="M0 0l20 20M20 0L0 20" stroke="#FB7185" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <circle cx="690" cy="620" r="31" fill="none" stroke="#FBBF24" stroke-opacity="0.45" stroke-width="4"/>
+  <circle cx="690" cy="620" r="10" fill="#FBBF24"/>
+
+  <g filter="url(#glow)">
+    <path d="M974 191L1142 257V434C1142 563 1078 664 974 712C870 664 806 563 806 434V257L974 191Z" fill="#0B263B" stroke="url(#guard)" stroke-width="9"/>
+    <path d="M974 237L1099 286V432C1099 526 1054 603 974 646C894 603 849 526 849 432V286L974 237Z" fill="#0D3345" stroke="#5EEAD4" stroke-opacity="0.52" stroke-width="3"/>
+  </g>
+
+  <g transform="translate(902 350)">
+    <rect width="144" height="180" rx="22" fill="#071B2D" stroke="#A5F3FC" stroke-width="4"/>
+    <g fill="#2DD4BF">
+      <rect x="24" y="25" width="38" height="38" rx="8"/><rect x="82" y="25" width="38" height="38" rx="8"/>
+      <rect x="24" y="76" width="38" height="38" rx="8"/><rect x="82" y="76" width="38" height="38" rx="8"/>
+      <rect x="24" y="127" width="38" height="28" rx="8"/>
+    </g>
+    <rect x="82" y="127" width="38" height="28" rx="8" fill="#102A3B" stroke="#FBBF24" stroke-width="3" stroke-dasharray="5 5"/>
+  </g>
+
+  <g opacity="0.58">
+    <path d="M1162 340H1392" stroke="#67E8F9" stroke-width="8" stroke-linecap="round"/>
+    <path d="M1162 450H1450" stroke="#38BDF8" stroke-width="12" stroke-linecap="round"/>
+    <path d="M1162 560H1365" stroke="#2DD4BF" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="1408" cy="340" r="17" fill="#67E8F9"/>
+    <circle cx="1466" cy="450" r="22" fill="#38BDF8"/>
+    <circle cx="1381" cy="560" r="17" fill="#2DD4BF"/>
+  </g>
+  <circle cx="974" cy="450" r="286" fill="none" stroke="#5EEAD4" stroke-opacity="0.08" stroke-width="2" stroke-dasharray="10 18"/>
+  <ellipse cx="974" cy="747" rx="235" ry="28" fill="#2DD4BF" fill-opacity="0.1" filter="url(#soft)"/>
+</svg>
