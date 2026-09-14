@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Unique secret paths protecting an operations vault</title>
+  <desc id="desc">An abstract indigo vault sits within layered protective arcs as distinct luminous paths converge on it, while a repeated key pattern fades beyond the boundary.</desc>
+  <defs>
+    <linearGradient id="bg" x1="90" y1="40" x2="1510" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#081229"/>
+      <stop offset="0.52" stop-color="#14234A"/>
+      <stop offset="1" stop-color="#071B25"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0" cy="0" r="1" gradientTransform="translate(806 452) rotate(90) scale(392 570)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#57E6D4" stop-opacity=".24"/>
+      <stop offset=".55" stop-color="#5D78FF" stop-opacity=".13"/>
+      <stop offset="1" stop-color="#5D78FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="vault" x1="602" y1="257" x2="1013" y2="657" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8397FF"/>
+      <stop offset=".47" stop-color="#3E59C7"/>
+      <stop offset="1" stop-color="#183373"/>
+    </linearGradient>
+    <linearGradient id="door" x1="663" y1="316" x2="938" y2="650" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#172B5A"/>
+      <stop offset="1" stop-color="#09162F"/>
+    </linearGradient>
+    <linearGradient id="pathA" x1="176" y1="192" x2="727" y2="418" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A96CFF" stop-opacity="0"/>
+      <stop offset=".38" stop-color="#A96CFF"/>
+      <stop offset="1" stop-color="#65F3D6"/>
+    </linearGradient>
+    <linearGradient id="pathB" x1="1429" y1="166" x2="883" y2="418" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4DD9FF" stop-opacity="0"/>
+      <stop offset=".38" stop-color="#4DD9FF"/>
+      <stop offset="1" stop-color="#65F3D6"/>
+    </linearGradient>
+    <linearGradient id="pathC" x1="187" y1="738" x2="724" y2="534" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFB86B" stop-opacity="0"/>
+      <stop offset=".42" stop-color="#FFB86B"/>
+      <stop offset="1" stop-color="#65F3D6"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#020713" flood-opacity=".7"/>
+    </filter>
+    <pattern id="repeat" width="112" height="92" patternUnits="userSpaceOnUse">
+      <path d="M22 46a16 16 0 1 1 29 10h38v12H77v11H65V68H49A16 16 0 0 1 22 46Z" fill="none" stroke="#8AA0CC" stroke-width="4" opacity=".24"/>
+    </pattern>
+    <mask id="fade">
+      <linearGradient id="maskGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop stop-color="white" stop-opacity=".7"/>
+        <stop offset="1" stop-color="white" stop-opacity="0"/>
+      </linearGradient>
+      <rect width="1600" height="900" fill="url(#maskGrad)"/>
+    </mask>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#halo)"/>
+  <g opacity=".34" mask="url(#fade)">
+    <path d="M0 128C301 61 473 183 682 122S1116 26 1600 117" fill="none" stroke="#7F91CC" stroke-width="2"/>
+    <path d="M0 794C252 719 469 832 686 775s492-111 914-17" fill="none" stroke="#4CA7B5" stroke-width="2"/>
+  </g>
+  <path d="M800 121C1042 121 1238 270 1238 454S1042 787 800 787 362 638 362 454 558 121 800 121Z" fill="none" stroke="#6078D5" stroke-width="3" opacity=".28"/>
+  <path d="M800 172C1006 172 1173 298 1173 454S1006 736 800 736 427 610 427 454 594 172 800 172Z" fill="none" stroke="#63E6D4" stroke-width="2" opacity=".35" stroke-dasharray="8 18"/>
+  <path d="M800 214C969 214 1106 321 1106 454S969 694 800 694 494 587 494 454 631 214 800 214Z" fill="#294579" opacity=".12" stroke="#7D93FF" stroke-width="2"/>
+  <g fill="none" stroke-linecap="round" filter="url(#glow)">
+    <path d="M124 172C323 177 372 306 530 318c82 6 126 52 196 101" stroke="url(#pathA)" stroke-width="7"/>
+    <path d="M1476 150c-208 20-249 150-407 168-82 10-123 58-190 105" stroke="url(#pathB)" stroke-width="7"/>
+    <path d="M115 770c215-1 279-120 428-131 88-7 126-58 184-106" stroke="url(#pathC)" stroke-width="7"/>
+    <path d="M1473 748c-211 5-273-105-425-118-88-8-124-53-172-96" stroke="#F178B6" stroke-width="7" opacity=".9"/>
+  </g>
+  <g filter="url(#glow)">
+    <circle cx="279" cy="214" r="12" fill="#A96CFF"/>
+    <circle cx="1325" cy="204" r="12" fill="#4DD9FF"/>
+    <circle cx="292" cy="708" r="12" fill="#FFB86B"/>
+    <circle cx="1313" cy="690" r="12" fill="#F178B6"/>
+  </g>
+  <g filter="url(#shadow)">
+    <path d="M800 232 1034 333v250c0 89-95 171-234 219-139-48-234-130-234-219V333l234-101Z" fill="url(#vault)" stroke="#A8B6FF" stroke-width="4"/>
+    <path d="M800 278 980 355v215c0 65-72 127-180 170-108-43-180-105-180-170V355l180-77Z" fill="url(#door)" stroke="#6DE8D6" stroke-width="3"/>
+    <circle cx="800" cy="476" r="83" fill="#0D1C3B" stroke="#91A5FF" stroke-width="10"/>
+    <circle cx="800" cy="476" r="54" fill="#1A3267" stroke="#65F3D6" stroke-width="5"/>
+    <path d="M800 440a26 26 0 0 0-16 47v55h32v-55a26 26 0 0 0-16-47Z" fill="#65F3D6"/>
+    <path d="M702 630c62 28 134 28 196 0" fill="none" stroke="#7990E8" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+  </g>
+  <g opacity=".55">
+    <circle cx="724" cy="419" r="7" fill="#65F3D6"/>
+    <circle cx="879" cy="423" r="7" fill="#65F3D6"/>
+    <circle cx="727" cy="533" r="7" fill="#65F3D6"/>
+    <circle cx="876" cy="534" r="7" fill="#65F3D6"/>
+  </g>
+  <path d="M1180 484h420v416h-542c85-78 128-183 122-314Z" fill="url(#repeat)" opacity=".7" mask="url(#fade)"/>
+  <path d="M1367 568c51 0 92 41 92 92s-41 92-92 92c-36 0-67-20-82-50" fill="none" stroke="#8394BB" stroke-width="6" opacity=".3" stroke-dasharray="14 16"/>
+  <path d="m1271 686 18 20 20-18" fill="none" stroke="#8394BB" stroke-width="6" opacity=".3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
