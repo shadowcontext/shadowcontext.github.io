@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">AI core protected by layered runtime boundaries</title>
+  <desc id="desc">Abstract editorial artwork showing a luminous central AI core enclosed by layered security boundaries, while branching tool paths pass through controlled gates.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071529"/>
+      <stop offset="0.52" stop-color="#102846"/>
+      <stop offset="1" stop-color="#09121f"/>
+    </linearGradient>
+    <radialGradient id="core" cx="50%" cy="46%" r="60%">
+      <stop offset="0" stop-color="#f9fff5"/>
+      <stop offset="0.28" stop-color="#b8f2d1"/>
+      <stop offset="0.68" stop-color="#54c9b0"/>
+      <stop offset="1" stop-color="#1d6f78"/>
+    </radialGradient>
+    <linearGradient id="shell" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5ed0dc" stop-opacity="0.16"/>
+      <stop offset="0.5" stop-color="#d2f9dc" stop-opacity="0.62"/>
+      <stop offset="1" stop-color="#6c8ff5" stop-opacity="0.18"/>
+    </linearGradient>
+    <linearGradient id="path" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6ba0ff" stop-opacity="0.12"/>
+      <stop offset="0.55" stop-color="#88e0d1" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#ffcf7a" stop-opacity="0.7"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="32"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <ellipse cx="800" cy="455" rx="500" ry="330" fill="#3da6a0" opacity="0.08" filter="url(#soft)"/>
+  <path d="M80 187 C310 206 380 355 560 397" fill="none" stroke="url(#path)" stroke-width="12" stroke-linecap="round"/>
+  <path d="M54 700 C302 662 386 545 555 503" fill="none" stroke="url(#path)" stroke-width="8" stroke-linecap="round"/>
+  <path d="M1520 160 C1290 229 1217 350 1040 398" fill="none" stroke="url(#path)" stroke-width="9" stroke-linecap="round"/>
+  <path d="M1544 724 C1318 668 1224 548 1045 504" fill="none" stroke="url(#path)" stroke-width="13" stroke-linecap="round"/>
+  <g fill="#101f35" stroke="#98ead7" stroke-width="4">
+    <rect x="475" y="352" width="34" height="90" rx="17"/>
+    <rect x="471" y="467" width="34" height="90" rx="17"/>
+    <rect x="1091" y="351" width="34" height="90" rx="17"/>
+    <rect x="1095" y="468" width="34" height="90" rx="17"/>
+  </g>
+  <g fill="none" stroke="url(#shell)">
+    <ellipse cx="800" cy="450" rx="290" ry="228" stroke-width="38"/>
+    <ellipse cx="800" cy="450" rx="385" ry="296" stroke-width="7" stroke-dasharray="2 18" stroke-linecap="round" opacity="0.9"/>
+    <ellipse cx="800" cy="450" rx="470" ry="355" stroke-width="3" opacity="0.48"/>
+  </g>
+  <g opacity="0.7" fill="#bdf4e1">
+    <circle cx="422" cy="331" r="7"/><circle cx="403" cy="573" r="5"/>
+    <circle cx="1178" cy="326" r="6"/><circle cx="1204" cy="576" r="8"/>
+  </g>
+  <g filter="url(#glow)">
+    <circle cx="800" cy="450" r="126" fill="url(#core)"/>
+    <path d="M740 455 C760 392 838 379 871 429 C902 477 858 528 800 526 C751 524 720 493 740 455Z" fill="#0b2535" opacity="0.28"/>
+    <circle cx="762" cy="437" r="13" fill="#eafff5"/>
+    <circle cx="839" cy="424" r="10" fill="#eafff5"/>
+    <circle cx="818" cy="487" r="12" fill="#eafff5"/>
+    <path d="M762 437 L839 424 L818 487 L762 437" fill="none" stroke="#ecfff7" stroke-width="5" opacity="0.88"/>
+  </g>
+  <g fill="#ffcf7a" opacity="0.9">
+    <circle cx="100" cy="187" r="13"/><circle cx="67" cy="698" r="10"/>
+    <circle cx="1504" cy="165" r="11"/><circle cx="1528" cy="719" r="14"/>
+  </g>
+  <path d="M608 215 C704 162 900 162 994 219" fill="none" stroke="#d3f8e5" stroke-width="5" stroke-linecap="round" opacity="0.55"/>
+  <path d="M609 686 C716 738 891 738 994 684" fill="none" stroke="#739cef" stroke-width="5" stroke-linecap="round" opacity="0.48"/>
+</svg>
