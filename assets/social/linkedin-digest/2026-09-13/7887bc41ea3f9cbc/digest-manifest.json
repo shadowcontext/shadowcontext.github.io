@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-09-14T09:36:03.615+04:00",
+  "digestDate": "2026-09-13",
+  "digestHash": "7887bc41ea3f9cbc835b373450086ab7ef37aaa3f8f128e99ee77a8acd67ada2",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "Daily Security Digest: Protocol, Parser, and Control-Plane Defenses",
+  "articleCount": 10,
+  "sourceArticles": [
+    {
+      "title": "Socket Firewall Fix Needs Upstream TLS Proof",
+      "canonicalUrl": "https://shadowcontext.com/socket-firewall-fix-needs-upstream-tls-proof/",
+      "publishedAt": "2026-09-13T13:10:45.000+04:00",
+      "category": "defense",
+      "sourceHash": "8320b6ce97d64d7164de2ede62603dd7ab669a6c1e89a6e1fe904853fe41dbec"
+    },
+    {
+      "title": "HAProxy HTTP/3 Flaw Needs Protocol-Path Proof",
+      "canonicalUrl": "https://shadowcontext.com/haproxy-http3-fix-needs-protocol-path-proof/",
+      "publishedAt": "2026-09-13T14:10:17.000+04:00",
+      "category": "defense",
+      "sourceHash": "61c1fe32878bf09b964b3b5a872e81d847a5776b06899623775c19a5d92ba47f"
+    },
+    {
+      "title": "ASE2000 Fix Needs Certificate-Path Proof",
+      "canonicalUrl": "https://shadowcontext.com/ase2000-fix-needs-certificate-path-proof/",
+      "publishedAt": "2026-09-13T15:09:50.000+04:00",
+      "category": "defense",
+      "sourceHash": "7b9c824e30be714a28accd911cfb432ea9f717a67a2ab41de606720c42a9394e"
+    },
+    {
+      "title": "wasm2c Sandbox Flaw Needs an Outer Boundary",
+      "canonicalUrl": "https://shadowcontext.com/wasm2c-sandbox-needs-an-outer-boundary/",
+      "publishedAt": "2026-09-13T16:09:23.000+04:00",
+      "category": "defense",
+      "sourceHash": "a40012552a03df3c458faccf27f7da6090d9d3353493990a9e2e7861b46e70ad"
+    },
+    {
+      "title": "UnrealIRCd Fix Needs Listener-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/unrealircd-fix-needs-listener-level-proof/",
+      "publishedAt": "2026-09-13T18:09:27.000+04:00",
+      "category": "defense",
+      "sourceHash": "25c172f00307919156df861f2171dab60cdae240be2430cea8a3e6903ecdc803"
+    },
+    {
+      "title": "Strapi Preview Fix Needs Role-Boundary Proof",
+      "canonicalUrl": "https://shadowcontext.com/strapi-preview-fix-needs-role-boundaries/",
+      "publishedAt": "2026-09-13T19:10:06.000+04:00",
+      "category": "defense",
+      "sourceHash": "1e040c01b0a7f3f15d0b6538266c715f07bdb6437543398c5d336a825caa5a27"
+    },
+    {
+      "title": "Spug Monitoring Flaw Turns a Health Check Into a Control-Plane Risk",
+      "canonicalUrl": "https://shadowcontext.com/spug-monitoring-fix-needs-control-plane-proof/",
+      "publishedAt": "2026-09-13T20:10:52.000+04:00",
+      "category": "defense",
+      "sourceHash": "c5b6e5764ea58e927ce129504b9ec4d5b09a438eb5a0b0099cd4fb3abea820ed"
+    },
+    {
+      "title": "sngrep Flaw Makes Capture Input a Trust Boundary",
+      "canonicalUrl": "https://shadowcontext.com/sngrep-flaw-makes-capture-input-a-trust-boundary/",
+      "publishedAt": "2026-09-13T21:10:02.000+04:00",
+      "category": "defense",
+      "sourceHash": "abd28764b654c70905df18dbb9dda4b5594937a8d6f4d97f3660d9160416405c"
+    },
+    {
+      "title": "Nodemailer Fix Needs Parser-Path Proof",
+      "canonicalUrl": "https://shadowcontext.com/nodemailer-fix-needs-parser-path-proof/",
+      "publishedAt": "2026-09-13T22:10:53.000+04:00",
+      "category": "defense",
+      "sourceHash": "c600355e443a28da56b88d166fc553abd0811bf51f4cefa325d9e726b61951a1"
+    },
+    {
+      "title": "CAPEv2 Task APIs Need Ownership Proof",
+      "canonicalUrl": "https://shadowcontext.com/capev2-task-apis-need-ownership-proof/",
+      "publishedAt": "2026-09-13T23:09:50.000+04:00",
+      "category": "defense",
+      "sourceHash": "b3945ea4ed32bbb4aea6be23207c0b648e0bfbb6eba0e7a4a93c81da583e84ac"
+    }
+  ],
+  "caption": "Explore today's defensive brief covering software supply chains, proxy protocols, sandboxes, and parsers.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-09-13/7887bc41ea3f9cbc/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-09-13/7887bc41ea3f9cbc/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-09-13/7887bc41ea3f9cbc/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-09-13/7887bc41ea3f9cbc/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}

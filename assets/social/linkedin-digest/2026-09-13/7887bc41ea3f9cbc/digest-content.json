@@ -1,0 +1,84 @@
+{
+  "digest_title": "Daily Security Digest: Protocol, Parser, and Control-Plane Defenses",
+  "dek": "Review new advisories across software supply chains, network proxies, test tools, sandboxes, and parsers, focusing on runtime verification and boundary enforcement.",
+  "overview": "Defenders face multiple high-severity issues in upstream registries, proxy protocols, test tools, sandboxes, and parsers. Effective remediation requires verified running software versions, authenticated trust paths, and strict control-plane and boundary separation across diverse enterprise environments.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "Socket Firewall TLS Verification",
+      "summary": "CVE-2026-90651 makes outbound TLS verification and private-CA handling part of package firewall assurance.",
+      "why_it_matters": "Unverified outbound connections risk code integrity and policy decisions.",
+      "topic": "Software Supply Chain"
+    },
+    {
+      "source_id": "S02",
+      "headline": "HAProxy HTTP Request Smuggling",
+      "summary": "CVE-2026-90678 makes HAProxy remediation a protocol-path task: verify QUIC listeners, HTTP/1.1 backends and connection reuse together.",
+      "why_it_matters": "Protocol boundary translation flaws can bypass rules and corrupt request contexts.",
+      "topic": "Network Security"
+    },
+    {
+      "source_id": "S03",
+      "headline": "ASE2000 Certificate Validation",
+      "summary": "CVE-2026-90647 makes ASE2000 remediation an inventory and trust-path task for teams testing IEC 60870-5-104 communications.",
+      "why_it_matters": "Portable industrial test tools create hidden trust paths and asset discovery challenges.",
+      "topic": "Industrial Control"
+    },
+    {
+      "source_id": "S04",
+      "headline": "wasm2c Sandbox Allocation Flaw",
+      "summary": "CVE-2026-90648 shows why wasm2c deployments need embedded-runtime inventory, fail-closed allocation handling and an outer isolation boundary.",
+      "why_it_matters": "Allocation failures can cause memory mismatches and sandbox escapes.",
+      "topic": "Runtime Security"
+    },
+    {
+      "source_id": "S05",
+      "headline": "UnrealIRCd Webserver Denial of Service",
+      "summary": "CVE-2026-90668 shows why UnrealIRCd operators must verify listeners, apply the 6.2.7 fix and test service resilience under pressure.",
+      "why_it_matters": "Optional enabled listeners create conditional exposure to memory exhaustion.",
+      "topic": "Service Availability"
+    },
+    {
+      "source_id": "S06",
+      "headline": "Strapi Rich-Text Preview Vulnerability",
+      "summary": "CVE-2026-90561 makes Strapi rich-text preview a role-boundary issue requiring a v5 upgrade, v4 migration and focused validation.",
+      "why_it_matters": "Preview renderers can bridge low-privileged content production into privileged sessions.",
+      "topic": "Application Security"
+    },
+    {
+      "source_id": "S07",
+      "headline": "Spug Monitoring Command Injection",
+      "summary": "A new Spug command-injection CVE makes control-plane isolation, least privilege and runtime proof immediate defensive priorities.",
+      "why_it_matters": "Health-check features can allow ordinary roles to cross into control-plane execution.",
+      "topic": "Control Plane"
+    },
+    {
+      "source_id": "S08",
+      "headline": "sngrep SIP Packet Parsing Flaw",
+      "summary": "CVE-2026-90558 turns sngrep capture paths into a security boundary, requiring input scoping, least privilege and release-level patch proof.",
+      "why_it_matters": "Diagnostic packet analysis tools consume untrusted adversary input directly.",
+      "topic": "Packet Analysis"
+    },
+    {
+      "source_id": "S09",
+      "headline": "Nodemailer Address Parser Flaw",
+      "summary": "Nodemailer fixed a high-severity parsing denial of service; defenders should trace inbound email paths and prove patched code is running.",
+      "why_it_matters": "Algorithmic parsing complexity can stall single-threaded event loops.",
+      "topic": "Parser Security"
+    },
+    {
+      "source_id": "S10",
+      "headline": "CAPEv2 Task API Authorization Gap",
+      "summary": "CVE-2026-90768 exposes a cross-user authorization gap in CAPEv2 task APIs, making access scope and task ownership immediate review priorities.",
+      "why_it_matters": "Shared sandboxes must strictly enforce object-level ownership for case data.",
+      "topic": "API Security"
+    }
+  ],
+  "operating_view": "Verify running artifacts and effective configurations rather than relying on package manifests or version strings alone. Confirm that control-plane boundaries, trust chains, and resource limits remain intact across every deployment path and shared environment.",
+  "watch_items": [
+    "Verify running binary versions and effective configurations across all target instances.",
+    "Enforce strict object ownership and protocol validation on unverified ingestion paths.",
+    "Maintain isolated outer boundaries for sandboxes and management control planes."
+  ],
+  "caption_intro": "Explore today's defensive brief covering software supply chains, proxy protocols, sandboxes, and parsers."
+}
