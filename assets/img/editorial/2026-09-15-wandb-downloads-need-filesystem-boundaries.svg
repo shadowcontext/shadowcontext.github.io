@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Protected machine-learning artifact download boundary</title>
+  <desc id="desc">Abstract violet artifact tiles flow toward a teal download chamber, while layered filesystem paths bend around a luminous containment boundary.</desc>
+  <defs>
+    <linearGradient id="bg" x1="130" y1="60" x2="1480" y2="850" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#091426"/>
+      <stop offset="0.48" stop-color="#102246"/>
+      <stop offset="1" stop-color="#09162D"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0" cy="0" r="1" gradientTransform="translate(1048 445) rotate(180) scale(555 430)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2EE6C5" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#2EE6C5" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tile" x1="265" y1="210" x2="735" y2="650" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9B82FF"/>
+      <stop offset="1" stop-color="#6246C8"/>
+    </linearGradient>
+    <linearGradient id="gate" x1="890" y1="220" x2="1240" y2="690" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#54F0D0"/>
+      <stop offset="1" stop-color="#139E9E"/>
+    </linearGradient>
+    <linearGradient id="path" x1="570" y1="165" x2="1440" y2="770" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7285FF" stop-opacity="0.18"/>
+      <stop offset="0.6" stop-color="#61EAD0" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#A9FFF0" stop-opacity="0.2"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="22" stdDeviation="28" flood-color="#020817" flood-opacity="0.62"/>
+    </filter>
+    <clipPath id="gateClip"><rect x="892" y="196" width="318" height="510" rx="96"/></clipPath>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#halo)"/>
+  <path d="M0 720C260 624 362 737 605 699C846 662 935 510 1173 511C1348 512 1462 579 1600 548V900H0Z" fill="#071124" fill-opacity="0.66"/>
+  <circle cx="1048" cy="449" r="326" fill="none" stroke="#52E6D0" stroke-opacity="0.08" stroke-width="2"/>
+  <circle cx="1048" cy="449" r="276" fill="none" stroke="#52E6D0" stroke-opacity="0.12" stroke-width="2"/>
+
+  <g fill="none" stroke="url(#path)" stroke-linecap="round">
+    <path d="M164 195H552C661 195 668 301 770 301H921" stroke-width="26"/>
+    <path d="M108 708H547C680 708 675 595 805 595H923" stroke-width="22"/>
+    <path d="M182 789H624C787 789 804 690 931 690H1378" stroke-width="10" opacity="0.55"/>
+    <path d="M126 111H680C803 111 820 210 940 210H1434" stroke-width="9" opacity="0.45"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <g transform="translate(260 264) rotate(-8 166 122)">
+      <path d="M28 0H269L332 63V244H28C12 244 0 232 0 216V28C0 12 12 0 28 0Z" fill="url(#tile)"/>
+      <path d="M269 0V63H332" fill="#C8BBFF" fill-opacity="0.72"/>
+      <path d="M62 82H226M62 126H270M62 170H198" stroke="#EEE9FF" stroke-opacity="0.62" stroke-width="13" stroke-linecap="round"/>
+      <circle cx="274" cy="187" r="27" fill="#321D79" fill-opacity="0.64"/>
+      <path d="M262 187L272 197L289 176" fill="none" stroke="#CCFFF4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <g transform="translate(492 397) rotate(8 133 98)" opacity="0.74">
+      <path d="M23 0H215L266 50V196H23C10 196 0 186 0 173V23C0 10 10 0 23 0Z" fill="#5D4BB8"/>
+      <path d="M215 0V50H266" fill="#BDB3FF" fill-opacity="0.55"/>
+      <path d="M48 72H179M48 109H216M48 146H160" stroke="#EAE6FF" stroke-opacity="0.4" stroke-width="10" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="852" y="154" width="398" height="594" rx="126" fill="#0A1730" stroke="#5AF2D3" stroke-opacity="0.3" stroke-width="4"/>
+    <rect x="892" y="196" width="318" height="510" rx="96" fill="#102A48"/>
+    <g clip-path="url(#gateClip)">
+      <path d="M865 292C976 208 1064 257 1238 198V365C1070 423 970 381 865 457Z" fill="#293E72"/>
+      <path d="M866 492C1003 392 1083 468 1238 389V594C1106 671 1002 599 866 690Z" fill="#183D58"/>
+      <path d="M877 640C1018 551 1102 624 1234 552V741H877Z" fill="#0F2C45"/>
+      <path d="M916 293C1010 246 1084 284 1184 246M915 488C1017 435 1090 481 1188 430M918 636C1024 586 1093 628 1183 580" fill="none" stroke="url(#gate)" stroke-width="18" stroke-linecap="round"/>
+    </g>
+    <rect x="972" y="107" width="158" height="93" rx="46" fill="#0B1931" stroke="#54EFD1" stroke-width="4"/>
+    <circle cx="1051" cy="153" r="19" fill="#54EFD1" filter="url(#glow)"/>
+    <path d="M1051 132V174M1030 153H1072" stroke="#E3FFF9" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <g opacity="0.9">
+    <path d="M1264 309C1375 309 1418 348 1473 415" fill="none" stroke="#57DCC9" stroke-opacity="0.4" stroke-width="14" stroke-linecap="round"/>
+    <path d="M1264 596C1378 596 1424 550 1472 495" fill="none" stroke="#57DCC9" stroke-opacity="0.34" stroke-width="14" stroke-linecap="round"/>
+    <circle cx="1480" cy="454" r="55" fill="#0C213B" stroke="#58E8CF" stroke-opacity="0.54" stroke-width="4"/>
+    <path d="M1456 454L1473 471L1507 433" fill="none" stroke="#68F2D8" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g fill="#B9FFF2">
+    <circle cx="780" cy="301" r="7" opacity="0.75"/>
+    <circle cx="806" cy="595" r="6" opacity="0.62"/>
+    <circle cx="1376" cy="690" r="6" opacity="0.42"/>
+  </g>
+</svg>
