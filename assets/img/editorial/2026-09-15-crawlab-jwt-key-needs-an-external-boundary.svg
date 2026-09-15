@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Isolated signing-key gateway</title>
+  <desc id="desc">Abstract access tokens converge toward a guarded gateway containing an isolated signing-key core, with segmented worker paths beyond it.</desc>
+  <defs>
+    <linearGradient id="background" x1="120" y1="60" x2="1480" y2="840" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071426"/>
+      <stop offset="0.52" stop-color="#102C42"/>
+      <stop offset="1" stop-color="#091827"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="0" cy="0" r="1" gradientTransform="translate(820 450) rotate(90) scale(360 520)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#35D6C2" stop-opacity="0.25"/>
+      <stop offset="0.58" stop-color="#6559E8" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#071426" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gate" x1="610" y1="205" x2="1010" y2="710" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5C6CF2"/>
+      <stop offset="0.55" stop-color="#3D4CAD"/>
+      <stop offset="1" stop-color="#25336D"/>
+    </linearGradient>
+    <linearGradient id="core" x1="752" y1="346" x2="886" y2="566" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD36E"/>
+      <stop offset="0.45" stop-color="#FF9B5A"/>
+      <stop offset="1" stop-color="#E75967"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#8EDFD5" stroke-opacity="0.07" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#aura)"/>
+  <rect x="54" y="54" width="1492" height="792" rx="42" fill="url(#grid)" stroke="#B8FFF4" stroke-opacity="0.13" stroke-width="2"/>
+
+  <g opacity="0.86" fill="none" stroke-linecap="round">
+    <path d="M128 244C304 244 394 319 548 378" stroke="#58D8C5" stroke-width="8"/>
+    <path d="M128 450H546" stroke="#5ED7D0" stroke-width="8"/>
+    <path d="M128 656C304 656 394 581 548 522" stroke="#58D8C5" stroke-width="8"/>
+    <path d="M1052 378C1200 322 1298 254 1472 254" stroke="#8790FF" stroke-width="8"/>
+    <path d="M1054 450H1472" stroke="#8790FF" stroke-width="8"/>
+    <path d="M1052 522C1200 578 1298 646 1472 646" stroke="#8790FF" stroke-width="8"/>
+  </g>
+
+  <g fill="#0E2938" stroke="#69E4D4" stroke-width="5">
+    <path d="M142 194l52 30v60l-52 30-52-30v-60z"/>
+    <path d="M142 400l52 30v60l-52 30-52-30v-60z"/>
+    <path d="M142 606l52 30v60l-52 30-52-30v-60z"/>
+  </g>
+  <g fill="#6BE2D3" opacity="0.9">
+    <circle cx="142" cy="254" r="13"/>
+    <circle cx="142" cy="460" r="13"/>
+    <circle cx="142" cy="666" r="13"/>
+  </g>
+
+  <g fill="#101E3A" stroke="#939BFF" stroke-width="5">
+    <rect x="1374" y="202" width="112" height="104" rx="26"/>
+    <rect x="1374" y="398" width="112" height="104" rx="26"/>
+    <rect x="1374" y="594" width="112" height="104" rx="26"/>
+  </g>
+  <g fill="#9BA3FF">
+    <circle cx="1430" cy="254" r="13"/>
+    <circle cx="1430" cy="450" r="13"/>
+    <circle cx="1430" cy="646" r="13"/>
+  </g>
+
+  <ellipse cx="812" cy="744" rx="282" ry="52" fill="#030A13" opacity="0.52" filter="url(#soft)"/>
+  <path d="M800 160L1040 268V446C1040 607 947 704 800 754C653 704 560 607 560 446V268L800 160Z" fill="#0A1428" stroke="#7F8BFF" stroke-opacity="0.36" stroke-width="18"/>
+  <path d="M800 202L998 291V443C998 573 927 657 800 706C673 657 602 573 602 443V291L800 202Z" fill="url(#gate)" opacity="0.9"/>
+  <path d="M800 241L950 309V438C950 537 899 603 800 646C701 603 650 537 650 438V309L800 241Z" fill="#0C1B32" stroke="#A7B0FF" stroke-opacity="0.42" stroke-width="5"/>
+
+  <circle cx="800" cy="443" r="124" fill="#35D6C2" opacity="0.16" filter="url(#glow)"/>
+  <circle cx="800" cy="443" r="104" fill="#0B2432" stroke="#57E1CE" stroke-width="6" stroke-dasharray="12 14"/>
+  <path d="M800 346C845 346 881 382 881 427C881 458 864 485 839 499V560H761V499C736 485 719 458 719 427C719 382 755 346 800 346Z" fill="url(#core)" filter="url(#glow)"/>
+  <circle cx="800" cy="426" r="25" fill="#17213B"/>
+  <path d="M800 446V515" stroke="#17213B" stroke-width="18" stroke-linecap="round"/>
+
+  <g fill="#89F0E2">
+    <circle cx="468" cy="348" r="9"/>
+    <circle cx="426" cy="450" r="9"/>
+    <circle cx="468" cy="552" r="9"/>
+  </g>
+  <g fill="#A8AEFF">
+    <circle cx="1132" cy="348" r="9"/>
+    <circle cx="1174" cy="450" r="9"/>
+    <circle cx="1132" cy="552" r="9"/>
+  </g>
+  <path d="M527 146C398 193 318 288 291 392" fill="none" stroke="#61DDCD" stroke-opacity="0.25" stroke-width="3" stroke-dasharray="7 16"/>
+  <path d="M1073 146C1202 193 1282 288 1309 392" fill="none" stroke="#8F99FF" stroke-opacity="0.25" stroke-width="3" stroke-dasharray="7 16"/>
+</svg>
