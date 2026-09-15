@@ -577,6 +577,22 @@
       "github_run_id": "34820476940",
       "status": "published",
       "last_error": null
+    },
+    "cf2a28e33587a79abfb3cc4fc166b1659ce51900bf7332bfcc6c04d16c4b19e1": {
+      "title": "Daily Security Digest: Vulnerability Boundaries and System Hardening",
+      "digest_date": "2026-09-14",
+      "digest_hash": "cf2a28e33587a79abfb3cc4fc166b1659ce51900bf7332bfcc6c04d16c4b19e1",
+      "generated_at": "2026-09-15T09:37:05.490+04:00",
+      "briefing_url": "https://shadowcontext.com/assets/social/linkedin-digest/2026-09-14/cf2a28e33587a79a/daily-digest.html",
+      "pdf_file": "assets/social/linkedin-digest/2026-09-14/cf2a28e33587a79a/daily-digest.pdf",
+      "linkedin_caption": "Review today's security briefing detailing critical vulnerabilities, container isolation requirements, and infrastructure boundary hardening across multiple software ecosystems.\n\nThis edition brings together 17 ShadowContext briefings from September 14, 2026, with direct source links and operational priorities.\n\nRead the full daily briefing:\nhttps://shadowcontext.com/assets/social/linkedin-digest/2026-09-14/cf2a28e33587a79a/daily-digest.html\n\n#Cybersecurity #ThreatIntelligence #InfoSec #AISecurity",
+      "linkedin_document_urn": "urn:li:document:D4D10AQFtBknakbQ1eQ",
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7505534634865307648",
+      "published_at": "2026-09-15T07:55:03.323Z",
+      "github_run_id": "34944145337",
+      "status": "published",
+      "last_error": null
     }
   }
 }
