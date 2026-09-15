@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-09-15T09:37:05.490+04:00",
+  "digestDate": "2026-09-14",
+  "digestHash": "cf2a28e33587a79abfb3cc4fc166b1659ce51900bf7332bfcc6c04d16c4b19e1",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "Daily Security Digest: Vulnerability Boundaries and System Hardening",
+  "articleCount": 17,
+  "sourceArticles": [
+    {
+      "title": "Restify Static Files Need a Filesystem Boundary",
+      "canonicalUrl": "https://shadowcontext.com/restify-static-files-need-filesystem-boundaries/",
+      "publishedAt": "2026-09-14T01:08:59.000+04:00",
+      "category": "defense",
+      "sourceHash": "c5a1fc1977bc946324beeda042a2ea404c031c720163aa81ac43fccf54bd86d0"
+    },
+    {
+      "title": "S2OPC Flaw Makes Resource Headroom a Security Boundary",
+      "canonicalUrl": "https://shadowcontext.com/s2opc-fix-needs-resource-boundary-proof/",
+      "publishedAt": "2026-09-14T02:09:12.000+04:00",
+      "category": "defense",
+      "sourceHash": "318acc326bdebc9839f56d7a07ca3d56468b47f25444b3b1e912ead18eae7b22"
+    },
+    {
+      "title": "CrewAI Code Execution Needs an Outer Boundary",
+      "canonicalUrl": "https://shadowcontext.com/crewai-code-execution-needs-an-outer-boundary/",
+      "publishedAt": "2026-09-14T03:11:43.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "95d36a1dd6d02204476231b166db90bcae17cb5d76f0a8349c95a1d65e89f5b6"
+    },
+    {
+      "title": "ESPnet Model Checkpoints Need a Load Boundary",
+      "canonicalUrl": "https://shadowcontext.com/espnet-model-checkpoints-need-load-boundaries/",
+      "publishedAt": "2026-09-14T05:09:35.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "421a4bc7e5fc36ccd4e4bcfca858c84fc53c985be3c75c8d56e39a5f1fd5e1b9"
+    },
+    {
+      "title": "Rhymix File References Need Object-Level Authorization",
+      "canonicalUrl": "https://shadowcontext.com/rhymix-file-references-need-object-authorization/",
+      "publishedAt": "2026-09-14T06:10:14.000+04:00",
+      "category": "defense",
+      "sourceHash": "837e3a00ac7c1443d9a0efae95bf709ec3c6e5ecc11cee967844e4538775aee4"
+    },
+    {
+      "title": "YouTube Embed Flaw Turns Plugin Retirement Into a Security Control",
+      "canonicalUrl": "https://shadowcontext.com/youtube-embed-flaw-needs-plugin-removal/",
+      "publishedAt": "2026-09-14T07:09:02.000+04:00",
+      "category": "defense",
+      "sourceHash": "3b41c33c3282ea6402bb39c5aa0561d4cca8a296c46029e5a0e5d9cb161ae533"
+    },
+    {
+      "title": "MKVToolNix Flaw Makes Media Intake a Parser Boundary",
+      "canonicalUrl": "https://shadowcontext.com/mkvtoolnix-flaw-makes-media-a-parser-boundary/",
+      "publishedAt": "2026-09-14T08:09:48.000+04:00",
+      "category": "defense",
+      "sourceHash": "bc55b81e5d8c04f7a40651cbcce9c87c3dda9442e5b69e728eef6a26a210ac96"
+    },
+    {
+      "title": "Hoo Companion Import Flaw Makes Theme Settings a Trust Boundary",
+      "canonicalUrl": "https://shadowcontext.com/hoo-companion-import-flaw-needs-trustworthy-settings/",
+      "publishedAt": "2026-09-14T09:11:02.000+04:00",
+      "category": "defense",
+      "sourceHash": "2b478a76d73bd8a010d033182fe4be74411ac7652e044c4a8a86094e5d544bf9"
+    },
+    {
+      "title": "Orion-Visor Default Key Needs Deployment-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/orion-visor-default-key-needs-deployment-proof/",
+      "publishedAt": "2026-09-14T11:11:19.000+04:00",
+      "category": "defense",
+      "sourceHash": "d336a2c027a647c877f5cc0835e68bc6bea3cfff806176a32df1727e839c0c5f"
+    },
+    {
+      "title": "BioStar AD Credential Fix Needs Service-Account Boundaries",
+      "canonicalUrl": "https://shadowcontext.com/biostar-ad-credentials-need-service-account-boundaries/",
+      "publishedAt": "2026-09-14T13:13:08.000+04:00",
+      "category": "defense",
+      "sourceHash": "890c4a0f4b31b5c28aa30204f51c7556180853f149e9a013ace2235afb8ba2ad"
+    },
+    {
+      "title": "Apache Doris Fix Needs Query-Level Access Proof",
+      "canonicalUrl": "https://shadowcontext.com/apache-doris-fix-needs-query-level-access-proof/",
+      "publishedAt": "2026-09-14T15:11:23.000+04:00",
+      "category": "defense",
+      "sourceHash": "f35e83843d3fc9c0a6e64b5144737326f310840bca67e80334732b1e64d19fee"
+    },
+    {
+      "title": "Internet Download Manager Driver Flaw Demands Version Proof",
+      "canonicalUrl": "https://shadowcontext.com/idm-driver-flaw-needs-version-proof/",
+      "publishedAt": "2026-09-14T16:11:24.000+04:00",
+      "category": "defense",
+      "sourceHash": "ce5b2ce5bd83910925641e25d4315308f6a0786ea717e163c298f82fd6b99204"
+    },
+    {
+      "title": "New DIR-878 Flaws Make Router Retirement the Fix",
+      "canonicalUrl": "https://shadowcontext.com/dir-878-flaws-make-retirement-the-fix/",
+      "publishedAt": "2026-09-14T19:11:05.000+04:00",
+      "category": "defense",
+      "sourceHash": "54e8f3e898baa5f1c4b2cce5c9d79d4adbb3c3767685fd8ac71cd34a80917d8d"
+    },
+    {
+      "title": "Memcached Fix Needs Protocol-Path Proof",
+      "canonicalUrl": "https://shadowcontext.com/memcached-fix-needs-protocol-path-proof/",
+      "publishedAt": "2026-09-14T20:08:14.000+04:00",
+      "category": "defense",
+      "sourceHash": "cbdb4398822996a3110a04afa4eea5f37473c7bdd7d7cd493c2f1a454812893b"
+    },
+    {
+      "title": "New DWR-M920 Flaw Needs Firmware-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/dwr-m920-flaw-needs-firmware-proof/",
+      "publishedAt": "2026-09-14T21:09:50.000+04:00",
+      "category": "defense",
+      "sourceHash": "bcba731346c6f000498088bd157689888e9d79810ac20ed308f2da07b7f30c6b"
+    },
+    {
+      "title": "ACME Validation Needs a Network Boundary",
+      "canonicalUrl": "https://shadowcontext.com/acme-validation-needs-network-boundaries/",
+      "publishedAt": "2026-09-14T22:09:14.000+04:00",
+      "category": "defense",
+      "sourceHash": "152798cd477e3e51eed301110eabba1dac927c7468450cc3e167f58f2aaa8c8b"
+    },
+    {
+      "title": "Microsoft's AI Guardrails Need Runtime Proof",
+      "canonicalUrl": "https://shadowcontext.com/ai-guardrails-need-runtime-proof/",
+      "publishedAt": "2026-09-14T23:11:06.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "e729e6c5190964a11aabb581412f5f96ddff8668b28cd025f84b5b64e8575dfc"
+    }
+  ],
+  "caption": "Review today's security briefing detailing critical vulnerabilities, container isolation requirements, and infrastructure boundary hardening across multiple software ecosystems.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-09-14/cf2a28e33587a79a/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-09-14/cf2a28e33587a79a/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-09-14/cf2a28e33587a79a/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-09-14/cf2a28e33587a79a/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}

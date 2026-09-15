@@ -1,0 +1,793 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Daily Security Digest: Vulnerability Boundaries and System Hardening | ShadowContext</title>
+    <style>
+      :root {
+        --paper: #05080d;
+        --panel: #0d1319;
+        --panel-soft: #091017;
+        --ink: #f1f7fa;
+        --ink-2: #c4d1d8;
+        --muted: #8496a1;
+        --line: #1d2b34;
+        --cyan: #35e6d1;
+        --violet: #8b7dff;
+        --sans: "Space Grotesk", Inter, Arial, sans-serif;
+        --mono: "DM Mono", Consolas, monospace;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: var(--sans);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        font-size: 10.5pt;
+        line-height: 1.55;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        position: relative;
+        width: 210mm;
+        min-height: 297mm;
+        padding: 18mm;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 83% 18%, rgba(139, 125, 255, 0.1), transparent 28%),
+          linear-gradient(145deg, #05080d 0%, #081017 62%, #0c101c 100%);
+      }
+
+      .page::before {
+        content: "";
+        position: absolute;
+        inset: 8mm;
+        pointer-events: none;
+        border: 0.25mm solid var(--line);
+      }
+
+      .cover {
+        display: flex;
+        flex-direction: column;
+        page-break-after: always;
+      }
+
+      .brand-row,
+      .section-head,
+      .document-footer {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 4mm;
+        font-size: 20pt;
+        font-weight: 750;
+        letter-spacing: -0.04em;
+      }
+
+      .brand em {
+        color: var(--cyan);
+        font-style: normal;
+      }
+
+      .brand-mark {
+        position: relative;
+        display: block;
+        width: 12mm;
+        height: 12mm;
+        transform: rotate(30deg);
+        border: 1mm solid var(--cyan);
+        border-radius: 1.2mm;
+      }
+
+      .brand-mark::before {
+        content: "";
+        position: absolute;
+        inset: 2.2mm;
+        border: 0.8mm solid var(--violet);
+        border-radius: 0.9mm;
+      }
+
+      .brand-mark::after {
+        content: "";
+        position: absolute;
+        inset: 4.5mm;
+        background: var(--cyan);
+        border-radius: 0.5mm;
+      }
+
+      .edition,
+      .eyebrow,
+      .topic,
+      .section-count,
+      .why span,
+      .document-footer,
+      .source-link {
+        font-family: var(--mono);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .edition,
+      .section-count,
+      .document-footer {
+        color: var(--muted);
+        font-size: 8pt;
+      }
+
+      .cover-copy {
+        position: relative;
+        z-index: 1;
+        margin: 30mm 0 0;
+      }
+
+      .eyebrow {
+        margin: 0 0 7mm;
+        color: var(--cyan);
+        font-size: 10pt;
+      }
+
+      h1 {
+        max-width: 165mm;
+        margin: 0;
+        font-size: 37pt;
+        line-height: 1.03;
+        letter-spacing: -0.05em;
+      }
+
+      .dek {
+        max-width: 155mm;
+        margin: 10mm 0 0;
+        color: var(--ink-2);
+        font-size: 16pt;
+        line-height: 1.45;
+      }
+
+      .context {
+        position: relative;
+        z-index: 1;
+        margin-top: auto;
+        padding: 9mm;
+        background: rgba(13, 19, 25, 0.94);
+        border: 0.3mm solid var(--line);
+        border-left: 1mm solid var(--violet);
+      }
+
+      .context h2,
+      .section-head h2,
+      .operating-view h2,
+      .sources h2 {
+        margin: 0;
+      }
+
+      .context h2 {
+        color: var(--violet);
+        font-family: var(--mono);
+        font-size: 9pt;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .context p {
+        margin: 4mm 0 0;
+        color: var(--ink-2);
+        font-size: 13pt;
+      }
+
+      .cover-meta {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 9mm;
+        color: var(--muted);
+        font: 8pt var(--mono);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .content {
+        padding-top: 15mm;
+        padding-bottom: 18mm;
+      }
+
+      .section-head {
+        margin-bottom: 9mm;
+        padding-bottom: 5mm;
+        border-bottom: 0.3mm solid var(--line);
+      }
+
+      .section-head h2 {
+        font-size: 23pt;
+      }
+
+      .stories {
+        position: relative;
+        z-index: 1;
+      }
+
+      .story {
+        display: grid;
+        grid-template-columns: 15mm 1fr;
+        gap: 5mm;
+        margin: 0 0 6mm;
+        padding: 7mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: rgba(13, 19, 25, 0.96);
+        border: 0.3mm solid var(--line);
+      }
+
+      .story-index {
+        color: var(--cyan);
+        font: 12pt var(--mono);
+      }
+
+      .topic {
+        margin: 0 0 2mm;
+        color: var(--cyan);
+        font-size: 7.5pt;
+      }
+
+      .story h3 {
+        margin: 0;
+        font-size: 16pt;
+        line-height: 1.18;
+        letter-spacing: -0.025em;
+      }
+
+      .summary {
+        margin: 3mm 0;
+        color: var(--ink-2);
+        font-size: 10.5pt;
+      }
+
+      .why {
+        padding-top: 3mm;
+        border-top: 0.25mm solid var(--line);
+      }
+
+      .why span {
+        color: var(--violet);
+        font-size: 7pt;
+      }
+
+      .why p {
+        display: inline;
+        margin: 0 0 0 2mm;
+        font-weight: 650;
+      }
+
+      .source-link {
+        display: inline-block;
+        margin-top: 4mm;
+        color: var(--cyan);
+        font-size: 6.8pt;
+        letter-spacing: 0.04em;
+        text-transform: none;
+      }
+
+      .operating-view,
+      .sources {
+        position: relative;
+        z-index: 1;
+        margin-top: 12mm;
+        padding: 9mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: var(--panel-soft);
+        border: 0.3mm solid var(--line);
+      }
+
+      .operating-view {
+        border-top: 1mm solid var(--cyan);
+      }
+
+      .operating-view h2,
+      .sources h2 {
+        font-size: 18pt;
+      }
+
+      .operating-view > p {
+        color: var(--ink-2);
+        font-size: 12pt;
+      }
+
+      .watch-list,
+      .source-list {
+        margin: 6mm 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .watch-list li {
+        display: grid;
+        grid-template-columns: 9mm 1fr;
+        gap: 4mm;
+        align-items: start;
+        margin: 3mm 0;
+      }
+
+      .watch-list span {
+        display: grid;
+        width: 8mm;
+        height: 8mm;
+        place-items: center;
+        color: var(--cyan);
+        border: 0.3mm solid var(--cyan);
+        font: 8pt var(--mono);
+      }
+
+      .watch-list p {
+        margin: 0;
+      }
+
+      .source-list li {
+        display: grid;
+        grid-template-columns: 10mm 1fr;
+        gap: 3mm;
+        margin: 2.5mm 0;
+        color: var(--ink-2);
+        font-size: 8.5pt;
+      }
+
+      .source-list span {
+        color: var(--violet);
+        font-family: var(--mono);
+      }
+
+      .source-list a {
+        color: var(--cyan);
+        text-decoration: underline;
+        text-decoration-color: rgba(53, 230, 209, 0.35);
+        text-underline-offset: 1mm;
+      }
+
+      .cta {
+        position: relative;
+        z-index: 1;
+        margin: 12mm 0 0;
+        padding: 7mm 9mm;
+        break-inside: avoid;
+        color: #04100f;
+        background: var(--cyan);
+      }
+
+      .cta strong {
+        display: block;
+        font-size: 14pt;
+      }
+
+      .cta span {
+        font: 9pt var(--mono);
+      }
+
+      .document-footer {
+        margin-top: 12mm;
+        padding-top: 5mm;
+        border-top: 0.3mm solid var(--line);
+      }
+
+      @media screen {
+        body {
+          width: 210mm;
+          margin: 0 auto;
+        }
+
+        .page {
+          box-shadow: 0 0 20mm rgba(0, 0, 0, 0.45);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="page cover">
+      <header class="brand-row">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Shadow<em>Context</em></span>
+        </div>
+        <span class="edition">Daily security digest</span>
+      </header>
+
+      <main class="cover-copy">
+        <p class="eyebrow">The day in context / 2026-09-14</p>
+        <h1>Daily Security Digest: Vulnerability Boundaries and System Hardening</h1>
+        <p class="dek">A daily briefing covering critical vulnerabilities, supply chain controls, agent isolation, and defensive runtime hardening.</p>
+      </main>
+
+      <aside class="context">
+        <h2>Executive summary</h2>
+        <p>Today&#39;s advisories highlight critical boundaries in static file handling, memory management, protocol parsers, and access controls. Across open-source packages, enterprise platforms, and routers, proper version proof, object-level authorization, and runtime isolation remain the definitive controls for risk reduction.</p>
+      </aside>
+
+      <div class="cover-meta">
+        <span>17 briefings included</span>
+        <span>https://shadowcontext.com/</span>
+      </div>
+    </section>
+
+    <section class="page content">
+      <header class="section-head">
+        <h2>All news from the day</h2>
+        <span class="section-count">17 / 2026-09-14</span>
+      </header>
+
+      <main class="stories">
+    <article class="story">
+      <div class="story-index">01</div>
+      <div class="story-copy">
+        <p class="topic">Restify Path Traversal</p>
+        <h3>Restify Static Files Need Filesystem Boundaries</h3>
+        <p class="summary">CVE-2026-90494 affects Restify&#39;s serveStatic handler up to version 12.0.0, introducing a remotely reachable path-traversal weakness.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Configuration determines exposure; teams must inventory routes and enforce filesystem least privilege.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/restify-static-files-need-filesystem-boundaries/">Restify Static Files Need a Filesystem Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">02</div>
+      <div class="story-copy">
+        <p class="topic">S2OPC Resource Handling</p>
+        <h3>S2OPC Flaw Makes Resource Headroom a Boundary</h3>
+        <p class="summary">CVE-2026-90782 describes a null-pointer dereference in S2OPC up to version 1.7.3 under specific allocation failure conditions.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Memory-exhaustion handling is a security boundary that determines whether services fail safely.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/s2opc-fix-needs-resource-boundary-proof/">S2OPC Flaw Makes Resource Headroom a Security Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">03</div>
+      <div class="story-copy">
+        <p class="topic">CrewAI Code Execution</p>
+        <h3>CrewAI Code Execution Needs an Outer Boundary</h3>
+        <p class="summary">CVE-2026-37008 exposes CrewAI versions before commit fb2323b to alternative import-time module execution paths.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Isolation must not silently weaken when dependencies are unavailable; execution boundaries must fail closed.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/crewai-code-execution-needs-an-outer-boundary/">CrewAI Code Execution Needs an Outer Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">04</div>
+      <div class="story-copy">
+        <p class="topic">ESPnet Model Loading</p>
+        <h3>ESPnet Model Checkpoints Need a Load Boundary</h3>
+        <p class="summary">CVE-2026-90777 affects ESPnet versions before 202609 through unsafe deserialization in pretrained checkpoint loading paths.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Model files cross from data into computation at load time, requiring restricted loading.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/espnet-model-checkpoints-need-load-boundaries/">ESPnet Model Checkpoints Need a Load Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">05</div>
+      <div class="story-copy">
+        <p class="topic">Rhymix Authorization Flaw</p>
+        <h3>Rhymix File References Need Object-Level Authorization</h3>
+        <p class="summary">CVE-2026-36453 affects Rhymix versions before 2.1.31 through an insecure direct object reference in custom fields.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Server-side object binding is required to ensure file actions re-establish user authority.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/rhymix-file-references-need-object-authorization/">Rhymix File References Need Object-Level Authorization ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">06</div>
+      <div class="story-copy">
+        <p class="topic">WordPress Plugin Vulnerability</p>
+        <h3>YouTube Embed Flaw Turns Plugin Retirement Into Control</h3>
+        <p class="summary">CVE-2026-88793 affects YouTube Embed versions 10.0 through 10.3 with unauthenticated stored cross-site scripting.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Abandoned plugins with no fixed releases require removal and content review to eliminate risk.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/youtube-embed-flaw-needs-plugin-removal/">YouTube Embed Flaw Turns Plugin Retirement Into a Security Control ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">07</div>
+      <div class="story-copy">
+        <p class="topic">MKVToolNix Parser Flaw</p>
+        <h3>MKVToolNix Flaw Makes Media Intake a Parser Boundary</h3>
+        <p class="summary">CVE-2026-90783 describes a heap buffer overflow in AVI-reading code bundled with MKVToolNix through version 101.0.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Files are structured instructions to parsers, requiring strict intake isolation and provenance controls.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/mkvtoolnix-flaw-makes-media-a-parser-boundary/">MKVToolNix Flaw Makes Media Intake a Parser Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">08</div>
+      <div class="story-copy">
+        <p class="topic">Hoo Companion Vulnerability</p>
+        <h3>Hoo Companion Import Flaw Makes Settings a Boundary</h3>
+        <p class="summary">CVE-2026-85129 exposes Hoo Companion 1.0.2 to unauthenticated theme-settings import and stored cross-site scripting.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Configuration integrity requires plugin removal and verification of state from known-good sources.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/hoo-companion-import-flaw-needs-trustworthy-settings/">Hoo Companion Import Flaw Makes Theme Settings a Trust Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">09</div>
+      <div class="story-copy">
+        <p class="topic">Orion-Visor Configuration Flaw</p>
+        <h3>Orion-Visor Default Key Needs Deployment-Level Proof</h3>
+        <p class="summary">CVE-2026-90510 exposes Orion-Visor versions 2.5.0 through 2.5.7 to a shared encryption-key fallback in configuration.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Control planes require proof that each deployment uses a unique secret rather than defaults.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/orion-visor-default-key-needs-deployment-proof/">Orion-Visor Default Key Needs Deployment-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">10</div>
+      <div class="story-copy">
+        <p class="topic">BioStar Credential Disclosure</p>
+        <h3>BioStar AD Credential Fix Needs Service-Account Boundaries</h3>
+        <p class="summary">CVE-2026-31278 discloses Active Directory bind credentials through an API response in BioStar 2 before 2.9.12.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Connector credentials require application updates, immediate secret rotation, and least-privilege scoping.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/biostar-ad-credentials-need-service-account-boundaries/">BioStar AD Credential Fix Needs Service-Account Boundaries ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">11</div>
+      <div class="story-copy">
+        <p class="topic">Apache Doris Authorization</p>
+        <h3>Apache Doris Fix Needs Query-Level Access Proof</h3>
+        <p class="summary">CVE-2026-68570 allows authenticated users to bypass privilege checks and read unauthorized data in Apache Doris.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Database permissions require query-level tests of denied paths to ensure enforcement integrity.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/apache-doris-fix-needs-query-level-access-proof/">Apache Doris Fix Needs Query-Level Access Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">12</div>
+      <div class="story-copy">
+        <p class="topic">IDM Kernel Driver</p>
+        <h3>Internet Download Manager Driver Flaw Demands Proof</h3>
+        <p class="summary">CVE-2026-90493 affects Internet Download Manager kernel drivers on Windows through version 6.42 Build 63.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Application names are poor proxies for kernel risk; teams must verify the exact driver loaded.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/idm-driver-flaw-needs-version-proof/">Internet Download Manager Driver Flaw Demands Version Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">13</div>
+      <div class="story-copy">
+        <p class="topic">D-Link Router Vulnerabilities</p>
+        <h3>New DIR-878 Flaws Make Router Retirement the Fix</h3>
+        <p class="summary">CVE-2026-90692 and CVE-2026-90693 affect D-Link DIR-878 firmware version 120B05 with stack-based buffer overflows.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>End-of-life edge equipment requires asset retirement rather than waiting for unsupported patches.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/dir-878-flaws-make-retirement-the-fix/">New DIR-878 Flaws Make Router Retirement the Fix ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">14</div>
+      <div class="story-copy">
+        <p class="topic">Memcached Parser Flaw</p>
+        <h3>Memcached Fix Needs Protocol-Path Proof</h3>
+        <p class="summary">CVE-2026-90698 describes an out-of-bounds read in memcached versions 1.6.41 through 1.6.43 during authenticated ASCII paths.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Parser flaws require live process verification to ensure daemons have crossed the fixed boundary.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/memcached-fix-needs-protocol-path-proof/">Memcached Fix Needs Protocol-Path Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">15</div>
+      <div class="story-copy">
+        <p class="topic">D-Link Firmware Vulnerability</p>
+        <h3>New DWR-M920 Flaw Needs Firmware-Level Proof</h3>
+        <p class="summary">CVE-2026-90699 describes command injection in D-Link DWR-M920 firmware version 1.1.7.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Hardware revisions and regional firmware numbering require explicit vendor validation before safety is assumed.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/dwr-m920-flaw-needs-firmware-proof/">New DWR-M920 Flaw Needs Firmware-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">16</div>
+      <div class="story-copy">
+        <p class="topic">ACME Validator SSRF</p>
+        <h3>ACME Validation Needs a Network Boundary</h3>
+        <p class="summary">CVE-2026-18369 affects Red Hat Certificate System 10.4, allowing ACME responder SSRF through IP-literal identifiers.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Validation services with privileged network placement must strictly govern all destination requests.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/acme-validation-needs-network-boundaries/">ACME Validation Needs a Network Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">17</div>
+      <div class="story-copy">
+        <p class="topic">AI Guardrails Compliance</p>
+        <h3>Microsoft&#39;s AI Guardrails Need Runtime Proof</h3>
+        <p class="summary">Microsoft&#39;s draft MAI code of conduct establishes non-negotiable agent constraints, tool scopes, and minimum privileges.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Written behavior is not deployed assurance; organizations must enforce boundaries in underlying systems.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/ai-guardrails-need-runtime-proof/">Microsoft&#39;s AI Guardrails Need Runtime Proof ↗</a>
+      </div>
+    </article></main>
+
+      <section class="operating-view">
+        <p class="eyebrow">The operating view</p>
+        <h2>What the day means for defenders</h2>
+        <p>Treat software inventories, package metadata, and vendor documentation as discovery signals rather than definitive proof of runtime safety. Enforce strict filesystem, memory, network, and object-level boundaries across every deployed asset.</p>
+        <ol class="watch-list"><li><span>1</span><p>Verify running binary versions and active drivers rather than relying on package manager states.</p></li>
+<li><span>2</span><p>Enforce strict egress controls and network boundaries around services that process untrusted inputs.</p></li>
+<li><span>3</span><p>Validate privilege separation and object authorization across all custom fields and agent tools.</p></li></ol>
+      </section>
+
+      <section class="sources">
+        <p class="eyebrow">Source index</p>
+        <h2>Every briefing in this digest</h2>
+        <ol class="source-list">
+    <li>
+      <span>01</span>
+      <a href="https://shadowcontext.com/restify-static-files-need-filesystem-boundaries/">Restify Static Files Need a Filesystem Boundary</a>
+    </li>
+
+    <li>
+      <span>02</span>
+      <a href="https://shadowcontext.com/s2opc-fix-needs-resource-boundary-proof/">S2OPC Flaw Makes Resource Headroom a Security Boundary</a>
+    </li>
+
+    <li>
+      <span>03</span>
+      <a href="https://shadowcontext.com/crewai-code-execution-needs-an-outer-boundary/">CrewAI Code Execution Needs an Outer Boundary</a>
+    </li>
+
+    <li>
+      <span>04</span>
+      <a href="https://shadowcontext.com/espnet-model-checkpoints-need-load-boundaries/">ESPnet Model Checkpoints Need a Load Boundary</a>
+    </li>
+
+    <li>
+      <span>05</span>
+      <a href="https://shadowcontext.com/rhymix-file-references-need-object-authorization/">Rhymix File References Need Object-Level Authorization</a>
+    </li>
+
+    <li>
+      <span>06</span>
+      <a href="https://shadowcontext.com/youtube-embed-flaw-needs-plugin-removal/">YouTube Embed Flaw Turns Plugin Retirement Into a Security Control</a>
+    </li>
+
+    <li>
+      <span>07</span>
+      <a href="https://shadowcontext.com/mkvtoolnix-flaw-makes-media-a-parser-boundary/">MKVToolNix Flaw Makes Media Intake a Parser Boundary</a>
+    </li>
+
+    <li>
+      <span>08</span>
+      <a href="https://shadowcontext.com/hoo-companion-import-flaw-needs-trustworthy-settings/">Hoo Companion Import Flaw Makes Theme Settings a Trust Boundary</a>
+    </li>
+
+    <li>
+      <span>09</span>
+      <a href="https://shadowcontext.com/orion-visor-default-key-needs-deployment-proof/">Orion-Visor Default Key Needs Deployment-Level Proof</a>
+    </li>
+
+    <li>
+      <span>10</span>
+      <a href="https://shadowcontext.com/biostar-ad-credentials-need-service-account-boundaries/">BioStar AD Credential Fix Needs Service-Account Boundaries</a>
+    </li>
+
+    <li>
+      <span>11</span>
+      <a href="https://shadowcontext.com/apache-doris-fix-needs-query-level-access-proof/">Apache Doris Fix Needs Query-Level Access Proof</a>
+    </li>
+
+    <li>
+      <span>12</span>
+      <a href="https://shadowcontext.com/idm-driver-flaw-needs-version-proof/">Internet Download Manager Driver Flaw Demands Version Proof</a>
+    </li>
+
+    <li>
+      <span>13</span>
+      <a href="https://shadowcontext.com/dir-878-flaws-make-retirement-the-fix/">New DIR-878 Flaws Make Router Retirement the Fix</a>
+    </li>
+
+    <li>
+      <span>14</span>
+      <a href="https://shadowcontext.com/memcached-fix-needs-protocol-path-proof/">Memcached Fix Needs Protocol-Path Proof</a>
+    </li>
+
+    <li>
+      <span>15</span>
+      <a href="https://shadowcontext.com/dwr-m920-flaw-needs-firmware-proof/">New DWR-M920 Flaw Needs Firmware-Level Proof</a>
+    </li>
+
+    <li>
+      <span>16</span>
+      <a href="https://shadowcontext.com/acme-validation-needs-network-boundaries/">ACME Validation Needs a Network Boundary</a>
+    </li>
+
+    <li>
+      <span>17</span>
+      <a href="https://shadowcontext.com/ai-guardrails-need-runtime-proof/">Microsoft&#39;s AI Guardrails Need Runtime Proof</a>
+    </li></ol>
+      </section>
+
+      <div class="cta">
+        <strong>Read the full analysis</strong>
+        <span>https://shadowcontext.com/</span>
+      </div>
+
+      <footer class="document-footer">
+        <span>ShadowContext</span>
+        <span>Independent defensive security intelligence</span>
+      </footer>
+    </section>
+  </body>
+</html>

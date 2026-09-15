@@ -1,0 +1,133 @@
+{
+  "digest_title": "Daily Security Digest: Vulnerability Boundaries and System Hardening",
+  "dek": "A daily briefing covering critical vulnerabilities, supply chain controls, agent isolation, and defensive runtime hardening.",
+  "overview": "Today's advisories highlight critical boundaries in static file handling, memory management, protocol parsers, and access controls. Across open-source packages, enterprise platforms, and routers, proper version proof, object-level authorization, and runtime isolation remain the definitive controls for risk reduction.",
+  "stories": [
+    {
+      "source_id": "S01",
+      "headline": "Restify Static Files Need Filesystem Boundaries",
+      "summary": "CVE-2026-90494 affects Restify's serveStatic handler up to version 12.0.0, introducing a remotely reachable path-traversal weakness.",
+      "why_it_matters": "Configuration determines exposure; teams must inventory routes and enforce filesystem least privilege.",
+      "topic": "Restify Path Traversal"
+    },
+    {
+      "source_id": "S02",
+      "headline": "S2OPC Flaw Makes Resource Headroom a Boundary",
+      "summary": "CVE-2026-90782 describes a null-pointer dereference in S2OPC up to version 1.7.3 under specific allocation failure conditions.",
+      "why_it_matters": "Memory-exhaustion handling is a security boundary that determines whether services fail safely.",
+      "topic": "S2OPC Resource Handling"
+    },
+    {
+      "source_id": "S03",
+      "headline": "CrewAI Code Execution Needs an Outer Boundary",
+      "summary": "CVE-2026-37008 exposes CrewAI versions before commit fb2323b to alternative import-time module execution paths.",
+      "why_it_matters": "Isolation must not silently weaken when dependencies are unavailable; execution boundaries must fail closed.",
+      "topic": "CrewAI Code Execution"
+    },
+    {
+      "source_id": "S04",
+      "headline": "ESPnet Model Checkpoints Need a Load Boundary",
+      "summary": "CVE-2026-90777 affects ESPnet versions before 202609 through unsafe deserialization in pretrained checkpoint loading paths.",
+      "why_it_matters": "Model files cross from data into computation at load time, requiring restricted loading.",
+      "topic": "ESPnet Model Loading"
+    },
+    {
+      "source_id": "S05",
+      "headline": "Rhymix File References Need Object-Level Authorization",
+      "summary": "CVE-2026-36453 affects Rhymix versions before 2.1.31 through an insecure direct object reference in custom fields.",
+      "why_it_matters": "Server-side object binding is required to ensure file actions re-establish user authority.",
+      "topic": "Rhymix Authorization Flaw"
+    },
+    {
+      "source_id": "S06",
+      "headline": "YouTube Embed Flaw Turns Plugin Retirement Into Control",
+      "summary": "CVE-2026-88793 affects YouTube Embed versions 10.0 through 10.3 with unauthenticated stored cross-site scripting.",
+      "why_it_matters": "Abandoned plugins with no fixed releases require removal and content review to eliminate risk.",
+      "topic": "WordPress Plugin Vulnerability"
+    },
+    {
+      "source_id": "S07",
+      "headline": "MKVToolNix Flaw Makes Media Intake a Parser Boundary",
+      "summary": "CVE-2026-90783 describes a heap buffer overflow in AVI-reading code bundled with MKVToolNix through version 101.0.",
+      "why_it_matters": "Files are structured instructions to parsers, requiring strict intake isolation and provenance controls.",
+      "topic": "MKVToolNix Parser Flaw"
+    },
+    {
+      "source_id": "S08",
+      "headline": "Hoo Companion Import Flaw Makes Settings a Boundary",
+      "summary": "CVE-2026-85129 exposes Hoo Companion 1.0.2 to unauthenticated theme-settings import and stored cross-site scripting.",
+      "why_it_matters": "Configuration integrity requires plugin removal and verification of state from known-good sources.",
+      "topic": "Hoo Companion Vulnerability"
+    },
+    {
+      "source_id": "S09",
+      "headline": "Orion-Visor Default Key Needs Deployment-Level Proof",
+      "summary": "CVE-2026-90510 exposes Orion-Visor versions 2.5.0 through 2.5.7 to a shared encryption-key fallback in configuration.",
+      "why_it_matters": "Control planes require proof that each deployment uses a unique secret rather than defaults.",
+      "topic": "Orion-Visor Configuration Flaw"
+    },
+    {
+      "source_id": "S10",
+      "headline": "BioStar AD Credential Fix Needs Service-Account Boundaries",
+      "summary": "CVE-2026-31278 discloses Active Directory bind credentials through an API response in BioStar 2 before 2.9.12.",
+      "why_it_matters": "Connector credentials require application updates, immediate secret rotation, and least-privilege scoping.",
+      "topic": "BioStar Credential Disclosure"
+    },
+    {
+      "source_id": "S11",
+      "headline": "Apache Doris Fix Needs Query-Level Access Proof",
+      "summary": "CVE-2026-68570 allows authenticated users to bypass privilege checks and read unauthorized data in Apache Doris.",
+      "why_it_matters": "Database permissions require query-level tests of denied paths to ensure enforcement integrity.",
+      "topic": "Apache Doris Authorization"
+    },
+    {
+      "source_id": "S12",
+      "headline": "Internet Download Manager Driver Flaw Demands Proof",
+      "summary": "CVE-2026-90493 affects Internet Download Manager kernel drivers on Windows through version 6.42 Build 63.",
+      "why_it_matters": "Application names are poor proxies for kernel risk; teams must verify the exact driver loaded.",
+      "topic": "IDM Kernel Driver"
+    },
+    {
+      "source_id": "S13",
+      "headline": "New DIR-878 Flaws Make Router Retirement the Fix",
+      "summary": "CVE-2026-90692 and CVE-2026-90693 affect D-Link DIR-878 firmware version 120B05 with stack-based buffer overflows.",
+      "why_it_matters": "End-of-life edge equipment requires asset retirement rather than waiting for unsupported patches.",
+      "topic": "D-Link Router Vulnerabilities"
+    },
+    {
+      "source_id": "S14",
+      "headline": "Memcached Fix Needs Protocol-Path Proof",
+      "summary": "CVE-2026-90698 describes an out-of-bounds read in memcached versions 1.6.41 through 1.6.43 during authenticated ASCII paths.",
+      "why_it_matters": "Parser flaws require live process verification to ensure daemons have crossed the fixed boundary.",
+      "topic": "Memcached Parser Flaw"
+    },
+    {
+      "source_id": "S15",
+      "headline": "New DWR-M920 Flaw Needs Firmware-Level Proof",
+      "summary": "CVE-2026-90699 describes command injection in D-Link DWR-M920 firmware version 1.1.7.",
+      "why_it_matters": "Hardware revisions and regional firmware numbering require explicit vendor validation before safety is assumed.",
+      "topic": "D-Link Firmware Vulnerability"
+    },
+    {
+      "source_id": "S16",
+      "headline": "ACME Validation Needs a Network Boundary",
+      "summary": "CVE-2026-18369 affects Red Hat Certificate System 10.4, allowing ACME responder SSRF through IP-literal identifiers.",
+      "why_it_matters": "Validation services with privileged network placement must strictly govern all destination requests.",
+      "topic": "ACME Validator SSRF"
+    },
+    {
+      "source_id": "S17",
+      "headline": "Microsoft's AI Guardrails Need Runtime Proof",
+      "summary": "Microsoft's draft MAI code of conduct establishes non-negotiable agent constraints, tool scopes, and minimum privileges.",
+      "why_it_matters": "Written behavior is not deployed assurance; organizations must enforce boundaries in underlying systems.",
+      "topic": "AI Guardrails Compliance"
+    }
+  ],
+  "operating_view": "Treat software inventories, package metadata, and vendor documentation as discovery signals rather than definitive proof of runtime safety. Enforce strict filesystem, memory, network, and object-level boundaries across every deployed asset.",
+  "watch_items": [
+    "Verify running binary versions and active drivers rather than relying on package manager states.",
+    "Enforce strict egress controls and network boundaries around services that process untrusted inputs.",
+    "Validate privilege separation and object authorization across all custom fields and agent tools."
+  ],
+  "caption_intro": "Review today's security briefing detailing critical vulnerabilities, container isolation requirements, and infrastructure boundary hardening across multiple software ecosystems."
+}
