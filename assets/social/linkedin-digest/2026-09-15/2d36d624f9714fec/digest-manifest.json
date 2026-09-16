@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 2,
+  "status": "review",
+  "linkedinReady": true,
+  "published": false,
+  "generatedAt": "2026-09-16T09:32:32.264+04:00",
+  "digestDate": "2026-09-15",
+  "digestHash": "2d36d624f9714fecc88731c586c04de5461a89aead77e02f864e1d1a4fb6bc1d",
+  "templateVersion": 2,
+  "model": "gemini-3.5-flash-lite",
+  "title": "Daily Security News Digest: Mitigating Vulnerabilities Across Critical Infrastructure",
+  "articleCount": 16,
+  "sourceArticles": [
+    {
+      "title": "LiteSpeed 6.3.7 Needs Runtime-Version Proof",
+      "canonicalUrl": "https://shadowcontext.com/litespeed-637-needs-runtime-version-proof/",
+      "publishedAt": "2026-09-15T00:09:28.000+04:00",
+      "category": "defense",
+      "sourceHash": "549efb2b38d0720efc717a6206ec1b77ea4ce076bd3a2f10b9071d497ef34034"
+    },
+    {
+      "title": "TEAM Elevation Fix Needs Request-Level Authorization Proof",
+      "canonicalUrl": "https://shadowcontext.com/team-elevation-fix-needs-request-level-proof/",
+      "publishedAt": "2026-09-15T01:09:43.000+04:00",
+      "category": "defense",
+      "sourceHash": "98db1f57f11798f0470883b3c9c657bc0c94865012487f98d3e1851dc99f87eb"
+    },
+    {
+      "title": "Cisco Email Gateway Fix Needs Parser-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/cisco-email-gateway-fix-needs-parser-proof/",
+      "publishedAt": "2026-09-15T02:09:59.000+04:00",
+      "category": "defense",
+      "sourceHash": "90a16ad4f04778a07ac97a5b191fb19faedb3b859cd3cc6aa92f4c8e5a72d48d"
+    },
+    {
+      "title": "Ubuntu's dracut Fix Needs Boot-Path Proof",
+      "canonicalUrl": "https://shadowcontext.com/dracut-fix-needs-boot-path-proof/",
+      "publishedAt": "2026-09-15T03:10:19.000+04:00",
+      "category": "defense",
+      "sourceHash": "517694cc287c35f32b8b91d8e2fcd2ed9cf75240c4141399749c23b781c90334"
+    },
+    {
+      "title": "The Events Calendar Fix Needs Widget-Path Proof",
+      "canonicalUrl": "https://shadowcontext.com/events-calendar-fix-needs-widget-path-proof/",
+      "publishedAt": "2026-09-15T04:09:48.000+04:00",
+      "category": "defense",
+      "sourceHash": "e7ef3d466ef3bc64e497cde45c335a6177e387a86f770d6d46713f053acc6c51"
+    },
+    {
+      "title": "Froxlor Fix Needs Conservative Version Proof",
+      "canonicalUrl": "https://shadowcontext.com/froxlor-fix-needs-conservative-version-proof/",
+      "publishedAt": "2026-09-15T05:09:08.000+04:00",
+      "category": "defense",
+      "sourceHash": "bae37dee650eb73e5c26d27f5b5d484ee802feb5cdc80afaf7b380cef14a5f33"
+    },
+    {
+      "title": "Windows Out-of-Band Fix Needs Service-Path Proof",
+      "canonicalUrl": "https://shadowcontext.com/windows-oob-update-needs-service-path-proof/",
+      "publishedAt": "2026-09-15T06:11:04.000+04:00",
+      "category": "defense",
+      "sourceHash": "19c42610197e631f95adc2200d8f1ceeb1ae44dddc2889687b2c790fdca8b247"
+    },
+    {
+      "title": "Cyber Risk Management Needs a Control Feedback Loop",
+      "canonicalUrl": "https://shadowcontext.com/cyber-risk-management-needs-control-feedback/",
+      "publishedAt": "2026-09-15T07:11:16.000+04:00",
+      "category": "defense",
+      "sourceHash": "ec1355d4fe59caff0c03f1631f5eb2e7aa71c49a18677883367a1846c3eeed0a"
+    },
+    {
+      "title": "Apple's September security release demands branch-level fleet proof",
+      "canonicalUrl": "https://shadowcontext.com/apple-updates-need-branch-level-proof/",
+      "publishedAt": "2026-09-15T08:10:43.000+04:00",
+      "category": "defense",
+      "sourceHash": "4f3f11fda1c35180a2a0187d4b6a9605e668a048e9954c1237d8aab723dc75e1"
+    },
+    {
+      "title": "Ubuntu's Konsole Fix Needs URL-Handler Proof",
+      "canonicalUrl": "https://shadowcontext.com/konsole-fix-needs-url-handler-proof/",
+      "publishedAt": "2026-09-15T09:09:04.000+04:00",
+      "category": "defense",
+      "sourceHash": "d3f9f7937df75d5ea84ec27762ee921b188858e93cd4232667ea2065c9ed11b5"
+    },
+    {
+      "title": "ESPHome Upgrades Need Authentication Proof",
+      "canonicalUrl": "https://shadowcontext.com/esphome-upgrades-need-authentication-proof/",
+      "publishedAt": "2026-09-15T10:10:51.000+04:00",
+      "category": "defense",
+      "sourceHash": "d3dff7d8bede83f459afe59efbb8324d5e46bd5547b71acec144293641400e4e"
+    },
+    {
+      "title": "MySQL Replication Needs Network-Level Trust",
+      "canonicalUrl": "https://shadowcontext.com/mysql-replication-needs-network-level-trust/",
+      "publishedAt": "2026-09-15T12:12:26.000+04:00",
+      "category": "defense",
+      "sourceHash": "4f9107895cb20d31312dda756fb85d2fc31f0e5970d25bbdaa224d19c86c9e97"
+    },
+    {
+      "title": "Crawlab's Shared JWT Key Needs an External Boundary",
+      "canonicalUrl": "https://shadowcontext.com/crawlab-jwt-key-needs-an-external-boundary/",
+      "publishedAt": "2026-09-15T13:11:13.000+04:00",
+      "category": "defense",
+      "sourceHash": "d00fe0159a71952d282cd8f5206a7185b02deb41ca1a9aa2f3fe48317d109de4"
+    },
+    {
+      "title": "W&B Downloads Need a Filesystem Boundary",
+      "canonicalUrl": "https://shadowcontext.com/wandb-downloads-need-filesystem-boundaries/",
+      "publishedAt": "2026-09-15T14:11:49.000+04:00",
+      "category": "ai-security",
+      "sourceHash": "864c93fc00634f031c95d5141240b69c407048b9fc013ecce41462daa3de64eb"
+    },
+    {
+      "title": "Network Access Revocation Needs Session-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/network-access-revocation-needs-session-proof/",
+      "publishedAt": "2026-09-15T15:11:02.000+04:00",
+      "category": "defense",
+      "sourceHash": "165eeac1a8482c2f23db6953a7c2b297a79387ec90350030a6bd8ad086ff1ebb"
+    },
+    {
+      "title": "Panasonic Servo USB Fix Needs Driver-Level Proof",
+      "canonicalUrl": "https://shadowcontext.com/panasonic-servo-usb-fix-needs-driver-proof/",
+      "publishedAt": "2026-09-15T16:10:28.000+04:00",
+      "category": "defense",
+      "sourceHash": "80be16b6caa843694e69045cc52608ed938e1eba528eb19d17d86dfc39e4af65"
+    }
+  ],
+  "caption": "Explore today's essential defensive security updates, vulnerability analyses, and architectural resilience insights from ShadowContext.\n\nRead the full ShadowContext briefings:\nhttps://shadowcontext.com/\n\n#Cybersecurity #CyberNews #InfoSec #AISecurity",
+  "htmlFile": "assets/social/linkedin-digest/2026-09-15/2d36d624f9714fec/daily-digest.html",
+  "htmlUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-09-15/2d36d624f9714fec/daily-digest.html",
+  "pdfFile": "assets/social/linkedin-digest/2026-09-15/2d36d624f9714fec/daily-digest.pdf",
+  "pdfUrl": "https://shadowcontext.com/assets/social/linkedin-digest/2026-09-15/2d36d624f9714fec/daily-digest.pdf",
+  "pdfRenderer": "headless Chrome print-to-PDF",
+  "aiUsedForPdfRendering": false
+}

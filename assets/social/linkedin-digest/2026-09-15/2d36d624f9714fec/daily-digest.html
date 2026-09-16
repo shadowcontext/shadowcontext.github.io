@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Daily Security News Digest: Mitigating Vulnerabilities Across Critical Infrastructure | ShadowContext</title>
+    <style>
+      :root {
+        --paper: #05080d;
+        --panel: #0d1319;
+        --panel-soft: #091017;
+        --ink: #f1f7fa;
+        --ink-2: #c4d1d8;
+        --muted: #8496a1;
+        --line: #1d2b34;
+        --cyan: #35e6d1;
+        --violet: #8b7dff;
+        --sans: "Space Grotesk", Inter, Arial, sans-serif;
+        --mono: "DM Mono", Consolas, monospace;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: var(--sans);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        font-size: 10.5pt;
+        line-height: 1.55;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        position: relative;
+        width: 210mm;
+        min-height: 297mm;
+        padding: 18mm;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 83% 18%, rgba(139, 125, 255, 0.1), transparent 28%),
+          linear-gradient(145deg, #05080d 0%, #081017 62%, #0c101c 100%);
+      }
+
+      .page::before {
+        content: "";
+        position: absolute;
+        inset: 8mm;
+        pointer-events: none;
+        border: 0.25mm solid var(--line);
+      }
+
+      .cover {
+        display: flex;
+        flex-direction: column;
+        page-break-after: always;
+      }
+
+      .brand-row,
+      .section-head,
+      .document-footer {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 4mm;
+        font-size: 20pt;
+        font-weight: 750;
+        letter-spacing: -0.04em;
+      }
+
+      .brand em {
+        color: var(--cyan);
+        font-style: normal;
+      }
+
+      .brand-mark {
+        position: relative;
+        display: block;
+        width: 12mm;
+        height: 12mm;
+        transform: rotate(30deg);
+        border: 1mm solid var(--cyan);
+        border-radius: 1.2mm;
+      }
+
+      .brand-mark::before {
+        content: "";
+        position: absolute;
+        inset: 2.2mm;
+        border: 0.8mm solid var(--violet);
+        border-radius: 0.9mm;
+      }
+
+      .brand-mark::after {
+        content: "";
+        position: absolute;
+        inset: 4.5mm;
+        background: var(--cyan);
+        border-radius: 0.5mm;
+      }
+
+      .edition,
+      .eyebrow,
+      .topic,
+      .section-count,
+      .why span,
+      .document-footer,
+      .source-link {
+        font-family: var(--mono);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .edition,
+      .section-count,
+      .document-footer {
+        color: var(--muted);
+        font-size: 8pt;
+      }
+
+      .cover-copy {
+        position: relative;
+        z-index: 1;
+        margin: 30mm 0 0;
+      }
+
+      .eyebrow {
+        margin: 0 0 7mm;
+        color: var(--cyan);
+        font-size: 10pt;
+      }
+
+      h1 {
+        max-width: 165mm;
+        margin: 0;
+        font-size: 37pt;
+        line-height: 1.03;
+        letter-spacing: -0.05em;
+      }
+
+      .dek {
+        max-width: 155mm;
+        margin: 10mm 0 0;
+        color: var(--ink-2);
+        font-size: 16pt;
+        line-height: 1.45;
+      }
+
+      .context {
+        position: relative;
+        z-index: 1;
+        margin-top: auto;
+        padding: 9mm;
+        background: rgba(13, 19, 25, 0.94);
+        border: 0.3mm solid var(--line);
+        border-left: 1mm solid var(--violet);
+      }
+
+      .context h2,
+      .section-head h2,
+      .operating-view h2,
+      .sources h2 {
+        margin: 0;
+      }
+
+      .context h2 {
+        color: var(--violet);
+        font-family: var(--mono);
+        font-size: 9pt;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .context p {
+        margin: 4mm 0 0;
+        color: var(--ink-2);
+        font-size: 13pt;
+      }
+
+      .cover-meta {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 9mm;
+        color: var(--muted);
+        font: 8pt var(--mono);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .content {
+        padding-top: 15mm;
+        padding-bottom: 18mm;
+      }
+
+      .section-head {
+        margin-bottom: 9mm;
+        padding-bottom: 5mm;
+        border-bottom: 0.3mm solid var(--line);
+      }
+
+      .section-head h2 {
+        font-size: 23pt;
+      }
+
+      .stories {
+        position: relative;
+        z-index: 1;
+      }
+
+      .story {
+        display: grid;
+        grid-template-columns: 15mm 1fr;
+        gap: 5mm;
+        margin: 0 0 6mm;
+        padding: 7mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: rgba(13, 19, 25, 0.96);
+        border: 0.3mm solid var(--line);
+      }
+
+      .story-index {
+        color: var(--cyan);
+        font: 12pt var(--mono);
+      }
+
+      .topic {
+        margin: 0 0 2mm;
+        color: var(--cyan);
+        font-size: 7.5pt;
+      }
+
+      .story h3 {
+        margin: 0;
+        font-size: 16pt;
+        line-height: 1.18;
+        letter-spacing: -0.025em;
+      }
+
+      .summary {
+        margin: 3mm 0;
+        color: var(--ink-2);
+        font-size: 10.5pt;
+      }
+
+      .why {
+        padding-top: 3mm;
+        border-top: 0.25mm solid var(--line);
+      }
+
+      .why span {
+        color: var(--violet);
+        font-size: 7pt;
+      }
+
+      .why p {
+        display: inline;
+        margin: 0 0 0 2mm;
+        font-weight: 650;
+      }
+
+      .source-link {
+        display: inline-block;
+        margin-top: 4mm;
+        color: var(--cyan);
+        font-size: 6.8pt;
+        letter-spacing: 0.04em;
+        text-transform: none;
+      }
+
+      .operating-view,
+      .sources {
+        position: relative;
+        z-index: 1;
+        margin-top: 12mm;
+        padding: 9mm;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: var(--panel-soft);
+        border: 0.3mm solid var(--line);
+      }
+
+      .operating-view {
+        border-top: 1mm solid var(--cyan);
+      }
+
+      .operating-view h2,
+      .sources h2 {
+        font-size: 18pt;
+      }
+
+      .operating-view > p {
+        color: var(--ink-2);
+        font-size: 12pt;
+      }
+
+      .watch-list,
+      .source-list {
+        margin: 6mm 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .watch-list li {
+        display: grid;
+        grid-template-columns: 9mm 1fr;
+        gap: 4mm;
+        align-items: start;
+        margin: 3mm 0;
+      }
+
+      .watch-list span {
+        display: grid;
+        width: 8mm;
+        height: 8mm;
+        place-items: center;
+        color: var(--cyan);
+        border: 0.3mm solid var(--cyan);
+        font: 8pt var(--mono);
+      }
+
+      .watch-list p {
+        margin: 0;
+      }
+
+      .source-list li {
+        display: grid;
+        grid-template-columns: 10mm 1fr;
+        gap: 3mm;
+        margin: 2.5mm 0;
+        color: var(--ink-2);
+        font-size: 8.5pt;
+      }
+
+      .source-list span {
+        color: var(--violet);
+        font-family: var(--mono);
+      }
+
+      .source-list a {
+        color: var(--cyan);
+        text-decoration: underline;
+        text-decoration-color: rgba(53, 230, 209, 0.35);
+        text-underline-offset: 1mm;
+      }
+
+      .cta {
+        position: relative;
+        z-index: 1;
+        margin: 12mm 0 0;
+        padding: 7mm 9mm;
+        break-inside: avoid;
+        color: #04100f;
+        background: var(--cyan);
+      }
+
+      .cta strong {
+        display: block;
+        font-size: 14pt;
+      }
+
+      .cta span {
+        font: 9pt var(--mono);
+      }
+
+      .document-footer {
+        margin-top: 12mm;
+        padding-top: 5mm;
+        border-top: 0.3mm solid var(--line);
+      }
+
+      @media screen {
+        body {
+          width: 210mm;
+          margin: 0 auto;
+        }
+
+        .page {
+          box-shadow: 0 0 20mm rgba(0, 0, 0, 0.45);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="page cover">
+      <header class="brand-row">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Shadow<em>Context</em></span>
+        </div>
+        <span class="edition">Daily security digest</span>
+      </header>
+
+      <main class="cover-copy">
+        <p class="eyebrow">The day in context / 2026-09-15</p>
+        <h1>Daily Security News Digest: Mitigating Vulnerabilities Across Critical Infrastructure</h1>
+        <p class="dek">ShadowContext analyzes 16 security advisories, highlighting the need for rigorous version proof, control feedback loops, and boundary validation.</p>
+      </main>
+
+      <aside class="context">
+        <h2>Executive summary</h2>
+        <p>Defenders face diverse security challenges today, ranging from unauthenticated pathways in web applications and email gateways to runtime-version verification in enterprise software and operating system components. Rigorous validation and testing are essential across all trust boundaries.</p>
+      </aside>
+
+      <div class="cover-meta">
+        <span>16 briefings included</span>
+        <span>https://shadowcontext.com/</span>
+      </div>
+    </section>
+
+    <section class="page content">
+      <header class="section-head">
+        <h2>All news from the day</h2>
+        <span class="section-count">16 / 2026-09-15</span>
+      </header>
+
+      <main class="stories">
+    <article class="story">
+      <div class="story-index">01</div>
+      <div class="story-copy">
+        <p class="topic">LiteSpeed Hardening</p>
+        <h3>LiteSpeed 6.3.7 Hardens Authentication and Redirects</h3>
+        <p class="summary">cPanel issued an advisory for LiteSpeed Enterprise 6.3.7, which strengthens CGI authentication, redirect URL validation, and internal environment variable boundaries.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Updating ensures proper trust-boundary enforcement against untrusted input cross-contamination.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/litespeed-637-needs-runtime-version-proof/">LiteSpeed 6.3.7 Needs Runtime-Version Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">02</div>
+      <div class="story-copy">
+        <p class="topic">AWS TEAM</p>
+        <h3>AWS Fixes Temporary Access Management Flaw</h3>
+        <p class="summary">AWS updated Temporary Elevated Access Management to version 1.5.1 to resolve an authorization weakness allowing unintended access.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Server-enforced identity and scope decisions protect temporary administrative access from unauthorized review or modification.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/team-elevation-fix-needs-request-level-proof/">TEAM Elevation Fix Needs Request-Level Authorization Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">03</div>
+      <div class="story-copy">
+        <p class="topic">Cisco Gateway</p>
+        <h3>Cisco Patches Active SQL Injection in Gateway</h3>
+        <p class="summary">Cisco addressed a critical SQL injection flaw in the AsyncOS email parsing path of Secure Email Gateway under active exploitation.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Unauthenticated email parsers handle untrusted data and require immediate software updates to prevent root command execution.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/cisco-email-gateway-fix-needs-parser-proof/">Cisco Email Gateway Fix Needs Parser-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">04</div>
+      <div class="story-copy">
+        <p class="topic">Ubuntu Dracut</p>
+        <h3>Ubuntu Addresses Dracut Boot Failure Handling</h3>
+        <p class="summary">Ubuntu fixed a dracut vulnerability where rogue DHCP server data could cause root-level command execution during boot-failure handling.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Early-boot code processes external input with exceptional privilege, necessitating verified boot image updates.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/dracut-fix-needs-boot-path-proof/">Ubuntu&#39;s dracut Fix Needs Boot-Path Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">05</div>
+      <div class="story-copy">
+        <p class="topic">WordPress Plugin</p>
+        <h3>The Events Calendar Closes Unauthenticated Paths</h3>
+        <p class="summary">The Events Calendar updated to version 6.17.4.1 to close two unauthenticated vulnerability chains reaching server-side code execution.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Plugin widget rendering pipelines must be verified to prevent unauthorized access through event comment configurations.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/events-calendar-fix-needs-widget-path-proof/">The Events Calendar Fix Needs Widget-Path Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">06</div>
+      <div class="story-copy">
+        <p class="topic">Froxlor Panel</p>
+        <h3>Froxlor Fixes Subdomain Redirect Configuration Issue</h3>
+        <p class="summary">Froxlor addressed a critical vulnerability allowing customer-controlled redirect data to alter generated web-server configuration files.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Validating configuration output prevents shared tenants from influencing global web-server behavior.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/froxlor-fix-needs-conservative-version-proof/">Froxlor Fix Needs Conservative Version Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">07</div>
+      <div class="story-copy">
+        <p class="topic">Windows OOB</p>
+        <h3>Microsoft Releases Out-of-Band Windows Updates</h3>
+        <p class="summary">Microsoft published out-of-band updates addressing Remote Desktop Services regressions and virtual machine folder sharing problems.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Restoring administrative reachability and verifying service paths ensures operational stability after updates.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/windows-oob-update-needs-service-path-proof/">Windows Out-of-Band Fix Needs Service-Path Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">08</div>
+      <div class="story-copy">
+        <p class="topic">Cyber Risk</p>
+        <h3>Canada Issues Cyber and Privacy Risk Guidance</h3>
+        <p class="summary">The Canadian Centre for Cyber Security released ITSP.10.036, establishing an operating loop between enterprise risk decisions and system controls.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Control ownership and system feedback ensure governance decisions remain current against evolving threats.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/cyber-risk-management-needs-control-feedback/">Cyber Risk Management Needs a Control Feedback Loop ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">09</div>
+      <div class="story-copy">
+        <p class="topic">Apple Updates</p>
+        <h3>Apple September Updates Span Parallel Branches</h3>
+        <p class="summary">Apple released security updates across new and maintained operating system branches, addressing kernel, Bluetooth, and video encoder flaws.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Device eligibility and installed version evidence are central to ensuring fleet-wide protection.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/apple-updates-need-branch-level-proof/">Apple&#39;s September security release demands branch-level fleet proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">10</div>
+      <div class="story-copy">
+        <p class="topic">Ubuntu Konsole</p>
+        <h3>Ubuntu Backports Konsole URL-Handler Fix</h3>
+        <p class="summary">Ubuntu backported a Konsole code-execution fix across five LTS releases to address unsafe external URL handling.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Desktop URL handlers act as execution boundaries requiring verified package installations and governed configurations.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/konsole-fix-needs-url-handler-proof/">Ubuntu&#39;s Konsole Fix Needs URL-Handler Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">11</div>
+      <div class="story-copy">
+        <p class="topic">ESPHome Builder</p>
+        <h3>ESPHome Fixes Dashboard Authentication Fallback</h3>
+        <p class="summary">ESPHome Device Builder updated to version 1.0.12 to prevent dashboards from running without authentication after credential renaming.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Upgrades that rename configuration settings must be tested to ensure security boundaries remain intact.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/esphome-upgrades-need-authentication-proof/">ESPHome Upgrades Need Authentication Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">12</div>
+      <div class="story-copy">
+        <p class="topic">MySQL Replication</p>
+        <h3>MySQL Patches Group Replication Allowlist Flaw</h3>
+        <p class="summary">Oracle addressed a MySQL Group Replication weakness where unauthenticated senders could submit transactions through the XCom listener.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Network admission to replication planes requires strict authorization beyond source IP allowlists.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/mysql-replication-needs-network-level-trust/">MySQL Replication Needs Network-Level Trust ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">13</div>
+      <div class="story-copy">
+        <p class="topic">Crawlab JWT</p>
+        <h3>Crawlab Addresses Hard-Coded JWT Signing Key</h3>
+        <p class="summary">Crawlab versions through 0.6.3 use an unchangeable shared JWT signing key that permits administrative token creation.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>When application identity relies on static shared secrets, external boundary isolation is mandatory.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/crawlab-jwt-key-needs-an-external-boundary/">Crawlab&#39;s Shared JWT Key Needs an External Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">14</div>
+      <div class="story-copy">
+        <p class="topic">W&amp;B SDK</p>
+        <h3>W&amp;B SDK Fixes Artifact Download Traversal</h3>
+        <p class="summary">The W&amp;B Python SDK before version 0.29.0 received updates to validate filenames and prevent path traversal during downloads.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Remote artifact metadata must be validated to protect local filesystems from unauthorized writes.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/wandb-downloads-need-filesystem-boundaries/">W&amp;B Downloads Need a Filesystem Boundary ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">15</div>
+      <div class="story-copy">
+        <p class="topic">Arista EOS</p>
+        <h3>Arista Resolves 802.1X Dynamic Authorization Gap</h3>
+        <p class="summary">Arista fixed an issue in EOS where dynamic authorization messages could fail to terminate active 802.1X endpoint sessions.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Network access revocation testing ensures policy decisions translate to active session termination.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/network-access-revocation-needs-session-proof/">Network Access Revocation Needs Session-Level Proof ↗</a>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-index">16</div>
+      <div class="story-copy">
+        <p class="topic">Panasonic Servo</p>
+        <h3>Panasonic Servo Driver Fix Prevents Crash</h3>
+        <p class="summary">Panasonic updated Windows USB drivers for servo systems to resolve a buffer overflow that can cause system crashes.</p>
+        <div class="why">
+          <span>Why it matters</span>
+          <p>Engineering workstation availability depends on verifying loaded driver versions across application packages.</p>
+        </div>
+        <a class="source-link" href="https://shadowcontext.com/panasonic-servo-usb-fix-needs-driver-proof/">Panasonic Servo USB Fix Needs Driver-Level Proof ↗</a>
+      </div>
+    </article></main>
+
+      <section class="operating-view">
+        <p class="eyebrow">The operating view</p>
+        <h2>What the day means for defenders</h2>
+        <p>Security operations must move beyond simple version checklists to demand concrete evidence of running binaries, verified boundaries, and functional control loops across all systems.</p>
+        <ol class="watch-list"><li><span>1</span><p>Verify running binary versions and active process listeners after applying updates across enterprise endpoints.</p></li>
+<li><span>2</span><p>Test that network access controls and authentication boundaries remain enforced following software migrations.</p></li>
+<li><span>3</span><p>Audit configuration outputs and URL-handler registrations to eliminate hidden trust-boundary exposures.</p></li></ol>
+      </section>
+
+      <section class="sources">
+        <p class="eyebrow">Source index</p>
+        <h2>Every briefing in this digest</h2>
+        <ol class="source-list">
+    <li>
+      <span>01</span>
+      <a href="https://shadowcontext.com/litespeed-637-needs-runtime-version-proof/">LiteSpeed 6.3.7 Needs Runtime-Version Proof</a>
+    </li>
+
+    <li>
+      <span>02</span>
+      <a href="https://shadowcontext.com/team-elevation-fix-needs-request-level-proof/">TEAM Elevation Fix Needs Request-Level Authorization Proof</a>
+    </li>
+
+    <li>
+      <span>03</span>
+      <a href="https://shadowcontext.com/cisco-email-gateway-fix-needs-parser-proof/">Cisco Email Gateway Fix Needs Parser-Level Proof</a>
+    </li>
+
+    <li>
+      <span>04</span>
+      <a href="https://shadowcontext.com/dracut-fix-needs-boot-path-proof/">Ubuntu&#39;s dracut Fix Needs Boot-Path Proof</a>
+    </li>
+
+    <li>
+      <span>05</span>
+      <a href="https://shadowcontext.com/events-calendar-fix-needs-widget-path-proof/">The Events Calendar Fix Needs Widget-Path Proof</a>
+    </li>
+
+    <li>
+      <span>06</span>
+      <a href="https://shadowcontext.com/froxlor-fix-needs-conservative-version-proof/">Froxlor Fix Needs Conservative Version Proof</a>
+    </li>
+
+    <li>
+      <span>07</span>
+      <a href="https://shadowcontext.com/windows-oob-update-needs-service-path-proof/">Windows Out-of-Band Fix Needs Service-Path Proof</a>
+    </li>
+
+    <li>
+      <span>08</span>
+      <a href="https://shadowcontext.com/cyber-risk-management-needs-control-feedback/">Cyber Risk Management Needs a Control Feedback Loop</a>
+    </li>
+
+    <li>
+      <span>09</span>
+      <a href="https://shadowcontext.com/apple-updates-need-branch-level-proof/">Apple&#39;s September security release demands branch-level fleet proof</a>
+    </li>
+
+    <li>
+      <span>10</span>
+      <a href="https://shadowcontext.com/konsole-fix-needs-url-handler-proof/">Ubuntu&#39;s Konsole Fix Needs URL-Handler Proof</a>
+    </li>
+
+    <li>
+      <span>11</span>
+      <a href="https://shadowcontext.com/esphome-upgrades-need-authentication-proof/">ESPHome Upgrades Need Authentication Proof</a>
+    </li>
+
+    <li>
+      <span>12</span>
+      <a href="https://shadowcontext.com/mysql-replication-needs-network-level-trust/">MySQL Replication Needs Network-Level Trust</a>
+    </li>
+
+    <li>
+      <span>13</span>
+      <a href="https://shadowcontext.com/crawlab-jwt-key-needs-an-external-boundary/">Crawlab&#39;s Shared JWT Key Needs an External Boundary</a>
+    </li>
+
+    <li>
+      <span>14</span>
+      <a href="https://shadowcontext.com/wandb-downloads-need-filesystem-boundaries/">W&amp;B Downloads Need a Filesystem Boundary</a>
+    </li>
+
+    <li>
+      <span>15</span>
+      <a href="https://shadowcontext.com/network-access-revocation-needs-session-proof/">Network Access Revocation Needs Session-Level Proof</a>
+    </li>
+
+    <li>
+      <span>16</span>
+      <a href="https://shadowcontext.com/panasonic-servo-usb-fix-needs-driver-proof/">Panasonic Servo USB Fix Needs Driver-Level Proof</a>
+    </li></ol>
+      </section>
+
+      <div class="cta">
+        <strong>Read the full analysis</strong>
+        <span>https://shadowcontext.com/</span>
+      </div>
+
+      <footer class="document-footer">
+        <span>ShadowContext</span>
+        <span>Independent defensive security intelligence</span>
+      </footer>
+    </section>
+  </body>
+</html>
