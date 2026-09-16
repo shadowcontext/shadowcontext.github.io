@@ -593,6 +593,22 @@
       "github_run_id": "34944145337",
       "status": "published",
       "last_error": null
+    },
+    "2d36d624f9714fecc88731c586c04de5461a89aead77e02f864e1d1a4fb6bc1d": {
+      "title": "Daily Security News Digest: Mitigating Vulnerabilities Across Critical Infrastructure",
+      "digest_date": "2026-09-15",
+      "digest_hash": "2d36d624f9714fecc88731c586c04de5461a89aead77e02f864e1d1a4fb6bc1d",
+      "generated_at": "2026-09-16T09:32:32.264+04:00",
+      "briefing_url": "https://shadowcontext.com/assets/social/linkedin-digest/2026-09-15/2d36d624f9714fec/daily-digest.html",
+      "pdf_file": "assets/social/linkedin-digest/2026-09-15/2d36d624f9714fec/daily-digest.pdf",
+      "linkedin_caption": "Explore today's essential defensive security updates, vulnerability analyses, and architectural resilience insights from ShadowContext.\n\nThis edition brings together 16 ShadowContext briefings from September 15, 2026, with direct source links and operational priorities.\n\nRead the full daily briefing:\nhttps://shadowcontext.com/assets/social/linkedin-digest/2026-09-15/2d36d624f9714fec/daily-digest.html\n\n#Cybersecurity #ThreatIntelligence #InfoSec #AISecurity",
+      "linkedin_document_urn": "urn:li:document:D4D10AQFWonCD-ZBAMw",
+      "linkedin_author": "urn:li:person:-8wjCZv5z9",
+      "linkedin_post_id": "urn:li:ugcPost:7505895280651927553",
+      "published_at": "2026-09-16T07:48:08.018Z",
+      "github_run_id": "35070374103",
+      "status": "published",
+      "last_error": null
     }
   }
 }
