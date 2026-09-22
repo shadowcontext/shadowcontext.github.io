@@ -1,15 +1,25 @@
 {
-  "generated_at": "2026-09-21T01:21:10Z",
-  "generated_display": "21 Sep 2026 · 01:21 UTC",
+  "generated_at": "2026-09-22T01:21:09Z",
+  "generated_display": "22 Sep 2026 · 01:21 UTC",
   "metrics": {
-    "kev_total": 1716,
-    "kev_added_30d": 42,
-    "due_next_7d": 8,
+    "kev_total": 1717,
+    "kev_added_30d": 43,
+    "due_next_7d": 6,
     "ioc_total": 197,
     "ioc_total_display": "197",
     "ioc_total_exact": "197"
   },
   "vulnerabilities": [
+    {
+      "cve": "CVE-2026-7273",
+      "name": "Zyxel GS1900 Series Switches Stack-Based Buffer Overflow Vulnerability",
+      "vendor": "Zyxel",
+      "product": "GS1900 Series Switches",
+      "date_added": "2026-09-21",
+      "due_date": "2026-09-24",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-7273"
+    },
     {
       "cve": "CVE-2026-53266",
       "name": "Linux Kernel Out-of-Bounds Write Vulnerability",
@@ -79,16 +89,6 @@
       "due_date": "2026-09-17",
       "ransomware": "Unknown",
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76461"
-    },
-    {
-      "cve": "CVE-2026-85706",
-      "name": "GitLab Community Edition and Enterprise Edition Path Traversal Vulnerability",
-      "vendor": "GitLab",
-      "product": "Community Edition and Enterprise Edition",
-      "date_added": "2026-09-11",
-      "due_date": "2026-09-14",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-85706"
     }
   ],
   "platforms": [
@@ -161,6 +161,14 @@
   ],
   "advisories": [
     {
+      "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+      "url": "https://www.cisa.gov/news-events/alerts/2026/09/21/cisa-adds-one-known-exploited-vulnerability-catalog",
+      "date": "2026-09-21",
+      "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-7273 Zyxel GS1900 Series Switches…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
       "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
       "url": "https://www.cisa.gov/news-events/alerts/2026/09/18/cisa-adds-two-known-exploited-vulnerabilities-catalog",
       "date": "2026-09-18",
@@ -177,18 +185,10 @@
       "severity": ""
     },
     {
-      "title": "ABB Ability Edgenius",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-06",
+      "title": "Schneider Electric Modicon M340 Controller and Communication Modules",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-04",
       "date": "2026-09-17",
-      "summary": "View CSAF Summary ABB is aware of public reports of a vulnerability CVE‑2026‑31431 (Copy Fail) in the product versions listed as affected in the advisory. An update is available…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
-      "title": "Mitsubishi Electric CC-Link IE TSN Communication Protocol (Update A)",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-211-07",
-      "date": "2026-09-17",
-      "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker with access to the same network segment to tamper with communication data in the affected…",
+      "summary": "View CSAF Summary Schneider Electric is aware of a vulnerability in its Modicon M340 https://www.se.com/ww/en/product-range/1468-modicon-m340-pac/ , BMXNOR0200H…",
       "authority": "CISA",
       "severity": ""
     },
@@ -308,7 +308,7 @@
       "path": "/assets/data/daily-urls.txt"
     }
   ],
-  "ioc_sha256": "991210a3b96be4612a000d07918feb2093aeb9e024e581ce8199770589573ec2",
+  "ioc_sha256": "e7a7de05097837c5e4874526e718ce8ee98b89f384d5dc64b2c5f290b6318c75",
   "sources": {
     "kev": {
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
