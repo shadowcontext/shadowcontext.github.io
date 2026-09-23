@@ -1,15 +1,55 @@
 {
-  "generated_at": "2026-09-22T01:21:09Z",
-  "generated_display": "22 Sep 2026 · 01:21 UTC",
+  "generated_at": "2026-09-23T01:23:09Z",
+  "generated_display": "23 Sep 2026 · 01:23 UTC",
   "metrics": {
-    "kev_total": 1717,
-    "kev_added_30d": 43,
-    "due_next_7d": 6,
+    "kev_total": 1721,
+    "kev_added_30d": 47,
+    "due_next_7d": 8,
     "ioc_total": 197,
     "ioc_total_display": "197",
     "ioc_total_exact": "197"
   },
   "vulnerabilities": [
+    {
+      "cve": "CVE-2026-94127",
+      "name": "F5 BIG-IP APM Heap-based Buffer Overflow Vulnerability",
+      "vendor": "F5",
+      "product": "BIG-IP APM",
+      "date_added": "2026-09-22",
+      "due_date": "2026-09-25",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-94127"
+    },
+    {
+      "cve": "CVE-2026-93952",
+      "name": "Arista VeloCloud Orchestrator Improper Input Validation Vulnerability",
+      "vendor": "Arista",
+      "product": "VeloCloud Orchestrator",
+      "date_added": "2026-09-22",
+      "due_date": "2026-09-25",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-93952"
+    },
+    {
+      "cve": "CVE-2026-93616",
+      "name": "Check Point Multiple Products Path Traversal Vulnerability",
+      "vendor": "Check Point",
+      "product": "Multiple Products",
+      "date_added": "2026-09-22",
+      "due_date": "2026-09-25",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-93616"
+    },
+    {
+      "cve": "CVE-2026-85102",
+      "name": "Check Point Multiple Products Improper Certificate Validation Vulnerability",
+      "vendor": "Check Point",
+      "product": "Multiple Products",
+      "date_added": "2026-09-22",
+      "due_date": "2026-09-25",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-85102"
+    },
     {
       "cve": "CVE-2026-7273",
       "name": "Zyxel GS1900 Series Switches Stack-Based Buffer Overflow Vulnerability",
@@ -49,46 +89,6 @@
       "due_date": "2026-09-21",
       "ransomware": "Unknown",
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2025-39682"
-    },
-    {
-      "cve": "CVE-2026-87886",
-      "name": "Acronis Backup Incorrect Default Permissions Vulnerability",
-      "vendor": "Acronis",
-      "product": "Backup",
-      "date_added": "2026-09-16",
-      "due_date": "2026-09-19",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-87886"
-    },
-    {
-      "cve": "CVE-2026-76460",
-      "name": "Cisco Identity Services Engine Incorrect Use of Privileged APIs Vulnerability",
-      "vendor": "Cisco",
-      "product": "Identity Services Engine",
-      "date_added": "2026-09-16",
-      "due_date": "2026-09-19",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76460"
-    },
-    {
-      "cve": "CVE-2026-58704",
-      "name": "Google Pixel Improper Authorization Vulnerability",
-      "vendor": "Google",
-      "product": "Pixel",
-      "date_added": "2026-09-16",
-      "due_date": "2026-09-19",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-58704"
-    },
-    {
-      "cve": "CVE-2026-76461",
-      "name": "Cisco Secure Email Gateway SQL Injection Vulnerability",
-      "vendor": "Cisco",
-      "product": "Secure Email Gateway",
-      "date_added": "2026-09-14",
-      "due_date": "2026-09-17",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76461"
     }
   ],
   "platforms": [
@@ -161,34 +161,34 @@
   ],
   "advisories": [
     {
-      "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-      "url": "https://www.cisa.gov/news-events/alerts/2026/09/21/cisa-adds-one-known-exploited-vulnerability-catalog",
-      "date": "2026-09-21",
-      "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-7273 Zyxel GS1900 Series Switches…",
+      "title": "Siemens Industrial Edge Management",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-06",
+      "date": "2026-09-22",
+      "summary": "View CSAF Summary Industrial Edge Management contains an authentication bypass vulnerability that could allow an unauthenticated remote attacker to perform full account takeover…",
       "authority": "CISA",
       "severity": ""
     },
     {
-      "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-      "url": "https://www.cisa.gov/news-events/alerts/2026/09/18/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-      "date": "2026-09-18",
-      "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2025-39964 Linux Kernel Race Condition…",
+      "title": "OpenPLC Runtime v3",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-09",
+      "date": "2026-09-22",
+      "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to hijack session cookies and issue state-changing requests as an operator which would…",
       "authority": "CISA",
       "severity": ""
     },
     {
-      "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-      "url": "https://www.cisa.gov/news-events/alerts/2026/09/18/cisa-adds-one-known-exploited-vulnerability-catalog",
-      "date": "2026-09-18",
-      "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2025-39682 Linux Kernel Improper Check…",
+      "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
+      "url": "https://www.cisa.gov/news-events/alerts/2026/09/22/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+      "date": "2026-09-22",
+      "summary": "CISA has added four new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-85102 Check Point Multiple…",
       "authority": "CISA",
       "severity": ""
     },
     {
-      "title": "Schneider Electric Modicon M340 Controller and Communication Modules",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-04",
-      "date": "2026-09-17",
-      "summary": "View CSAF Summary Schneider Electric is aware of a vulnerability in its Modicon M340 https://www.se.com/ww/en/product-range/1468-modicon-m340-pac/ , BMXNOR0200H…",
+      "title": "lwIP (Lightweight IP)",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-02",
+      "date": "2026-09-22",
+      "summary": "View CSAF Summary Successful exploitation of this vulnerability could result in a system crash, a DoS, or memory corruption, which could lead to code execution on the victim…",
       "authority": "CISA",
       "severity": ""
     },
@@ -308,7 +308,7 @@
       "path": "/assets/data/daily-urls.txt"
     }
   ],
-  "ioc_sha256": "e7a7de05097837c5e4874526e718ce8ee98b89f384d5dc64b2c5f290b6318c75",
+  "ioc_sha256": "21030011df69fcc48c3c7deb4c891d8fa5b0488bb34f9da9857c77fd376905b5",
   "sources": {
     "kev": {
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
