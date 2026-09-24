@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-23T01:23:09Z",
-  "generated_display": "23 Sep 2026 · 01:23 UTC",
+  "generated_at": "2026-09-24T01:22:09Z",
+  "generated_display": "24 Sep 2026 · 01:22 UTC",
   "metrics": {
     "kev_total": 1721,
-    "kev_added_30d": 47,
-    "due_next_7d": 8,
+    "kev_added_30d": 46,
+    "due_next_7d": 7,
     "ioc_total": 197,
     "ioc_total_display": "197",
     "ioc_total_exact": "197"
@@ -107,8 +107,8 @@
     {
       "vendor": "Google",
       "product": "Chromium V8",
-      "count": 11,
-      "percent": 23
+      "count": 10,
+      "percent": 21
     },
     {
       "vendor": "Fortinet",
@@ -161,14 +161,6 @@
   ],
   "advisories": [
     {
-      "title": "Siemens Industrial Edge Management",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-06",
-      "date": "2026-09-22",
-      "summary": "View CSAF Summary Industrial Edge Management contains an authentication bypass vulnerability that could allow an unauthenticated remote attacker to perform full account takeover…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
       "title": "OpenPLC Runtime v3",
       "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-09",
       "date": "2026-09-22",
@@ -189,6 +181,14 @@
       "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-02",
       "date": "2026-09-22",
       "summary": "View CSAF Summary Successful exploitation of this vulnerability could result in a system crash, a DoS, or memory corruption, which could lead to code execution on the victim…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "title": "Siemens WTV676 and WTV776",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-08",
+      "date": "2026-09-22",
+      "summary": "View CSAF Summary The products listed below contain a denial of service vulnerability that could allow an attacker to force the devices into protection mode under certain…",
       "authority": "CISA",
       "severity": ""
     },
@@ -308,7 +308,7 @@
       "path": "/assets/data/daily-urls.txt"
     }
   ],
-  "ioc_sha256": "21030011df69fcc48c3c7deb4c891d8fa5b0488bb34f9da9857c77fd376905b5",
+  "ioc_sha256": "c7facae7bfdb80abe57750fe3b039be59ed28dea00ac6cbfe35bbe6bde3a1445",
   "sources": {
     "kev": {
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
