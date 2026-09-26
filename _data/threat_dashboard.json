@@ -1,15 +1,45 @@
 {
-  "generated_at": "2026-09-25T01:24:09Z",
-  "generated_display": "25 Sep 2026 · 01:24 UTC",
+  "generated_at": "2026-09-26T01:19:09Z",
+  "generated_display": "26 Sep 2026 · 01:19 UTC",
   "metrics": {
-    "kev_total": 1723,
-    "kev_added_30d": 47,
-    "due_next_7d": 8,
+    "kev_total": 1726,
+    "kev_added_30d": 44,
+    "due_next_7d": 5,
     "ioc_total": 197,
     "ioc_total_display": "197",
     "ioc_total_exact": "197"
   },
   "vulnerabilities": [
+    {
+      "cve": "CVE-2026-87902",
+      "name": "WordPress Core Remote File Inclusion Vulnerability",
+      "vendor": "WordPress",
+      "product": "Core",
+      "date_added": "2026-09-25",
+      "due_date": "2026-09-28",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-87902"
+    },
+    {
+      "cve": "CVE-2026-67279",
+      "name": "Mikrotik RouterOS Improper Enforcement of Behavioral Workflow Vulnerability",
+      "vendor": "MikroTik",
+      "product": "RouterOS",
+      "date_added": "2026-09-25",
+      "due_date": "2026-09-28",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-67279"
+    },
+    {
+      "cve": "CVE-2026-65660",
+      "name": "Microsoft SharePoint Code Injection Vulnerability",
+      "vendor": "Microsoft",
+      "product": "SharePoint",
+      "date_added": "2026-09-25",
+      "due_date": "2026-09-28",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-65660"
+    },
     {
       "cve": "CVE-2026-71362",
       "name": "Adobe Commerce and Magento Incorrect Authorization Vulnerability ",
@@ -59,74 +89,44 @@
       "due_date": "2026-09-25",
       "ransomware": "Unknown",
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-93616"
-    },
-    {
-      "cve": "CVE-2026-85102",
-      "name": "Check Point Multiple Products Improper Certificate Validation Vulnerability",
-      "vendor": "Check Point",
-      "product": "Multiple Products",
-      "date_added": "2026-09-22",
-      "due_date": "2026-09-25",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-85102"
-    },
-    {
-      "cve": "CVE-2026-7273",
-      "name": "Zyxel GS1900 Series Switches Stack-Based Buffer Overflow Vulnerability",
-      "vendor": "Zyxel",
-      "product": "GS1900 Series Switches",
-      "date_added": "2026-09-21",
-      "due_date": "2026-09-24",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-7273"
-    },
-    {
-      "cve": "CVE-2026-53266",
-      "name": "Linux Kernel Out-of-Bounds Write Vulnerability",
-      "vendor": "Linux",
-      "product": "Kernel",
-      "date_added": "2026-09-18",
-      "due_date": "2026-09-21",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-53266"
     }
   ],
   "platforms": [
     {
       "vendor": "Microsoft",
       "product": "Windows",
-      "count": 48,
+      "count": 49,
       "percent": 100
     },
     {
       "vendor": "Cisco",
       "product": "Catalyst SD-WAN Manager",
-      "count": 21,
-      "percent": 44
+      "count": 19,
+      "percent": 39
     },
     {
       "vendor": "Google",
       "product": "Chromium V8",
       "count": 10,
-      "percent": 21
+      "percent": 20
     },
     {
       "vendor": "Fortinet",
       "product": "Multiple Products",
       "count": 10,
-      "percent": 21
+      "percent": 20
     },
     {
       "vendor": "Apple",
       "product": "Multiple Products",
       "count": 10,
-      "percent": 21
+      "percent": 20
     },
     {
       "vendor": "Linux",
       "product": "Kernel",
       "count": 9,
-      "percent": 19
+      "percent": 18
     }
   ],
   "actors": [
@@ -161,6 +161,22 @@
   ],
   "advisories": [
     {
+      "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+      "url": "https://www.cisa.gov/news-events/alerts/2026/09/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+      "date": "2026-09-25",
+      "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-65660 Microsoft SharePoint Code…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+      "url": "https://www.cisa.gov/news-events/alerts/2026/09/25/cisa-adds-one-known-exploited-vulnerability-catalog",
+      "date": "2026-09-25",
+      "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-87902 WordPress Core Remote File…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
       "title": "Eufy Omni C20, Omni X10 Pro",
       "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-02",
       "date": "2026-09-24",
@@ -173,22 +189,6 @@
       "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01",
       "date": "2026-09-24",
       "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to bypass authentication controls, gain unauthorized access to sensitive data and…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
-      "title": "Siemens Mendix Runtime (Update A)",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-209-02",
-      "date": "2026-09-24",
-      "summary": "View CSAF Summary This advisory is revoked. Re-investigation confirmed the reported behavior is expected platform configuration and does not expose the protected attribute. The…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
-      "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-      "url": "https://www.cisa.gov/news-events/alerts/2026/09/24/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-      "date": "2026-09-24",
-      "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-5430 WSO2 Multiple Products Path…",
       "authority": "CISA",
       "severity": ""
     },
@@ -308,7 +308,7 @@
       "path": "/assets/data/daily-urls.txt"
     }
   ],
-  "ioc_sha256": "c6353fa4e586491b1ffbb658637dac8e5f7eaa106fa7cee8faa08d273b845fcd",
+  "ioc_sha256": "58ae2377a4e715dee6c3c9a1561307eda096337abddeb55ba00b7b4d32ac311e",
   "sources": {
     "kev": {
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
