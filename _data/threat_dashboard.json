@@ -1,15 +1,25 @@
 {
-  "generated_at": "2026-09-30T01:20:09Z",
-  "generated_display": "30 Sep 2026 · 01:20 UTC",
+  "generated_at": "2026-10-01T01:19:09Z",
+  "generated_display": "01 Oct 2026 · 01:19 UTC",
   "metrics": {
-    "kev_total": 1729,
-    "kev_added_30d": 44,
-    "due_next_7d": 3,
+    "kev_total": 1730,
+    "kev_added_30d": 43,
+    "due_next_7d": 2,
     "ioc_total": 197,
     "ioc_total_display": "197",
     "ioc_total_exact": "197"
   },
   "vulnerabilities": [
+    {
+      "cve": "CVE-2026-76504",
+      "name": "Cisco Catalyst SD-WAN Manager Hex Encoding Vulnerability",
+      "vendor": "Cisco",
+      "product": "Catalyst SD-WAN Manager",
+      "date_added": "2026-09-30",
+      "due_date": "2026-10-03",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76504"
+    },
     {
       "cve": "CVE-2026-86950",
       "name": "Apple Multiple Products Out-of-Bounds Write Vulnerability",
@@ -79,16 +89,6 @@
       "due_date": "2026-09-27",
       "ransomware": "Unknown",
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-71362"
-    },
-    {
-      "cve": "CVE-2026-5430",
-      "name": "WSO2 Multiple Products Path Traversal Vulnerability ",
-      "vendor": "WSO2",
-      "product": "Multiple Products",
-      "date_added": "2026-09-24",
-      "due_date": "2026-09-27",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-5430"
     }
   ],
   "platforms": [
@@ -101,8 +101,8 @@
     {
       "vendor": "Cisco",
       "product": "Catalyst SD-WAN Manager",
-      "count": 18,
-      "percent": 37
+      "count": 19,
+      "percent": 39
     },
     {
       "vendor": "Apple",
@@ -161,6 +161,14 @@
   ],
   "advisories": [
     {
+      "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+      "url": "https://www.cisa.gov/news-events/alerts/2026/09/30/cisa-adds-one-known-exploited-vulnerability-catalog",
+      "date": "2026-09-30",
+      "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-76504 Cisco Catalyst SD-WAN Manager…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
       "title": "Baicells Nova 430H",
       "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-04",
       "date": "2026-09-29",
@@ -181,14 +189,6 @@
       "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-03",
       "date": "2026-09-29",
       "summary": "View CSAF Summary Successful exploitation of this vulnerability may allow attackers to achieve remote command execution on affected devices, potentially with root privileges,…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
-      "title": "Anjvision YSSD-RTMP-H5",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-05",
-      "date": "2026-09-29",
-      "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to access sensitive information, access user accounts, execute OS-level commands, or…",
       "authority": "CISA",
       "severity": ""
     },
@@ -308,7 +308,7 @@
       "path": "/assets/data/daily-urls.txt"
     }
   ],
-  "ioc_sha256": "80ff236fcb23d868b8c4f1bbfa656f17ee198a08d6dff311a73c24f2b7983c12",
+  "ioc_sha256": "2183756361238040533a08198254936c8588701ba7e9273c3aadd9f397be73db",
   "sources": {
     "kev": {
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
