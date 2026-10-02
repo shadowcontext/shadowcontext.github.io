@@ -1,15 +1,25 @@
 {
-  "generated_at": "2026-10-01T01:19:09Z",
-  "generated_display": "01 Oct 2026 · 01:19 UTC",
+  "generated_at": "2026-10-02T01:23:09Z",
+  "generated_display": "02 Oct 2026 · 01:23 UTC",
   "metrics": {
-    "kev_total": 1730,
-    "kev_added_30d": 43,
-    "due_next_7d": 2,
+    "kev_total": 1731,
+    "kev_added_30d": 44,
+    "due_next_7d": 3,
     "ioc_total": 197,
     "ioc_total_display": "197",
     "ioc_total_exact": "197"
   },
   "vulnerabilities": [
+    {
+      "cve": "CVE-2026-104286",
+      "name": "Fortinet FortiMail Path Traversal Vulnerability",
+      "vendor": "Fortinet",
+      "product": "FortiMail",
+      "date_added": "2026-10-01",
+      "due_date": "2026-10-04",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-104286"
+    },
     {
       "cve": "CVE-2026-76504",
       "name": "Cisco Catalyst SD-WAN Manager Hex Encoding Vulnerability",
@@ -79,16 +89,6 @@
       "due_date": "2026-09-28",
       "ransomware": "Unknown",
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-65660"
-    },
-    {
-      "cve": "CVE-2026-71362",
-      "name": "Adobe Commerce and Magento Incorrect Authorization Vulnerability ",
-      "vendor": "Adobe",
-      "product": "Commerce and Magento ",
-      "date_added": "2026-09-24",
-      "due_date": "2026-09-27",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-71362"
     }
   ],
   "platforms": [
@@ -105,6 +105,12 @@
       "percent": 39
     },
     {
+      "vendor": "Fortinet",
+      "product": "Multiple Products",
+      "count": 11,
+      "percent": 22
+    },
+    {
       "vendor": "Apple",
       "product": "Multiple Products",
       "count": 11,
@@ -113,12 +119,6 @@
     {
       "vendor": "Google",
       "product": "Chromium V8",
-      "count": 10,
-      "percent": 20
-    },
-    {
-      "vendor": "Fortinet",
-      "product": "Multiple Products",
       "count": 10,
       "percent": 20
     },
@@ -161,34 +161,34 @@
   ],
   "advisories": [
     {
-      "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-      "url": "https://www.cisa.gov/news-events/alerts/2026/09/30/cisa-adds-one-known-exploited-vulnerability-catalog",
-      "date": "2026-09-30",
-      "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-76504 Cisco Catalyst SD-WAN Manager…",
+      "title": "Armatura LLC Armatura One",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-01",
+      "date": "2026-10-01",
+      "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to gain unauthorized access to the database, execute arbitrary code on the host with…",
       "authority": "CISA",
       "severity": ""
     },
     {
-      "title": "Baicells Nova 430H",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-04",
-      "date": "2026-09-29",
-      "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to inject malformed messages which may lead to a denial-of-service condition. The…",
+      "title": "Meari IoT Cloud Platform OpenAPI Service",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-06",
+      "date": "2026-10-01",
+      "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow attackers to manipulate device configurations, trigger unauthorized behaviors, and access sensitive…",
       "authority": "CISA",
       "severity": ""
     },
     {
-      "title": "MikroTik RouterOS",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-06",
-      "date": "2026-09-29",
-      "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to achieve remote code execution or cause a denial of service. The following versions of…",
+      "title": "Monta monta.app",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-02",
+      "date": "2026-10-01",
+      "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could enable attackers to gain unauthorized administrative control over vulnerable charging stations or disrupt…",
       "authority": "CISA",
       "severity": ""
     },
     {
-      "title": "VIVOTEK Camera Firmware",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-03",
-      "date": "2026-09-29",
-      "summary": "View CSAF Summary Successful exploitation of this vulnerability may allow attackers to achieve remote command execution on affected devices, potentially with root privileges,…",
+      "title": "Johnson Controls EasyIO Neo Series EC and CW Controllers",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-04",
+      "date": "2026-10-01",
+      "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to gain access to sensitive information that could be used to conduct further attacks…",
       "authority": "CISA",
       "severity": ""
     },
@@ -308,7 +308,7 @@
       "path": "/assets/data/daily-urls.txt"
     }
   ],
-  "ioc_sha256": "2183756361238040533a08198254936c8588701ba7e9273c3aadd9f397be73db",
+  "ioc_sha256": "7358edfbfc1088dbae78b257a317ab7376b96780fda0c789a394fe897d48c039",
   "sources": {
     "kev": {
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
