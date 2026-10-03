@@ -1,15 +1,35 @@
 {
-  "generated_at": "2026-10-02T01:23:09Z",
-  "generated_display": "02 Oct 2026 · 01:23 UTC",
+  "generated_at": "2026-10-03T01:21:09Z",
+  "generated_display": "03 Oct 2026 · 01:21 UTC",
   "metrics": {
-    "kev_total": 1731,
-    "kev_added_30d": 44,
-    "due_next_7d": 3,
+    "kev_total": 1733,
+    "kev_added_30d": 39,
+    "due_next_7d": 4,
     "ioc_total": 197,
     "ioc_total_display": "197",
     "ioc_total_exact": "197"
   },
   "vulnerabilities": [
+    {
+      "cve": "CVE-2026-102490",
+      "name": "Zammad GmbH Zammad Improper Privilege Management Vulnerability",
+      "vendor": "Zammad GmbH",
+      "product": "Zammad",
+      "date_added": "2026-10-02",
+      "due_date": "2026-10-05",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-102490"
+    },
+    {
+      "cve": "CVE-2026-102489",
+      "name": "Zammad GmbH Zammad Session Fixation Vulnerability",
+      "vendor": "Zammad GmbH",
+      "product": "Zammad",
+      "date_added": "2026-10-02",
+      "due_date": "2026-10-05",
+      "ransomware": "Unknown",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-102489"
+    },
     {
       "cve": "CVE-2026-104286",
       "name": "Fortinet FortiMail Path Traversal Vulnerability",
@@ -69,26 +89,6 @@
       "due_date": "2026-09-28",
       "ransomware": "Unknown",
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-87902"
-    },
-    {
-      "cve": "CVE-2026-67279",
-      "name": "Mikrotik RouterOS Improper Enforcement of Behavioral Workflow Vulnerability",
-      "vendor": "MikroTik",
-      "product": "RouterOS",
-      "date_added": "2026-09-25",
-      "due_date": "2026-09-28",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-67279"
-    },
-    {
-      "cve": "CVE-2026-65660",
-      "name": "Microsoft SharePoint Code Injection Vulnerability",
-      "vendor": "Microsoft",
-      "product": "SharePoint",
-      "date_added": "2026-09-25",
-      "due_date": "2026-09-28",
-      "ransomware": "Unknown",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-65660"
     }
   ],
   "platforms": [
@@ -161,10 +161,18 @@
   ],
   "advisories": [
     {
-      "title": "Armatura LLC Armatura One",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-01",
+      "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+      "url": "https://www.cisa.gov/news-events/alerts/2026/10/02/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+      "date": "2026-10-02",
+      "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-102489 Zammad GmbH Zammad Session…",
+      "authority": "CISA",
+      "severity": ""
+    },
+    {
+      "title": "Johnson Controls EasyIO Neo Series EC and CW Controllers",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-05",
       "date": "2026-10-01",
-      "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to gain unauthorized access to the database, execute arbitrary code on the host with…",
+      "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker tointercept and read sensitive information, including credentials andsession data. The…",
       "authority": "CISA",
       "severity": ""
     },
@@ -181,14 +189,6 @@
       "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-02",
       "date": "2026-10-01",
       "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could enable attackers to gain unauthorized administrative control over vulnerable charging stations or disrupt…",
-      "authority": "CISA",
-      "severity": ""
-    },
-    {
-      "title": "Johnson Controls EasyIO Neo Series EC and CW Controllers",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-04",
-      "date": "2026-10-01",
-      "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to gain access to sensitive information that could be used to conduct further attacks…",
       "authority": "CISA",
       "severity": ""
     },
@@ -308,7 +308,7 @@
       "path": "/assets/data/daily-urls.txt"
     }
   ],
-  "ioc_sha256": "7358edfbfc1088dbae78b257a317ab7376b96780fda0c789a394fe897d48c039",
+  "ioc_sha256": "5cc4ff025e3c04ca982e964061c2e1fdf9c4b76ad3f2f71e3253d2609e25ae09",
   "sources": {
     "kev": {
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
